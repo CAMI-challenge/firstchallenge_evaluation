@@ -1,0 +1,16 @@
+# Taxonomic Profiling Output
+@SampleID:Low_Complexity_Test_Dataset
+@Version:0.8
+@__program__:unknown
+@@TAXID	RANK	TAXPATH	TAXPATHSN	PERCENTAGE
+2	superkingdom	2	Bacteria	39.600000
+1239	phylum	2|1239	Bacteria|Firmicutes	39.600000
+91061	class	2|1239|91061	Bacteria|Firmicutes|Bacilli	39.600000
+1385	order	2|1239|91061|1385	Bacteria|Firmicutes|Bacilli|Bacillales	9.010000
+186826	order	2|1239|91061|186826	Bacteria|Firmicutes|Bacilli|Lactobacillales	30.590000
+186817	family	2|1239|91061|1385|186817	Bacteria|Firmicutes|Bacilli|Bacillales|Bacillaceae	9.010000
+81850	family	2|1239|91061|186826|81850	Bacteria|Firmicutes|Bacilli|Lactobacillales|Leuconostocaceae	30.590000
+129337	genus	2|1239|91061|1385|186817|129337	Bacteria|Firmicutes|Bacilli|Bacillales|Bacillaceae|Geobacillus	9.010000
+46255	genus	2|1239|91061|186826|81850|46255	Bacteria|Firmicutes|Bacilli|Lactobacillales|Leuconostocaceae|Weissella	30.590000
+1345697	species	2|1239|91061|1385|186817|129337|1345697	Bacteria|Firmicutes|Bacilli|Bacillales|Bacillaceae|Geobacillus|Geobacillus sp. JF8	9.010000
+165096	species	2|1239|91061|186826|81850|46255|165096	Bacteria|Firmicutes|Bacilli|Lactobacillales|Leuconostocaceae|Weissella|Weissella koreensis	30.590000

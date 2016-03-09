@@ -1,0 +1,9 @@
+---
+version: "0.1.0"
+arguments:
+  prediction:
+    path: "/bbx/mnt/input/prediction"
+    format: "bioboxes.org:/profiling:0.9"
+  ground_truth:
+    path: "/bbx/mnt/input/groundTruth"
+    format: "bioboxes.org:/profiling:0.9"

@@ -1,0 +1,27 @@
+version: 0.1.1
+results:
+  - name: boxplots
+    description: aggregated boxplot presentation of diverse metrics to assess performance of all profiling tool of the CAMI challenge.
+    inline: false
+    value: Mounts/bbx/mnt/output/boxplots_all_CAMI.pdf
+    type: pdf
+  - name: boxplots
+    description: aggregated boxplot presentation of diverse metrics to assess performance of all profiling tool of the CAMI challenge.
+    inline: false
+    value: Mounts/bbx/mnt/output/boxplots_all_Toy.pdf
+    type: pdf
+  - name: boxplots
+    description: aggregated boxplot presentation of diverse metrics to assess performance of all profiling tool of the CAMI challenge.
+    inline: false
+    value: Mounts/bbx/mnt/output/boxplots_filtered_CAMI.pdf
+    type: pdf
+  - name: boxplots
+    description: aggregated boxplot presentation of diverse metrics to assess performance of all profiling tool of the CAMI challenge.
+    inline: false
+    value: Mounts/bbx/mnt/output/boxplots_filtered_Toy.pdf
+    type: pdf
+  - name: pairwise_distances
+    description: a heatmap view of Unifrac distances between tool predicted profiles and the diverse gold standard profiles.
+    inline: false
+    value: Mounts/bbx/mnt/output/pairwise_distances.pdf
+    type: pdf

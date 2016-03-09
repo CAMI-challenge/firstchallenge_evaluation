@@ -1,0 +1,10 @@
+Taxonomic Rank	Unifrac	L1norm	Sensitivity: TP/(TP+FN)	Precision: TP/(TP+FP)	True Positives	False Positives	False Negatives
+rank independent	11.9205295038	n.a.	n.a.	n.a.	n.a.	n.a.	n.a.
+superkingdom	n.a.	0.363505146372	0.5	0.333333333333	1	2	1
+phylum	n.a.	0.452115896285	1.0	0.176470588235	6	28	0
+class	n.a.	0.676562971191	1.0	0.272727272727	12	32	0
+order	n.a.	0.920354703099	1.0	0.150537634409	14	79	0
+family	n.a.	1.4266055608	0.8125	0.070652173913	13	171	3
+genus	n.a.	1.54846298424	0.545454545455	0.0267857142857	12	436	10
+species	n.a.	1.81586791725	0.347826086957	0.0104575163399	8	757	15
+strain	n.a.	1.0	0.0	-1	0	0	60

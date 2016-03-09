@@ -1,0 +1,101 @@
+#run simply as "perl evaluate.pl" without any arguments, however a certain folder structure of the "mounting points" must be given. You find a working example in the Mounts.tar.gz directory. Simply uncompress and run the perl script. Expensive computations are stored in the tar.gz. Script should finish after approx. 3 minutes.
+#The design of the evaluate.pl script is to re-use as much stored data as possible. Thus, if a new profiling tool is submitted or a new type of gold standard is defined not all computations have to be done again, but only those that are missing to compile the PDFs. Should you want to force the complete re-computation, simple remove or rename the cache directory. You can also be more precise by deleting accoring lines in the "parsed*.txt" files, which are log files that store time stamps of the input files. Necessary data are re-computed also if its input file time stamp changes. Computation is speed up, by executing tasks in parallel with the unix tool "parallel" (all available cores `nproc` will be used). Expensive computations are 1) the shuffling of the gold standard profiles (for 1000 iterations it took 3 days in "waldorf" (48 cores)) and 2) computation of pairwise distances for the tools (approx. 1 hour on waldorf).
+# the script expects a certain directory structure. An example is stored in Mounts.tar.gz
+
+directories:
+  #directory containing NCBI taxonomy information, i.e. the files merged.dmp, names.dmp and nodes.dmp. Used for shuffling profiles, i.e. to determine all bacterial species.
+  taxonomy: Mounts/bbx/mnt/databases/taxonomy
+  
+  #a persistent working directory to store intermediate results, useful to restart evaluation without recomputing everything
+  cache: Mounts/bbx/mnt/cache
+  
+  #directory that contains the evaluation results of the "David Koslicki evaluation" docker container
+  singleSubmissionResults: Mounts/bbx/mnt/input/submissions_evaluation
+
+  #directory in which outputs should be stored
+  output: Mounts/bbx/mnt/output
+  
+  #directory where to expect goldstandard profiles
+  goldstandards: Mounts/bbx/mnt/databases/gold_standard
+  
+  #directory where to expect the submitted profiles (needed to do the p-value shuffling)
+  profileSubmissions: Mounts/bbx/mnt/databases/profile_submissions
+  
+filenames:
+  #the log files each hold a list of those items that have been parsed somewhen in the past and results are stored in the cache directory. Delete cache or specific lines of this file if you want to re-analyse according items.
+  log_parsedSubmissions: parsedMetrics.txt
+  log_parsedGoldstandards: parsedGoldstandards.txt
+  log_parsedProfileSubmissions: parsedSubmissions.txt
+  log_parsedPairwise: parsedPairwise.txt
+  
+  #serialized perl objects to cache data, basically complex hashes.
+  data_metrics: metrics.store
+  data_goldstandards: goldstandards.store
+  data_profileSubmissions: profileSubmissions.store
+  data_allSpeciesOfTaxonomy: allSpecies.store
+  data_pairwiseComparisons: pairwise.store
+  
+#specific items have a user defined ordering, e.g. the taxonomic ranks. The ordering is here defined in terms of an array.
+orderings:  
+  #the subset of taxonomic ranks that should considered in the evaluation. Ordering is important!
+  taxonomicRanks: 
+    - name: superkingdom
+    - name: phylum
+    - name: class
+    - name: order
+    - name: family
+    - name: genus
+    - name: species
+    - name: strain
+  
+  #defines the order of the metrics, take care to type it identical to the headers in the metrics.txt files
+  metrics: 
+    - name: Unifrac
+    - name: L1norm
+    - name: Sensitivity
+    - name: Precision
+    - name: False Positives
+    - name: False Negatives
+    - name: True Positives
+
+  goldstandards:
+    - name: all
+    - name: filtered
+    
+  competitions:
+    - name: CAMI
+    - name: Toy
+
+  datasets:
+    - name: low
+    - name: medium
+    - name: high
+
+constants:
+  rankIndependent: rankIndependent
+
+misc:
+  #print verbosity information on STDERR. Switch on: >=1, switch off: 0
+  verbose: 1
+  #an arbitrary number to scale the boxplot PDFs.
+  RpdfScale: 3
+  #number of shuffles profiles for each gold standard profile. The higher the number, the more reliable is the p-Value but computational costs will also be quite high. 1 is good for testing the script. 1000 will need several days!
+  numberShufflingIterations: 1000
+  #the amount of shuffled profiles that must be worse than the value indicated by the line in the plots
+  shuffling_significance: 0.9
+  #parameters for the log-normal distribution from which abundances are drawn for shuffling the profiles.
+  mean_lognormal_abundancedistribution: 1.0
+  standarddeviation_lognormal_abundancedistribution: 2.0
+  #the parallel command used for parallel execution. For CeBiTec machines, I have to load a specific phython environment, which can be done here as prefix to the command itself.
+  parallels_command: parallel
+  
+  #some color definitions
+  color_missingvalues_text: "lightgray"
+  color_missingvalues_box: "gray95"
+  color_trueClasses_line: rgb(0,1,0,alpha=0.8)
+  color_trueClasses_box: rgb(0,1,0,alpha=0.1)
+  color_randomline_johannes: rgb(0,0,1,alpha=1.0)
+  color_randomline_iris: rgb(0,1,0,alpha=1.0)
+  color_randomline_alice: rgb(1,0,0,alpha=1.0)
+  backgroundcolor_toy_competition: rgb(1, 0.98, 0.98)
+  
