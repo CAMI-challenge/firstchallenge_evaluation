@@ -12,6 +12,7 @@ low:
     distribution: log
         mean: 1
         standard deviation: 2
+        circular elements have 15 times abundance of genomes
 
 medium:
 
@@ -26,6 +27,7 @@ medium:
     distribution: log ,differential (each sample from independent distribution)
         mean: 1
         standard deviation: 2
+        circular elements have 15 times abundance of genomes
 
 
 high:
@@ -41,3 +43,4 @@ high:
     distribution: timeseries of log (https://github.com/CAMI-challenge/MetagenomeSimulationPipeline/wiki/Distribution-of-genomes#timeseries-lognormal)
         mean: 1
         standard deviation: 2
+        circular elements have 15 times abundance of genomes
