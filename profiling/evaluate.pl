@@ -801,7 +801,7 @@ sub compile_metrics_data {
 							'anonymous_name' => $properties{'anonymous_name'},
 							'value' => $metrics{$metricname}->{$rank},						
 						};
-						next if (($metricname eq 'Precision') && ($metrics{$metricname}->{$rank} == -1)); # skip precision values of "-1". They indicate a missing value. Precision must always be non negative!
+						next if ($metrics{$metricname}->{$rank} 'nan'); # skip values "nan", which indicate missing values in Davids evaluation script
 						push @{$data{metrics}->{$properties{'_truth_type'}}->{map_competition($properties{'competition_name'})}->{$metricname}->{$rank}->{map_poolname($properties{'pool_name'})}->{map_samplename($properties{'sample_name'})}}, $elem;
 						$data{meta}->{everSeen}->{toolnames}->{map_toolname($properties{'method_name'}, $properties{'version'})}++;
 						$data{meta}->{everSeen}->{datasets}->{map_poolname($properties{'pool_name'})}++;
