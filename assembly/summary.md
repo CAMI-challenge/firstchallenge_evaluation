@@ -29,7 +29,7 @@ Before you continue reading this document, please take the following points into
 ### Number of Contigs
 
 **Metric:** 
-# contigs is the total number of contigs in the assembly.
+Number of contigs is the total number of contigs in the assembly.
 
 ![Genome Fraction](summary_plots/coverage_no_points_contig_count.png)
 
