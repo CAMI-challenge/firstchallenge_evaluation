@@ -43,7 +43,7 @@ Number of contigs is the total number of contigs in the assembly.
 
   * This peak is for each assembler different and depends on for example kmer parameter.
 
-  * Just group 8 and 4 starts to rise again for references with higher coverage. (Maybe because of scaffolding)
+  * Just group 8 and 4 starts to rise again for references with higher coverage.
 
 ### Genome Fraction
 
