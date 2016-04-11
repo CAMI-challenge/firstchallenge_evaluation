@@ -55,3 +55,26 @@ https://github.com/pbelmann/quast-evaluator
 
 * ref_data.tsv: Quast Evaluation per Assembly for each reference
 
+   * Most of the columns are explained on this site: http://quast.bioinf.spbau.ru/manual.html
+
+   * Additional columns:
+
+     * cov: coverage
+
+     * gid: reference genome identifier 
+
+     * refGenes: number of genes for each reference
+
+     * genomeFractionNormalized: genome fraction normalized with the number of contigs:
+
+       `(genome_fraction * genomefraction/ number of contigs )/ 10000` 
+     
+     * refMapping: number of reads that map to a reference
+
+     * assemblerGroup: group of an assembler 
+     
+     * group: reference group that is determined by computing the ANI score (i.e. two groups: group 1 is everything below 95% identity, group 2 is everything above 95% identity)
+
+     * abundance: reference genome abundance
+
+     * label: Name/label of the reference 
