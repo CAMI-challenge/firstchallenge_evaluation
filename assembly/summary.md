@@ -11,21 +11,24 @@ Before you continue reading this document, please take the following points into
 | Assembler Anonymous | Group | Algorithms  | scaffolding | # Tools part of the pipeline (i.e. postprocessing tools) |
 |--------------------|--------|--------|----------|-------|
 | Gold_Standard_0    |  0     |   -    |    -     |   -   |
-| adoring_almeida_4  |  1   |  De Bruijn,Bayesian model-based clustering  |  yes  |    2 |
-| backstabbing_carson_1 |  2   |  De Bruijn    |  -  | 1 | 
+| adoring_almeida_4 broken |  1   |  De Bruijn,Bayesian model-based clustering  |  yes  |    2 |
+| backstabbing_carson_1 broken |  2   |  De Bruijn    |  yes  | 1 | 
 | angry_newton_1  |  3  |  De Bruijn           |  -  | 2 |   
-| fervent_blackwell_0  |  4  |  De Bruijn    | yes | 2 |
-| fervent_mayer_1  |  4 |  De Bruijn  | yes | 6 |  
+| fervent_blackwell_0 broken |  4  |  De Bruijn    | yes | 2 |
+| fervent_mayer_1 broken |  4 |  De Bruijn  | yes | 6 |  
 | fervent_mayer_2  | 4 |  De Bruijn  | yes | 6 |  
-| goofy_wilson_0 |  4  |  De Bruijn  | yes | 6 |  
+| goofy_wilson_0 broken |  4  |  De Bruijn  | yes | 6 |  
 | dreamy_yonath_1 | 5  |  De Bruijn  | - | 2 |   
-| goofy_tesla_1  |  7  |  De Bruijn | - | 2 |  
+| goofy_tesla_1 broken |  7  |  De Bruijn | yes | 2 |  
 | insane_curie_0  | 8  | -  | - | - | 
 | jolly_mcclintock_1   |  8 | - | - | - | 
 | insane_turing_0 | 9  | De Bruijn | no | 1 | 
 | jolly_bartik_0  | 9  | De Bruijn | no | 1 |
 | jolly_euclid_0  | 9  | De Bruijn | no | 1 |
 
+##### Remarks
+
+* Assemblies ending with `broken` means that the scaffolded contigs were broken into contigs for further analysis.
 
 ### Number of Contigs
 
@@ -37,7 +40,7 @@ Number of contigs is the total number of contigs in the assembly.
 
 #### Statements
 
-  * Each assembly starts with a low number of contigs. This is because in the start there is a very low coverage and thus no nearly no overlaps between reads.
+  * Each assembly starts with a low number of contigs. This is because in the start there is a very low coverage and thus  nearly no overlaps between reads.
 
   * When there is enough read overlaps number of contigs starts to rise. 
 
@@ -85,7 +88,7 @@ X-Axis represents ordered reference coverage and is depicted in log scale.
 
   * All assemblers can reconstruct better uniq genomes then strains
   
-  * The disrepancy between the genome fraction for strain references and genome fraction for uniq references is higher for group 4 then for group 1, 2, 3 and 9.
+  * The disrepancy between the genome fraction for strain references and genome fraction for uniq references is higher for group 4 and 7 then for group 1, 2, 3 and 9.
 
   * Group 1, 2 ,3 and 9 assemblies have a higher genome fraction for strain references with higher coverage then the other groups.
  
