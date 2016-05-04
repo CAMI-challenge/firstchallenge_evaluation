@@ -5,17 +5,11 @@ The metrics used are:
 * rand index
 * adjusted rand index
 
-As an additional measure, we calculate:
- * A \* B for all bins at all taxonomic ranks, where
-  * A = #reads per bin / bin size in bp
-  * B = #reads mapped / total number of reads
-  
-As additional explanation (from my understanding):
-  * the more accurate name for "reads" is probably "contigs", as the GSA is used for this?  
-    * Can be either, reads or contigs, it is possible contigs have to be maped back to all the reads it is made of for it to work, or better, we should have a mapping file with the numbers of reads a contigs is made of
-  * reads per bin is just the size of the particular bin
-  * as the contigs have different sizes, bin size in bp is not just 150 \* reads
-  * reads mapped / total number of reads is the percentage of all contigs which are assigned to a bin
+As an additional measure, we calculate the profile implied by the different binners:
+For all bins:
+ * (Sum_(contig in bin) coverage \* length) / length of all contigs in bin
+
+Coverage \* length is basically the number of base pairs for a certain contig, in the end normalised by bin size.
 
 The data sets for which these metrics are calculated, are:
 * binning tools (original submissions)
