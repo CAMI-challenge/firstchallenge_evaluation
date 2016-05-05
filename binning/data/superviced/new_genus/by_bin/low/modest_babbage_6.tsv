@@ -1,0 +1,53 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.44	11170715	25402449
+superkingdom	unassigned	nan	nan	14231734	0
+phylum	Proteobacteria	1.00	0.48	7247244	15016727
+phylum	Firmicutes	1.00	0.19	2015105	10385722
+phylum	Actinobacteria	0.00	nan	42558	0
+phylum	unassigned	nan	nan	16097542	0
+class	Alphaproteobacteria	1.00	0.67	4859839	7232122
+class	Betaproteobacteria	1.00	0.31	2387405	7784605
+class	Clostridia	1.00	0.08	618601	7729259
+class	Negativicutes	1.00	0.22	576149	2656463
+class	Actinobacteria	0.00	nan	42558	0
+class	unassigned	nan	nan	16917897	0
+order	Rhodobacterales	1.00	0.67	4859839	7232122
+order	Burkholderiales	1.00	0.30	957959	3169668
+order	Neisseriales	1.00	0.18	826433	4614937
+order	Clostridiales	1.00	0.08	615600	7729259
+order	Selenomonadales	1.00	0.22	576149	2656463
+order	Actinomycetales	0.00	nan	42558	0
+order	unassigned	nan	nan	17523911	0
+family	Rhodobacteraceae	1.00	0.67	4859839	7232122
+family	Comamonadaceae	1.00	0.27	844663	3169668
+family	Chromobacteriaceae	1.00	0.18	826433	4614937
+family	Veillonellaceae	1.00	0.22	576149	2656463
+family	Peptostreptococcaceae	1.00	0.07	184121	2630685
+family	Clostridiaceae	0.06	0.00	65396	5098574
+family	Lachnospiraceae	0.00	nan	20782	0
+family	unassigned	nan	nan	18025066	0
+genus	Selenomonas	0.00	nan	354506	0
+genus	Chitinilyticum	0.00	nan	349579	0
+genus	Chitiniphilus	0.00	nan	231851	0
+genus	Acidovorax	0.00	nan	172515	0
+genus	Tepidibacter	1.00	0.06	152079	2630685
+genus	Paracoccus	0.00	nan	146838	0
+genus	Clostridium	0.00	nan	61648	0
+genus	Schwartzia	1.00	0.01	32555	2656463
+genus	Peptoclostridium	0.00	nan	16750	0
+genus	Rhodobacter	0.00	nan	5955	0
+genus	Lampropedia	1.00	0.00	5632	3169668
+genus	Anaerosporobacter	1.00	0.00	3748	5098574
+genus	Lachnoclostridium	0.00	nan	2878	0
+genus	unassigned	nan	nan	23865915	0
+species	Selenomonas ruminantium	0.00	nan	354506	0
+species	Chitinilyticum litopenaei	0.00	nan	349579	0
+species	Chitiniphilus shinanonensis	0.00	nan	231851	0
+species	Paracoccus denitrificans	0.00	nan	146838	0
+species	Tepidibacter sp. enrichment culture clone KME55-7	0.00	nan	107533	0
+species	Schwartzia succinivorans	1.00	0.01	32555	2656463
+species	Lampropedia hyalina	1.00	0.00	5632	3169668
+species	Anaerosporobacter mobilis	1.00	0.00	3748	5098574
+species	Lachnoclostridium phytofermentans	0.00	nan	2878	0
+species	Tepidibacter formicigenes	1.00	0.00	1076	2630685
+species	unassigned	nan	nan	24166253	0

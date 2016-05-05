@@ -1,0 +1,55 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.58	5315356	9165261
+superkingdom	Eukaryota	0.00	nan	34770	0
+superkingdom	unassigned	nan	nan	3815135	0
+phylum	Firmicutes	0.00	nan	3185097	0
+phylum	Tenericutes	1.00	0.02	149654	9165261
+phylum	Deferribacteres	0.00	nan	119675	0
+phylum	Bacteroidetes	0.00	nan	80831	0
+phylum	Fusobacteria	0.00	nan	35500	0
+phylum	unassigned	nan	nan	5594504	0
+class	Clostridia	0.00	nan	1964859	0
+class	Bacilli	0.00	nan	246255	0
+class	Mollicutes	1.00	0.02	149654	9165261
+class	Deferribacteres	0.00	nan	119675	0
+class	Bacteroidia	0.00	nan	80831	0
+class	Fusobacteriia	0.00	nan	35500	0
+class	Erysipelotrichia	0.00	nan	33491	0
+class	unassigned	nan	nan	6534996	0
+order	Clostridiales	0.00	nan	1964859	0
+order	Bacillales	0.00	nan	246255	0
+order	Mycoplasmatales	0.00	nan	149654	0
+order	Deferribacterales	0.00	nan	119675	0
+order	Bacteroidales	0.00	nan	80831	0
+order	Fusobacteriales	0.00	nan	35500	0
+order	Erysipelotrichales	0.00	nan	33491	0
+order	unassigned	nan	nan	6534996	0
+family	Clostridiaceae	0.00	nan	991003	0
+family	Staphylococcaceae	0.00	nan	165995	0
+family	Mycoplasmataceae	0.00	nan	149654	0
+family	Deferribacteraceae	0.00	nan	119675	0
+family	Lachnospiraceae	0.00	nan	109292	0
+family	Bacillaceae	0.00	nan	80260	0
+family	Fusobacteriaceae	0.00	nan	35500	0
+family	Erysipelotrichaceae	0.00	nan	33491	0
+family	unassigned	nan	nan	7480391	0
+genus	Clostridium	0.00	nan	991003	0
+genus	Staphylococcus	0.00	nan	165995	0
+genus	Mycoplasma	0.00	nan	149654	0
+genus	Mucispirillum	0.00	nan	119675	0
+genus	Ornithinibacillus	0.00	nan	57870	0
+genus	Pseudobutyrivibrio	0.00	nan	39708	0
+genus	Fusobacterium	0.00	nan	35500	0
+genus	Coprobacillus	0.00	nan	33491	0
+genus	Halalkalibacillus	0.00	nan	22390	0
+genus	unassigned	nan	nan	7549975	0
+species	Clostridium sp. CAG:307	0.00	nan	920835	0
+species	Mycoplasma sp. CAG:611	0.00	nan	149654	0
+species	Mucispirillum schaedleri	0.00	nan	119675	0
+species	Clostridium sp. SY8519	0.00	nan	70168	0
+species	Ornithinibacillus scapharcae	0.00	nan	57870	0
+species	Pseudobutyrivibrio ruminis	0.00	nan	39708	0
+species	Fusobacterium russii	0.00	nan	35500	0
+species	Coprobacillus sp. CAG:698	0.00	nan	33491	0
+species	Halalkalibacillus halophilus	0.00	nan	22390	0
+species	unassigned	nan	nan	7715970	0

@@ -1,0 +1,20 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	1.00	9165261	9165261
+phylum	Firmicutes	0.00	nan	8158734	0
+phylum	Tenericutes	1.00	0.01	95259	9165261
+phylum	Bacteroidetes	0.00	nan	15141	0
+phylum	unassigned	nan	nan	896127	0
+class	Clostridia	0.00	nan	7958090	0
+class	Mollicutes	1.00	0.01	95259	9165261
+class	unassigned	nan	nan	1111912	0
+order	Clostridiales	0.00	nan	7932873	0
+order	unassigned	nan	nan	1232388	0
+family	Lachnospiraceae	0.00	nan	7180681	0
+family	Clostridiaceae	0.00	nan	26011	0
+family	Peptostreptococcaceae	0.00	nan	25912	0
+family	unassigned	nan	nan	1932657	0
+genus	Lachnoclostridium	0.00	nan	7180681	0
+genus	Peptoclostridium	0.00	nan	25912	0
+genus	unassigned	nan	nan	1958668	0
+species	Lachnoclostridium phytofermentans	0.00	nan	7180681	0
+species	unassigned	nan	nan	1984580	0

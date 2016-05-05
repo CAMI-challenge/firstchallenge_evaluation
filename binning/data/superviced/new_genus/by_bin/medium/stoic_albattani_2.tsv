@@ -1,0 +1,1280 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.08	78709950	1031670300
+superkingdom	Viruses	0.00	nan	3450	0
+superkingdom	Eukaryota	0.00	nan	600	0
+superkingdom	unassigned	nan	nan	952956300	0
+phylum	Proteobacteria	1.00	0.07	50276250	740059950
+phylum	Actinobacteria	1.00	0.13	26685750	213137850
+phylum	Firmicutes	0.99	0.02	1657800	76526550
+phylum	Bacteroidetes	1.00	0.01	15600	1945950
+phylum	Cyanobacteria	0.00	nan	4050	0
+phylum	Chlamydiae	0.00	nan	2550	0
+phylum	Chordata	0.00	nan	600	0
+phylum	Spirochaetes	0.00	nan	150	0
+phylum	unassigned	nan	nan	953027550	0
+class	Betaproteobacteria	1.00	0.17	45268500	262604700
+class	Actinobacteria	1.00	0.13	26685750	213137850
+class	Alphaproteobacteria	1.00	0.01	4629750	472701150
+class	Clostridia	0.99	0.07	1382550	18811650
+class	Negativicutes	1.00	0.00	266700	57714900
+class	Gammaproteobacteria	0.91	0.04	234000	4754100
+class	Flavobacteriia	0.99	0.06	14400	236100
+class	Chlamydiia	0.00	nan	2550	0
+class	Bacilli	0.00	nan	1500	0
+class	Mammalia	0.00	nan	600	0
+class	Cytophagia	1.00	0.00	300	1709850
+class	Sphingobacteriia	0.00	nan	300	0
+class	Bacteroidia	0.00	nan	150	0
+class	Epsilonproteobacteria	0.00	nan	150	0
+class	Spirochaetia	0.00	nan	150	0
+class	unassigned	nan	nan	953182950	0
+order	Burkholderiales	1.00	0.17	45253650	262566450
+order	Actinomycetales	1.00	0.13	26682450	208535850
+order	Rhizobiales	1.00	0.01	4570500	470760300
+order	Clostridiales	0.99	0.07	1381800	18811650
+order	Selenomonadales	1.00	0.00	266700	57714900
+order	Legionellales	1.00	0.04	212550	4754100
+order	Rhodobacterales	0.43	0.00	20850	1940850
+order	Flavobacteriales	0.99	0.06	14400	236100
+order	Pseudomonadales	0.00	nan	12150	0
+order	Rhodospirillales	0.00	nan	7950	0
+order	Sphingomonadales	0.00	nan	6300	0
+order	Enterobacteriales	0.00	nan	6000	0
+order	Nostocales	0.00	nan	4050	0
+order	Rhodocyclales	0.00	nan	3600	0
+order	Caudovirales	0.00	nan	3450	0
+order	Acidimicrobiales	1.00	0.00	2700	4602000
+order	Chlamydiales	0.00	nan	2550	0
+order	Neisseriales	0.92	0.05	1950	38250
+order	Bacillales	0.00	nan	1200	0
+order	Vibrionales	0.00	nan	750	0
+order	Hydrogenophilales	0.00	nan	600	0
+order	Thermoanaerobacterales	0.00	nan	600	0
+order	Acidithiobacillales	0.00	nan	450	0
+order	Xanthomonadales	0.00	nan	450	0
+order	Cytophagales	1.00	0.00	300	1709850
+order	Chromatiales	0.00	nan	300	0
+order	Lactobacillales	0.00	nan	300	0
+order	Sphingobacteriales	0.00	nan	300	0
+order	Bacteroidales	0.00	nan	150	0
+order	Campylobacterales	0.00	nan	150	0
+order	Caulobacterales	0.00	nan	150	0
+order	Ferrovales	0.00	nan	150	0
+order	Oceanospirillales	0.00	nan	150	0
+order	Spirochaetales	0.00	nan	150	0
+order	Thiotrichales	0.00	nan	150	0
+order	unassigned	nan	nan	953210400	0
+family	Comamonadaceae	1.00	0.17	43627050	262566450
+family	Streptomycetaceae	1.00	0.14	17417100	128163750
+family	Pseudonocardiaceae	1.00	0.11	5568000	48824250
+family	Aurantimonadaceae	1.00	0.01	1828950	331938600
+family	Clostridiaceae	0.99	0.10	1361250	14026800
+family	Bradyrhizobiaceae	0.99	0.02	1248750	67699950
+family	Phyllobacteriaceae	0.95	0.02	1207650	69234900
+family	Nocardiaceae	0.00	nan	401100	0
+family	Cellulomonadaceae	1.00	0.04	308400	7585950
+family	Veillonellaceae	1.00	0.00	264300	57714900
+family	Legionellaceae	1.00	0.04	212550	4754100
+family	Rhizobiaceae	0.00	nan	103950	0
+family	Intrasporangiaceae	0.92	0.00	40950	15224250
+family	Methylobacteriaceae	0.00	nan	22200	0
+family	Burkholderiaceae	0.00	nan	21450	0
+family	Rhodobacteraceae	0.43	0.00	20850	1940850
+family	Propionibacteriaceae	0.99	0.00	16650	8220450
+family	Flavobacteriaceae	0.99	0.06	13650	236100
+family	Peptostreptococcaceae	0.22	0.00	11700	4722450
+family	Brucellaceae	0.00	nan	11550	0
+family	Pseudomonadaceae	0.00	nan	11550	0
+family	Alcaligenaceae	0.00	nan	9000	0
+family	Rhodospirillaceae	0.00	nan	7650	0
+family	Hyphomicrobiaceae	0.00	nan	6600	0
+family	Beijerinckiaceae	0.00	nan	6300	0
+family	Enterobacteriaceae	0.00	nan	6000	0
+family	Promicromonosporaceae	0.00	nan	5550	0
+family	Sphingomonadaceae	0.00	nan	5400	0
+family	Xanthobacteraceae	0.38	0.00	5100	1886850
+family	Methylocystaceae	0.00	nan	4350	0
+family	Microbacteriaceae	0.41	0.00	4050	517200
+family	Microchaetaceae	0.00	nan	4050	0
+family	Nocardioidaceae	0.00	nan	3750	0
+family	Rhodocyclaceae	0.00	nan	3600	0
+family	Micrococcaceae	0.00	nan	3450	0
+family	Siphoviridae	0.00	nan	3450	0
+family	Rhodobiaceae	0.00	nan	3300	0
+family	Peptococcaceae	0.00	nan	3150	0
+family	Acidimicrobiaceae	1.00	0.00	2700	4602000
+family	Corynebacteriaceae	0.00	nan	2700	0
+family	Chlamydiaceae	0.00	nan	2550	0
+family	Ruminococcaceae	0.00	nan	2100	0
+family	Neisseriaceae	1.00	0.05	1800	38250
+family	Brevibacteriaceae	0.00	nan	1650	0
+family	Acidaminococcaceae	0.00	nan	1500	0
+family	Bacillaceae	0.00	nan	1200	0
+family	Dermatophilaceae	0.00	nan	1050	0
+family	Dermacoccaceae	0.00	nan	900	0
+family	Bartonellaceae	0.00	nan	750	0
+family	Lachnospiraceae	0.00	nan	750	0
+family	Vibrionaceae	0.00	nan	750	0
+family	Bovidae	0.00	nan	600	0
+family	Hydrogenophilaceae	0.00	nan	600	0
+family	Micromonosporaceae	0.00	nan	600	0
+family	Oxalobacteraceae	0.00	nan	600	0
+family	Acidithiobacillaceae	0.00	nan	450	0
+family	Erythrobacteraceae	0.00	nan	450	0
+family	Sanguibacteraceae	0.00	nan	450	0
+family	Thermoanaerobacteraceae	0.00	nan	450	0
+family	Xanthomonadaceae	0.00	nan	450	0
+family	Cytophagaceae	1.00	0.00	300	1709850
+family	Acetobacteraceae	0.00	nan	300	0
+family	Actinospicaceae	0.00	nan	300	0
+family	Chromatiaceae	0.00	nan	300	0
+family	Moraxellaceae	0.00	nan	300	0
+family	Sphingobacteriaceae	0.00	nan	300	0
+family	Streptococcaceae	0.00	nan	300	0
+family	Beutenbergiaceae	0.00	nan	150	0
+family	Caulobacteraceae	0.00	nan	150	0
+family	Chromobacteriaceae	0.00	nan	150	0
+family	Clostridiales Family XVII. Incertae Sedis	0.00	nan	150	0
+family	Ferrovaceae	0.00	nan	150	0
+family	Frankiaceae	0.00	nan	150	0
+family	Geodermatophilaceae	0.00	nan	150	0
+family	Halomonadaceae	0.00	nan	150	0
+family	Helicobacteraceae	0.00	nan	150	0
+family	Kineosporiaceae	0.00	nan	150	0
+family	Leptospiraceae	0.00	nan	150	0
+family	Mycobacteriaceae	0.00	nan	150	0
+family	Nocardiopsaceae	0.00	nan	150	0
+family	Porphyromonadaceae	0.00	nan	150	0
+family	Streptosporangiaceae	0.00	nan	150	0
+family	Thermoanaerobacterales Family III. Incertae Sedis	0.00	nan	150	0
+family	Thermomonosporaceae	0.00	nan	150	0
+family	Thiotrichaceae	0.00	nan	150	0
+family	unassigned	nan	nan	957836100	0
+genus	Acidovorax	0.00	nan	24710700	0
+genus	Variovorax	0.00	nan	17962200	0
+genus	Streptomyces	0.00	nan	17413050	0
+genus	Kibdelosporangium	1.00	0.11	3653700	33272100
+genus	Methylibium	0.00	nan	1513200	0
+genus	Lechevalieria	1.00	0.09	1435200	15552150
+genus	Caloranaerobacter	0.99	0.14	1336050	9392700
+genus	Bosea	1.00	0.02	1226250	67699950
+genus	Mesorhizobium	0.00	nan	1072200	0
+genus	Aurantimonas	0.00	nan	735150	0
+genus	Aureimonas	0.00	nan	663900	0
+genus	Rhodococcus	0.00	nan	400950	0
+genus	Oerskovia	1.00	0.04	300600	7585950
+genus	Tatlockia	1.00	0.03	141000	4754100
+genus	Fulvimarina	0.00	nan	132450	0
+genus	Anaeromusa	0.00	nan	104250	0
+genus	Pelosinus	0.00	nan	74400	0
+genus	Lentzea	0.00	nan	72450	0
+genus	Rhizobium	0.00	nan	46200	0
+genus	Hoeflea	0.00	nan	42300	0
+genus	Legionella	0.00	nan	31200	0
+genus	Pseudaminobacter	0.00	nan	17700	0
+genus	Ensifer	0.00	nan	17250	0
+genus	Thermosinus	0.00	nan	16950	0
+genus	Polaromonas	0.00	nan	15450	0
+genus	Sporomusa	0.00	nan	14250	0
+genus	Delftia	0.00	nan	13800	0
+genus	Sinorhizobium	0.00	nan	13350	0
+genus	Methylobacterium	0.00	nan	12900	0
+genus	Knoellia	0.00	nan	12600	0
+genus	Cupriavidus	0.00	nan	12450	0
+genus	Curvibacter	0.00	nan	12150	0
+genus	Acetonema	0.00	nan	12000	0
+genus	Pseudomonas	0.00	nan	11400	0
+genus	Agrobacterium	0.00	nan	10950	0
+genus	Nitratireductor	0.00	nan	10950	0
+genus	Peptoclostridium	0.00	nan	10350	0
+genus	Verminephrobacter	0.00	nan	10350	0
+genus	Comamonas	0.00	nan	9600	0
+genus	Alicycliphilus	0.00	nan	9000	0
+genus	Aliihoeflea	0.00	nan	8400	0
+genus	Saccharothrix	0.00	nan	8400	0
+genus	Microvirga	0.00	nan	8250	0
+genus	Ochrobactrum	0.00	nan	8100	0
+genus	Chelativorans	0.00	nan	7800	0
+genus	Xenophilus	0.00	nan	7200	0
+genus	Olleya	1.00	0.03	6750	236100
+genus	Achromobacter	0.00	nan	6450	0
+genus	Bradyrhizobium	0.00	nan	6150	0
+genus	Burkholderia	0.00	nan	5850	0
+genus	Chelatococcus	0.00	nan	5400	0
+genus	Limnohabitans	0.00	nan	5400	0
+genus	Granulicoccus	0.00	nan	4800	0
+genus	Geminicoccus	0.00	nan	4650	0
+genus	Kaistia	0.00	nan	4650	0
+genus	Amycolatopsis	0.00	nan	4500	0
+genus	Intrasporangium	0.00	nan	4500	0
+genus	Nitrobacter	0.00	nan	4350	0
+genus	Cellulosimicrobium	0.00	nan	4200	0
+genus	Devosia	0.00	nan	4200	0
+genus	Rhodoferax	0.00	nan	4200	0
+genus	Janibacter	0.00	nan	4050	0
+genus	Propionibacterium	0.00	nan	4050	0
+genus	Alkaliphilus	0.00	nan	3900	0
+genus	Clostridium	0.00	nan	3900	0
+genus	Phyllobacterium	0.00	nan	3900	0
+genus	Sphingomonas	0.00	nan	3750	0
+genus	Phycicoccus	1.00	0.00	3600	15224250
+genus	Aminobacter	0.00	nan	3600	0
+genus	Escherichia	0.00	nan	3600	0
+genus	Hydrogenophaga	0.00	nan	3600	0
+genus	Arsenicicoccus	0.00	nan	3450	0
+genus	Fluoribacter	0.00	nan	3300	0
+genus	Amorphus	0.00	nan	3000	0
+genus	Simplicispira	0.00	nan	3000	0
+genus	Corynebacterium	0.00	nan	2700	0
+genus	Hassallia	0.00	nan	2700	0
+genus	Inquilinus	0.00	nan	2700	0
+genus	Methylopila	0.00	nan	2700	0
+genus	Rhodopseudomonas	0.00	nan	2700	0
+genus	Chlamydia	0.00	nan	2550	0
+genus	Hylemonella	0.00	nan	2550	0
+genus	Shinella	0.00	nan	2550	0
+genus	Brucella	0.00	nan	2400	0
+genus	Martelella	0.00	nan	2400	0
+genus	Micrococcus	0.00	nan	2400	0
+genus	Zymophilus	0.00	nan	2400	0
+genus	Ottowia	0.00	nan	2250	0
+genus	Paracoccus	0.00	nan	2100	0
+genus	Leucobacter	0.00	nan	1950	0
+genus	Methyloversatilis	0.00	nan	1950	0
+genus	Alysiella	1.00	0.05	1800	38250
+genus	Ruminiclostridium	0.00	nan	1800	0
+genus	Afipia	0.00	nan	1650	0
+genus	Azospirillum	0.00	nan	1650	0
+genus	Brevibacterium	0.00	nan	1650	0
+genus	Cellulomonas	0.00	nan	1650	0
+genus	Rhodobacter	0.00	nan	1650	0
+genus	Ruegeria	0.00	nan	1650	0
+genus	Tetrasphaera	0.00	nan	1650	0
+genus	Thauera	0.00	nan	1650	0
+genus	Xanthobacter	0.00	nan	1650	0
+genus	Azohydromonas	0.00	nan	1500	0
+genus	Hyphomicrobium	0.00	nan	1500	0
+genus	Leptothrix	0.00	nan	1500	0
+genus	Marmoricola	0.00	nan	1500	0
+genus	Skermanella	0.00	nan	1500	0
+genus	Ancylobacter	0.00	nan	1350	0
+genus	Aquabacterium	0.00	nan	1350	0
+genus	Ferrimicrobium	0.00	nan	1350	0
+genus	Loktanella	0.00	nan	1350	0
+genus	Ralstonia	0.00	nan	1350	0
+genus	Rhodovulum	0.00	nan	1350	0
+genus	Tolypothrix	0.00	nan	1350	0
+genus	Aquamicrobium	1.00	0.00	1200	69234900
+genus	Aestuariimicrobium	0.00	nan	1200	0
+genus	Allokutzneria	0.00	nan	1200	0
+genus	Azorhizobium	0.00	nan	1200	0
+genus	Bacillus	0.00	nan	1200	0
+genus	Desulfitobacterium	0.00	nan	1200	0
+genus	Gemmobacter	0.00	nan	1200	0
+genus	Nocardioides	0.00	nan	1200	0
+genus	Salmonella	0.00	nan	1200	0
+genus	Oceanicola	0.00	nan	1050	0
+genus	Salinarimonas	0.00	nan	1050	0
+genus	Selenomonas	0.00	nan	1050	0
+genus	Actinokineospora	0.00	nan	900	0
+genus	Arthrobacter	0.00	nan	900	0
+genus	Kutzneria	0.00	nan	900	0
+genus	Leifsonia	0.00	nan	900	0
+genus	Megamonas	0.00	nan	900	0
+genus	Roseovarius	0.00	nan	900	0
+genus	Saccharomonospora	0.00	nan	900	0
+genus	Sphingobium	0.00	nan	900	0
+genus	Starkeya	0.00	nan	900	0
+genus	Actinosynnema	0.00	nan	750	0
+genus	Bartonella	0.00	nan	750	0
+genus	Bordetella	0.00	nan	750	0
+genus	Caldimonas	0.00	nan	750	0
+genus	Desulfotomaculum	0.00	nan	750	0
+genus	Maritalea	0.00	nan	750	0
+genus	Microlunatus	0.00	nan	750	0
+genus	Paraoerskovia	0.00	nan	750	0
+genus	Pleomorphomonas	0.00	nan	750	0
+genus	Ramlibacter	0.00	nan	750	0
+genus	Sphaerotilus	0.00	nan	750	0
+genus	Syntrophobotulus	0.00	nan	750	0
+genus	Thioclava	0.00	nan	750	0
+genus	Vibrio	0.00	nan	750	0
+genus	Acidimicrobium	0.00	nan	600	0
+genus	Candidatus Symbiobacter	0.00	nan	600	0
+genus	Clostridiisalibacter	0.00	nan	600	0
+genus	Demetria	0.00	nan	600	0
+genus	Kribbella	0.00	nan	600	0
+genus	Labrenzia	0.00	nan	600	0
+genus	Mesoflavibacter	0.00	nan	600	0
+genus	Pannonibacter	0.00	nan	600	0
+genus	Pantholops	0.00	nan	600	0
+genus	Rubrivivax	0.00	nan	600	0
+genus	Succinispira	0.00	nan	600	0
+genus	Thiobacillus	0.00	nan	600	0
+genus	Acidaminococcus	0.00	nan	450	0
+genus	Acidithiobacillus	0.00	nan	450	0
+genus	Ahrensia	0.00	nan	450	0
+genus	Austwickia	0.00	nan	450	0
+genus	Dinoroseobacter	0.00	nan	450	0
+genus	Kineosphaera	0.00	nan	450	0
+genus	Kitasatospora	0.00	nan	450	0
+genus	Methylocella	0.00	nan	450	0
+genus	Methylocystis	0.00	nan	450	0
+genus	Phascolarctobacterium	0.00	nan	450	0
+genus	Porphyrobacter	0.00	nan	450	0
+genus	Promicromonospora	0.00	nan	450	0
+genus	Propionicicella	0.00	nan	450	0
+genus	Pseudochrobactrum	0.00	nan	450	0
+genus	Sanguibacter	0.00	nan	450	0
+genus	Serinicoccus	0.00	nan	450	0
+genus	Terracoccus	0.00	nan	450	0
+genus	Tistrella	0.00	nan	450	0
+genus	Wenxinia	0.00	nan	450	0
+genus	Actinospica	0.00	nan	300	0
+genus	Agromyces	0.00	nan	300	0
+genus	Anaeroarcus	0.00	nan	300	0
+genus	Anaeroglobus	0.00	nan	300	0
+genus	Arenitalea	0.00	nan	300	0
+genus	Celeribacter	0.00	nan	300	0
+genus	Collimonas	0.00	nan	300	0
+genus	Defluviimonas	0.00	nan	300	0
+genus	Dehalobacter	0.00	nan	300	0
+genus	Dickeya	0.00	nan	300	0
+genus	Herbaspirillum	0.00	nan	300	0
+genus	Ideonella	0.00	nan	300	0
+genus	Jannaschia	0.00	nan	300	0
+genus	Klebsiella	0.00	nan	300	0
+genus	Lacinutrix	0.00	nan	300	0
+genus	Leisingera	0.00	nan	300	0
+genus	Magnetospira	0.00	nan	300	0
+genus	Mangrovimonas	0.00	nan	300	0
+genus	Microbacterium	0.00	nan	300	0
+genus	Psychroserpens	0.00	nan	300	0
+genus	Rubellimicrobium	0.00	nan	300	0
+genus	Saccharopolyspora	0.00	nan	300	0
+genus	Sphingopyxis	0.00	nan	300	0
+genus	Stappia	0.00	nan	300	0
+genus	Stenotrophomonas	0.00	nan	300	0
+genus	Streptococcus	0.00	nan	300	0
+genus	Acetobacter	0.00	nan	150	0
+genus	Acinetobacter	0.00	nan	150	0
+genus	Actinoalloteichus	0.00	nan	150	0
+genus	Afifella	0.00	nan	150	0
+genus	Agrococcus	0.00	nan	150	0
+genus	Ammonifex	0.00	nan	150	0
+genus	Anaerotruncus	0.00	nan	150	0
+genus	Anaerovibrio	0.00	nan	150	0
+genus	Azotobacter	0.00	nan	150	0
+genus	Beutenbergia	0.00	nan	150	0
+genus	Blastococcus	0.00	nan	150	0
+genus	Brachymonas	0.00	nan	150	0
+genus	Brevundimonas	0.00	nan	150	0
+genus	Caldanaerobacter	0.00	nan	150	0
+genus	Caloramator	0.00	nan	150	0
+genus	Carboxydothermus	0.00	nan	150	0
+genus	Catelliglobosispora	0.00	nan	150	0
+genus	Chromobacterium	0.00	nan	150	0
+genus	Dactylosporangium	0.00	nan	150	0
+genus	Dermacoccus	0.00	nan	150	0
+genus	Donghicola	0.00	nan	150	0
+genus	Dorea	0.00	nan	150	0
+genus	Ethanoligenens	0.00	nan	150	0
+genus	Ferrovum	0.00	nan	150	0
+genus	Flaviramulus	0.00	nan	150	0
+genus	Flavobacterium	0.00	nan	150	0
+genus	Flexibacter	0.00	nan	150	0
+genus	Fodinicurvata	0.00	nan	150	0
+genus	Formosa	0.00	nan	150	0
+genus	Frankia	0.00	nan	150	0
+genus	Glaciibacter	0.00	nan	150	0
+genus	Haematobacter	0.00	nan	150	0
+genus	Halomonas	0.00	nan	150	0
+genus	Helicobacter	0.00	nan	150	0
+genus	Intestinibacter	0.00	nan	150	0
+genus	Isoptericola	0.00	nan	150	0
+genus	Jejuia	0.00	nan	150	0
+genus	Kineococcus	0.00	nan	150	0
+genus	Kytococcus	0.00	nan	150	0
+genus	Leptospira	0.00	nan	150	0
+genus	Lonsdalea	0.00	nan	150	0
+genus	Lutibaculum	0.00	nan	150	0
+genus	Lysobacter	0.00	nan	150	0
+genus	Marvinbryantia	0.00	nan	150	0
+genus	Meganema	0.00	nan	150	0
+genus	Methylocapsa	0.00	nan	150	0
+genus	Methyloceanibacter	0.00	nan	150	0
+genus	Methylosinus	0.00	nan	150	0
+genus	Micromonospora	0.00	nan	150	0
+genus	Microtetraspora	0.00	nan	150	0
+genus	Mitsuokella	0.00	nan	150	0
+genus	Mobilicoccus	0.00	nan	150	0
+genus	Mycobacterium	0.00	nan	150	0
+genus	Nesiotobacter	0.00	nan	150	0
+genus	Nitrospirillum	0.00	nan	150	0
+genus	Nocardiopsis	0.00	nan	150	0
+genus	Novosphingobium	0.00	nan	150	0
+genus	Oceanibaculum	0.00	nan	150	0
+genus	Oceaniovalibus	0.00	nan	150	0
+genus	Oligotropha	0.00	nan	150	0
+genus	Paenirhodobacter	0.00	nan	150	0
+genus	Pandoraea	0.00	nan	150	0
+genus	Pectobacterium	0.00	nan	150	0
+genus	Pedobacter	0.00	nan	150	0
+genus	Pelagibacterium	0.00	nan	150	0
+genus	Peptostreptococcus	0.00	nan	150	0
+genus	Perlucidibaca	0.00	nan	150	0
+genus	Phaeospirillum	0.00	nan	150	0
+genus	Polaribacter	0.00	nan	150	0
+genus	Propionimicrobium	0.00	nan	150	0
+genus	Proteocatella	0.00	nan	150	0
+genus	Pseudobutyrivibrio	0.00	nan	150	0
+genus	Pseudonocardia	0.00	nan	150	0
+genus	Pseudorhodobacter	0.00	nan	150	0
+genus	Rhodospirillum	0.00	nan	150	0
+genus	Roseibacterium	0.00	nan	150	0
+genus	Roseobacter	0.00	nan	150	0
+genus	Roseomonas	0.00	nan	150	0
+genus	Sagittula	0.00	nan	150	0
+genus	Salinispora	0.00	nan	150	0
+genus	Sediminimonas	0.00	nan	150	0
+genus	Serratia	0.00	nan	150	0
+genus	Sphingobacterium	0.00	nan	150	0
+genus	Spirillospora	0.00	nan	150	0
+genus	Sporocytophaga	0.00	nan	150	0
+genus	Streptacidiphilus	0.00	nan	150	0
+genus	Sulfitobacter	0.00	nan	150	0
+genus	Sulfobacillus	0.00	nan	150	0
+genus	Terrisporobacter	0.00	nan	150	0
+genus	Thalassobacter	0.00	nan	150	0
+genus	Thalassobaculum	0.00	nan	150	0
+genus	Thalassobium	0.00	nan	150	0
+genus	Thalassospira	0.00	nan	150	0
+genus	Thermoanaerobacterium	0.00	nan	150	0
+genus	Thermobrachium	0.00	nan	150	0
+genus	Thiocapsa	0.00	nan	150	0
+genus	Thioflavicoccus	0.00	nan	150	0
+genus	Thiothrix	0.00	nan	150	0
+genus	Winogradskyella	0.00	nan	150	0
+genus	Xylanimonas	0.00	nan	150	0
+genus	unassigned	nan	nan	958039050	722056200
+species	Acidovorax radicis	0.00	nan	18085800	0
+species	Streptomyces sp. W007	0.00	nan	6729900	0
+species	Variovorax sp. CF313	0.00	nan	6279300	0
+species	Variovorax paradoxus	0.00	nan	3897450	0
+species	Kibdelosporangium aridum	1.00	0.11	3593400	33272100
+species	Streptomyces griseus	0.00	nan	1459800	0
+species	Lechevalieria aerocolonigenes	0.76	0.24	1435200	4547100
+species	Caloranaerobacter azorensis	0.99	0.14	1335900	9392700
+species	Methylibium petroleiphilum	0.00	nan	831900	0
+species	Bosea sp. LC85	0.00	nan	630900	0
+species	Aureimonas ureilytica	0.00	nan	487350	0
+species	Streptomyces sp. CNB091	0.00	nan	414750	0
+species	Rhodococcus rhodnii	0.00	nan	400350	0
+species	Oerskovia turbata	0.00	nan	300600	0
+species	Streptomyces globisporus	0.00	nan	283650	0
+species	Bosea sp. UNC402CLCol	0.00	nan	240450	0
+species	Streptomyces sp. Acta 2897	0.00	nan	232200	0
+species	Acidovorax sp. CF316	0.00	nan	225000	0
+species	Acidovorax sp. KKS102	0.00	nan	187500	0
+species	Streptomyces anulatus	0.00	nan	171450	0
+species	Variovorax sp. JGI 0001016-M12	0.00	nan	142200	0
+species	Tatlockia micdadei	0.00	nan	141000	0
+species	Streptomyces albus	0.00	nan	138000	0
+species	Fulvimarina pelagi	0.00	nan	132450	0
+species	Acidovorax sp. NO-1	0.00	nan	131250	0
+species	Aureimonas altamirensis	0.00	nan	129750	0
+species	Anaeromusa acidaminophila	0.00	nan	104250	0
+species	Mesorhizobium loti	0.00	nan	103650	0
+species	Aurantimonas coralicida	0.00	nan	91200	0
+species	Streptomyces sp. CNS654	0.00	nan	90300	0
+species	Lentzea albidocapillata	0.00	nan	72450	0
+species	Aurantimonas manganoxydans	0.00	nan	72150	0
+species	Mesorhizobium ciceri	0.00	nan	68400	0
+species	Methylibium sp. T29	0.00	nan	61200	0
+species	Streptomyces cyaneofuscatus	0.00	nan	46500	0
+species	Streptomyces baarnensis	0.00	nan	46050	0
+species	Streptomyces sp. PVA 94-07	0.00	nan	40800	0
+species	Hoeflea sp. 108	0.00	nan	38100	0
+species	Streptomyces fulvissimus	0.00	nan	35100	0
+species	Acidovorax sp. JHL-9	0.00	nan	31650	0
+species	Streptomyces mediolani	0.00	nan	30300	0
+species	Acidovorax delafieldii	0.00	nan	30000	0
+species	Streptomyces sp. YIM 56141	0.00	nan	28950	0
+species	Mesorhizobium alhagi	0.00	nan	27150	0
+species	Mesorhizobium sp. SOD10	0.00	nan	27150	0
+species	Acidovorax sp. JHL-3	0.00	nan	27000	0
+species	Pelosinus fermentans	0.00	nan	27000	0
+species	Streptomyces alboviridis	0.00	nan	26550	0
+species	Streptomyces sp. ScaeMP-e10	0.00	nan	25350	0
+species	Mesorhizobium plurifarium	0.00	nan	24750	0
+species	Mesorhizobium metallidurans	0.00	nan	24450	0
+species	Variovorax sp. URHB0020	0.00	nan	24450	0
+species	Streptomyces sp. SolWspMP-sol2th	0.00	nan	22650	0
+species	Kibdelosporangium sp. MJ126-NF4	0.00	nan	22350	0
+species	Rhizobium leguminosarum	0.00	nan	22050	0
+species	Streptomyces sp. GBA 94-10	0.00	nan	22050	0
+species	Acidovorax avenae	0.00	nan	21750	0
+species	Pelosinus sp. UFO1	0.00	nan	21600	0
+species	Mesorhizobium amorphae	0.00	nan	21450	0
+species	Mesorhizobium sp. ORS3324	0.00	nan	21300	0
+species	Streptomyces coelicolor	0.00	nan	21150	0
+species	Legionella pneumophila	0.00	nan	20700	0
+species	Mesorhizobium sp. URHA0056	0.00	nan	18600	0
+species	Acidovorax sp. MR-S7	0.00	nan	18300	0
+species	Streptomyces sp. JS01	0.00	nan	18150	0
+species	Mesorhizobium sp. STM 4661	0.00	nan	17850	0
+species	Pseudaminobacter salicylatoxidans	0.00	nan	17700	0
+species	Mesorhizobium sp. LSJC280B00	0.00	nan	17550	0
+species	Thermosinus carboxydivorans	0.00	nan	16950	0
+species	Streptomyces sp. HCCB10043	0.00	nan	16500	0
+species	Streptomyces puniceus	0.00	nan	15750	0
+species	Streptomyces sp. NRRL S-623	0.00	nan	15600	0
+species	Mesorhizobium sp. WSM3224	0.00	nan	14700	0
+species	Streptomyces sp. CcalMP-8W	0.00	nan	14400	0
+species	Sporomusa ovata	0.00	nan	14250	0
+species	Streptomyces sp. Wigar10	0.00	nan	13350	0
+species	Mesorhizobium opportunistum	0.00	nan	12300	0
+species	Acetonema longum	0.00	nan	12000	0
+species	Variovorax sp. JGI 0001011-P21	0.00	nan	11550	0
+species	Cupriavidus pinatubonensis	0.00	nan	10800	0
+species	Ensifer adhaerens	0.00	nan	9600	0
+species	Mesorhizobium sp. WSM2561	0.00	nan	9600	0
+species	Methylibium sp. T29-B	0.00	nan	9600	0
+species	Acidovorax sp. JS42	0.00	nan	9150	0
+species	Alicycliphilus denitrificans	0.00	nan	9000	0
+species	Delftia acidovorans	0.00	nan	9000	0
+species	Peptoclostridium difficile	0.00	nan	8700	0
+species	Mesorhizobium sp. LNHC252B00	0.00	nan	8550	0
+species	Aliihoeflea sp. 2WW	0.00	nan	8400	0
+species	Streptomyces filamentosus	0.00	nan	8400	0
+species	Streptomyces sp. NRRL B-1381	0.00	nan	8400	0
+species	Comamonas testosteroni	0.00	nan	8100	0
+species	Streptomyces atratus	0.00	nan	8100	0
+species	Mesorhizobium sp. ORS3359	0.00	nan	7350	0
+species	Mesorhizobium australicum	0.00	nan	7200	0
+species	Pseudomonas aeruginosa	0.00	nan	7200	0
+species	Xenophilus azovorans	0.00	nan	7200	0
+species	Streptomyces californicus	0.00	nan	7050	0
+species	Curvibacter lanceolatus	0.00	nan	6750	0
+species	Streptomyces sp. NTK 937	0.00	nan	6750	0
+species	Acidovorax citrulli	0.00	nan	6600	0
+species	Verminephrobacter eiseniae	0.00	nan	6450	0
+species	Chelativorans sp. BNC1	0.00	nan	6300	0
+species	Sinorhizobium meliloti	0.00	nan	6300	0
+species	Streptomyces lividans	0.00	nan	6150	0
+species	Streptomyces rimosus	0.00	nan	6000	0
+species	Mesorhizobium sp. L48C026A00	0.00	nan	5850	0
+species	Streptomyces atroolivaceus	0.00	nan	5700	0
+species	Acidovorax ebreus	0.00	nan	5400	0
+species	Chelatococcus sp. GW1	0.00	nan	5400	0
+species	Mesorhizobium sp. L2C084A000	0.00	nan	5400	0
+species	Agrobacterium tumefaciens	0.00	nan	5250	0
+species	Burkholderiales bacterium JOSHI_001	0.00	nan	5250	0
+species	Streptomyces viridochromogenes	0.00	nan	5250	0
+species	Achromobacter xylosoxidans	0.00	nan	5100	0
+species	Mesorhizobium sp. WSM3626	0.00	nan	4950	0
+species	Granulicoccus phenolivorans	0.00	nan	4800	0
+species	Mesorhizobium sp. LSHC420B00	0.00	nan	4800	0
+species	Mesorhizobium sp. URHC0008	0.00	nan	4800	0
+species	Olleya marilimosa	0.00	nan	4800	0
+species	Acidovorax oryzae	0.00	nan	4650	0
+species	Geminicoccus roseus	0.00	nan	4650	0
+species	Methylobacterium nodulans	0.00	nan	4200	0
+species	Polaromonas sp. JS666	0.00	nan	4200	0
+species	Streptomyces sp. 171/Eco105	0.00	nan	4200	0
+species	uncultured bacterium esnapd10	0.00	nan	4200	0
+species	Streptomyces sp. AW19M42	0.00	nan	4050	0
+species	Mesorhizobium sp. LNHC232B00	0.00	nan	3750	0
+species	Nitrobacter sp. Nb-311A	0.00	nan	3750	0
+species	Aminobacter sp. J41	0.00	nan	3600	0
+species	Devosia sp. LC5	0.00	nan	3600	0
+species	Escherichia coli	0.00	nan	3600	0
+species	Phycicoccus jejuensis	0.00	nan	3600	0
+species	Sinorhizobium fredii	0.00	nan	3600	0
+species	Streptomyces bicolor	0.00	nan	3600	0
+species	Alkaliphilus transvaalensis	0.00	nan	3450	0
+species	Arsenicicoccus bolidensis	0.00	nan	3450	0
+species	Cellulosimicrobium cellulans	0.00	nan	3450	0
+species	Hoeflea sp. BAL378	0.00	nan	3450	0
+species	Nitratireductor aquibiodomus	0.00	nan	3450	0
+species	Nitratireductor basaltis	0.00	nan	3450	0
+species	Streptomyces sp. NRRL F-2202	0.00	nan	3450	0
+species	Verminephrobacter aporrectodeae	0.00	nan	3450	0
+species	Fluoribacter dumoffii	0.00	nan	3300	0
+species	Janibacter sp. HTCC2649	0.00	nan	3300	0
+species	Propionibacteriaceae bacterium P6A17	0.00	nan	3300	0
+species	Streptomyces phage phiHau3	0.00	nan	3300	0
+species	Amorphus coralli	0.00	nan	3000	0
+species	Polaromonas sp. CF318	0.00	nan	3000	0
+species	Simplicispira psychrophila	0.00	nan	3000	0
+species	Knoellia subterranea	0.00	nan	2850	0
+species	Mesorhizobium sp. LSJC277A00	0.00	nan	2850	0
+species	Polaromonas naphthalenivorans	0.00	nan	2850	0
+species	Streptomyces clavuligerus	0.00	nan	2850	0
+species	Hassallia byssoidea	0.00	nan	2700	0
+species	Inquilinus limosus	0.00	nan	2700	0
+species	Knoellia aerolata	0.00	nan	2700	0
+species	Limnohabitans sp. Rim28	0.00	nan	2700	0
+species	Propionibacterium propionicum	0.00	nan	2700	0
+species	Streptomyces sp. CNH287	0.00	nan	2700	0
+species	Variovorax sp. JGI 0001013-L10	0.00	nan	2700	0
+species	Chlamydia psittaci	0.00	nan	2550	0
+species	Hylemonella gracilis	0.00	nan	2550	0
+species	Knoellia flava	0.00	nan	2550	0
+species	Microvirga lupini	0.00	nan	2550	0
+species	Ochrobactrum rhizosphaerae	0.00	nan	2550	0
+species	Phyllobacterium sp. YR531	0.00	nan	2550	0
+species	Shinella sp. DD12	0.00	nan	2550	0
+species	Streptomyces floridae	0.00	nan	2550	0
+species	Curvibacter putative symbiont of Hydra magnipapillata	0.00	nan	2400	0
+species	Kaistia granuli	0.00	nan	2400	0
+species	Micrococcus luteus	0.00	nan	2400	0
+species	Polaromonas sp. CG9_12	0.00	nan	2400	0
+species	Saccharothrix syringae	0.00	nan	2400	0
+species	Streptomyces sp. NRRL S-350	0.00	nan	2400	0
+species	Zymophilus raffinosivorans	0.00	nan	2400	0
+species	Ensifer americanum	0.00	nan	2250	0
+species	Ottowia thiooxydans	0.00	nan	2250	0
+species	Rhodopseudomonas palustris	0.00	nan	2250	0
+species	Saccharothrix sp. NRRL B-16314	0.00	nan	2250	0
+species	Streptomyces sp. 150FB	0.00	nan	2250	0
+species	Streptomyces sp. ATexAB-D23	0.00	nan	2250	0
+species	Agrobacterium rhizogenes	0.00	nan	2100	0
+species	Legionella massiliensis	0.00	nan	2100	0
+species	Mesorhizobium sp. L103C119B0	0.00	nan	2100	0
+species	Mesorhizobium sp. LSJC285A00	0.00	nan	2100	0
+species	Rhizobium sp. OK665	0.00	nan	2100	0
+species	Rhodoferax ferrireducens	0.00	nan	2100	0
+species	Rhodoferax saidenbachensis	0.00	nan	2100	0
+species	Leucobacter sp. UCD-THU	0.00	nan	1950	0
+species	Microvirga flocculans	0.00	nan	1950	0
+species	Nitratireductor indicus	0.00	nan	1950	0
+species	Rhizobium vignae	0.00	nan	1950	0
+species	Streptomyces sp. NRRL S-15	0.00	nan	1950	0
+species	Alysiella crassa	0.00	nan	1800	0
+species	Rhizobium etli	0.00	nan	1800	0
+species	Saccharothrix espanaensis	0.00	nan	1800	0
+species	Streptomyces tsukubaensis	0.00	nan	1800	0
+species	Variovorax sp. JGI 0001014-I04	0.00	nan	1800	0
+species	Corynebacterium sputi	0.00	nan	1650	0
+species	Intrasporangium chromatireducens	0.00	nan	1650	0
+species	Knoellia sinensis	0.00	nan	1650	0
+species	Limnohabitans sp. Rim47	0.00	nan	1650	0
+species	Streptomycetaceae bacterium MP113-05	0.00	nan	1650	0
+species	Azohydromonas australica	0.00	nan	1500	0
+species	Clostridiaceae bacterium L21-TH-D2	0.00	nan	1500	0
+species	Curvibacter gracilis	0.00	nan	1500	0
+species	Ensifer sojae	0.00	nan	1500	0
+species	Intrasporangiaceae bacterium URHB0013	0.00	nan	1500	0
+species	Marmoricola sp. URHB0036	0.00	nan	1500	0
+species	Martelella mediterranea	0.00	nan	1500	0
+species	Methylobacterium sp. MB200	0.00	nan	1500	0
+species	Methylopila sp. 73B	0.00	nan	1500	0
+species	Skermanella stibiiresistens	0.00	nan	1500	0
+species	Streptomyces albulus	0.00	nan	1500	0
+species	Streptomyces avermitilis	0.00	nan	1500	0
+species	Streptomyces sp. PAMC26508	0.00	nan	1500	0
+species	Variovorax sp. JGI 0001020-M05	0.00	nan	1500	0
+species	uncultured bacterium	0.00	nan	1500	0
+species	Ancylobacter sp. FA202	0.00	nan	1350	0
+species	Aquabacterium sp. NJ1	0.00	nan	1350	0
+species	Burkholderia sp. MSh2	0.00	nan	1350	0
+species	Ferrimicrobium acidiphilum	0.00	nan	1350	0
+species	Intrasporangium calvum	0.00	nan	1350	0
+species	Intrasporangium oryzae	0.00	nan	1350	0
+species	Leptothrix cholodnii	0.00	nan	1350	0
+species	Mesorhizobium sp. LSJC264A00	0.00	nan	1350	0
+species	Nitratireductor pacificus	0.00	nan	1350	0
+species	Streptomyces resistomycificus	0.00	nan	1350	0
+species	Streptomyces sp. NRRL S-244	0.00	nan	1350	0
+species	Streptomyces venezuelae	0.00	nan	1350	0
+species	Tolypothrix bouteillei	0.00	nan	1350	0
+species	Aestuariimicrobium kwangyangense	0.00	nan	1200	0
+species	Agrobacterium vitis	0.00	nan	1200	0
+species	Allokutzneria albata	0.00	nan	1200	0
+species	Aquamicrobium defluvii	0.00	nan	1200	0
+species	Bacillus sp. EGD-AK10	0.00	nan	1200	0
+species	Chelativorans sp. J32	0.00	nan	1200	0
+species	Desulfitobacterium hafniense	0.00	nan	1200	0
+species	Gemmobacter nectariphilus	0.00	nan	1200	0
+species	Hydrogenophaga sp. T4	0.00	nan	1200	0
+species	Ochrobactrum anthropi	0.00	nan	1200	0
+species	Salmonella enterica	0.00	nan	1200	0
+species	Streptomyces scopuliridis	0.00	nan	1200	0
+species	Streptomyces sp. CNQ431	0.00	nan	1200	0
+species	Thauera aminoaromatica	0.00	nan	1200	0
+species	Azospirillum lipoferum	0.00	nan	1050	0
+species	Cupriavidus sp. IDO	0.00	nan	1050	0
+species	Delftia sp. RIT313	0.00	nan	1050	0
+species	Ensifer sp. TW10	0.00	nan	1050	0
+species	Legionella hackeliae	0.00	nan	1050	0
+species	Mesorhizobium sp. LNHC221B00	0.00	nan	1050	0
+species	Ochrobactrum intermedium	0.00	nan	1050	0
+species	Rhizobium sp.	0.00	nan	1050	0
+species	Ruegeria pomeroyi	0.00	nan	1050	0
+species	Salinarimonas rosea	0.00	nan	1050	0
+species	Sphingomonas wittichii	0.00	nan	1050	0
+species	Streptomyces niveus	0.00	nan	1050	0
+species	Tetrasphaera elongata	0.00	nan	1050	0
+species	[Kitasatospora] papulosa	0.00	nan	1050	0
+species	Agrobacterium sp. ATCC 31749	0.00	nan	900	0
+species	Bradyrhizobium japonicum	0.00	nan	900	0
+species	Corynebacterium variabile	0.00	nan	900	0
+species	Ensifer sp. USDA 6670	0.00	nan	900	0
+species	Hyphomicrobium denitrificans	0.00	nan	900	0
+species	Legionella fairfieldensis	0.00	nan	900	0
+species	Martelella sp. AD-3	0.00	nan	900	0
+species	Mesorhizobium sp. URHB0007	0.00	nan	900	0
+species	Methylopila sp. M107	0.00	nan	900	0
+species	Ochrobactrum sp. CDB2	0.00	nan	900	0
+species	Phyllobacterium sp. UNC302MFCol5.2	0.00	nan	900	0
+species	Ralstonia solanacearum	0.00	nan	900	0
+species	Rhodovulum sp. NI22	0.00	nan	900	0
+species	Starkeya novella	0.00	nan	900	0
+species	Streptomyces purpureus	0.00	nan	900	0
+species	Actinosynnema mirum	0.00	nan	750	0
+species	Afipia broomeae	0.00	nan	750	0
+species	Azorhizobium caulinodans	0.00	nan	750	0
+species	Brevibacterium senegalense	0.00	nan	750	0
+species	Burkholderia pseudomallei	0.00	nan	750	0
+species	Caldimonas manganoxidans	0.00	nan	750	0
+species	Comamonadaceae bacterium URHA0028	0.00	nan	750	0
+species	Comamonas composti	0.00	nan	750	0
+species	Hoeflea phototrophica	0.00	nan	750	0
+species	Janibacter hoylei	0.00	nan	750	0
+species	Leifsonia aquatica	0.00	nan	750	0
+species	Loktanella vestfoldensis	0.00	nan	750	0
+species	Maritalea myrionectae	0.00	nan	750	0
+species	Mesorhizobium huakuii	0.00	nan	750	0
+species	Mesorhizobium sp. LNHC220B00	0.00	nan	750	0
+species	Methylobacterium extorquens	0.00	nan	750	0
+species	Methylobacterium sp. 88A	0.00	nan	750	0
+species	Microlunatus phosphovorus	0.00	nan	750	0
+species	Microvirga lotononidis	0.00	nan	750	0
+species	Paraoerskovia marina	0.00	nan	750	0
+species	Propionibacterium freudenreichii	0.00	nan	750	0
+species	Pseudomonas syringae	0.00	nan	750	0
+species	Ramlibacter tataouinensis	0.00	nan	750	0
+species	Rhizobiales bacterium YIM 77505	0.00	nan	750	0
+species	Rhizobium selenitireducens	0.00	nan	750	0
+species	Rhizobium sp. JGI 0001014-F05	0.00	nan	750	0
+species	Rhodobacter sphaeroides	0.00	nan	750	0
+species	Sinorhizobium sp. CCBAU 05631	0.00	nan	750	0
+species	Sphaerotilus natans	0.00	nan	750	0
+species	Streptomyces chattanoogensis	0.00	nan	750	0
+species	Streptomyces exfoliatus	0.00	nan	750	0
+species	Streptomyces scabiei	0.00	nan	750	0
+species	Streptomyces sp. CNT360	0.00	nan	750	0
+species	Streptomyces sp. NRRL F-5123	0.00	nan	750	0
+species	Streptomyces sp. NRRL F-5702	0.00	nan	750	0
+species	Streptomyces sp. NRRL S-1824	0.00	nan	750	0
+species	Streptomyces sp. NRRL S-325	0.00	nan	750	0
+species	Syntrophobotulus glycolicus	0.00	nan	750	0
+species	Variovorax sp. JGI 0001016-C20	0.00	nan	750	0
+species	Vibrio parahaemolyticus	0.00	nan	750	0
+species	Xanthobacter sp. 126	0.00	nan	750	0
+species	[Clostridium] clariflavum	0.00	nan	750	0
+species	Acidimicrobium ferrooxidans	0.00	nan	600	0
+species	Agrobacterium albertimagni	0.00	nan	600	0
+species	Amycolatopsis orientalis	0.00	nan	600	0
+species	Amycolatopsis rifamycinica	0.00	nan	600	0
+species	Amycolatopsis vancoresmycina	0.00	nan	600	0
+species	Bosea sp. 117	0.00	nan	600	0
+species	Bradyrhizobium elkanii	0.00	nan	600	0
+species	Brucella abortus	0.00	nan	600	0
+species	Burkholderia mallei	0.00	nan	600	0
+species	Burkholderia terrae	0.00	nan	600	0
+species	Candidatus Symbiobacter mobilis	0.00	nan	600	0
+species	Cellulosimicrobium sp. MM	0.00	nan	600	0
+species	Clostridiisalibacter paucivorans	0.00	nan	600	0
+species	Comamonadaceae bacterium BICA1-1	0.00	nan	600	0
+species	Demetria terragena	0.00	nan	600	0
+species	Ensifer sp. BR816	0.00	nan	600	0
+species	Hyphomicrobium zavarzinii	0.00	nan	600	0
+species	Legionella sainthelensi	0.00	nan	600	0
+species	Loktanella cinnabarina	0.00	nan	600	0
+species	Megamonas funiformis	0.00	nan	600	0
+species	Mesoflavibacter zeaxanthinifaciens	0.00	nan	600	0
+species	Mesorhizobium sp. LSJC269B00	0.00	nan	600	0
+species	Methyloversatilis sp. NVD	0.00	nan	600	0
+species	Methyloversatilis universalis	0.00	nan	600	0
+species	Microvirga sp. BSC39	0.00	nan	600	0
+species	Nitrobacter winogradskyi	0.00	nan	600	0
+species	Pannonibacter phragmitetus	0.00	nan	600	0
+species	Pantholops hodgsonii	0.00	nan	600	0
+species	Paracoccus aminophilus	0.00	nan	600	0
+species	Polaromonas sp. EUR3 1.2.1	0.00	nan	600	0
+species	Rhizobiales bacterium 8047	0.00	nan	600	0
+species	Rhizobium giardinii	0.00	nan	600	0
+species	Rhizobium sp. AP16	0.00	nan	600	0
+species	Rhizobium sp. CF097	0.00	nan	600	0
+species	Rhizobium sp. IBUN	0.00	nan	600	0
+species	Rhizobium sp. OK494	0.00	nan	600	0
+species	Rhizobium undicola	0.00	nan	600	0
+species	Rhodobacter sp. SW2	0.00	nan	600	0
+species	Selenomonas ruminantium	0.00	nan	600	0
+species	Sinorhizobium arboris	0.00	nan	600	0
+species	Streptomyces sp. Mg1	0.00	nan	600	0
+species	Streptomyces sp. NRRL B-24051	0.00	nan	600	0
+species	Streptomyces sp. NRRL B-24720	0.00	nan	600	0
+species	Streptomyces sp. NRRL F-3213	0.00	nan	600	0
+species	Streptomyces sp. NRRL F-5135	0.00	nan	600	0
+species	Streptomyces sp. NRRL F-5681	0.00	nan	600	0
+species	Streptomyces sp. NRRL S-241	0.00	nan	600	0
+species	Streptomyces sp. NRRL WC-3549	0.00	nan	600	0
+species	Streptomyces thermolilacinus	0.00	nan	600	0
+species	Succinispira mobilis	0.00	nan	600	0
+species	Thiobacillus denitrificans	0.00	nan	600	0
+species	Xanthobacter autotrophicus	0.00	nan	600	0
+species	Achromobacter piechaudii	0.00	nan	450	0
+species	Actinokineospora sp. EG49	0.00	nan	450	0
+species	Amycolatopsis balhimycina	0.00	nan	450	0
+species	Austwickia chelonae	0.00	nan	450	0
+species	Azospirillum brasilense	0.00	nan	450	0
+species	Bordetella bronchiseptica	0.00	nan	450	0
+species	Bradyrhizobium sp. YR681	0.00	nan	450	0
+species	Brevibacterium mcbrellneri	0.00	nan	450	0
+species	Cellulomonas fimi	0.00	nan	450	0
+species	Comamonadaceae bacterium JGI 0001013-A16	0.00	nan	450	0
+species	Comamonas badia	0.00	nan	450	0
+species	Cupriavidus basilensis	0.00	nan	450	0
+species	Desulfotomaculum acetoxidans	0.00	nan	450	0
+species	Dinoroseobacter shibae	0.00	nan	450	0
+species	Ensifer sp. WSM1721	0.00	nan	450	0
+species	Kaistia adipata	0.00	nan	450	0
+species	Kineosphaera limosa	0.00	nan	450	0
+species	Kutzneria albida	0.00	nan	450	0
+species	Kutzneria sp. 744	0.00	nan	450	0
+species	Legionella lansingensis	0.00	nan	450	0
+species	Legionella wadsworthii	0.00	nan	450	0
+species	Mesorhizobium sp. LNHC209A00	0.00	nan	450	0
+species	Methylobacterium mesophilicum	0.00	nan	450	0
+species	Methylobacterium sp. 10	0.00	nan	450	0
+species	Methylocella silvestris	0.00	nan	450	0
+species	Nocardioides sp. J54	0.00	nan	450	0
+species	Paracoccus sp. N5	0.00	nan	450	0
+species	Pleomorphomonas koreensis	0.00	nan	450	0
+species	Polaromonas glacialis	0.00	nan	450	0
+species	Promicromonospora sukumoe	0.00	nan	450	0
+species	Propionicicella superfundia	0.00	nan	450	0
+species	Proteobacteria bacterium JGI 0001009-D17	0.00	nan	450	0
+species	Pseudochrobactrum sp. AO18b	0.00	nan	450	0
+species	Pseudomonas avellanae	0.00	nan	450	0
+species	Pseudomonas stutzeri	0.00	nan	450	0
+species	Rhizobium sp. CF142	0.00	nan	450	0
+species	Rhizobium sp. PDO1-076	0.00	nan	450	0
+species	Rhizobium sp. YS-1r	0.00	nan	450	0
+species	Rhodopseudomonas sp. B29	0.00	nan	450	0
+species	Rhodovulum sp. PH10	0.00	nan	450	0
+species	Roseovarius sp. 217	0.00	nan	450	0
+species	Saccharomonospora azurea	0.00	nan	450	0
+species	Sanguibacter keddieii	0.00	nan	450	0
+species	Sphingobium sp. YL23	0.00	nan	450	0
+species	Sphingomonas sp. PAMC 26605	0.00	nan	450	0
+species	Streptomyces flavidovirens	0.00	nan	450	0
+species	Streptomyces flavovirens	0.00	nan	450	0
+species	Streptomyces fulvoviolaceus	0.00	nan	450	0
+species	Streptomyces griseoluteus	0.00	nan	450	0
+species	Streptomyces mobaraensis	0.00	nan	450	0
+species	Streptomyces sp. NRRL F-525	0.00	nan	450	0
+species	Streptomyces sp. PCS3-D2	0.00	nan	450	0
+species	Streptomyces sp. SS	0.00	nan	450	0
+species	Terracoccus sp. 273MFTsu3.1	0.00	nan	450	0
+species	Thioclava pacifica	0.00	nan	450	0
+species	Tistrella mobilis	0.00	nan	450	0
+species	Variovorax sp. JGI 0001014-H11	0.00	nan	450	0
+species	Wenxinia marina	0.00	nan	450	0
+species	Acidithiobacillus ferrivorans	0.00	nan	300	0
+species	Actinokineospora enzanensis	0.00	nan	300	0
+species	Afipia felis	0.00	nan	300	0
+species	Agrobacterium sp. 10MFCol1.1	0.00	nan	300	0
+species	Ahrensia sp. 13_GOM-1096m	0.00	nan	300	0
+species	Anaeroarcus burkinensis	0.00	nan	300	0
+species	Anaeroglobus geminatus	0.00	nan	300	0
+species	Arenitalea lutea	0.00	nan	300	0
+species	Bradyrhizobium sp. CCGE-LA001	0.00	nan	300	0
+species	Bradyrhizobium sp. DFCI-1	0.00	nan	300	0
+species	Bradyrhizobium sp. Ec3.3	0.00	nan	300	0
+species	Bradyrhizobium sp. ORS 278	0.00	nan	300	0
+species	Bradyrhizobium sp. URHD0069	0.00	nan	300	0
+species	Brevibacterium casei	0.00	nan	300	0
+species	Brucella melitensis	0.00	nan	300	0
+species	Brucella ovis	0.00	nan	300	0
+species	Burkholderia sp. YI23	0.00	nan	300	0
+species	Burkholderiales bacterium JGI 0001003-A5	0.00	nan	300	0
+species	Cellulomonas cellasea	0.00	nan	300	0
+species	Clostridium botulinum	0.00	nan	300	0
+species	Clostridium pasteurianum	0.00	nan	300	0
+species	Defluviimonas sp. 20V17	0.00	nan	300	0
+species	Dehalobacter sp. FTH1	0.00	nan	300	0
+species	Delftia sp. Cs1-4	0.00	nan	300	0
+species	Devosia sp. DBB001	0.00	nan	300	0
+species	Ideonella sp. B508-1	0.00	nan	300	0
+species	Jannaschia sp. CCS1	0.00	nan	300	0
+species	Kitasatospora setae	0.00	nan	300	0
+species	Klebsiella pneumoniae	0.00	nan	300	0
+species	Kribbella flavida	0.00	nan	300	0
+species	Labrenzia alexandrii	0.00	nan	300	0
+species	Legionella tunisiensis	0.00	nan	300	0
+species	Leisingera sp. ANG-M1	0.00	nan	300	0
+species	Magnetospira sp. QH-2	0.00	nan	300	0
+species	Mangrovimonas yunxiaonensis	0.00	nan	300	0
+species	Mesorhizobium sp. L2C066B000	0.00	nan	300	0
+species	Mesorhizobium sp. LNJC394B00	0.00	nan	300	0
+species	Mesorhizobium sp. LSJC268A00	0.00	nan	300	0
+species	Methylobacterium radiotolerans	0.00	nan	300	0
+species	Nocardioides sp. CF8	0.00	nan	300	0
+species	Nocardioides sp. URHA0032	0.00	nan	300	0
+species	Oceanicola sp. S124	0.00	nan	300	0
+species	Paracoccus sp. 5503	0.00	nan	300	0
+species	Peptostreptococcaceae bacterium VA2	0.00	nan	300	0
+species	Polymorphum gilvum	0.00	nan	300	0
+species	Porphyrobacter sp. AAP82	0.00	nan	300	0
+species	Propionibacterium acnes	0.00	nan	300	0
+species	Ralstonia sp. UNC404CL21Col	0.00	nan	300	0
+species	Rhizobium freirei	0.00	nan	300	0
+species	Rhizobium grahamii	0.00	nan	300	0
+species	Rhizobium mesoamericanum	0.00	nan	300	0
+species	Rhizobium sp. CF122	0.00	nan	300	0
+species	Rhizobium sp. CF258	0.00	nan	300	0
+species	Rhizobium sp. CF394	0.00	nan	300	0
+species	Rhizobium sp. MGL06	0.00	nan	300	0
+species	Rhizobium sullae	0.00	nan	300	0
+species	Rhodobacteraceae bacterium HIMB11	0.00	nan	300	0
+species	Rhodobacteraceae bacterium PD-2	0.00	nan	300	0
+species	Rhodococcus erythropolis	0.00	nan	300	0
+species	Roseovarius nubinhibens	0.00	nan	300	0
+species	Rubellimicrobium thermophilum	0.00	nan	300	0
+species	Rubrivivax benzoatilyticus	0.00	nan	300	0
+species	Rubrivivax gelatinosus	0.00	nan	300	0
+species	Saccharomonospora marina	0.00	nan	300	0
+species	Saccharopolyspora erythraea	0.00	nan	300	0
+species	Selenomonas sp. ND2010	0.00	nan	300	0
+species	Sphingomonas jaspsi	0.00	nan	300	0
+species	Stappia stellulata	0.00	nan	300	0
+species	Stenotrophomonas maltophilia	0.00	nan	300	0
+species	Streptococcus agalactiae	0.00	nan	300	0
+species	Streptomyces acidiscabies	0.00	nan	300	0
+species	Streptomyces antibioticus	0.00	nan	300	0
+species	Streptomyces aurantiacus	0.00	nan	300	0
+species	Streptomyces flavogriseus	0.00	nan	300	0
+species	Streptomyces griseofuscus	0.00	nan	300	0
+species	Streptomyces lavendulae	0.00	nan	300	0
+species	Streptomyces lydicus	0.00	nan	300	0
+species	Streptomyces mutabilis	0.00	nan	300	0
+species	Streptomyces nodosus	0.00	nan	300	0
+species	Streptomyces pristinaespiralis	0.00	nan	300	0
+species	Streptomyces sp. 142MFCol3.1	0.00	nan	300	0
+species	Streptomyces sp. CNH189	0.00	nan	300	0
+species	Streptomyces sp. URHA0041	0.00	nan	300	0
+species	Streptomyces turgidiscabies	0.00	nan	300	0
+species	Streptomyces violaceorubidus	0.00	nan	300	0
+species	Streptomyces violaceusniger	0.00	nan	300	0
+species	Thauera sp. MZ1T	0.00	nan	300	0
+species	Variovorax sp. JGI 0001013-M04	0.00	nan	300	0
+species	[Clostridium] litorale	0.00	nan	300	0
+species	[Clostridium] sordellii	0.00	nan	300	0
+species	[Clostridium] stercorarium	0.00	nan	300	0
+species	bacterium YEK0313	0.00	nan	300	0
+species	uncultured Verminephrobacter sp.	0.00	nan	300	0
+species	uncultured bacterium esnapd11	0.00	nan	300	0
+species	Acetobacter papayae	0.00	nan	150	0
+species	Acidithiobacillus thiooxidans	0.00	nan	150	0
+species	Actinoalloteichus spitiensis	0.00	nan	150	0
+species	Actinospica acidiphila	0.00	nan	150	0
+species	Actinospica robiniae	0.00	nan	150	0
+species	Afifella pfennigii	0.00	nan	150	0
+species	Agrococcus lahaulensis	0.00	nan	150	0
+species	Agromyces subbeticus	0.00	nan	150	0
+species	Ahrensia sp. R2A130	0.00	nan	150	0
+species	Alkaliphilus metalliredigens	0.00	nan	150	0
+species	Alkaliphilus oremlandii	0.00	nan	150	0
+species	Ammonifex degensii	0.00	nan	150	0
+species	Amycolatopsis alba	0.00	nan	150	0
+species	Amycolatopsis azurea	0.00	nan	150	0
+species	Amycolatopsis benzoatilytica	0.00	nan	150	0
+species	Amycolatopsis sp. ATCC 39116	0.00	nan	150	0
+species	Amycolatopsis sp. MJM2582	0.00	nan	150	0
+species	Amycolatopsis sp. WAC1375	0.00	nan	150	0
+species	Amycolatopsis thermoflava	0.00	nan	150	0
+species	Anaerotruncus colihominis	0.00	nan	150	0
+species	Arthrobacter phenanthrenivorans	0.00	nan	150	0
+species	Arthrobacter siccitolerans	0.00	nan	150	0
+species	Arthrobacter sp. UNC362MFTsu5.1	0.00	nan	150	0
+species	Azotobacter vinelandii	0.00	nan	150	0
+species	Bartonella alsatica	0.00	nan	150	0
+species	Bartonella quintana	0.00	nan	150	0
+species	Bartonella sp. R4(2010)	0.00	nan	150	0
+species	Bartonella taylorii	0.00	nan	150	0
+species	Betaproteobacteria bacterium MOLA814	0.00	nan	150	0
+species	Beutenbergia cavernae	0.00	nan	150	0
+species	Blastococcus saxobsidens	0.00	nan	150	0
+species	Bordetella hinzii	0.00	nan	150	0
+species	Bordetella holmesii	0.00	nan	150	0
+species	Brachymonas chironomi	0.00	nan	150	0
+species	Bradyrhizobium sp. BTAi1	0.00	nan	150	0
+species	Bradyrhizobium sp. CCBAU 15544	0.00	nan	150	0
+species	Bradyrhizobium sp. DOA9	0.00	nan	150	0
+species	Bradyrhizobium sp. JGI 0001002-A22	0.00	nan	150	0
+species	Bradyrhizobium sp. ORS 375	0.00	nan	150	0
+species	Bradyrhizobium sp. STM 3809	0.00	nan	150	0
+species	Bradyrhizobium sp. Tv2a-2	0.00	nan	150	0
+species	Bradyrhizobium sp. URHA0002	0.00	nan	150	0
+species	Brevundimonas naejangsanensis	0.00	nan	150	0
+species	Burkholderia bryophila	0.00	nan	150	0
+species	Burkholderia dilworthii	0.00	nan	150	0
+species	Burkholderia gladioli	0.00	nan	150	0
+species	Burkholderia kururiensis	0.00	nan	150	0
+species	Burkholderia mimosarum	0.00	nan	150	0
+species	Burkholderia phymatum	0.00	nan	150	0
+species	Burkholderia sp. JPY251	0.00	nan	150	0
+species	Burkholderia sp. RPE64	0.00	nan	150	0
+species	Burkholderia sp. RPE67	0.00	nan	150	0
+species	Burkholderia sp. WSM2232	0.00	nan	150	0
+species	Burkholderia sp. lig30	0.00	nan	150	0
+species	Burkholderiales bacterium JGI 0001002-H06	0.00	nan	150	0
+species	Burkholderiales bacterium JGI 0001003-J08	0.00	nan	150	0
+species	Caldanaerobacter subterraneus	0.00	nan	150	0
+species	Caloramator sp. ALD01	0.00	nan	150	0
+species	Carboxydothermus hydrogenoformans	0.00	nan	150	0
+species	Catelliglobosispora koreensis	0.00	nan	150	0
+species	Celeribacter baekdonensis	0.00	nan	150	0
+species	Celeribacter indicus	0.00	nan	150	0
+species	Cellulomonas sp. HZM	0.00	nan	150	0
+species	Cellulomonas sp. KRMCY2	0.00	nan	150	0
+species	Chromobacterium sp. C-61	0.00	nan	150	0
+species	Clostridiales bacterium oral taxon 876	0.00	nan	150	0
+species	Clostridium ljungdahlii	0.00	nan	150	0
+species	Clostridium paraputrificum	0.00	nan	150	0
+species	Clostridium sp. 7_2_43FAA	0.00	nan	150	0
+species	Clostridium sp. KNHs209	0.00	nan	150	0
+species	Clostridium sp. KNHs214	0.00	nan	150	0
+species	Clostridium sp. LF2	0.00	nan	150	0
+species	Clostridium ultunense	0.00	nan	150	0
+species	Collimonas arenae	0.00	nan	150	0
+species	Collimonas fungivorans	0.00	nan	150	0
+species	Comamonadaceae bacterium H1	0.00	nan	150	0
+species	Comamonas sp. B-9	0.00	nan	150	0
+species	Corynebacterium freneyi	0.00	nan	150	0
+species	Cupriavidus taiwanensis	0.00	nan	150	0
+species	Dactylosporangium aurantiacum	0.00	nan	150	0
+species	Desulfotomaculum hydrothermale	0.00	nan	150	0
+species	Dickeya chrysanthemi	0.00	nan	150	0
+species	Dickeya dadantii	0.00	nan	150	0
+species	Donghicola xiamenensis	0.00	nan	150	0
+species	Dorea sp. 5-2	0.00	nan	150	0
+species	Ethanoligenens harbinense	0.00	nan	150	0
+species	Ferrovum myxofaciens	0.00	nan	150	0
+species	Flaviramulus ichthyoenteri	0.00	nan	150	0
+species	Flavobacterium sp. CF136	0.00	nan	150	0
+species	Flexibacter roseolus	0.00	nan	150	0
+species	Fodinicurvata fenggangensis	0.00	nan	150	0
+species	Formosa sp. AK20	0.00	nan	150	0
+species	Frankia sp. EAN1pec	0.00	nan	150	0
+species	Glaciibacter superstes	0.00	nan	150	0
+species	Haematobacter missouriensis	0.00	nan	150	0
+species	Halomonas sp. KM-1	0.00	nan	150	0
+species	Helicobacter pylori	0.00	nan	150	0
+species	Herbaspirillum seropedicae	0.00	nan	150	0
+species	Intestinibacter bartlettii	0.00	nan	150	0
+species	Isoptericola variabilis	0.00	nan	150	0
+species	Jejuia pallidilutea	0.00	nan	150	0
+species	Kineococcus radiotolerans	0.00	nan	150	0
+species	Kitasatospora sp. MBT63	0.00	nan	150	0
+species	Kribbella catacumbae	0.00	nan	150	0
+species	Kytococcus sedentarius	0.00	nan	150	0
+species	Labrenzia aggregata	0.00	nan	150	0
+species	Labrenzia sp. DG1229	0.00	nan	150	0
+species	Lachnospiraceae bacterium 3-1	0.00	nan	150	0
+species	Lacinutrix sp. 5H-3-7-4	0.00	nan	150	0
+species	Lacinutrix sp. PAMC 27137	0.00	nan	150	0
+species	Legionella cherrii	0.00	nan	150	0
+species	Legionella drancourtii	0.00	nan	150	0
+species	Legionella moravica	0.00	nan	150	0
+species	Legionella oakridgensis	0.00	nan	150	0
+species	Legionella shakespearei	0.00	nan	150	0
+species	Leifsonia xyli	0.00	nan	150	0
+species	Leptospira interrogans	0.00	nan	150	0
+species	Leptothrix ochracea	0.00	nan	150	0
+species	Lonsdalea quercina	0.00	nan	150	0
+species	Lutibaculum baratangense	0.00	nan	150	0
+species	Lysobacter dokdonensis	0.00	nan	150	0
+species	Marvinbryantia formatexigens	0.00	nan	150	0
+species	Megamonas hypermegale	0.00	nan	150	0
+species	Meganema perideroedes	0.00	nan	150	0
+species	Mesorhizobium sp. L103C131B0	0.00	nan	150	0
+species	Mesorhizobium sp. LNHC229A00	0.00	nan	150	0
+species	Mesorhizobium sp. LNJC374B00	0.00	nan	150	0
+species	Mesorhizobium sp. LNJC380A00	0.00	nan	150	0
+species	Mesorhizobium sp. LSHC412B00	0.00	nan	150	0
+species	Mesorhizobium sp. WSM1293	0.00	nan	150	0
+species	Methylobacterium populi	0.00	nan	150	0
+species	Methylobacterium sp. 285MFTsu5.1	0.00	nan	150	0
+species	Methylobacterium sp. GXF4	0.00	nan	150	0
+species	Methylocapsa aurea	0.00	nan	150	0
+species	Methyloceanibacter caenitepidi	0.00	nan	150	0
+species	Methylocystis parvus	0.00	nan	150	0
+species	Methylocystis sp. ATCC 49242	0.00	nan	150	0
+species	Methylocystis sp. SC2	0.00	nan	150	0
+species	Methylosinus trichosporium	0.00	nan	150	0
+species	Microbacterium sp. URHA0036	0.00	nan	150	0
+species	Micromonospora globosa	0.00	nan	150	0
+species	Microtetraspora glauca	0.00	nan	150	0
+species	Mobilicoccus pelagius	0.00	nan	150	0
+species	Mycobacterium smegmatis	0.00	nan	150	0
+species	Nesiotobacter exalbescens	0.00	nan	150	0
+species	Nitrospirillum amazonense	0.00	nan	150	0
+species	Nocardioides sp. JS614	0.00	nan	150	0
+species	Nocardiopsis sp. CNT312	0.00	nan	150	0
+species	Novosphingobium sp. MBES04	0.00	nan	150	0
+species	Oceanibaculum indicum	0.00	nan	150	0
+species	Oceanicola batsensis	0.00	nan	150	0
+species	Oceanicola nanhaiensis	0.00	nan	150	0
+species	Oceanicola sp. 22II-S11g	0.00	nan	150	0
+species	Oceanicola sp. HL-35	0.00	nan	150	0
+species	Oceanicola sp. MCTG156(1a)	0.00	nan	150	0
+species	Oceaniovalibus guishaninsula	0.00	nan	150	0
+species	Ochrobactrum sp. EGD-AQ16	0.00	nan	150	0
+species	Oligotropha carboxidovorans	0.00	nan	150	0
+species	Olleya sp. VCSA23	0.00	nan	150	0
+species	Paenirhodobacter enshiensis	0.00	nan	150	0
+species	Pandoraea pulmonicola	0.00	nan	150	0
+species	Paracoccus halophilus	0.00	nan	150	0
+species	Paracoccus sp. 39524	0.00	nan	150	0
+species	Paracoccus yeei	0.00	nan	150	0
+species	Pectobacterium wasabiae	0.00	nan	150	0
+species	Pelagibacterium halotolerans	0.00	nan	150	0
+species	Perlucidibaca piscinae	0.00	nan	150	0
+species	Phaeospirillum fulvum	0.00	nan	150	0
+species	Phascolarctobacterium sp. CAG:207	0.00	nan	150	0
+species	Phascolarctobacterium sp. CAG:266	0.00	nan	150	0
+species	Phascolarctobacterium succinatutens	0.00	nan	150	0
+species	Pleomorphomonas oryzae	0.00	nan	150	0
+species	Polaribacter sp. MED152	0.00	nan	150	0
+species	Porphyrobacter cryptus	0.00	nan	150	0
+species	Propionibacterium jensenii	0.00	nan	150	0
+species	Propionibacterium sp. oral taxon 192	0.00	nan	150	0
+species	Proteocatella sphenisci	0.00	nan	150	0
+species	Pseudobutyrivibrio ruminis	0.00	nan	150	0
+species	Pseudomonas agarici	0.00	nan	150	0
+species	Pseudomonas fluorescens	0.00	nan	150	0
+species	Pseudomonas sp. M1	0.00	nan	150	0
+species	Pseudonocardia acaciae	0.00	nan	150	0
+species	Pseudorhodobacter ferrugineus	0.00	nan	150	0
+species	Psychroserpens sp. PAMC 27130	0.00	nan	150	0
+species	Rhizobiales bacterium JGI 001012-O08	0.00	nan	150	0
+species	Rhizobium leucaenae	0.00	nan	150	0
+species	Rhizobium mongolense	0.00	nan	150	0
+species	Rhizobium sp. 2MFCol3.1	0.00	nan	150	0
+species	Rhizobium sp. JGI 0001005-K05	0.00	nan	150	0
+species	Rhizobium sp. OR191	0.00	nan	150	0
+species	Rhizobium sp. OV201	0.00	nan	150	0
+species	Rhizobium sp. YR060	0.00	nan	150	0
+species	Rhizobium tropici	0.00	nan	150	0
+species	Rhodococcus triatomae	0.00	nan	150	0
+species	Rhodospirillum centenum	0.00	nan	150	0
+species	Roseibacterium elongatum	0.00	nan	150	0
+species	Roseobacter sp. MED193	0.00	nan	150	0
+species	Roseomonas cervicalis	0.00	nan	150	0
+species	Ruegeria sp. ANG-S4	0.00	nan	150	0
+species	Ruegeria sp. TM1040	0.00	nan	150	0
+species	Saccharomonospora glauca	0.00	nan	150	0
+species	Sagittula stellata	0.00	nan	150	0
+species	Salinispora arenicola	0.00	nan	150	0
+species	Sediminimonas qiaohouensis	0.00	nan	150	0
+species	Serratia marcescens	0.00	nan	150	0
+species	Sinorhizobium medicae	0.00	nan	150	0
+species	Sphingobacterium sp. ACCC 05744	0.00	nan	150	0
+species	Sphingobium sp. C100	0.00	nan	150	0
+species	Sphingomonas astaxanthinifaciens	0.00	nan	150	0
+species	Sphingomonas sp. MM-1	0.00	nan	150	0
+species	Sphingomonas sp. Mn802worker	0.00	nan	150	0
+species	Sphingomonas sp. PR090111-T3T-6A	0.00	nan	150	0
+species	Sphingomonas taxi	0.00	nan	150	0
+species	Sphingopyxis sp. Kp5.2	0.00	nan	150	0
+species	Sphingopyxis sp. MWB1	0.00	nan	150	0
+species	Spirillospora albida	0.00	nan	150	0
+species	Sporocytophaga myxococcoides	0.00	nan	150	0
+species	Streptacidiphilus oryzae	0.00	nan	150	0
+species	Streptomyces auratus	0.00	nan	150	0
+species	Streptomyces aureus	0.00	nan	150	0
+species	Streptomyces bikiniensis	0.00	nan	150	0
+species	Streptomyces bottropensis	0.00	nan	150	0
+species	Streptomyces cellulosae	0.00	nan	150	0
+species	Streptomyces collinus	0.00	nan	150	0
+species	Streptomyces davawensis	0.00	nan	150	0
+species	Streptomyces flavochromogenes	0.00	nan	150	0
+species	Streptomyces flavotricini	0.00	nan	150	0
+species	Streptomyces himastatinicus	0.00	nan	150	0
+species	Streptomyces iakyrus	0.00	nan	150	0
+species	Streptomyces ipomoeae	0.00	nan	150	0
+species	Streptomyces iranensis	0.00	nan	150	0
+species	Streptomyces katrae	0.00	nan	150	0
+species	Streptomyces mirabilis	0.00	nan	150	0
+species	Streptomyces monomycini	0.00	nan	150	0
+species	Streptomyces natalensis	0.00	nan	150	0
+species	Streptomyces olindensis	0.00	nan	150	0
+species	Streptomyces phage Lika	0.00	nan	150	0
+species	Streptomyces prunicolor	0.00	nan	150	0
+species	Streptomyces scabrisporus	0.00	nan	150	0
+species	Streptomyces somaliensis	0.00	nan	150	0
+species	Streptomyces sp. 303MFCol5.2	0.00	nan	150	0
+species	Streptomyces sp. A7248	0.00	nan	150	0
+species	Streptomyces sp. AA1529	0.00	nan	150	0
+species	Streptomyces sp. ATCC 700974	0.00	nan	150	0
+species	Streptomyces sp. AcH 505	0.00	nan	150	0
+species	Streptomyces sp. CNT302	0.00	nan	150	0
+species	Streptomyces sp. CNT372	0.00	nan	150	0
+species	Streptomyces sp. DpondAA-B6	0.00	nan	150	0
+species	Streptomyces sp. FXJ7.023	0.00	nan	150	0
+species	Streptomyces sp. NRRL B-3253	0.00	nan	150	0
+species	Streptomyces sp. NRRL F-2305	0.00	nan	150	0
+species	Streptomyces sp. NRRL F-5065	0.00	nan	150	0
+species	Streptomyces sp. NRRL F-5140	0.00	nan	150	0
+species	Streptomyces sp. NRRL F-5650	0.00	nan	150	0
+species	Streptomyces sp. NRRL S-146	0.00	nan	150	0
+species	Streptomyces sp. NRRL S-237	0.00	nan	150	0
+species	Streptomyces sp. NRRL S-31	0.00	nan	150	0
+species	Streptomyces sp. NRRL S-340	0.00	nan	150	0
+species	Streptomyces sp. NRRL S-813	0.00	nan	150	0
+species	Streptomyces sp. NRRL S-87	0.00	nan	150	0
+species	Streptomyces sp. RSD-27	0.00	nan	150	0
+species	Streptomyces sp. SPB74	0.00	nan	150	0
+species	Streptomyces sp. TAA040	0.00	nan	150	0
+species	Streptomyces sp. TAA204	0.00	nan	150	0
+species	Streptomyces sp. Tu6071	0.00	nan	150	0
+species	Streptomyces sp. e14	0.00	nan	150	0
+species	Streptomyces tsusimaensis	0.00	nan	150	0
+species	Streptomyces violens	0.00	nan	150	0
+species	Streptomyces virginiae	0.00	nan	150	0
+species	Streptomyces wedmorensis	0.00	nan	150	0
+species	Streptomyces yeochonensis	0.00	nan	150	0
+species	Sulfitobacter sp. NB-68	0.00	nan	150	0
+species	Sulfobacillus acidophilus	0.00	nan	150	0
+species	Terrisporobacter sp. 08-306576	0.00	nan	150	0
+species	Thalassobaculum salexigens	0.00	nan	150	0
+species	Thalassobium sp. R2A62	0.00	nan	150	0
+species	Thermoanaerobacterium thermosaccharolyticum	0.00	nan	150	0
+species	Thermobrachium celere	0.00	nan	150	0
+species	Thiocapsa marina	0.00	nan	150	0
+species	Thioclava sp. 13D2W-2	0.00	nan	150	0
+species	Thioflavicoccus mobilis	0.00	nan	150	0
+species	Thiothrix disciformis	0.00	nan	150	0
+species	Variovorax sp. HH01	0.00	nan	150	0
+species	Variovorax sp. JGI 0001013-B23	0.00	nan	150	0
+species	Variovorax sp. JGI 0001020-D06	0.00	nan	150	0
+species	Xylanimonas cellulosilytica	0.00	nan	150	0
+species	[Cellvibrio] gilvus	0.00	nan	150	0
+species	[Clostridium] bifermentans	0.00	nan	150	0
+species	[Clostridium] cellulosi	0.00	nan	150	0
+species	[Clostridium] hiranonis	0.00	nan	150	0
+species	[Clostridium] papyrosolvens	0.00	nan	150	0
+species	[Clostridium] sticklandii	0.00	nan	150	0
+species	[Clostridium] termitidis	0.00	nan	150	0
+species	[Eubacterium] yurii	0.00	nan	150	0
+species	alpha proteobacterium BAL199	0.00	nan	150	0
+species	gamma proteobacterium HTCC5015	0.00	nan	150	0
+species	uncultured organism	0.00	nan	150	0
+species	uncultured organism CA878	0.00	nan	150	0
+species	uncultured soil bacterium	0.00	nan	150	0
+species	unassigned	nan	nan	981161250	881801250

@@ -1,0 +1,64 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.38	10461112	27681966
+superkingdom	unassigned	nan	nan	17220854	0
+phylum	Proteobacteria	1.00	0.36	7307786	20196632
+phylum	Actinobacteria	1.00	0.42	1460611	3480725
+phylum	Firmicutes	1.00	0.30	1182101	4004609
+phylum	Acidobacteria	0.00	nan	1082	0
+phylum	unassigned	nan	nan	17730386	0
+class	Betaproteobacteria	1.00	0.34	4915459	14294209
+class	Gammaproteobacteria	1.00	0.31	1835468	5902423
+class	Actinobacteria	1.00	0.42	1460611	3480725
+class	Clostridia	1.00	0.26	1032153	4004609
+class	Deltaproteobacteria	0.00	nan	1713	0
+class	Bacilli	0.00	nan	1371	0
+class	Solibacteres	0.00	nan	782	0
+class	Acidobacteriia	0.00	nan	300	0
+class	Alphaproteobacteria	0.00	nan	252	0
+class	unassigned	nan	nan	18433857	0
+order	Burkholderiales	1.00	0.33	4786487	14294209
+order	Xanthomonadales	1.00	0.31	1817067	5902423
+order	Actinomycetales	1.00	0.42	1460611	3480725
+order	Clostridiales	1.00	0.21	849596	4004609
+order	Bacillales	0.00	nan	1371	0
+order	Pseudomonadales	0.00	nan	1084	0
+order	Solibacterales	0.00	nan	782	0
+order	Methylococcales	0.00	nan	618	0
+order	Acidobacteriales	0.00	nan	300	0
+order	Enterobacteriales	0.00	nan	269	0
+order	unassigned	nan	nan	18763781	0
+family	Oxalobacteraceae	1.00	0.32	4578121	14294209
+family	Xanthomonadaceae	1.00	0.31	1814188	5902423
+family	Intrasporangiaceae	1.00	0.35	1210900	3480725
+family	Clostridiaceae	1.00	0.06	241539	4004609
+family	Comamonadaceae	0.00	nan	2049	0
+family	Bacillaceae	0.00	nan	1371	0
+family	Burkholderiaceae	0.00	nan	1157	0
+family	Pseudomonadaceae	0.00	nan	1084	0
+family	Solibacteraceae	0.00	nan	782	0
+family	Methylococcaceae	0.00	nan	618	0
+family	Acidobacteriaceae	0.00	nan	300	0
+family	Enterobacteriaceae	0.00	nan	269	0
+family	unassigned	nan	nan	19829588	0
+genus	Janthinobacterium	1.00	0.17	2438352	14294209
+genus	Lysobacter	1.00	0.31	1015671	3288233
+genus	Rhodanobacter	1.00	0.24	620166	2614190
+genus	Massilia	0.00	nan	55902	0
+genus	Clostridium	1.00	0.00	19979	4004609
+genus	Caloramator	0.00	nan	8912	0
+genus	Alkaliphilus	0.00	nan	2368	0
+genus	Dyella	0.00	nan	1972	0
+genus	Pseudomonas	0.00	nan	1084	0
+genus	Candidatus Solibacter	0.00	nan	782	0
+genus	Burkholderia	0.00	nan	490	0
+genus	unassigned	nan	nan	23516288	0
+species	Oxalobacteraceae bacterium JGI 0001004-K23	0.00	nan	3681	0
+species	Alkaliphilus metalliredigens	0.00	nan	2368	0
+species	Janthinobacterium sp. CG3	0.00	nan	1179	0
+species	Candidatus Solibacter usitatus	0.00	nan	782	0
+species	Janthinobacterium sp. HH01	0.00	nan	699	0
+species	Proteobacteria bacterium JGI 0001002-H11	0.00	nan	634	0
+species	Oxalobacteraceae bacterium JGI 0001002-K6	0.00	nan	400	0
+species	Rhodanobacter thiooxydans	0.00	nan	383	0
+species	Dyella japonica	0.00	nan	368	0
+species	unassigned	nan	nan	27671472	16908399

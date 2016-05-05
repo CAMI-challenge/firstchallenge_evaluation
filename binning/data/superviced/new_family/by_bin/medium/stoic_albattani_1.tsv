@@ -1,0 +1,105 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.04	3048450	72061050
+superkingdom	unassigned	nan	nan	69012600	0
+phylum	Firmicutes	1.00	0.04	3047850	72061050
+phylum	Proteobacteria	0.00	nan	150	0
+phylum	unassigned	nan	nan	69013050	0
+class	Clostridia	1.00	0.04	2267550	63604650
+class	Bacilli	1.00	0.09	769650	8456400
+class	Negativicutes	0.00	nan	7200	0
+class	Gammaproteobacteria	0.00	nan	150	0
+class	unassigned	nan	nan	69016500	0
+order	Clostridiales	1.00	0.04	2260500	63604650
+order	Bacillales	1.00	0.09	769650	8456400
+order	Selenomonadales	0.00	nan	7200	0
+order	Thermoanaerobacterales	0.00	nan	6300	0
+order	Alteromonadales	0.00	nan	150	0
+order	unassigned	nan	nan	69017250	0
+family	Peptostreptococcaceae	0.00	nan	2234400	0
+family	Clostridiaceae	0.00	nan	11550	0
+family	Peptococcaceae	0.00	nan	8100	0
+family	Veillonellaceae	0.00	nan	7200	0
+family	Thermoanaerobacteraceae	0.00	nan	6300	0
+family	Bacillaceae	0.00	nan	2850	0
+family	Paenibacillaceae	0.00	nan	450	0
+family	Alicyclobacillaceae	0.00	nan	150	0
+family	Ferrimonadaceae	0.00	nan	150	0
+family	Heliobacteriaceae	0.00	nan	150	0
+family	Syntrophomonadaceae	0.00	nan	150	0
+family	unassigned	nan	nan	69789600	8456400
+genus	Peptoclostridium	0.00	nan	2232300	0
+genus	Exiguobacterium	0.00	nan	766050	0
+genus	Clostridium	0.00	nan	11400	0
+genus	Thermosinus	0.00	nan	6300	0
+genus	Carboxydothermus	0.00	nan	5550	0
+genus	Thermincola	0.00	nan	3450	0
+genus	Bacillus	0.00	nan	2550	0
+genus	Desulfotomaculum	0.00	nan	1800	0
+genus	Sporomusa	0.00	nan	750	0
+genus	Brevibacillus	0.00	nan	450	0
+genus	Desulfosporosinus	0.00	nan	450	0
+genus	Desulfurispora	0.00	nan	450	0
+genus	Anoxybacillus	0.00	nan	300	0
+genus	Desulfitibacter	0.00	nan	300	0
+genus	Moorella	0.00	nan	300	0
+genus	Alkaliphilus	0.00	nan	150	0
+genus	Ammonifex	0.00	nan	150	0
+genus	Caldanaerobacter	0.00	nan	150	0
+genus	Desulfovirgula	0.00	nan	150	0
+genus	Dethiobacter	0.00	nan	150	0
+genus	Effusibacillus	0.00	nan	150	0
+genus	Ferrimonas	0.00	nan	150	0
+genus	Filifactor	0.00	nan	150	0
+genus	Heliobacterium	0.00	nan	150	0
+genus	Proteocatella	0.00	nan	150	0
+genus	Terrisporobacter	0.00	nan	150	0
+genus	unassigned	nan	nan	69027000	8456400
+species	[Clostridium] sticklandii	0.00	nan	2231400	0
+species	Exiguobacterium sp. RIT341	0.00	nan	69150	0
+species	Exiguobacterium acetylicum	0.00	nan	60300	0
+species	Exiguobacterium sp. MH3	0.00	nan	54600	0
+species	Exiguobacterium sp. OS-77	0.00	nan	41700	0
+species	Exiguobacterium sibiricum	0.00	nan	13050	0
+species	Clostridium tetanomorphum	0.00	nan	11100	0
+species	Exiguobacterium antarcticum	0.00	nan	6450	0
+species	Thermosinus carboxydivorans	0.00	nan	6300	0
+species	Exiguobacterium oxidotolerans	0.00	nan	5700	0
+species	Thermincola potens	0.00	nan	3450	0
+species	Bacillus coagulans	0.00	nan	2100	0
+species	Exiguobacterium undae	0.00	nan	2100	0
+species	Carboxydothermus hydrogenoformans	0.00	nan	1650	0
+species	Exiguobacterium pavilionensis	0.00	nan	1350	0
+species	Clostridiales bacterium DRI-13	0.00	nan	1050	0
+species	Sporomusa ovata	0.00	nan	750	0
+species	Desulfotomaculum carboxydivorans	0.00	nan	600	0
+species	Brevibacillus massiliensis	0.00	nan	450	0
+species	Desulfurispora thermophila	0.00	nan	450	0
+species	Exiguobacterium sp. S17	0.00	nan	450	0
+species	Carboxydothermus ferrireducens	0.00	nan	300	0
+species	Clostridium botulinum	0.00	nan	300	0
+species	Desulfitibacter alkalitolerans	0.00	nan	300	0
+species	Desulfosporosinus acidiphilus	0.00	nan	300	0
+species	Desulfotomaculum alkaliphilum	0.00	nan	300	0
+species	Desulfotomaculum thermocisternum	0.00	nan	300	0
+species	Moorella thermoacetica	0.00	nan	300	0
+species	Peptococcaceae bacterium BICA1-7	0.00	nan	300	0
+species	Alkaliphilus metalliredigens	0.00	nan	150	0
+species	Ammonifex degensii	0.00	nan	150	0
+species	Anoxybacillus flavithermus	0.00	nan	150	0
+species	Bacillus sp. NSP9.1	0.00	nan	150	0
+species	Caldanaerobacter subterraneus	0.00	nan	150	0
+species	Desulfosporosinus orientis	0.00	nan	150	0
+species	Desulfotomaculum hydrothermale	0.00	nan	150	0
+species	Desulfotomaculum ruminis	0.00	nan	150	0
+species	Desulfovirgula thermocuniculi	0.00	nan	150	0
+species	Dethiobacter alkaliphilus	0.00	nan	150	0
+species	Effusibacillus pohliae	0.00	nan	150	0
+species	Ferrimonas kyonanensis	0.00	nan	150	0
+species	Filifactor alocis	0.00	nan	150	0
+species	Heliobacterium modesticaldum	0.00	nan	150	0
+species	Peptococcaceae bacterium BICA1-8	0.00	nan	150	0
+species	Peptococcaceae bacterium SCADC1_2_3	0.00	nan	150	0
+species	Peptostreptococcaceae bacterium ACC19a	0.00	nan	150	0
+species	Proteocatella sphenisci	0.00	nan	150	0
+species	Terrisporobacter sp. 08-306576	0.00	nan	150	0
+species	unassigned	nan	nan	69541650	8456400
