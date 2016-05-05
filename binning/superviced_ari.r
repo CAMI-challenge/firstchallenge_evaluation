@@ -8,7 +8,7 @@ library(scales)
 
 gatherdata <- function(file_paths, tools_names)
 {
-	separator <- ','
+	separator <- '\t'
 	levels <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
 	# ﻿instance,entropy,"rand index","adjusted rand index"
 	column_tool <- c()

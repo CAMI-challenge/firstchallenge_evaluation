@@ -9,7 +9,7 @@ library(RColorBrewer)
 
 gatherdata <- function(file_paths, tools_names)
 {
-	separator <- ','
+	separator <- '\t'
 	levels <- c("root", "superkingdom", "phylum", "class", "order", "family", "genus", "species")
 	column_tool <- c()
 	column_true <- c()
@@ -212,9 +212,9 @@ blue_red_grey <- c(blues, reds, "grey30")
 #print(total_medium[1])
 #print(subset(data_low, variable == "ari"))
 pdf(output_file, paper="a4r", width=297, height=210)
-draw_plot_x(data_low, "Low Complexity Dataset\n", total_low[1], blue_red_grey)
-draw_plot_x(data_medium, "Medium Complexity Dataset\n", total_medium[1], blue_red_grey)
-draw_plot_x(data_high, "High Complexity Dataset\n", total_high[1], blue_red_grey)
+draw_plot_x(data_low, "Low Complexity Dataset\n", total_low[which.max(total_low)], blue_red_grey)
+draw_plot_x(data_medium, "Medium Complexity Dataset\n", total_medium[which.max(total_medium)], blue_red_grey)
+draw_plot_x(data_high, "High Complexity Dataset\n", total_high[which.max(total_high)], blue_red_grey)
 #draw_plot_x(data_low, "Low Complexity Dataset\n", total_low[1], test_palete)
 #draw_plot_x(data_medium, "Medium Complexity Dataset\n", total_medium[1], test_palete)
 #draw_plot_x(data_high, "High Complexity Dataset\n", total_high[1], test_palete)

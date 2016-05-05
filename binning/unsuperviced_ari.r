@@ -9,7 +9,7 @@ library(scales)
 gatherdata <- function(file_paths, tools_names)
 {
 	#print(tools_names)
-	separator <- ','
+	separator <- '\t'
 	#print(file_paths)
 	levels <- c("binning")
 	# ﻿instance,entropy,"rand index","adjusted rand index"
