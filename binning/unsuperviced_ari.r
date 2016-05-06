@@ -6,6 +6,11 @@ library(scales)
 
 #"\t"
 
+dir.exists <- function(d) {
+    de <- file.info(d)$isdir
+    ifelse(is.na(de), FALSE, de)
+}
+
 gatherdata <- function(file_paths, tools_names)
 {
 	#print(tools_names)
@@ -81,13 +86,24 @@ file_paths <- list(
 output_file <- argv[2]
 
 #######################################
-
-data_low <- gatherdata(
-	file_paths$low, get_names(file_paths$low))
-data_medium <- gatherdata(
-	file_paths$medium, get_names(file_paths$medium))
-data_high <- gatherdata(
-	file_paths$high, get_names(file_paths$high))
+dir_low <- paste(root_path, "low/", sep="")
+dir_medium <- paste(root_path, "medium/", sep="")
+dir_high <- paste(root_path, "high/", sep="")
+if (dir.exists(dir_low))
+{
+	data_low <- gatherdata(
+		file_paths$low, get_names(file_paths$low))
+}
+if (dir.exists(dir_medium))
+{
+	data_medium <- gatherdata(
+		file_paths$medium, get_names(file_paths$medium))
+}
+if (dir.exists(dir_high))
+{
+	data_high <- gatherdata(
+		file_paths$high, get_names(file_paths$high))
+}
 
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
@@ -134,8 +150,17 @@ draw_plot <- function(data, title)
 }
 
 pdf(output_file, paper="a4r", width=297, height=210)
-draw_plot(data_low, "Low Complexity Dataset\n")
-draw_plot(data_medium, "Medium Complexity Dataset\n")
-draw_plot(data_high, "High Complexity Dataset\n")
+if (dir.exists(dir_low))
+{
+	draw_plot(data_low, "Low Complexity Dataset\n")
+}
+if (dir.exists(dir_medium))
+{
+	draw_plot(data_medium, "Medium Complexity Dataset\n")
+}
+if (dir.exists(dir_high))
+{
+	draw_plot(data_high, "High Complexity Dataset\n")
+}
 dev.off()
 
