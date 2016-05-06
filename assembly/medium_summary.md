@@ -36,7 +36,7 @@ Before you continue reading this document, please take the following points into
 
 Number of contigs is the total number of contigs in the assembly.
 
-![Genome Fraction](summary_plots/coverage_no_points_contig_count.png)
+![Genome Fraction](summary_plots/medium_coverage_no_points_contig_count.png)
 
 #### Statements
 
@@ -56,7 +56,7 @@ Number of contigs is the total number of contigs in the assembly.
 
 Genome fraction (%) is the percentage of aligned bases in the reference. A base in the reference is aligned if there is at least one contig with at least one alignment to this base. Contigs from repetitive regions may map to multiple places, and thus may be counted multiple times.
 
-![Genome Fraction](summary_plots/coverage_no_points_genome_fraction.png)
+![Genome Fraction](summary_plots/medium_coverage_no_points_genome_fraction.png)
 
 #### Statements
 
@@ -82,7 +82,7 @@ References are grouped by ANI score. References with an ANI score higher then 95
 
 X-Axis represents ordered reference coverage and is depicted in log scale.
 
-![Genome Fraction](summary_plots/coverage_genome_fraction_facet.png)
+![Genome Fraction](summary_plots/medium_coverage_genome_fraction_facet.png)
 
 #### Statements
 
@@ -102,7 +102,7 @@ Genome fraction (%) is the percentage of aligned bases in the reference. A base 
 
 These boxplots are computed just for the strain references. 
 
-![Genome Fraction Box Plot](summary_plots/boxplot_strain.png)
+![Genome Fraction Box Plot](summary_plots/medium_boxplot_strain.png)
 
 #### Statements
  
