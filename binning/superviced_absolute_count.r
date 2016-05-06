@@ -17,17 +17,22 @@ gatherdata <- function(file_paths, tools_names)
 	separator <- '\t'
 	levels <- c("root", "superkingdom", "phylum", "class", "order", "family", "genus", "species")
 	column_tool <- c()
+	column_levels <- c()
 	column_true <- c()
 	column_false <- c()
 	#total <- rep(0.0, length(tools_names))
 	total <- c()
 	for (index in 1:length(file_paths))
 	{
-		column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
+		print(file_paths[index])
 		raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
+		#print(dim(raw_data)[1])
+		#print(length(levels))
+		column_levels <- append(column_levels, levels[1:dim(raw_data)[1]])
+		column_tool <- append(column_tool, rep(tools_names[index], dim(raw_data)[1]))
 		column_true <- append(column_true, raw_data$true)
 		column_false <- append(column_false, raw_data$false)
-		total <- append(total, rep(sum(raw_data$true) + sum(raw_data$false), length(levels)))
+		total <- append(total, rep(sum(raw_data$true) + sum(raw_data$false), dim(raw_data)[1]))
 		#total[index] <- total[index]
 		#column_false <- append(column_false, -1 *raw_data$false)
 	}
@@ -36,7 +41,7 @@ gatherdata <- function(file_paths, tools_names)
 	data_frame <- data.frame(
 			true=column_true,
 			false=column_false)
-	data_frame$level = factor(rep(levels, length(file_paths)), levels=levels)
+	data_frame$level = factor(column_levels)
 	# print data_frame
 	# print tools_names
 	data_frame$tools <- factor(column_tool)
