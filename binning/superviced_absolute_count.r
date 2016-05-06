@@ -7,6 +7,11 @@ library(RColorBrewer)
 
 #"\t"
 
+dir.exists <- function(d) {
+    de <- file.info(d)$isdir
+    ifelse(is.na(de), FALSE, de)
+}
+
 gatherdata <- function(file_paths, tools_names)
 {
 	separator <- '\t'
@@ -14,27 +19,32 @@ gatherdata <- function(file_paths, tools_names)
 	column_tool <- c()
 	column_true <- c()
 	column_false <- c()
-	total <- rep(0.0, length(tools_names))
+	#total <- rep(0.0, length(tools_names))
+	total <- c()
 	for (index in 1:length(file_paths))
 	{
 		column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
 		raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
 		column_true <- append(column_true, raw_data$true)
 		column_false <- append(column_false, raw_data$false)
-		total[index] <- total[index] + sum(raw_data$true)
-		total[index] <- total[index] + sum(raw_data$false)
+		total <- append(total, rep(sum(raw_data$true) + sum(raw_data$false), length(levels)))
+		#total[index] <- total[index]
 		#column_false <- append(column_false, -1 *raw_data$false)
 	}
-	print(total)
+	#print(total)
+	#exit
 	data_frame <- data.frame(
 			true=column_true,
 			false=column_false)
 	data_frame$level = factor(rep(levels, length(file_paths)), levels=levels)
 	# print data_frame
 	# print tools_names
-	melted <- melt(data_frame, "level")
+	data_frame$tools <- factor(column_tool)
+	data_frame$total <- total
+	melted <- melt(data_frame, c("tools", "level", "total"))
+	#melted <- melt(data_frame, c("level"))
 	# melted$tools <- ''
-	melted$tools <- factor(column_tool)
+	#melted$tools <- factor(column_tool)
 	#levels(melted$variable)
 	melted$variable <- factor(melted$variable, levels=c('true','false','unassigned'), labels=c("Correct","Incorrect","Unassigned"))
 	melted$variable[melted$level == "root"] <- "Unassigned"
@@ -86,21 +96,30 @@ output_file <- argv[2]
 #######################################
 
 
-result <- gatherdata(
-	file_paths$low, get_names(file_paths$low))
-data_low <- result$melted
-total_low <- result$total
-
-result <- gatherdata(
-	file_paths$medium, get_names(file_paths$medium))
-data_medium <- result$melted
-total_medium <- result$total
-
-result <- gatherdata(
-	file_paths$high, get_names(file_paths$high))
-data_high <- result$melted
-total_high <- result$total
-
+dir_low <- paste(root_path, "low/", sep="")
+dir_medium <- paste(root_path, "medium/", sep="")
+dir_high <- paste(root_path, "high/", sep="")
+if (dir.exists(dir_low))
+{
+	result <- gatherdata(
+		file_paths$low, get_names(file_paths$low))
+	data_low <- result$melted
+	total_low <- result$total
+}
+if (dir.exists(dir_medium))
+{
+	result <- gatherdata(
+		file_paths$medium, get_names(file_paths$medium))
+	data_medium <- result$melted
+	total_medium <- result$total
+}
+if (dir.exists(dir_high))
+{
+	result <- gatherdata(
+		file_paths$high, get_names(file_paths$high))
+	data_high <- result$melted
+	total_high <- result$total
+}
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
 dodge_small <- position_dodge(width = 0.2, height=0)
@@ -171,7 +190,14 @@ draw_plot_x <- function(data, title, total, c_palette)
 	levels <- c(levels_tmp, levels_tmp, "unassigned")
 	x_labels <- c("Correct","Incorrect", "Unassigned")
 	colour_theme <- c("deepskyblue3", "red", "grey30")
-	data$value <- data$value/total*100	#				2	1			3
+	#print(data$value)
+	#exit
+	#print(data$value)
+	#print(data$total)
+	#print(data$tools)
+	#data$value <- data$value/total*100	#				2	1			3
+	data$value <- data$value/data$total*100	#				2	1			3
+	#print(data$value)
 	#data$variable <- factor(data$variable, levels=c('true','false','unassigned'), labels=c("Correct","Incorrect","Unassigned"))
 	#print(levels(data$variable))
 	#data$variable <- factor(data$variable, levels=c("Incorrect","Unassigned","Correct"))
@@ -209,12 +235,26 @@ blues <- rev(brewer.pal(8,"Blues")[2:8])
 reds <- rev(brewer.pal(8,"Reds")[2:8])
 blue_red_grey <- c(blues, reds, "grey30")
 
-#print(total_medium[1])
+#print(total_low)
+#print("")
+#print(total_medium)
+#print("")
+#print(total_high)
+#exit
 #print(subset(data_low, variable == "ari"))
 pdf(output_file, paper="a4r", width=297, height=210)
-draw_plot_x(data_low, "Low Complexity Dataset\n", total_low[which.max(total_low)], blue_red_grey)
-draw_plot_x(data_medium, "Medium Complexity Dataset\n", total_medium[which.max(total_medium)], blue_red_grey)
-draw_plot_x(data_high, "High Complexity Dataset\n", total_high[which.max(total_high)], blue_red_grey)
+if (dir.exists(dir_low))
+{
+	draw_plot_x(data_low, "Low Complexity Dataset\n", total_low, blue_red_grey)
+}
+if (dir.exists(dir_medium))
+{
+	draw_plot_x(data_medium, "Medium Complexity Dataset\n", total_medium, blue_red_grey)
+}
+if (dir.exists(dir_high))
+{
+	draw_plot_x(data_high, "High Complexity Dataset\n", total_high, blue_red_grey)
+}
 #draw_plot_x(data_low, "Low Complexity Dataset\n", total_low[1], test_palete)
 #draw_plot_x(data_medium, "Medium Complexity Dataset\n", total_medium[1], test_palete)
 #draw_plot_x(data_high, "High Complexity Dataset\n", total_high[1], test_palete)
