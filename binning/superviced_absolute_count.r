@@ -238,7 +238,7 @@ draw_plot <- function(data, title, total)
 
 blues <- rev(brewer.pal(8,"Blues")[2:8])
 reds <- rev(brewer.pal(8,"Reds")[2:8])
-blue_red_grey <- c(blues, reds, "grey30")
+blue_red_grey <- c(blues, reds, "grey70")
 
 #print(total_low)
 #print("")
