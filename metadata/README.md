@@ -1,4 +1,4 @@
-##Meta_data file
+##Metadata file
 Tab separated data table with the annotation of genomes. It is the only file later used for the metagenome simulation.  
 Column have no fixed order. First row must have column names.
 * genome_ID:  
