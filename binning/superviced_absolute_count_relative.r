@@ -32,6 +32,7 @@ gatherdata <- function(file_paths, tools_names)
 		column_tool <- append(column_tool, rep(tools_names[index], dim(raw_data)[1]))
 		column_true <- append(column_true, raw_data$true)
 		column_false <- append(column_false, raw_data$false)
+		print(sum(raw_data$unknown))
 		total <- append(total, rep(sum(raw_data$true) + sum(raw_data$false), dim(raw_data)[1]))
 		#total[index] <- total[index]
 		#column_false <- append(column_false, -1 *raw_data$false)
