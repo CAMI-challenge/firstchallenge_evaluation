@@ -36,8 +36,13 @@ ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
 ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
 # ref_data_combined <- ref_data_combined[ref_data_combined$size!=0, ]
 
-q <- aggregate(ref_data_combined$predidcted_size, by=list(ref_data_combined$binner), quantile, 0.1)
-idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[5]) > q[q[, 1]==x[1], 2])
+# removing small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
+
+ref_data_combined <- within(ref_data_combined,
+                            binner_rank <- paste(ref_data_combined$binner,
+                                                 ref_data_combined$rank, sep='_'))
+q <- aggregate(ref_data_combined$predidcted_size, by=list(ref_data_combined$binner_rank), quantile, 0.1)
+idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[5]) > q[q[, 1]==x[8], 2])
 ref_data_combined <- ref_data_combined[idx, ]
 
 ### plotting
