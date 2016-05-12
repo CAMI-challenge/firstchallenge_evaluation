@@ -25,11 +25,9 @@ ref_data_high.file <- paste(results.dir, "/high/all.txt", sep="")
 
 # load data
 
-ref_data_low <- read.table(ref_data_low.file, header=F, sep="\t")
-ref_data_medium <- read.table(ref_data_medium.file, header=F, sep="\t")
-ref_data_high <- read.table(ref_data_high.file, header=F, sep="\t")
-
-colnames(ref_data_low) <- colnames(ref_data_medium) <- colnames(ref_data_high) <- c("binner", "rank", "precision", "recall", "size")
+ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
+ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
+ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
 
 ref_data_low$binner <- gsub("_[0-9]", "_low", ref_data_low$binner)
 ref_data_medium$binner <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
