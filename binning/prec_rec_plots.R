@@ -13,7 +13,7 @@ library("grid")
 
 # directories
 
-repo.dir <- "~/cami/firstchallenge_evaluation/"
+repo.dir <- "/biodata/dep_psl/grp_psl/garridoo/cami/firstchallenge_evaluation/"
 results.dir <- paste(repo.dir, "/binning/data/superviced/ALL/by_bin/", sep="")
 figures.dir <- paste(repo.dir, "/binning/plots/superviced/", sep="")
 
@@ -36,6 +36,10 @@ ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
 ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
 # ref_data_combined <- ref_data_combined[ref_data_combined$size!=0, ]
 
+q <- aggregate(ref_data_combined$predidcted_size, by=list(ref_data_combined$binner), quantile, 0.1)
+idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[5]) > q[q[, 1]==x[1], 2])
+ref_data_combined <- ref_data_combined[idx, ]
+
 ### plotting
 
 points_size=1.25
@@ -50,6 +54,7 @@ main_theme <- theme(panel.background=element_blank(),
                     panel.grid=element_blank(),
                     axis.line.x=element_line(color="black"),
                     axis.line.y=element_line(color="black"),
+                    axis.line=element_line(color="black"),
                     axis.ticks=element_line(color="black"),
                     axis.text=element_text(colour="black", size=10),
                     legend.position="top",
@@ -90,42 +95,42 @@ p <- ggplot(df, aes(x=precision, y=recall, color=group)) +
      geom_point(size=points_size, alpha=points_alpha, shape=points_shape, color="black") +
      ggtitle(title) +
      main_theme +
-     theme(legend.position="right", axis.line=element_line(color="black"))
+     theme(legend.position="right")
 
 ggsave(paste(figures.dir, "prec_recall_combined.pdf", sep=""), p, width=7, height=5)
 
-# # plot precision / recall scatter plot combined per rank
-# 
-# title <- "precision / recall per rank"
-# 
-# df <- ref_data_combined
-# df <- df[df$rank!="superkingdom", ]
-# df$binner=gsub("_[0-9]*$", "", df$binner)
-# df$group_rank <- apply(df, 1, function(x) paste(x[1], x[2]))
-#  
-# means <- aggregate(df, by=list(df$group_rank), FUN=mean, na.rm=T)
-# er <- aggregate(df, by=list(df$group_rank), FUN=sem, na.rm=T)
-# df <- data.frame(binner=gsub(" .*", "", means[, 1]),
-#                  group=gsub("_[0-9] .*$", "", means[, 1]),
-#                  rank=gsub(".* ", "", means[, 1]),
-#                  precision=means$precision, recall=means$recall,
-#                  precision_er=er$precision, recall_er=er$recall)
-# 
-# df$rank <- factor(df$rank, levels=c("phylum", "class", "order", "family", "genus", "species"))
-# 
-# p <- ggplot(df, aes(x=precision, y=recall, color=binner, shape=rank)) +
-#      geom_errorbarh(aes(xmin=precision-precision_er,
-#                         xmax=precision+precision_er),
-#                     size=bars_size, alpha=bars_alpha, height=0) +
-#      geom_errorbar(aes(ymin=recall-recall_er,
-#                        ymax=recall+recall_er),
-#                    size=bars_alpha, alpha=bars_size, width=0) +
-#      scale_x_continuous(labels=percent, limits=c(0, 1)) +
-#      scale_y_continuous(labels=percent, limits=c(0, 1)) +
-#      geom_point(size=points_size, alpha=points_alpha, color="black") +
-#      ggtitle(title) +
-#      main_theme +
-#      theme(legend.position="right")
-# 
-# ggsave(paste(figures.dir, "prec_recall_combined_by_rank.pdf", sep=""), p, width=7, height=5)
-# 
+# plot precision / recall scatter plot combined per rank
+
+title <- "precision / recall per rank"
+
+df <- ref_data_combined
+df <- df[df$rank!="superkingdom", ]
+df$binner=gsub("_[0-9]*$", "", df$binner)
+df$group_rank <- apply(df, 1, function(x) paste(x[1], x[2]))
+ 
+means <- aggregate(df, by=list(df$group_rank), FUN=mean, na.rm=T)
+er <- aggregate(df, by=list(df$group_rank), FUN=sem, na.rm=T)
+df <- data.frame(binner=gsub(" .*", "", means[, 1]),
+                 group=gsub("_[0-9] .*$", "", means[, 1]),
+                 rank=gsub(".* ", "", means[, 1]),
+                 precision=means$precision, recall=means$recall,
+                 precision_er=er$precision, recall_er=er$recall)
+
+df$rank <- factor(df$rank, levels=c("phylum", "class", "order", "family", "genus", "species"))
+
+p <- ggplot(df, aes(x=precision, y=recall, color=binner, shape=rank)) +
+     geom_errorbarh(aes(xmin=precision-precision_er,
+                        xmax=precision+precision_er),
+                    size=bars_size, alpha=bars_alpha, height=0) +
+     geom_errorbar(aes(ymin=recall-recall_er,
+                       ymax=recall+recall_er),
+                   size=bars_alpha, alpha=bars_size, width=0) +
+     scale_x_continuous(labels=percent, limits=c(0, 1)) +
+     scale_y_continuous(labels=percent, limits=c(0, 1)) +
+     geom_point(size=points_size, alpha=points_alpha, color="black") +
+     ggtitle(title) +
+     main_theme +
+     theme(legend.position="right")
+
+ggsave(paste(figures.dir, "prec_recall_combined_by_rank.pdf", sep=""), p, width=7, height=5)
+
