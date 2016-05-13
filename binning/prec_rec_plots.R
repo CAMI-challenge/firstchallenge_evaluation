@@ -34,14 +34,26 @@ ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
 ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
 
 ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
-# ref_data_combined <- ref_data_combined[ref_data_combined$size!=0, ]
+# ref_data_combined <- ref_data_high
 
 # removing small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
 
 ref_data_combined <- within(ref_data_combined,
                             binner_rank <- paste(ref_data_combined$binner,
-                                                 ref_data_combined$rank, sep='_'))
-q <- aggregate(ref_data_combined$predidcted_size, by=list(ref_data_combined$binner_rank), quantile, 0.1)
+                                                 ref_data_combined$rank,
+                                                 ref_data_combined$group,
+                                                 sep='_'))
+
+threshold <- 0.01
+q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
+q[, 2] <- q[, 2]*threshold
+for (i in 1:nrow(q)) {
+    idx <- ref_data_combined$binner_rank==q[i, 1]
+    s <- rev(ref_data_combined[idx, ]$predicted_size)
+    cs <- cumsum(s)
+    q[i, 2] <- s[min(which(cs>q[i, 2]))]
+}
+
 idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[5]) > q[q[, 1]==x[8], 2])
 ref_data_combined <- ref_data_combined[idx, ]
 
@@ -110,7 +122,7 @@ title <- "precision / recall per rank"
 
 df <- ref_data_combined
 df <- df[df$rank!="superkingdom", ]
-df$binner=gsub("_[0-9]*$", "", df$binner)
+# df$binner=gsub("_[0-9]*$", "", df$binner)
 df$group_rank <- apply(df, 1, function(x) paste(x[1], x[2]))
  
 means <- aggregate(df, by=list(df$group_rank), FUN=mean, na.rm=T)

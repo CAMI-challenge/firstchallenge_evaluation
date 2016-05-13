@@ -1,7 +1,6 @@
-binner	rank	precision	recall	predidcted_size	real_size
+binner	rank	precision	recall	predicted_size	real_size
 modest_babbage_1	superkingdom	0.99	0.97	541183968	553468052
 modest_babbage_1	superkingdom	0.51	0.40	5011184	6411802
-modest_babbage_1	superkingdom	nan	nan	15834694	1413217
 modest_babbage_1	phylum	0.99	0.96	235514516	243932505
 modest_babbage_1	phylum	0.97	0.98	146922642	145948197
 modest_babbage_1	phylum	0.99	0.94	110023365	116336594
@@ -9,7 +8,6 @@ modest_babbage_1	phylum	0.99	0.93	42936318	45650742
 modest_babbage_1	phylum	0.97	0.36	2389946	6411802
 modest_babbage_1	phylum	0.99	1.00	1606492	1600014
 modest_babbage_1	phylum	0.00	nan	395166	0
-modest_babbage_1	phylum	nan	nan	22241401	2149992
 modest_babbage_1	class	0.97	0.98	146922642	145948197
 modest_babbage_1	class	1.00	0.94	120196009	127454801
 modest_babbage_1	class	1.00	0.99	78273803	78627440
@@ -24,7 +22,6 @@ modest_babbage_1	class	0.58	0.73	3488510	2783086
 modest_babbage_1	class	0.95	0.16	2498936	14411538
 modest_babbage_1	class	0.99	1.00	1606492	1600014
 modest_babbage_1	class	0.99	1.00	1551926	1534116
-modest_babbage_1	class	nan	nan	29506099	2149992
 modest_babbage_1	order	1.00	0.99	142323391	143462610
 modest_babbage_1	order	1.00	1.00	66483046	66564525
 modest_babbage_1	order	0.99	0.93	65254316	69444702
@@ -52,7 +49,6 @@ modest_babbage_1	order	0.95	0.98	2464596	2396848
 modest_babbage_1	order	1.00	1.00	1597924	1600014
 modest_babbage_1	order	0.99	1.00	1550607	1534116
 modest_babbage_1	order	0.17	0.02	334531	2485587
-modest_babbage_1	order	nan	nan	43492301	2149992
 modest_babbage_1	family	1.00	0.88	33410705	37691258
 modest_babbage_1	family	0.98	0.94	31487532	32681267
 modest_babbage_1	family	1.00	0.95	27535693	28873267
@@ -105,7 +101,6 @@ modest_babbage_1	family	0.17	0.02	334531	2485587
 modest_babbage_1	family	0.96	0.08	230539	2645012
 modest_babbage_1	family	0.00	nan	83304	0
 modest_babbage_1	family	0.00	nan	32816	0
-modest_babbage_1	family	nan	nan	83037222	11854717
 modest_babbage_1	genus	1.00	0.92	26648871	28873267
 modest_babbage_1	genus	1.00	0.97	22620682	23337519
 modest_babbage_1	genus	0.00	nan	18353080	0
@@ -183,7 +178,6 @@ modest_babbage_1	genus	1.00	0.00	9874	3329601
 modest_babbage_1	genus	0.00	nan	5956	0
 modest_babbage_1	genus	1.00	0.00	3441	10494171
 modest_babbage_1	genus	0.00	nan	3080	0
-modest_babbage_1	genus	nan	nan	132860359	75507023
 modest_babbage_1	species	0.00	nan	26488097	0
 modest_babbage_1	species	0.00	nan	15860221	0
 modest_babbage_1	species	0.00	nan	14943594	0
@@ -286,12 +280,10 @@ modest_babbage_1	species	0.00	nan	9828	0
 modest_babbage_1	species	0.00	nan	9517	0
 modest_babbage_1	species	0.00	nan	3441	0
 modest_babbage_1	species	0.00	nan	3080	0
-modest_babbage_1	species	nan	nan	153661194	185124110
 stoic_albattani_1	superkingdom	1.00	0.11	265576950	2453835000
 stoic_albattani_1	superkingdom	1.00	0.25	481800	1890450
 stoic_albattani_1	superkingdom	0.94	0.01	67950	8424750
 stoic_albattani_1	superkingdom	0.00	nan	19050	0
-stoic_albattani_1	superkingdom	nan	nan	2219390250	21385800
 stoic_albattani_1	phylum	1.00	0.12	199095000	1686872400
 stoic_albattani_1	phylum	0.99	0.10	34130850	325140600
 stoic_albattani_1	phylum	1.00	0.07	30025350	402841500
@@ -308,7 +300,6 @@ stoic_albattani_1	phylum	0.00	nan	150	0
 stoic_albattani_1	phylum	0.00	nan	150	0
 stoic_albattani_1	phylum	0.00	nan	150	0
 stoic_albattani_1	phylum	0.00	nan	150	0
-stoic_albattani_1	phylum	nan	nan	2219773950	29810550
 stoic_albattani_1	class	1.00	0.11	133368750	1253079000
 stoic_albattani_1	class	1.00	0.15	60897750	402465600
 stoic_albattani_1	class	1.00	0.07	30025350	402841500
@@ -333,7 +324,6 @@ stoic_albattani_1	class	0.00	nan	150	0
 stoic_albattani_1	class	0.00	nan	150	0
 stoic_albattani_1	class	0.00	nan	150	0
 stoic_albattani_1	class	0.00	nan	150	0
-stoic_albattani_1	class	nan	nan	2220013050	29810550
 stoic_albattani_1	order	1.00	0.11	91098600	822856800
 stoic_albattani_1	order	1.00	0.15	60244500	390695550
 stoic_albattani_1	order	1.00	0.21	35980350	175206600
@@ -388,7 +378,6 @@ stoic_albattani_1	order	0.00	nan	150	0
 stoic_albattani_1	order	0.00	nan	150	0
 stoic_albattani_1	order	0.00	nan	150	0
 stoic_albattani_1	order	0.00	nan	150	0
-stoic_albattani_1	order	nan	nan	2220339450	29810550
 stoic_albattani_1	family	1.00	0.25	86225550	348646650
 stoic_albattani_1	family	1.00	0.17	43627200	262566450
 stoic_albattani_1	family	1.00	0.21	35978700	175206600
@@ -530,7 +519,6 @@ stoic_albattani_1	family	0.00	nan	150	0
 stoic_albattani_1	family	0.00	nan	150	0
 stoic_albattani_1	family	0.00	nan	150	0
 stoic_albattani_1	family	0.00	nan	150	0
-stoic_albattani_1	family	nan	nan	2231575200	70425450
 stoic_albattani_1	genus	1.00	0.23	81626250	347845500
 stoic_albattani_1	genus	1.00	0.23	25125150	108602700
 stoic_albattani_1	genus	0.00	nan	24710700	0
@@ -1022,7 +1010,6 @@ stoic_albattani_1	genus	0.00	nan	150	0
 stoic_albattani_1	genus	0.00	nan	150	0
 stoic_albattani_1	genus	0.00	nan	150	0
 stoic_albattani_1	genus	0.00	nan	150	0
-stoic_albattani_1	genus	nan	nan	2232619500	792481650
 stoic_albattani_1	species	1.00	0.22	76186200	347845500
 stoic_albattani_1	species	1.00	0.23	24971100	108602700
 stoic_albattani_1	species	0.00	nan	18085800	0
@@ -2611,10 +2598,8 @@ stoic_albattani_1	species	0.00	nan	150	0
 stoic_albattani_1	species	0.00	nan	150	0
 stoic_albattani_1	species	0.00	nan	150	0
 stoic_albattani_1	species	0.00	nan	150	0
-stoic_albattani_1	species	nan	nan	2272811100	1057300050
 modest_babbage_2	superkingdom	0.99	0.97	541132440	553468052
 modest_babbage_2	superkingdom	0.51	0.40	5011184	6411802
-modest_babbage_2	superkingdom	nan	nan	15886222	1413217
 modest_babbage_2	phylum	0.99	0.96	235514516	243932505
 modest_babbage_2	phylum	0.97	0.98	146922642	145948197
 modest_babbage_2	phylum	0.99	0.94	110023365	116336594
@@ -2622,7 +2607,6 @@ modest_babbage_2	phylum	0.99	0.93	42936318	45650742
 modest_babbage_2	phylum	0.97	0.36	2389946	6411802
 modest_babbage_2	phylum	0.99	1.00	1606492	1600014
 modest_babbage_2	phylum	0.00	nan	395166	0
-modest_babbage_2	phylum	nan	nan	22241401	2149992
 modest_babbage_2	class	0.97	0.98	146922642	145948197
 modest_babbage_2	class	1.00	0.94	120196009	127454801
 modest_babbage_2	class	1.00	0.99	78273803	78627440
@@ -2637,7 +2621,6 @@ modest_babbage_2	class	0.58	0.73	3488510	2783086
 modest_babbage_2	class	0.95	0.16	2498936	14411538
 modest_babbage_2	class	0.99	1.00	1606492	1600014
 modest_babbage_2	class	0.99	1.00	1551926	1534116
-modest_babbage_2	class	nan	nan	29506099	2149992
 modest_babbage_2	order	1.00	0.99	142323391	143462610
 modest_babbage_2	order	1.00	1.00	66483046	66564525
 modest_babbage_2	order	0.99	0.93	65254316	69444702
@@ -2665,7 +2648,6 @@ modest_babbage_2	order	0.95	0.98	2464596	2396848
 modest_babbage_2	order	1.00	1.00	1597924	1600014
 modest_babbage_2	order	0.99	1.00	1550607	1534116
 modest_babbage_2	order	0.17	0.02	334531	2485587
-modest_babbage_2	order	nan	nan	43492301	2149992
 modest_babbage_2	family	1.00	0.88	33410705	37691258
 modest_babbage_2	family	0.98	0.94	31487532	32681267
 modest_babbage_2	family	1.00	0.95	27535693	28873267
@@ -2718,7 +2700,6 @@ modest_babbage_2	family	0.17	0.02	334531	2485587
 modest_babbage_2	family	0.96	0.08	230539	2645012
 modest_babbage_2	family	0.00	nan	83304	0
 modest_babbage_2	family	0.00	nan	32816	0
-modest_babbage_2	family	nan	nan	83037222	11854717
 modest_babbage_2	genus	1.00	0.92	26648871	28873267
 modest_babbage_2	genus	1.00	0.97	22620682	23337519
 modest_babbage_2	genus	0.00	nan	18353080	0
@@ -2796,7 +2777,6 @@ modest_babbage_2	genus	1.00	0.00	9874	3329601
 modest_babbage_2	genus	0.00	nan	5956	0
 modest_babbage_2	genus	1.00	0.00	3441	10494171
 modest_babbage_2	genus	0.00	nan	3080	0
-modest_babbage_2	genus	nan	nan	132860359	75507023
 modest_babbage_2	species	0.00	nan	26488097	0
 modest_babbage_2	species	0.00	nan	15860221	0
 modest_babbage_2	species	0.00	nan	14943594	0
@@ -2899,10 +2879,8 @@ modest_babbage_2	species	0.00	nan	9828	0
 modest_babbage_2	species	0.00	nan	9517	0
 modest_babbage_2	species	0.00	nan	3441	0
 modest_babbage_2	species	0.00	nan	3080	0
-modest_babbage_2	species	nan	nan	153661194	185124110
 modest_babbage_4	superkingdom	1.00	0.43	239901887	553468052
 modest_babbage_4	superkingdom	0.88	0.01	93917	6411802
-modest_babbage_4	superkingdom	nan	nan	322034042	1413217
 modest_babbage_4	phylum	1.00	0.39	95869593	243932505
 modest_babbage_4	phylum	0.96	0.39	58666105	145948197
 modest_babbage_4	phylum	1.00	0.32	37507927	116336594
@@ -2910,7 +2888,6 @@ modest_babbage_4	phylum	1.00	0.33	14979331	45650742
 modest_babbage_4	phylum	1.00	0.82	1313860	1600014
 modest_babbage_4	phylum	1.00	0.01	82737	6411802
 modest_babbage_4	phylum	0.00	nan	2663	0
-modest_babbage_4	phylum	nan	nan	353607630	2149992
 modest_babbage_4	class	0.96	0.39	58666105	145948197
 modest_babbage_4	class	1.00	0.37	47283336	127454801
 modest_babbage_4	class	1.00	0.44	34641255	78627440
@@ -2925,7 +2902,6 @@ modest_babbage_4	class	1.00	0.30	841350	2783086
 modest_babbage_4	class	1.00	0.01	181535	14411538
 modest_babbage_4	class	1.00	0.03	116977	4150955
 modest_babbage_4	class	1.00	0.05	82737	1534116
-modest_babbage_4	class	nan	nan	359082456	2149992
 modest_babbage_4	order	0.96	0.39	58660931	143462610
 modest_babbage_4	order	1.00	0.43	28679016	66564525
 modest_babbage_4	order	1.00	0.29	19964905	69444702
@@ -2953,7 +2929,6 @@ modest_babbage_4	order	1.00	0.01	181535	14411538
 modest_babbage_4	order	1.00	0.03	116977	4150955
 modest_babbage_4	order	1.00	0.05	82737	1534116
 modest_babbage_4	order	1.00	0.00	5174	2485587
-modest_babbage_4	order	nan	nan	362600266	2149992
 modest_babbage_4	family	1.00	0.49	18549073	37691258
 modest_babbage_4	family	0.27	0.38	10795247	7719747
 modest_babbage_4	family	1.00	0.46	10670442	23337519
@@ -3006,7 +2981,6 @@ modest_babbage_4	family	1.00	0.00	9675	14411538
 modest_babbage_4	family	1.00	0.00	5174	2485587
 modest_babbage_4	family	1.00	0.00	2408	2645012
 modest_babbage_4	family	0.00	nan	1547	0
-modest_babbage_4	family	nan	nan	406387960	11854717
 modest_babbage_4	genus	0.00	nan	9131507	0
 modest_babbage_4	genus	0.01	0.05	8986605	2550032
 modest_babbage_4	genus	1.00	0.35	8133382	23337519
@@ -3096,7 +3070,6 @@ modest_babbage_4	genus	0.00	nan	1547	0
 modest_babbage_4	genus	1.00	0.00	1542	6599454
 modest_babbage_4	genus	1.00	0.00	1513	4823186
 modest_babbage_4	genus	1.00	0.00	1425	2472183
-modest_babbage_4	genus	nan	nan	419466967	75507023
 modest_babbage_4	species	0.00	nan	7853207	0
 modest_babbage_4	species	0.00	nan	6870045	0
 modest_babbage_4	species	0.00	nan	4972054	0
@@ -3226,12 +3199,10 @@ modest_babbage_4	species	1.00	0.00	1425	2472183
 modest_babbage_4	species	1.00	0.00	1226	4473091
 modest_babbage_4	species	0.00	nan	1151	0
 modest_babbage_4	species	0.00	nan	1110	0
-modest_babbage_4	species	nan	nan	460785560	185124110
 pensive_curie_6	superkingdom	1.00	0.65	1612167600	2453835000
 pensive_curie_6	superkingdom	0.90	0.98	2064450	1890450
 pensive_curie_6	superkingdom	0.95	0.18	1615350	8424750
 pensive_curie_6	superkingdom	0.00	nan	137550	0
-pensive_curie_6	superkingdom	nan	nan	869551050	21385800
 pensive_curie_6	phylum	1.00	0.67	1140366900	1686872400
 pensive_curie_6	phylum	0.98	0.61	252414000	402841500
 pensive_curie_6	phylum	0.97	0.61	204406050	325140600
@@ -3281,7 +3252,6 @@ pensive_curie_6	phylum	0.00	nan	150	0
 pensive_curie_6	phylum	0.00	nan	150	0
 pensive_curie_6	phylum	0.00	nan	150	0
 pensive_curie_6	phylum	0.00	nan	150	0
-pensive_curie_6	phylum	nan	nan	877134300	29810550
 pensive_curie_6	class	1.00	0.64	809218200	1253079000
 pensive_curie_6	class	0.98	0.71	293433150	402465600
 pensive_curie_6	class	0.98	0.61	252414000	402841500
@@ -3354,7 +3324,6 @@ pensive_curie_6	class	0.00	nan	150	0
 pensive_curie_6	class	0.00	nan	150	0
 pensive_curie_6	class	0.00	nan	150	0
 pensive_curie_6	class	0.00	nan	150	0
-pensive_curie_6	class	nan	nan	886351500	29810550
 pensive_curie_6	order	0.99	0.60	503120550	822856800
 pensive_curie_6	order	0.98	0.72	288918900	390695550
 pensive_curie_6	order	0.98	0.61	249271950	398239500
@@ -3522,7 +3491,6 @@ pensive_curie_6	order	0.00	nan	150	0
 pensive_curie_6	order	0.00	nan	150	0
 pensive_curie_6	order	0.00	nan	150	0
 pensive_curie_6	order	0.00	nan	150	0
-pensive_curie_6	order	nan	nan	904020000	29810550
 pensive_curie_6	family	0.92	1.00	377595900	348646650
 pensive_curie_6	family	0.99	0.84	223328550	262566450
 pensive_curie_6	family	0.98	0.96	171226050	175206600
@@ -3886,7 +3854,6 @@ pensive_curie_6	family	0.00	nan	150	0
 pensive_curie_6	family	0.00	nan	150	0
 pensive_curie_6	family	0.00	nan	150	0
 pensive_curie_6	family	0.00	nan	150	0
-pensive_curie_6	family	nan	nan	989046450	70425450
 pensive_curie_6	genus	0.99	1.00	349262250	347845500
 pensive_curie_6	genus	0.00	nan	128385300	0
 pensive_curie_6	genus	0.00	nan	125168400	0
@@ -5381,7 +5348,6 @@ pensive_curie_6	genus	0.00	nan	150	0
 pensive_curie_6	genus	0.00	nan	150	0
 pensive_curie_6	genus	0.00	nan	150	0
 pensive_curie_6	genus	0.00	nan	150	0
-pensive_curie_6	genus	nan	nan	975233250	792481650
 pensive_curie_6	species	1.00	0.99	345817650	347845500
 pensive_curie_6	species	0.00	nan	120193950	0
 pensive_curie_6	species	1.00	0.99	108254850	108602700
@@ -11246,11 +11212,9 @@ pensive_curie_6	species	0.00	nan	150	0
 pensive_curie_6	species	0.00	nan	150	0
 pensive_curie_6	species	0.00	nan	150	0
 pensive_curie_6	species	0.00	nan	150	0
-pensive_curie_6	species	nan	nan	1082082450	1057300050
 evil_yalow_1	superkingdom	1.00	0.09	48429020	553468052
 evil_yalow_1	superkingdom	1.00	0.10	609977	6411802
 evil_yalow_1	superkingdom	0.00	nan	2140	0
-evil_yalow_1	superkingdom	nan	nan	512988709	1413217
 evil_yalow_1	phylum	1.00	0.09	22597667	243932505
 evil_yalow_1	phylum	1.00	0.08	12366615	145948197
 evil_yalow_1	phylum	1.00	0.07	7946959	116336594
@@ -11258,7 +11222,6 @@ evil_yalow_1	phylum	1.00	0.10	4374579	45650742
 evil_yalow_1	phylum	1.00	0.09	597434	6411802
 evil_yalow_1	phylum	0.00	nan	1390	0
 evil_yalow_1	phylum	0.00	nan	422	0
-evil_yalow_1	phylum	nan	nan	514144780	2149992
 evil_yalow_1	class	1.00	0.08	12366615	145948197
 evil_yalow_1	class	1.00	0.09	10943427	127454801
 evil_yalow_1	class	1.00	0.10	7940880	78627440
@@ -11273,7 +11236,6 @@ evil_yalow_1	class	0.99	0.13	351955	2783086
 evil_yalow_1	class	0.98	0.03	253591	9442158
 evil_yalow_1	class	1.00	0.01	187788	14411538
 evil_yalow_1	class	1.00	0.01	31620	4877686
-evil_yalow_1	class	nan	nan	516785525	2149992
 evil_yalow_1	order	1.00	0.08	12181505	143462610
 evil_yalow_1	order	1.00	0.11	7153189	66564525
 evil_yalow_1	order	1.00	0.12	6608392	54087866
@@ -11306,7 +11268,6 @@ evil_yalow_1	order	1.00	0.04	18405	424499
 evil_yalow_1	order	0.00	nan	1390	0
 evil_yalow_1	order	0.00	nan	319	0
 evil_yalow_1	order	0.00	nan	247	0
-evil_yalow_1	order	nan	nan	518423489	2149992
 evil_yalow_1	family	1.00	0.13	4801014	37691258
 evil_yalow_1	family	1.00	0.08	2711558	32681267
 evil_yalow_1	family	1.00	0.13	2432869	19013960
@@ -11365,7 +11326,6 @@ evil_yalow_1	family	0.00	nan	704	0
 evil_yalow_1	family	0.00	nan	527	0
 evil_yalow_1	family	0.00	nan	319	0
 evil_yalow_1	family	0.00	nan	247	0
-evil_yalow_1	family	nan	nan	524701851	11854717
 evil_yalow_1	genus	0.00	nan	2506615	0
 evil_yalow_1	genus	0.00	nan	2098193	0
 evil_yalow_1	genus	1.00	0.06	1851385	28873267
@@ -11439,7 +11399,6 @@ evil_yalow_1	genus	1.00	0.00	291	5419845
 evil_yalow_1	genus	1.00	0.00	275	424499
 evil_yalow_1	genus	0.00	nan	247	0
 evil_yalow_1	genus	0.00	nan	150	0
-evil_yalow_1	genus	nan	nan	534520615	75507023
 evil_yalow_1	species	1.00	0.11	1501192	13774939
 evil_yalow_1	species	1.00	0.08	589349	7141886
 evil_yalow_1	species	0.00	nan	534010	0
@@ -11480,12 +11439,10 @@ evil_yalow_1	species	0.00	nan	685	0
 evil_yalow_1	species	0.00	nan	549	0
 evil_yalow_1	species	0.00	nan	302	0
 evil_yalow_1	species	0.00	nan	275	0
-evil_yalow_1	species	nan	nan	556541005	185124110
 pensive_curie_1	superkingdom	1.00	0.62	4601669550	7392701100
 pensive_curie_1	superkingdom	0.90	0.95	5990700	5692500
 pensive_curie_1	superkingdom	0.94	0.18	4831950	25274550
 pensive_curie_1	superkingdom	0.00	nan	627900	0
-pensive_curie_1	superkingdom	nan	nan	2874705750	64157700
 pensive_curie_1	phylum	1.00	0.64	3265498350	5081339850
 pensive_curie_1	phylum	0.98	0.57	702667500	1210674150
 pensive_curie_1	phylum	0.97	0.59	594268950	983265450
@@ -11541,7 +11498,6 @@ pensive_curie_1	phylum	0.00	nan	600	0
 pensive_curie_1	phylum	0.00	nan	450	0
 pensive_curie_1	phylum	0.00	nan	300	0
 pensive_curie_1	phylum	0.00	nan	150	0
-pensive_curie_1	phylum	nan	nan	2894062650	89432250
 pensive_curie_1	class	1.00	0.62	2334742950	3778860300
 pensive_curie_1	class	0.98	0.67	827680500	1208027400
 pensive_curie_1	class	0.98	0.57	702667500	1210674150
@@ -11620,7 +11576,6 @@ pensive_curie_1	class	0.00	nan	300	0
 pensive_curie_1	class	0.00	nan	150	0
 pensive_curie_1	class	0.00	nan	150	0
 pensive_curie_1	class	0.00	nan	150	0
-pensive_curie_1	class	nan	nan	2916312450	89432250
 pensive_curie_1	order	0.99	0.59	1473344850	2484274650
 pensive_curie_1	order	0.98	0.68	815886150	1172673000
 pensive_curie_1	order	0.98	0.57	694861650	1196470200
@@ -11806,7 +11761,6 @@ pensive_curie_1	order	0.00	nan	150	0
 pensive_curie_1	order	0.00	nan	150	0
 pensive_curie_1	order	0.00	nan	150	0
 pensive_curie_1	order	0.00	nan	150	0
-pensive_curie_1	order	nan	nan	2957469000	89432250
 pensive_curie_1	family	0.93	1.00	1136960400	1060574850
 pensive_curie_1	family	0.99	0.80	638862600	788212800
 pensive_curie_1	family	0.98	0.94	505075050	527628450
@@ -12238,7 +12192,6 @@ pensive_curie_1	family	0.00	nan	150	0
 pensive_curie_1	family	0.00	nan	150	0
 pensive_curie_1	family	0.00	nan	150	0
 pensive_curie_1	family	0.00	nan	150	0
-pensive_curie_1	family	nan	nan	3185000850	211344300
 pensive_curie_1	genus	0.99	0.99	1058140950	1058166600
 pensive_curie_1	genus	0.00	nan	370978950	0
 pensive_curie_1	genus	0.00	nan	358909050	0
@@ -13924,7 +13877,6 @@ pensive_curie_1	genus	0.00	nan	150	0
 pensive_curie_1	genus	0.00	nan	150	0
 pensive_curie_1	genus	0.00	nan	150	0
 pensive_curie_1	genus	0.00	nan	150	0
-pensive_curie_1	genus	nan	nan	3134952900	2378229600
 pensive_curie_1	species	1.00	0.99	1044505800	1058166600
 pensive_curie_1	species	0.00	nan	338583450	0
 pensive_curie_1	species	1.00	0.99	324615000	326983650
@@ -20551,12 +20503,10 @@ pensive_curie_1	species	0.00	nan	150	0
 pensive_curie_1	species	0.00	nan	150	0
 pensive_curie_1	species	0.00	nan	150	0
 pensive_curie_1	species	0.00	nan	150	0
-pensive_curie_1	species	nan	nan	3443669250	3174300750
 pensive_curie_2	superkingdom	1.00	0.60	1443467400	2391321450
 pensive_curie_2	superkingdom	1.00	0.97	60468600	62193450
 pensive_curie_2	superkingdom	0.00	nan	192000	0
 pensive_curie_2	superkingdom	0.78	0.01	170700	10938300
-pensive_curie_2	superkingdom	nan	nan	980318400	20163900
 pensive_curie_2	phylum	0.99	0.53	526465050	994339950
 pensive_curie_2	phylum	1.00	0.65	518267850	800164800
 pensive_curie_2	phylum	0.99	0.78	353682750	451293600
@@ -20607,7 +20557,6 @@ pensive_curie_2	phylum	0.00	nan	150	0
 pensive_curie_2	phylum	0.00	nan	150	0
 pensive_curie_2	phylum	0.00	nan	150	0
 pensive_curie_2	phylum	0.00	nan	150	0
-pensive_curie_2	phylum	nan	nan	984326550	31102200
 pensive_curie_2	class	1.00	0.65	518267850	800164800
 pensive_curie_2	class	1.00	0.78	322549500	411703800
 pensive_curie_2	class	0.99	0.75	271230150	356654100
@@ -20682,7 +20631,6 @@ pensive_curie_2	class	0.00	nan	300	0
 pensive_curie_2	class	0.00	nan	150	0
 pensive_curie_2	class	0.00	nan	150	0
 pensive_curie_2	class	0.00	nan	150	0
-pensive_curie_2	class	nan	nan	988219050	31102200
 pensive_curie_2	order	1.00	0.65	516707700	795433200
 pensive_curie_2	order	1.00	1.00	279693300	279940200
 pensive_curie_2	order	0.97	0.77	96029100	120243450
@@ -20852,7 +20800,6 @@ pensive_curie_2	order	0.00	nan	150	0
 pensive_curie_2	order	0.00	nan	150	0
 pensive_curie_2	order	0.00	nan	150	0
 pensive_curie_2	order	0.00	nan	150	0
-pensive_curie_2	order	nan	nan	994815450	31102200
 pensive_curie_2	family	0.99	0.78	294439650	371335650
 pensive_curie_2	family	1.00	1.00	279588450	279940200
 pensive_curie_2	family	0.99	0.98	93588750	94540650
@@ -21221,7 +21168,6 @@ pensive_curie_2	family	0.00	nan	150	0
 pensive_curie_2	family	0.00	nan	150	0
 pensive_curie_2	family	0.00	nan	150	0
 pensive_curie_2	family	0.00	nan	150	0
-pensive_curie_2	family	nan	nan	1028808750	39558600
 pensive_curie_2	genus	0.99	0.82	285258450	341912850
 pensive_curie_2	genus	1.00	1.00	266894100	266984550
 pensive_curie_2	genus	1.00	0.99	75255150	75619050
@@ -22745,7 +22691,6 @@ pensive_curie_2	genus	0.00	nan	150	0
 pensive_curie_2	genus	0.00	nan	150	0
 pensive_curie_2	genus	0.00	nan	150	0
 pensive_curie_2	genus	0.00	nan	150	0
-pensive_curie_2	genus	nan	nan	1042283850	185190300
 pensive_curie_2	species	1.00	1.00	266894100	266984550
 pensive_curie_2	species	0.00	nan	256838100	0
 pensive_curie_2	species	1.00	0.99	75103050	75619050
@@ -28851,11 +28796,9 @@ pensive_curie_2	species	0.00	nan	150	0
 pensive_curie_2	species	0.00	nan	150	0
 pensive_curie_2	species	0.00	nan	150	0
 pensive_curie_2	species	0.00	nan	150	0
-pensive_curie_2	species	nan	nan	1132943400	904917450
 fervent_sammet_0	superkingdom	1.00	0.09	48657648	553468052
 fervent_sammet_0	superkingdom	1.00	0.10	609977	6411802
 fervent_sammet_0	superkingdom	0.00	nan	2140	0
-fervent_sammet_0	superkingdom	nan	nan	512760081	1413217
 fervent_sammet_0	phylum	1.00	0.09	23092352	243932505
 fervent_sammet_0	phylum	1.00	0.09	12520513	145948197
 fervent_sammet_0	phylum	0.99	0.07	8353281	116336594
@@ -28863,7 +28806,6 @@ fervent_sammet_0	phylum	1.00	0.10	4600597	45650742
 fervent_sammet_0	phylum	1.00	0.09	597434	6411802
 fervent_sammet_0	phylum	0.00	nan	1390	0
 fervent_sammet_0	phylum	0.00	nan	422	0
-fervent_sammet_0	phylum	nan	nan	512863857	2149992
 fervent_sammet_0	class	1.00	0.09	12520513	145948197
 fervent_sammet_0	class	1.00	0.09	11552562	127454801
 fervent_sammet_0	class	0.99	0.10	8206856	78627440
@@ -28878,7 +28820,6 @@ fervent_sammet_0	class	0.99	0.13	351955	2783086
 fervent_sammet_0	class	0.98	0.03	253591	9442158
 fervent_sammet_0	class	1.00	0.01	187788	14411538
 fervent_sammet_0	class	1.00	0.01	31620	4877686
-fervent_sammet_0	class	nan	nan	514899820	2149992
 fervent_sammet_0	order	1.00	0.09	12334010	143462610
 fervent_sammet_0	order	1.00	0.11	7518425	66564525
 fervent_sammet_0	order	0.99	0.13	7260706	54087866
@@ -28911,7 +28852,6 @@ fervent_sammet_0	order	1.00	0.04	18405	424499
 fervent_sammet_0	order	0.00	nan	1390	0
 fervent_sammet_0	order	0.00	nan	319	0
 fervent_sammet_0	order	0.00	nan	247	0
-fervent_sammet_0	order	nan	nan	516064260	2149992
 fervent_sammet_0	family	1.00	0.13	4968641	37691258
 fervent_sammet_0	family	0.99	0.10	3273079	32681267
 fervent_sammet_0	family	1.00	0.13	2432869	19013960
@@ -28970,7 +28910,6 @@ fervent_sammet_0	family	0.00	nan	704	0
 fervent_sammet_0	family	0.00	nan	527	0
 fervent_sammet_0	family	0.00	nan	319	0
 fervent_sammet_0	family	0.00	nan	247	0
-fervent_sammet_0	family	nan	nan	523794422	11854717
 fervent_sammet_0	genus	0.00	nan	3464361	0
 fervent_sammet_0	genus	0.00	nan	2098193	0
 fervent_sammet_0	genus	1.00	0.06	1851385	28873267
@@ -29044,7 +28983,6 @@ fervent_sammet_0	genus	1.00	0.00	291	5419845
 fervent_sammet_0	genus	1.00	0.00	275	424499
 fervent_sammet_0	genus	0.00	nan	247	0
 fervent_sammet_0	genus	0.00	nan	150	0
-fervent_sammet_0	genus	nan	nan	533562869	75507023
 fervent_sammet_0	species	1.00	0.11	1501192	13774939
 fervent_sammet_0	species	1.00	0.08	589349	7141886
 fervent_sammet_0	species	0.00	nan	534010	0
@@ -29085,12 +29023,10 @@ fervent_sammet_0	species	0.00	nan	685	0
 fervent_sammet_0	species	0.00	nan	549	0
 fervent_sammet_0	species	0.00	nan	302	0
 fervent_sammet_0	species	0.00	nan	275	0
-fervent_sammet_0	species	nan	nan	556541005	185124110
 pensive_curie_0	superkingdom	1.00	0.57	4120788300	7202515200
 pensive_curie_0	superkingdom	1.00	0.94	178256550	188245200
 pensive_curie_0	superkingdom	0.00	nan	619050	0
 pensive_curie_0	superkingdom	0.70	0.01	565950	32814600
-pensive_curie_0	superkingdom	nan	nan	3183837750	60492600
 pensive_curie_0	phylum	0.99	0.50	1512045750	2996518650
 pensive_curie_0	phylum	1.00	0.59	1432319700	2403543600
 pensive_curie_0	phylum	0.99	0.77	1054055850	1363779000
@@ -29146,7 +29082,6 @@ pensive_curie_0	phylum	0.00	nan	600	0
 pensive_curie_0	phylum	0.00	nan	600	0
 pensive_curie_0	phylum	0.00	nan	450	0
 pensive_curie_0	phylum	0.00	nan	450	0
-pensive_curie_0	phylum	nan	nan	3193650000	93307200
 pensive_curie_0	class	1.00	0.59	1432319700	2403543600
 pensive_curie_0	class	1.00	0.77	961177800	1243380600
 pensive_curie_0	class	0.99	0.72	787442700	1073896650
@@ -29225,7 +29160,6 @@ pensive_curie_0	class	0.00	nan	300	0
 pensive_curie_0	class	0.00	nan	300	0
 pensive_curie_0	class	0.00	nan	150	0
 pensive_curie_0	class	0.00	nan	150	0
-pensive_curie_0	class	nan	nan	3204034800	93307200
 pensive_curie_0	order	1.00	0.60	1428620250	2388951000
 pensive_curie_0	order	1.00	1.00	843077550	844646700
 pensive_curie_0	order	0.99	0.97	280589850	284761200
@@ -29407,7 +29341,6 @@ pensive_curie_0	order	0.00	nan	300	0
 pensive_curie_0	order	0.00	nan	150	0
 pensive_curie_0	order	0.00	nan	150	0
 pensive_curie_0	order	0.00	nan	150	0
-pensive_curie_0	order	nan	nan	3219562200	93307200
 pensive_curie_0	family	1.00	1.00	842779350	844646700
 pensive_curie_0	family	0.99	0.74	834295950	1115893500
 pensive_curie_0	family	0.99	0.97	278785500	284761200
@@ -29842,7 +29775,6 @@ pensive_curie_0	family	0.00	nan	150	0
 pensive_curie_0	family	0.00	nan	150	0
 pensive_curie_0	family	0.00	nan	150	0
 pensive_curie_0	family	0.00	nan	150	0
-pensive_curie_0	family	nan	nan	3303809850	118707900
 pensive_curie_0	genus	0.99	0.78	809443050	1027632900
 pensive_curie_0	genus	1.00	1.00	804387900	804933000
 pensive_curie_0	genus	1.00	0.99	225712950	227645850
@@ -31527,7 +31459,6 @@ pensive_curie_0	genus	0.00	nan	150	0
 pensive_curie_0	genus	0.00	nan	150	0
 pensive_curie_0	genus	0.00	nan	150	0
 pensive_curie_0	genus	0.00	nan	150	0
-pensive_curie_0	genus	nan	nan	3334546800	555800700
 pensive_curie_0	species	1.00	1.00	804387900	804933000
 pensive_curie_0	species	0.00	nan	730769550	0
 pensive_curie_0	species	1.00	0.99	225281100	227645850
@@ -38433,12 +38364,10 @@ pensive_curie_0	species	0.00	nan	150	0
 pensive_curie_0	species	0.00	nan	150	0
 pensive_curie_0	species	0.00	nan	150	0
 pensive_curie_0	species	0.00	nan	150	0
-pensive_curie_0	species	nan	nan	3584480550	2717548500
 prickly_fermi_1	superkingdom	1.00	0.88	488410279	553468052
 prickly_fermi_1	superkingdom	1.00	0.91	5817037	6411802
 prickly_fermi_1	superkingdom	0.00	nan	811637	0
 prickly_fermi_1	superkingdom	1.00	0.05	36461	736775
-prickly_fermi_1	superkingdom	nan	nan	66954432	1413217
 prickly_fermi_1	phylum	0.99	0.92	226486227	243932505
 prickly_fermi_1	phylum	1.00	0.97	141055645	145948197
 prickly_fermi_1	phylum	0.99	0.77	89831576	116336594
@@ -38462,7 +38391,6 @@ prickly_fermi_1	phylum	0.00	nan	848	0
 prickly_fermi_1	phylum	0.00	nan	672	0
 prickly_fermi_1	phylum	0.00	nan	355	0
 prickly_fermi_1	phylum	0.00	nan	328	0
-prickly_fermi_1	phylum	nan	nan	69806584	2149992
 prickly_fermi_1	class	1.00	0.97	141055645	145948197
 prickly_fermi_1	class	1.00	0.89	113723659	127454801
 prickly_fermi_1	class	1.00	0.99	77878673	78627440
@@ -38495,7 +38423,6 @@ prickly_fermi_1	class	0.00	nan	848	0
 prickly_fermi_1	class	0.00	nan	672	0
 prickly_fermi_1	class	0.00	nan	387	0
 prickly_fermi_1	class	0.00	nan	328	0
-prickly_fermi_1	class	nan	nan	72767056	2149992
 prickly_fermi_1	order	1.00	0.98	140555054	143462610
 prickly_fermi_1	order	1.00	0.99	66236976	66564525
 prickly_fermi_1	order	1.00	0.69	48289108	69444702
@@ -38574,7 +38501,6 @@ prickly_fermi_1	order	0.00	nan	355	0
 prickly_fermi_1	order	0.00	nan	348	0
 prickly_fermi_1	order	0.00	nan	328	0
 prickly_fermi_1	order	0.00	nan	150	0
-prickly_fermi_1	order	nan	nan	75415892	2149992
 prickly_fermi_1	family	1.00	0.88	33299693	37691258
 prickly_fermi_1	family	1.00	0.98	32245985	32681267
 prickly_fermi_1	family	1.00	0.99	28563792	28873267
@@ -38735,7 +38661,6 @@ prickly_fermi_1	family	0.00	nan	348	0
 prickly_fermi_1	family	0.00	nan	328	0
 prickly_fermi_1	family	0.00	nan	150	0
 prickly_fermi_1	family	0.00	nan	150	0
-prickly_fermi_1	family	nan	nan	101910194	11854717
 prickly_fermi_1	genus	1.00	0.99	28451392	28873267
 prickly_fermi_1	genus	1.00	0.90	21085615	23337519
 prickly_fermi_1	genus	0.00	nan	20142788	0
@@ -39185,7 +39110,6 @@ prickly_fermi_1	genus	0.00	nan	150	0
 prickly_fermi_1	genus	0.00	nan	150	0
 prickly_fermi_1	genus	0.00	nan	150	0
 prickly_fermi_1	genus	0.00	nan	150	0
-prickly_fermi_1	genus	nan	nan	98712730	75507023
 prickly_fermi_1	species	0.00	nan	28432646	0
 prickly_fermi_1	species	0.54	1.00	19795447	10667666
 prickly_fermi_1	species	0.00	nan	18007234	0
@@ -40193,12 +40117,10 @@ prickly_fermi_1	species	0.00	nan	150	0
 prickly_fermi_1	species	0.00	nan	150	0
 prickly_fermi_1	species	0.00	nan	150	0
 prickly_fermi_1	species	0.00	nan	150	0
-prickly_fermi_1	species	nan	nan	118627229	185124110
 stoic_albattani_2	superkingdom	1.00	0.10	239958600	2391321450
 stoic_albattani_2	superkingdom	1.00	0.24	14625300	62193450
 stoic_albattani_2	superkingdom	0.98	0.01	89250	10938300
 stoic_albattani_2	superkingdom	0.00	nan	3750	0
-stoic_albattani_2	superkingdom	nan	nan	2229940200	20163900
 stoic_albattani_2	phylum	1.00	0.09	94415550	994339950
 stoic_albattani_2	phylum	1.00	0.15	69163650	451293600
 stoic_albattani_2	phylum	1.00	0.08	67305600	800164800
@@ -40217,7 +40139,6 @@ stoic_albattani_2	phylum	0.00	nan	150	0
 stoic_albattani_2	phylum	0.00	nan	150	0
 stoic_albattani_2	phylum	0.00	nan	150	0
 stoic_albattani_2	phylum	0.00	nan	150	0
-stoic_albattani_2	phylum	nan	nan	2230713900	31102200
 stoic_albattani_2	class	1.00	0.08	67305600	800164800
 stoic_albattani_2	class	1.00	0.15	63593100	411703800
 stoic_albattani_2	class	1.00	0.14	49493100	356654100
@@ -40245,7 +40166,6 @@ stoic_albattani_2	class	0.00	nan	150	0
 stoic_albattani_2	class	0.00	nan	150	0
 stoic_albattani_2	class	0.00	nan	150	0
 stoic_albattani_2	class	0.00	nan	150	0
-stoic_albattani_2	class	nan	nan	2230840650	31102200
 stoic_albattani_2	order	1.00	0.08	67278300	795433200
 stoic_albattani_2	order	1.00	0.21	57824550	279940200
 stoic_albattani_2	order	1.00	0.22	20820000	94540650
@@ -40304,7 +40224,6 @@ stoic_albattani_2	order	0.00	nan	150	0
 stoic_albattani_2	order	0.00	nan	150	0
 stoic_albattani_2	order	0.00	nan	150	0
 stoic_albattani_2	order	0.00	nan	150	0
-stoic_albattani_2	order	nan	nan	2231165250	31102200
 stoic_albattani_2	family	1.00	0.21	57812550	279940200
 stoic_albattani_2	family	1.00	0.14	51273450	371335650
 stoic_albattani_2	family	1.00	0.22	20819550	94540650
@@ -40459,7 +40378,6 @@ stoic_albattani_2	family	0.00	nan	150	0
 stoic_albattani_2	family	0.00	nan	150	0
 stoic_albattani_2	family	0.00	nan	150	0
 stoic_albattani_2	family	0.00	nan	150	0
-stoic_albattani_2	family	nan	nan	2233513200	39558600
 stoic_albattani_2	genus	1.00	0.21	55750650	266984550
 stoic_albattani_2	genus	1.00	0.15	51082950	341912850
 stoic_albattani_2	genus	1.00	0.23	17492250	75619050
@@ -41029,7 +40947,6 @@ stoic_albattani_2	genus	0.00	nan	150	0
 stoic_albattani_2	genus	0.00	nan	150	0
 stoic_albattani_2	genus	0.00	nan	150	0
 stoic_albattani_2	genus	0.00	nan	150	0
-stoic_albattani_2	genus	nan	nan	2238297750	185190300
 stoic_albattani_2	species	1.00	0.21	55750650	266984550
 stoic_albattani_2	species	0.00	nan	40467450	0
 stoic_albattani_2	species	1.00	0.23	17389350	75619050
@@ -42765,4 +42682,3 @@ stoic_albattani_2	species	0.00	nan	150	0
 stoic_albattani_2	species	0.00	nan	150	0
 stoic_albattani_2	species	0.00	nan	150	0
 stoic_albattani_2	species	0.00	nan	150	0
-stoic_albattani_2	species	nan	nan	2264917800	904917450
