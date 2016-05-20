@@ -13,7 +13,7 @@ library("grid")
 
 # directories
 
-repo.dir <- "/biodata/dep_psl/grp_psl/garridoo/cami/firstchallenge_evaluation/"
+repo.dir <- "C:/local_data/virtualbox_shared/Docs/CAMI/GitCAMI/firstchallenge_evaluation/"
 results.dir <- paste(repo.dir, "/binning/data/superviced/ALL/by_bin/", sep="")
 figures.dir <- paste(repo.dir, "/binning/plots/superviced/", sep="")
 
@@ -44,18 +44,20 @@ ref_data_combined <- within(ref_data_combined,
                                                  ref_data_combined$group,
                                                  sep='_'))
 
-threshold <- 0.01
+threshold <- 0.10
 q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
 q[, 2] <- q[, 2]*threshold
 for (i in 1:nrow(q)) {
     idx <- ref_data_combined$binner_rank==q[i, 1]
     s <- rev(ref_data_combined[idx, ]$predicted_size)
     cs <- cumsum(s)
-    q[i, 2] <- s[min(which(cs>q[i, 2]))]
-}
+    q[i, 2] <- s[min(which(cs>q[i, 2]))] 
+
+} 
 
 idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[5]) > q[q[, 1]==x[8], 2])
 ref_data_combined <- ref_data_combined[idx, ]
+
 
 ### plotting
 
@@ -122,7 +124,9 @@ title <- "precision / recall per rank"
 
 df <- ref_data_combined
 df <- df[df$rank!="superkingdom", ]
-# df$binner=gsub("_[0-9]*$", "", df$binner)
+#df <- df[df$rank!="genus", ]
+#df <- df[df$rank!="species", ]
+ df$binner=gsub("_[0-9]*$", "", df$binner) # plot for single versus multiple binners
 df$group_rank <- apply(df, 1, function(x) paste(x[1], x[2]))
  
 means <- aggregate(df, by=list(df$group_rank), FUN=mean, na.rm=T)
