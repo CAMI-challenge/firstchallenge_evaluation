@@ -10,6 +10,7 @@ library(scales)
 
 argv <- commandArgs(TRUE)
 
+
 #root_path <-  "YOURPATH/firstchallenge_evaluation/binning/data/superviced/ALL/truncated_macro_precision/" 
 #output_file <- "PerformanceMeasures" #
 #output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
