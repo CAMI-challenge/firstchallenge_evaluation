@@ -100,20 +100,7 @@ create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   }
   
   
-  # precision averaged over predicted bins, recall averaged over true bins
-  title_main <- "Precision, Recall, Accuracy & Misclassification rate"
-  
-  
-  # The palette with grey:
-  cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-  # The palette with black:
-  cbbPalette <- c("#000000", "#F0E442", "#E69F00", "#56B4E9", "#009E73", "#0072B2", "#D55E00", "#CC79A7")
-  my_colours <- rev(cbbPalette)
-  my_shapes <- c(20, 18)
-  my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
-  
 
-  
   # this does not work under windows, replaced by ggsave
   #pdf(output_file, paper="a4r", width=297, height=210)
   
@@ -221,6 +208,20 @@ get_names <- function(file_paths)
 draw_plot <- function(data, title)
 {
   
+  # precision averaged over predicted bins, recall averaged over true bins, precision in this dir is truncated precision (1% of smallest predicted bins removed)
+  title_main <- ""
+  
+  
+  # The palette with grey:
+  cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+  # The palette with black:
+  cbbPalette <- c("#000000", "#F0E442", "#E69F00", "#56B4E9", "#009E73", "#0072B2", "#D55E00", "#CC79A7")
+  my_colours <- rev(cbbPalette)
+  my_shapes <- c(20, 18)
+  my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
+  
+  
+  
   ggplot() +
     geom_ribbon(
       data=subset(data, metric=="precision" | metric=="recall"),
@@ -241,20 +242,20 @@ draw_plot <- function(data, title)
     scale_fill_manual(
       values=my_colours,  
       breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
-      labels=c("Accuracy", "Misclassification", "Precision", "Recall")) +
+      labels=c("Accuracy", "Misclassification", "Av. Precision (99%)", "Av. Recall"))+ #c("Accuracy", "Misclassification", "Precision", "Recall")) +
     scale_colour_manual(
       values=my_colours,  
       breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
-      labels=c("Accuracy", "Misclassification", "Precision", "Recall")) +
+      labels=c("Accuracy", "Misclassification", "Av. Precision (99%)", "Av. Recall")) +#c("Accuracy", "Misclassification", "Precision", "Recall")) +
     scale_linetype_manual(
       values=c("solid", "dashed", "dotted", "dotdash"),
       breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
-      labels=c("Accuracy", "Misclassification", "Precision", "Recall")) +
+      labels=c("Accuracy", "Misclassification", "Av. Precision (99%)", "Av. Recall")) +
     labs(title=title_main, fill="Metric", linetype="Metric", colour="Metric", x=NULL, y=NULL) +
     #ggtitle(paste(title, title_main, sep='\n')) +
     #facet_grid(~ tools) +
     facet_wrap(~ tools, as.table = FALSE) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) # , vjust = 0.5
+    theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.background = element_rect(fill = "light blue")) # , vjust  0.5
   
   
 }
