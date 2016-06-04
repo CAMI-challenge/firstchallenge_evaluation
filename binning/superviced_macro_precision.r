@@ -4,20 +4,6 @@ library(ggplot2)
 #require(gridExtra)
 library(scales)
 
-
-
-#######################################
-
-argv <- commandArgs(TRUE)
-
-
-#root_path <-  "YOURPATH/firstchallenge_evaluation/binning/data/superviced/ALL/truncated_macro_precision/" 
-#output_file <- "PerformanceMeasures" #
-#output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
-
-create_plots(argv[1], argv[2], argv[3])
-
-
 create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   if(is.na(root_path)) {root_path<- argv[1]}
   if(is.na(output_file)) {output_file<- argv[2]}
@@ -35,10 +21,6 @@ create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
       list.files(path=paste(root_path, "high/", sep="")), sep="")
   )
   
-  ##
-  
-  
-  #######################################
   
   dir_low <- paste(root_path, "low/", sep="")
   dir_medium <- paste(root_path, "medium/", sep="")
@@ -72,33 +54,7 @@ create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   ##
   #############
   
-  add_percent <- function(x, ...)
-  {
-    sprintf("%.0f%%", x)
-  }
-  
-  lable_handle <- function(x, ...)
-  {
-    display <- c()
-    for(value in x)
-    {
-      if (is.na(value))
-      {
-        display <- append(display, "")
-        next
-      }
-      if ((0 <= value) && (value <= 1))
-      {
-        display <- append(display, sprintf("%.2f", value))
-      }
-      else
-      {
-        display <- append(display, "")
-      }
-    }
-    display
-  }
-  
+
   
 
   # this does not work under windows, replaced by ggsave
@@ -131,6 +87,34 @@ create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   
   
   
+}
+
+
+add_percent <- function(x, ...)
+{
+  sprintf("%.0f%%", x)
+}
+
+lable_handle <- function(x, ...)
+{
+  display <- c()
+  for(value in x)
+  {
+    if (is.na(value))
+    {
+      display <- append(display, "")
+      next
+    }
+    if ((0 <= value) && (value <= 1))
+    {
+      display <- append(display, sprintf("%.2f", value))
+    }
+    else
+    {
+      display <- append(display, "")
+    }
+  }
+  display
 }
 
 
@@ -259,3 +243,14 @@ draw_plot <- function(data, title)
   
   
 }
+
+#######################################
+
+argv <- commandArgs(TRUE)
+
+
+#root_path <-  "YOURPATH/firstchallenge_evaluation/binning/data/superviced/ALL/truncated_macro_precision/" 
+#output_file <- "PerformanceMeasures" #
+#output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
+
+create_plots(argv[1], argv[2], argv[3])
