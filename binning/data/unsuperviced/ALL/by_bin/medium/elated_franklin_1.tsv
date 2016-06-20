@@ -1,0 +1,237 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.90	495513747	553468052
+superkingdom	Archaea	1.00	0.98	6288403	6411802
+superkingdom	unassigned	nan	nan	60227696	1413217
+phylum	Proteobacteria	1.00	0.87	211979104	243932505
+phylum	Actinobacteria	1.00	0.92	134713849	145948197
+phylum	Firmicutes	1.00	0.90	105071710	116336594
+phylum	Bacteroidetes	1.00	0.92	42151160	45650742
+phylum	Euryarchaeota	1.00	0.98	6288403	6411802
+phylum	Tenericutes	1.00	1.00	1597924	1600014
+phylum	unassigned	nan	nan	60227696	2149992
+class	Actinobacteria	1.00	0.92	134713849	145948197
+class	Alphaproteobacteria	1.00	0.81	103622873	127454801
+class	Clostridia	1.00	0.93	74079586	79844812
+class	Betaproteobacteria	1.00	0.94	73642779	78627440
+class	Gammaproteobacteria	1.00	0.98	27080639	27773710
+class	Bacilli	0.99	0.83	26888545	32340827
+class	Sphingobacteriia	0.99	0.97	18622639	19013960
+class	Cytophagia	1.00	0.86	12395983	14411538
+class	Flavobacteriia	1.00	0.97	9133927	9442158
+class	Deltaproteobacteria	1.00	0.76	7632813	10076554
+class	Halobacteria	1.00	0.97	4754287	4877686
+class	Negativicutes	1.00	0.99	4103579	4150955
+class	Bacteroidia	1.00	0.72	1998611	2783086
+class	Mollicutes	1.00	1.00	1597924	1600014
+class	Thermoplasmata	1.00	1.00	1534116	1534116
+class	unassigned	nan	nan	60227696	2149992
+order	Actinomycetales	1.00	0.92	132368818	143462610
+order	Clostridiales	0.99	0.94	65663699	69444702
+order	Burkholderiales	1.00	0.97	64421846	66564525
+order	Rhizobiales	0.99	0.73	39813564	54087866
+order	Bacillales	0.99	0.81	24464866	29943979
+order	Rhodobacterales	0.99	0.95	23515340	24573518
+order	Rhodospirillales	1.00	0.99	21963611	22154048
+order	Sphingobacteriales	0.99	0.97	18622639	19013960
+order	Sphingomonadales	1.00	0.64	15043893	23337519
+order	Cytophagales	1.00	0.86	12395983	14411538
+order	Flavobacteriales	1.00	0.97	9133927	9442158
+order	Thermoanaerobacterales	1.00	0.81	8415887	10400110
+order	Vibrionales	1.00	0.99	8183303	8287247
+order	Desulfovibrionales	1.00	0.76	7632813	10076554
+order	Methylophilales	1.00	0.74	6578485	8904107
+order	Pseudomonadales	1.00	0.97	5306355	5477884
+order	Enterobacteriales	1.00	0.94	5109220	5419845
+order	Alteromonadales	1.00	0.99	4909536	4980999
+order	Halobacteriales	1.00	0.97	4754287	4877686
+order	Selenomonadales	1.00	0.99	4103579	4150955
+order	Legionellales	1.00	0.99	3572225	3607735
+order	Caulobacterales	1.00	1.00	3286465	3301850
+order	Nitrosomonadales	1.00	0.97	2642448	2734309
+order	Lactobacillales	0.98	0.99	2423679	2396848
+order	Acidimicrobiales	1.00	0.94	2345031	2485587
+order	Bacteroidales	1.00	0.72	1998611	2783086
+order	Acholeplasmatales	1.00	1.00	1597924	1600014
+order	Thermoplasmatales	1.00	1.00	1534116	1534116
+order	unassigned	nan	nan	60227696	2149992
+family	Pseudonocardiaceae	0.81	0.97	39280875	32681267
+family	Comamonadaceae	1.00	0.99	37332633	37691258
+family	Oxalobacteraceae	1.00	0.94	27089213	28873267
+family	Rhodobacteraceae	0.99	0.95	23515340	24573518
+family	Rhodospirillaceae	1.00	0.99	21963611	22154048
+family	Cellulomonadaceae	1.00	0.66	20649396	31237913
+family	Sphingobacteriaceae	0.99	0.97	18622639	19013960
+family	Clostridiaceae	0.84	0.81	18221727	18916804
+family	Sphingomonadaceae	1.00	0.64	15043893	23337519
+family	Clostridiales Family XIX. Incertae Sedis	0.99	0.95	14517545	15210881
+family	Clostridiales Family XVI. Incertae Sedis	1.00	0.95	14166337	14888857
+family	Rhizobiaceae	0.98	0.70	13154520	18598125
+family	Nocardiaceae	1.00	0.99	12915886	13003876
+family	Cytophagaceae	1.00	0.86	12395983	14411538
+family	Intrasporangiaceae	1.00	0.98	12189477	12422925
+family	Promicromonosporaceae	0.58	1.00	11245113	6599454
+family	Streptomycetaceae	1.00	0.57	10526254	18428033
+family	Xanthobacteraceae	0.99	0.99	10229419	10190100
+family	Flavobacteriaceae	1.00	0.97	9133927	9442158
+family	Thermoanaerobacteraceae	1.00	0.81	8415887	10400110
+family	Phyllobacteriaceae	0.91	0.86	8205631	8674992
+family	Vibrionaceae	1.00	0.99	8183303	8287247
+family	Lachnospiraceae	1.00	0.99	8114792	8225026
+family	Peptostreptococcaceae	0.69	0.71	7865006	7719747
+family	Desulfovibrionaceae	1.00	0.76	7632813	10076554
+family	Microbacteriaceae	1.00	0.98	7627791	7792846
+family	Planococcaceae	0.99	0.98	7215829	7245311
+family	Nocardioidaceae	1.00	0.67	7023778	10494171
+family	Mycobacteriaceae	1.00	1.00	6660563	6676999
+family	Methylophilaceae	1.00	0.74	6578485	8904107
+family	Pseudomonadaceae	1.00	0.97	5306355	5477884
+family	Enterobacteriaceae	1.00	0.94	5109220	5419845
+family	Ferrimonadaceae	1.00	0.99	4909536	4980999
+family	Paenibacillaceae	0.99	0.65	4879370	7400375
+family	Halobacteriaceae	1.00	0.97	4754287	4877686
+family	Bradyrhizobiaceae	1.00	0.48	4291988	8874968
+family	Propionibacteriaceae	0.96	0.98	4249685	4125126
+family	Veillonellaceae	1.00	0.99	4103579	4150955
+family	Aurantimonadaceae	1.00	0.51	3932006	7749681
+family	Legionellaceae	1.00	0.99	3572225	3607735
+family	Caulobacteraceae	1.00	1.00	3286465	3301850
+family	Bacillaceae	1.00	0.98	2889496	2948556
+family	Nitrosomonadaceae	1.00	0.97	2642448	2734309
+family	Peptococcaceae	1.00	0.94	2465743	2625413
+family	Enterococcaceae	0.98	0.99	2423679	2396848
+family	Acidimicrobiaceae	1.00	0.94	2345031	2485587
+family	Porphyromonadaceae	1.00	0.98	1998611	2044131
+family	Acholeplasmataceae	1.00	1.00	1597924	1600014
+family	Picrophilaceae	1.00	1.00	1534116	1534116
+family	Eubacteriaceae	0.58	0.10	312549	1857974
+family	unassigned	nan	nan	69707867	11854717
+genus	Massilia	1.00	0.94	27089213	28873267
+genus	Lechevalieria	0.72	0.96	26985727	20408997
+genus	Sphingomonas	1.00	0.64	15043893	23337519
+genus	Phaeospirillum	1.00	0.99	14846143	15012162
+genus	Acetoanaerobium	0.99	0.95	14517545	15210881
+genus	Carboxydocella	1.00	0.95	14166337	14888857
+genus	Sinorhizobium	0.98	0.94	13154520	13774939
+genus	Ohtaekwangia	1.00	0.86	12395983	14411538
+genus	Kibdelosporangium	1.00	1.00	12295148	12272270
+genus	Cellulomonas	1.00	0.53	11678932	22124132
+genus	Promicromonospora	0.58	1.00	11245113	6599454
+genus	Pedobacter	1.00	1.00	9518128	9532570
+genus	Clostridium	0.76	0.99	9473754	7261293
+genus	Paracoccus	0.98	0.95	9352372	9589943
+genus	Sphingobacterium	0.99	0.95	9104511	9481390
+genus	Oerskovia	1.00	0.98	8970464	9113781
+genus	Phycicoccus	1.00	0.97	8564458	8785183
+genus	Aquamicrobium	0.91	0.86	8205631	8674992
+genus	Vibrio	1.00	0.99	8183303	8287247
+genus	Butyrivibrio	1.00	0.99	8114792	8225026
+genus	Desulfovibrio	1.00	0.76	7632813	10076554
+genus	Rhodobacter	1.00	0.99	7466266	7530868
+genus	Nocardia	1.00	1.00	7275315	7282241
+genus	Sporosarcina	0.99	0.98	7215829	7245311
+genus	Azospirillum	1.00	1.00	7117468	7141886
+genus	Aeromicrobium	1.00	0.67	7023778	10494171
+genus	Rhodobaca	0.55	0.96	6696702	3845886
+genus	Mycobacterium	1.00	1.00	6660563	6676999
+genus	Methylophilus	1.00	0.74	6578485	8904107
+genus	Rhodococcus	1.00	0.99	5640571	5721635
+genus	Intestinibacter	0.55	0.99	5320868	2937124
+genus	Azotobacter	1.00	0.97	5306355	5477884
+genus	Pseudoxanthobacter	0.97	0.99	5227709	5163876
+genus	Rahnella	1.00	0.94	5109220	5419845
+genus	Moorella	1.00	0.98	5015174	5136963
+genus	Xanthobacter	1.00	1.00	5001710	5026224
+genus	Ferrimonas	1.00	0.99	4909536	4980999
+genus	Paenibacillus	0.99	0.65	4879370	7400375
+genus	Halobacterium	1.00	0.97	4754287	4877686
+genus	Bosea	1.00	0.48	4291988	8874968
+genus	Tessaracoccus	0.96	0.98	4249685	4125126
+genus	Propionispora	1.00	0.99	4103579	4150955
+genus	Diaphorobacter	1.00	0.97	3963217	4083860
+genus	Curtobacterium	1.00	0.96	3770686	3925652
+genus	Janibacter	1.00	1.00	3625019	3637742
+genus	Tatlockia	1.00	0.99	3572225	3607735
+genus	Thermoanaerobacter	0.99	0.64	3400713	5263147
+genus	Phenylobacterium	1.00	1.00	3286465	3301850
+genus	Butyricicoccus	1.00	0.99	3225188	3268385
+genus	Chryseobacterium	1.00	0.94	3146671	3329601
+genus	Formosa	1.00	0.98	3094163	3154949
+genus	Lutispora	0.78	0.67	2968532	3459146
+genus	Olleya	1.00	0.98	2893093	2957608
+genus	Bacillus	1.00	0.98	2889496	2948556
+genus	Nitrosomonas	1.00	0.97	2642448	2734309
+genus	Caloranaerobacter	0.95	0.99	2554253	2455797
+genus	Peptoclostridium	1.00	1.00	2544138	2550032
+genus	Desulfotomaculum	1.00	0.94	2465743	2625413
+genus	Tetragenococcus	0.98	0.99	2423679	2396848
+genus	Ferrithrix	1.00	0.94	2345031	2485587
+genus	Porphyromonas	1.00	0.98	1998611	2044131
+genus	Acholeplasma	1.00	1.00	1597924	1600014
+genus	Picrophilus	1.00	1.00	1534116	1534116
+genus	Garciella	0.58	0.10	312549	1857974
+genus	unassigned	nan	nan	121392648	75507023
+species	uncultured Massilia sp.	1.00	0.94	27089213	28873267
+species	Lechevalieria aerocolonigenes	0.58	0.92	17033272	10667666
+species	Phaeospirillum fulvum	1.00	0.99	14846143	15012162
+species	Acetoanaerobium noterae	0.99	0.95	14517545	15210881
+species	Carboxydocella sporoproducens	1.00	0.95	14166337	14888857
+species	Sinorhizobium meliloti	0.98	0.94	13154520	13774939
+species	Kibdelosporangium aridum	1.00	1.00	12295148	12272270
+species	Ohtaekwangia koreensis	0.63	0.99	11402066	7222220
+species	Promicromonospora umidemergens	0.58	1.00	11245113	6599454
+species	Lechevalieria flava	0.98	1.00	9952455	9741331
+species	Paracoccus pantotrophus	0.98	0.95	9352372	9589943
+species	Rhodobacter capsulatus	1.00	0.99	7466266	7530868
+species	Sporosarcina newyorkensis	0.99	0.98	7215829	7245311
+species	Azospirillum brasilense	1.00	1.00	7117468	7141886
+species	Aeromicrobium ponti	1.00	0.67	7023778	10494171
+species	Rhodobaca barguzinensis	0.55	0.96	6696702	3845886
+species	Intestinibacter bartlettii	0.55	0.99	5320868	2937124
+species	Azotobacter vinelandii	1.00	0.97	5306355	5477884
+species	Pseudoxanthobacter soli	0.97	0.99	5227709	5163876
+species	Rahnella aquatilis	1.00	0.94	5109220	5419845
+species	Moorella thermoacetica	1.00	0.98	5015174	5136963
+species	Xanthobacter autotrophicus	1.00	1.00	5001710	5026224
+species	Clostridium tetani	0.55	0.99	4982940	2788202
+species	Ferrimonas marina	1.00	0.99	4909536	4980999
+species	Paenibacillus frigoriresistens	0.99	0.65	4879370	7400375
+species	Butyrivibrio fibrisolvens	1.00	0.99	4786226	4834992
+species	Pedobacter agri	1.00	1.00	4771532	4779416
+species	Halobacterium salinarum	1.00	0.97	4754287	4877686
+species	Sphingobacterium nematocida	0.98	0.91	4631131	4981289
+species	Vibrio gazogenes	1.00	0.99	4583323	4627085
+species	Clostridium grantii	0.99	0.99	4490814	4473091
+species	Sphingobacterium psychroaquaticum	1.00	0.99	4473380	4500101
+species	Tessaracoccus bendigoensis	0.96	0.98	4249685	4125126
+species	Propionispora hippei	1.00	0.99	4103579	4150955
+species	Diaphorobacter oryzae	1.00	0.97	3963217	4083860
+species	Curtobacterium sp. B20	1.00	0.96	3770686	3925652
+species	Sphingomonas phyllosphaerae	1.00	1.00	3725169	3733085
+species	Janibacter limosus	1.00	1.00	3625019	3637742
+species	Vibrio cincinnatiensis	1.00	0.98	3599980	3660162
+species	Legionella maceachernii	1.00	0.99	3572225	3607735
+species	Thermoanaerobacter thermohydrosulfuricus	0.99	0.64	3400713	5263147
+species	Butyrivibrio hungatei	1.00	0.98	3328566	3390034
+species	Phenylobacterium composti	1.00	1.00	3286465	3301850
+species	Butyricicoccus pullicaecorum	1.00	0.99	3225188	3268385
+species	Desulfovibrio bizertensis	1.00	0.97	3170961	3257376
+species	Formosa spongicola	1.00	0.98	3094163	3154949
+species	Desulfovibrio alkalitolerans	1.00	0.98	3045180	3111934
+species	Lutispora thermophila	0.78	0.67	2968532	3459146
+species	Sphingomonas aestuarii	1.00	0.97	2893307	2985887
+species	Olleya aquimaris	1.00	0.98	2893093	2957608
+species	Bacillus coagulans	1.00	0.98	2889496	2948556
+species	Nitrosomonas europaea	1.00	0.97	2642448	2734309
+species	Caloranaerobacter azorensis	0.95	0.99	2554253	2455797
+species	[Eubacterium] yurii	1.00	1.00	2544138	2550032
+species	Desulfotomaculum hydrothermale	1.00	0.94	2465743	2625413
+species	Tetragenococcus halophilus	0.98	0.99	2423679	2396848
+species	Ferrithrix thermotolerans	1.00	0.94	2345031	2485587
+species	Porphyromonas crevioricanis	1.00	0.98	1998611	2044131
+species	Acholeplasma oculi	1.00	1.00	1597924	1600014
+species	Picrophilus oshimae	1.00	1.00	1534116	1534116
+species	Desulfovibrio vietnamensis	1.00	0.38	1416672	3707244
+species	Ohtaekwangia kribbensis	1.00	0.14	993917	7189318
+species	Garciella nitratireducens	0.58	0.10	312549	1857974
+species	Cellulomonas terrae	1.00	0.06	267801	4652222
+species	unassigned	nan	nan	205309938	185124110
