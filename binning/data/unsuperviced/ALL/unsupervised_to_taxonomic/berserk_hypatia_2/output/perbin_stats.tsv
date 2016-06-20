@@ -1,0 +1,99 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.98	151500173	154946832
+superkingdom	unassigned	nan	nan	3952153	324124
+phylum	Proteobacteria	1.00	0.97	63340253	65522942
+phylum	Bacteroidetes	1.00	0.97	31908308	32778490
+phylum	Firmicutes	0.99	0.97	31531763	32153772
+phylum	Tenericutes	0.92	0.95	9471278	9165261
+phylum	Actinobacteria	1.00	0.99	7994258	8047258
+phylum	Chloroflexi	1.00	1.00	7254313	7279109
+phylum	unassigned	nan	nan	3952153	505494
+class	Sphingobacteriia	1.00	0.98	28519828	29144897
+class	Betaproteobacteria	0.98	0.96	21765704	22078814
+class	Alphaproteobacteria	1.00	0.96	21591319	22376676
+class	Bacilli	1.00	1.00	15730614	15750864
+class	Gammaproteobacteria	0.97	0.91	13788480	14603716
+class	Clostridia	0.97	0.93	13205566	13746445
+class	Mollicutes	0.92	0.95	9471278	9165261
+class	Actinobacteria	1.00	0.99	7994258	8047258
+class	Ktedonobacteria	1.00	1.00	7254313	7279109
+class	Deltaproteobacteria	1.00	0.96	6194750	6463736
+class	Flavobacteriia	0.95	0.89	3388480	3633593
+class	Negativicutes	1.00	0.98	2595583	2656463
+class	unassigned	nan	nan	3952153	505494
+order	Sphingobacteriales	1.00	0.98	28519828	29144897
+order	Rhodobacterales	1.00	0.96	21591319	22376676
+order	Burkholderiales	0.97	0.96	17326036	17463877
+order	Bacillales	1.00	1.00	15730614	15750864
+order	Clostridiales	0.97	0.93	13205566	13746445
+order	Anaeroplasmatales	0.92	0.95	9471278	9165261
+order	Actinomycetales	1.00	0.99	7994258	8047258
+order	Xanthomonadales	0.94	0.85	7542141	8325994
+order	Ktedonobacterales	1.00	1.00	7254313	7279109
+order	Pseudomonadales	1.00	1.00	6246339	6277722
+order	Desulfobacterales	1.00	0.96	6194750	6463736
+order	Neisseriales	1.00	0.96	4439668	4614937
+order	Flavobacteriales	0.95	0.89	3388480	3633593
+order	Selenomonadales	1.00	0.98	2595583	2656463
+order	unassigned	nan	nan	3952153	505494
+family	Chitinophagaceae	1.00	0.98	28519828	29144897
+family	Rhodobacteraceae	1.00	0.96	21591319	22376676
+family	Oxalobacteraceae	0.97	0.95	13917591	14294209
+family	Anaeroplasmataceae	0.92	0.95	9471278	9165261
+family	Clostridiaceae	0.94	0.90	8736441	9103183
+family	Xanthomonadaceae	0.94	0.85	7542141	8325994
+family	Thermosporotrichaceae	1.00	1.00	7254313	7279109
+family	Pseudomonadaceae	1.00	1.00	6246339	6277722
+family	Desulfobacteraceae	1.00	0.96	6194750	6463736
+family	Chromobacteriaceae	1.00	0.96	4439668	4614937
+family	Intrasporangiaceae	1.00	0.98	3427725	3480725
+family	Comamonadaceae	0.92	0.99	3408445	3169668
+family	Flavobacteriaceae	0.95	0.89	3388480	3633593
+family	Veillonellaceae	1.00	0.98	2595583	2656463
+family	Peptostreptococcaceae	1.00	0.95	2502107	2630685
+family	Proteinivoraceae	0.99	0.96	1967018	2012577
+family	unassigned	nan	nan	24249300	20822891
+genus	Hydrotalea	1.00	0.98	19190663	19572379
+genus	Paracoccus	1.00	0.96	14517342	15144554
+genus	Janthinobacterium	0.97	0.95	13917591	14294209
+genus	Anaeroplasma	0.92	0.95	9471278	9165261
+genus	Flavisolibacter	1.00	0.97	9329165	9572518
+genus	Thermosporothrix	1.00	1.00	7254313	7279109
+genus	Pseudomonas	1.00	1.00	6246339	6277722
+genus	Desulfatibacillum	1.00	0.96	6194750	6463736
+genus	Lysobacter	0.63	1.00	5177517	3288233
+genus	Anaerosporobacter	0.90	0.90	5130371	5098574
+genus	Andreprevotia	1.00	0.96	4439668	4614937
+genus	Defluviimonas	1.00	0.99	4062239	4107833
+genus	Clostridium	0.94	0.84	3606070	4004609
+genus	Tetrasphaera	1.00	0.98	3427725	3480725
+genus	Lampropedia	0.92	0.99	3408445	3169668
+genus	Nonlabens	0.95	0.89	3388480	3633593
+genus	Albidovulum	1.00	0.96	3011738	3124289
+genus	Schwartzia	1.00	0.98	2595583	2656463
+genus	Tepidibacter	1.00	0.95	2502107	2630685
+genus	Xylella	0.97	0.94	2364624	2423571
+genus	Anaerobranca	0.99	0.96	1967018	2012577
+genus	unassigned	nan	nan	24249300	20822891
+species	Hydrotalea sandarakina	1.00	0.98	19190663	19572379
+species	Paracoccus denitrificans	1.00	0.96	14517342	15144554
+species	Anaeroplasma bactoclasticum	0.92	0.95	9471278	9165261
+species	Thermosporothrix hazakensis	1.00	1.00	7254313	7279109
+species	Pseudomonas aeruginosa	1.00	1.00	6246339	6277722
+species	Desulfatibacillum alkenivorans	1.00	0.96	6194750	6463736
+species	Lysobacter oryzae	0.63	1.00	5177517	3288233
+species	Anaerosporobacter mobilis	0.90	0.90	5130371	5098574
+species	Flavisolibacter ginsengiterrae	1.00	0.97	4770551	4897781
+species	Flavisolibacter ginsengisoli	1.00	0.97	4558614	4674737
+species	Andreprevotia lacus	1.00	0.96	4439668	4614937
+species	Defluviimonas denitrificans	1.00	0.99	4062239	4107833
+species	Clostridium caminithermale	0.94	0.84	3606070	4004609
+species	Tetrasphaera duodecadis	1.00	0.98	3427725	3480725
+species	Lampropedia hyalina	0.92	0.99	3408445	3169668
+species	Nonlabens dokdonensis	0.95	0.89	3388480	3633593
+species	Albidovulum xiamenense	1.00	0.96	3011738	3124289
+species	Schwartzia succinivorans	1.00	0.98	2595583	2656463
+species	Tepidibacter formicigenes	1.00	0.95	2502107	2630685
+species	Xylella fastidiosa	0.97	0.94	2364624	2423571
+species	Anaerobranca californiensis	0.99	0.96	1967018	2012577
+species	unassigned	nan	nan	38166891	37407166
