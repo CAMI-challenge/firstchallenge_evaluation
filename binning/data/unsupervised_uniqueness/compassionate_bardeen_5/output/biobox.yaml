@@ -1,0 +1,81 @@
+---
+version: 0.10.0
+results:
+  - name: (circular element) entropy, rand index, adjusted rand index
+    category: circular element
+    description: >
+        Entropy, Rand index and adjusted Rand index for each level that was evaluated.
+        The entropy is in the range [0,1] and measures how heterogenous the bins are. Its best (minimum) value is 0. [doi://10.1093/bioinformatics/btm134]
+        The Rand index (range [0,1]) and its normalized version, the adjusted Rand index (range [-inf,1]), are accuracy measures. Their best (maximum) value is 1. [doi://10.1038/nmeth.3103]
+        Excluding not predicted.
+    type: tsv
+    inline: false
+    value: 0_unsupervised_precision_stats.tsv
+  - name: (circular element) entropy, rand index, adjusted rand index
+    category: circular element
+    description: >
+        Entropy, Rand index and adjusted Rand index for each level that was evaluated.
+        The entropy is in the range [0,1] and measures how heterogenous the bins are. Its best (minimum) value is 0. [doi://10.1093/bioinformatics/btm134]
+        The Rand index (range [0,1]) and its normalized version, the adjusted Rand index (range [-inf,1]), are accuracy measures. Their best (maximum) value is 1. [doi://10.1038/nmeth.3103]
+        Including not predicted.
+    type: tsv
+    inline: false
+    value: 0_unsupervised_recall_stats.tsv
+  - name: (circular element) confusion matrix heatmap
+    category: circular element
+    description: Binning confusion matrix as heatmap with intensities scaled by the number of bp. Real genomes are on the y axis and predicted bins on the x axis. Unknown provenance or unbinned sequences are indicated in grey.
+    type: svg
+    inline: false
+    value: 0_cmat_heatmap_binning.svg
+  - name: (common strain) entropy, rand index, adjusted rand index
+    category: common strain
+    description: >
+        Entropy, Rand index and adjusted Rand index for each level that was evaluated.
+        The entropy is in the range [0,1] and measures how heterogenous the bins are. Its best (minimum) value is 0. [doi://10.1093/bioinformatics/btm134]
+        The Rand index (range [0,1]) and its normalized version, the adjusted Rand index (range [-inf,1]), are accuracy measures. Their best (maximum) value is 1. [doi://10.1038/nmeth.3103]
+        Excluding not predicted.
+    type: tsv
+    inline: false
+    value: 1_unsupervised_precision_stats.tsv
+  - name: (common strain) entropy, rand index, adjusted rand index
+    category: common strain
+    description: >
+        Entropy, Rand index and adjusted Rand index for each level that was evaluated.
+        The entropy is in the range [0,1] and measures how heterogenous the bins are. Its best (minimum) value is 0. [doi://10.1093/bioinformatics/btm134]
+        The Rand index (range [0,1]) and its normalized version, the adjusted Rand index (range [-inf,1]), are accuracy measures. Their best (maximum) value is 1. [doi://10.1038/nmeth.3103]
+        Including not predicted.
+    type: tsv
+    inline: false
+    value: 1_unsupervised_recall_stats.tsv
+  - name: (common strain) confusion matrix heatmap
+    category: common strain
+    description: Binning confusion matrix as heatmap with intensities scaled by the number of bp. Real genomes are on the y axis and predicted bins on the x axis. Unknown provenance or unbinned sequences are indicated in grey.
+    type: svg
+    inline: false
+    value: 1_cmat_heatmap_binning.svg
+  - name: (unique strain) entropy, rand index, adjusted rand index
+    category: unique strain
+    description: >
+        Entropy, Rand index and adjusted Rand index for each level that was evaluated.
+        The entropy is in the range [0,1] and measures how heterogenous the bins are. Its best (minimum) value is 0. [doi://10.1093/bioinformatics/btm134]
+        The Rand index (range [0,1]) and its normalized version, the adjusted Rand index (range [-inf,1]), are accuracy measures. Their best (maximum) value is 1. [doi://10.1038/nmeth.3103]
+        Excluding not predicted.
+    type: tsv
+    inline: false
+    value: 2_unsupervised_precision_stats.tsv
+  - name: (unique strain) entropy, rand index, adjusted rand index
+    category: unique strain
+    description: >
+        Entropy, Rand index and adjusted Rand index for each level that was evaluated.
+        The entropy is in the range [0,1] and measures how heterogenous the bins are. Its best (minimum) value is 0. [doi://10.1093/bioinformatics/btm134]
+        The Rand index (range [0,1]) and its normalized version, the adjusted Rand index (range [-inf,1]), are accuracy measures. Their best (maximum) value is 1. [doi://10.1038/nmeth.3103]
+        Including not predicted.
+    type: tsv
+    inline: false
+    value: 2_unsupervised_recall_stats.tsv
+  - name: (unique strain) confusion matrix heatmap
+    category: unique strain
+    description: Binning confusion matrix as heatmap with intensities scaled by the number of bp. Real genomes are on the y axis and predicted bins on the x axis. Unknown provenance or unbinned sequences are indicated in grey.
+    type: svg
+    inline: false
+    value: 2_cmat_heatmap_binning.svg
