@@ -13,16 +13,18 @@ library("grid")
 
 # options
 
-bin_type <- "unsuperviced"
+bin_type <- "superviced"
 filter_tail <- F
 best_only <- T
 all_ranks_combined <- F
-level <- "by_genome"
+level <- "by_genome"            # by_genome / by_bin
+ANI <- "common strain"          # all / unique strain / common strain
 
 # directories
 
 repo.dir <- dirname(sys.frame(1)$ofile)
 
+metadata.dir <- paste(repo.dir, "/../metadata/", sep="")
 results.dir <- paste(repo.dir, "/data/", bin_type, "/ALL/", level, "/", sep="")
 figures.dir <- paste(repo.dir, "/plots/", sep="")
 
@@ -31,6 +33,8 @@ figures.dir <- paste(repo.dir, "/plots/", sep="")
 ref_data_low.file <- paste(results.dir, "/low/all.txt", sep="")
 ref_data_medium.file <- paste(results.dir, "/medium/all.txt", sep="")
 ref_data_high.file <- paste(results.dir, "/high/all.txt", sep="")
+
+ANI_data.file <- paste(metadata.dir, "ANI/unique_common.tsv", sep="")
 
 # load data
 
@@ -46,6 +50,10 @@ ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
 ref_data_high$complexity <- "high"
 
 ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
+
+ANI_data <- read.table(ANI_data.file, header=F, sep="\t")
+colnames(ANI_data) <- c("bin", "group")
+ANI_data$bin <- gsub(".gt1kb", "", ANI_data$bin)
 
 # remove small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
 
@@ -69,6 +77,13 @@ if (filter_tail) {
     
     idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[6]) > q[q[, 1]==x[10], 2])
     ref_data_combined <- ref_data_combined[idx, ]
+
+}
+
+if (ANI!="all") {
+
+    ref_data_combined$ANI <- ANI_data$group[match(ref_data_combined$bin, ANI_data$bin)]    
+    ref_data_combined <- ref_data_combined[ref_data_combined$ANI==ANI, ]
 
 }
 
@@ -108,7 +123,7 @@ for (rank in unique(ref_data_combined$rank)) {
 
     # plot precision / recall scatter plot combined per rank
     
-    title <- paste("precision / recall", "\n(rank=", rank, "; bin_type=", bin_type, "; filter_tail=", filter_tail, ")", sep="")
+    title <- paste("precision / recall", "\n(rank=", rank, "; bin_type=", bin_type, "; filter_tail=", filter_tail, "; ANI=", ANI, ")", sep="")
     
     df <- ref_data_combined[ref_data_combined$rank==rank, ]
 
@@ -168,9 +183,11 @@ for (rank in unique(ref_data_combined$rank)) {
          geom_point(aes(size=real_size), alpha=points_alpha, shape=points_shape, color="black") +
          ggtitle(title) +
          main_theme +
-         theme(legend.position="right")
+         theme(legend.position="right",
+               title=element_text(size=8))
     
-    file <- paste(figures.dir, bin_type, "/prec_recall_combined_", rank, "_", level, ".pdf", sep="")
+    file <- paste(figures.dir, bin_type, "/prec_recall_combined_", rank, "_", level, "_ANI_", ANI, ".pdf", sep="")
+    file <- gsub(" ", "_", file)
     ggsave(file, p, width=7, height=5)
     
 }
