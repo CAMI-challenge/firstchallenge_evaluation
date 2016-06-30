@@ -1,0 +1,1665 @@
+binner	rank	bin	precision	recall	predicted_size	real_size
+admiring_curie_2	superkingdom	Bacteria	1.00	0.88	489768139	553468052
+admiring_curie_2	superkingdom	Archaea	1.00	0.98	6286039	6411802
+admiring_curie_2	superkingdom	unassigned	nan	nan	65975668	1413217
+admiring_curie_2	phylum	Proteobacteria	1.00	0.86	209836433	243932505
+admiring_curie_2	phylum	Actinobacteria	1.00	0.92	134568865	145948197
+admiring_curie_2	phylum	Firmicutes	1.00	0.88	102813743	116336594
+admiring_curie_2	phylum	Bacteroidetes	0.99	0.89	40951174	45650742
+admiring_curie_2	phylum	Euryarchaeota	1.00	0.98	6286039	6411802
+admiring_curie_2	phylum	Tenericutes	1.00	1.00	1597924	1600014
+admiring_curie_2	phylum	unassigned	nan	nan	65975668	2149992
+admiring_curie_2	class	Actinobacteria	1.00	0.92	134568865	145948197
+admiring_curie_2	class	Alphaproteobacteria	1.00	0.80	102126461	127454801
+admiring_curie_2	class	Betaproteobacteria	1.00	0.94	73695140	78627440
+admiring_curie_2	class	Clostridia	1.00	0.91	72910936	79844812
+admiring_curie_2	class	Gammaproteobacteria	1.00	0.97	27052746	27773710
+admiring_curie_2	class	Bacilli	1.00	0.80	25799228	32340827
+admiring_curie_2	class	Sphingobacteriia	0.98	0.96	18532446	19013960
+admiring_curie_2	class	Cytophagia	1.00	0.79	11423555	14411538
+admiring_curie_2	class	Flavobacteriia	1.00	0.95	8996562	9442158
+admiring_curie_2	class	Deltaproteobacteria	1.00	0.69	6962086	10076554
+admiring_curie_2	class	Halobacteria	1.00	0.97	4751923	4877686
+admiring_curie_2	class	Negativicutes	1.00	0.99	4103579	4150955
+admiring_curie_2	class	Bacteroidia	1.00	0.72	1998611	2783086
+admiring_curie_2	class	Mollicutes	1.00	1.00	1597924	1600014
+admiring_curie_2	class	Thermoplasmata	1.00	1.00	1534116	1534116
+admiring_curie_2	class	unassigned	nan	nan	65975668	2149992
+admiring_curie_2	order	Actinomycetales	1.00	0.92	132226240	143462610
+admiring_curie_2	order	Clostridiales	0.99	0.93	64733679	69444702
+admiring_curie_2	order	Burkholderiales	1.00	0.97	64577539	66564525
+admiring_curie_2	order	Rhizobiales	0.99	0.70	38255817	54087866
+admiring_curie_2	order	Rhodobacterales	0.96	0.92	23587456	24573518
+admiring_curie_2	order	Bacillales	1.00	0.78	23346451	29943979
+admiring_curie_2	order	Rhodospirillales	1.00	0.99	21960119	22154048
+admiring_curie_2	order	Sphingobacteriales	0.98	0.96	18532446	19013960
+admiring_curie_2	order	Sphingomonadales	1.00	0.64	15036604	23337519
+admiring_curie_2	order	Cytophagales	1.00	0.79	11423555	14411538
+admiring_curie_2	order	Flavobacteriales	1.00	0.95	8996562	9442158
+admiring_curie_2	order	Vibrionales	1.00	0.99	8181211	8287247
+admiring_curie_2	order	Thermoanaerobacterales	0.99	0.78	8177257	10400110
+admiring_curie_2	order	Desulfovibrionales	1.00	0.69	6962086	10076554
+admiring_curie_2	order	Methylophilales	1.00	0.74	6578485	8904107
+admiring_curie_2	order	Pseudomonadales	1.00	0.96	5280554	5477884
+admiring_curie_2	order	Enterobacteriales	1.00	0.94	5109220	5419845
+admiring_curie_2	order	Alteromonadales	1.00	0.99	4909536	4980999
+admiring_curie_2	order	Halobacteriales	1.00	0.97	4751923	4877686
+admiring_curie_2	order	Selenomonadales	1.00	0.99	4103579	4150955
+admiring_curie_2	order	Legionellales	1.00	0.99	3572225	3607735
+admiring_curie_2	order	Caulobacterales	1.00	1.00	3286465	3301850
+admiring_curie_2	order	Nitrosomonadales	1.00	0.93	2539116	2734309
+admiring_curie_2	order	Lactobacillales	0.96	0.98	2452777	2396848
+admiring_curie_2	order	Acidimicrobiales	1.00	0.94	2342625	2485587
+admiring_curie_2	order	Bacteroidales	1.00	0.72	1998611	2783086
+admiring_curie_2	order	Acholeplasmatales	1.00	1.00	1597924	1600014
+admiring_curie_2	order	Thermoplasmatales	1.00	1.00	1534116	1534116
+admiring_curie_2	order	unassigned	nan	nan	65975668	2149992
+admiring_curie_2	family	Comamonadaceae	1.00	0.99	37326534	37691258
+admiring_curie_2	family	Pseudonocardiaceae	0.85	0.95	36661922	32681267
+admiring_curie_2	family	Oxalobacteraceae	1.00	0.94	27251005	28873267
+admiring_curie_2	family	Rhodobacteraceae	0.96	0.92	23587456	24573518
+admiring_curie_2	family	Rhodospirillaceae	1.00	0.99	21960119	22154048
+admiring_curie_2	family	Cellulomonadaceae	1.00	0.70	21721386	31237913
+admiring_curie_2	family	Sphingobacteriaceae	0.98	0.96	18532446	19013960
+admiring_curie_2	family	Clostridiales Family XIX. Incertae Sedis	0.87	0.95	16500749	15210881
+admiring_curie_2	family	Clostridiaceae	0.84	0.70	15579982	18916804
+admiring_curie_2	family	Sphingomonadaceae	1.00	0.64	15036604	23337519
+admiring_curie_2	family	Clostridiales Family XVI. Incertae Sedis	1.00	0.95	14190410	14888857
+admiring_curie_2	family	Rhizobiaceae	0.98	0.73	13810888	18598125
+admiring_curie_2	family	Nocardiaceae	1.00	0.99	12916943	13003876
+admiring_curie_2	family	Streptomycetaceae	1.00	0.70	12912715	18428033
+admiring_curie_2	family	Intrasporangiaceae	0.99	0.98	12204410	12422925
+admiring_curie_2	family	Cytophagaceae	1.00	0.79	11423555	14411538
+admiring_curie_2	family	Xanthobacteraceae	1.00	0.99	10123258	10190100
+admiring_curie_2	family	Promicromonosporaceae	0.54	0.83	10095195	6599454
+admiring_curie_2	family	Flavobacteriaceae	1.00	0.95	8996562	9442158
+admiring_curie_2	family	Vibrionaceae	1.00	0.99	8181211	8287247
+admiring_curie_2	family	Thermoanaerobacteraceae	0.99	0.78	8177257	10400110
+admiring_curie_2	family	Lachnospiraceae	1.00	0.99	8114792	8225026
+admiring_curie_2	family	Peptostreptococcaceae	0.69	0.71	7882003	7719747
+admiring_curie_2	family	Microbacteriaceae	1.00	0.97	7584526	7792846
+admiring_curie_2	family	Nocardioidaceae	1.00	0.70	7336874	10494171
+admiring_curie_2	family	Planococcaceae	1.00	0.98	7135776	7245311
+admiring_curie_2	family	Desulfovibrionaceae	1.00	0.69	6962086	10076554
+admiring_curie_2	family	Mycobacteriaceae	1.00	0.99	6638346	6676999
+admiring_curie_2	family	Methylophilaceae	1.00	0.74	6578485	8904107
+admiring_curie_2	family	Phyllobacteriaceae	0.97	0.68	6099567	8674992
+admiring_curie_2	family	Pseudomonadaceae	1.00	0.96	5280554	5477884
+admiring_curie_2	family	Enterobacteriaceae	1.00	0.94	5109220	5419845
+admiring_curie_2	family	Ferrimonadaceae	1.00	0.99	4909536	4980999
+admiring_curie_2	family	Halobacteriaceae	1.00	0.97	4751923	4877686
+admiring_curie_2	family	Bradyrhizobiaceae	1.00	0.48	4290098	8874968
+admiring_curie_2	family	Propionibacteriaceae	0.96	0.96	4153923	4125126
+admiring_curie_2	family	Veillonellaceae	1.00	0.99	4103579	4150955
+admiring_curie_2	family	Aurantimonadaceae	1.00	0.51	3932006	7749681
+admiring_curie_2	family	Paenibacillaceae	0.99	0.49	3686499	7400375
+admiring_curie_2	family	Legionellaceae	1.00	0.99	3572225	3607735
+admiring_curie_2	family	Caulobacteraceae	1.00	1.00	3286465	3301850
+admiring_curie_2	family	Bacillaceae	1.00	0.98	2877188	2948556
+admiring_curie_2	family	Nitrosomonadaceae	1.00	0.93	2539116	2734309
+admiring_curie_2	family	Peptococcaceae	1.00	0.94	2465743	2625413
+admiring_curie_2	family	Enterococcaceae	0.96	0.98	2452777	2396848
+admiring_curie_2	family	Acidimicrobiaceae	1.00	0.94	2342625	2485587
+admiring_curie_2	family	Porphyromonadaceae	1.00	0.98	1998611	2044131
+admiring_curie_2	family	Acholeplasmataceae	1.00	1.00	1597924	1600014
+admiring_curie_2	family	Picrophilaceae	1.00	1.00	1534116	1534116
+admiring_curie_2	family	unassigned	nan	nan	75622656	11854717
+admiring_curie_2	genus	Massilia	1.00	0.94	27251005	28873267
+admiring_curie_2	genus	Lechevalieria	0.81	0.92	23231753	20408997
+admiring_curie_2	genus	Acetoanaerobium	0.87	0.95	16500749	15210881
+admiring_curie_2	genus	Sphingomonas	1.00	0.64	15036604	23337519
+admiring_curie_2	genus	Phaeospirillum	1.00	0.99	14844312	15012162
+admiring_curie_2	genus	Carboxydocella	1.00	0.95	14190410	14888857
+admiring_curie_2	genus	Sinorhizobium	0.98	0.99	13810888	13774939
+admiring_curie_2	genus	Kibdelosporangium	0.91	1.00	13430169	12272270
+admiring_curie_2	genus	Cellulomonas	1.00	0.58	12750922	22124132
+admiring_curie_2	genus	Ohtaekwangia	1.00	0.79	11423555	14411538
+admiring_curie_2	genus	Pseudoxanthobacter	0.50	0.99	10123258	5163876
+admiring_curie_2	genus	Promicromonospora	0.54	0.83	10095195	6599454
+admiring_curie_2	genus	Paracoccus	0.90	0.93	9853254	9589943
+admiring_curie_2	genus	Clostridium	0.75	0.99	9620120	7261293
+admiring_curie_2	genus	Pedobacter	1.00	1.00	9518128	9532570
+admiring_curie_2	genus	Sphingobacterium	0.96	0.92	9014318	9481390
+admiring_curie_2	genus	Oerskovia	1.00	0.98	8970464	9113781
+admiring_curie_2	genus	Phycicoccus	0.99	0.97	8628347	8785183
+admiring_curie_2	genus	Vibrio	1.00	0.99	8181211	8287247
+admiring_curie_2	genus	Butyrivibrio	1.00	0.99	8114792	8225026
+admiring_curie_2	genus	Rhodobacter	1.00	0.99	7459368	7530868
+admiring_curie_2	genus	Aeromicrobium	1.00	0.70	7336874	10494171
+admiring_curie_2	genus	Nocardia	1.00	1.00	7272886	7282241
+admiring_curie_2	genus	Sporosarcina	1.00	0.98	7135776	7245311
+admiring_curie_2	genus	Azospirillum	1.00	1.00	7115807	7141886
+admiring_curie_2	genus	Desulfovibrio	1.00	0.69	6962086	10076554
+admiring_curie_2	genus	Mycobacterium	1.00	0.99	6638346	6676999
+admiring_curie_2	genus	Methylophilus	1.00	0.74	6578485	8904107
+admiring_curie_2	genus	Rhodobaca	0.58	0.95	6274834	3845886
+admiring_curie_2	genus	Aquamicrobium	0.97	0.68	6099567	8674992
+admiring_curie_2	genus	Rhodococcus	1.00	0.99	5644057	5721635
+admiring_curie_2	genus	Intestinibacter	0.55	0.99	5347173	2937124
+admiring_curie_2	genus	Azotobacter	1.00	0.96	5280554	5477884
+admiring_curie_2	genus	Rahnella	1.00	0.94	5109220	5419845
+admiring_curie_2	genus	Moorella	1.00	0.98	5015174	5136963
+admiring_curie_2	genus	Ferrimonas	1.00	0.99	4909536	4980999
+admiring_curie_2	genus	Halobacterium	1.00	0.97	4751923	4877686
+admiring_curie_2	genus	Bosea	1.00	0.48	4290098	8874968
+admiring_curie_2	genus	Tessaracoccus	0.96	0.96	4153923	4125126
+admiring_curie_2	genus	Propionispora	1.00	0.99	4103579	4150955
+admiring_curie_2	genus	Diaphorobacter	1.00	0.97	3961578	4083860
+admiring_curie_2	genus	Curtobacterium	1.00	0.95	3727421	3925652
+admiring_curie_2	genus	Paenibacillus	0.99	0.49	3686499	7400375
+admiring_curie_2	genus	Janibacter	1.00	0.98	3576063	3637742
+admiring_curie_2	genus	Tatlockia	1.00	0.99	3572225	3607735
+admiring_curie_2	genus	Phenylobacterium	1.00	1.00	3286465	3301850
+admiring_curie_2	genus	Butyricicoccus	1.00	0.99	3225188	3268385
+admiring_curie_2	genus	Thermoanaerobacter	0.98	0.59	3162083	5263147
+admiring_curie_2	genus	Formosa	1.00	0.98	3092395	3154949
+admiring_curie_2	genus	Chryseobacterium	1.00	0.90	3011074	3329601
+admiring_curie_2	genus	Olleya	1.00	0.98	2893093	2957608
+admiring_curie_2	genus	Bacillus	1.00	0.98	2877188	2948556
+admiring_curie_2	genus	Nitrosomonas	1.00	0.93	2539116	2734309
+admiring_curie_2	genus	Peptoclostridium	1.00	0.99	2534830	2550032
+admiring_curie_2	genus	Desulfotomaculum	1.00	0.94	2465743	2625413
+admiring_curie_2	genus	Tetragenococcus	0.96	0.98	2452777	2396848
+admiring_curie_2	genus	Caloranaerobacter	0.99	0.98	2432321	2455797
+admiring_curie_2	genus	Ferrithrix	1.00	0.94	2342625	2485587
+admiring_curie_2	genus	Porphyromonas	1.00	0.98	1998611	2044131
+admiring_curie_2	genus	Acholeplasma	1.00	1.00	1597924	1600014
+admiring_curie_2	genus	Picrophilus	1.00	1.00	1534116	1534116
+admiring_curie_2	genus	Lutispora	1.00	0.09	302353	3459146
+admiring_curie_2	genus	unassigned	nan	nan	129689438	75507023
+admiring_curie_2	species	uncultured Massilia sp.	1.00	0.94	27251005	28873267
+admiring_curie_2	species	Acetoanaerobium noterae	0.87	0.95	16500749	15210881
+admiring_curie_2	species	Phaeospirillum fulvum	1.00	0.99	14844312	15012162
+admiring_curie_2	species	Carboxydocella sporoproducens	1.00	0.95	14190410	14888857
+admiring_curie_2	species	Sinorhizobium meliloti	0.98	0.99	13810888	13774939
+admiring_curie_2	species	Kibdelosporangium aridum	0.91	1.00	13430169	12272270
+admiring_curie_2	species	Lechevalieria aerocolonigenes	0.68	0.84	13184341	10667666
+admiring_curie_2	species	Ohtaekwangia koreensis	0.62	0.98	11423555	7222220
+admiring_curie_2	species	Pseudoxanthobacter soli	0.50	0.99	10123258	5163876
+admiring_curie_2	species	Promicromonospora umidemergens	0.54	0.83	10095195	6599454
+admiring_curie_2	species	Lechevalieria flava	0.97	1.00	10047412	9741331
+admiring_curie_2	species	Paracoccus pantotrophus	0.90	0.93	9853254	9589943
+admiring_curie_2	species	Rhodobacter capsulatus	1.00	0.99	7459368	7530868
+admiring_curie_2	species	Aeromicrobium ponti	1.00	0.70	7336874	10494171
+admiring_curie_2	species	Sporosarcina newyorkensis	1.00	0.98	7135776	7245311
+admiring_curie_2	species	Azospirillum brasilense	1.00	1.00	7115807	7141886
+admiring_curie_2	species	Rhodobaca barguzinensis	0.58	0.95	6274834	3845886
+admiring_curie_2	species	Intestinibacter bartlettii	0.55	0.99	5347173	2937124
+admiring_curie_2	species	Azotobacter vinelandii	1.00	0.96	5280554	5477884
+admiring_curie_2	species	Rahnella aquatilis	1.00	0.94	5109220	5419845
+admiring_curie_2	species	Clostridium tetani	0.55	0.99	5024369	2788202
+admiring_curie_2	species	Moorella thermoacetica	1.00	0.98	5015174	5136963
+admiring_curie_2	species	Ferrimonas marina	1.00	0.99	4909536	4980999
+admiring_curie_2	species	Butyrivibrio fibrisolvens	1.00	0.99	4786226	4834992
+admiring_curie_2	species	Pedobacter agri	1.00	1.00	4771532	4779416
+admiring_curie_2	species	Halobacterium salinarum	1.00	0.97	4751923	4877686
+admiring_curie_2	species	Clostridium grantii	0.96	0.99	4595751	4473091
+admiring_curie_2	species	Vibrio gazogenes	1.00	0.99	4581231	4627085
+admiring_curie_2	species	Sphingobacterium nematocida	0.93	0.85	4540938	4981289
+admiring_curie_2	species	Sphingobacterium psychroaquaticum	1.00	0.99	4473380	4500101
+admiring_curie_2	species	Tessaracoccus bendigoensis	0.96	0.96	4153923	4125126
+admiring_curie_2	species	Propionispora hippei	1.00	0.99	4103579	4150955
+admiring_curie_2	species	Diaphorobacter oryzae	1.00	0.97	3961578	4083860
+admiring_curie_2	species	Curtobacterium sp. B20	1.00	0.95	3727421	3925652
+admiring_curie_2	species	Sphingomonas phyllosphaerae	1.00	1.00	3725169	3733085
+admiring_curie_2	species	Paenibacillus frigoriresistens	0.99	0.49	3686499	7400375
+admiring_curie_2	species	Vibrio cincinnatiensis	1.00	0.98	3599980	3660162
+admiring_curie_2	species	Janibacter limosus	1.00	0.98	3576063	3637742
+admiring_curie_2	species	Legionella maceachernii	1.00	0.99	3572225	3607735
+admiring_curie_2	species	Butyrivibrio hungatei	1.00	0.98	3328566	3390034
+admiring_curie_2	species	Phenylobacterium composti	1.00	1.00	3286465	3301850
+admiring_curie_2	species	Butyricicoccus pullicaecorum	1.00	0.99	3225188	3268385
+admiring_curie_2	species	Desulfovibrio bizertensis	1.00	0.97	3170961	3257376
+admiring_curie_2	species	Thermoanaerobacter thermohydrosulfuricus	0.98	0.59	3162083	5263147
+admiring_curie_2	species	Formosa spongicola	1.00	0.98	3092395	3154949
+admiring_curie_2	species	Desulfovibrio alkalitolerans	1.00	0.98	3045180	3111934
+admiring_curie_2	species	Sphingomonas aestuarii	1.00	0.97	2893307	2985887
+admiring_curie_2	species	Olleya aquimaris	1.00	0.98	2893093	2957608
+admiring_curie_2	species	Bacillus coagulans	1.00	0.98	2877188	2948556
+admiring_curie_2	species	Nitrosomonas europaea	1.00	0.93	2539116	2734309
+admiring_curie_2	species	[Eubacterium] yurii	1.00	0.99	2534830	2550032
+admiring_curie_2	species	Desulfotomaculum hydrothermale	1.00	0.94	2465743	2625413
+admiring_curie_2	species	Tetragenococcus halophilus	0.96	0.98	2452777	2396848
+admiring_curie_2	species	Caloranaerobacter azorensis	0.99	0.98	2432321	2455797
+admiring_curie_2	species	Ferrithrix thermotolerans	1.00	0.94	2342625	2485587
+admiring_curie_2	species	Porphyromonas crevioricanis	1.00	0.98	1998611	2044131
+admiring_curie_2	species	Acholeplasma oculi	1.00	1.00	1597924	1600014
+admiring_curie_2	species	Picrophilus oshimae	1.00	1.00	1534116	1534116
+admiring_curie_2	species	Desulfovibrio vietnamensis	1.00	0.20	745945	3707244
+admiring_curie_2	species	Lutispora thermophila	1.00	0.09	302353	3459146
+admiring_curie_2	species	unassigned	nan	nan	212738408	185124110
+adoring_lalande_1_=_Gold_Standard	superkingdom	Bacteria	1.00	1.00	553468052	553468052
+adoring_lalande_1_=_Gold_Standard	superkingdom	Archaea	1.00	1.00	6411802	6411802
+adoring_lalande_1_=_Gold_Standard	superkingdom	Viruses	1.00	1.00	736775	736775
+adoring_lalande_1_=_Gold_Standard	superkingdom	unassigned	nan	nan	1413217	1413217
+adoring_lalande_1_=_Gold_Standard	phylum	Proteobacteria	1.00	1.00	243932505	243932505
+adoring_lalande_1_=_Gold_Standard	phylum	Actinobacteria	1.00	1.00	145948197	145948197
+adoring_lalande_1_=_Gold_Standard	phylum	Firmicutes	1.00	1.00	116336594	116336594
+adoring_lalande_1_=_Gold_Standard	phylum	Bacteroidetes	1.00	1.00	45650742	45650742
+adoring_lalande_1_=_Gold_Standard	phylum	Euryarchaeota	1.00	1.00	6411802	6411802
+adoring_lalande_1_=_Gold_Standard	phylum	Tenericutes	1.00	1.00	1600014	1600014
+adoring_lalande_1_=_Gold_Standard	phylum	unassigned	nan	nan	2149992	2149992
+adoring_lalande_1_=_Gold_Standard	class	Actinobacteria	1.00	1.00	145948197	145948197
+adoring_lalande_1_=_Gold_Standard	class	Alphaproteobacteria	1.00	1.00	127454801	127454801
+adoring_lalande_1_=_Gold_Standard	class	Clostridia	1.00	1.00	79844812	79844812
+adoring_lalande_1_=_Gold_Standard	class	Betaproteobacteria	1.00	1.00	78627440	78627440
+adoring_lalande_1_=_Gold_Standard	class	Bacilli	1.00	1.00	32340827	32340827
+adoring_lalande_1_=_Gold_Standard	class	Gammaproteobacteria	1.00	1.00	27773710	27773710
+adoring_lalande_1_=_Gold_Standard	class	Sphingobacteriia	1.00	1.00	19013960	19013960
+adoring_lalande_1_=_Gold_Standard	class	Cytophagia	1.00	1.00	14411538	14411538
+adoring_lalande_1_=_Gold_Standard	class	Deltaproteobacteria	1.00	1.00	10076554	10076554
+adoring_lalande_1_=_Gold_Standard	class	Flavobacteriia	1.00	1.00	9442158	9442158
+adoring_lalande_1_=_Gold_Standard	class	Halobacteria	1.00	1.00	4877686	4877686
+adoring_lalande_1_=_Gold_Standard	class	Negativicutes	1.00	1.00	4150955	4150955
+adoring_lalande_1_=_Gold_Standard	class	Bacteroidia	1.00	1.00	2783086	2783086
+adoring_lalande_1_=_Gold_Standard	class	Mollicutes	1.00	1.00	1600014	1600014
+adoring_lalande_1_=_Gold_Standard	class	Thermoplasmata	1.00	1.00	1534116	1534116
+adoring_lalande_1_=_Gold_Standard	class	unassigned	nan	nan	2149992	2149992
+adoring_lalande_1_=_Gold_Standard	order	Actinomycetales	1.00	1.00	143462610	143462610
+adoring_lalande_1_=_Gold_Standard	order	Clostridiales	1.00	1.00	69444702	69444702
+adoring_lalande_1_=_Gold_Standard	order	Burkholderiales	1.00	1.00	66564525	66564525
+adoring_lalande_1_=_Gold_Standard	order	Rhizobiales	1.00	1.00	54087866	54087866
+adoring_lalande_1_=_Gold_Standard	order	Bacillales	1.00	1.00	29943979	29943979
+adoring_lalande_1_=_Gold_Standard	order	Rhodobacterales	1.00	1.00	24573518	24573518
+adoring_lalande_1_=_Gold_Standard	order	Sphingomonadales	1.00	1.00	23337519	23337519
+adoring_lalande_1_=_Gold_Standard	order	Rhodospirillales	1.00	1.00	22154048	22154048
+adoring_lalande_1_=_Gold_Standard	order	Sphingobacteriales	1.00	1.00	19013960	19013960
+adoring_lalande_1_=_Gold_Standard	order	Cytophagales	1.00	1.00	14411538	14411538
+adoring_lalande_1_=_Gold_Standard	order	Thermoanaerobacterales	1.00	1.00	10400110	10400110
+adoring_lalande_1_=_Gold_Standard	order	Desulfovibrionales	1.00	1.00	10076554	10076554
+adoring_lalande_1_=_Gold_Standard	order	Flavobacteriales	1.00	1.00	9442158	9442158
+adoring_lalande_1_=_Gold_Standard	order	Methylophilales	1.00	1.00	8904107	8904107
+adoring_lalande_1_=_Gold_Standard	order	Vibrionales	1.00	1.00	8287247	8287247
+adoring_lalande_1_=_Gold_Standard	order	Pseudomonadales	1.00	1.00	5477884	5477884
+adoring_lalande_1_=_Gold_Standard	order	Enterobacteriales	1.00	1.00	5419845	5419845
+adoring_lalande_1_=_Gold_Standard	order	Alteromonadales	1.00	1.00	4980999	4980999
+adoring_lalande_1_=_Gold_Standard	order	Halobacteriales	1.00	1.00	4877686	4877686
+adoring_lalande_1_=_Gold_Standard	order	Selenomonadales	1.00	1.00	4150955	4150955
+adoring_lalande_1_=_Gold_Standard	order	Legionellales	1.00	1.00	3607735	3607735
+adoring_lalande_1_=_Gold_Standard	order	Caulobacterales	1.00	1.00	3301850	3301850
+adoring_lalande_1_=_Gold_Standard	order	Bacteroidales	1.00	1.00	2783086	2783086
+adoring_lalande_1_=_Gold_Standard	order	Nitrosomonadales	1.00	1.00	2734309	2734309
+adoring_lalande_1_=_Gold_Standard	order	Acidimicrobiales	1.00	1.00	2485587	2485587
+adoring_lalande_1_=_Gold_Standard	order	Lactobacillales	1.00	1.00	2396848	2396848
+adoring_lalande_1_=_Gold_Standard	order	Acholeplasmatales	1.00	1.00	1600014	1600014
+adoring_lalande_1_=_Gold_Standard	order	Thermoplasmatales	1.00	1.00	1534116	1534116
+adoring_lalande_1_=_Gold_Standard	order	Neisseriales	1.00	1.00	424499	424499
+adoring_lalande_1_=_Gold_Standard	order	unassigned	nan	nan	2149992	2149992
+adoring_lalande_1_=_Gold_Standard	family	Comamonadaceae	1.00	1.00	37691258	37691258
+adoring_lalande_1_=_Gold_Standard	family	Pseudonocardiaceae	1.00	1.00	32681267	32681267
+adoring_lalande_1_=_Gold_Standard	family	Cellulomonadaceae	1.00	1.00	31237913	31237913
+adoring_lalande_1_=_Gold_Standard	family	Oxalobacteraceae	1.00	1.00	28873267	28873267
+adoring_lalande_1_=_Gold_Standard	family	Rhodobacteraceae	1.00	1.00	24573518	24573518
+adoring_lalande_1_=_Gold_Standard	family	Sphingomonadaceae	1.00	1.00	23337519	23337519
+adoring_lalande_1_=_Gold_Standard	family	Rhodospirillaceae	1.00	1.00	22154048	22154048
+adoring_lalande_1_=_Gold_Standard	family	Sphingobacteriaceae	1.00	1.00	19013960	19013960
+adoring_lalande_1_=_Gold_Standard	family	Clostridiaceae	1.00	1.00	18916804	18916804
+adoring_lalande_1_=_Gold_Standard	family	Rhizobiaceae	1.00	1.00	18598125	18598125
+adoring_lalande_1_=_Gold_Standard	family	Streptomycetaceae	1.00	1.00	18428033	18428033
+adoring_lalande_1_=_Gold_Standard	family	Clostridiales Family XIX. Incertae Sedis	1.00	1.00	15210881	15210881
+adoring_lalande_1_=_Gold_Standard	family	Clostridiales Family XVI. Incertae Sedis	1.00	1.00	14888857	14888857
+adoring_lalande_1_=_Gold_Standard	family	Cytophagaceae	1.00	1.00	14411538	14411538
+adoring_lalande_1_=_Gold_Standard	family	Nocardiaceae	1.00	1.00	13003876	13003876
+adoring_lalande_1_=_Gold_Standard	family	Intrasporangiaceae	1.00	1.00	12422925	12422925
+adoring_lalande_1_=_Gold_Standard	family	Nocardioidaceae	1.00	1.00	10494171	10494171
+adoring_lalande_1_=_Gold_Standard	family	Thermoanaerobacteraceae	1.00	1.00	10400110	10400110
+adoring_lalande_1_=_Gold_Standard	family	Xanthobacteraceae	1.00	1.00	10190100	10190100
+adoring_lalande_1_=_Gold_Standard	family	Desulfovibrionaceae	1.00	1.00	10076554	10076554
+adoring_lalande_1_=_Gold_Standard	family	Flavobacteriaceae	1.00	1.00	9442158	9442158
+adoring_lalande_1_=_Gold_Standard	family	Methylophilaceae	1.00	1.00	8904107	8904107
+adoring_lalande_1_=_Gold_Standard	family	Bradyrhizobiaceae	1.00	1.00	8874968	8874968
+adoring_lalande_1_=_Gold_Standard	family	Phyllobacteriaceae	1.00	1.00	8674992	8674992
+adoring_lalande_1_=_Gold_Standard	family	Vibrionaceae	1.00	1.00	8287247	8287247
+adoring_lalande_1_=_Gold_Standard	family	Lachnospiraceae	1.00	1.00	8225026	8225026
+adoring_lalande_1_=_Gold_Standard	family	Microbacteriaceae	1.00	1.00	7792846	7792846
+adoring_lalande_1_=_Gold_Standard	family	Aurantimonadaceae	1.00	1.00	7749681	7749681
+adoring_lalande_1_=_Gold_Standard	family	Peptostreptococcaceae	1.00	1.00	7719747	7719747
+adoring_lalande_1_=_Gold_Standard	family	Paenibacillaceae	1.00	1.00	7400375	7400375
+adoring_lalande_1_=_Gold_Standard	family	Planococcaceae	1.00	1.00	7245311	7245311
+adoring_lalande_1_=_Gold_Standard	family	Mycobacteriaceae	1.00	1.00	6676999	6676999
+adoring_lalande_1_=_Gold_Standard	family	Promicromonosporaceae	1.00	1.00	6599454	6599454
+adoring_lalande_1_=_Gold_Standard	family	Pseudomonadaceae	1.00	1.00	5477884	5477884
+adoring_lalande_1_=_Gold_Standard	family	Enterobacteriaceae	1.00	1.00	5419845	5419845
+adoring_lalande_1_=_Gold_Standard	family	Ferrimonadaceae	1.00	1.00	4980999	4980999
+adoring_lalande_1_=_Gold_Standard	family	Halobacteriaceae	1.00	1.00	4877686	4877686
+adoring_lalande_1_=_Gold_Standard	family	Veillonellaceae	1.00	1.00	4150955	4150955
+adoring_lalande_1_=_Gold_Standard	family	Propionibacteriaceae	1.00	1.00	4125126	4125126
+adoring_lalande_1_=_Gold_Standard	family	Legionellaceae	1.00	1.00	3607735	3607735
+adoring_lalande_1_=_Gold_Standard	family	Caulobacteraceae	1.00	1.00	3301850	3301850
+adoring_lalande_1_=_Gold_Standard	family	Bacillaceae	1.00	1.00	2948556	2948556
+adoring_lalande_1_=_Gold_Standard	family	Nitrosomonadaceae	1.00	1.00	2734309	2734309
+adoring_lalande_1_=_Gold_Standard	family	Staphylococcaceae	1.00	1.00	2645012	2645012
+adoring_lalande_1_=_Gold_Standard	family	Peptococcaceae	1.00	1.00	2625413	2625413
+adoring_lalande_1_=_Gold_Standard	family	Acidimicrobiaceae	1.00	1.00	2485587	2485587
+adoring_lalande_1_=_Gold_Standard	family	Enterococcaceae	1.00	1.00	2396848	2396848
+adoring_lalande_1_=_Gold_Standard	family	Porphyromonadaceae	1.00	1.00	2044131	2044131
+adoring_lalande_1_=_Gold_Standard	family	Eubacteriaceae	1.00	1.00	1857974	1857974
+adoring_lalande_1_=_Gold_Standard	family	Acholeplasmataceae	1.00	1.00	1600014	1600014
+adoring_lalande_1_=_Gold_Standard	family	Picrophilaceae	1.00	1.00	1534116	1534116
+adoring_lalande_1_=_Gold_Standard	family	Prevotellaceae	1.00	1.00	738955	738955
+adoring_lalande_1_=_Gold_Standard	family	Neisseriaceae	1.00	1.00	424499	424499
+adoring_lalande_1_=_Gold_Standard	family	unassigned	nan	nan	11854717	11854717
+adoring_lalande_1_=_Gold_Standard	genus	Massilia	1.00	1.00	28873267	28873267
+adoring_lalande_1_=_Gold_Standard	genus	Sphingomonas	1.00	1.00	23337519	23337519
+adoring_lalande_1_=_Gold_Standard	genus	Cellulomonas	1.00	1.00	22124132	22124132
+adoring_lalande_1_=_Gold_Standard	genus	Lechevalieria	1.00	1.00	20408997	20408997
+adoring_lalande_1_=_Gold_Standard	genus	Acetoanaerobium	1.00	1.00	15210881	15210881
+adoring_lalande_1_=_Gold_Standard	genus	Phaeospirillum	1.00	1.00	15012162	15012162
+adoring_lalande_1_=_Gold_Standard	genus	Carboxydocella	1.00	1.00	14888857	14888857
+adoring_lalande_1_=_Gold_Standard	genus	Ohtaekwangia	1.00	1.00	14411538	14411538
+adoring_lalande_1_=_Gold_Standard	genus	Sinorhizobium	1.00	1.00	13774939	13774939
+adoring_lalande_1_=_Gold_Standard	genus	Kibdelosporangium	1.00	1.00	12272270	12272270
+adoring_lalande_1_=_Gold_Standard	genus	Aeromicrobium	1.00	1.00	10494171	10494171
+adoring_lalande_1_=_Gold_Standard	genus	Desulfovibrio	1.00	1.00	10076554	10076554
+adoring_lalande_1_=_Gold_Standard	genus	Paracoccus	1.00	1.00	9589943	9589943
+adoring_lalande_1_=_Gold_Standard	genus	Pedobacter	1.00	1.00	9532570	9532570
+adoring_lalande_1_=_Gold_Standard	genus	Sphingobacterium	1.00	1.00	9481390	9481390
+adoring_lalande_1_=_Gold_Standard	genus	Oerskovia	1.00	1.00	9113781	9113781
+adoring_lalande_1_=_Gold_Standard	genus	Methylophilus	1.00	1.00	8904107	8904107
+adoring_lalande_1_=_Gold_Standard	genus	Bosea	1.00	1.00	8874968	8874968
+adoring_lalande_1_=_Gold_Standard	genus	Phycicoccus	1.00	1.00	8785183	8785183
+adoring_lalande_1_=_Gold_Standard	genus	Aquamicrobium	1.00	1.00	8674992	8674992
+adoring_lalande_1_=_Gold_Standard	genus	Vibrio	1.00	1.00	8287247	8287247
+adoring_lalande_1_=_Gold_Standard	genus	Butyrivibrio	1.00	1.00	8225026	8225026
+adoring_lalande_1_=_Gold_Standard	genus	Rhodobacter	1.00	1.00	7530868	7530868
+adoring_lalande_1_=_Gold_Standard	genus	Paenibacillus	1.00	1.00	7400375	7400375
+adoring_lalande_1_=_Gold_Standard	genus	Nocardia	1.00	1.00	7282241	7282241
+adoring_lalande_1_=_Gold_Standard	genus	Clostridium	1.00	1.00	7261293	7261293
+adoring_lalande_1_=_Gold_Standard	genus	Sporosarcina	1.00	1.00	7245311	7245311
+adoring_lalande_1_=_Gold_Standard	genus	Azospirillum	1.00	1.00	7141886	7141886
+adoring_lalande_1_=_Gold_Standard	genus	Mycobacterium	1.00	1.00	6676999	6676999
+adoring_lalande_1_=_Gold_Standard	genus	Promicromonospora	1.00	1.00	6599454	6599454
+adoring_lalande_1_=_Gold_Standard	genus	Rhodococcus	1.00	1.00	5721635	5721635
+adoring_lalande_1_=_Gold_Standard	genus	Azotobacter	1.00	1.00	5477884	5477884
+adoring_lalande_1_=_Gold_Standard	genus	Rahnella	1.00	1.00	5419845	5419845
+adoring_lalande_1_=_Gold_Standard	genus	Thermoanaerobacter	1.00	1.00	5263147	5263147
+adoring_lalande_1_=_Gold_Standard	genus	Pseudoxanthobacter	1.00	1.00	5163876	5163876
+adoring_lalande_1_=_Gold_Standard	genus	Moorella	1.00	1.00	5136963	5136963
+adoring_lalande_1_=_Gold_Standard	genus	Xanthobacter	1.00	1.00	5026224	5026224
+adoring_lalande_1_=_Gold_Standard	genus	Ferrimonas	1.00	1.00	4980999	4980999
+adoring_lalande_1_=_Gold_Standard	genus	Halobacterium	1.00	1.00	4877686	4877686
+adoring_lalande_1_=_Gold_Standard	genus	Rhizobium	1.00	1.00	4823186	4823186
+adoring_lalande_1_=_Gold_Standard	genus	Propionispora	1.00	1.00	4150955	4150955
+adoring_lalande_1_=_Gold_Standard	genus	Tessaracoccus	1.00	1.00	4125126	4125126
+adoring_lalande_1_=_Gold_Standard	genus	Diaphorobacter	1.00	1.00	4083860	4083860
+adoring_lalande_1_=_Gold_Standard	genus	Curtobacterium	1.00	1.00	3925652	3925652
+adoring_lalande_1_=_Gold_Standard	genus	Rhodobaca	1.00	1.00	3845886	3845886
+adoring_lalande_1_=_Gold_Standard	genus	Janibacter	1.00	1.00	3637742	3637742
+adoring_lalande_1_=_Gold_Standard	genus	Tatlockia	1.00	1.00	3607735	3607735
+adoring_lalande_1_=_Gold_Standard	genus	Roseinatronobacter	1.00	1.00	3606821	3606821
+adoring_lalande_1_=_Gold_Standard	genus	Lutispora	1.00	1.00	3459146	3459146
+adoring_lalande_1_=_Gold_Standard	genus	Chryseobacterium	1.00	1.00	3329601	3329601
+adoring_lalande_1_=_Gold_Standard	genus	Phenylobacterium	1.00	1.00	3301850	3301850
+adoring_lalande_1_=_Gold_Standard	genus	Butyricicoccus	1.00	1.00	3268385	3268385
+adoring_lalande_1_=_Gold_Standard	genus	Formosa	1.00	1.00	3154949	3154949
+adoring_lalande_1_=_Gold_Standard	genus	Olleya	1.00	1.00	2957608	2957608
+adoring_lalande_1_=_Gold_Standard	genus	Bacillus	1.00	1.00	2948556	2948556
+adoring_lalande_1_=_Gold_Standard	genus	Intestinibacter	1.00	1.00	2937124	2937124
+adoring_lalande_1_=_Gold_Standard	genus	Nitrosomonas	1.00	1.00	2734309	2734309
+adoring_lalande_1_=_Gold_Standard	genus	Salinicoccus	1.00	1.00	2645012	2645012
+adoring_lalande_1_=_Gold_Standard	genus	Desulfotomaculum	1.00	1.00	2625413	2625413
+adoring_lalande_1_=_Gold_Standard	genus	Peptoclostridium	1.00	1.00	2550032	2550032
+adoring_lalande_1_=_Gold_Standard	genus	Ferrithrix	1.00	1.00	2485587	2485587
+adoring_lalande_1_=_Gold_Standard	genus	Caminicella	1.00	1.00	2472183	2472183
+adoring_lalande_1_=_Gold_Standard	genus	Caloranaerobacter	1.00	1.00	2455797	2455797
+adoring_lalande_1_=_Gold_Standard	genus	Tetragenococcus	1.00	1.00	2396848	2396848
+adoring_lalande_1_=_Gold_Standard	genus	Tepidibacter	1.00	1.00	2232591	2232591
+adoring_lalande_1_=_Gold_Standard	genus	Porphyromonas	1.00	1.00	2044131	2044131
+adoring_lalande_1_=_Gold_Standard	genus	Garciella	1.00	1.00	1857974	1857974
+adoring_lalande_1_=_Gold_Standard	genus	Acholeplasma	1.00	1.00	1600014	1600014
+adoring_lalande_1_=_Gold_Standard	genus	Picrophilus	1.00	1.00	1534116	1534116
+adoring_lalande_1_=_Gold_Standard	genus	Prevotella	1.00	1.00	738955	738955
+adoring_lalande_1_=_Gold_Standard	genus	Alysiella	1.00	1.00	424499	424499
+adoring_lalande_1_=_Gold_Standard	genus	unassigned	nan	nan	75507023	75507023
+adoring_lalande_1_=_Gold_Standard	species	uncultured Massilia sp.	1.00	1.00	28873267	28873267
+adoring_lalande_1_=_Gold_Standard	species	Acetoanaerobium noterae	1.00	1.00	15210881	15210881
+adoring_lalande_1_=_Gold_Standard	species	Phaeospirillum fulvum	1.00	1.00	15012162	15012162
+adoring_lalande_1_=_Gold_Standard	species	Carboxydocella sporoproducens	1.00	1.00	14888857	14888857
+adoring_lalande_1_=_Gold_Standard	species	Sinorhizobium meliloti	1.00	1.00	13774939	13774939
+adoring_lalande_1_=_Gold_Standard	species	Kibdelosporangium aridum	1.00	1.00	12272270	12272270
+adoring_lalande_1_=_Gold_Standard	species	Lechevalieria aerocolonigenes	1.00	1.00	10667666	10667666
+adoring_lalande_1_=_Gold_Standard	species	Aeromicrobium ponti	1.00	1.00	10494171	10494171
+adoring_lalande_1_=_Gold_Standard	species	Lechevalieria flava	1.00	1.00	9741331	9741331
+adoring_lalande_1_=_Gold_Standard	species	Paracoccus pantotrophus	1.00	1.00	9589943	9589943
+adoring_lalande_1_=_Gold_Standard	species	Rhodobacter capsulatus	1.00	1.00	7530868	7530868
+adoring_lalande_1_=_Gold_Standard	species	Paenibacillus frigoriresistens	1.00	1.00	7400375	7400375
+adoring_lalande_1_=_Gold_Standard	species	Sporosarcina newyorkensis	1.00	1.00	7245311	7245311
+adoring_lalande_1_=_Gold_Standard	species	Ohtaekwangia koreensis	1.00	1.00	7222220	7222220
+adoring_lalande_1_=_Gold_Standard	species	Ohtaekwangia kribbensis	1.00	1.00	7189318	7189318
+adoring_lalande_1_=_Gold_Standard	species	Azospirillum brasilense	1.00	1.00	7141886	7141886
+adoring_lalande_1_=_Gold_Standard	species	Promicromonospora umidemergens	1.00	1.00	6599454	6599454
+adoring_lalande_1_=_Gold_Standard	species	Azotobacter vinelandii	1.00	1.00	5477884	5477884
+adoring_lalande_1_=_Gold_Standard	species	Rahnella aquatilis	1.00	1.00	5419845	5419845
+adoring_lalande_1_=_Gold_Standard	species	Thermoanaerobacter thermohydrosulfuricus	1.00	1.00	5263147	5263147
+adoring_lalande_1_=_Gold_Standard	species	Pseudoxanthobacter soli	1.00	1.00	5163876	5163876
+adoring_lalande_1_=_Gold_Standard	species	Moorella thermoacetica	1.00	1.00	5136963	5136963
+adoring_lalande_1_=_Gold_Standard	species	Xanthobacter autotrophicus	1.00	1.00	5026224	5026224
+adoring_lalande_1_=_Gold_Standard	species	Sphingobacterium nematocida	1.00	1.00	4981289	4981289
+adoring_lalande_1_=_Gold_Standard	species	Ferrimonas marina	1.00	1.00	4980999	4980999
+adoring_lalande_1_=_Gold_Standard	species	Halobacterium salinarum	1.00	1.00	4877686	4877686
+adoring_lalande_1_=_Gold_Standard	species	Butyrivibrio fibrisolvens	1.00	1.00	4834992	4834992
+adoring_lalande_1_=_Gold_Standard	species	Pedobacter agri	1.00	1.00	4779416	4779416
+adoring_lalande_1_=_Gold_Standard	species	Cellulomonas terrae	1.00	1.00	4652222	4652222
+adoring_lalande_1_=_Gold_Standard	species	Vibrio gazogenes	1.00	1.00	4627085	4627085
+adoring_lalande_1_=_Gold_Standard	species	Sphingobacterium psychroaquaticum	1.00	1.00	4500101	4500101
+adoring_lalande_1_=_Gold_Standard	species	Clostridium grantii	1.00	1.00	4473091	4473091
+adoring_lalande_1_=_Gold_Standard	species	Propionispora hippei	1.00	1.00	4150955	4150955
+adoring_lalande_1_=_Gold_Standard	species	Tessaracoccus bendigoensis	1.00	1.00	4125126	4125126
+adoring_lalande_1_=_Gold_Standard	species	Diaphorobacter oryzae	1.00	1.00	4083860	4083860
+adoring_lalande_1_=_Gold_Standard	species	Curtobacterium sp. B20	1.00	1.00	3925652	3925652
+adoring_lalande_1_=_Gold_Standard	species	Rhodobaca barguzinensis	1.00	1.00	3845886	3845886
+adoring_lalande_1_=_Gold_Standard	species	Sphingomonas phyllosphaerae	1.00	1.00	3733085	3733085
+adoring_lalande_1_=_Gold_Standard	species	Desulfovibrio vietnamensis	1.00	1.00	3707244	3707244
+adoring_lalande_1_=_Gold_Standard	species	Vibrio cincinnatiensis	1.00	1.00	3660162	3660162
+adoring_lalande_1_=_Gold_Standard	species	Janibacter limosus	1.00	1.00	3637742	3637742
+adoring_lalande_1_=_Gold_Standard	species	Legionella maceachernii	1.00	1.00	3607735	3607735
+adoring_lalande_1_=_Gold_Standard	species	Roseinatronobacter thiooxidans	1.00	1.00	3606821	3606821
+adoring_lalande_1_=_Gold_Standard	species	Lutispora thermophila	1.00	1.00	3459146	3459146
+adoring_lalande_1_=_Gold_Standard	species	Butyrivibrio hungatei	1.00	1.00	3390034	3390034
+adoring_lalande_1_=_Gold_Standard	species	Phenylobacterium composti	1.00	1.00	3301850	3301850
+adoring_lalande_1_=_Gold_Standard	species	Butyricicoccus pullicaecorum	1.00	1.00	3268385	3268385
+adoring_lalande_1_=_Gold_Standard	species	Desulfovibrio bizertensis	1.00	1.00	3257376	3257376
+adoring_lalande_1_=_Gold_Standard	species	Formosa spongicola	1.00	1.00	3154949	3154949
+adoring_lalande_1_=_Gold_Standard	species	Desulfovibrio alkalitolerans	1.00	1.00	3111934	3111934
+adoring_lalande_1_=_Gold_Standard	species	Sphingomonas aestuarii	1.00	1.00	2985887	2985887
+adoring_lalande_1_=_Gold_Standard	species	Olleya aquimaris	1.00	1.00	2957608	2957608
+adoring_lalande_1_=_Gold_Standard	species	Bacillus coagulans	1.00	1.00	2948556	2948556
+adoring_lalande_1_=_Gold_Standard	species	Intestinibacter bartlettii	1.00	1.00	2937124	2937124
+adoring_lalande_1_=_Gold_Standard	species	Clostridium tetani	1.00	1.00	2788202	2788202
+adoring_lalande_1_=_Gold_Standard	species	Nitrosomonas europaea	1.00	1.00	2734309	2734309
+adoring_lalande_1_=_Gold_Standard	species	Salinicoccus kunmingensis	1.00	1.00	2645012	2645012
+adoring_lalande_1_=_Gold_Standard	species	Desulfotomaculum hydrothermale	1.00	1.00	2625413	2625413
+adoring_lalande_1_=_Gold_Standard	species	[Eubacterium] yurii	1.00	1.00	2550032	2550032
+adoring_lalande_1_=_Gold_Standard	species	Ferrithrix thermotolerans	1.00	1.00	2485587	2485587
+adoring_lalande_1_=_Gold_Standard	species	Caminicella sporogenes	1.00	1.00	2472183	2472183
+adoring_lalande_1_=_Gold_Standard	species	Caloranaerobacter azorensis	1.00	1.00	2455797	2455797
+adoring_lalande_1_=_Gold_Standard	species	Tetragenococcus halophilus	1.00	1.00	2396848	2396848
+adoring_lalande_1_=_Gold_Standard	species	Tepidibacter thalassicus	1.00	1.00	2232591	2232591
+adoring_lalande_1_=_Gold_Standard	species	Porphyromonas crevioricanis	1.00	1.00	2044131	2044131
+adoring_lalande_1_=_Gold_Standard	species	Garciella nitratireducens	1.00	1.00	1857974	1857974
+adoring_lalande_1_=_Gold_Standard	species	Acholeplasma oculi	1.00	1.00	1600014	1600014
+adoring_lalande_1_=_Gold_Standard	species	Picrophilus oshimae	1.00	1.00	1534116	1534116
+adoring_lalande_1_=_Gold_Standard	species	unidentified plasmid	1.00	1.00	939369	939369
+adoring_lalande_1_=_Gold_Standard	species	Prevotella oulorum	1.00	1.00	738955	738955
+adoring_lalande_1_=_Gold_Standard	species	unidentified	1.00	1.00	473848	473848
+adoring_lalande_1_=_Gold_Standard	species	Alysiella filiformis	1.00	1.00	424499	424499
+adoring_lalande_1_=_Gold_Standard	species	unassigned	nan	nan	185124110	185124110
+berserk_euclid_1	superkingdom	Bacteria	0.99	0.97	541262346	553468052
+berserk_euclid_1	superkingdom	Archaea	1.00	0.76	4888956	6411802
+berserk_euclid_1	superkingdom	Viruses	0.26	0.05	138756	736775
+berserk_euclid_1	superkingdom	unassigned	nan	nan	15739788	1413217
+berserk_euclid_1	phylum	Proteobacteria	1.00	0.96	235565575	243932505
+berserk_euclid_1	phylum	Actinobacteria	1.00	0.99	145329547	145948197
+berserk_euclid_1	phylum	Firmicutes	0.97	0.92	110398717	116336594
+berserk_euclid_1	phylum	Bacteroidetes	0.87	0.95	49968507	45650742
+berserk_euclid_1	phylum	Euryarchaeota	1.00	0.76	4888956	6411802
+berserk_euclid_1	phylum	unassigned	nan	nan	15878544	2149992
+berserk_euclid_1	class	Actinobacteria	1.00	0.99	145329547	145948197
+berserk_euclid_1	class	Alphaproteobacteria	0.99	0.94	120636609	127454801
+berserk_euclid_1	class	Clostridia	0.96	0.95	78426084	79844812
+berserk_euclid_1	class	Betaproteobacteria	1.00	0.98	77525431	78627440
+berserk_euclid_1	class	Gammaproteobacteria	0.96	0.99	28414366	27773710
+berserk_euclid_1	class	Bacilli	0.98	0.83	27653279	32340827
+berserk_euclid_1	class	Sphingobacteriia	0.95	0.97	19386743	19013960
+berserk_euclid_1	class	Cytophagia	0.76	0.93	17637304	14411538
+berserk_euclid_1	class	Flavobacteriia	0.85	0.98	10845288	9442158
+berserk_euclid_1	class	Deltaproteobacteria	0.99	0.88	8989169	10076554
+berserk_euclid_1	class	Halobacteria	1.00	1.00	4888956	4877686
+berserk_euclid_1	class	Negativicutes	0.95	0.99	4319354	4150955
+berserk_euclid_1	class	Bacteroidia	0.96	0.72	2099172	2783086
+berserk_euclid_1	class	unassigned	nan	nan	15878544	2149992
+berserk_euclid_1	order	Actinomycetales	1.00	0.99	142897352	143462610
+berserk_euclid_1	order	Clostridiales	0.96	0.96	69333594	69444702
+berserk_euclid_1	order	Burkholderiales	1.00	0.99	65772809	66564525
+berserk_euclid_1	order	Rhizobiales	0.94	0.85	48494464	54087866
+berserk_euclid_1	order	Bacillales	0.98	0.82	25053573	29943979
+berserk_euclid_1	order	Rhodobacterales	0.94	0.95	24794127	24573518
+berserk_euclid_1	order	Rhodospirillales	0.99	0.99	22149707	22154048
+berserk_euclid_1	order	Sphingomonadales	1.00	0.94	21885619	23337519
+berserk_euclid_1	order	Sphingobacteriales	0.95	0.97	19386743	19013960
+berserk_euclid_1	order	Cytophagales	0.76	0.93	17637304	14411538
+berserk_euclid_1	order	Flavobacteriales	0.85	0.98	10845288	9442158
+berserk_euclid_1	order	Methylophilales	0.97	1.00	9137426	8904107
+berserk_euclid_1	order	Thermoanaerobacterales	0.98	0.86	9092490	10400110
+berserk_euclid_1	order	Desulfovibrionales	0.99	0.88	8989169	10076554
+berserk_euclid_1	order	Vibrionales	0.98	0.99	8418632	8287247
+berserk_euclid_1	order	Alteromonadales	0.87	1.00	5741503	4980999
+berserk_euclid_1	order	Pseudomonadales	0.98	0.95	5315269	5477884
+berserk_euclid_1	order	Enterobacteriales	1.00	0.95	5137123	5419845
+berserk_euclid_1	order	Halobacteriales	1.00	1.00	4888956	4877686
+berserk_euclid_1	order	Selenomonadales	0.95	0.99	4319354	4150955
+berserk_euclid_1	order	Legionellales	0.94	1.00	3801839	3607735
+berserk_euclid_1	order	Caulobacterales	0.99	0.99	3312692	3301850
+berserk_euclid_1	order	Nitrosomonadales	0.99	0.95	2615196	2734309
+berserk_euclid_1	order	Lactobacillales	0.91	0.99	2599706	2396848
+berserk_euclid_1	order	Acidimicrobiales	0.99	0.97	2432195	2485587
+berserk_euclid_1	order	Bacteroidales	0.96	0.72	2099172	2783086
+berserk_euclid_1	order	unassigned	nan	nan	15878544	2149992
+berserk_euclid_1	family	Comamonadaceae	1.00	0.99	37218952	37691258
+berserk_euclid_1	family	Pseudonocardiaceae	0.97	0.92	31223584	32681267
+berserk_euclid_1	family	Cellulomonadaceae	0.93	0.90	30105894	31237913
+berserk_euclid_1	family	Oxalobacteraceae	1.00	0.99	28553857	28873267
+berserk_euclid_1	family	Rhodobacteraceae	0.94	0.95	24794127	24573518
+berserk_euclid_1	family	Rhodospirillaceae	0.99	0.99	22149707	22154048
+berserk_euclid_1	family	Sphingomonadaceae	1.00	0.94	21885619	23337519
+berserk_euclid_1	family	Sphingobacteriaceae	0.95	0.97	19386743	19013960
+berserk_euclid_1	family	Clostridiaceae	0.94	0.94	18793339	18916804
+berserk_euclid_1	family	Streptomycetaceae	0.99	0.98	18186954	18428033
+berserk_euclid_1	family	Cytophagaceae	0.76	0.93	17637304	14411538
+berserk_euclid_1	family	Rhizobiaceae	0.85	0.72	15620583	18598125
+berserk_euclid_1	family	Clostridiales Family XIX. Incertae Sedis	0.98	0.99	15374549	15210881
+berserk_euclid_1	family	Clostridiales Family XVI. Incertae Sedis	0.96	0.99	15369052	14888857
+berserk_euclid_1	family	Nocardiaceae	0.91	0.99	14096471	13003876
+berserk_euclid_1	family	Intrasporangiaceae	1.00	0.95	11783131	12422925
+berserk_euclid_1	family	Phyllobacteriaceae	0.74	0.92	10859486	8674992
+berserk_euclid_1	family	Flavobacteriaceae	0.85	0.98	10845288	9442158
+berserk_euclid_1	family	Xanthobacteraceae	0.99	0.98	10062821	10190100
+berserk_euclid_1	family	Planococcaceae	0.70	0.95	9889595	7245311
+berserk_euclid_1	family	Lachnospiraceae	0.84	0.99	9650830	8225026
+berserk_euclid_1	family	Microbacteriaceae	0.76	0.89	9166637	7792846
+berserk_euclid_1	family	Methylophilaceae	0.97	1.00	9137426	8904107
+berserk_euclid_1	family	Thermoanaerobacteraceae	0.98	0.86	9092490	10400110
+berserk_euclid_1	family	Promicromonosporaceae	0.71	0.97	9031118	6599454
+berserk_euclid_1	family	Desulfovibrionaceae	0.99	0.88	8989169	10076554
+berserk_euclid_1	family	Nocardioidaceae	1.00	0.83	8706115	10494171
+berserk_euclid_1	family	Vibrionaceae	0.98	0.99	8418632	8287247
+berserk_euclid_1	family	Aurantimonadaceae	1.00	0.99	7680195	7749681
+berserk_euclid_1	family	Peptostreptococcaceae	0.98	0.98	7677624	7719747
+berserk_euclid_1	family	Mycobacteriaceae	1.00	0.99	6608015	6676999
+berserk_euclid_1	family	Ferrimonadaceae	0.87	1.00	5741503	4980999
+berserk_euclid_1	family	Pseudomonadaceae	0.98	0.95	5315269	5477884
+berserk_euclid_1	family	Enterobacteriaceae	1.00	0.95	5137123	5419845
+berserk_euclid_1	family	Halobacteriaceae	1.00	1.00	4888956	4877686
+berserk_euclid_1	family	Veillonellaceae	0.95	0.99	4319354	4150955
+berserk_euclid_1	family	Bradyrhizobiaceae	1.00	0.48	4271379	8874968
+berserk_euclid_1	family	Propionibacteriaceae	0.99	0.96	3989433	4125126
+berserk_euclid_1	family	Legionellaceae	0.94	1.00	3801839	3607735
+berserk_euclid_1	family	Caulobacteraceae	0.99	0.99	3312692	3301850
+berserk_euclid_1	family	Bacillaceae	1.00	0.94	2774720	2948556
+berserk_euclid_1	family	Paenibacillaceae	0.88	0.31	2633267	7400375
+berserk_euclid_1	family	Nitrosomonadaceae	0.99	0.95	2615196	2734309
+berserk_euclid_1	family	Enterococcaceae	0.91	0.99	2599706	2396848
+berserk_euclid_1	family	Peptococcaceae	1.00	0.94	2468200	2625413
+berserk_euclid_1	family	Acidimicrobiaceae	0.99	0.97	2432195	2485587
+berserk_euclid_1	family	Porphyromonadaceae	0.96	0.98	2099172	2044131
+berserk_euclid_1	family	unassigned	nan	nan	25634535	11854717
+berserk_euclid_1	genus	Massilia	1.00	0.99	28553857	28873267
+berserk_euclid_1	genus	Sphingomonas	1.00	0.94	21885619	23337519
+berserk_euclid_1	genus	Lechevalieria	0.98	0.87	18226848	20408997
+berserk_euclid_1	genus	Ohtaekwangia	0.76	0.93	17637304	14411538
+berserk_euclid_1	genus	Cellulomonas	0.91	0.67	16242321	22124132
+berserk_euclid_1	genus	Sinorhizobium	0.85	0.97	15620583	13774939
+berserk_euclid_1	genus	Acetoanaerobium	0.98	0.99	15374549	15210881
+berserk_euclid_1	genus	Carboxydocella	0.96	0.99	15369052	14888857
+berserk_euclid_1	genus	Phaeospirillum	0.99	0.99	15071072	15012162
+berserk_euclid_1	genus	Oerskovia	0.63	0.97	13863573	9113781
+berserk_euclid_1	genus	Kibdelosporangium	0.94	1.00	12996736	12272270
+berserk_euclid_1	genus	Aquamicrobium	0.74	0.92	10859486	8674992
+berserk_euclid_1	genus	Paracoccus	0.87	0.96	10623888	9589943
+berserk_euclid_1	genus	Sporosarcina	0.70	0.95	9889595	7245311
+berserk_euclid_1	genus	Sphingobacterium	0.92	0.94	9702521	9481390
+berserk_euclid_1	genus	Pedobacter	0.98	1.00	9684222	9532570
+berserk_euclid_1	genus	Butyrivibrio	0.84	0.99	9650830	8225026
+berserk_euclid_1	genus	Methylophilus	0.97	1.00	9137426	8904107
+berserk_euclid_1	genus	Promicromonospora	0.71	0.97	9031118	6599454
+berserk_euclid_1	genus	Desulfovibrio	0.99	0.88	8989169	10076554
+berserk_euclid_1	genus	Aeromicrobium	1.00	0.83	8706115	10494171
+berserk_euclid_1	genus	Vibrio	0.98	0.99	8418632	8287247
+berserk_euclid_1	genus	Phycicoccus	1.00	0.93	8210004	8785183
+berserk_euclid_1	genus	Nocardia	1.00	0.99	7232258	7282241
+berserk_euclid_1	genus	Rhodobacter	1.00	0.95	7122932	7530868
+berserk_euclid_1	genus	Azospirillum	0.99	0.99	7078635	7141886
+berserk_euclid_1	genus	Clostridium	1.00	0.97	7035553	7261293
+berserk_euclid_1	genus	Rhodococcus	0.82	0.98	6864213	5721635
+berserk_euclid_1	genus	Mycobacterium	1.00	0.99	6608015	6676999
+berserk_euclid_1	genus	Ferrimonas	0.87	1.00	5741503	4980999
+berserk_euclid_1	genus	Curtobacterium	0.58	0.79	5317445	3925652
+berserk_euclid_1	genus	Azotobacter	0.98	0.95	5315269	5477884
+berserk_euclid_1	genus	Rahnella	1.00	0.95	5137123	5419845
+berserk_euclid_1	genus	Pseudoxanthobacter	1.00	0.98	5085406	5163876
+berserk_euclid_1	genus	Moorella	1.00	0.98	5062640	5136963
+berserk_euclid_1	genus	Xanthobacter	0.98	0.97	4977415	5026224
+berserk_euclid_1	genus	Rhodobaca	0.66	0.85	4933246	3845886
+berserk_euclid_1	genus	Halobacterium	1.00	1.00	4888956	4877686
+berserk_euclid_1	genus	Olleya	0.65	0.99	4541510	2957608
+berserk_euclid_1	genus	Propionispora	0.95	0.99	4319354	4150955
+berserk_euclid_1	genus	Bosea	1.00	0.48	4271379	8874968
+berserk_euclid_1	genus	Thermoanaerobacter	0.96	0.73	4029850	5263147
+berserk_euclid_1	genus	Tessaracoccus	0.99	0.96	3989433	4125126
+berserk_euclid_1	genus	Diaphorobacter	1.00	0.97	3958491	4083860
+berserk_euclid_1	genus	Tatlockia	0.94	1.00	3801839	3607735
+berserk_euclid_1	genus	Janibacter	1.00	0.98	3573127	3637742
+berserk_euclid_1	genus	Butyricicoccus	0.96	1.00	3395010	3268385
+berserk_euclid_1	genus	Phenylobacterium	0.99	0.99	3312692	3301850
+berserk_euclid_1	genus	Formosa	0.99	0.99	3171004	3154949
+berserk_euclid_1	genus	Chryseobacterium	0.99	0.94	3132774	3329601
+berserk_euclid_1	genus	Lutispora	0.77	0.69	3095085	3459146
+berserk_euclid_1	genus	Intestinibacter	1.00	0.99	2900700	2937124
+berserk_euclid_1	genus	Caloranaerobacter	0.85	0.97	2798677	2455797
+berserk_euclid_1	genus	Bacillus	1.00	0.94	2774720	2948556
+berserk_euclid_1	genus	Paenibacillus	0.88	0.31	2633267	7400375
+berserk_euclid_1	genus	Nitrosomonas	0.99	0.95	2615196	2734309
+berserk_euclid_1	genus	Tetragenococcus	0.91	0.99	2599706	2396848
+berserk_euclid_1	genus	Peptoclostridium	0.99	0.99	2552808	2550032
+berserk_euclid_1	genus	Caminicella	0.97	0.96	2469014	2472183
+berserk_euclid_1	genus	Desulfotomaculum	1.00	0.94	2468200	2625413
+berserk_euclid_1	genus	Ferrithrix	0.99	0.97	2432195	2485587
+berserk_euclid_1	genus	Tepidibacter	0.96	0.96	2224116	2232591
+berserk_euclid_1	genus	Roseinatronobacter	0.77	0.45	2114061	3606821
+berserk_euclid_1	genus	Porphyromonas	0.96	0.98	2099172	2044131
+berserk_euclid_1	genus	unassigned	nan	nan	88611337	75507023
+berserk_euclid_1	species	uncultured Massilia sp.	1.00	0.99	28553857	28873267
+berserk_euclid_1	species	Lechevalieria flava	0.50	0.94	18226848	9741331
+berserk_euclid_1	species	Sinorhizobium meliloti	0.85	0.97	15620583	13774939
+berserk_euclid_1	species	Acetoanaerobium noterae	0.98	0.99	15374549	15210881
+berserk_euclid_1	species	Carboxydocella sporoproducens	0.96	0.99	15369052	14888857
+berserk_euclid_1	species	Phaeospirillum fulvum	0.99	0.99	15071072	15012162
+berserk_euclid_1	species	Kibdelosporangium aridum	0.94	1.00	12996736	12272270
+berserk_euclid_1	species	Paracoccus pantotrophus	0.87	0.96	10623888	9589943
+berserk_euclid_1	species	Sporosarcina newyorkensis	0.70	0.95	9889595	7245311
+berserk_euclid_1	species	Ohtaekwangia koreensis	0.77	0.97	9084685	7222220
+berserk_euclid_1	species	Promicromonospora umidemergens	0.71	0.97	9031118	6599454
+berserk_euclid_1	species	Aeromicrobium ponti	1.00	0.83	8706115	10494171
+berserk_euclid_1	species	Ohtaekwangia kribbensis	0.50	0.60	8552619	7189318
+berserk_euclid_1	species	Rhodobacter capsulatus	1.00	0.95	7122932	7530868
+berserk_euclid_1	species	Azospirillum brasilense	0.99	0.99	7078635	7141886
+berserk_euclid_1	species	Sphingobacterium psychroaquaticum	0.61	0.96	7054779	4500101
+berserk_euclid_1	species	Butyrivibrio fibrisolvens	0.76	0.99	6327133	4834992
+berserk_euclid_1	species	Ferrimonas marina	0.87	1.00	5741503	4980999
+berserk_euclid_1	species	Cellulomonas terrae	0.74	0.90	5703193	4652222
+berserk_euclid_1	species	Curtobacterium sp. B20	0.58	0.79	5317445	3925652
+berserk_euclid_1	species	Azotobacter vinelandii	0.98	0.95	5315269	5477884
+berserk_euclid_1	species	Rahnella aquatilis	1.00	0.95	5137123	5419845
+berserk_euclid_1	species	Pseudoxanthobacter soli	1.00	0.98	5085406	5163876
+berserk_euclid_1	species	Moorella thermoacetica	1.00	0.98	5062640	5136963
+berserk_euclid_1	species	Xanthobacter autotrophicus	0.98	0.97	4977415	5026224
+berserk_euclid_1	species	Rhodobaca barguzinensis	0.66	0.85	4933246	3845886
+berserk_euclid_1	species	Halobacterium salinarum	1.00	1.00	4888956	4877686
+berserk_euclid_1	species	Vibrio gazogenes	0.96	0.99	4775444	4627085
+berserk_euclid_1	species	Pedobacter agri	1.00	1.00	4771532	4779416
+berserk_euclid_1	species	Olleya aquimaris	0.65	0.99	4541510	2957608
+berserk_euclid_1	species	Propionispora hippei	0.95	0.99	4319354	4150955
+berserk_euclid_1	species	Clostridium grantii	1.00	0.97	4318886	4473091
+berserk_euclid_1	species	Thermoanaerobacter thermohydrosulfuricus	0.96	0.73	4029850	5263147
+berserk_euclid_1	species	Tessaracoccus bendigoensis	0.99	0.96	3989433	4125126
+berserk_euclid_1	species	Diaphorobacter oryzae	1.00	0.97	3958491	4083860
+berserk_euclid_1	species	Legionella maceachernii	0.94	1.00	3801839	3607735
+berserk_euclid_1	species	Sphingomonas phyllosphaerae	1.00	1.00	3725169	3733085
+berserk_euclid_1	species	Vibrio cincinnatiensis	1.00	0.99	3643188	3660162
+berserk_euclid_1	species	Janibacter limosus	1.00	0.98	3573127	3637742
+berserk_euclid_1	species	Butyricicoccus pullicaecorum	0.96	1.00	3395010	3268385
+berserk_euclid_1	species	Butyrivibrio hungatei	1.00	0.98	3323697	3390034
+berserk_euclid_1	species	Phenylobacterium composti	0.99	0.99	3312692	3301850
+berserk_euclid_1	species	Desulfovibrio bizertensis	0.98	1.00	3311801	3257376
+berserk_euclid_1	species	Formosa spongicola	0.99	0.99	3171004	3154949
+berserk_euclid_1	species	Lutispora thermophila	0.77	0.69	3095085	3459146
+berserk_euclid_1	species	Desulfovibrio alkalitolerans	1.00	0.98	3065952	3111934
+berserk_euclid_1	species	Intestinibacter bartlettii	1.00	0.99	2900700	2937124
+berserk_euclid_1	species	Caloranaerobacter azorensis	0.85	0.97	2798677	2455797
+berserk_euclid_1	species	Sphingomonas aestuarii	1.00	0.93	2790539	2985887
+berserk_euclid_1	species	Bacillus coagulans	1.00	0.94	2774720	2948556
+berserk_euclid_1	species	Clostridium tetani	1.00	0.97	2716667	2788202
+berserk_euclid_1	species	Sphingobacterium nematocida	0.81	0.43	2647742	4981289
+berserk_euclid_1	species	Paenibacillus frigoriresistens	0.88	0.31	2633267	7400375
+berserk_euclid_1	species	Nitrosomonas europaea	0.99	0.95	2615196	2734309
+berserk_euclid_1	species	Desulfovibrio vietnamensis	0.98	0.69	2611416	3707244
+berserk_euclid_1	species	Tetragenococcus halophilus	0.91	0.99	2599706	2396848
+berserk_euclid_1	species	[Eubacterium] yurii	0.99	0.99	2552808	2550032
+berserk_euclid_1	species	Caminicella sporogenes	0.97	0.96	2469014	2472183
+berserk_euclid_1	species	Desulfotomaculum hydrothermale	1.00	0.94	2468200	2625413
+berserk_euclid_1	species	Ferrithrix thermotolerans	0.99	0.97	2432195	2485587
+berserk_euclid_1	species	Tepidibacter thalassicus	0.96	0.96	2224116	2232591
+berserk_euclid_1	species	Roseinatronobacter thiooxidans	0.77	0.45	2114061	3606821
+berserk_euclid_1	species	Porphyromonas crevioricanis	0.96	0.98	2099172	2044131
+berserk_euclid_1	species	unassigned	nan	nan	189612194	185124110
+berserk_hypatia_1	superkingdom	Bacteria	1.00	0.94	520923803	553468052
+berserk_hypatia_1	superkingdom	Archaea	1.00	0.88	5631524	6411802
+berserk_hypatia_1	superkingdom	unassigned	nan	nan	35474519	1413217
+berserk_hypatia_1	phylum	Proteobacteria	1.00	0.92	224681912	243932505
+berserk_hypatia_1	phylum	Actinobacteria	0.99	0.97	142734634	145948197
+berserk_hypatia_1	phylum	Firmicutes	0.97	0.88	106113505	116336594
+berserk_hypatia_1	phylum	Bacteroidetes	0.88	0.89	45795828	45650742
+berserk_hypatia_1	phylum	Euryarchaeota	1.00	0.88	5631524	6411802
+berserk_hypatia_1	phylum	Tenericutes	1.00	1.00	1597924	1600014
+berserk_hypatia_1	phylum	unassigned	nan	nan	35474519	2149992
+berserk_hypatia_1	class	Actinobacteria	0.99	0.97	142734634	145948197
+berserk_hypatia_1	class	Alphaproteobacteria	0.99	0.85	110308047	127454801
+berserk_hypatia_1	class	Betaproteobacteria	0.97	0.97	78488347	78627440
+berserk_hypatia_1	class	Clostridia	0.95	0.91	76535838	79844812
+berserk_hypatia_1	class	Gammaproteobacteria	1.00	0.98	27178733	27773710
+berserk_hypatia_1	class	Bacilli	0.94	0.68	23507942	32340827
+berserk_hypatia_1	class	Sphingobacteriia	0.89	0.95	20373296	19013960
+berserk_hypatia_1	class	Cytophagia	0.78	0.76	14120083	14411538
+berserk_hypatia_1	class	Flavobacteriia	0.96	0.93	9156902	9442158
+berserk_hypatia_1	class	Deltaproteobacteria	0.86	0.75	8706785	10076554
+berserk_hypatia_1	class	Negativicutes	0.67	0.99	6069725	4150955
+berserk_hypatia_1	class	Halobacteria	1.00	0.84	4097408	4877686
+berserk_hypatia_1	class	Bacteroidia	0.96	0.74	2145547	2783086
+berserk_hypatia_1	class	Mollicutes	1.00	1.00	1597924	1600014
+berserk_hypatia_1	class	Thermoplasmata	1.00	1.00	1534116	1534116
+berserk_hypatia_1	class	unassigned	nan	nan	35474519	2149992
+berserk_hypatia_1	order	Actinomycetales	0.99	0.97	140380678	143462610
+berserk_hypatia_1	order	Clostridiales	0.94	0.91	67325210	69444702
+berserk_hypatia_1	order	Burkholderiales	0.97	0.97	66582764	66564525
+berserk_hypatia_1	order	Rhizobiales	0.93	0.72	42153773	54087866
+berserk_hypatia_1	order	Rhodobacterales	0.90	0.88	23894865	24573518
+berserk_hypatia_1	order	Rhodospirillales	0.96	0.98	22615754	22154048
+berserk_hypatia_1	order	Bacillales	0.93	0.66	21029185	29943979
+berserk_hypatia_1	order	Sphingobacteriales	0.89	0.95	20373296	19013960
+berserk_hypatia_1	order	Sphingomonadales	0.93	0.73	18341805	23337519
+berserk_hypatia_1	order	Cytophagales	0.78	0.76	14120083	14411538
+berserk_hypatia_1	order	Thermoanaerobacterales	0.91	0.81	9210628	10400110
+berserk_hypatia_1	order	Flavobacteriales	0.96	0.93	9156902	9442158
+berserk_hypatia_1	order	Methylophilales	0.97	0.98	9023386	8904107
+berserk_hypatia_1	order	Desulfovibrionales	0.86	0.75	8706785	10076554
+berserk_hypatia_1	order	Vibrionales	1.00	0.99	8170337	8287247
+berserk_hypatia_1	order	Selenomonadales	0.67	0.99	6069725	4150955
+berserk_hypatia_1	order	Enterobacteriales	1.00	0.98	5326486	5419845
+berserk_hypatia_1	order	Pseudomonadales	1.00	0.95	5183396	5477884
+berserk_hypatia_1	order	Alteromonadales	1.00	1.00	4980999	4980999
+berserk_hypatia_1	order	Halobacteriales	1.00	0.84	4097408	4877686
+berserk_hypatia_1	order	Legionellales	1.00	0.97	3517515	3607735
+berserk_hypatia_1	order	Caulobacterales	1.00	1.00	3301850	3301850
+berserk_hypatia_1	order	Nitrosomonadales	1.00	0.98	2688986	2734309
+berserk_hypatia_1	order	Lactobacillales	0.96	1.00	2478757	2396848
+berserk_hypatia_1	order	Acidimicrobiales	1.00	0.95	2353956	2485587
+berserk_hypatia_1	order	Bacteroidales	0.96	0.74	2145547	2783086
+berserk_hypatia_1	order	Acholeplasmatales	1.00	1.00	1597924	1600014
+berserk_hypatia_1	order	Thermoplasmatales	1.00	1.00	1534116	1534116
+berserk_hypatia_1	order	Neisseriales	0.39	0.18	193211	424499
+berserk_hypatia_1	order	unassigned	nan	nan	35474519	2149992
+berserk_hypatia_1	family	Comamonadaceae	0.92	0.97	39488878	37691258
+berserk_hypatia_1	family	Pseudonocardiaceae	0.87	0.91	33966624	32681267
+berserk_hypatia_1	family	Cellulomonadaceae	0.81	0.86	33208241	31237913
+berserk_hypatia_1	family	Oxalobacteraceae	0.90	0.84	27093886	28873267
+berserk_hypatia_1	family	Rhodobacteraceae	0.90	0.88	23894865	24573518
+berserk_hypatia_1	family	Rhodospirillaceae	0.96	0.98	22615754	22154048
+berserk_hypatia_1	family	Sphingobacteriaceae	0.89	0.95	20373296	19013960
+berserk_hypatia_1	family	Clostridiales Family XIX. Incertae Sedis	0.72	0.90	19084681	15210881
+berserk_hypatia_1	family	Sphingomonadaceae	0.93	0.73	18341805	23337519
+berserk_hypatia_1	family	Streptomycetaceae	0.95	0.87	16850543	18428033
+berserk_hypatia_1	family	Cytophagaceae	0.78	0.76	14120083	14411538
+berserk_hypatia_1	family	Clostridiaceae	0.97	0.69	13603671	18916804
+berserk_hypatia_1	family	Nocardioidaceae	0.77	0.99	13438369	10494171
+berserk_hypatia_1	family	Nocardiaceae	1.00	0.98	12796501	13003876
+berserk_hypatia_1	family	Clostridiales Family XVI. Incertae Sedis	0.86	0.70	12114903	14888857
+berserk_hypatia_1	family	Intrasporangiaceae	0.96	0.91	11740702	12422925
+berserk_hypatia_1	family	Phyllobacteriaceae	0.51	0.63	10721084	8674992
+berserk_hypatia_1	family	Xanthobacteraceae	0.99	0.96	9836936	10190100
+berserk_hypatia_1	family	Peptostreptococcaceae	0.74	0.91	9511397	7719747
+berserk_hypatia_1	family	Thermoanaerobacteraceae	0.91	0.81	9210628	10400110
+berserk_hypatia_1	family	Flavobacteriaceae	0.96	0.93	9156902	9442158
+berserk_hypatia_1	family	Rhizobiaceae	0.88	0.43	9134391	18598125
+berserk_hypatia_1	family	Methylophilaceae	0.97	0.98	9023386	8904107
+berserk_hypatia_1	family	Desulfovibrionaceae	0.86	0.75	8706785	10076554
+berserk_hypatia_1	family	Lachnospiraceae	0.99	0.98	8198864	8225026
+berserk_hypatia_1	family	Vibrionaceae	1.00	0.99	8170337	8287247
+berserk_hypatia_1	family	Microbacteriaceae	0.99	1.00	7861275	7792846
+berserk_hypatia_1	family	Aurantimonadaceae	0.97	0.90	7168945	7749681
+berserk_hypatia_1	family	Mycobacteriaceae	1.00	0.99	6649688	6676999
+berserk_hypatia_1	family	Veillonellaceae	0.67	0.99	6069725	4150955
+berserk_hypatia_1	family	Enterobacteriaceae	1.00	0.98	5326486	5419845
+berserk_hypatia_1	family	Planococcaceae	0.94	0.69	5306713	7245311
+berserk_hypatia_1	family	Bradyrhizobiaceae	0.94	0.56	5292417	8874968
+berserk_hypatia_1	family	Pseudomonadaceae	1.00	0.95	5183396	5477884
+berserk_hypatia_1	family	Ferrimonadaceae	1.00	1.00	4980999	4980999
+berserk_hypatia_1	family	Halobacteriaceae	1.00	0.84	4097408	4877686
+berserk_hypatia_1	family	Propionibacteriaceae	1.00	0.94	3868735	4125126
+berserk_hypatia_1	family	Legionellaceae	1.00	0.97	3517515	3607735
+berserk_hypatia_1	family	Caulobacteraceae	1.00	1.00	3301850	3301850
+berserk_hypatia_1	family	Paenibacillaceae	0.60	0.26	3160380	7400375
+berserk_hypatia_1	family	Bacillaceae	1.00	0.96	2822912	2948556
+berserk_hypatia_1	family	Nitrosomonadaceae	1.00	0.98	2688986	2734309
+berserk_hypatia_1	family	Peptococcaceae	1.00	0.96	2528024	2625413
+berserk_hypatia_1	family	Enterococcaceae	0.96	1.00	2478757	2396848
+berserk_hypatia_1	family	Acidimicrobiaceae	1.00	0.95	2353956	2485587
+berserk_hypatia_1	family	Eubacteriaceae	0.33	0.41	2283670	1857974
+berserk_hypatia_1	family	Porphyromonadaceae	1.00	0.99	2032579	2044131
+berserk_hypatia_1	family	Acholeplasmataceae	1.00	1.00	1597924	1600014
+berserk_hypatia_1	family	Picrophilaceae	1.00	1.00	1534116	1534116
+berserk_hypatia_1	family	Staphylococcaceae	0.38	0.09	613763	2645012
+berserk_hypatia_1	family	Neisseriaceae	0.39	0.18	193211	424499
+berserk_hypatia_1	family	Prevotellaceae	0.32	0.05	112968	738955
+berserk_hypatia_1	family	unassigned	nan	nan	44599936	11854717
+berserk_hypatia_1	genus	Massilia	0.90	0.84	27093886	28873267
+berserk_hypatia_1	genus	Cellulomonas	0.75	0.84	24784394	22124132
+berserk_hypatia_1	genus	Lechevalieria	0.80	0.85	21692151	20408997
+berserk_hypatia_1	genus	Acetoanaerobium	0.72	0.90	19084681	15210881
+berserk_hypatia_1	genus	Sphingomonas	0.93	0.73	18341805	23337519
+berserk_hypatia_1	genus	Phaeospirillum	0.95	0.98	15594525	15012162
+berserk_hypatia_1	genus	Ohtaekwangia	0.78	0.76	14120083	14411538
+berserk_hypatia_1	genus	Aeromicrobium	0.77	0.99	13438369	10494171
+berserk_hypatia_1	genus	Kibdelosporangium	1.00	1.00	12274473	12272270
+berserk_hypatia_1	genus	Carboxydocella	0.86	0.70	12114903	14888857
+berserk_hypatia_1	genus	Sphingobacterium	0.79	0.91	10847923	9481390
+berserk_hypatia_1	genus	Aquamicrobium	0.51	0.63	10721084	8674992
+berserk_hypatia_1	genus	Pedobacter	1.00	1.00	9525373	9532570
+berserk_hypatia_1	genus	Paracoccus	0.90	0.87	9346188	9589943
+berserk_hypatia_1	genus	Methylophilus	0.97	0.98	9023386	8904107
+berserk_hypatia_1	genus	Desulfovibrio	0.86	0.75	8706785	10076554
+berserk_hypatia_1	genus	Oerskovia	1.00	0.92	8423847	9113781
+berserk_hypatia_1	genus	Butyrivibrio	0.99	0.98	8198864	8225026
+berserk_hypatia_1	genus	Vibrio	1.00	0.99	8170337	8287247
+berserk_hypatia_1	genus	Sinorhizobium	0.87	0.51	8039031	13774939
+berserk_hypatia_1	genus	Phycicoccus	1.00	0.89	7807497	8785183
+berserk_hypatia_1	genus	Nocardia	1.00	0.99	7182288	7282241
+berserk_hypatia_1	genus	Rhodobacter	1.00	0.95	7169764	7530868
+berserk_hypatia_1	genus	Azospirillum	1.00	0.98	7021229	7141886
+berserk_hypatia_1	genus	Clostridium	1.00	0.92	6715359	7261293
+berserk_hypatia_1	genus	Mycobacterium	1.00	0.99	6649688	6676999
+berserk_hypatia_1	genus	Propionispora	0.67	0.99	6069725	4150955
+berserk_hypatia_1	genus	Rhodococcus	1.00	0.98	5614213	5721635
+berserk_hypatia_1	genus	Intestinibacter	0.54	0.99	5366257	2937124
+berserk_hypatia_1	genus	Rahnella	1.00	0.98	5326486	5419845
+berserk_hypatia_1	genus	Sporosarcina	0.94	0.69	5306713	7245311
+berserk_hypatia_1	genus	Bosea	0.94	0.56	5292417	8874968
+berserk_hypatia_1	genus	Azotobacter	1.00	0.95	5183396	5477884
+berserk_hypatia_1	genus	Pseudoxanthobacter	0.99	0.96	4997211	5163876
+berserk_hypatia_1	genus	Ferrimonas	1.00	1.00	4980999	4980999
+berserk_hypatia_1	genus	Moorella	1.00	0.96	4940573	5136963
+berserk_hypatia_1	genus	Xanthobacter	1.00	0.96	4839725	5026224
+berserk_hypatia_1	genus	Thermoanaerobacter	0.81	0.65	4270055	5263147
+berserk_hypatia_1	genus	Halobacterium	1.00	0.84	4097408	4877686
+berserk_hypatia_1	genus	Diaphorobacter	1.00	0.97	3966654	4083860
+berserk_hypatia_1	genus	Curtobacterium	1.00	1.00	3933747	3925652
+berserk_hypatia_1	genus	Janibacter	0.88	0.96	3933205	3637742
+berserk_hypatia_1	genus	Tessaracoccus	1.00	0.94	3868735	4125126
+berserk_hypatia_1	genus	Roseinatronobacter	0.61	0.63	3772864	3606821
+berserk_hypatia_1	genus	Rhodobaca	0.96	0.90	3606049	3845886
+berserk_hypatia_1	genus	Tatlockia	1.00	0.97	3517515	3607735
+berserk_hypatia_1	genus	Phenylobacterium	1.00	1.00	3301850	3301850
+berserk_hypatia_1	genus	Butyricicoccus	1.00	0.99	3225188	3268385
+berserk_hypatia_1	genus	Paenibacillus	0.60	0.26	3160380	7400375
+berserk_hypatia_1	genus	Olleya	0.94	1.00	3115525	2957608
+berserk_hypatia_1	genus	Formosa	1.00	0.98	3086229	3154949
+berserk_hypatia_1	genus	Chryseobacterium	0.94	0.84	2955148	3329601
+berserk_hypatia_1	genus	Bacillus	1.00	0.96	2822912	2948556
+berserk_hypatia_1	genus	Nitrosomonas	1.00	0.98	2688986	2734309
+berserk_hypatia_1	genus	Desulfotomaculum	1.00	0.96	2528024	2625413
+berserk_hypatia_1	genus	Caloranaerobacter	0.98	0.99	2479470	2455797
+berserk_hypatia_1	genus	Tetragenococcus	0.96	1.00	2478757	2396848
+berserk_hypatia_1	genus	Ferrithrix	1.00	0.95	2353956	2485587
+berserk_hypatia_1	genus	Garciella	0.33	0.41	2283670	1857974
+berserk_hypatia_1	genus	Tepidibacter	1.00	0.99	2208901	2232591
+berserk_hypatia_1	genus	Porphyromonas	1.00	0.99	2032579	2044131
+berserk_hypatia_1	genus	Peptoclostridium	0.97	0.73	1936239	2550032
+berserk_hypatia_1	genus	Acholeplasma	1.00	1.00	1597924	1600014
+berserk_hypatia_1	genus	Picrophilus	1.00	1.00	1534116	1534116
+berserk_hypatia_1	genus	Lutispora	0.64	0.22	1183654	3459146
+berserk_hypatia_1	genus	Rhizobium	0.62	0.14	1095360	4823186
+berserk_hypatia_1	genus	Salinicoccus	0.38	0.09	613763	2645012
+berserk_hypatia_1	genus	Alysiella	0.39	0.18	193211	424499
+berserk_hypatia_1	genus	Prevotella	0.32	0.05	112968	738955
+berserk_hypatia_1	genus	unassigned	nan	nan	108069176	75507023
+berserk_hypatia_1	species	uncultured Massilia sp.	0.90	0.84	27093886	28873267
+berserk_hypatia_1	species	Acetoanaerobium noterae	0.72	0.90	19084681	15210881
+berserk_hypatia_1	species	Phaeospirillum fulvum	0.95	0.98	15594525	15012162
+berserk_hypatia_1	species	Aeromicrobium ponti	0.77	0.99	13438369	10494171
+berserk_hypatia_1	species	Kibdelosporangium aridum	1.00	1.00	12274473	12272270
+berserk_hypatia_1	species	Carboxydocella sporoproducens	0.86	0.70	12114903	14888857
+berserk_hypatia_1	species	Lechevalieria aerocolonigenes	0.64	0.72	12012989	10667666
+berserk_hypatia_1	species	Lechevalieria flava	1.00	0.99	9679162	9741331
+berserk_hypatia_1	species	Paracoccus pantotrophus	0.90	0.87	9346188	9589943
+berserk_hypatia_1	species	Sinorhizobium meliloti	0.87	0.51	8039031	13774939
+berserk_hypatia_1	species	Ohtaekwangia kribbensis	0.44	0.48	7902592	7189318
+berserk_hypatia_1	species	Rhodobacter capsulatus	1.00	0.95	7169764	7530868
+berserk_hypatia_1	species	Azospirillum brasilense	1.00	0.98	7021229	7141886
+berserk_hypatia_1	species	Sphingobacterium psychroaquaticum	0.67	0.99	6625892	4500101
+berserk_hypatia_1	species	Ohtaekwangia koreensis	0.92	0.79	6217491	7222220
+berserk_hypatia_1	species	Propionispora hippei	0.67	0.99	6069725	4150955
+berserk_hypatia_1	species	Intestinibacter bartlettii	0.54	0.99	5366257	2937124
+berserk_hypatia_1	species	Rahnella aquatilis	1.00	0.98	5326486	5419845
+berserk_hypatia_1	species	Sporosarcina newyorkensis	0.94	0.69	5306713	7245311
+berserk_hypatia_1	species	Azotobacter vinelandii	1.00	0.95	5183396	5477884
+berserk_hypatia_1	species	Pseudoxanthobacter soli	0.99	0.96	4997211	5163876
+berserk_hypatia_1	species	Ferrimonas marina	1.00	1.00	4980999	4980999
+berserk_hypatia_1	species	Moorella thermoacetica	1.00	0.96	4940573	5136963
+berserk_hypatia_1	species	Xanthobacter autotrophicus	1.00	0.96	4839725	5026224
+berserk_hypatia_1	species	Butyrivibrio fibrisolvens	0.99	0.99	4822060	4834992
+berserk_hypatia_1	species	Pedobacter agri	1.00	1.00	4775005	4779416
+berserk_hypatia_1	species	Vibrio gazogenes	1.00	0.99	4589756	4627085
+berserk_hypatia_1	species	Thermoanaerobacter thermohydrosulfuricus	0.81	0.65	4270055	5263147
+berserk_hypatia_1	species	Sphingobacterium nematocida	0.98	0.83	4222031	4981289
+berserk_hypatia_1	species	Halobacterium salinarum	1.00	0.84	4097408	4877686
+berserk_hypatia_1	species	Diaphorobacter oryzae	1.00	0.97	3966654	4083860
+berserk_hypatia_1	species	Clostridium grantii	1.00	0.88	3938631	4473091
+berserk_hypatia_1	species	Curtobacterium sp. B20	1.00	1.00	3933747	3925652
+berserk_hypatia_1	species	Janibacter limosus	0.88	0.96	3933205	3637742
+berserk_hypatia_1	species	Tessaracoccus bendigoensis	1.00	0.94	3868735	4125126
+berserk_hypatia_1	species	Roseinatronobacter thiooxidans	0.61	0.63	3772864	3606821
+berserk_hypatia_1	species	Rhodobaca barguzinensis	0.96	0.90	3606049	3845886
+berserk_hypatia_1	species	Vibrio cincinnatiensis	1.00	0.98	3580581	3660162
+berserk_hypatia_1	species	Legionella maceachernii	1.00	0.97	3517515	3607735
+berserk_hypatia_1	species	Butyrivibrio hungatei	0.98	0.98	3376804	3390034
+berserk_hypatia_1	species	Phenylobacterium composti	1.00	1.00	3301850	3301850
+berserk_hypatia_1	species	Butyricicoccus pullicaecorum	1.00	0.99	3225188	3268385
+berserk_hypatia_1	species	Desulfovibrio bizertensis	1.00	0.97	3175336	3257376
+berserk_hypatia_1	species	Paenibacillus frigoriresistens	0.60	0.26	3160380	7400375
+berserk_hypatia_1	species	Olleya aquimaris	0.94	1.00	3115525	2957608
+berserk_hypatia_1	species	Desulfovibrio alkalitolerans	1.00	1.00	3103778	3111934
+berserk_hypatia_1	species	Sphingomonas phyllosphaerae	1.00	0.83	3089106	3733085
+berserk_hypatia_1	species	Formosa spongicola	1.00	0.98	3086229	3154949
+berserk_hypatia_1	species	Sphingomonas aestuarii	1.00	0.97	2907448	2985887
+berserk_hypatia_1	species	Bacillus coagulans	1.00	0.96	2822912	2948556
+berserk_hypatia_1	species	Clostridium tetani	1.00	1.00	2776728	2788202
+berserk_hypatia_1	species	Nitrosomonas europaea	1.00	0.98	2688986	2734309
+berserk_hypatia_1	species	Desulfotomaculum hydrothermale	1.00	0.96	2528024	2625413
+berserk_hypatia_1	species	Caloranaerobacter azorensis	0.98	0.99	2479470	2455797
+berserk_hypatia_1	species	Tetragenococcus halophilus	0.96	1.00	2478757	2396848
+berserk_hypatia_1	species	Desulfovibrio vietnamensis	0.51	0.33	2427671	3707244
+berserk_hypatia_1	species	Ferrithrix thermotolerans	1.00	0.95	2353956	2485587
+berserk_hypatia_1	species	Garciella nitratireducens	0.33	0.41	2283670	1857974
+berserk_hypatia_1	species	Tepidibacter thalassicus	1.00	0.99	2208901	2232591
+berserk_hypatia_1	species	Porphyromonas crevioricanis	1.00	0.99	2032579	2044131
+berserk_hypatia_1	species	[Eubacterium] yurii	0.97	0.73	1936239	2550032
+berserk_hypatia_1	species	Cellulomonas terrae	0.63	0.25	1827782	4652222
+berserk_hypatia_1	species	Acholeplasma oculi	1.00	1.00	1597924	1600014
+berserk_hypatia_1	species	Picrophilus oshimae	1.00	1.00	1534116	1534116
+berserk_hypatia_1	species	Lutispora thermophila	0.64	0.22	1183654	3459146
+berserk_hypatia_1	species	Salinicoccus kunmingensis	0.38	0.09	613763	2645012
+berserk_hypatia_1	species	Alysiella filiformis	0.39	0.18	193211	424499
+berserk_hypatia_1	species	Prevotella oulorum	0.32	0.05	112968	738955
+berserk_hypatia_1	species	unassigned	nan	nan	212886335	185124110
+compassionate_bardeen_1	superkingdom	Bacteria	1.00	0.97	537884332	553468052
+compassionate_bardeen_1	superkingdom	Archaea	1.00	1.00	6439523	6411802
+compassionate_bardeen_1	superkingdom	Viruses	0.53	0.37	511610	736775
+compassionate_bardeen_1	superkingdom	unassigned	nan	nan	17194381	1413217
+compassionate_bardeen_1	phylum	Proteobacteria	1.00	0.96	234622901	243932505
+compassionate_bardeen_1	phylum	Actinobacteria	0.99	0.99	146070790	145948197
+compassionate_bardeen_1	phylum	Firmicutes	0.95	0.95	116373536	116336594
+compassionate_bardeen_1	phylum	Bacteroidetes	0.97	0.83	39194547	45650742
+compassionate_bardeen_1	phylum	Euryarchaeota	1.00	1.00	6439523	6411802
+compassionate_bardeen_1	phylum	Tenericutes	0.98	1.00	1622558	1600014
+compassionate_bardeen_1	phylum	unassigned	nan	nan	17705991	2149992
+compassionate_bardeen_1	class	Actinobacteria	0.99	0.99	146070790	145948197
+compassionate_bardeen_1	class	Alphaproteobacteria	0.93	0.93	127657600	127454801
+compassionate_bardeen_1	class	Clostridia	1.00	0.97	77583834	79844812
+compassionate_bardeen_1	class	Betaproteobacteria	1.00	0.98	77552525	78627440
+compassionate_bardeen_1	class	Bacilli	0.82	0.88	34681139	32340827
+compassionate_bardeen_1	class	Gammaproteobacteria	0.95	0.80	23450670	27773710
+compassionate_bardeen_1	class	Sphingobacteriia	0.91	0.75	15589692	19013960
+compassionate_bardeen_1	class	Cytophagia	0.99	0.89	12863429	14411538
+compassionate_bardeen_1	class	Flavobacteriia	1.00	0.92	8695570	9442158
+compassionate_bardeen_1	class	Deltaproteobacteria	0.96	0.57	5962106	10076554
+compassionate_bardeen_1	class	Halobacteria	0.99	1.00	4905407	4877686
+compassionate_bardeen_1	class	Negativicutes	1.00	0.99	4108563	4150955
+compassionate_bardeen_1	class	Bacteroidia	0.98	0.72	2045856	2783086
+compassionate_bardeen_1	class	Mollicutes	0.98	1.00	1622558	1600014
+compassionate_bardeen_1	class	Thermoplasmata	1.00	1.00	1534116	1534116
+compassionate_bardeen_1	class	unassigned	nan	nan	17705991	2149992
+compassionate_bardeen_1	order	Actinomycetales	0.99	0.99	143674843	143462610
+compassionate_bardeen_1	order	Clostridiales	0.99	0.96	67204829	69444702
+compassionate_bardeen_1	order	Burkholderiales	1.00	0.99	65893107	66564525
+compassionate_bardeen_1	order	Rhizobiales	0.96	0.86	48620678	54087866
+compassionate_bardeen_1	order	Bacillales	0.80	0.85	31602738	29943979
+compassionate_bardeen_1	order	Rhodospirillales	0.72	0.99	30575313	22154048
+compassionate_bardeen_1	order	Rhodobacterales	1.00	0.92	22750097	24573518
+compassionate_bardeen_1	order	Sphingomonadales	1.00	0.96	22354465	23337519
+compassionate_bardeen_1	order	Sphingobacteriales	0.91	0.75	15589692	19013960
+compassionate_bardeen_1	order	Cytophagales	0.99	0.89	12863429	14411538
+compassionate_bardeen_1	order	Thermoanaerobacterales	0.90	0.90	10379005	10400110
+compassionate_bardeen_1	order	Methylophilales	0.99	1.00	9020541	8904107
+compassionate_bardeen_1	order	Flavobacteriales	1.00	0.92	8695570	9442158
+compassionate_bardeen_1	order	Vibrionales	0.99	0.99	8230937	8287247
+compassionate_bardeen_1	order	Desulfovibrionales	0.96	0.57	5962106	10076554
+compassionate_bardeen_1	order	Enterobacteriales	1.00	0.99	5343017	5419845
+compassionate_bardeen_1	order	Alteromonadales	1.00	1.00	4996251	4980999
+compassionate_bardeen_1	order	Halobacteriales	0.99	1.00	4905407	4877686
+compassionate_bardeen_1	order	Selenomonadales	1.00	0.99	4108563	4150955
+compassionate_bardeen_1	order	Legionellales	0.93	1.00	3873455	3607735
+compassionate_bardeen_1	order	Caulobacterales	0.98	1.00	3357047	3301850
+compassionate_bardeen_1	order	Lactobacillales	0.76	0.98	3078401	2396848
+compassionate_bardeen_1	order	Nitrosomonadales	0.98	0.95	2638877	2734309
+compassionate_bardeen_1	order	Acidimicrobiales	1.00	0.96	2395947	2485587
+compassionate_bardeen_1	order	Bacteroidales	0.98	0.72	2045856	2783086
+compassionate_bardeen_1	order	Acholeplasmatales	0.98	1.00	1622558	1600014
+compassionate_bardeen_1	order	Thermoplasmatales	1.00	1.00	1534116	1534116
+compassionate_bardeen_1	order	Pseudomonadales	0.18	0.03	1007010	5477884
+compassionate_bardeen_1	order	unassigned	nan	nan	17705991	2149992
+compassionate_bardeen_1	family	Comamonadaceae	1.00	0.99	37472947	37691258
+compassionate_bardeen_1	family	Pseudonocardiaceae	0.95	0.98	33773367	32681267
+compassionate_bardeen_1	family	Rhodospirillaceae	0.72	0.99	30575313	22154048
+compassionate_bardeen_1	family	Cellulomonadaceae	0.99	0.96	30489048	31237913
+compassionate_bardeen_1	family	Oxalobacteraceae	1.00	0.98	28420160	28873267
+compassionate_bardeen_1	family	Rhodobacteraceae	1.00	0.92	22750097	24573518
+compassionate_bardeen_1	family	Sphingomonadaceae	1.00	0.96	22354465	23337519
+compassionate_bardeen_1	family	Clostridiaceae	0.81	0.84	19644460	18916804
+compassionate_bardeen_1	family	Streptomycetaceae	0.99	1.00	18610574	18428033
+compassionate_bardeen_1	family	Rhizobiaceae	0.89	0.80	16658622	18598125
+compassionate_bardeen_1	family	Sphingobacteriaceae	0.91	0.75	15589692	19013960
+compassionate_bardeen_1	family	Clostridiales Family XIX. Incertae Sedis	1.00	0.97	14822142	15210881
+compassionate_bardeen_1	family	Clostridiales Family XVI. Incertae Sedis	1.00	0.95	14087105	14888857
+compassionate_bardeen_1	family	Nocardiaceae	1.00	0.99	12932191	13003876
+compassionate_bardeen_1	family	Cytophagaceae	0.99	0.89	12863429	14411538
+compassionate_bardeen_1	family	Intrasporangiaceae	1.00	0.97	12066220	12422925
+compassionate_bardeen_1	family	Planococcaceae	0.58	0.94	11845002	7245311
+compassionate_bardeen_1	family	Nocardioidaceae	0.99	1.00	10570586	10494171
+compassionate_bardeen_1	family	Thermoanaerobacteraceae	0.90	0.90	10379005	10400110
+compassionate_bardeen_1	family	Xanthobacteraceae	0.99	0.99	10151638	10190100
+compassionate_bardeen_1	family	Methylophilaceae	0.99	1.00	9020541	8904107
+compassionate_bardeen_1	family	Phyllobacteriaceae	0.87	0.88	8789252	8674992
+compassionate_bardeen_1	family	Flavobacteriaceae	1.00	0.92	8695570	9442158
+compassionate_bardeen_1	family	Vibrionaceae	0.99	0.99	8230937	8287247
+compassionate_bardeen_1	family	Lachnospiraceae	1.00	0.99	8125539	8225026
+compassionate_bardeen_1	family	Peptostreptococcaceae	0.68	0.71	8032511	7719747
+compassionate_bardeen_1	family	Microbacteriaceae	0.97	0.97	7806784	7792846
+compassionate_bardeen_1	family	Aurantimonadaceae	1.00	0.98	7606322	7749681
+compassionate_bardeen_1	family	Mycobacteriaceae	0.99	0.99	6676479	6676999
+compassionate_bardeen_1	family	Promicromonosporaceae	0.98	0.99	6662847	6599454
+compassionate_bardeen_1	family	Desulfovibrionaceae	0.96	0.57	5962106	10076554
+compassionate_bardeen_1	family	Paenibacillaceae	0.93	0.68	5458272	7400375
+compassionate_bardeen_1	family	Bradyrhizobiaceae	0.99	0.60	5414844	8874968
+compassionate_bardeen_1	family	Enterobacteriaceae	1.00	0.99	5343017	5419845
+compassionate_bardeen_1	family	Ferrimonadaceae	1.00	1.00	4996251	4980999
+compassionate_bardeen_1	family	Halobacteriaceae	0.99	1.00	4905407	4877686
+compassionate_bardeen_1	family	Veillonellaceae	1.00	0.99	4108563	4150955
+compassionate_bardeen_1	family	Propionibacteriaceae	1.00	0.99	4086747	4125126
+compassionate_bardeen_1	family	Legionellaceae	0.93	1.00	3873455	3607735
+compassionate_bardeen_1	family	Caulobacteraceae	0.98	1.00	3357047	3301850
+compassionate_bardeen_1	family	Enterococcaceae	0.76	0.98	3078401	2396848
+compassionate_bardeen_1	family	Bacillaceae	1.00	0.93	2735804	2948556
+compassionate_bardeen_1	family	Nitrosomonadaceae	0.98	0.95	2638877	2734309
+compassionate_bardeen_1	family	Peptococcaceae	1.00	0.95	2493072	2625413
+compassionate_bardeen_1	family	Staphylococcaceae	0.32	0.29	2433315	2645012
+compassionate_bardeen_1	family	Acidimicrobiaceae	1.00	0.96	2395947	2485587
+compassionate_bardeen_1	family	Porphyromonadaceae	0.98	0.98	2045856	2044131
+compassionate_bardeen_1	family	Acholeplasmataceae	0.98	1.00	1622558	1600014
+compassionate_bardeen_1	family	Picrophilaceae	1.00	1.00	1534116	1534116
+compassionate_bardeen_1	family	Pseudomonadaceae	0.18	0.03	1007010	5477884
+compassionate_bardeen_1	family	unassigned	nan	nan	26836336	11854717
+compassionate_bardeen_1	genus	Cellulomonas	0.70	0.95	30129692	22124132
+compassionate_bardeen_1	genus	Massilia	1.00	0.98	28420160	28873267
+compassionate_bardeen_1	genus	Sphingomonas	1.00	0.96	22354465	23337519
+compassionate_bardeen_1	genus	Lechevalieria	0.92	0.93	20705187	20408997
+compassionate_bardeen_1	genus	Azospirillum	0.45	1.00	15687038	7141886
+compassionate_bardeen_1	genus	Phaeospirillum	1.00	0.99	14888275	15012162
+compassionate_bardeen_1	genus	Acetoanaerobium	1.00	0.97	14822142	15210881
+compassionate_bardeen_1	genus	Carboxydocella	1.00	0.95	14087105	14888857
+compassionate_bardeen_1	genus	Sinorhizobium	0.92	0.92	13842770	13774939
+compassionate_bardeen_1	genus	Kibdelosporangium	0.94	1.00	13068180	12272270
+compassionate_bardeen_1	genus	Ohtaekwangia	0.99	0.89	12863429	14411538
+compassionate_bardeen_1	genus	Paracoccus	0.71	0.94	12727706	9589943
+compassionate_bardeen_1	genus	Sporosarcina	0.58	0.94	11845002	7245311
+compassionate_bardeen_1	genus	Aeromicrobium	0.99	1.00	10570586	10494171
+compassionate_bardeen_1	genus	Pedobacter	0.98	1.00	9708606	9532570
+compassionate_bardeen_1	genus	Clostridium	0.76	0.99	9434302	7261293
+compassionate_bardeen_1	genus	Methylophilus	0.99	1.00	9020541	8904107
+compassionate_bardeen_1	genus	Aquamicrobium	0.87	0.88	8789252	8674992
+compassionate_bardeen_1	genus	Phycicoccus	1.00	0.97	8490157	8785183
+compassionate_bardeen_1	genus	Vibrio	0.99	0.99	8230937	8287247
+compassionate_bardeen_1	genus	Butyrivibrio	1.00	0.99	8125539	8225026
+compassionate_bardeen_1	genus	Nocardia	1.00	1.00	7275315	7282241
+compassionate_bardeen_1	genus	Mycobacterium	0.99	0.99	6676479	6676999
+compassionate_bardeen_1	genus	Promicromonospora	0.98	0.99	6662847	6599454
+compassionate_bardeen_1	genus	Rhodobaca	0.53	0.90	6478448	3845886
+compassionate_bardeen_1	genus	Formosa	0.52	0.98	5998339	3154949
+compassionate_bardeen_1	genus	Desulfovibrio	0.96	0.57	5962106	10076554
+compassionate_bardeen_1	genus	Sphingobacterium	0.79	0.49	5881086	9481390
+compassionate_bardeen_1	genus	Rhodococcus	1.00	0.99	5656876	5721635
+compassionate_bardeen_1	genus	Intestinibacter	0.53	1.00	5493049	2937124
+compassionate_bardeen_1	genus	Paenibacillus	0.93	0.68	5458272	7400375
+compassionate_bardeen_1	genus	Bosea	0.99	0.60	5414844	8874968
+compassionate_bardeen_1	genus	Rahnella	1.00	0.99	5343017	5419845
+compassionate_bardeen_1	genus	Thermoanaerobacter	0.80	0.80	5302177	5263147
+compassionate_bardeen_1	genus	Pseudoxanthobacter	0.99	0.99	5127072	5163876
+compassionate_bardeen_1	genus	Moorella	1.00	0.99	5076828	5136963
+compassionate_bardeen_1	genus	Xanthobacter	0.99	0.99	5024566	5026224
+compassionate_bardeen_1	genus	Ferrimonas	1.00	1.00	4996251	4980999
+compassionate_bardeen_1	genus	Halobacterium	0.99	1.00	4905407	4877686
+compassionate_bardeen_1	genus	Lutispora	0.67	0.85	4358869	3459146
+compassionate_bardeen_1	genus	Propionispora	1.00	0.99	4108563	4150955
+compassionate_bardeen_1	genus	Tessaracoccus	1.00	0.99	4086747	4125126
+compassionate_bardeen_1	genus	Diaphorobacter	0.98	0.97	4043023	4083860
+compassionate_bardeen_1	genus	Tatlockia	0.93	1.00	3873455	3607735
+compassionate_bardeen_1	genus	Curtobacterium	1.00	0.95	3732296	3925652
+compassionate_bardeen_1	genus	Janibacter	1.00	0.98	3576063	3637742
+compassionate_bardeen_1	genus	Rhodobacter	1.00	0.47	3543943	7530868
+compassionate_bardeen_1	genus	Phenylobacterium	0.98	1.00	3357047	3301850
+compassionate_bardeen_1	genus	Butyricicoccus	0.97	0.99	3337546	3268385
+compassionate_bardeen_1	genus	Tetragenococcus	0.76	0.98	3078401	2396848
+compassionate_bardeen_1	genus	Rhizobium	0.52	0.30	2815852	4823186
+compassionate_bardeen_1	genus	Bacillus	1.00	0.93	2735804	2948556
+compassionate_bardeen_1	genus	Chryseobacterium	1.00	0.81	2697231	3329601
+compassionate_bardeen_1	genus	Nitrosomonas	0.98	0.95	2638877	2734309
+compassionate_bardeen_1	genus	Peptoclostridium	1.00	0.99	2539462	2550032
+compassionate_bardeen_1	genus	Caloranaerobacter	0.98	1.00	2513743	2455797
+compassionate_bardeen_1	genus	Desulfotomaculum	1.00	0.95	2493072	2625413
+compassionate_bardeen_1	genus	Salinicoccus	0.32	0.29	2433315	2645012
+compassionate_bardeen_1	genus	Ferrithrix	1.00	0.96	2395947	2485587
+compassionate_bardeen_1	genus	Porphyromonas	0.98	0.98	2045856	2044131
+compassionate_bardeen_1	genus	Acholeplasma	0.98	1.00	1622558	1600014
+compassionate_bardeen_1	genus	Picrophilus	1.00	1.00	1534116	1534116
+compassionate_bardeen_1	genus	Azotobacter	0.18	0.03	1007010	5477884
+compassionate_bardeen_1	genus	Oerskovia	0.07	0.00	359356	9113781
+compassionate_bardeen_1	genus	unassigned	nan	nan	90557644	75507023
+compassionate_bardeen_1	species	uncultured Massilia sp.	1.00	0.98	28420160	28873267
+compassionate_bardeen_1	species	Azospirillum brasilense	0.45	1.00	15687038	7141886
+compassionate_bardeen_1	species	Phaeospirillum fulvum	1.00	0.99	14888275	15012162
+compassionate_bardeen_1	species	Acetoanaerobium noterae	1.00	0.97	14822142	15210881
+compassionate_bardeen_1	species	Carboxydocella sporoproducens	1.00	0.95	14087105	14888857
+compassionate_bardeen_1	species	Sinorhizobium meliloti	0.92	0.92	13842770	13774939
+compassionate_bardeen_1	species	Kibdelosporangium aridum	0.94	1.00	13068180	12272270
+compassionate_bardeen_1	species	Ohtaekwangia koreensis	0.54	0.96	12863429	7222220
+compassionate_bardeen_1	species	Paracoccus pantotrophus	0.71	0.94	12727706	9589943
+compassionate_bardeen_1	species	Sporosarcina newyorkensis	0.58	0.94	11845002	7245311
+compassionate_bardeen_1	species	Lechevalieria aerocolonigenes	0.86	0.88	10989608	10667666
+compassionate_bardeen_1	species	Aeromicrobium ponti	0.99	1.00	10570586	10494171
+compassionate_bardeen_1	species	Lechevalieria flava	1.00	0.99	9715579	9741331
+compassionate_bardeen_1	species	Clostridium grantii	0.66	0.99	6699924	4473091
+compassionate_bardeen_1	species	Promicromonospora umidemergens	0.98	0.99	6662847	6599454
+compassionate_bardeen_1	species	Rhodobaca barguzinensis	0.53	0.90	6478448	3845886
+compassionate_bardeen_1	species	Formosa spongicola	0.52	0.98	5998339	3154949
+compassionate_bardeen_1	species	Sphingobacterium nematocida	0.79	0.93	5881086	4981289
+compassionate_bardeen_1	species	Intestinibacter bartlettii	0.53	1.00	5493049	2937124
+compassionate_bardeen_1	species	Paenibacillus frigoriresistens	0.93	0.68	5458272	7400375
+compassionate_bardeen_1	species	Rahnella aquatilis	1.00	0.99	5343017	5419845
+compassionate_bardeen_1	species	Thermoanaerobacter thermohydrosulfuricus	0.80	0.80	5302177	5263147
+compassionate_bardeen_1	species	Pseudoxanthobacter soli	0.99	0.99	5127072	5163876
+compassionate_bardeen_1	species	Moorella thermoacetica	1.00	0.99	5076828	5136963
+compassionate_bardeen_1	species	Xanthobacter autotrophicus	0.99	0.99	5024566	5026224
+compassionate_bardeen_1	species	Ferrimonas marina	1.00	1.00	4996251	4980999
+compassionate_bardeen_1	species	Halobacterium salinarum	0.99	1.00	4905407	4877686
+compassionate_bardeen_1	species	Pedobacter agri	0.99	1.00	4829924	4779416
+compassionate_bardeen_1	species	Butyrivibrio fibrisolvens	1.00	0.99	4790064	4834992
+compassionate_bardeen_1	species	Vibrio gazogenes	0.99	0.98	4598572	4627085
+compassionate_bardeen_1	species	Lutispora thermophila	0.67	0.85	4358869	3459146
+compassionate_bardeen_1	species	Propionispora hippei	1.00	0.99	4108563	4150955
+compassionate_bardeen_1	species	Tessaracoccus bendigoensis	1.00	0.99	4086747	4125126
+compassionate_bardeen_1	species	Diaphorobacter oryzae	0.98	0.97	4043023	4083860
+compassionate_bardeen_1	species	Legionella maceachernii	0.93	1.00	3873455	3607735
+compassionate_bardeen_1	species	Curtobacterium sp. B20	1.00	0.95	3732296	3925652
+compassionate_bardeen_1	species	Sphingomonas phyllosphaerae	1.00	1.00	3728974	3733085
+compassionate_bardeen_1	species	Vibrio cincinnatiensis	1.00	0.99	3632365	3660162
+compassionate_bardeen_1	species	Janibacter limosus	1.00	0.98	3576063	3637742
+compassionate_bardeen_1	species	Rhodobacter capsulatus	1.00	0.47	3543943	7530868
+compassionate_bardeen_1	species	Phenylobacterium composti	0.98	1.00	3357047	3301850
+compassionate_bardeen_1	species	Butyricicoccus pullicaecorum	0.97	0.99	3337546	3268385
+compassionate_bardeen_1	species	Butyrivibrio hungatei	1.00	0.98	3335475	3390034
+compassionate_bardeen_1	species	Desulfovibrio bizertensis	1.00	1.00	3252498	3257376
+compassionate_bardeen_1	species	Cellulomonas terrae	0.96	0.64	3113712	4652222
+compassionate_bardeen_1	species	Tetragenococcus halophilus	0.76	0.98	3078401	2396848
+compassionate_bardeen_1	species	Sphingomonas aestuarii	1.00	0.97	2893307	2985887
+compassionate_bardeen_1	species	Bacillus coagulans	1.00	0.93	2735804	2948556
+compassionate_bardeen_1	species	Clostridium tetani	1.00	0.98	2734378	2788202
+compassionate_bardeen_1	species	Desulfovibrio vietnamensis	0.91	0.66	2709608	3707244
+compassionate_bardeen_1	species	Nitrosomonas europaea	0.98	0.95	2638877	2734309
+compassionate_bardeen_1	species	[Eubacterium] yurii	1.00	0.99	2539462	2550032
+compassionate_bardeen_1	species	Caloranaerobacter azorensis	0.98	1.00	2513743	2455797
+compassionate_bardeen_1	species	Desulfotomaculum hydrothermale	1.00	0.95	2493072	2625413
+compassionate_bardeen_1	species	Salinicoccus kunmingensis	0.32	0.29	2433315	2645012
+compassionate_bardeen_1	species	Ferrithrix thermotolerans	1.00	0.96	2395947	2485587
+compassionate_bardeen_1	species	Porphyromonas crevioricanis	0.98	0.98	2045856	2044131
+compassionate_bardeen_1	species	Acholeplasma oculi	0.98	1.00	1622558	1600014
+compassionate_bardeen_1	species	Picrophilus oshimae	1.00	1.00	1534116	1534116
+compassionate_bardeen_1	species	unidentified plasmid	0.34	0.52	1441593	939369
+compassionate_bardeen_1	species	Azotobacter vinelandii	0.18	0.03	1007010	5477884
+compassionate_bardeen_1	species	unassigned	nan	nan	193938800	185124110
+elated_franklin_1	superkingdom	Bacteria	1.00	0.90	495513747	553468052
+elated_franklin_1	superkingdom	Archaea	1.00	0.98	6288403	6411802
+elated_franklin_1	superkingdom	unassigned	nan	nan	60227696	1413217
+elated_franklin_1	phylum	Proteobacteria	1.00	0.87	211979104	243932505
+elated_franklin_1	phylum	Actinobacteria	1.00	0.92	134713849	145948197
+elated_franklin_1	phylum	Firmicutes	1.00	0.90	105071710	116336594
+elated_franklin_1	phylum	Bacteroidetes	1.00	0.92	42151160	45650742
+elated_franklin_1	phylum	Euryarchaeota	1.00	0.98	6288403	6411802
+elated_franklin_1	phylum	Tenericutes	1.00	1.00	1597924	1600014
+elated_franklin_1	phylum	unassigned	nan	nan	60227696	2149992
+elated_franklin_1	class	Actinobacteria	1.00	0.92	134713849	145948197
+elated_franklin_1	class	Alphaproteobacteria	1.00	0.81	103622873	127454801
+elated_franklin_1	class	Clostridia	1.00	0.93	74079586	79844812
+elated_franklin_1	class	Betaproteobacteria	1.00	0.94	73642779	78627440
+elated_franklin_1	class	Gammaproteobacteria	1.00	0.98	27080639	27773710
+elated_franklin_1	class	Bacilli	0.99	0.83	26888545	32340827
+elated_franklin_1	class	Sphingobacteriia	0.99	0.97	18622639	19013960
+elated_franklin_1	class	Cytophagia	1.00	0.86	12395983	14411538
+elated_franklin_1	class	Flavobacteriia	1.00	0.97	9133927	9442158
+elated_franklin_1	class	Deltaproteobacteria	1.00	0.76	7632813	10076554
+elated_franklin_1	class	Halobacteria	1.00	0.97	4754287	4877686
+elated_franklin_1	class	Negativicutes	1.00	0.99	4103579	4150955
+elated_franklin_1	class	Bacteroidia	1.00	0.72	1998611	2783086
+elated_franklin_1	class	Mollicutes	1.00	1.00	1597924	1600014
+elated_franklin_1	class	Thermoplasmata	1.00	1.00	1534116	1534116
+elated_franklin_1	class	unassigned	nan	nan	60227696	2149992
+elated_franklin_1	order	Actinomycetales	1.00	0.92	132368818	143462610
+elated_franklin_1	order	Clostridiales	0.99	0.94	65663699	69444702
+elated_franklin_1	order	Burkholderiales	1.00	0.97	64421846	66564525
+elated_franklin_1	order	Rhizobiales	0.99	0.73	39813564	54087866
+elated_franklin_1	order	Bacillales	0.99	0.81	24464866	29943979
+elated_franklin_1	order	Rhodobacterales	0.99	0.95	23515340	24573518
+elated_franklin_1	order	Rhodospirillales	1.00	0.99	21963611	22154048
+elated_franklin_1	order	Sphingobacteriales	0.99	0.97	18622639	19013960
+elated_franklin_1	order	Sphingomonadales	1.00	0.64	15043893	23337519
+elated_franklin_1	order	Cytophagales	1.00	0.86	12395983	14411538
+elated_franklin_1	order	Flavobacteriales	1.00	0.97	9133927	9442158
+elated_franklin_1	order	Thermoanaerobacterales	1.00	0.81	8415887	10400110
+elated_franklin_1	order	Vibrionales	1.00	0.99	8183303	8287247
+elated_franklin_1	order	Desulfovibrionales	1.00	0.76	7632813	10076554
+elated_franklin_1	order	Methylophilales	1.00	0.74	6578485	8904107
+elated_franklin_1	order	Pseudomonadales	1.00	0.97	5306355	5477884
+elated_franklin_1	order	Enterobacteriales	1.00	0.94	5109220	5419845
+elated_franklin_1	order	Alteromonadales	1.00	0.99	4909536	4980999
+elated_franklin_1	order	Halobacteriales	1.00	0.97	4754287	4877686
+elated_franklin_1	order	Selenomonadales	1.00	0.99	4103579	4150955
+elated_franklin_1	order	Legionellales	1.00	0.99	3572225	3607735
+elated_franklin_1	order	Caulobacterales	1.00	1.00	3286465	3301850
+elated_franklin_1	order	Nitrosomonadales	1.00	0.97	2642448	2734309
+elated_franklin_1	order	Lactobacillales	0.98	0.99	2423679	2396848
+elated_franklin_1	order	Acidimicrobiales	1.00	0.94	2345031	2485587
+elated_franklin_1	order	Bacteroidales	1.00	0.72	1998611	2783086
+elated_franklin_1	order	Acholeplasmatales	1.00	1.00	1597924	1600014
+elated_franklin_1	order	Thermoplasmatales	1.00	1.00	1534116	1534116
+elated_franklin_1	order	unassigned	nan	nan	60227696	2149992
+elated_franklin_1	family	Pseudonocardiaceae	0.81	0.97	39280875	32681267
+elated_franklin_1	family	Comamonadaceae	1.00	0.99	37332633	37691258
+elated_franklin_1	family	Oxalobacteraceae	1.00	0.94	27089213	28873267
+elated_franklin_1	family	Rhodobacteraceae	0.99	0.95	23515340	24573518
+elated_franklin_1	family	Rhodospirillaceae	1.00	0.99	21963611	22154048
+elated_franklin_1	family	Cellulomonadaceae	1.00	0.66	20649396	31237913
+elated_franklin_1	family	Sphingobacteriaceae	0.99	0.97	18622639	19013960
+elated_franklin_1	family	Clostridiaceae	0.84	0.81	18221727	18916804
+elated_franklin_1	family	Sphingomonadaceae	1.00	0.64	15043893	23337519
+elated_franklin_1	family	Clostridiales Family XIX. Incertae Sedis	0.99	0.95	14517545	15210881
+elated_franklin_1	family	Clostridiales Family XVI. Incertae Sedis	1.00	0.95	14166337	14888857
+elated_franklin_1	family	Rhizobiaceae	0.98	0.70	13154520	18598125
+elated_franklin_1	family	Nocardiaceae	1.00	0.99	12915886	13003876
+elated_franklin_1	family	Cytophagaceae	1.00	0.86	12395983	14411538
+elated_franklin_1	family	Intrasporangiaceae	1.00	0.98	12189477	12422925
+elated_franklin_1	family	Promicromonosporaceae	0.58	1.00	11245113	6599454
+elated_franklin_1	family	Streptomycetaceae	1.00	0.57	10526254	18428033
+elated_franklin_1	family	Xanthobacteraceae	0.99	0.99	10229419	10190100
+elated_franklin_1	family	Flavobacteriaceae	1.00	0.97	9133927	9442158
+elated_franklin_1	family	Thermoanaerobacteraceae	1.00	0.81	8415887	10400110
+elated_franklin_1	family	Phyllobacteriaceae	0.91	0.86	8205631	8674992
+elated_franklin_1	family	Vibrionaceae	1.00	0.99	8183303	8287247
+elated_franklin_1	family	Lachnospiraceae	1.00	0.99	8114792	8225026
+elated_franklin_1	family	Peptostreptococcaceae	0.69	0.71	7865006	7719747
+elated_franklin_1	family	Desulfovibrionaceae	1.00	0.76	7632813	10076554
+elated_franklin_1	family	Microbacteriaceae	1.00	0.98	7627791	7792846
+elated_franklin_1	family	Planococcaceae	0.99	0.98	7215829	7245311
+elated_franklin_1	family	Nocardioidaceae	1.00	0.67	7023778	10494171
+elated_franklin_1	family	Mycobacteriaceae	1.00	1.00	6660563	6676999
+elated_franklin_1	family	Methylophilaceae	1.00	0.74	6578485	8904107
+elated_franklin_1	family	Pseudomonadaceae	1.00	0.97	5306355	5477884
+elated_franklin_1	family	Enterobacteriaceae	1.00	0.94	5109220	5419845
+elated_franklin_1	family	Ferrimonadaceae	1.00	0.99	4909536	4980999
+elated_franklin_1	family	Paenibacillaceae	0.99	0.65	4879370	7400375
+elated_franklin_1	family	Halobacteriaceae	1.00	0.97	4754287	4877686
+elated_franklin_1	family	Bradyrhizobiaceae	1.00	0.48	4291988	8874968
+elated_franklin_1	family	Propionibacteriaceae	0.96	0.98	4249685	4125126
+elated_franklin_1	family	Veillonellaceae	1.00	0.99	4103579	4150955
+elated_franklin_1	family	Aurantimonadaceae	1.00	0.51	3932006	7749681
+elated_franklin_1	family	Legionellaceae	1.00	0.99	3572225	3607735
+elated_franklin_1	family	Caulobacteraceae	1.00	1.00	3286465	3301850
+elated_franklin_1	family	Bacillaceae	1.00	0.98	2889496	2948556
+elated_franklin_1	family	Nitrosomonadaceae	1.00	0.97	2642448	2734309
+elated_franklin_1	family	Peptococcaceae	1.00	0.94	2465743	2625413
+elated_franklin_1	family	Enterococcaceae	0.98	0.99	2423679	2396848
+elated_franklin_1	family	Acidimicrobiaceae	1.00	0.94	2345031	2485587
+elated_franklin_1	family	Porphyromonadaceae	1.00	0.98	1998611	2044131
+elated_franklin_1	family	Acholeplasmataceae	1.00	1.00	1597924	1600014
+elated_franklin_1	family	Picrophilaceae	1.00	1.00	1534116	1534116
+elated_franklin_1	family	Eubacteriaceae	0.58	0.10	312549	1857974
+elated_franklin_1	family	unassigned	nan	nan	69707867	11854717
+elated_franklin_1	genus	Massilia	1.00	0.94	27089213	28873267
+elated_franklin_1	genus	Lechevalieria	0.72	0.96	26985727	20408997
+elated_franklin_1	genus	Sphingomonas	1.00	0.64	15043893	23337519
+elated_franklin_1	genus	Phaeospirillum	1.00	0.99	14846143	15012162
+elated_franklin_1	genus	Acetoanaerobium	0.99	0.95	14517545	15210881
+elated_franklin_1	genus	Carboxydocella	1.00	0.95	14166337	14888857
+elated_franklin_1	genus	Sinorhizobium	0.98	0.94	13154520	13774939
+elated_franklin_1	genus	Ohtaekwangia	1.00	0.86	12395983	14411538
+elated_franklin_1	genus	Kibdelosporangium	1.00	1.00	12295148	12272270
+elated_franklin_1	genus	Cellulomonas	1.00	0.53	11678932	22124132
+elated_franklin_1	genus	Promicromonospora	0.58	1.00	11245113	6599454
+elated_franklin_1	genus	Pedobacter	1.00	1.00	9518128	9532570
+elated_franklin_1	genus	Clostridium	0.76	0.99	9473754	7261293
+elated_franklin_1	genus	Paracoccus	0.98	0.95	9352372	9589943
+elated_franklin_1	genus	Sphingobacterium	0.99	0.95	9104511	9481390
+elated_franklin_1	genus	Oerskovia	1.00	0.98	8970464	9113781
+elated_franklin_1	genus	Phycicoccus	1.00	0.97	8564458	8785183
+elated_franklin_1	genus	Aquamicrobium	0.91	0.86	8205631	8674992
+elated_franklin_1	genus	Vibrio	1.00	0.99	8183303	8287247
+elated_franklin_1	genus	Butyrivibrio	1.00	0.99	8114792	8225026
+elated_franklin_1	genus	Desulfovibrio	1.00	0.76	7632813	10076554
+elated_franklin_1	genus	Rhodobacter	1.00	0.99	7466266	7530868
+elated_franklin_1	genus	Nocardia	1.00	1.00	7275315	7282241
+elated_franklin_1	genus	Sporosarcina	0.99	0.98	7215829	7245311
+elated_franklin_1	genus	Azospirillum	1.00	1.00	7117468	7141886
+elated_franklin_1	genus	Aeromicrobium	1.00	0.67	7023778	10494171
+elated_franklin_1	genus	Rhodobaca	0.55	0.96	6696702	3845886
+elated_franklin_1	genus	Mycobacterium	1.00	1.00	6660563	6676999
+elated_franklin_1	genus	Methylophilus	1.00	0.74	6578485	8904107
+elated_franklin_1	genus	Rhodococcus	1.00	0.99	5640571	5721635
+elated_franklin_1	genus	Intestinibacter	0.55	0.99	5320868	2937124
+elated_franklin_1	genus	Azotobacter	1.00	0.97	5306355	5477884
+elated_franklin_1	genus	Pseudoxanthobacter	0.97	0.99	5227709	5163876
+elated_franklin_1	genus	Rahnella	1.00	0.94	5109220	5419845
+elated_franklin_1	genus	Moorella	1.00	0.98	5015174	5136963
+elated_franklin_1	genus	Xanthobacter	1.00	1.00	5001710	5026224
+elated_franklin_1	genus	Ferrimonas	1.00	0.99	4909536	4980999
+elated_franklin_1	genus	Paenibacillus	0.99	0.65	4879370	7400375
+elated_franklin_1	genus	Halobacterium	1.00	0.97	4754287	4877686
+elated_franklin_1	genus	Bosea	1.00	0.48	4291988	8874968
+elated_franklin_1	genus	Tessaracoccus	0.96	0.98	4249685	4125126
+elated_franklin_1	genus	Propionispora	1.00	0.99	4103579	4150955
+elated_franklin_1	genus	Diaphorobacter	1.00	0.97	3963217	4083860
+elated_franklin_1	genus	Curtobacterium	1.00	0.96	3770686	3925652
+elated_franklin_1	genus	Janibacter	1.00	1.00	3625019	3637742
+elated_franklin_1	genus	Tatlockia	1.00	0.99	3572225	3607735
+elated_franklin_1	genus	Thermoanaerobacter	0.99	0.64	3400713	5263147
+elated_franklin_1	genus	Phenylobacterium	1.00	1.00	3286465	3301850
+elated_franklin_1	genus	Butyricicoccus	1.00	0.99	3225188	3268385
+elated_franklin_1	genus	Chryseobacterium	1.00	0.94	3146671	3329601
+elated_franklin_1	genus	Formosa	1.00	0.98	3094163	3154949
+elated_franklin_1	genus	Lutispora	0.78	0.67	2968532	3459146
+elated_franklin_1	genus	Olleya	1.00	0.98	2893093	2957608
+elated_franklin_1	genus	Bacillus	1.00	0.98	2889496	2948556
+elated_franklin_1	genus	Nitrosomonas	1.00	0.97	2642448	2734309
+elated_franklin_1	genus	Caloranaerobacter	0.95	0.99	2554253	2455797
+elated_franklin_1	genus	Peptoclostridium	1.00	1.00	2544138	2550032
+elated_franklin_1	genus	Desulfotomaculum	1.00	0.94	2465743	2625413
+elated_franklin_1	genus	Tetragenococcus	0.98	0.99	2423679	2396848
+elated_franklin_1	genus	Ferrithrix	1.00	0.94	2345031	2485587
+elated_franklin_1	genus	Porphyromonas	1.00	0.98	1998611	2044131
+elated_franklin_1	genus	Acholeplasma	1.00	1.00	1597924	1600014
+elated_franklin_1	genus	Picrophilus	1.00	1.00	1534116	1534116
+elated_franklin_1	genus	Garciella	0.58	0.10	312549	1857974
+elated_franklin_1	genus	unassigned	nan	nan	121392648	75507023
+elated_franklin_1	species	uncultured Massilia sp.	1.00	0.94	27089213	28873267
+elated_franklin_1	species	Lechevalieria aerocolonigenes	0.58	0.92	17033272	10667666
+elated_franklin_1	species	Phaeospirillum fulvum	1.00	0.99	14846143	15012162
+elated_franklin_1	species	Acetoanaerobium noterae	0.99	0.95	14517545	15210881
+elated_franklin_1	species	Carboxydocella sporoproducens	1.00	0.95	14166337	14888857
+elated_franklin_1	species	Sinorhizobium meliloti	0.98	0.94	13154520	13774939
+elated_franklin_1	species	Kibdelosporangium aridum	1.00	1.00	12295148	12272270
+elated_franklin_1	species	Ohtaekwangia koreensis	0.63	0.99	11402066	7222220
+elated_franklin_1	species	Promicromonospora umidemergens	0.58	1.00	11245113	6599454
+elated_franklin_1	species	Lechevalieria flava	0.98	1.00	9952455	9741331
+elated_franklin_1	species	Paracoccus pantotrophus	0.98	0.95	9352372	9589943
+elated_franklin_1	species	Rhodobacter capsulatus	1.00	0.99	7466266	7530868
+elated_franklin_1	species	Sporosarcina newyorkensis	0.99	0.98	7215829	7245311
+elated_franklin_1	species	Azospirillum brasilense	1.00	1.00	7117468	7141886
+elated_franklin_1	species	Aeromicrobium ponti	1.00	0.67	7023778	10494171
+elated_franklin_1	species	Rhodobaca barguzinensis	0.55	0.96	6696702	3845886
+elated_franklin_1	species	Intestinibacter bartlettii	0.55	0.99	5320868	2937124
+elated_franklin_1	species	Azotobacter vinelandii	1.00	0.97	5306355	5477884
+elated_franklin_1	species	Pseudoxanthobacter soli	0.97	0.99	5227709	5163876
+elated_franklin_1	species	Rahnella aquatilis	1.00	0.94	5109220	5419845
+elated_franklin_1	species	Moorella thermoacetica	1.00	0.98	5015174	5136963
+elated_franklin_1	species	Xanthobacter autotrophicus	1.00	1.00	5001710	5026224
+elated_franklin_1	species	Clostridium tetani	0.55	0.99	4982940	2788202
+elated_franklin_1	species	Ferrimonas marina	1.00	0.99	4909536	4980999
+elated_franklin_1	species	Paenibacillus frigoriresistens	0.99	0.65	4879370	7400375
+elated_franklin_1	species	Butyrivibrio fibrisolvens	1.00	0.99	4786226	4834992
+elated_franklin_1	species	Pedobacter agri	1.00	1.00	4771532	4779416
+elated_franklin_1	species	Halobacterium salinarum	1.00	0.97	4754287	4877686
+elated_franklin_1	species	Sphingobacterium nematocida	0.98	0.91	4631131	4981289
+elated_franklin_1	species	Vibrio gazogenes	1.00	0.99	4583323	4627085
+elated_franklin_1	species	Clostridium grantii	0.99	0.99	4490814	4473091
+elated_franklin_1	species	Sphingobacterium psychroaquaticum	1.00	0.99	4473380	4500101
+elated_franklin_1	species	Tessaracoccus bendigoensis	0.96	0.98	4249685	4125126
+elated_franklin_1	species	Propionispora hippei	1.00	0.99	4103579	4150955
+elated_franklin_1	species	Diaphorobacter oryzae	1.00	0.97	3963217	4083860
+elated_franklin_1	species	Curtobacterium sp. B20	1.00	0.96	3770686	3925652
+elated_franklin_1	species	Sphingomonas phyllosphaerae	1.00	1.00	3725169	3733085
+elated_franklin_1	species	Janibacter limosus	1.00	1.00	3625019	3637742
+elated_franklin_1	species	Vibrio cincinnatiensis	1.00	0.98	3599980	3660162
+elated_franklin_1	species	Legionella maceachernii	1.00	0.99	3572225	3607735
+elated_franklin_1	species	Thermoanaerobacter thermohydrosulfuricus	0.99	0.64	3400713	5263147
+elated_franklin_1	species	Butyrivibrio hungatei	1.00	0.98	3328566	3390034
+elated_franklin_1	species	Phenylobacterium composti	1.00	1.00	3286465	3301850
+elated_franklin_1	species	Butyricicoccus pullicaecorum	1.00	0.99	3225188	3268385
+elated_franklin_1	species	Desulfovibrio bizertensis	1.00	0.97	3170961	3257376
+elated_franklin_1	species	Formosa spongicola	1.00	0.98	3094163	3154949
+elated_franklin_1	species	Desulfovibrio alkalitolerans	1.00	0.98	3045180	3111934
+elated_franklin_1	species	Lutispora thermophila	0.78	0.67	2968532	3459146
+elated_franklin_1	species	Sphingomonas aestuarii	1.00	0.97	2893307	2985887
+elated_franklin_1	species	Olleya aquimaris	1.00	0.98	2893093	2957608
+elated_franklin_1	species	Bacillus coagulans	1.00	0.98	2889496	2948556
+elated_franklin_1	species	Nitrosomonas europaea	1.00	0.97	2642448	2734309
+elated_franklin_1	species	Caloranaerobacter azorensis	0.95	0.99	2554253	2455797
+elated_franklin_1	species	[Eubacterium] yurii	1.00	1.00	2544138	2550032
+elated_franklin_1	species	Desulfotomaculum hydrothermale	1.00	0.94	2465743	2625413
+elated_franklin_1	species	Tetragenococcus halophilus	0.98	0.99	2423679	2396848
+elated_franklin_1	species	Ferrithrix thermotolerans	1.00	0.94	2345031	2485587
+elated_franklin_1	species	Porphyromonas crevioricanis	1.00	0.98	1998611	2044131
+elated_franklin_1	species	Acholeplasma oculi	1.00	1.00	1597924	1600014
+elated_franklin_1	species	Picrophilus oshimae	1.00	1.00	1534116	1534116
+elated_franklin_1	species	Desulfovibrio vietnamensis	1.00	0.38	1416672	3707244
+elated_franklin_1	species	Ohtaekwangia kribbensis	1.00	0.14	993917	7189318
+elated_franklin_1	species	Garciella nitratireducens	0.58	0.10	312549	1857974
+elated_franklin_1	species	Cellulomonas terrae	1.00	0.06	267801	4652222
+elated_franklin_1	species	unassigned	nan	nan	205309938	185124110
+naughty_carson_1	superkingdom	Bacteria	0.98	0.81	457770933	553468052
+naughty_carson_1	superkingdom	Archaea	0.26	0.01	256111	6411802
+naughty_carson_1	superkingdom	Viruses	0.82	0.20	184349	736775
+naughty_carson_1	superkingdom	unassigned	nan	nan	103818453	1413217
+naughty_carson_1	phylum	Proteobacteria	0.99	0.74	183085365	243932505
+naughty_carson_1	phylum	Actinobacteria	0.96	0.80	121697645	145948197
+naughty_carson_1	phylum	Firmicutes	0.97	0.88	105451333	116336594
+naughty_carson_1	phylum	Bacteroidetes	0.92	0.92	45862330	45650742
+naughty_carson_1	phylum	Tenericutes	0.95	1.00	1674260	1600014
+naughty_carson_1	phylum	Euryarchaeota	0.26	0.01	256111	6411802
+naughty_carson_1	phylum	unassigned	nan	nan	104002802	2149992
+naughty_carson_1	class	Actinobacteria	0.96	0.80	121697645	145948197
+naughty_carson_1	class	Alphaproteobacteria	0.99	0.76	97147891	127454801
+naughty_carson_1	class	Clostridia	0.98	0.88	71492645	79844812
+naughty_carson_1	class	Betaproteobacteria	1.00	0.61	47839300	78627440
+naughty_carson_1	class	Bacilli	0.92	0.84	29754785	32340827
+naughty_carson_1	class	Gammaproteobacteria	0.97	0.99	28335944	27773710
+naughty_carson_1	class	Sphingobacteriia	0.90	0.98	20648827	19013960
+naughty_carson_1	class	Cytophagia	0.99	0.84	12297841	14411538
+naughty_carson_1	class	Flavobacteriia	0.84	0.97	10889070	9442158
+naughty_carson_1	class	Deltaproteobacteria	0.90	0.87	9762230	10076554
+naughty_carson_1	class	Negativicutes	0.99	1.00	4203903	4150955
+naughty_carson_1	class	Bacteroidia	0.99	0.72	2026592	2783086
+naughty_carson_1	class	Mollicutes	0.95	1.00	1674260	1600014
+naughty_carson_1	class	Halobacteria	0.26	0.01	256111	4877686
+naughty_carson_1	class	unassigned	nan	nan	104002802	2149992
+naughty_carson_1	order	Actinomycetales	0.96	0.80	119159501	143462610
+naughty_carson_1	order	Clostridiales	0.96	0.87	62968978	69444702
+naughty_carson_1	order	Burkholderiales	1.00	0.68	45011403	66564525
+naughty_carson_1	order	Rhizobiales	0.98	0.71	39489265	54087866
+naughty_carson_1	order	Bacillales	0.92	0.83	26978984	29943979
+naughty_carson_1	order	Rhodobacterales	0.98	0.95	23697730	24573518
+naughty_carson_1	order	Rhodospirillales	0.99	0.99	22101988	22154048
+naughty_carson_1	order	Sphingobacteriales	0.90	0.98	20648827	19013960
+naughty_carson_1	order	Cytophagales	0.99	0.84	12297841	14411538
+naughty_carson_1	order	Flavobacteriales	0.84	0.97	10889070	9442158
+naughty_carson_1	order	Desulfovibrionales	0.90	0.87	9762230	10076554
+naughty_carson_1	order	Sphingomonadales	0.96	0.35	8556231	23337519
+naughty_carson_1	order	Thermoanaerobacterales	0.98	0.81	8523667	10400110
+naughty_carson_1	order	Vibrionales	0.97	0.99	8469500	8287247
+naughty_carson_1	order	Enterobacteriales	0.91	0.99	5888605	5419845
+naughty_carson_1	order	Pseudomonadales	1.00	0.95	5228195	5477884
+naughty_carson_1	order	Alteromonadales	0.99	1.00	5032164	4980999
+naughty_carson_1	order	Selenomonadales	0.99	1.00	4203903	4150955
+naughty_carson_1	order	Legionellales	0.97	1.00	3717480	3607735
+naughty_carson_1	order	Caulobacterales	1.00	1.00	3302677	3301850
+naughty_carson_1	order	Nitrosomonadales	0.95	0.98	2827897	2734309
+naughty_carson_1	order	Lactobacillales	0.86	0.99	2775801	2396848
+naughty_carson_1	order	Acidimicrobiales	0.95	0.97	2538144	2485587
+naughty_carson_1	order	Bacteroidales	0.99	0.72	2026592	2783086
+naughty_carson_1	order	Acholeplasmatales	0.95	1.00	1674260	1600014
+naughty_carson_1	order	Halobacteriales	0.26	0.01	256111	4877686
+naughty_carson_1	order	unassigned	nan	nan	104002802	2149992
+naughty_carson_1	family	Comamonadaceae	1.00	0.99	37377738	37691258
+naughty_carson_1	family	Cellulomonadaceae	0.88	0.97	34482435	31237913
+naughty_carson_1	family	Pseudonocardiaceae	0.97	0.97	32704286	32681267
+naughty_carson_1	family	Rhodobacteraceae	0.98	0.95	23697730	24573518
+naughty_carson_1	family	Rhodospirillaceae	0.99	0.99	22101988	22154048
+naughty_carson_1	family	Sphingobacteriaceae	0.90	0.98	20648827	19013960
+naughty_carson_1	family	Clostridiaceae	0.94	0.94	18928084	18916804
+naughty_carson_1	family	Clostridiales Family XVI. Incertae Sedis	0.97	0.94	14485688	14888857
+naughty_carson_1	family	Rhizobiaceae	0.98	0.69	13097144	18598125
+naughty_carson_1	family	Nocardiaceae	1.00	1.00	13026938	13003876
+naughty_carson_1	family	Intrasporangiaceae	1.00	0.99	12353030	12422925
+naughty_carson_1	family	Cytophagaceae	0.99	0.84	12297841	14411538
+naughty_carson_1	family	Flavobacteriaceae	0.84	0.97	10889070	9442158
+naughty_carson_1	family	Phyllobacteriaceae	0.75	0.91	10458095	8674992
+naughty_carson_1	family	Xanthobacteraceae	0.99	0.99	10206567	10190100
+naughty_carson_1	family	Desulfovibrionaceae	0.90	0.87	9762230	10076554
+naughty_carson_1	family	Clostridiales Family XIX. Incertae Sedis	0.95	0.60	9596540	15210881
+naughty_carson_1	family	Sphingomonadaceae	0.96	0.35	8556231	23337519
+naughty_carson_1	family	Thermoanaerobacteraceae	0.98	0.81	8523667	10400110
+naughty_carson_1	family	Vibrionaceae	0.97	0.99	8469500	8287247
+naughty_carson_1	family	Microbacteriaceae	0.91	0.97	8333275	7792846
+naughty_carson_1	family	Lachnospiraceae	0.99	0.99	8214576	8225026
+naughty_carson_1	family	Paenibacillaceae	0.67	0.74	8199968	7400375
+naughty_carson_1	family	Peptostreptococcaceae	0.99	1.00	7748215	7719747
+naughty_carson_1	family	Oxalobacteraceae	1.00	0.26	7633665	28873267
+naughty_carson_1	family	Mycobacteriaceae	0.97	0.99	6860028	6676999
+naughty_carson_1	family	Planococcaceae	0.95	0.87	6695324	7245311
+naughty_carson_1	family	Promicromonosporaceae	1.00	0.98	6476082	6599454
+naughty_carson_1	family	Enterobacteriaceae	0.91	0.99	5888605	5419845
+naughty_carson_1	family	Bradyrhizobiaceae	0.98	0.60	5449636	8874968
+naughty_carson_1	family	Pseudomonadaceae	1.00	0.95	5228195	5477884
+naughty_carson_1	family	Ferrimonadaceae	0.99	1.00	5032164	4980999
+naughty_carson_1	family	Propionibacteriaceae	0.98	1.00	4210783	4125126
+naughty_carson_1	family	Veillonellaceae	0.99	1.00	4203903	4150955
+naughty_carson_1	family	Legionellaceae	0.97	1.00	3717480	3607735
+naughty_carson_1	family	Caulobacteraceae	1.00	1.00	3302677	3301850
+naughty_carson_1	family	Nitrosomonadaceae	0.95	0.98	2827897	2734309
+naughty_carson_1	family	Enterococcaceae	0.86	0.99	2775801	2396848
+naughty_carson_1	family	Bacillaceae	1.00	0.94	2774840	2948556
+naughty_carson_1	family	Acidimicrobiaceae	0.95	0.97	2538144	2485587
+naughty_carson_1	family	Peptococcaceae	1.00	0.94	2467780	2625413
+naughty_carson_1	family	Porphyromonadaceae	0.99	0.99	2026592	2044131
+naughty_carson_1	family	Acholeplasmataceae	0.95	1.00	1674260	1600014
+naughty_carson_1	family	Eubacteriaceae	0.50	0.41	1528095	1857974
+naughty_carson_1	family	Streptomycetaceae	1.00	0.04	712644	18428033
+naughty_carson_1	family	Aurantimonadaceae	1.00	0.04	277823	7749681
+naughty_carson_1	family	Halobacteriaceae	0.26	0.01	256111	4877686
+naughty_carson_1	family	unassigned	nan	nan	113311654	11854717
+naughty_carson_1	genus	Cellulomonas	0.99	0.96	21396270	22124132
+naughty_carson_1	genus	Lechevalieria	0.97	0.96	20183649	20408997
+naughty_carson_1	genus	Phaeospirillum	0.99	0.99	14905576	15012162
+naughty_carson_1	genus	Carboxydocella	0.97	0.94	14485688	14888857
+naughty_carson_1	genus	Sinorhizobium	0.98	0.94	13097144	13774939
+naughty_carson_1	genus	Oerskovia	0.69	0.99	13086165	9113781
+naughty_carson_1	genus	Kibdelosporangium	0.98	1.00	12520637	12272270
+naughty_carson_1	genus	Ohtaekwangia	0.99	0.84	12297841	14411538
+naughty_carson_1	genus	Sphingobacterium	0.84	0.96	10866291	9481390
+naughty_carson_1	genus	Aquamicrobium	0.75	0.91	10458095	8674992
+naughty_carson_1	genus	Pedobacter	0.97	1.00	9782536	9532570
+naughty_carson_1	genus	Desulfovibrio	0.90	0.87	9762230	10076554
+naughty_carson_1	genus	Acetoanaerobium	0.95	0.60	9596540	15210881
+naughty_carson_1	genus	Paracoccus	0.98	0.92	8942446	9589943
+naughty_carson_1	genus	Phycicoccus	1.00	0.99	8715221	8785183
+naughty_carson_1	genus	Sphingomonas	0.96	0.35	8556231	23337519
+naughty_carson_1	genus	Vibrio	0.97	0.99	8469500	8287247
+naughty_carson_1	genus	Butyrivibrio	0.99	0.99	8214576	8225026
+naughty_carson_1	genus	Paenibacillus	0.67	0.74	8199968	7400375
+naughty_carson_1	genus	Rhodobacter	0.97	0.99	7706494	7530868
+naughty_carson_1	genus	Massilia	1.00	0.26	7633665	28873267
+naughty_carson_1	genus	Nocardia	0.99	1.00	7327805	7282241
+naughty_carson_1	genus	Clostridium	0.99	0.99	7252716	7261293
+naughty_carson_1	genus	Azospirillum	0.99	0.99	7196412	7141886
+naughty_carson_1	genus	Mycobacterium	0.97	0.99	6860028	6676999
+naughty_carson_1	genus	Sporosarcina	0.95	0.87	6695324	7245311
+naughty_carson_1	genus	Promicromonospora	1.00	0.98	6476082	6599454
+naughty_carson_1	genus	Rahnella	0.91	0.99	5888605	5419845
+naughty_carson_1	genus	Rhodococcus	1.00	0.99	5699133	5721635
+naughty_carson_1	genus	Bosea	0.98	0.60	5449636	8874968
+naughty_carson_1	genus	Azotobacter	1.00	0.95	5228195	5477884
+naughty_carson_1	genus	Pseudoxanthobacter	0.98	0.99	5201907	5163876
+naughty_carson_1	genus	Ferrimonas	0.99	1.00	5032164	4980999
+naughty_carson_1	genus	Xanthobacter	1.00	0.99	5004660	5026224
+naughty_carson_1	genus	Moorella	0.98	0.92	4848547	5136963
+naughty_carson_1	genus	Formosa	0.65	1.00	4811282	3154949
+naughty_carson_1	genus	Tessaracoccus	0.98	1.00	4210783	4125126
+naughty_carson_1	genus	Propionispora	0.99	1.00	4203903	4150955
+naughty_carson_1	genus	Rhodobaca	0.74	0.78	4051860	3845886
+naughty_carson_1	genus	Diaphorobacter	1.00	0.97	3977047	4083860
+naughty_carson_1	genus	Curtobacterium	0.99	0.95	3749508	3925652
+naughty_carson_1	genus	Tatlockia	0.97	1.00	3717480	3607735
+naughty_carson_1	genus	Thermoanaerobacter	0.99	0.69	3675120	5263147
+naughty_carson_1	genus	Janibacter	0.99	0.99	3637809	3637742
+naughty_carson_1	genus	Butyricicoccus	0.90	1.00	3629765	3268385
+naughty_carson_1	genus	Phenylobacterium	1.00	1.00	3302677	3301850
+naughty_carson_1	genus	Chryseobacterium	0.97	0.91	3126462	3329601
+naughty_carson_1	genus	Roseinatronobacter	0.76	0.63	2996930	3606821
+naughty_carson_1	genus	Lutispora	0.82	0.71	2974582	3459146
+naughty_carson_1	genus	Olleya	1.00	1.00	2951326	2957608
+naughty_carson_1	genus	Intestinibacter	1.00	0.99	2925325	2937124
+naughty_carson_1	genus	Nitrosomonas	0.95	0.98	2827897	2734309
+naughty_carson_1	genus	Tetragenococcus	0.86	0.99	2775801	2396848
+naughty_carson_1	genus	Bacillus	1.00	0.94	2774840	2948556
+naughty_carson_1	genus	Caminicella	0.91	0.98	2646994	2472183
+naughty_carson_1	genus	Peptoclostridium	0.99	1.00	2580682	2550032
+naughty_carson_1	genus	Ferrithrix	0.95	0.97	2538144	2485587
+naughty_carson_1	genus	Desulfotomaculum	1.00	0.94	2467780	2625413
+naughty_carson_1	genus	Caloranaerobacter	1.00	0.99	2424027	2455797
+naughty_carson_1	genus	Tepidibacter	0.99	1.00	2242208	2232591
+naughty_carson_1	genus	Porphyromonas	0.99	0.99	2026592	2044131
+naughty_carson_1	genus	Acholeplasma	0.95	1.00	1674260	1600014
+naughty_carson_1	genus	Garciella	0.50	0.41	1528095	1857974
+naughty_carson_1	genus	Halobacterium	0.26	0.01	256111	4877686
+naughty_carson_1	genus	unassigned	nan	nan	152286579	75507023
+naughty_carson_1	species	Phaeospirillum fulvum	0.99	0.99	14905576	15012162
+naughty_carson_1	species	Carboxydocella sporoproducens	0.97	0.94	14485688	14888857
+naughty_carson_1	species	Sinorhizobium meliloti	0.98	0.94	13097144	13774939
+naughty_carson_1	species	Kibdelosporangium aridum	0.98	1.00	12520637	12272270
+naughty_carson_1	species	Lechevalieria aerocolonigenes	0.96	0.93	10424245	10667666
+naughty_carson_1	species	Lechevalieria flava	0.98	0.98	9759404	9741331
+naughty_carson_1	species	Acetoanaerobium noterae	0.95	0.60	9596540	15210881
+naughty_carson_1	species	Paracoccus pantotrophus	0.98	0.92	8942446	9589943
+naughty_carson_1	species	Paenibacillus frigoriresistens	0.67	0.74	8199968	7400375
+naughty_carson_1	species	Rhodobacter capsulatus	0.97	0.99	7706494	7530868
+naughty_carson_1	species	uncultured Massilia sp.	1.00	0.26	7633665	28873267
+naughty_carson_1	species	Azospirillum brasilense	0.99	0.99	7196412	7141886
+naughty_carson_1	species	Sporosarcina newyorkensis	0.95	0.87	6695324	7245311
+naughty_carson_1	species	Promicromonospora umidemergens	1.00	0.98	6476082	6599454
+naughty_carson_1	species	Ohtaekwangia koreensis	0.91	0.80	6344503	7222220
+naughty_carson_1	species	Ohtaekwangia kribbensis	0.85	0.71	5953338	7189318
+naughty_carson_1	species	Rahnella aquatilis	0.91	0.99	5888605	5419845
+naughty_carson_1	species	Sphingobacterium nematocida	0.84	0.93	5512460	4981289
+naughty_carson_1	species	Sphingobacterium psychroaquaticum	0.84	0.99	5353831	4500101
+naughty_carson_1	species	Azotobacter vinelandii	1.00	0.95	5228195	5477884
+naughty_carson_1	species	Pseudoxanthobacter soli	0.98	0.99	5201907	5163876
+naughty_carson_1	species	Ferrimonas marina	0.99	1.00	5032164	4980999
+naughty_carson_1	species	Xanthobacter autotrophicus	1.00	0.99	5004660	5026224
+naughty_carson_1	species	Pedobacter agri	0.98	1.00	4862720	4779416
+naughty_carson_1	species	Moorella thermoacetica	0.98	0.92	4848547	5136963
+naughty_carson_1	species	Formosa spongicola	0.65	1.00	4811282	3154949
+naughty_carson_1	species	Butyrivibrio fibrisolvens	1.00	0.99	4792185	4834992
+naughty_carson_1	species	Vibrio gazogenes	0.99	1.00	4658598	4627085
+naughty_carson_1	species	Clostridium grantii	1.00	0.99	4455732	4473091
+naughty_carson_1	species	Tessaracoccus bendigoensis	0.98	1.00	4210783	4125126
+naughty_carson_1	species	Propionispora hippei	0.99	1.00	4203903	4150955
+naughty_carson_1	species	Rhodobaca barguzinensis	0.74	0.78	4051860	3845886
+naughty_carson_1	species	Cellulomonas terrae	0.96	0.83	4009665	4652222
+naughty_carson_1	species	Diaphorobacter oryzae	1.00	0.97	3977047	4083860
+naughty_carson_1	species	Desulfovibrio alkalitolerans	0.78	1.00	3962347	3111934
+naughty_carson_1	species	Vibrio cincinnatiensis	0.95	0.99	3810902	3660162
+naughty_carson_1	species	Curtobacterium sp. B20	0.99	0.95	3749508	3925652
+naughty_carson_1	species	Sphingomonas phyllosphaerae	1.00	1.00	3725169	3733085
+naughty_carson_1	species	Legionella maceachernii	0.97	1.00	3717480	3607735
+naughty_carson_1	species	Thermoanaerobacter thermohydrosulfuricus	0.99	0.69	3675120	5263147
+naughty_carson_1	species	Janibacter limosus	0.99	0.99	3637809	3637742
+naughty_carson_1	species	Butyricicoccus pullicaecorum	0.90	1.00	3629765	3268385
+naughty_carson_1	species	Butyrivibrio hungatei	0.97	0.98	3422391	3390034
+naughty_carson_1	species	Phenylobacterium composti	1.00	1.00	3302677	3301850
+naughty_carson_1	species	Desulfovibrio bizertensis	1.00	1.00	3256126	3257376
+naughty_carson_1	species	Sphingomonas aestuarii	0.97	1.00	3060688	2985887
+naughty_carson_1	species	Roseinatronobacter thiooxidans	0.76	0.63	2996930	3606821
+naughty_carson_1	species	Lutispora thermophila	0.82	0.71	2974582	3459146
+naughty_carson_1	species	Olleya aquimaris	1.00	1.00	2951326	2957608
+naughty_carson_1	species	Intestinibacter bartlettii	1.00	0.99	2925325	2937124
+naughty_carson_1	species	Nitrosomonas europaea	0.95	0.98	2827897	2734309
+naughty_carson_1	species	Clostridium tetani	0.99	0.99	2796984	2788202
+naughty_carson_1	species	Tetragenococcus halophilus	0.86	0.99	2775801	2396848
+naughty_carson_1	species	Bacillus coagulans	1.00	0.94	2774840	2948556
+naughty_carson_1	species	Caminicella sporogenes	0.91	0.98	2646994	2472183
+naughty_carson_1	species	[Eubacterium] yurii	0.99	1.00	2580682	2550032
+naughty_carson_1	species	Desulfovibrio vietnamensis	0.96	0.66	2543757	3707244
+naughty_carson_1	species	Ferrithrix thermotolerans	0.95	0.97	2538144	2485587
+naughty_carson_1	species	Desulfotomaculum hydrothermale	1.00	0.94	2467780	2625413
+naughty_carson_1	species	Caloranaerobacter azorensis	1.00	0.99	2424027	2455797
+naughty_carson_1	species	Tepidibacter thalassicus	0.99	1.00	2242208	2232591
+naughty_carson_1	species	Porphyromonas crevioricanis	0.99	0.99	2026592	2044131
+naughty_carson_1	species	Acholeplasma oculi	0.95	1.00	1674260	1600014
+naughty_carson_1	species	Garciella nitratireducens	0.50	0.41	1528095	1857974
+naughty_carson_1	species	Halobacterium salinarum	0.26	0.01	256111	4877686
+naughty_carson_1	species	unidentified	0.45	0.11	115476	473848
+naughty_carson_1	species	unassigned	nan	nan	236970443	185124110
