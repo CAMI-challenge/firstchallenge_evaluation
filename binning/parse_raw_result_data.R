@@ -56,13 +56,13 @@ get_dataframe_of_tools_at <- function(directory)
 	category_count <- length(category_names)
 
 	datatypes <- list()
-	datatypes$summery <- list()
+	datatypes$summary <- list()
 	datatypes$absolute <- list()
 	datatypes$perbin <- list()
 	datatypes$unsupervised <- list()
 	file_paths <- list()
 	file_paths$perbin <- list() #  rep("", length(dir_path_list_results))
-	file_paths$summery <- list() #  rep("", length(dir_path_list_results))
+	file_paths$summary <- list() #  rep("", length(dir_path_list_results))
 	file_paths$absolute <- list() #  rep("", length(dir_path_list_results))
 	file_paths$absolute_per_rank <- list() #  rep("", length(dir_path_list_results))
 	file_paths$unsupervised_excluded <- list() #  rep("", length(dir_path_list_results))
@@ -78,8 +78,8 @@ get_dataframe_of_tools_at <- function(directory)
 		{
 			if (grepl("summary_stats.tsv", result$value))
 			{
-				datatypes$summery[length(datatypes$summery)+1] <- "summery"
-				file_paths$summery[length(file_paths$summery)+1] <- file.path(dir_path, "output", result$value)
+				datatypes$summary[length(datatypes$summary)+1] <- "summary"
+				file_paths$summary[length(file_paths$summary)+1] <- file.path(dir_path, "output", result$value)
 			}
 			if (grepl("absolute_counts.tsv", result$value))
 			{
@@ -113,7 +113,7 @@ get_dataframe_of_tools_at <- function(directory)
 	tdatatypes <- as.vector(t(
 		matrix(
 			c(
-				unlist(datatypes$summery), 
+				unlist(datatypes$summary), 
 				unlist(datatypes$absolute), 
 				unlist(datatypes$absolute_per_rank), 
 				unlist(datatypes$perbin), 
@@ -125,7 +125,7 @@ get_dataframe_of_tools_at <- function(directory)
 	tfiles <- as.vector(t(
 		matrix(
 			c(
-				unlist(file_paths$summery), 
+				unlist(file_paths$summary), 
 				unlist(file_paths$absolute), 
 				unlist(file_paths$absolute_per_rank), 
 				unlist(file_paths$perbin), 
