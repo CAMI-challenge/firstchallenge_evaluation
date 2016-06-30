@@ -11,12 +11,19 @@ library("ggplot2")
 library("scales")
 library("grid")
 
-bin_type <- "superviced" # can be used as option later on
+# options
+
+bin_type <- "superviced"
+filter_tail <- T
+best_only <- T
+all_ranks_combined <- F
 
 # directories
-repo.dir <- getwd()
-results.dir <- paste(repo.dir, paste("/binning/data/",bin_type,"/ALL/by_genome/",sep=""), sep="")
-figures.dir <- paste(repo.dir, paste("/binning/plots/superviced/",bin_type,sep=""), sep="")
+
+repo.dir <- dirname(sys.frame(1)$ofile)
+
+results.dir <- paste(repo.dir, "/data/", bin_type, "/ALL/by_bin/", sep="")
+figures.dir <- paste(repo.dir, "/plots/", sep="")
 
 # files
 
@@ -39,26 +46,30 @@ ref_data_high$complexity <- "high"
 
 ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
 
-# removing small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
+# remove small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
 
-ref_data_combined <- within(ref_data_combined,
-                            binner_rank <- paste(ref_data_combined$binner,
-                                                 ref_data_combined$rank,
-                                                 ref_data_combined$group,
-                                                 sep='_'))
+if (filter_tail) {
 
-threshold <- 0
-q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
-q[, 2] <- q[, 2]*threshold
-for (i in 1:nrow(q)) {
-    idx <- ref_data_combined$binner_rank==q[i, 1]
-    s <- rev(ref_data_combined[idx, ]$predicted_size)
-    cs <- cumsum(s)
-    q[i, 2] <- s[min(which(cs>q[i, 2]))]
+    ref_data_combined <- within(ref_data_combined,
+                                binner_rank <- paste(ref_data_combined$binner,
+                                                     ref_data_combined$rank,
+                                                     ref_data_combined$group,
+                                                     sep='_'))
+    
+    threshold <- 0.01
+    q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
+    q[, 2] <- q[, 2]*threshold
+    for (i in 1:nrow(q)) {
+        idx <- ref_data_combined$binner_rank==q[i, 1]
+        s <- rev(ref_data_combined[idx, ]$predicted_size)
+        cs <- cumsum(s)
+        q[i, 2] <- s[min(which(cs>q[i, 2]))]
+    }
+    
+    idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[6]) > q[q[, 1]==x[10], 2])
+    ref_data_combined <- ref_data_combined[idx, ]
+
 }
-
-idx <- apply(ref_data_combined, 1, function(x) as.numeric(x[5]) > q[q[, 1]==x[9], 2])
-ref_data_combined <- ref_data_combined[idx, ]
 
 ### plotting
 
@@ -90,6 +101,8 @@ sem <- function(x, na.rm=T) {
     
 }
 
+if (all_ranks_combined) ref_data_combined$rank <- "all_ranks"
+
 for (rank in unique(ref_data_combined$rank)) {
 
     # plot precision / recall scatter plot combined per rank
@@ -97,6 +110,8 @@ for (rank in unique(ref_data_combined$rank)) {
     title <- paste("precision / recall", " (", rank, ")", sep="")
     
     df <- ref_data_combined[ref_data_combined$rank==rank, ]
+
+    df <- df[!grepl("Gold_Standard", df$binner), ]
     
     means <- aggregate(df, by=list(df$binner), FUN=mean, na.rm=T)
     er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
@@ -116,17 +131,25 @@ for (rank in unique(ref_data_combined$rank)) {
     complexity <- unique(data.frame(binner=ref_data_combined$binner, group=ref_data_combined$group))
     df$group <- complexity$group[match(df$binner, complexity$binner)]
     
-    
     # use only best parameter set for each tool
     
-    dfbest <- NULL
-    for (g in unique(df$group)) {
-    
-        dfg <- df[df$group==g, ]
-        idx <- sort(dfg$precision + dfg$recall, decreasing=T, index.return=T)$ix
-        dfg <- dfg[idx[1], ]
-        dfbest <- rbind(dfbest, dfg)
-    
+    if (best_only) {
+
+        dfbest <- NULL
+        
+            for (g in unique(df$group)) {
+            
+                dfg <- df[df$group==g, ]
+                idx <- sort(dfg$precision + dfg$recall, decreasing=T, index.return=T)$ix
+                dfg <- dfg[idx[1], ]
+                dfbest <- rbind(dfbest, dfg)
+            
+            }
+
+    } else {
+
+        dfbest <- df
+
     }
     
     df <- dfbest
@@ -146,7 +169,7 @@ for (rank in unique(ref_data_combined$rank)) {
          main_theme +
          theme(legend.position="right")
     
-    ggsave(paste(figures.dir, "prec_recall_by_genome", ".pdf", sep=""), p, width=7, height=5)
-
+    ggsave(paste(figures.dir, bin_type, "/prec_recall_combined_", rank, ".pdf", sep=""), p, width=7, height=5)
+    
 }
 
