@@ -4,48 +4,38 @@ library(ggplot2)
 #require(gridExtra)
 library(scales)
 
+source("parse_raw_result_data.R")
+
 create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   if(is.na(root_path)) {root_path<- argv[1]}
   if(is.na(output_file)) {output_file<- argv[2]}
   if(is.na(output_path)) {output_path<- argv[3]}
   
-  file_paths <- list(
-    "low"=paste(
-      root_path, "low/", 
-      list.files(path=paste(root_path, "low/", sep="")), sep=""),
-    "medium"=paste(
-      root_path, "medium/",
-      list.files(path=paste(root_path, "medium/", sep="")), sep=""),
-    "high"=paste(
-      root_path, "high/",
-      list.files(path=paste(root_path, "high/", sep="")), sep="")
-  )
+  df_tools <- get_dataframe_of_tools_at_locations(root_path)
+  df_tools_average_prec <- subset(df_tools, datatype=="summery")
+  df_tools_low <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+  df_tools_medium <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+  df_tools_high <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
   
-  
-  dir_low <- paste(root_path, "low/", sep="")
-  dir_medium <- paste(root_path, "medium/", sep="")
-  dir_high <- paste(root_path, "high/", sep="")
-  if (dir.exists(dir_low))
+  if (length(df_tools_low$files)>0)
   {
     data_low <- gatherdata(
-      file_paths$low, get_names(file_paths$low))
+      as.vector(df_tools_low$files), as.vector(df_tools_low$anonymous))
   }
-  if (dir.exists(dir_medium))
+  if (length(df_tools_medium$files)>0)
   {
     data_medium <- gatherdata(
-      file_paths$medium, get_names(file_paths$medium))
+      as.vector(df_tools_medium$files), as.vector(df_tools_medium$anonymous))
   }
-  if (dir.exists(dir_high))
+  if (length(df_tools_high$files)>0)
   {
     data_high <- gatherdata(
-      file_paths$high, get_names(file_paths$high))
+      as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
   }
+  
   dodge <- position_dodge(width = 0.3)
   dodge_big <- position_dodge(width = 0.6)
   dodge_small <- position_dodge(width = 0.2) #, height=0)
-  
-  
-  
   
   
   #############
@@ -61,25 +51,27 @@ create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   #pdf(output_file, paper="a4r", width=297, height=210)
   
   
-  if (dir.exists(dir_low))
+  if (length(df_tools_low$files)>0)
   {
     
     draw_plot(data_low, "Low Complexity Dataset\n")
-    ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path, device="pdf")
+    print(paste(output_file, "_low.pdf", sep=""))
+    print(output_path)
+    ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path) #, device="pdf"
     
     
   }
-  if (dir.exists(dir_medium))
+  if (length(df_tools_medium$files)>0)
   {
     
     draw_plot(data_medium, "Medium Complexity Dataset\n")
-    ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path, device="pdf")
+    ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path) #, device="pdf"
     
   }
-  if (dir.exists(dir_high))
+  if (length(df_tools_high$files)>0)
   {
     draw_plot(data_high, "High Complexity Dataset\n")
-    ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path, device="pdf")
+    ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path) #, device="pdf"
     
   }
   #dev.off()
@@ -136,8 +128,10 @@ gatherdata <- function(file_paths, tools_names)
   column_recall_std <- c()
   column_accuracy <- c()
   column_misclassification_rate <- c()
+  #print(file_paths)
   for (index in 1:length(file_paths))
   {
+    print(file_paths[index])
     column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
     raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
     column_precision <- append(column_precision, raw_data$precision)
