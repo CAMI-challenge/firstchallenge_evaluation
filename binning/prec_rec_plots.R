@@ -11,11 +11,12 @@ library("ggplot2")
 library("scales")
 library("grid")
 
-# directories
+bin_type <- "superviced" # can be used as option later on
 
-repo.dir <- "/home/ruben/cami/firstchallenge_evaluation/"
-results.dir <- paste(repo.dir, "/binning/data/superviced/ALL/by_bin/", sep="")
-figures.dir <- paste(repo.dir, "/binning/plots/superviced/", sep="")
+# directories
+repo.dir <- getwd()
+results.dir <- paste(repo.dir, paste("/binning/data/",bin_type,"/ALL/by_genome/",sep=""), sep="")
+figures.dir <- paste(repo.dir, paste("/binning/plots/superviced/",bin_type,sep=""), sep="")
 
 # files
 
@@ -46,7 +47,7 @@ ref_data_combined <- within(ref_data_combined,
                                                  ref_data_combined$group,
                                                  sep='_'))
 
-threshold <- 0.01
+threshold <- 0
 q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
 q[, 2] <- q[, 2]*threshold
 for (i in 1:nrow(q)) {
@@ -145,7 +146,7 @@ for (rank in unique(ref_data_combined$rank)) {
          main_theme +
          theme(legend.position="right")
     
-    ggsave(paste(figures.dir, "prec_recall_combined_", rank, ".pdf", sep=""), p, width=7, height=5)
+    ggsave(paste(figures.dir, "prec_recall_by_genome", ".pdf", sep=""), p, width=7, height=5)
 
 }
 
