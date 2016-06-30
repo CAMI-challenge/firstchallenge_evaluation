@@ -15,7 +15,7 @@ library("grid")
 
 bin_type <- "unsuperviced"
 filter_tail <- F
-best_only <- F
+best_only <- T
 all_ranks_combined <- F
 level <- "by_genome"
 
@@ -108,7 +108,7 @@ for (rank in unique(ref_data_combined$rank)) {
 
     # plot precision / recall scatter plot combined per rank
     
-    title <- paste("precision / recall", " (", rank, ")", sep="")
+    title <- paste("precision / recall", "\n(rank=", rank, "; bin_type=", bin_type, "; filter_tail=", filter_tail, ")", sep="")
     
     df <- ref_data_combined[ref_data_combined$rank==rank, ]
 
@@ -170,7 +170,8 @@ for (rank in unique(ref_data_combined$rank)) {
          main_theme +
          theme(legend.position="right")
     
-    ggsave(paste(figures.dir, bin_type, "/prec_recall_combined_", rank, "_", level, ".pdf", sep=""), p, width=7, height=5)
+    file <- paste(figures.dir, bin_type, "/prec_recall_combined_", rank, "_", level, ".pdf", sep="")
+    ggsave(file, p, width=7, height=5)
     
 }
 
