@@ -13,16 +13,17 @@ library("grid")
 
 # options
 
-bin_type <- "superviced"
-filter_tail <- T
-best_only <- T
+bin_type <- "unsuperviced"
+filter_tail <- F
+best_only <- F
 all_ranks_combined <- F
+level <- "by_genome"
 
 # directories
 
 repo.dir <- dirname(sys.frame(1)$ofile)
 
-results.dir <- paste(repo.dir, "/data/", bin_type, "/ALL/by_bin/", sep="")
+results.dir <- paste(repo.dir, "/data/", bin_type, "/ALL/", level, "/", sep="")
 figures.dir <- paste(repo.dir, "/plots/", sep="")
 
 # files
@@ -169,7 +170,7 @@ for (rank in unique(ref_data_combined$rank)) {
          main_theme +
          theme(legend.position="right")
     
-    ggsave(paste(figures.dir, bin_type, "/prec_recall_combined_", rank, ".pdf", sep=""), p, width=7, height=5)
+    ggsave(paste(figures.dir, bin_type, "/prec_recall_combined_", rank, "_", level, ".pdf", sep=""), p, width=7, height=5)
     
 }
 
