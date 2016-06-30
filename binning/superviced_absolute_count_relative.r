@@ -5,52 +5,36 @@ library(ggplot2)
 library(scales)
 library(RColorBrewer)
 
-
+source("parse_raw_result_data.R")
 
 
 create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
   if(is.na(root_path)) {root_path<- argv[1]}
   if(is.na(output_file)) {output_file<- argv[2]}
   if(is.na(output_path)) {output_path<- argv[3]}
-  file_paths <- list(
-    "low"=paste(
-      root_path, "low/", 
-		  list.files(path=paste(root_path, "low/", sep="")), sep=""),
-	  "medium"=paste(
-		  root_path, "medium/",
-		  
-		  list.files(path=paste(root_path, "medium/", sep="")), sep=""),
-	"high"=paste(
-		root_path, "high/",
-		list.files(path=paste(root_path, "high/", sep="")), sep="")
-	)
 
-
-
-#######################################
-
-
-  dir_low <- paste(root_path, "low/", sep="")
-  dir_medium <- paste(root_path, "medium/", sep="")
-  dir_high <- paste(root_path, "high/", sep="")
-  if (dir.exists(dir_low))
+  df_tools <- get_dataframe_of_tools_at_locations(root_path)
+  df_tools_average_prec <- subset(df_tools, datatype=="absolute")
+  df_tools_low <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+  df_tools_medium <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+  df_tools_high <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+  
+  if (length(df_tools_low$files)>0)
   {
-	  result <- gatherdata(
-		  file_paths$low, get_names(file_paths$low))
-	    data_low <- result$melted
+    data_low <- gatherdata(
+      as.vector(df_tools_low$files), as.vector(df_tools_low$anonymous))
   }
-  if (dir.exists(dir_medium))
+  if (length(df_tools_medium$files)>0)
   {
-	    result <- gatherdata(
-		  file_paths$medium, get_names(file_paths$medium))
-	    data_medium <- result$melted
+    data_medium <- gatherdata(
+      as.vector(df_tools_medium$files), as.vector(df_tools_medium$anonymous))
   }
-  if (dir.exists(dir_high))
+  if (length(df_tools_high$files)>0)
   {
-	  result <- gatherdata(
-		  file_paths$high, get_names(file_paths$high))
-	    data_high <- result$melted
+    data_high <- gatherdata(
+      as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
   }
+
   dodge <- position_dodge(width = 0.3)
   dodge_big <- position_dodge(width = 0.6)
   dodge_small <- position_dodge(width = 0.2) #, height=0)
@@ -67,12 +51,14 @@ create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
   labels_map <- list(
   "true" = "Correct",
   "false" = "Incorrect",
+  "unknown" = "Unknown",
   "unassigned" = "Unassigned"
   )
 
   blues <- rev(brewer.pal(8,"Blues")[2:8])
   reds <- rev(brewer.pal(8,"Reds")[2:8])
-  blue_red_grey <- c(blues, reds, "grey90")
+  greens <- rev(brewer.pal(8,"Greens")[2:8])
+  blue_red_grey <- c(blues, reds, greens, "grey50")
 
   # The palette with grey:
   cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
@@ -84,20 +70,20 @@ create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
   my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
 
   #pdf(output_file, paper="a4r", width=297, height=210)
-  if (dir.exists(dir_low))
+  if (length(df_tools_low$files)>0)
   {
-	  draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey)
-    ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path, device="pdf")
+    draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey)
+    ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path)
   }
-  if (dir.exists(dir_medium))
+  if (length(df_tools_medium$files)>0)
   {
 	  draw_plot_x(data_medium, "Medium Complexity Dataset\n", blue_red_grey)
-    ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path, device="pdf")
+    ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path)
   }
-  if (dir.exists(dir_high))
+  if (length(df_tools_high$files)>0)
   {
 	  draw_plot_x(data_high, "High Complexity Dataset\n", blue_red_grey)
-    ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path, device="pdf")
+    ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path)
   }
 
   #dev.off()
@@ -105,15 +91,6 @@ create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
 }
 
 
-
-
-#names <- 'berserk_feynman,lonely_shockley,lonely_wright,prickly_morse'
-#paths <- 'low/berserk_feynman.csv,low/lonely_shockley.csv,low/lonely_wright.csv,low/prickly_morse.csv'
-#tools_names <- unlist(strsplit(names, ','))
-#file_paths <- unlist(strsplit(paths, ','))
-#output_file <- "out.pdf"
-#tools_names <- unlist(strsplit(argv[1], ','))
-#file_paths <- unlist(strsplit(argv[2], ','))
 
 get_names <- function(file_paths)
 {
@@ -141,49 +118,42 @@ gatherdata <- function(file_paths, tools_names)
   column_levels <- c()
   column_true <- c()
   column_false <- c()
+  column_unknown <- c()
   total <- c()
   for (index in 1:length(file_paths))
   {
-    print(file_paths[index])
     raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
-    #print(dim(raw_data)[1])
-    #print(length(levels))
     column_levels <- append(column_levels, levels[1:dim(raw_data)[1]])
     column_tool <- append(column_tool, rep(tools_names[index], dim(raw_data)[1]))
     column_true <- append(column_true, raw_data$true)
     column_false <- append(column_false, raw_data$false)
-    print(sum(raw_data$unknown))
-    total <- append(total, rep(sum(raw_data$true) + sum(raw_data$false), dim(raw_data)[1]))
-    #total[index] <- total[index]
-    #column_false <- append(column_false, -1 *raw_data$false)
+    column_unknown <- append(column_unknown, raw_data$unknown)
+    # print(sum(raw_data$unknown))
+    total <- append(total, rep(sum(raw_data$true) + sum(raw_data$false) + sum(raw_data$unknown), dim(raw_data)[1]))
   }
   #print(total)
   #exit
   data_frame <- data.frame(
     true=column_true,
-    false=column_false)
-  data_frame$level = factor(column_levels)
-  # print data_frame
-  # print tools_names
+    false=column_false,
+    unknown=column_unknown)
+  data_frame$level = factor(column_levels, levels=levels)
   data_frame$tools <- factor(column_tool)
   data_frame$total <- total
   melted <- melt(data_frame, c("tools", "level", "total"))
-  #melted <- melt(data_frame, c("level"))
-  # melted$tools <- ''
-  #melted$tools <- factor(column_tool)
-  #levels(melted$variable)
-  melted$variable <- factor(melted$variable, levels=c('true','false','unassigned'), labels=c("Correct","Incorrect","Unassigned"))
+  melted$variable <- factor(melted$variable, levels=c('true','false','unknown', 'unassigned'), labels=c("Correct","Incorrect","Unknown","Unassigned"))
   melted$variable[melted$level == "root"] <- "Unassigned"
-  #levels(melted$variable)
-  return(list(melted = melted, total = total))
+  return(melted)
 }
 
 draw_plot_x <- function(data, title, c_palette)
 {
-  levels_tmp <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
-  levels <- c(levels_tmp, levels_tmp, "unassigned")
-  x_labels <- c("Correct","Incorrect", "Unassigned")
-  colour_theme <- c("deepskyblue3", "red", "grey30")
+  levels_tmp1 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
+  levels_tmp2 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
+  levels_tmp3 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
+  legend_levels <- c(levels_tmp1, levels_tmp2, levels_tmp3, "unassigned")
+  x_labels <- c("Correct","Incorrect", "Unknown", "Unassigned")
+  colour_theme <- c("deepskyblue3", "red", "grey30", "grey70")
 
   data$value <- data$value/data$total*100	#				2	1			3
 
@@ -191,11 +161,8 @@ draw_plot_x <- function(data, title, c_palette)
     geom_bar(stat = 'identity', position = 'stack') +
     #facet_wrap(~ level, scales = "fix") +
     scale_y_continuous(labels = add_percent) +
-    #scale_fill_manual(name=NULL,values=colour_theme, labels=x_labels) + #, labels=x_labels
-    scale_fill_manual(name=NULL,values=c_palette, labels=levels, guide=guide_legend(reverse=T)
-                      #scale_fill_manual(name=NULL,values=c_palette, guide=guide_legend(reverse=T)
-    ) + #, labels=x_labels guide=guide_legend(reverse=T)
-    labs(title=title, fill=NULL, x=NULL, y="% Sequence") +
+    scale_fill_manual(name=NULL,values=c_palette, labels=legend_levels, guide=guide_legend(reverse=T, nrow=15)) + #, labels=x_labels guide=guide_legend(reverse=T)
+    labs(title=title, fill=NULL, x=NULL, y="% Basepairs") +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) # , vjust = 0.5
 }
 
@@ -259,3 +226,4 @@ argv <- commandArgs(TRUE)
 #output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
 
 create_count_plots(argv[1], argv[2], argv[3])
+
