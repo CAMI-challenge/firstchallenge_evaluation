@@ -4,6 +4,7 @@ library(ggplot2)
 require(gridExtra)
 library(scales)
 
+source("parse_raw_result_data.R")
 #"\t"
 
 dir.exists <- function(d) {
@@ -69,40 +70,31 @@ get_names <- function(file_paths)
 
 argv <- commandArgs(TRUE)
 root_path <- argv[1]
-file_paths <- list(
-	"low"=paste(
-		root_path, "low/", 
-		list.files(path=paste(root_path, "low/", sep="")), sep=""),
-	"medium"=paste(
-		root_path, "medium/",
-		list.files(path=paste(root_path, "medium/", sep="")), sep=""),
-	"high"=paste(
-		root_path, "high/",
-		list.files(path=paste(root_path, "high/", sep="")), sep="")
-	)
+
+df_tools <- get_dataframe_of_tools_at_locations(root_path)
+df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
+df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+
+if (length(df_tools_low$files)>0)
+{
+data_low <- gatherdata(
+  as.vector(df_tools_low$files), as.vector(df_tools_low$anonymous))
+}
+if (length(df_tools_medium$files)>0)
+{
+data_medium <- gatherdata(
+  as.vector(df_tools_medium$files), as.vector(df_tools_medium$anonymous))
+}
+if (length(df_tools_high$files)>0)
+{
+data_high <- gatherdata(
+  as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
+}
 
 output_file <- argv[2]
 
-#######################################
-
-dir_low <- paste(root_path, "low/", sep="")
-dir_medium <- paste(root_path, "medium/", sep="")
-dir_high <- paste(root_path, "high/", sep="")
-if (dir.exists(dir_low))
-{
-	data_low <- gatherdata(
-		file_paths$low, get_names(file_paths$low))
-}
-if (dir.exists(dir_medium))
-{
-	data_medium <- gatherdata(
-		file_paths$medium, get_names(file_paths$medium))
-}
-if (dir.exists(dir_high))
-{
-	data_high <- gatherdata(
-		file_paths$high, get_names(file_paths$high))
-}
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
 dodge_small <- position_dodge(width = 0.2, height=0)
@@ -171,15 +163,15 @@ draw_plot <- function(data, title)
 
 #print(subset(data_low, variable == "ari"))
 pdf(output_file, paper="a4r", width=297, height=210)
-if (dir.exists(dir_low))
+if (length(df_tools_low$files)>0)
 {
 	draw_plot(data_low, "Low Complexity Dataset\n")
 }
-if (dir.exists(dir_medium))
+if (length(df_tools_medium$files)>0)
 {
 	draw_plot(data_medium, "Medium Complexity Dataset\n")
 }
-if (dir.exists(dir_high))
+if (length(df_tools_high$files)>0)
 {
 	draw_plot(data_high, "High Complexity Dataset\n")
 }
