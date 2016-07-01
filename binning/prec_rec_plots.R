@@ -10,18 +10,15 @@ rm(list=ls())
 library("ggplot2")
 library("scales")
 library("grid")
-library("gridExtra")
-library("splines")
-library("MASS")
 
 # options
 
 bin_type <- "superviced"
 filter_tail <- F
 best_only <- T
-all_ranks_combined <- T
-level <- "by_bin"
-complexity_level <- "high"
+all_ranks_combined <- F
+level <- "by_genome"            # by_genome / by_bin
+ANI <- "common strain"          # all / unique strain / common strain
 
 # directories
 
@@ -37,6 +34,7 @@ ref_data_low.file <- paste(results.dir, "/low/all.txt", sep="")
 ref_data_medium.file <- paste(results.dir, "/medium/all.txt", sep="")
 ref_data_high.file <- paste(results.dir, "/high/all.txt", sep="")
 
+ANI_data.file <- paste(metadata.dir, "ANI/unique_common.tsv", sep="")
 
 # load data
 
@@ -51,9 +49,11 @@ ref_data_medium$complexity <- "medium"
 ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
 ref_data_high$complexity <- "high"
 
-if (complexity_level=="high") ref_data_combined <- ref_data_high
-if (complexity_level=="medium") ref_data_combined <- ref_data_medium
-if (complexity_level=="low") ref_data_combined <- ref_data_low
+ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
+
+ANI_data <- read.table(ANI_data.file, header=F, sep="\t")
+colnames(ANI_data) <- c("bin", "group")
+ANI_data$bin <- gsub(".gt1kb", "", ANI_data$bin)
 
 # remove small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
 
@@ -80,17 +80,25 @@ if (filter_tail) {
 
 }
 
+if (ANI!="all") {
+
+    ref_data_combined$ANI <- ANI_data$group[match(ref_data_combined$bin, ANI_data$bin)]    
+    ref_data_combined <- ref_data_combined[ref_data_combined$ANI==ANI, ]
+
+}
+
 ### plotting
 
 points_size=1.25
 points_alpha=1
 points_shape=22
 bars_size=1
-bars_alpha=1
+bars_alpha=0.75
 
 # ggplot2 theme
 
 main_theme <- theme(panel.background=element_blank(),
+                    panel.grid=element_blank(),
                     axis.line.x=element_line(color="black"),
                     axis.line.y=element_line(color="black"),
                     axis.line=element_line(color="black"),
@@ -112,15 +120,16 @@ sem <- function(x, na.rm=T) {
 if (all_ranks_combined) ref_data_combined$rank <- "all_ranks"
 
 for (rank in unique(ref_data_combined$rank)) {
- 
-    # plot precision / recall scatter plot combined per rank
-     
-    title <- paste("precision / recall", "(", rank, ")", sep="")
 
+    # plot precision / recall scatter plot combined per rank
+    
+    title <- paste("precision / recall", "\n(rank=", rank, "; bin_type=", bin_type,
+                   "; filter_tail=", filter_tail, "; ANI=", ANI, ")", sep="")
+    
     df <- ref_data_combined[ref_data_combined$rank==rank, ]
-   
+
     df <- df[!grepl("Gold_Standard", df$binner), ]
-  
+    
     means <- aggregate(df, by=list(df$binner), FUN=mean, na.rm=T)
     er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
     real_sizes <- aggregate(df$real_size, by=list(df$binner), FUN=sum, na.rm=T)
@@ -157,69 +166,32 @@ for (rank in unique(ref_data_combined$rank)) {
 
     } else {
 
-         dfbest <- df
+        dfbest <- df
 
     }
-
-    best_tools <- unique(dfbest$binner)
-
-    df <- ref_data_combined[ref_data_combined$rank==rank, ]
     
-    df <- df[df$binner %in% best_tools, ]
-
-    df$norm_pred_size <- NA
-    df$norm_pred_size_cumsum <- NA
-    df_norm <- df[NULL, ]
-
-    for (binner in unique(df$binner)) {
+    df <- dfbest
     
-        df_binner <- df[df$binner==binner, ]
-        df_binner$norm_pred_size <- df_binner$predicted_size / sum(df_binner$predicted_size)
-        idx <- sort(df_binner$norm_pred_size, index.return=T)$ix
-        df_binner <- df_binner[idx, ]
-        df_binner$norm_pred_size_cumsum <- cumsum(df_binner$norm_pred_size)
-
-        df_norm <- rbind(df_norm, df_binner)
-
-    }
-
-    df <- df_norm
-
-    title <- paste("precision (", rank, "; ", complexity_level, ")", sep="")
+    p <- ggplot(df, aes(x=precision, y=recall, color=tool)) +
+         geom_errorbarh(aes(xmin=precision-precision_er,
+                            xmax=precision+precision_er),
+                        size=bars_size, alpha=bars_alpha, height=0) +
+         geom_errorbar(aes(ymin=recall-recall_er,
+                           ymax=recall+recall_er),
+                       size=bars_alpha, alpha=bars_size, width=0) +
+         scale_x_continuous(labels=percent, limits=c(0.0, 1)) +
+         scale_y_continuous(labels=percent, limits=c(0, 1)) +
+         geom_point(aes(size=predicted_size), alpha=points_alpha, shape=points_shape, color="grey") +
+         geom_point(aes(size=real_size), alpha=points_alpha, shape=points_shape, color="black") +
+         ggtitle(title) +
+         main_theme +
+         theme(legend.position="right",
+               title=element_text(size=8))
     
-    p1 <- ggplot(df, aes(x=norm_pred_size_cumsum, y=precision, color=binner, fill=binner)) +
-          geom_point(alpha=points_alpha, shape=19, size=0.5) +
-          geom_hline(yintercept=-0.05) +
-          scale_y_continuous(labels=percent) +
-          facet_grid(binner ~ .) +
-          labs(x="accumulated bin size") +
-          ggtitle(title) +
-          main_theme +
-          theme(legend.position="none",
-                panel.grid.major=element_line(color="grey", size=0.1),
-                strip.background=element_rect(colour="black", fill="transparent")
-                )
-     
-    title <- paste("recall (", rank, "; ", complexity_level, ")", sep="")
-    
-    p2 <- ggplot(df, aes(x=norm_pred_size_cumsum, y=recall, color=binner, fill=binner)) +
-          geom_point(alpha=points_alpha, shape=19, size=0.5) +
-          geom_hline(yintercept=-0.05) +
-          scale_y_continuous(labels=percent) +
-          facet_grid(binner ~ .) +
-          labs(x="accumulated bin size") +
-          ggtitle(title) +
-          main_theme +
-          theme(legend.position="none",
-                panel.grid.major=element_line(color="grey", size=0.1),
-                strip.background=element_rect(colour="black", fill="transparent")
-                )
-     
-    pg1 <- grid.arrange(p1, p2, ncol=2)
-    
-    file <- paste(figures.dir, bin_type, "/prec_rec_sorted_", rank, "_", complexity_level, ".pdf", sep="")
+    file <- paste(figures.dir, bin_type, "/prec_recall_combined_", rank,
+                  "_", level, "_ANI_", ANI, ".pdf", sep="")
     file <- gsub(" ", "_", file)
-    ggsave(file, pg1, width=16, height=10)
-
+    ggsave(file, p, width=7, height=5)
+    
 }
 
