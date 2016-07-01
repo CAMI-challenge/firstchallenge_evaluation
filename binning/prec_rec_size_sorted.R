@@ -21,7 +21,7 @@ for (complexity_level in complexity_levels) {
     # options
     
     level <- "by_bin"
-    bin_type <- "superviced"    
+    bin_type <- "supervised"    
     filter_tail <- F
     best_only <- T
     all_ranks_combined <- T
@@ -31,16 +31,15 @@ for (complexity_level in complexity_levels) {
     repo.dir <- dirname(sys.frame(1)$ofile)
     
     metadata.dir <- paste(repo.dir, "/../metadata/", sep="")
-    results.dir <- paste(repo.dir, "/data/", bin_type, "/ALL/", level, "/", sep="")
+    if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
     figures.dir <- paste(repo.dir, "/plots/", sep="")
     
     # files
     
-    ref_data_low.file <- paste(results.dir, "/low/all.txt", sep="")
-    ref_data_medium.file <- paste(results.dir, "/medium/all.txt", sep="")
-    ref_data_high.file <- paste(results.dir, "/high/all.txt", sep="")
-    
-    
+    ref_data_low.file <- paste(results.dir, "/low_all.tsv", sep="")
+    ref_data_medium.file <- paste(results.dir, "/medium_all.tsv", sep="")
+    ref_data_high.file <- paste(results.dir, "/high_all.tsv", sep="")
+     
     # load data
     
     ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
@@ -122,7 +121,7 @@ for (complexity_level in complexity_levels) {
     
         df <- ref_data_combined[ref_data_combined$rank==rank, ]
        
-        df <- df[!grepl("Gold_Standard", df$binner), ]
+        df <- df[!grepl("Gold Standard", df$binner), ]
       
         means <- aggregate(df, by=list(df$binner), FUN=mean, na.rm=T)
         er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
@@ -169,7 +168,9 @@ for (complexity_level in complexity_levels) {
         df <- ref_data_combined[ref_data_combined$rank==rank, ]
         
         df <- df[df$binner %in% best_tools, ]
-    
+   
+                df$predicted_size <- as.numeric(df$predicted_size)                
+ 
         df$norm_pred_size <- NA
         df$norm_pred_size_cumsum <- NA
         df_norm <- df[NULL, ]

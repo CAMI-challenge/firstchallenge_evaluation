@@ -17,8 +17,8 @@ filter_tail <- F
 best_only <- T
 all_ranks_combined <- T
  
-bin_types <- c("superviced", "unsuperviced")
-levels <- c("by_genome", "by_bin")
+bin_types <- c("supervised")
+levels <- c("by_bin", "by_genome")
 ANIs <- c("all", "common strain", "unique strain")
 
 for (bin_type in bin_types)
@@ -30,14 +30,14 @@ for (bin_type in bin_types)
         repo.dir <- dirname(sys.frame(1)$ofile)
         
         metadata.dir <- paste(repo.dir, "/../metadata/", sep="")
-        results.dir <- paste(repo.dir, "/data/", bin_type, "/ALL/", level, "/", sep="")
+        if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
         figures.dir <- paste(repo.dir, "/plots/", sep="")
         
         # files
         
-        ref_data_low.file <- paste(results.dir, "/low/all.txt", sep="")
-        ref_data_medium.file <- paste(results.dir, "/medium/all.txt", sep="")
-        ref_data_high.file <- paste(results.dir, "/high/all.txt", sep="")
+        ref_data_low.file <- paste(results.dir, "low_all.tsv", sep="")
+        ref_data_medium.file <- paste(results.dir, "medium_all.tsv", sep="")
+        ref_data_high.file <- paste(results.dir, "high_all.tsv", sep="")
         
         ANI_data.file <- paste(metadata.dir, "ANI/unique_common.tsv", sep="")
         
@@ -133,7 +133,7 @@ for (bin_type in bin_types)
             
             df <- ref_data_combined[ref_data_combined$rank==rank, ]
         
-            df <- df[!grepl("Gold_Standard", df$binner), ]
+            df <- df[!grepl("Gold Standard", df$binner), ]
             
             means <- aggregate(df, by=list(df$binner), FUN=mean, na.rm=T)
             er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
