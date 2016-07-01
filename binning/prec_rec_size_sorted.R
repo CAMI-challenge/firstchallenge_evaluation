@@ -56,7 +56,9 @@ for (complexity_level in complexity_levels) {
     if (complexity_level=="high") ref_data_combined <- ref_data_high
     if (complexity_level=="medium") ref_data_combined <- ref_data_medium
     if (complexity_level=="low") ref_data_combined <- ref_data_low
-    
+   
+    ref_data_combined <- ref_data_combined[ref_data_combined$bin!="unassigned", ]
+
     # remove small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
     
     if (filter_tail) {
