@@ -4,6 +4,7 @@ library(ggplot2)
 require(gridExtra)
 library(scales)
 
+source("parse_raw_result_data.R")
 #"\t"
 
 dir.exists <- function(d) {
@@ -67,38 +68,30 @@ get_names <- function(file_paths)
 
 #######################################
 
-get_frames <- function(root_path)
+get_frames <- function(df_tools_subset)
 {
-	novelties <- rev(c("new_order", "new_family", "new_genus", "new_species", "new_strain"))
-	data_low <- data.frame()
-	data_medium <- data.frame()
-	data_high <- data.frame()
+	df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+	df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+	df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+	categories <- as.vector(levels(df_tools_subset$categories))
+	data_low <- NULL
+	data_medium <- NULL
+	data_high <- NULL
 	nov_low <- c()
 	nov_medium <- c()
 	nov_high <- c()
-	for (folder_novelty in novelties)
+	for (category in categories)
 	{
-		file_paths <- list(
-			"low"=paste(
-				root_path, folder_novelty, "/ari/low/", 
-				list.files(path=paste(root_path, folder_novelty, "/ari/low/", sep="")), sep=""),
-			"medium"=paste(
-				root_path, folder_novelty, "/ari/medium/",
-				list.files(path=paste(root_path, folder_novelty, "/ari/medium/", sep="")), sep=""),
-			"high"=paste(
-				root_path, folder_novelty, "/ari/high/",
-				list.files(path=paste(root_path, folder_novelty, "/ari/high/", sep="")), sep="")
-			)
 		#######################################
-		dir_low <- paste(root_path, folder_novelty, "/ari/low/", sep="")
-		dir_medium <- paste(root_path, folder_novelty, "/ari/medium/", sep="")
-		dir_high <- paste(root_path, folder_novelty, "/ari/high/", sep="")
-		if (dir.exists(dir_low))
+		df_tools_low_subset <- subset(df_tools_low, categories==category)
+		df_tools_medium_subset <- subset(df_tools_medium, categories==category)
+		df_tools_high_subset <- subset(df_tools_high, categories==category)
+		if (length(df_tools_low_subset$files)>0)
 		{
 			data_frame <- gatherdata(
-				file_paths$low, get_names(file_paths$low))
-			nov_low <- append(nov_low, rep(folder_novelty, length(data_frame$tools)))
-			if (length(data_low) == 0)
+				as.vector(df_tools_low_subset$files), as.vector(df_tools_low_subset$anonymous))
+			nov_low <- append(nov_low, rep(category, length(data_frame$tools)))
+			if (is.null(data_low))
 			{
 				data_low <- data_frame
 			}
@@ -107,12 +100,12 @@ get_frames <- function(root_path)
 				data_low <- rbind(data_low, data_frame)
 			}
 		}
-		if (dir.exists(dir_medium))
+		if (length(df_tools_medium_subset$files)>0)
 		{
 			data_frame <- gatherdata(
-				file_paths$medium, get_names(file_paths$medium))
-			nov_medium <- append(nov_medium, rep(folder_novelty, length(data_frame$tools)))
-			if (length(data_medium) == 0)
+				as.vector(df_tools_medium_subset$files), as.vector(df_tools_medium_subset$anonymous))
+			nov_medium <- append(nov_medium, rep(category, length(data_frame$tools)))
+			if (is.null(data_medium))
 			{
 				data_medium <- data_frame
 			}
@@ -121,12 +114,12 @@ get_frames <- function(root_path)
 				data_medium <- rbind(data_medium, data_frame)
 			}
 		}
-		if (dir.exists(dir_high))
+		if (length(df_tools_high_subset$files)>0)
 		{
 			data_frame <- gatherdata(
-				file_paths$high, get_names(file_paths$high))
-			nov_high <- append(nov_high, rep(folder_novelty, length(data_frame$tools)))
-			if (length(data_high) == 0)
+				as.vector(df_tools_high_subset$files), as.vector(df_tools_high_subset$anonymous))
+			nov_high <- append(nov_high, rep(category, length(data_frame$tools)))
+			if (is.null(data_high))
 			{
 				data_high <- data_frame
 			}
@@ -142,31 +135,20 @@ get_frames <- function(root_path)
 	return(list(low=data_low, medium=data_medium, high=data_high))
 }
 
+
+
+
+
 argv <- commandArgs(TRUE)
 root_path <- argv[1]
 output_file <- argv[2]
 
-dataframes <- get_frames(root_path)
+df_tools <- get_dataframe_of_tools_at_locations(root_path)
+df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
+
+dataframes <- get_frames(df_tools_subset)
 #######################################
 
-dir_low <- paste(root_path, "low/", sep="")
-dir_medium <- paste(root_path, "medium/", sep="")
-dir_high <- paste(root_path, "high/", sep="")
-if (dir.exists(dir_low))
-{
-	data_low <- gatherdata(
-		file_paths$low, get_names(file_paths$low))
-}
-if (dir.exists(dir_medium))
-{
-	data_medium <- gatherdata(
-		file_paths$medium, get_names(file_paths$medium))
-}
-if (dir.exists(dir_high))
-{
-	data_high <- gatherdata(
-		file_paths$high, get_names(file_paths$high))
-}
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
 dodge_small <- position_dodge(width = 0.2, height=0)

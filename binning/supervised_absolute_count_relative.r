@@ -14,10 +14,10 @@ create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
   if(is.na(output_path)) {output_path<- argv[3]}
 
   df_tools <- get_dataframe_of_tools_at_locations(root_path)
-  df_tools_average_prec <- subset(df_tools, datatype=="absolute")
-  df_tools_low <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
-  df_tools_medium <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
-  df_tools_high <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+  df_tools_subset <- subset(df_tools, datatype=="absolute")
+  df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+  df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+  df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
   
   if (length(df_tools_low$files)>0)
   {

@@ -5,6 +5,7 @@ require(gridExtra)
 library(scales)
 library(RColorBrewer)
 
+source("parse_raw_result_data.R")
 #"\t"
 
 dir.exists <- function(d) {
