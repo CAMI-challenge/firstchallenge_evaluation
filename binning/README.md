@@ -9,7 +9,7 @@ Rscript superviced_macro_precision.r data/superviced/ALL/truncated_macro_precisi
 Rscript unsuperviced_ari.r data/unsuperviced/ALL/ari unsuperviced_ari.pdf
 
 ##Supervised plots:
-ARI: [supervised_all_ari_excluding_notassigned.pdf](plots/superviced/supervised_all_ari_excluding_notassigned.pdf) (including not assigned sequences)  
+ARI: [supervised_all_ari_excluding_notassigned.pdf](plots/superviced/supervised_all_ari_excluding_notassigned.pdf) (excluding not assigned sequences)  
 ARI: [supervised_all_ari_including_notassigned.pdf](plots/superviced/supervised_all_ari_including_notassigned.pdf) (including not assigned sequences)  
 
 ###Low
