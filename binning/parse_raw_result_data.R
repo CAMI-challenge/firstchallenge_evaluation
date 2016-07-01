@@ -134,6 +134,23 @@ get_dataframe_of_tools_at <- function(directory)
 			), 
 			ncol=length(category_names))
 		))
+
+	if (length(union(
+			length(file_paths$summary), 
+			c(length(file_paths$perbin), 
+			length(file_paths$absolute), 
+			length(file_paths$absolute_per_rank))
+			))!=1)
+	{
+		stop("ERROR: BAD FILE COUNT! (unsupervised)")
+	}
+	if (length(union(
+			length(file_paths$unsupervised_excluded), 
+			length(file_paths$unsupervised_included)
+			))!=1)
+	{
+		stop("ERROR: BAD FILE COUNT! (unsupervised)")
+	}
 	#tdatatypes <- unlist(datatypes)
 	data_frame_tools <- data.frame(
 		anonymous = anonymous_names,
