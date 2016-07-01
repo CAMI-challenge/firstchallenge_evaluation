@@ -22,7 +22,7 @@ By basepairs: [supervised_all_bp_absolute_medium.pdf](plots/superviced/supervise
 By basepairs: [supervised_all_bp_relative_medium.pdf](plots/superviced/supervised_all_bp_relative_medium.pdf)  
 
 ###High
-Avg. Precition/Recall: [supervised_all_summary_high.pdf](plots/superviced/supervised_all_summary_high.pdf) 
+Avg. Precition/Recall: [supervised_all_summary_high.pdf](plots/superviced/supervised_all_summary_high.pdf)  
 By basepairs: [supervised_all_bp_absolute_high.pdf](plots/superviced/supervised_all_bp_absolute_high.pdf)  
 By basepairs: [supervised_all_bp_relative_high.pdf](plots/superviced/supervised_all_bp_relative_high.pdf)  
 
