@@ -14,32 +14,34 @@ dir.exists <- function(d) {
 
 gatherdata <- function(file_paths, tools_names)
 {
+	#print(tools_names)
+	#print(file_paths)
 	separator <- '\t'
-	levels <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
-	# ﻿instance,entropy,"rand index","adjusted rand index"
+	levels <- c("binning")
+	#instance,entropy,"rand index","adjusted rand index"
 	column_tool <- c()
 	column_entropy <- c()
 	column_ri <- c()
 	column_ari <- c()
 	for (index in 1:length(file_paths))
 	{
-		print(file_paths[index])
+		#print(file_paths[index])
 		column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
 		raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
-		column_entropy <- append(column_entropy, raw_data$entropy)
-		column_ri <- append(column_ri, raw_data$rand.index)
-		column_ari <- append(column_ari, raw_data$adjusted.rand.index)
+		column_entropy <- append(column_entropy, tail(raw_data$entropy, n=1))
+		column_ri <- append(column_ri, tail(raw_data$rand.index, n=1))
+		column_ari <- append(column_ari, tail(raw_data$adjusted.rand.index, n=1))
 	}
 	data_frame <- data.frame(
 		entropy = column_entropy,
 		ri = column_ri,
 		ari = column_ari)
-	data_frame$level = factor(rep(levels, length(file_paths)), levels=levels)
+	#data_frame$level = factor(rep(levels, length(file_paths)), levels=levels)
 	data_frame$tools <- factor(column_tool)
-	melted <- melt(data_frame, c("tools", "level"))
+	melted <- melt(data_frame, "tools")
 	melted$variable <- factor(melted$variable)
-	#colnames(melted) <- c("tools", "metric", "value")
-	levels(melted$variable) <- c("Entropy", "Rand index", "Adjusted rand index")
+	colnames(melted) <- c("tools", "metric", "value")
+	levels(melted$metric) <- c("Entropy", "Rand index", "Adjusted rand index")
 	return(melted)
 }
 
@@ -85,6 +87,8 @@ df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 C
 df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
 df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
 
+#print(head(df_tools_low))
+#######################################
 if (length(df_tools_low$files)>0)
 {
 data_low <- gatherdata(
@@ -101,10 +105,9 @@ data_high <- gatherdata(
   as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
 }
 
-
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
-dodge_small <- position_dodge(width = 0.2, height=0)
+dodge_small <- position_dodge(width = 0.1, height=0)
 
 #######################################
 
@@ -119,28 +122,6 @@ add_percent <- function(x, ...)
 	sprintf("%.0f%%", x)
 }
 
-lable_handle <- function(x, ...)
-{
-	display <- c()
-	for(value in x)
-	{
-		if (is.na(value))
-		{
-			display <- append(display, "")
-			next
-		}
-		if ((0 <= value) && (value <= 1))
-		{
-			display <- append(display, sprintf("%.2f", value))
-		}
-		else
-		{
-			display <- append(display, "")
-		}
-	}
-	display
-}
-
 #title_main <- "(%s) Entropy, rand index, adjusted rand index"
 title_main <- "Entropy, rand index, adjusted rand index"
 
@@ -152,23 +133,23 @@ my_colours <- rev(cbbPalette)
 my_shapes <- c(20, 18)
 my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
 
+
+#pdf("example_macro_prec_recall.pdf", paper="a4r", width=297, height=210)
 draw_plot <- function(data, title)
 {
-	ggplot(subset(data, variable == "Adjusted rand index"), 
-		aes(x = level, y = value, colour=tools, group=interaction(tools, variable))) + #fill=tools, 
-		geom_line(position=dodge_small) +
-		labs(colour="Anonymous submission", x=NULL, y=NULL) +
-		#scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
-		scale_y_continuous(breaks=seq(0,1,0.1), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.5, 1.01)) + #
-		facet_wrap( ~ variable, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
-		#facet_wrap( ~ metric, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
-		geom_text(aes(label=value), size=3, hjust=0.5, vjust=-0.3, show_guide=F) +
-		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show_guide=F) +
+	#print(data)
+	ggplot(subset(data, metric == "Adjusted rand index"), 
+		aes(x = tools, y = value, group=interaction(tools, metric))) + #fill=tools, 
+		geom_bar(stat="identity") +
+		#labs(title=title_main, colour="Tool name", x="Level", y=NULL) +
+		labs(fill="Anonymous submission", x=NULL, y=NULL) +
+		scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
+		facet_wrap( ~ metric, ncol=1, scales="fix") + #, as.table = FALSE, scales="free_y"
+		geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show_guide=F) +
 		ggtitle(title) +
 		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
 }
 
-#print(subset(data_low, variable == "ari"))
 pdf(output_file, paper="a4r", width=297, height=210)
 if (length(df_tools_low$files)>0)
 {

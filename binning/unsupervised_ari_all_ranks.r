@@ -15,7 +15,7 @@ dir.exists <- function(d) {
 gatherdata <- function(file_paths, tools_names)
 {
 	separator <- '\t'
-	levels <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
+	levels <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species", "strain")
 	# ﻿instance,entropy,"rand index","adjusted rand index"
 	column_tool <- c()
 	column_entropy <- c()
@@ -70,17 +70,9 @@ get_names <- function(file_paths)
 
 argv <- commandArgs(TRUE)
 root_path <- argv[1]
-output_file <- argv[2]
 
 df_tools <- get_dataframe_of_tools_at_locations(root_path)
-if (length(argv)==2)
-{
-	df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
-}
-if (length(argv)!=2)
-{
-	df_tools_subset <- subset(df_tools, datatype=="unsupervised_excluded")
-}
+df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
 df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
 df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
 df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
@@ -101,6 +93,7 @@ data_high <- gatherdata(
   as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
 }
 
+output_file <- argv[2]
 
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)

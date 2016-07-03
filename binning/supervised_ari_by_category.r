@@ -68,39 +68,86 @@ get_names <- function(file_paths)
 
 #######################################
 
+get_frames <- function(df_tools_subset)
+{
+	df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+	df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+	df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+	categories <- as.vector(levels(df_tools_subset$categories))
+	data_low <- NULL
+	data_medium <- NULL
+	data_high <- NULL
+	nov_low <- c()
+	nov_medium <- c()
+	nov_high <- c()
+	for (category in categories)
+	{
+		#######################################
+		df_tools_low_subset <- subset(df_tools_low, categories==category)
+		df_tools_medium_subset <- subset(df_tools_medium, categories==category)
+		df_tools_high_subset <- subset(df_tools_high, categories==category)
+		if (length(df_tools_low_subset$files)>0)
+		{
+			data_frame <- gatherdata(
+				as.vector(df_tools_low_subset$files), as.vector(df_tools_low_subset$anonymous))
+			nov_low <- append(nov_low, rep(category, length(data_frame$tools)))
+			if (is.null(data_low))
+			{
+				data_low <- data_frame
+			}
+			else
+			{
+				data_low <- rbind(data_low, data_frame)
+			}
+		}
+		if (length(df_tools_medium_subset$files)>0)
+		{
+			data_frame <- gatherdata(
+				as.vector(df_tools_medium_subset$files), as.vector(df_tools_medium_subset$anonymous))
+			nov_medium <- append(nov_medium, rep(category, length(data_frame$tools)))
+			if (is.null(data_medium))
+			{
+				data_medium <- data_frame
+			}
+			else
+			{
+				data_medium <- rbind(data_medium, data_frame)
+			}
+		}
+		if (length(df_tools_high_subset$files)>0)
+		{
+			data_frame <- gatherdata(
+				as.vector(df_tools_high_subset$files), as.vector(df_tools_high_subset$anonymous))
+			nov_high <- append(nov_high, rep(category, length(data_frame$tools)))
+			if (is.null(data_high))
+			{
+				data_high <- data_frame
+			}
+			else
+			{
+				data_high <- rbind(data_high, data_frame)
+			}
+		}
+	}
+	data_low$novelty <- factor(nov_low, levels=novelties)
+	data_medium$novelty <- factor(nov_medium, levels=novelties)
+	data_high$novelty <- factor(nov_high, levels=novelties)
+	return(list(low=data_low, medium=data_medium, high=data_high))
+}
+
+
+
+
+
 argv <- commandArgs(TRUE)
 root_path <- argv[1]
 output_file <- argv[2]
 
 df_tools <- get_dataframe_of_tools_at_locations(root_path)
-if (length(argv)==2)
-{
-	df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
-}
-if (length(argv)!=2)
-{
-	df_tools_subset <- subset(df_tools, datatype=="unsupervised_excluded")
-}
-df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
-df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
-df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
 
-if (length(df_tools_low$files)>0)
-{
-data_low <- gatherdata(
-  as.vector(df_tools_low$files), as.vector(df_tools_low$anonymous))
-}
-if (length(df_tools_medium$files)>0)
-{
-data_medium <- gatherdata(
-  as.vector(df_tools_medium$files), as.vector(df_tools_medium$anonymous))
-}
-if (length(df_tools_high$files)>0)
-{
-data_high <- gatherdata(
-  as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
-}
-
+dataframes <- get_frames(df_tools_subset)
+#######################################
 
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
@@ -155,12 +202,12 @@ my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash
 draw_plot <- function(data, title)
 {
 	ggplot(subset(data, variable == "Adjusted rand index"), 
-		aes(x = level, y = value, colour=tools, group=interaction(tools, variable))) + #fill=tools, 
+		aes(x = level, y = value, colour=novelty, group=interaction(novelty, variable))) + #fill=tools, 
 		geom_line(position=dodge_small) +
 		labs(colour="Anonymous submission", x=NULL, y=NULL) +
 		#scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
-		scale_y_continuous(breaks=seq(0,1,0.1), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.5, 1.01)) + #
-		facet_wrap( ~ variable, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
+		scale_y_continuous(breaks=seq(0,1,0.25), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.0, 1.00)) + #
+		facet_wrap( ~ tools, scales="free") + #, as.table = FALSE, scales="free_y"
 		#facet_wrap( ~ metric, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
 		geom_text(aes(label=value), size=3, hjust=0.5, vjust=-0.3, show_guide=F) +
 		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show_guide=F) +
@@ -170,17 +217,8 @@ draw_plot <- function(data, title)
 
 #print(subset(data_low, variable == "ari"))
 pdf(output_file, paper="a4r", width=297, height=210)
-if (length(df_tools_low$files)>0)
-{
-	draw_plot(data_low, "Low Complexity Dataset\n")
-}
-if (length(df_tools_medium$files)>0)
-{
-	draw_plot(data_medium, "Medium Complexity Dataset\n")
-}
-if (length(df_tools_high$files)>0)
-{
-	draw_plot(data_high, "High Complexity Dataset\n")
-}
+draw_plot(dataframes$low, "Low Complexity Dataset\n")
+draw_plot(dataframes$medium, "Medium Complexity Dataset\n")
+draw_plot(dataframes$high, "High Complexity Dataset\n")
 dev.off()
 
