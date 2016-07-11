@@ -98,8 +98,8 @@ get_dataframe_of_tools_at <- function(directory)
 				datatypes$perbin[length(datatypes$perbin)+1] <- "perbin"
 				file_paths$perbin[length(file_paths$perbin)+1] <- file.path(dir_path, "output", result$value)
 				# quick fiix for added data not contained in yaml file
-				datatypes$bygenome[length(datatypes$perbin)+1] <- "bygenome"
-				file_paths$bygenome[length(file_paths$perbin)+1] <- file.path(dir_path, "output", "by_genome.tsv")
+				datatypes$bygenome[length(datatypes$bygenome)+1] <- "bygenome"
+				file_paths$bygenome[length(file_paths$bygenome)+1] <- file.path(dir_path, "output", "by_genome.tsv")
 			}
 			if (grepl("unsupervised_precision_stats.tsv", result$value))
 			{
@@ -159,7 +159,7 @@ get_dataframe_of_tools_at <- function(directory)
 		stop("ERROR: BAD FILE COUNT! (unsupervised)")
 	}
 	#tdatatypes <- unlist(datatypes)
-	if (length(file_paths$perbin))
+	if (length(file_paths$perbin)>0)
 	{
 		categories <- as.vector(t(matrix(rep(category_names,length(anonymous_names)*7), nrow=length(category_names))))
 	}
@@ -169,6 +169,7 @@ get_dataframe_of_tools_at <- function(directory)
 	}
 	#print(categories)
 	#print(tfiles)
+	#print(tdatatypes)
 	
 	data_frame_tools <- data.frame(
 		anonymous = anonymous_names,
