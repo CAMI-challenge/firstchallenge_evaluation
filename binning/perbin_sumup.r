@@ -4,7 +4,13 @@ argv <- commandArgs(TRUE)
 root_folder <- argv[1]
 output_folder <- root_folder
 
-df_tools <- get_dataframe_of_tools_at_locations(argv[1])
+datatype <- "perbin"
+if (length(argv)>1)
+{
+	datatype <- argv[2]
+}
+
+df_tools <- get_dataframe_of_tools_at_locations(root_folder)
 df_tools_perbin <- subset(df_tools, datatype=="perbin")
 
 low <- subset(df_tools_perbin, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
@@ -35,15 +41,19 @@ get_dataframe_of_tools_at <- function(data)
 	return(sumup)
 }
 
+category <- "all"
 sumup <- get_dataframe_of_tools_at(low)
-file_path <- file.path(output_folder, "low_all.tsv")
+file_name <- paste("low_", category, "_", datatype, ".tsv", sep="")
+file_path <- file.path(output_folder, file_name)
 write.table(sumup, file=file_path,row.names=FALSE, sep = "\t")
 
 sumup <- get_dataframe_of_tools_at(medium)
-file_path <- file.path(output_folder, "medium_all.tsv")
+file_name <- paste("medium_", category, "_", datatype, ".tsv", sep="")
+file_path <- file.path(output_folder, file_name)
 write.table(sumup, file=file_path,row.names=FALSE, sep = "\t")
 
 sumup <- get_dataframe_of_tools_at(high)
-file_path <- file.path(output_folder, "high_all.tsv")
+file_name <- paste("high_", category, "_", datatype, ".tsv", sep="")
+file_path <- file.path(output_folder, file_name)
 write.table(sumup, file=file_path,row.names=FALSE, sep = "\t")
 
