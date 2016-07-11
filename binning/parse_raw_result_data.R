@@ -43,7 +43,7 @@ get_dataframe_of_tools_at <- function(directory)
 
 	for (result in yaml_data$results)
 	{
-		if (!is.null(result$category) && grepl("unsupervised_stat", result$value))
+		if (!is.null(result$category) && grepl("unsupervised_recall_stats", result$value))
 		{
 			category_names[length(category_names)+1] <- result$category
 		}
@@ -53,15 +53,17 @@ get_dataframe_of_tools_at <- function(directory)
 	{
 		category_names <- c("all")
 	}
-	category_count <- length(category_names)
+	#category_count <- length(category_names)
 
 	datatypes <- list()
 	datatypes$summary <- list()
 	datatypes$absolute <- list()
 	datatypes$perbin <- list()
+	datatypes$bygenome <- list()
 	datatypes$unsupervised <- list()
 	file_paths <- list()
 	file_paths$perbin <- list() #  rep("", length(dir_path_list_results))
+	file_paths$bygenome <- list() #  rep("", length(dir_path_list_results))
 	file_paths$summary <- list() #  rep("", length(dir_path_list_results))
 	file_paths$absolute <- list() #  rep("", length(dir_path_list_results))
 	file_paths$absolute_per_rank <- list() #  rep("", length(dir_path_list_results))
@@ -95,6 +97,9 @@ get_dataframe_of_tools_at <- function(directory)
 			{
 				datatypes$perbin[length(datatypes$perbin)+1] <- "perbin"
 				file_paths$perbin[length(file_paths$perbin)+1] <- file.path(dir_path, "output", result$value)
+				# quick fiix for added data not contained in yaml file
+				datatypes$bygenome[length(datatypes$perbin)+1] <- "bygenome"
+				file_paths$bygenome[length(file_paths$perbin)+1] <- file.path(dir_path, "output", "by_genome.tsv")
 			}
 			if (grepl("unsupervised_precision_stats.tsv", result$value))
 			{
@@ -117,10 +122,11 @@ get_dataframe_of_tools_at <- function(directory)
 				unlist(datatypes$absolute), 
 				unlist(datatypes$absolute_per_rank), 
 				unlist(datatypes$perbin), 
+				unlist(datatypes$bygenome), 
 				unlist(datatypes$unsupervised_excluded), 
 				unlist(datatypes$unsupervised_included)
 			), 
-			ncol=length(category_names))
+			nrow=length(category_names))
 		))
 	tfiles <- as.vector(t(
 		matrix(
@@ -129,10 +135,11 @@ get_dataframe_of_tools_at <- function(directory)
 				unlist(file_paths$absolute), 
 				unlist(file_paths$absolute_per_rank), 
 				unlist(file_paths$perbin), 
+				unlist(file_paths$bygenome), 
 				unlist(file_paths$unsupervised_excluded), 
 				unlist(file_paths$unsupervised_included)
 			), 
-			ncol=length(category_names))
+			nrow=length(category_names))
 		))
 
 	if (length(union(
@@ -152,14 +159,27 @@ get_dataframe_of_tools_at <- function(directory)
 		stop("ERROR: BAD FILE COUNT! (unsupervised)")
 	}
 	#tdatatypes <- unlist(datatypes)
+	if (length(file_paths$perbin))
+	{
+		categories <- as.vector(t(matrix(rep(category_names,length(anonymous_names)*7), nrow=length(category_names))))
+	}
+	else
+	{
+		categories <- as.vector(t(matrix(rep(category_names,length(anonymous_names)*2), nrow=length(category_names))))
+	}
+	#print(categories)
+	#print(tfiles)
+	
 	data_frame_tools <- data.frame(
 		anonymous = anonymous_names,
 		method = method_names,
 		dataset = pool_names,
-		categories = category_names,
+		categories = categories,
 		files = tfiles,
 		datatype = tdatatypes)
 	#levels(data_frame_tools$method)
+	#print(data_frame_tools$categories)
+	#print(data_frame_tools$files)
 	return(data_frame_tools)
 }
 
