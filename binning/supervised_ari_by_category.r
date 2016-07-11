@@ -7,6 +7,8 @@ library(scales)
 source("parse_raw_result_data.R")
 #"\t"
 
+#options(error=traceback)
+
 dir.exists <- function(d) {
     de <- file.info(d)$isdir
     ifelse(is.na(de), FALSE, de)
@@ -80,6 +82,8 @@ get_frames <- function(df_tools_subset)
 	nov_low <- c()
 	nov_medium <- c()
 	nov_high <- c()
+	#print(summary(df_tools_high))
+	#exit
 	for (category in categories)
 	{
 		#######################################
@@ -90,7 +94,8 @@ get_frames <- function(df_tools_subset)
 		{
 			data_frame <- gatherdata(
 				as.vector(df_tools_low_subset$files), as.vector(df_tools_low_subset$anonymous))
-			nov_low <- append(nov_low, rep(category, length(data_frame$tools)))
+			data_frame$category <- factor(rep(category, length(data_frame$tools)), levels=categories)
+			#nov_low <- append(nov_low, rep(category, length(data_frame$tools)))
 			if (is.null(data_low))
 			{
 				data_low <- data_frame
@@ -104,7 +109,8 @@ get_frames <- function(df_tools_subset)
 		{
 			data_frame <- gatherdata(
 				as.vector(df_tools_medium_subset$files), as.vector(df_tools_medium_subset$anonymous))
-			nov_medium <- append(nov_medium, rep(category, length(data_frame$tools)))
+			data_frame$category <- factor(rep(category, length(data_frame$tools)), levels=categories)
+			#nov_medium <- append(nov_medium, rep(category, length(data_frame$tools)))
 			if (is.null(data_medium))
 			{
 				data_medium <- data_frame
@@ -118,7 +124,8 @@ get_frames <- function(df_tools_subset)
 		{
 			data_frame <- gatherdata(
 				as.vector(df_tools_high_subset$files), as.vector(df_tools_high_subset$anonymous))
-			nov_high <- append(nov_high, rep(category, length(data_frame$tools)))
+			data_frame$category <- factor(rep(category, length(data_frame$tools)), levels=categories)
+			#nov_high <- append(nov_high, rep(category, length(data_frame$tools)))
 			if (is.null(data_high))
 			{
 				data_high <- data_frame
@@ -129,9 +136,9 @@ get_frames <- function(df_tools_subset)
 			}
 		}
 	}
-	data_low$novelty <- factor(nov_low, levels=novelties)
-	data_medium$novelty <- factor(nov_medium, levels=novelties)
-	data_high$novelty <- factor(nov_high, levels=novelties)
+	#data_low$novelty <- factor(nov_low, levels=categories) # 
+	#data_medium$novelty <- factor(nov_medium, levels=categories)
+	#data_high$novelty <- factor(nov_high, levels=categories)
 	return(list(low=data_low, medium=data_medium, high=data_high))
 }
 
@@ -144,8 +151,9 @@ root_path <- argv[1]
 output_file <- argv[2]
 
 df_tools <- get_dataframe_of_tools_at_locations(root_path)
+#print(summary(df_tools$))
+#exit
 df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
-
 dataframes <- get_frames(df_tools_subset)
 #######################################
 
@@ -202,9 +210,9 @@ my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash
 draw_plot <- function(data, title)
 {
 	ggplot(subset(data, variable == "Adjusted rand index"), 
-		aes(x = level, y = value, colour=novelty, group=interaction(novelty, variable))) + #fill=tools, 
+		aes(x = level, y = value, colour=category, group=interaction(category, variable))) + #fill=tools, 
 		geom_line(position=dodge_small) +
-		labs(colour="Anonymous submission", x=NULL, y=NULL) +
+		labs(colour="Categories", x=NULL, y=NULL) +
 		#scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
 		scale_y_continuous(breaks=seq(0,1,0.25), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.0, 1.00)) + #
 		facet_wrap( ~ tools, scales="free") + #, as.table = FALSE, scales="free_y"
