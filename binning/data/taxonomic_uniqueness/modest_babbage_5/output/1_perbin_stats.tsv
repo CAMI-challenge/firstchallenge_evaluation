@@ -1,0 +1,53 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.97	58120386	59633058
+superkingdom	unassigned	nan	nan	1512672	0
+phylum	Firmicutes	0.66	1.00	23984363	15750864
+phylum	Bacteroidetes	1.00	0.91	17866208	19572379
+phylum	Proteobacteria	1.00	1.00	15147351	15144554
+phylum	Tenericutes	0.80	0.01	119470	9165261
+phylum	Chloroflexi	0.00	nan	6535	0
+phylum	unassigned	nan	nan	2509131	0
+class	Sphingobacteriia	1.00	0.91	17743672	19572379
+class	Bacilli	1.00	1.00	15797253	15750864
+class	Alphaproteobacteria	1.00	1.00	15111626	15144554
+class	Clostridia	0.00	nan	7958090	0
+class	Mollicutes	0.80	0.01	119470	9165261
+class	Flavobacteriia	0.00	nan	32710	0
+class	Betaproteobacteria	0.00	nan	18224	0
+class	Gammaproteobacteria	0.00	nan	9217	0
+class	Negativicutes	0.00	nan	1314	0
+class	unassigned	nan	nan	2841482	0
+order	Sphingobacteriales	1.00	0.91	17743672	19572379
+order	Bacillales	1.00	1.00	15746880	15750864
+order	Rhodobacterales	1.00	1.00	15095148	15144554
+order	Clostridiales	0.00	nan	7932873	0
+order	Flavobacteriales	0.00	nan	8345	0
+order	Xanthomonadales	0.00	nan	3636	0
+order	Pseudomonadales	0.00	nan	2303	0
+order	Selenomonadales	0.00	nan	1314	0
+order	unassigned	nan	nan	3098887	0
+family	Chitinophagaceae	1.00	0.90	17647823	19572379
+family	family_Exiguobacterium	0.00	nan	15746880	0
+family	Rhodobacteraceae	1.00	0.99	15067795	15144554
+family	Lachnospiraceae	0.00	nan	7180681	0
+family	Clostridiaceae	0.00	nan	26011	0
+family	Peptostreptococcaceae	0.00	nan	25912	0
+family	Flavobacteriaceae	0.00	nan	2469	0
+family	unassigned	nan	nan	3935487	0
+genus	Hydrotalea	1.00	0.90	17564559	19572379
+genus	Exiguobacterium	0.00	nan	15746880	0
+genus	Paracoccus	1.00	0.99	14947661	15144554
+genus	Lachnoclostridium	0.00	nan	7180681	0
+genus	Peptoclostridium	0.00	nan	25912	0
+genus	Rhodobacter	0.00	nan	12306	0
+genus	Niabella	0.00	nan	4939	0
+genus	Flavisolibacter	0.00	nan	1742	0
+genus	unassigned	nan	nan	4148378	0
+species	Hydrotalea sandarakina	1.00	0.90	17564559	19572379
+species	Paracoccus denitrificans	1.00	0.91	13804163	15144554
+species	Exiguobacterium antarcticum	0.00	nan	13370511	0
+species	Lachnoclostridium phytofermentans	0.00	nan	7180681	0
+species	Exiguobacterium sp. MH3	0.00	nan	2374215	0
+species	Niabella soli	0.00	nan	4939	0
+species	Flavisolibacter ginsengisoli	0.00	nan	1742	0
+species	unassigned	nan	nan	5332248	0

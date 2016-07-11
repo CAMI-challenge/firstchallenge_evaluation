@@ -1,0 +1,73 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.08	17534648	218836565
+superkingdom	Archaea	1.00	0.01	44163	4877686
+superkingdom	unassigned	nan	nan	206135440	0
+phylum	Proteobacteria	1.00	0.09	10035148	105919792
+phylum	Actinobacteria	1.00	0.07	3930385	55466889
+phylum	Firmicutes	1.00	0.06	3484235	57449884
+phylum	Euryarchaeota	1.00	0.01	31620	4877686
+phylum	unassigned	nan	nan	206232863	0
+class	Betaproteobacteria	1.00	0.11	5169985	49033671
+class	Alphaproteobacteria	1.00	0.09	4846158	56886121
+class	Actinobacteria	1.00	0.07	3930385	55466889
+class	Clostridia	1.00	0.05	2193817	40499848
+class	Bacilli	1.00	0.05	924035	16950036
+class	Halobacteria	1.00	0.01	31620	4877686
+class	unassigned	nan	nan	206618251	0
+order	Burkholderiales	1.00	0.12	4796521	40129564
+order	Actinomycetales	1.00	0.07	3930385	55466889
+order	Rhizobiales	1.00	0.15	3255442	21524620
+order	Clostridiales	0.99	0.03	932065	30099738
+order	Bacillales	1.00	0.05	924035	16950036
+order	Thermoanaerobacterales	1.00	0.07	681445	10400110
+order	Rhodospirillales	1.00	0.06	618543	11212086
+order	Rhodobacterales	1.00	0.08	606502	7530868
+order	Methylophilales	1.00	0.04	344047	8904107
+order	Sphingomonadales	1.00	0.02	266786	16618547
+order	Halobacteriales	1.00	0.01	31620	4877686
+order	unassigned	nan	nan	207326860	0
+family	Comamonadaceae	1.00	0.24	2740980	11256297
+family	Streptomycetaceae	1.00	0.11	2097768	18428033
+family	Oxalobacteraceae	1.00	0.07	1957186	28873267
+family	Aurantimonadaceae	1.00	0.20	1556499	7749681
+family	Rhizobiaceae	1.00	0.11	1512984	13774939
+family	Thermoanaerobacteraceae	1.00	0.07	676527	10400110
+family	Nocardioidaceae	1.00	0.06	654530	10494171
+family	Rhodospirillaceae	1.00	0.06	618543	11212086
+family	Rhodobacteraceae	1.00	0.08	606502	7530868
+family	Intrasporangiaceae	1.00	0.07	585607	8785183
+family	Cellulomonadaceae	1.00	0.03	544574	17759502
+family	family_Exiguobacterium	0.00	nan	348914	0
+family	Methylophilaceae	1.00	0.04	344047	8904107
+family	Peptostreptococcaceae	0.00	nan	339337	0
+family	Sphingomonadaceae	1.00	0.02	266786	16618547
+family	Planococcaceae	1.00	0.04	253809	7245311
+family	Bacillaceae	0.00	nan	40844	0
+family	Halobacteriaceae	1.00	0.01	31620	4877686
+family	unassigned	nan	nan	208537194	0
+genus	Streptomyces	0.00	nan	2097768	0
+genus	Massilia	1.00	0.06	1851385	28873267
+genus	Acidovorax	0.00	nan	1783933	0
+genus	Sinorhizobium	1.00	0.11	1512984	13774939
+genus	Phaeospirillum	1.00	0.05	605940	11212086
+genus	Cellulomonas	1.00	0.06	544574	8645721
+genus	Aeromicrobium	1.00	0.05	518715	10494171
+genus	Knoellia	0.00	nan	443816	0
+genus	Moorella	1.00	0.07	382365	5136963
+genus	Exiguobacterium	0.00	nan	348914	0
+genus	Peptoclostridium	0.00	nan	338375	0
+genus	Methylophilus	1.00	0.04	336152	8904107
+genus	Thermoanaerobacter	1.00	0.05	267194	5263147
+genus	Rhodobacter	1.00	0.03	255644	7530868
+genus	Sporosarcina	1.00	0.04	253809	7245311
+genus	Aurantimonas	0.00	nan	169127	0
+genus	Sphingomonas	1.00	0.01	151415	16618547
+genus	Bacillus	0.00	nan	40844	0
+genus	unassigned	nan	nan	211811297	0
+species	Sinorhizobium meliloti	1.00	0.11	1501192	13774939
+species	Massilia sp. JS1662	0.00	nan	534010	0
+species	Moorella thermoacetica	1.00	0.07	382365	5136963
+species	[Clostridium] sticklandii	0.00	nan	119848	0
+species	Rhodobacter capsulatus	1.00	0.01	100380	7530868
+species	Sporosarcina newyorkensis	1.00	0.00	2016	7245311
+species	unassigned	nan	nan	221074440	0

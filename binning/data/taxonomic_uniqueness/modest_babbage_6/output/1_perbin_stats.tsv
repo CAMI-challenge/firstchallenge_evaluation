@@ -1,0 +1,38 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.56	33613028	59633058
+superkingdom	unassigned	nan	nan	26020030	0
+phylum	Firmicutes	0.99	0.83	13283452	15750864
+phylum	Proteobacteria	1.00	0.33	5065420	15144554
+phylum	Bacteroidetes	1.00	0.21	4135825	19572379
+phylum	Actinobacteria	0.00	nan	278623	0
+phylum	Tenericutes	1.00	0.01	55419	9165261
+phylum	unassigned	nan	nan	36814319	0
+class	Bacilli	1.00	0.83	13142257	15750864
+class	Alphaproteobacteria	1.00	0.33	5065420	15144554
+class	Sphingobacteriia	1.00	0.17	3306544	19572379
+class	Actinobacteria	0.00	nan	278623	0
+class	Mollicutes	1.00	0.01	55419	9165261
+class	unassigned	nan	nan	37784795	0
+order	Bacillales	1.00	0.83	13142257	15750864
+order	Rhodobacterales	1.00	0.33	5065420	15144554
+order	Sphingobacteriales	1.00	0.17	3306544	19572379
+order	Actinomycetales	0.00	nan	278623	0
+order	Anaeroplasmatales	1.00	0.01	55419	9165261
+order	unassigned	nan	nan	37784795	0
+family	family_Exiguobacterium	0.00	nan	13142257	0
+family	Rhodobacteraceae	1.00	0.33	5065420	15144554
+family	Chitinophagaceae	1.00	0.17	3239709	19572379
+family	Anaeroplasmataceae	1.00	0.01	55419	9165261
+family	unassigned	nan	nan	38130253	0
+genus	Exiguobacterium	0.00	nan	13142257	0
+genus	Paracoccus	1.00	0.33	5065420	15144554
+genus	Hydrotalea	1.00	0.03	614595	19572379
+genus	Anaeroplasma	1.00	0.01	55419	9165261
+genus	Niabella	0.00	nan	1232	0
+genus	unassigned	nan	nan	40754135	0
+species	Exiguobacterium antarcticum	0.00	nan	5812948	0
+species	Paracoccus denitrificans	1.00	0.33	5065420	15144554
+species	Exiguobacterium sp. MH3	0.00	nan	796642	0
+species	Hydrotalea sandarakina	1.00	0.03	614595	19572379
+species	Niabella soli	0.00	nan	1232	0
+species	unassigned	nan	nan	47342221	0

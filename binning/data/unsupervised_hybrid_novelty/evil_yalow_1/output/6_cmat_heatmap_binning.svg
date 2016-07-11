@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (http://matplotlib.org/) -->
+<svg height="498pt" version="1.1" viewBox="0 0 633 498" width="633pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="
+M0 498.974
+L633.6 498.974
+L633.6 -5.68434e-14
+L0 -5.68434e-14
+z
+" style="fill:none;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="
+M93.6 383.76
+L540 383.76
+L540 93.6
+L93.6 93.6
+z
+" style="fill:none;"/>
+   </g>
+   <g clip-path="url(#pdaf6d74395)">
+    <image height="290.4" id="image4e74e2dfff" width="446.64" x="93.6" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAB0UAAAS6CAYAAAAlPbF1AAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs27tuXGUYhlFve3MQlmJHAVlRJCSQaFxYlosohiodTW4n95DroaGj4iCKKEpBQ4+ggHAQFCkINQ0FeM+HH691A+9Xzswz//LkyZNXe0MeP348NQ03w88/z20fH89tAwAAAGzpiy/mtt97b2777t25bQD4j/anDwAAAAAAAADYkigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkrcuyTN8AbOWnn+a2j4/ntgEAAAC29OGH0xewS0+fzm1fXMxts3uffTa3/fDh3DbsiJeiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAAApK37+7ooZL3//vQFAAAAAD2ffDK3/ejR3PZNdXExfQE3xcOH0xdAmiIKAAAAAAAApImiAAAAAAAAQJooCgAAAAAAAKSJogAAAAAAAECaKAoAAAAAAACkiaIAAAAAAABAmigKAAAAAAA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" y="93.36"/>
+   </g>
+   <g id="patch_3">
+    <path d="
+M93.6 93.6
+L540 93.6" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_4">
+    <path d="
+M540 383.76
+L540 93.6" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_5">
+    <path d="
+M93.6 383.76
+L540 383.76" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;"/>
+   </g>
+   <g id="patch_6">
+    <path d="
+M93.6 383.76
+L93.6 93.6" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="
+M0 0
+L0 0" id="m48243eeccc" style="stroke:#000000;stroke-width:0.5;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="97.32" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="104.76" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="112.2" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="119.64" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="127.08" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="134.52" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="141.96" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="149.4" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="156.84" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="164.28" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="171.72" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_12">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="179.16" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_13">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="186.6" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_14">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="194.04" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_15">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="201.48" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_16">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="208.92" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_17">
+     <g id="line2d_17">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="216.36" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_18">
+     <g id="line2d_18">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="223.8" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_19">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="231.24" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_20">
+     <g id="line2d_20">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="238.68" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_21">
+     <g id="line2d_21">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="246.12" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_22">
+     <g id="line2d_22">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="253.56" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_23">
+     <g id="line2d_23">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="261.0" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_24">
+     <g id="line2d_24">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="268.44" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_25">
+     <g id="line2d_25">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="275.88" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_26">
+     <g id="line2d_26">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="283.32" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_27">
+     <g id="line2d_27">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="290.76" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_28">
+     <g id="line2d_28">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="298.2" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_29">
+     <g id="line2d_29">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="305.64" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_30">
+     <g id="line2d_30">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="313.08" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_31">
+     <g id="line2d_31">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="320.52" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_32">
+     <g id="line2d_32">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="327.96" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_33">
+     <g id="line2d_33">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="335.4" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_34">
+     <g id="line2d_34">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="342.84" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_35">
+     <g id="line2d_35">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="350.28" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_36">
+     <g id="line2d_36">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="357.72" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_37">
+     <g id="line2d_37">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="365.16" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_38">
+     <g id="line2d_38">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="372.6" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_39">
+     <g id="line2d_39">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="380.04" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_40">
+     <g id="line2d_40">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="387.48" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_41">
+     <g id="line2d_41">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="394.92" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_42">
+     <g id="line2d_42">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="402.36" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_43">
+     <g id="line2d_43">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="409.8" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_44">
+     <g id="line2d_44">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="417.24" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_45">
+     <g id="line2d_45">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="424.68" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_46">
+     <g id="line2d_46">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="432.12" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_47">
+     <g id="line2d_47">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="439.56" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_48">
+     <g id="line2d_48">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="447.0" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_49">
+     <g id="line2d_49">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="454.44" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_50">
+     <g id="line2d_50">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="461.88" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_51">
+     <g id="line2d_51">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="469.32" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_52">
+     <g id="line2d_52">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="476.76" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_53">
+     <g id="line2d_53">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="484.2" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_54">
+     <g id="line2d_54">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="491.64" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_55">
+     <g id="line2d_55">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="499.08" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_56">
+     <g id="line2d_56">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="506.52" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_57">
+     <g id="line2d_57">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="513.96" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_58">
+     <g id="line2d_58">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="521.4" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_59">
+     <g id="line2d_59">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="528.84" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_60">
+     <g id="line2d_60">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="536.28" xlink:href="#m48243eeccc" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_61">
+     <g id="line2d_61">
+      <defs>
+       <path d="
+M0 0
+L0 -5.4" id="mba5799da02" style="stroke:#b2b2b2;stroke-width:0.5;"/>
+      </defs>
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="101.04" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_62">
+     <g id="line2d_62">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="108.48" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_63">
+     <g id="line2d_63">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="115.92" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_64">
+     <g id="line2d_64">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="123.36" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_65">
+     <g id="line2d_65">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="130.8" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_66">
+     <g id="line2d_66">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="138.24" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_67">
+     <g id="line2d_67">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="145.68" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_68">
+     <g id="line2d_68">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="153.12" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_69">
+     <g id="line2d_69">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="160.56" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_70">
+     <g id="line2d_70">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="168.0" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_71">
+     <g id="line2d_71">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="175.44" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_72">
+     <g id="line2d_72">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="182.88" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_73">
+     <g id="line2d_73">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="190.32" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_74">
+     <g id="line2d_74">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="197.76" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_75">
+     <g id="line2d_75">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="205.2" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_76">
+     <g id="line2d_76">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="212.64" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_77">
+     <g id="line2d_77">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="220.08" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_78">
+     <g id="line2d_78">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="227.52" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_79">
+     <g id="line2d_79">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="234.96" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_80">
+     <g id="line2d_80">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="242.4" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_81">
+     <g id="line2d_81">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="249.84" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_82">
+     <g id="line2d_82">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="257.28" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_83">
+     <g id="line2d_83">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="264.72" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_84">
+     <g id="line2d_84">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="272.16" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_85">
+     <g id="line2d_85">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="279.6" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_86">
+     <g id="line2d_86">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="287.04" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_87">
+     <g id="line2d_87">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="294.48" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_88">
+     <g id="line2d_88">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="301.92" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_89">
+     <g id="line2d_89">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="309.36" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_90">
+     <g id="line2d_90">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="316.8" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_91">
+     <g id="line2d_91">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="324.24" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_92">
+     <g id="line2d_92">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="331.68" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_93">
+     <g id="line2d_93">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="339.12" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_94">
+     <g id="line2d_94">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="346.56" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_95">
+     <g id="line2d_95">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="354.0" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_96">
+     <g id="line2d_96">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="361.44" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_97">
+     <g id="line2d_97">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="368.88" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_98">
+     <g id="line2d_98">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="376.32" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_99">
+     <g id="line2d_99">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="383.76" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_100">
+     <g id="line2d_100">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="391.2" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_101">
+     <g id="line2d_101">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="398.64" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_102">
+     <g id="line2d_102">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="406.08" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_103">
+     <g id="line2d_103">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="413.52" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_104">
+     <g id="line2d_104">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="420.96" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_105">
+     <g id="line2d_105">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="428.4" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_106">
+     <g id="line2d_106">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="435.84" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_107">
+     <g id="line2d_107">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="443.28" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_108">
+     <g id="line2d_108">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="450.72" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_109">
+     <g id="line2d_109">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="458.16" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_110">
+     <g id="line2d_110">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="465.6" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_111">
+     <g id="line2d_111">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="473.04" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_112">
+     <g id="line2d_112">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="480.48" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_113">
+     <g id="line2d_113">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="487.92" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_114">
+     <g id="line2d_114">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="495.36" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_115">
+     <g id="line2d_115">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="502.8" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_116">
+     <g id="line2d_116">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="510.24" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_117">
+     <g id="line2d_117">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="517.68" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_118">
+     <g id="line2d_118">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="525.12" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_119">
+     <g id="line2d_119">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="532.56" xlink:href="#mba5799da02" y="93.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_1">
+     <!-- binning -->
+     <defs>
+      <path d="
+M45.4062 27.9844
+Q45.4062 37.75 41.375 43.1094
+Q37.3594 48.4844 30.0781 48.4844
+Q22.8594 48.4844 18.8281 43.1094
+Q14.7969 37.75 14.7969 27.9844
+Q14.7969 18.2656 18.8281 12.8906
+Q22.8594 7.51562 30.0781 7.51562
+Q37.3594 7.51562 41.375 12.8906
+Q45.4062 18.2656 45.4062 27.9844
+M54.3906 6.78125
+Q54.3906 -7.17188 48.1875 -13.9844
+Q42 -20.7969 29.2031 -20.7969
+Q24.4688 -20.7969 20.2656 -20.0938
+Q16.0625 -19.3906 12.1094 -17.9219
+L12.1094 -9.1875
+Q16.0625 -11.3281 19.9219 -12.3438
+Q23.7812 -13.375 27.7812 -13.375
+Q36.625 -13.375 41.0156 -8.76562
+Q45.4062 -4.15625 45.4062 5.17188
+L45.4062 9.625
+Q42.625 4.78125 38.2812 2.39062
+Q33.9375 0 27.875 0
+Q17.8281 0 11.6719 7.65625
+Q5.51562 15.3281 5.51562 27.9844
+Q5.51562 40.6719 11.6719 48.3281
+Q17.8281 56 27.875 56
+Q33.9375 56 38.2812 53.6094
+Q42.625 51.2188 45.4062 46.3906
+L45.4062 54.6875
+L54.3906 54.6875
+z
+" id="DejaVuSans-67"/>
+      <path d="
+M54.8906 33.0156
+L54.8906 0
+L45.9062 0
+L45.9062 32.7188
+Q45.9062 40.4844 42.875 44.3281
+Q39.8438 48.1875 33.7969 48.1875
+Q26.5156 48.1875 22.3125 43.5469
+Q18.1094 38.9219 18.1094 30.9062
+L18.1094 0
+L9.07812 0
+L9.07812 54.6875
+L18.1094 54.6875
+L18.1094 46.1875
+Q21.3438 51.125 25.7031 53.5625
+Q30.0781 56 35.7969 56
+Q45.2188 56 50.0469 50.1719
+Q54.8906 44.3438 54.8906 33.0156" id="DejaVuSans-6e"/>
+      <path d="
+M48.6875 27.2969
+Q48.6875 37.2031 44.6094 42.8438
+Q40.5312 48.4844 33.4062 48.4844
+Q26.2656 48.4844 22.1875 42.8438
+Q18.1094 37.2031 18.1094 27.2969
+Q18.1094 17.3906 22.1875 11.75
+Q26.2656 6.10938 33.4062 6.10938
+Q40.5312 6.10938 44.6094 11.75
+Q48.6875 17.3906 48.6875 27.2969
+M18.1094 46.3906
+Q20.9531 51.2656 25.2656 53.625
+Q29.5938 56 35.5938 56
+Q45.5625 56 51.7812 48.0938
+Q58.0156 40.1875 58.0156 27.2969
+Q58.0156 14.4062 51.7812 6.48438
+Q45.5625 -1.42188 35.5938 -1.42188
+Q29.5938 -1.42188 25.2656 0.953125
+Q20.9531 3.32812 18.1094 8.20312
+L18.1094 0
+L9.07812 0
+L9.07812 75.9844
+L18.1094 75.9844
+z
+" id="DejaVuSans-62"/>
+      <path d="
+M9.42188 54.6875
+L18.4062 54.6875
+L18.4062 0
+L9.42188 0
+z
+
+M9.42188 75.9844
+L18.4062 75.9844
+L18.4062 64.5938
+L9.42188 64.5938
+z
+" id="DejaVuSans-69"/>
+     </defs>
+     <g transform="translate(295.5309375 402.878125)scale(0.12 -0.12)">
+      <use xlink:href="#DejaVuSans-62"/>
+      <use x="63.4765625" xlink:href="#DejaVuSans-69"/>
+      <use x="91.259765625" xlink:href="#DejaVuSans-6e"/>
+      <use x="154.638671875" xlink:href="#DejaVuSans-6e"/>
+      <use x="218.017578125" xlink:href="#DejaVuSans-69"/>
+      <use x="245.80078125" xlink:href="#DejaVuSans-6e"/>
+      <use x="309.1796875" xlink:href="#DejaVuSans-67"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_120">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="97.32"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_121">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="104.76"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_122">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="112.2"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_123">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="119.64"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_124">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="127.08"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_125">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="134.52"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_126">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="141.96"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_127">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="149.4"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_128">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="156.84"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_129">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="164.28"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_130">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="171.72"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_131">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="179.16"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_132">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="186.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_133">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="194.04"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_134">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="201.48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_135">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="208.92"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_136">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="216.36"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_137">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="223.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_138">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="231.24"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_139">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="238.68"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_140">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="246.12"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_141">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="253.56"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_142">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="261.0"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_143">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="268.44"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_144">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="275.88"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_145">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="283.32"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_146">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="290.76"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_147">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="298.2"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_148">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="305.64"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_149">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="313.08"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_150">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="320.52"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_151">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="327.96"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_152">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="335.4"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_153">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="342.84"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_154">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="350.28"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_155">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="357.72"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_156">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="365.16"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_157">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="372.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_158">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.5;" x="93.6" xlink:href="#m48243eeccc" y="380.04"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_159">
+      <defs>
+       <path d="
+M0 0
+L-5.4 0" id="macecc46123" style="stroke:#b2b2b2;stroke-width:0.5;"/>
+      </defs>
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="101.04"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_41">
+     <g id="line2d_160">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="108.48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_42">
+     <g id="line2d_161">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="115.92"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_43">
+     <g id="line2d_162">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="123.36"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_44">
+     <g id="line2d_163">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="130.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_45">
+     <g id="line2d_164">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="138.24"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_46">
+     <g id="line2d_165">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="145.68"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_47">
+     <g id="line2d_166">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="153.12"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_48">
+     <g id="line2d_167">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="160.56"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_49">
+     <g id="line2d_168">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="168.0"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_50">
+     <g id="line2d_169">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="175.44"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_51">
+     <g id="line2d_170">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="182.88"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_52">
+     <g id="line2d_171">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="190.32"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_53">
+     <g id="line2d_172">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="197.76"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_54">
+     <g id="line2d_173">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="205.2"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_55">
+     <g id="line2d_174">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="212.64"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_56">
+     <g id="line2d_175">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="220.08"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_57">
+     <g id="line2d_176">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="227.52"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_58">
+     <g id="line2d_177">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="234.96"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_59">
+     <g id="line2d_178">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="242.4"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_60">
+     <g id="line2d_179">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="249.84"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_61">
+     <g id="line2d_180">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="257.28"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_62">
+     <g id="line2d_181">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="264.72"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_63">
+     <g id="line2d_182">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="272.16"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_64">
+     <g id="line2d_183">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="279.6"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_65">
+     <g id="line2d_184">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="287.04"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_66">
+     <g id="line2d_185">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="294.48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_67">
+     <g id="line2d_186">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="301.92"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_68">
+     <g id="line2d_187">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="309.36"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_69">
+     <g id="line2d_188">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="316.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_70">
+     <g id="line2d_189">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="324.24"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_71">
+     <g id="line2d_190">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="331.68"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_72">
+     <g id="line2d_191">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="339.12"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_73">
+     <g id="line2d_192">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="346.56"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_74">
+     <g id="line2d_193">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="354.0"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_75">
+     <g id="line2d_194">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="361.44"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_76">
+     <g id="line2d_195">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="368.88"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_77">
+     <g id="line2d_196">
+      <g>
+       <use style="fill:#b2b2b2;stroke:#b2b2b2;stroke-width:0.5;" x="93.6" xlink:href="#macecc46123" y="376.32"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdaf6d74395">
+   <rect height="290.16" width="446.4" x="93.6" y="93.6"/>
+  </clipPath>
+ </defs>
+</svg>

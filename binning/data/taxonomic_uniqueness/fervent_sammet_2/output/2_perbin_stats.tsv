@@ -1,0 +1,113 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.38	35863983	95313774
+superkingdom	Eukaryota	0.00	nan	293	0
+superkingdom	unassigned	nan	nan	59449498	0
+phylum	Proteobacteria	1.00	0.40	20244134	50378388
+phylum	Firmicutes	1.00	0.37	6000410	16402908
+phylum	Bacteroidetes	1.00	0.37	4964843	13206111
+phylum	Actinobacteria	0.99	0.28	2238221	8047258
+phylum	Chloroflexi	1.00	0.16	1190166	7279109
+phylum	Acidobacteria	0.00	nan	1082	0
+phylum	unassigned	nan	nan	60674918	0
+class	Betaproteobacteria	1.00	0.42	9241037	22078814
+class	Gammaproteobacteria	0.98	0.38	5629221	14603716
+class	Clostridia	1.00	0.23	3200261	13746445
+class	Alphaproteobacteria	0.98	0.38	2791345	7232122
+class	Deltaproteobacteria	0.99	0.38	2464903	6463736
+class	Actinobacteria	0.99	0.28	2238221	8047258
+class	Sphingobacteriia	1.00	0.22	2065525	9572518
+class	Flavobacteriia	0.98	0.38	1397698	3633593
+class	Negativicutes	1.00	0.41	1099528	2656463
+class	Ktedonobacteria	1.00	0.07	497029	7279109
+class	Bacilli	0.00	nan	139622	0
+class	Solibacteres	0.00	nan	782	0
+class	class_Proteobacteria bacterium JGI 0001002-H11	0.00	nan	634	0
+class	Acidobacteriia	0.00	nan	300	0
+class	unassigned	nan	nan	64547668	0
+order	Burkholderiales	0.99	0.39	6938637	17463877
+order	Xanthomonadales	1.00	0.34	2881223	8325994
+order	Rhodobacterales	1.00	0.38	2752051	7232122
+order	Pseudomonadales	0.96	0.42	2727907	6277722
+order	Clostridiales	1.00	0.19	2671255	13746445
+order	Actinomycetales	0.99	0.28	2231790	8047258
+order	Sphingobacteriales	1.00	0.22	2065525	9572518
+order	Desulfobacterales	1.00	0.31	2010377	6463736
+order	Neisseriales	1.00	0.25	1136815	4614937
+order	Selenomonadales	1.00	0.41	1099528	2656463
+order	Ktedonobacterales	1.00	0.07	497029	7279109
+order	Flavobacteriales	1.00	0.11	402598	3633593
+order	Bacillales	0.00	nan	111485	0
+order	Solibacterales	0.00	nan	782	0
+order	order_Proteobacteria bacterium JGI 0001002-H11	0.00	nan	634	0
+order	Methylococcales	0.00	nan	618	0
+order	Acidobacteriales	0.00	nan	300	0
+order	Enterobacteriales	0.00	nan	269	0
+order	unassigned	nan	nan	67784951	0
+family	Oxalobacteraceae	1.00	0.32	4578121	14294209
+family	Xanthomonadaceae	1.00	0.34	2877937	8325994
+family	Rhodobacteraceae	1.00	0.38	2747966	7232122
+family	Pseudomonadaceae	0.96	0.42	2723038	6277722
+family	Desulfobacteraceae	1.00	0.30	1927207	6463736
+family	Chitinophagaceae	1.00	0.19	1812598	9572518
+family	Intrasporangiaceae	1.00	0.35	1210900	3480725
+family	Chromobacteriaceae	1.00	0.25	1136815	4614937
+family	Veillonellaceae	1.00	0.30	786861	2656463
+family	Comamonadaceae	1.00	0.20	643435	3169668
+family	Ktedonobacteraceae	0.00	nan	497029	0
+family	Flavobacteriaceae	1.00	0.11	390032	3633593
+family	Clostridiaceae	0.86	0.03	363741	9103183
+family	Gordoniaceae	0.00	nan	136735	0
+family	Peptostreptococcaceae	1.00	0.03	79498	2630685
+family	Lachnospiraceae	0.00	nan	54802	0
+family	Bacillaceae	0.00	nan	5143	0
+family	Burkholderiaceae	0.00	nan	1157	0
+family	Solibacteraceae	0.00	nan	782	0
+family	Ruminococcaceae	0.00	nan	735	0
+family	family_Proteobacteria bacterium JGI 0001002-H11	0.00	nan	634	0
+family	Methylococcaceae	0.00	nan	618	0
+family	Acidobacteriaceae	0.00	nan	300	0
+family	Enterobacteriaceae	0.00	nan	269	0
+family	unassigned	nan	nan	73337421	0
+genus	Pseudomonas	0.97	0.42	2686956	6277722
+genus	Janthinobacterium	1.00	0.17	2438352	14294209
+genus	Desulfatibacillum	1.00	0.20	1312157	6463736
+genus	Rhodobacter	0.00	nan	1242385	0
+genus	Lysobacter	1.00	0.31	1015671	3288233
+genus	Xylella	1.00	0.39	948221	2423571
+genus	Selenomonas	0.00	nan	646599	0
+genus	Rhodanobacter	1.00	0.24	620166	2614190
+genus	Ktedonobacter	0.00	nan	497029	0
+genus	Loktanella	0.00	nan	441324	0
+genus	Gordonia	0.00	nan	136735	0
+genus	Clostridium	0.21	0.00	94867	4004609
+genus	Nonlabens	1.00	0.02	86125	3633593
+genus	Massilia	0.00	nan	55902	0
+genus	Peptoclostridium	0.00	nan	15292	0
+genus	Paracoccus	0.00	nan	11971	0
+genus	Caloramator	0.00	nan	8912	0
+genus	Alkaliphilus	0.00	nan	3976	0
+genus	Lachnoclostridium	0.00	nan	3687	0
+genus	genus_Oxalobacteraceae bacterium JGI 0001004-K23	0.00	nan	3681	0
+genus	Dyella	0.00	nan	1972	0
+genus	Cellulosilyticum	0.00	nan	1345	0
+genus	Candidatus Solibacter	0.00	nan	782	0
+genus	genus_Proteobacteria bacterium JGI 0001002-H11	0.00	nan	634	0
+genus	Burkholderia	0.00	nan	490	0
+genus	genus_Oxalobacteraceae bacterium JGI 0001002-K6	0.00	nan	400	0
+genus	unassigned	nan	nan	83038143	0
+species	Pseudomonas aeruginosa	1.00	0.42	2613063	6277722
+species	Xylella fastidiosa	1.00	0.39	948221	2423571
+species	Ktedonobacter racemifer	0.00	nan	497029	0
+species	Nonlabens dokdonensis	1.00	0.02	86125	3633593
+species	Desulfatibacillum alkenivorans	1.00	0.00	4500	6463736
+species	Oxalobacteraceae bacterium JGI 0001004-K23	0.00	nan	3681	0
+species	Alkaliphilus metalliredigens	0.00	nan	2368	0
+species	Cellulosilyticum lentocellum	0.00	nan	1345	0
+species	Janthinobacterium sp. CG3	0.00	nan	1179	0
+species	Candidatus Solibacter usitatus	0.00	nan	782	0
+species	Janthinobacterium sp. HH01	0.00	nan	699	0
+species	Proteobacteria bacterium JGI 0001002-H11	0.00	nan	634	0
+species	Oxalobacteraceae bacterium JGI 0001002-K6	0.00	nan	400	0
+species	Rhodanobacter thiooxydans	0.00	nan	383	0
+species	Dyella japonica	0.00	nan	368	0
+species	unassigned	nan	nan	91152997	0

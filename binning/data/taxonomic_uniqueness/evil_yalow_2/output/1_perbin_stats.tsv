@@ -1,0 +1,64 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.30	17645940	59633058
+superkingdom	Eukaryota	0.00	nan	2049	0
+superkingdom	unassigned	nan	nan	41985069	0
+phylum	Firmicutes	0.68	0.28	6464741	15750864
+phylum	Bacteroidetes	1.00	0.25	4833854	19572379
+phylum	Proteobacteria	1.00	0.30	4502120	15144554
+phylum	Tenericutes	1.00	0.00	4964	9165261
+phylum	Spirochaetes	0.00	nan	1327	0
+phylum	Cyanobacteria	0.00	nan	861	0
+phylum	unassigned	nan	nan	43825191	0
+class	Alphaproteobacteria	1.00	0.30	4499018	15144554
+class	Bacilli	1.00	0.28	4422935	15750864
+class	Sphingobacteriia	1.00	0.20	3900186	19572379
+class	Clostridia	0.00	nan	601988	0
+class	Flavobacteriia	0.00	nan	22505	0
+class	Mollicutes	1.00	0.00	4964	9165261
+class	Spirochaetia	0.00	nan	1327	0
+class	Cytophagia	0.00	nan	1085	0
+class	class_Nostocales	0.00	nan	861	0
+class	Bacteroidia	0.00	nan	852	0
+class	Gammaproteobacteria	0.00	nan	150	0
+class	unassigned	nan	nan	46177187	0
+order	Bacillales	1.00	0.28	4421242	15750864
+order	Rhodobacterales	1.00	0.28	4276955	15144554
+order	Sphingobacteriales	1.00	0.20	3900186	19572379
+order	Clostridiales	0.00	nan	593296	0
+order	Rhizobiales	0.00	nan	27669	0
+order	Flavobacteriales	0.00	nan	22505	0
+order	Acholeplasmatales	0.00	nan	4964	0
+order	Spirochaetales	0.00	nan	1327	0
+order	Cytophagales	0.00	nan	1085	0
+order	Nostocales	0.00	nan	861	0
+order	Bacteroidales	0.00	nan	852	0
+order	unassigned	nan	nan	46382116	0
+family	family_Exiguobacterium	0.00	nan	4421242	0
+family	Rhodobacteraceae	1.00	0.28	4276955	15144554
+family	Chitinophagaceae	1.00	0.20	3874367	19572379
+family	Clostridiaceae	0.00	nan	431925	0
+family	Flavobacteriaceae	0.00	nan	20471	0
+family	Acholeplasmataceae	0.00	nan	4964	0
+family	Sphingobacteriaceae	0.00	nan	3922	0
+family	Spirochaetaceae	0.00	nan	912	0
+family	Microchaetaceae	0.00	nan	861	0
+family	Cyclobacteriaceae	0.00	nan	295	0
+family	Prolixibacteraceae	0.00	nan	252	0
+family	Cytophagaceae	0.00	nan	150	0
+family	unassigned	nan	nan	46596742	0
+genus	Exiguobacterium	0.00	nan	4421242	0
+genus	Paracoccus	1.00	0.28	4275934	15144554
+genus	Clostridium	0.00	nan	431925	0
+genus	Flavobacterium	0.00	nan	14619	0
+genus	Acholeplasma	0.00	nan	4964	0
+genus	Treponema	0.00	nan	912	0
+genus	Tolypothrix	0.00	nan	861	0
+genus	Prolixibacter	0.00	nan	252	0
+genus	unassigned	nan	nan	50482349	0
+species	Exiguobacterium sp. RIT341	0.00	nan	522789	0
+species	Paracoccus denitrificans	1.00	0.02	353724	15144554
+species	Acholeplasma brassicae	0.00	nan	4964	0
+species	Treponema phagedenis	0.00	nan	912	0
+species	Tolypothrix bouteillei	0.00	nan	861	0
+species	Prolixibacter bellariivorans	0.00	nan	252	0
+species	unassigned	nan	nan	58749556	0

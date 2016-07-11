@@ -1,0 +1,54 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	0.00	nan	582233	0
+superkingdom	Viruses	1.00	0.05	36461	736775
+superkingdom	unassigned	nan	nan	1531298	0
+phylum	Firmicutes	0.00	nan	447544	0
+phylum	Bacteroidetes	0.00	nan	81530	0
+phylum	phylum_Microviridae	0.00	nan	36461	0
+phylum	Proteobacteria	0.00	nan	23539	0
+phylum	unassigned	nan	nan	1560918	0
+class	Clostridia	0.00	nan	185223	0
+class	Bacteroidia	0.00	nan	81530	0
+class	Bacilli	0.00	nan	61716	0
+class	class_Microviridae	0.00	nan	36461	0
+class	Gammaproteobacteria	0.00	nan	23539	0
+class	Erysipelotrichia	0.00	nan	15334	0
+class	unassigned	nan	nan	1746189	0
+order	Clostridiales	0.00	nan	185223	0
+order	Bacteroidales	0.00	nan	81530	0
+order	Lactobacillales	0.00	nan	47607	0
+order	order_Microviridae	0.00	nan	36461	0
+order	Enterobacteriales	0.00	nan	23539	0
+order	Erysipelotrichales	0.00	nan	15334	0
+order	Bacillales	0.00	nan	14109	0
+order	unassigned	nan	nan	1746189	0
+family	Clostridiaceae	0.00	nan	185223	0
+family	Microviridae	0.00	nan	36461	0
+family	Prevotellaceae	0.00	nan	35794	0
+family	Bacteroidaceae	0.00	nan	30538	0
+family	Lactobacillaceae	0.00	nan	27000	0
+family	Enterobacteriaceae	0.00	nan	23539	0
+family	Leuconostocaceae	0.00	nan	20607	0
+family	Erysipelotrichaceae	0.00	nan	15334	0
+family	Staphylococcaceae	0.00	nan	14109	0
+family	unassigned	nan	nan	1761387	0
+genus	Clostridium	0.00	nan	185223	0
+genus	Microvirus	0.00	nan	36461	0
+genus	Prevotella	0.00	nan	35794	0
+genus	Bacteroides	0.00	nan	30538	0
+genus	Lactobacillus	0.00	nan	27000	0
+genus	Escherichia	0.00	nan	23539	0
+genus	Leuconostoc	0.00	nan	20607	0
+genus	genus_Erysipelotrichaceae bacterium 5_2_54FAA	0.00	nan	15334	0
+genus	Staphylococcus	0.00	nan	14109	0
+genus	unassigned	nan	nan	1761387	0
+species	Clostridium clostridioforme CAG:132	0.00	nan	68543	0
+species	Clostridium sp. M62/1	0.00	nan	65338	0
+species	Clostridium sp. ATCC 29733	0.00	nan	51342	0
+species	Lactobacillus fermentum	0.00	nan	27000	0
+species	Escherichia coli	0.00	nan	23539	0
+species	Leuconostoc citreum	0.00	nan	20607	0
+species	Erysipelotrichaceae bacterium 5_2_54FAA	0.00	nan	15334	0
+species	Staphylococcus equorum	0.00	nan	14109	0
+species	Prevotella sp. CAG:1031	0.00	nan	7550	0
+species	unassigned	nan	nan	1856630	0

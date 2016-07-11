@@ -1,0 +1,110 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.50	109396631	218836565
+superkingdom	Archaea	0.00	0.00	8639	4877686
+superkingdom	unassigned	nan	nan	114308981	0
+phylum	Proteobacteria	1.00	0.44	47105805	105919792
+phylum	Actinobacteria	0.97	0.44	25086187	55466889
+phylum	Firmicutes	1.00	0.41	23719444	57449884
+phylum	Cyanobacteria	0.00	nan	2663	0
+phylum	unassigned	nan	nan	127800152	0
+class	Alphaproteobacteria	1.00	0.48	27227138	56886121
+class	Actinobacteria	0.97	0.44	25086187	55466889
+class	Betaproteobacteria	1.00	0.39	19161669	49033671
+class	Clostridia	1.00	0.27	11126255	40499848
+class	Bacilli	1.00	0.62	10521950	16950036
+class	class_uncultured sludge bacterium A28	0.00	nan	174087	0
+class	unassigned	nan	nan	130416965	0
+order	Actinomycetales	0.97	0.44	25086187	55466889
+order	Burkholderiales	1.00	0.35	14130998	40129564
+order	Bacillales	1.00	0.61	10417969	16950036
+order	Rhizobiales	1.00	0.38	8157143	21524620
+order	Clostridiales	1.00	0.27	8141276	30099738
+order	Sphingomonadales	1.00	0.47	7891706	16618547
+order	Rhodospirillales	1.00	0.51	5704107	11212086
+order	Methylophilales	1.00	0.54	4796481	8904107
+order	Rhodobacterales	1.00	0.59	4466407	7530868
+order	Thermoanaerobacterales	1.00	0.26	2737032	10400110
+order	order_uncultured sludge bacterium A28	0.00	nan	174087	0
+order	unassigned	nan	nan	132010858	0
+family	Sphingomonadaceae	1.00	0.47	7891706	16618547
+family	family_Exiguobacterium	0.00	nan	7880040	0
+family	Peptostreptococcaceae	0.00	nan	7853207	0
+family	Comamonadaceae	1.00	0.59	6655027	11256297
+family	Rhodospirillaceae	1.00	0.49	5536022	11212086
+family	Streptomycetaceae	1.00	0.28	5087076	18428033
+family	Oxalobacteraceae	1.00	0.18	5058134	28873267
+family	Methylophilaceae	1.00	0.54	4796481	8904107
+family	Rhodobacteraceae	1.00	0.59	4466407	7530868
+family	Cellulomonadaceae	1.00	0.23	4091657	17759502
+family	Rhizobiaceae	1.00	0.25	3436080	13774939
+family	Thermoanaerobacteraceae	1.00	0.26	2737032	10400110
+family	Intrasporangiaceae	1.00	0.24	2113871	8785183
+family	Planococcaceae	1.00	0.17	1195643	7245311
+family	Nocardioidaceae	0.44	0.04	971936	10494171
+family	Burkholderiaceae	0.00	nan	431867	0
+family	Clostridiales Family XVI. Incertae Sedis	1.00	0.02	288069	14888857
+family	Aurantimonadaceae	1.00	0.03	256280	7749681
+family	family_uncultured sludge bacterium A28	0.00	nan	174087	0
+family	Bacillaceae	0.00	nan	31955	0
+family	unassigned	nan	nan	152761674	0
+genus	Sphingomonas	1.00	0.47	7891706	16618547
+genus	Exiguobacterium	0.00	nan	7880040	0
+genus	Peptoclostridium	0.00	nan	7853207	0
+genus	Acidovorax	0.00	nan	5794451	0
+genus	Streptomyces	0.00	nan	4946895	0
+genus	Rhodobacter	1.00	0.59	4466407	7530868
+genus	Cellulomonas	1.00	0.47	4067408	8645721
+genus	Sinorhizobium	1.00	0.25	3410457	13774939
+genus	Magnetospirillum	0.00	nan	3348342	0
+genus	Massilia	1.00	0.12	3323295	28873267
+genus	Methylophilus	1.00	0.27	2402671	8904107
+genus	Moorella	1.00	0.44	2241221	5136963
+genus	Knoellia	0.00	nan	1736985	0
+genus	Methylotenera	0.00	nan	1672842	0
+genus	Sporosarcina	1.00	0.17	1195643	7245311
+genus	Phaeospirillum	1.00	0.09	976416	11212086
+genus	Nocardioides	0.00	nan	961419	0
+genus	Thermoanaerobacter	1.00	0.09	495811	5263147
+genus	Carboxydocella	1.00	0.02	288069	14888857
+genus	Aurantimonas	0.00	nan	256280	0
+genus	Herbaspirillum	0.00	nan	246653	0
+genus	genus_uncultured sludge bacterium A28	0.00	nan	174087	0
+genus	Telluria	0.00	nan	87163	0
+genus	Bacillus	0.00	nan	31955	0
+genus	Oerskovia	1.00	0.00	24249	9113781
+genus	Aeromicrobium	1.00	0.00	10517	10494171
+genus	unassigned	nan	nan	157930062	0
+species	[Clostridium] sticklandii	0.00	nan	7853207	0
+species	Sphingomonas wittichii	0.00	nan	6870045	0
+species	Rhodobacter capsulatus	1.00	0.59	4466407	7530868
+species	Massilia sp. JS1662	0.00	nan	3323295	0
+species	Sinorhizobium meliloti	1.00	0.24	3321501	13774939
+species	Magnetospirillum magneticum	0.00	nan	3077653	0
+species	Acidovorax radicis	0.00	nan	2926681	0
+species	Exiguobacterium antarcticum	0.00	nan	2560820	0
+species	Streptomyces griseus	0.00	nan	2537018	0
+species	Methylophilus sp. OH31	0.00	nan	2402671	0
+species	Moorella thermoacetica	1.00	0.44	2241221	5136963
+species	Methylotenera mobilis	0.00	nan	1470499	0
+species	Acidovorax sp. KKS102	0.00	nan	1246404	0
+species	Phaeospirillum fulvum	1.00	0.09	961681	11212086
+species	Nocardioides sp. JS614	0.00	nan	961419	0
+species	Sporosarcina ureae	0.00	nan	500286	0
+species	Cellulomonas fimi	0.00	nan	448672	0
+species	Sporosarcina newyorkensis	1.00	0.06	439849	7245311
+species	Carboxydocella ferrireducens	0.00	nan	288069	0
+species	Streptomyces sp. W007	0.00	nan	264474	0
+species	Aurantimonas coralicida	0.00	nan	256280	0
+species	Herbaspirillum seropedicae	0.00	nan	246653	0
+species	uncultured sludge bacterium A28	0.00	nan	174087	0
+species	uncultured Telluria sp.	0.00	nan	87163	0
+species	Sinorhizobium fredii	0.00	nan	76574	0
+species	Thermoanaerobacter thermohydrosulfuricus	1.00	0.01	68396	5263147
+species	Thermoanaerobacter wiegelii	0.00	nan	54041	0
+species	Oerskovia jenensis	0.00	nan	24249	0
+species	Phaeospirillum molischianum	0.00	nan	14735	0
+species	Thermoanaerobacter sp. X514	0.00	nan	14683	0
+species	Aeromicrobium marinum	0.00	nan	8991	0
+species	Thermoanaerobacter pseudethanolicus	0.00	nan	7360	0
+species	Thermoanaerobacter brockii	0.00	nan	5516	0
+species	unassigned	nan	nan	174513651	0
