@@ -42,7 +42,6 @@ results:
     inline: false
     value: absolute_counts.tsv
   - name: absolute counts per taxonmic rank isolated
-    category: {comment}
     description: >
         Numbers of true, false and unknown data in kb (positions) for each rank.
         A prediction is also check for higher ranks.
