@@ -5,15 +5,21 @@ get_dataframe_of_tools_at <- function(directory)
 	dir_path_list_results <- list.dirs(directory, full.names=T, recursive=F)
 
 	# read description
-	anonymous_names <- rep("", length(dir_path_list_results))
-	method_names <- rep("", length(dir_path_list_results))
-	pool_names <- rep("", length(dir_path_list_results))
+	anonymous_names <- c()
+	method_names <- c()
+	pool_names <- c()
+	dir_path_list <- c()
 
 	index <- 1
 	for (dir_path in dir_path_list_results)
 	{
 		#print(dir_path)
 		fp_description <- file.path(dir_path, "description.properties")
+		if (!file.exists(fp_description))
+		{
+			print(paste("WARNING: Missing file:", fp_description, sep=" "))
+			next
+		}
 
 		text <- readLines(fp_description)
 		text <- gsub(" = ", " - ", text)
@@ -23,164 +29,106 @@ get_dataframe_of_tools_at <- function(directory)
 		imn <- which( rownames(description) == "method_name")
 		ipn <- which( rownames(description) == "pool_name")
 		anonymous_names[index] <- description$value[ian]
+		method_names[index] <- description$value[imn]
 		if (grepl("Gold Standard", anonymous_names[index]))
 		{
 			anonymous_names[index] <- "Gold Standard"
+			method_names[index] <- "Gold Standard"
 		}
-		method_names[index] <- description$value[imn]
+		dir_path_list[index] <- dir_path
 		pool_names[index] <- description$value[ipn]
 		index <- index + 1
 	}
 
 	# read yaml
+	list_tools <- list(
+		)
 
-	## count categories
-	fp_yaml <- file.path(dir_path_list_results[1], "output", "biobox.yaml")
-	yaml_data <- yaml.load_file(fp_yaml)
-	category_names <- list()
-	#yaml_data$results[[1]]$category <- "test1"
-	#yaml_data$results[[2]]$category <- "test2"
-
-	for (result in yaml_data$results)
+	entry_count <- 1
+	for (index in 1:length(dir_path_list))
 	{
-		if (!is.null(result$category) && grepl("unsupervised_recall_stats", result$value))
-		{
-			category_names[length(category_names)+1] <- result$category
-		}
-	}
-	category_names <- unlist(category_names)
-	if (length(category_names) == 0)
-	{
-		category_names <- c("all")
-	}
-	#category_count <- length(category_names)
-
-	datatypes <- list()
-	datatypes$summary <- list()
-	datatypes$absolute <- list()
-	datatypes$perbin <- list()
-	datatypes$bygenome <- list()
-	datatypes$unsupervised <- list()
-	file_paths <- list()
-	file_paths$perbin <- list() #  rep("", length(dir_path_list_results))
-	file_paths$bygenome <- list() #  rep("", length(dir_path_list_results))
-	file_paths$summary <- list() #  rep("", length(dir_path_list_results))
-	file_paths$absolute <- list() #  rep("", length(dir_path_list_results))
-	file_paths$absolute_per_rank <- list() #  rep("", length(dir_path_list_results))
-	file_paths$unsupervised_excluded <- list() #  rep("", length(dir_path_list_results))
-	file_paths$unsupervised_included <- list() #  rep("", length(dir_path_list_results))
-
-	index <- 1
-	for (dir_path in dir_path_list_results)
-	{
+		dir_path <- dir_path_list[index]
+		anonymous <- anonymous_names[index]
+		method <- method_names[index]
+		dataset <- pool_names[index]
 		#print(dir_path)
 		fp_yaml <- file.path(dir_path, "output", "biobox.yaml")
 		yaml_data <- yaml.load_file(fp_yaml)
+		category <- "all"
 		for (result in yaml_data$results)
 		{
+			if (!is.null(result$category))
+			{
+				category <- as.character(result$category)
+			}
+			list_tools$anonymous[entry_count] <- anonymous
+			list_tools$method[entry_count] <- method
+			list_tools$dataset[entry_count] <- dataset
+			list_tools$category[entry_count] <- category
+			list_tools$file[entry_count] <- file.path(dir_path, "output", result$value)
+			list_tools$datatype[entry_count] <- "unknown"
+
 			if (grepl("summary_stats.tsv", result$value))
 			{
-				datatypes$summary[length(datatypes$summary)+1] <- "summary"
-				file_paths$summary[length(file_paths$summary)+1] <- file.path(dir_path, "output", result$value)
+				list_tools$datatype[entry_count] <- "summary"
+			}
+			if (grepl("summary_stats_99.tsv", result$value))
+			{
+				list_tools$datatype[entry_count] <- "summary99"
+			}
+			if (grepl("summary_stats_95.tsv", result$value))
+			{
+				list_tools$datatype[entry_count] <- "summary95"
 			}
 			if (grepl("absolute_counts.tsv", result$value))
 			{
-				datatypes$absolute[length(datatypes$absolute)+1] <- "absolute"
-				file_paths$absolute[length(file_paths$absolute)+1] <- file.path(dir_path, "output", result$value)
+				list_tools$datatype[entry_count] <- "absolute"
 			}
 			if (grepl("absolute_counts_per_rank.tsv", result$value))
 			{
-				datatypes$absolute_per_rank[length(datatypes$absolute_per_rank)+1] <- "absolute_per_rank"
-				file_paths$absolute_per_rank[length(file_paths$absolute_per_rank)+1] <- file.path(dir_path, "output", result$value)
+				list_tools$datatype[entry_count] <- "absolute_per_rank"
 			}
 			if (grepl("perbin_stats.tsv", result$value))
 			{
-				datatypes$perbin[length(datatypes$perbin)+1] <- "perbin"
-				file_paths$perbin[length(file_paths$perbin)+1] <- file.path(dir_path, "output", result$value)
-				# quick fiix for added data not contained in yaml file
-				datatypes$bygenome[length(datatypes$bygenome)+1] <- "bygenome"
-				file_paths$bygenome[length(file_paths$bygenome)+1] <- file.path(dir_path, "output", "by_genome.tsv")
+				list_tools$datatype[entry_count] <- "perbin"
 			}
 			if (grepl("unsupervised_precision_stats.tsv", result$value))
 			{
-				datatypes$unsupervised_excluded[length(datatypes$unsupervised_excluded)+1] <- "unsupervised_excluded"
-				file_paths$unsupervised_excluded[length(file_paths$unsupervised_excluded)+1] <- file.path(dir_path, "output", result$value)
+				list_tools$datatype[entry_count] <- "unsupervised_excluded"
 			}
 			if (grepl("unsupervised_recall_stats.tsv", result$value))
 			{
-				datatypes$unsupervised_included[length(datatypes$unsupervised_included)+1] <- "unsupervised_included"
-				file_paths$unsupervised_included[length(file_paths$unsupervised_included)+1] <- file.path(dir_path, "output", result$value)
+				list_tools$datatype[entry_count] <- "unsupervised_included"
 			}
+			if (grepl("cmat_heatmap", result$value))
+			{
+				list_tools$datatype[entry_count] <- "heatmap"
+			}
+			entry_count <- entry_count+1
 		}
-		index <- index + 1
+		# add bygenome data if available
+		file_path_by_genome <- file.path(dir_path, "output", "by_genome.tsv")		
+		if (file.exists(file_path_by_genome))
+		{
+			list_tools$anonymous[entry_count] <- anonymous
+			list_tools$method[entry_count] <- method
+			list_tools$dataset[entry_count] <- dataset
+			list_tools$category[entry_count] <- category
+			list_tools$file[entry_count] <- file_path_by_genome
+			list_tools$datatype[entry_count] <- "bygenome"
+			entry_count <- entry_count+1
+		}
 	}
 
-	tdatatypes <- as.vector(t(
-		matrix(
-			c(
-				unlist(datatypes$summary), 
-				unlist(datatypes$absolute), 
-				unlist(datatypes$absolute_per_rank), 
-				unlist(datatypes$perbin), 
-				unlist(datatypes$bygenome), 
-				unlist(datatypes$unsupervised_excluded), 
-				unlist(datatypes$unsupervised_included)
-			), 
-			nrow=length(category_names))
-		))
-	tfiles <- as.vector(t(
-		matrix(
-			c(
-				unlist(file_paths$summary), 
-				unlist(file_paths$absolute), 
-				unlist(file_paths$absolute_per_rank), 
-				unlist(file_paths$perbin), 
-				unlist(file_paths$bygenome), 
-				unlist(file_paths$unsupervised_excluded), 
-				unlist(file_paths$unsupervised_included)
-			), 
-			nrow=length(category_names))
-		))
-
-	if (length(union(
-			length(file_paths$summary), 
-			c(length(file_paths$perbin), 
-			length(file_paths$absolute), 
-			length(file_paths$absolute_per_rank))
-			))!=1)
-	{
-		stop("ERROR: BAD FILE COUNT! (unsupervised)")
-	}
-	if (length(union(
-			length(file_paths$unsupervised_excluded), 
-			length(file_paths$unsupervised_included)
-			))!=1)
-	{
-		stop("ERROR: BAD FILE COUNT! (unsupervised)")
-	}
-	#tdatatypes <- unlist(datatypes)
-	if (length(file_paths$perbin)>0)
-	{
-		categories <- as.vector(t(matrix(rep(category_names,length(anonymous_names)*7), nrow=length(category_names))))
-	}
-	else
-	{
-		categories <- as.vector(t(matrix(rep(category_names,length(anonymous_names)*2), nrow=length(category_names))))
-	}
-	#print(categories)
-	#print(tfiles)
-	#print(tdatatypes)
-	
 	data_frame_tools <- data.frame(
-		anonymous = anonymous_names,
-		method = method_names,
-		dataset = pool_names,
-		categories = categories,
-		files = tfiles,
-		datatype = tdatatypes)
-	#levels(data_frame_tools$method)
-	#print(data_frame_tools$categories)
-	#print(data_frame_tools$files)
+		anonymous = as.vector(list_tools$anonymous),
+		method = as.vector(list_tools$method),
+		dataset = as.vector(list_tools$dataset),
+		category = as.vector(list_tools$category),
+		file = as.vector(list_tools$file),
+		datatype = as.vector(list_tools$datatype)
+		)
+
 	return(data_frame_tools)
 }
 
@@ -206,4 +154,10 @@ get_dataframe_of_tools_at_locations <- function(root_directory_list)
 	return(dataframe_tools)
 }
 
+#argv <- commandArgs(TRUE)
+#root_folder <- argv[1]
+#df <- get_dataframe_of_tools_at_locations(root_folder)
+#print(summary(df))
+#df_s <- subset(df, datatype=="unknown")
+#print(summary(df_s))
 
