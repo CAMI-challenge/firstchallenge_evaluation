@@ -1,0 +1,76 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.90	25019141	27681966
+superkingdom	unassigned	nan	nan	2662825	0
+phylum	Proteobacteria	1.00	0.87	17518342	20196632
+phylum	Firmicutes	1.00	0.92	3688987	4004609
+phylum	Actinobacteria	1.00	1.00	3487391	3480725
+phylum	Bacteroidetes	0.00	nan	62310	0
+phylum	Tenericutes	0.00	nan	52809	0
+phylum	Chloroflexi	0.00	nan	17780	0
+phylum	unassigned	nan	nan	2854347	0
+class	Betaproteobacteria	0.99	0.95	13799186	14294209
+class	Gammaproteobacteria	0.99	0.61	3668557	5902423
+class	Clostridia	1.00	0.90	3605414	4004609
+class	Actinobacteria	1.00	1.00	3487391	3480725
+class	Flavobacteriia	0.00	nan	57652	0
+class	Mollicutes	0.00	nan	52809	0
+class	Alphaproteobacteria	0.00	nan	5378	0
+class	Negativicutes	0.00	nan	4529	0
+class	Deltaproteobacteria	0.00	nan	2822	0
+class	Bacilli	0.00	nan	1824	0
+class	unassigned	nan	nan	2996404	0
+order	Burkholderiales	1.00	0.90	12892276	14294209
+order	Xanthomonadales	0.99	0.61	3612366	5902423
+order	Actinomycetales	1.00	1.00	3475186	3480725
+order	Clostridiales	1.00	0.70	2805180	4004609
+order	Neisseriales	0.00	nan	106883	0
+order	Pseudomonadales	0.00	nan	15400	0
+order	Flavobacteriales	0.00	nan	10480	0
+order	Selenomonadales	0.00	nan	4529	0
+order	Rhodobacterales	0.00	nan	2890	0
+order	Bacillales	0.00	nan	1824	0
+order	unassigned	nan	nan	4754952	0
+family	Oxalobacteraceae	1.00	0.89	12696882	14294209
+family	Xanthomonadaceae	0.99	0.60	3580283	5902423
+family	Intrasporangiaceae	1.00	0.99	3450056	3480725
+family	Clostridiaceae	1.00	0.44	1745479	4004609
+family	Peptostreptococcaceae	0.00	nan	442112	0
+family	Chromobacteriaceae	0.00	nan	106883	0
+family	Comamonadaceae	0.00	nan	97683	0
+family	Lachnospiraceae	0.00	nan	40422	0
+family	Pseudomonadaceae	0.00	nan	15400	0
+family	Nocardioidaceae	0.00	nan	7913	0
+family	unassigned	nan	nan	5498853	0
+genus	Pseudoduganella	0.00	nan	8812115	0
+genus	Janibacter	0.00	nan	3333631	0
+genus	Lysobacter	1.00	0.99	3255733	3288233
+genus	Janthinobacterium	1.00	0.10	1440294	14294209
+genus	Clostridium	1.00	0.22	896960	4004609
+genus	Peptoclostridium	0.00	nan	371427	0
+genus	Duganella	0.00	nan	267469	0
+genus	Rhodanobacter	0.83	0.07	227844	2614190
+genus	Herbaspirillum	0.00	nan	169368	0
+genus	Lachnoclostridium	0.00	nan	40422	0
+genus	Massilia	0.00	nan	32895	0
+genus	Phycicoccus	0.00	nan	32005	0
+genus	Acidovorax	0.00	nan	26290	0
+genus	Chitiniphilus	0.00	nan	23826	0
+genus	Pseudomonas	0.00	nan	13872	0
+genus	Pseudoxanthomonas	0.00	nan	9966	0
+genus	Chitinilyticum	0.00	nan	4457	0
+genus	unassigned	nan	nan	8723392	0
+species	Pseudoduganella violaceinigra	0.00	nan	8812115	0
+species	Lysobacter antibioticus	0.00	nan	3220645	0
+species	Janthinobacterium sp. HH01	0.00	nan	1181643	0
+species	Duganella zoogloeoides	0.00	nan	267469	0
+species	Rhodanobacter denitrificans	0.00	nan	156127	0
+species	Herbaspirillum seropedicae	0.00	nan	133878	0
+species	Lachnoclostridium phytofermentans	0.00	nan	40422	0
+species	Phycicoccus jejuensis	0.00	nan	32005	0
+species	Chitiniphilus shinanonensis	0.00	nan	23826	0
+species	Massilia timonae	0.00	nan	19189	0
+species	Janthinobacterium sp. Marseille	0.00	nan	17633	0
+species	Pseudomonas aeruginosa	0.00	nan	12336	0
+species	Chitinilyticum litopenaei	0.00	nan	4457	0
+species	Lysobacter daejeonensis	0.00	nan	1782	0
+species	unassigned	nan	nan	13758439	0

@@ -1,0 +1,36 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.35	11875002	33943176
+superkingdom	unassigned	nan	nan	22068174	0
+phylum	Proteobacteria	1.00	0.35	10473901	30309583
+phylum	Bacteroidetes	1.00	0.36	1314660	3633593
+phylum	unassigned	nan	nan	22154615	0
+class	Alphaproteobacteria	1.00	0.30	4498868	15144554
+class	Gammaproteobacteria	1.00	0.41	3558829	8701293
+class	Deltaproteobacteria	1.00	0.35	2252346	6463736
+class	Flavobacteriia	1.00	0.36	1299461	3633593
+class	unassigned	nan	nan	22333672	0
+order	Rhodobacterales	1.00	0.28	4276955	15144554
+order	Pseudomonadales	1.00	0.42	2610608	6277722
+order	Desulfobacterales	1.00	0.31	2010377	6463736
+order	Xanthomonadales	1.00	0.39	948221	2423571
+order	Flavobacteriales	1.00	0.11	402598	3633593
+order	Rhizobiales	0.00	nan	27669	0
+order	unassigned	nan	nan	23666748	0
+family	Rhodobacteraceae	1.00	0.28	4276955	15144554
+family	Pseudomonadaceae	1.00	0.42	2610608	6277722
+family	Desulfobacteraceae	1.00	0.30	1927207	6463736
+family	Xanthomonadaceae	1.00	0.39	948221	2423571
+family	Flavobacteriaceae	1.00	0.11	390032	3633593
+family	unassigned	nan	nan	23790153	0
+genus	Paracoccus	1.00	0.28	4275934	15144554
+genus	Pseudomonas	1.00	0.42	2610608	6277722
+genus	Desulfatibacillum	1.00	0.20	1312157	6463736
+genus	Xylella	1.00	0.39	948221	2423571
+genus	Nonlabens	1.00	0.02	86125	3633593
+genus	unassigned	nan	nan	24710131	0
+species	Pseudomonas aeruginosa	1.00	0.22	1395465	6277722
+species	Xylella fastidiosa	1.00	0.39	948221	2423571
+species	Paracoccus denitrificans	1.00	0.02	353724	15144554
+species	Nonlabens dokdonensis	1.00	0.02	86125	3633593
+species	Desulfatibacillum alkenivorans	1.00	0.00	4500	6463736
+species	unassigned	nan	nan	31155141	0

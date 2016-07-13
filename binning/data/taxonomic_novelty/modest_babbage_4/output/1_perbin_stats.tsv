@@ -1,0 +1,28 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.64	25412568	39804463
+superkingdom	unassigned	nan	nan	14391895	0
+phylum	Firmicutes	1.00	0.46	18318016	39804463
+phylum	unassigned	nan	nan	21486447	0
+class	Clostridia	1.00	0.28	8388082	30099738
+class	Bacilli	1.00	0.82	7984021	9704725
+class	class_uncultured sludge bacterium A28	0.00	nan	174087	0
+class	unassigned	nan	nan	23258273	0
+order	Clostridiales	1.00	0.27	8141276	30099738
+order	Bacillales	1.00	0.81	7880040	9704725
+order	order_uncultured sludge bacterium A28	0.00	nan	174087	0
+order	unassigned	nan	nan	23609060	0
+family	family_Exiguobacterium	0.00	nan	7880040	0
+family	Peptostreptococcaceae	0.00	nan	7853207	0
+family	Clostridiales Family XVI. Incertae Sedis	1.00	0.02	288069	14888857
+family	family_uncultured sludge bacterium A28	0.00	nan	174087	0
+family	unassigned	nan	nan	23609060	0
+genus	Exiguobacterium	0.00	nan	7880040	0
+genus	Peptoclostridium	0.00	nan	7853207	0
+genus	Carboxydocella	1.00	0.02	288069	14888857
+genus	genus_uncultured sludge bacterium A28	0.00	nan	174087	0
+genus	unassigned	nan	nan	23609060	0
+species	[Clostridium] sticklandii	0.00	nan	7853207	0
+species	Exiguobacterium antarcticum	0.00	nan	2560820	0
+species	Carboxydocella ferrireducens	0.00	nan	288069	0
+species	uncultured sludge bacterium A28	0.00	nan	174087	0
+species	unassigned	nan	nan	28928280	0

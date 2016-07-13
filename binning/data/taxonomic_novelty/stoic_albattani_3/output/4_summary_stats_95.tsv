@@ -1,0 +1,8 @@
+rank	precision	 precision stdev.	number precision bins	recall	recall stdev.	number real bins	accuracy	misclassification rate
+superkingdom	100.00	0.00	1	8.39	0.00	1	8.39	0.00
+phylum	99.87	0.19	4	3.69	3.36	11	8.36	0.01
+class	99.61	0.40	8	5.28	4.01	20	8.26	0.02
+order	99.50	0.35	13	6.45	4.61	36	8.17	0.04
+family	98.44	2.80	30	6.73	5.64	70	8.00	0.10
+genus	90.96	22.70	56	6.15	6.55	119	7.11	0.53
+species	2.31	14.89	510	1.17	4.82	156	0.51	3.65

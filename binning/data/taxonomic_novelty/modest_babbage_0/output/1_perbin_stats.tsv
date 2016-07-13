@@ -1,0 +1,51 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	0.99	0.56	91379124	161041752
+superkingdom	Archaea	1.00	0.07	1707058	23185149
+superkingdom	unassigned	nan	nan	91140719	0
+phylum	Proteobacteria	1.00	0.32	37041913	114985777
+phylum	Actinobacteria	0.92	0.44	11319349	23924211
+phylum	Firmicutes	1.00	0.41	8988982	22131764
+phylum	Euryarchaeota	1.00	0.07	1707058	23185149
+phylum	unassigned	nan	nan	125169599	0
+class	Deltaproteobacteria	1.00	0.23	18019970	78206159
+class	Actinobacteria	0.92	0.44	11319349	23924211
+class	Alphaproteobacteria	1.00	0.58	11132213	19137096
+class	Clostridia	1.00	0.41	8988982	22131764
+class	Gammaproteobacteria	1.00	0.11	1889710	17642522
+class	Halobacteria	1.00	0.07	1707058	23185149
+class	unassigned	nan	nan	131169619	0
+order	Desulfobacterales	1.00	0.23	11875970	51975838
+order	Actinomycetales	0.92	0.44	11319349	23924211
+order	Sphingomonadales	1.00	0.58	11008033	19137096
+order	Clostridiales	1.00	0.41	8988982	22131764
+order	Desulfovibrionales	1.00	0.23	6126916	26230321
+order	Enterobacteriales	1.00	0.11	1888306	17642522
+order	Halobacteriales	1.00	0.07	1707058	23185149
+order	unassigned	nan	nan	131312287	0
+family	Desulfobacteraceae	1.00	0.23	11875970	51975838
+family	Sphingomonadaceae	1.00	0.58	11008033	19137096
+family	Clostridiaceae	1.00	0.39	8647852	22131764
+family	Microbacteriaceae	1.00	0.33	7815540	23924211
+family	Desulfovibrionaceae	1.00	0.23	6117858	26230321
+family	Enterobacteriaceae	1.00	0.11	1888306	17642522
+family	Halobacteriaceae	1.00	0.07	1707058	23185149
+family	unassigned	nan	nan	135166284	0
+genus	Desulfococcus	1.00	0.23	11874919	51975838
+genus	Sphingomonas	1.00	0.58	11008033	19137096
+genus	Clostridium	1.00	0.33	7260000	22131764
+genus	Desulfovibrio	1.00	0.23	6117858	26230321
+genus	Agromyces	1.00	0.12	2902672	23924211
+genus	Leifsonia	0.00	nan	2428225	0
+genus	Halobacterium	1.00	0.06	1407107	23185149
+genus	Erwinia	1.00	0.03	615691	17642522
+genus	Pantoea	0.00	nan	34106	0
+genus	Desulfobacterium	0.00	nan	1051	0
+genus	unassigned	nan	nan	140577239	0
+species	Desulfococcus multivorans	1.00	0.23	11874919	51975838
+species	Sphingomonas wittichii	1.00	0.46	8841374	19137096
+species	Leifsonia xyli	0.00	nan	2428225	0
+species	Halobacterium salinarum	1.00	0.06	1407107	23185149
+species	Clostridium intestinale	1.00	0.02	490767	22131764
+species	Erwinia tracheiphila	1.00	0.03	442867	17642522
+species	uncultured Desulfobacterium sp.	0.00	nan	1051	0
+species	unassigned	nan	nan	158740591	0

@@ -1,0 +1,43 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.59	34657320	58753980
+superkingdom	unassigned	nan	nan	24096660	0
+phylum	Firmicutes	1.00	0.74	13215287	17763441
+phylum	Bacteroidetes	1.00	0.21	6210597	29144897
+phylum	Actinobacteria	1.00	0.63	2882219	4566533
+phylum	Chloroflexi	1.00	0.01	103129	7279109
+phylum	unassigned	nan	nan	36342748	0
+class	Bacilli	1.00	0.83	13142257	15750864
+class	Sphingobacteriia	1.00	0.18	5265925	29144897
+class	Actinobacteria	1.00	0.63	2882219	4566533
+class	Ktedonobacteria	1.00	0.01	103129	7279109
+class	Clostridia	1.00	0.02	48581	2012577
+class	unassigned	nan	nan	37311869	0
+order	Bacillales	1.00	0.83	13142257	15750864
+order	Sphingobacteriales	1.00	0.18	5265925	29144897
+order	Actinomycetales	1.00	0.63	2882219	4566533
+order	Ktedonobacterales	1.00	0.01	103129	7279109
+order	Clostridiales	1.00	0.02	48581	2012577
+order	unassigned	nan	nan	37311869	0
+family	family_Exiguobacterium	0.00	nan	13142257	0
+family	Chitinophagaceae	1.00	0.18	5199090	29144897
+family	Gordoniaceae	0.00	nan	1489624	0
+family	Thermosporotrichaceae	1.00	0.01	103129	7279109
+family	Proteinivoraceae	1.00	0.02	48581	2012577
+family	unassigned	nan	nan	38771299	0
+genus	Exiguobacterium	0.00	nan	13142257	0
+genus	Gordonia	0.00	nan	1489624	0
+genus	Flavisolibacter	1.00	0.10	968878	9572518
+genus	Hydrotalea	1.00	0.03	614595	19572379
+genus	Thermosporothrix	1.00	0.01	103129	7279109
+genus	Anaerobranca	1.00	0.02	48581	2012577
+genus	Niabella	0.00	nan	1232	0
+genus	unassigned	nan	nan	42385684	0
+species	Exiguobacterium antarcticum	0.00	nan	5812948	0
+species	Gordonia polyisoprenivorans	0.00	nan	1352889	0
+species	Flavisolibacter ginsengisoli	0.74	0.15	968878	4674737
+species	Exiguobacterium sp. MH3	0.00	nan	796642	0
+species	Hydrotalea sandarakina	1.00	0.03	614595	19572379
+species	Thermosporothrix hazakensis	1.00	0.01	103129	7279109
+species	Anaerobranca californiensis	1.00	0.01	16354	2012577
+species	Niabella soli	0.00	nan	1232	0
+species	unassigned	nan	nan	49087313	0

@@ -1,0 +1,50 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.29	8048211	27681966
+superkingdom	unassigned	nan	nan	19633755	0
+phylum	Proteobacteria	1.00	0.31	6190303	20196632
+phylum	Actinobacteria	1.00	0.48	1664569	3480725
+phylum	Firmicutes	1.00	0.02	73686	4004609
+phylum	unassigned	nan	nan	19753408	0
+class	Betaproteobacteria	1.00	0.20	2866983	14294209
+class	Gammaproteobacteria	1.00	0.33	1948986	5902423
+class	Actinobacteria	1.00	0.48	1664569	3480725
+class	Clostridia	1.00	0.02	65568	4004609
+class	unassigned	nan	nan	21135860	0
+order	Burkholderiales	1.00	0.18	2643049	14294209
+order	Xanthomonadales	1.00	0.33	1948986	5902423
+order	Actinomycetales	1.00	0.48	1664569	3480725
+order	Clostridiales	1.00	0.01	27027	4004609
+order	unassigned	nan	nan	21398335	0
+family	Oxalobacteraceae	1.00	0.16	2238331	14294209
+family	Xanthomonadaceae	1.00	0.33	1948986	5902423
+family	Nocardioidaceae	0.00	nan	766457	0
+family	Intrasporangiaceae	1.00	0.11	380971	3480725
+family	unassigned	nan	nan	22347221	0
+genus	Nocardioides	0.00	nan	766457	0
+genus	Duganella	0.00	nan	757782	0
+genus	Lysobacter	1.00	0.23	748988	3288233
+genus	Pseudoxanthomonas	0.00	nan	472090	0
+genus	Phycicoccus	0.00	nan	174772	0
+genus	Janibacter	0.00	nan	126892	0
+genus	Intrasporangium	0.00	nan	79307	0
+genus	Herbaspirillum	0.00	nan	9275	0
+genus	Janthinobacterium	1.00	0.00	9068	14294209
+genus	Rhodanobacter	1.00	0.00	2893	2614190
+genus	Massilia	0.00	nan	2083	0
+genus	Pseudoduganella	0.00	nan	1012	0
+genus	unassigned	nan	nan	24531347	0
+species	Nocardioides sp. JS614	0.00	nan	766457	0
+species	Duganella zoogloeoides	0.00	nan	757782	0
+species	Pseudoxanthomonas suwonensis	0.00	nan	472090	0
+species	Phycicoccus jejuensis	0.00	nan	174772	0
+species	Janibacter sp. HTCC2649	0.00	nan	126892	0
+species	Intrasporangium calvum	0.00	nan	79307	0
+species	Lysobacter antibioticus	0.00	nan	38722	0
+species	Lysobacter daejeonensis	0.00	nan	33371	0
+species	Herbaspirillum seropedicae	0.00	nan	9275	0
+species	Janthinobacterium sp. HH01	0.00	nan	5234	0
+species	Janthinobacterium sp. Marseille	0.00	nan	3834	0
+species	Massilia timonae	0.00	nan	2083	0
+species	Rhodanobacter denitrificans	0.00	nan	1151	0
+species	Pseudoduganella violaceinigra	0.00	nan	1012	0
+species	unassigned	nan	nan	25209984	0

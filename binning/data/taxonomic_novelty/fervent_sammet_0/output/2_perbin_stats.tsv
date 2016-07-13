@@ -1,0 +1,97 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.07	13585222	184142109
+superkingdom	Eukaryota	0.00	nan	251	0
+superkingdom	unassigned	nan	nan	170556636	0
+phylum	Actinobacteria	1.00	0.08	5334829	66462026
+phylum	Proteobacteria	1.00	0.06	4434908	77452463
+phylum	Bacteroidetes	1.00	0.11	2322763	20719094
+phylum	Firmicutes	1.00	0.08	1467254	17908512
+phylum	unassigned	nan	nan	170582355	0
+class	Actinobacteria	1.00	0.08	5334829	66462026
+class	Betaproteobacteria	1.00	0.06	2458003	37777374
+class	Sphingobacteriia	1.00	0.11	1541533	14234544
+class	Alphaproteobacteria	0.99	0.04	1126354	27729470
+class	Clostridia	0.96	0.09	746333	7863125
+class	Bacilli	1.00	0.07	720771	10045387
+class	Deltaproteobacteria	1.00	0.06	448722	6964620
+class	Gammaproteobacteria	0.99	0.06	289883	4980999
+class	Flavobacteriia	1.00	0.03	205537	6484550
+class	unassigned	nan	nan	171270144	0
+order	Actinomycetales	1.00	0.08	5334217	66462026
+order	Burkholderiales	1.00	0.07	2082557	28873267
+order	Sphingobacteriales	1.00	0.11	1541533	14234544
+order	Clostridiales	0.97	0.09	742135	7863125
+order	Bacillales	1.00	0.06	602025	10045387
+order	Desulfovibrionales	1.00	0.06	388405	6964620
+order	Rhizobiales	0.98	0.08	376328	4823186
+order	Caulobacterales	1.00	0.10	345652	3301850
+order	Methylophilales	1.00	0.04	344047	8904107
+order	Alteromonadales	1.00	0.06	287734	4980999
+order	Sphingomonadales	1.00	0.01	266786	19604434
+order	Flavobacteriales	1.00	0.03	205537	6484550
+order	Enterobacteriales	0.00	nan	1196	0
+order	Desulfobacterales	0.00	nan	319	0
+order	unassigned	nan	nan	171623638	0
+family	Oxalobacteraceae	1.00	0.07	1957186	28873267
+family	Cellulomonadaceae	1.00	0.07	1580379	22124132
+family	Sphingobacteriaceae	1.00	0.11	1535923	14234544
+family	Nocardiaceae	1.00	0.06	755162	13003876
+family	Nocardioidaceae	1.00	0.06	654530	10494171
+family	Mycobacteriaceae	1.00	0.09	594122	6676999
+family	Lachnospiraceae	1.00	0.17	577449	3390034
+family	Promicromonosporaceae	1.00	0.08	517854	6599454
+family	Paenibacillaceae	1.00	0.05	385950	7400375
+family	Rhizobiaceae	1.00	0.07	358216	4823186
+family	Desulfovibrionaceae	1.00	0.05	355721	6964620
+family	Caulobacteraceae	1.00	0.10	345652	3301850
+family	Methylophilaceae	1.00	0.04	344047	8904107
+family	Ferrimonadaceae	1.00	0.06	287734	4980999
+family	Sphingomonadaceae	1.00	0.01	266786	19604434
+family	Flavobacteriaceae	1.00	0.03	204859	6484550
+family	Intrasporangiaceae	1.00	0.05	166440	3637742
+family	Clostridiaceae	0.99	0.03	133617	4473091
+family	Staphylococcaceae	1.00	0.03	88352	2645012
+family	Pseudonocardiaceae	0.00	nan	19432	0
+family	Bacillaceae	0.00	nan	4351	0
+family	Enterobacteriaceae	0.00	nan	1196	0
+family	Comamonadaceae	0.00	nan	1007	0
+family	Desulfobacteraceae	0.00	nan	319	0
+family	unassigned	nan	nan	173005825	0
+genus	Massilia	1.00	0.06	1851385	28873267
+genus	Cellulomonas	1.00	0.06	1270805	22124132
+genus	Sphingobacterium	1.00	0.09	896966	9481390
+genus	Mycobacterium	1.00	0.09	594122	6676999
+genus	Aeromicrobium	1.00	0.05	518715	10494171
+genus	Pedobacter	0.99	0.10	488047	4753154
+genus	Rhodococcus	1.00	0.07	427481	5721635
+genus	Methylophilus	1.00	0.04	336152	8904107
+genus	Paenibacillus	1.00	0.05	335676	7400375
+genus	Nocardia	1.00	0.04	327681	7282241
+genus	Ferrimonas	1.00	0.06	287734	4980999
+genus	Janibacter	1.00	0.05	166440	3637742
+genus	Sphingomonas	1.00	0.01	151415	19604434
+genus	Butyrivibrio	1.00	0.04	125646	3390034
+genus	Agrobacterium	0.00	nan	95048	0
+genus	Promicromonospora	1.00	0.01	78823	6599454
+genus	Clostridium	0.98	0.01	53671	4473091
+genus	Desulfovibrio	1.00	0.00	19359	6964620
+genus	Salinicoccus	1.00	0.01	17544	2645012
+genus	Jeotgalicoccus	0.00	nan	11086	0
+genus	Chryseobacterium	1.00	0.00	4455	3329601
+genus	Rhizobium	1.00	0.00	2692	4823186
+genus	Staphylococcus	0.00	nan	896	0
+genus	Bacillus	0.00	nan	784	0
+genus	Myroides	0.00	nan	685	0
+genus	unassigned	nan	nan	176078801	0
+species	Massilia sp. JS1662	0.00	nan	534010	0
+species	Rhodococcus fascians	0.00	nan	224594	0
+species	Promicromonospora sukumoe	0.00	nan	78823	0
+species	Agrobacterium tumefaciens	0.00	nan	8806	0
+species	Sphingobacterium paucimobilis	0.00	nan	6987	0
+species	Paenibacillus alginolyticus	0.00	nan	5618	0
+species	Paenibacillus sp. URHA0014	0.00	nan	5155	0
+species	Jeotgalicoccus marinus	0.00	nan	2053	0
+species	Desulfovibrio alaskensis	0.00	nan	1643	0
+species	Salinicoccus albus	0.00	nan	1042	0
+species	Myroides odoratimimus	0.00	nan	685	0
+species	unassigned	nan	nan	183272693	0

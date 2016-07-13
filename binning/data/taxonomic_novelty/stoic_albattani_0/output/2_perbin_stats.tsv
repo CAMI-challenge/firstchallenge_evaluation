@@ -1,0 +1,314 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.00	614550	450169050
+superkingdom	unassigned	nan	nan	449554500	0
+phylum	Firmicutes	0.00	nan	499950	0
+phylum	Bacteroidetes	0.00	nan	15900	0
+phylum	Tenericutes	1.00	0.00	10200	450169050
+phylum	Spirochaetes	0.00	nan	3900	0
+phylum	Fusobacteria	0.00	nan	900	0
+phylum	Actinobacteria	0.00	nan	600	0
+phylum	Deferribacteres	0.00	nan	300	0
+phylum	Proteobacteria	0.00	nan	300	0
+phylum	unassigned	nan	nan	449637000	0
+class	Clostridia	0.00	nan	346950	0
+class	Erysipelotrichia	0.00	nan	32700	0
+class	Bacteroidia	0.00	nan	14850	0
+class	Bacilli	0.00	nan	11100	0
+class	Mollicutes	1.00	0.00	10200	450169050
+class	Spirochaetia	0.00	nan	3900	0
+class	Negativicutes	0.00	nan	1800	0
+class	Fusobacteriia	0.00	nan	900	0
+class	Actinobacteria	0.00	nan	600	0
+class	Alphaproteobacteria	0.00	nan	300	0
+class	Deferribacteres	0.00	nan	300	0
+class	unassigned	nan	nan	449745450	0
+order	Clostridiales	0.00	nan	346200	0
+order	Erysipelotrichales	0.00	nan	32700	0
+order	Bacteroidales	0.00	nan	14850	0
+order	Bacillales	0.00	nan	8850	0
+order	Acholeplasmatales	0.00	nan	8250	0
+order	Spirochaetales	0.00	nan	3900	0
+order	Lactobacillales	0.00	nan	2100	0
+order	Selenomonadales	0.00	nan	1800	0
+order	Fusobacteriales	0.00	nan	900	0
+order	Coriobacteriales	0.00	nan	450	0
+order	Deferribacterales	0.00	nan	300	0
+order	Rhodospirillales	0.00	nan	300	0
+order	Actinomycetales	0.00	nan	150	0
+order	Haloplasmatales	0.00	nan	150	0
+order	Mycoplasmatales	0.00	nan	150	0
+order	unassigned	nan	nan	449748000	0
+family	Clostridiaceae	0.00	nan	133500	0
+family	Lachnospiraceae	0.00	nan	121950	0
+family	Ruminococcaceae	0.00	nan	41850	0
+family	Erysipelotrichaceae	0.00	nan	32700	0
+family	Eubacteriaceae	0.00	nan	10050	0
+family	Acholeplasmataceae	0.00	nan	8250	0
+family	Staphylococcaceae	0.00	nan	8100	0
+family	Spirochaetaceae	0.00	nan	3900	0
+family	Rikenellaceae	0.00	nan	2250	0
+family	Prevotellaceae	0.00	nan	1800	0
+family	Acidaminococcaceae	0.00	nan	1200	0
+family	Enterococcaceae	0.00	nan	900	0
+family	Fusobacteriaceae	0.00	nan	900	0
+family	Lactobacillaceae	0.00	nan	750	0
+family	Bacillaceae	0.00	nan	600	0
+family	Peptococcaceae	0.00	nan	600	0
+family	Veillonellaceae	0.00	nan	600	0
+family	Bacteroidaceae	0.00	nan	450	0
+family	Coriobacteriaceae	0.00	nan	450	0
+family	Peptoniphilaceae	0.00	nan	450	0
+family	Porphyromonadaceae	0.00	nan	450	0
+family	Acetobacteraceae	0.00	nan	300	0
+family	Deferribacteraceae	0.00	nan	300	0
+family	Carnobacteriaceae	0.00	nan	150	0
+family	Haloplasmataceae	0.00	nan	150	0
+family	Leuconostocaceae	0.00	nan	150	0
+family	Mycoplasmataceae	0.00	nan	150	0
+family	Paenibacillaceae	0.00	nan	150	0
+family	Streptococcaceae	0.00	nan	150	0
+family	Streptomycetaceae	0.00	nan	150	0
+family	unassigned	nan	nan	449795700	0
+genus	Clostridium	0.00	nan	133350	0
+genus	Ruminococcus	0.00	nan	33600	0
+genus	Lachnospira	0.00	nan	22800	0
+genus	Butyrivibrio	0.00	nan	15750	0
+genus	Roseburia	0.00	nan	12600	0
+genus	Eubacterium	0.00	nan	10050	0
+genus	Coprobacillus	0.00	nan	8850	0
+genus	Acholeplasma	0.00	nan	8250	0
+genus	Staphylococcus	0.00	nan	8100	0
+genus	Coprococcus	0.00	nan	7650	0
+genus	Solobacterium	0.00	nan	5100	0
+genus	Lachnoclostridium	0.00	nan	4200	0
+genus	Treponema	0.00	nan	3900	0
+genus	Anaerotruncus	0.00	nan	2850	0
+genus	Alistipes	0.00	nan	2250	0
+genus	Ruminiclostridium	0.00	nan	2100	0
+genus	Kandleria	0.00	nan	1950	0
+genus	Subdoligranulum	0.00	nan	1950	0
+genus	Holdemanella	0.00	nan	1800	0
+genus	Candidatus Stoquefichus	0.00	nan	1650	0
+genus	Pseudobutyrivibrio	0.00	nan	1500	0
+genus	Acidaminococcus	0.00	nan	1200	0
+genus	Enterococcus	0.00	nan	900	0
+genus	Fusobacterium	0.00	nan	900	0
+genus	Lactobacillus	0.00	nan	750	0
+genus	Bacillus	0.00	nan	600	0
+genus	Desulfosporosinus	0.00	nan	600	0
+genus	Anaerococcus	0.00	nan	450	0
+genus	Bacteroides	0.00	nan	450	0
+genus	Faecalibacterium	0.00	nan	450	0
+genus	Holdemania	0.00	nan	450	0
+genus	Robinsoniella	0.00	nan	450	0
+genus	Acidiphilium	0.00	nan	300	0
+genus	Anaerovibrio	0.00	nan	300	0
+genus	Blautia	0.00	nan	300	0
+genus	Bulleidia	0.00	nan	300	0
+genus	Cellulosilyticum	0.00	nan	300	0
+genus	Denitrovibrio	0.00	nan	300	0
+genus	Faecalitalea	0.00	nan	300	0
+genus	Lachnoanaerobaculum	0.00	nan	300	0
+genus	Megamonas	0.00	nan	300	0
+genus	Turicibacter	0.00	nan	300	0
+genus	Anaerostipes	0.00	nan	150	0
+genus	Atopococcus	0.00	nan	150	0
+genus	Brevibacillus	0.00	nan	150	0
+genus	Catenibacterium	0.00	nan	150	0
+genus	Collinsella	0.00	nan	150	0
+genus	Dielma	0.00	nan	150	0
+genus	Dorea	0.00	nan	150	0
+genus	Erysipelatoclostridium	0.00	nan	150	0
+genus	Haloplasma	0.00	nan	150	0
+genus	Lactococcus	0.00	nan	150	0
+genus	Mycoplasma	0.00	nan	150	0
+genus	Oribacterium	0.00	nan	150	0
+genus	Prevotella	0.00	nan	150	0
+genus	Streptomyces	0.00	nan	150	0
+genus	Weissella	0.00	nan	150	0
+genus	Youngiibacter	0.00	nan	150	0
+genus	unassigned	nan	nan	449866200	0
+species	Clostridium sp. CAG:307	0.00	nan	89400	0
+species	uncultured rumen bacterium	0.00	nan	24150	0
+species	Lachnospira multipara	0.00	nan	22800	0
+species	Clostridium sp. CAG:628	0.00	nan	14400	0
+species	Lachnospiraceae bacterium AC2029	0.00	nan	11400	0
+species	Staphylococcus sp. CAG:324	0.00	nan	8100	0
+species	Ruminococcus albus	0.00	nan	7650	0
+species	Clostridium sp. CAG:678	0.00	nan	6600	0
+species	Ruminococcus flavefaciens	0.00	nan	6450	0
+species	Solobacterium moorei	0.00	nan	5100	0
+species	Coprobacillus sp. CAG:605	0.00	nan	4950	0
+species	Eubacterium sp. CAG:274	0.00	nan	4650	0
+species	Lachnospiraceae bacterium NC2004	0.00	nan	4350	0
+species	Acholeplasma brassicae	0.00	nan	3900	0
+species	Lachnospiraceae bacterium NK4A144	0.00	nan	3900	0
+species	Bacteroidales bacterium ph8	0.00	nan	3300	0
+species	Butyrivibrio hungatei	0.00	nan	3300	0
+species	Firmicutes bacterium CAG:449	0.00	nan	3300	0
+species	Acholeplasma palmae	0.00	nan	3000	0
+species	Anaerotruncus sp. CAG:528	0.00	nan	2850	0
+species	Coprobacillus sp. CAG:826	0.00	nan	2850	0
+species	Butyrivibrio proteoclasticus	0.00	nan	2550	0
+species	Clostridium sp. CAG:451	0.00	nan	2400	0
+species	Butyrivibrio fibrisolvens	0.00	nan	2250	0
+species	Clostridium sp. CAG:349	0.00	nan	2100	0
+species	Firmicutes bacterium CAG:313	0.00	nan	2100	0
+species	Coprococcus catus	0.00	nan	1950	0
+species	Kandleria vitulina	0.00	nan	1950	0
+species	Firmicutes bacterium CAG:631	0.00	nan	1800	0
+species	Holdemanella biformis	0.00	nan	1800	0
+species	Candidatus Stoquefichus massiliensis	0.00	nan	1650	0
+species	Clostridium sp. CAG:413	0.00	nan	1650	0
+species	Clostridium sp. CAG:302	0.00	nan	1500	0
+species	Erysipelotrichaceae bacterium 3_1_53	0.00	nan	1500	0
+species	Firmicutes bacterium CAG:65	0.00	nan	1500	0
+species	Subdoligranulum sp. 4_3_54A2FAA	0.00	nan	1500	0
+species	[Clostridium] citroniae	0.00	nan	1500	0
+species	Erysipelotrichaceae bacterium NK3D112	0.00	nan	1350	0
+species	Lachnospiraceae bacterium AC3007	0.00	nan	1350	0
+species	Clostridiales bacterium NK3B98	0.00	nan	1200	0
+species	Clostridium sp. CAG:1193	0.00	nan	1200	0
+species	Clostridium sp. CAG:964	0.00	nan	1200	0
+species	Clostridium sp. CAG:1000	0.00	nan	1050	0
+species	Coprobacillus sp. CAG:698	0.00	nan	1050	0
+species	Eubacterium sp. ER2	0.00	nan	1050	0
+species	Mollicutes bacterium HR1	0.00	nan	1050	0
+species	[Clostridium] cellulosi	0.00	nan	1050	0
+species	[Clostridium] methoxybenzovorans	0.00	nan	1050	0
+species	Acholeplasma axanthum	0.00	nan	900	0
+species	Clostridium sp. CAG:780	0.00	nan	900	0
+species	Clostridium sp. CAG:914	0.00	nan	900	0
+species	Enterococcus faecium	0.00	nan	900	0
+species	Firmicutes bacterium CAG:110	0.00	nan	900	0
+species	Fusobacterium periodonticum	0.00	nan	900	0
+species	Butyrivibrio sp. FCS014	0.00	nan	750	0
+species	Clostridium sp. KNHs209	0.00	nan	750	0
+species	Eubacterium sp. CAG:115	0.00	nan	750	0
+species	Firmicutes bacterium CAG:475	0.00	nan	750	0
+species	Lachnospiraceae bacterium 10-1	0.00	nan	750	0
+species	Mollicutes bacterium HR2	0.00	nan	750	0
+species	Ruminococcus sp. NK3A76	0.00	nan	750	0
+species	Bacillus sp. CAG:988	0.00	nan	600	0
+species	Clostridium sp. CAG:389	0.00	nan	600	0
+species	Clostridium sp. CAG:568	0.00	nan	600	0
+species	Coprococcus sp. CAG:782	0.00	nan	600	0
+species	Desulfosporosinus youngiae	0.00	nan	600	0
+species	Eubacterium limosum	0.00	nan	600	0
+species	Lachnospiraceae bacterium AB2028	0.00	nan	600	0
+species	Lachnospiraceae bacterium FE2018	0.00	nan	600	0
+species	Ruminococcus sp. CAG:579	0.00	nan	600	0
+species	[Clostridium] hathewayi	0.00	nan	600	0
+species	Anaerococcus vaginalis	0.00	nan	450	0
+species	Butyrivibrio sp. CAG:318	0.00	nan	450	0
+species	Butyrivibrio sp. VCB2006	0.00	nan	450	0
+species	Butyrivibrio sp. XBB1001	0.00	nan	450	0
+species	Clostridiales bacterium VE202-21	0.00	nan	450	0
+species	Clostridium sp. CAG:533	0.00	nan	450	0
+species	Clostridium sp. CAG:609	0.00	nan	450	0
+species	Eubacterium sp. CAG:841	0.00	nan	450	0
+species	Firmicutes bacterium CAG:95	0.00	nan	450	0
+species	Holdemania filiformis	0.00	nan	450	0
+species	Lachnospiraceae bacterium AC2014	0.00	nan	450	0
+species	Lachnospiraceae bacterium CAG:364	0.00	nan	450	0
+species	Lachnospiraceae bacterium NK4A179	0.00	nan	450	0
+species	Lactobacillus brevis	0.00	nan	450	0
+species	Porphyromonadaceae COT-184_OH4590	0.00	nan	450	0
+species	Pseudobutyrivibrio ruminis	0.00	nan	450	0
+species	Robinsoniella sp. KNHs210	0.00	nan	450	0
+species	Roseburia intestinalis	0.00	nan	450	0
+species	Ruminococcus sp. CAG:353	0.00	nan	450	0
+species	Ruminococcus sp. CAG:379	0.00	nan	450	0
+species	Treponema sp. C6A8	0.00	nan	450	0
+species	[Clostridium] scindens	0.00	nan	450	0
+species	[Eubacterium] siraeum	0.00	nan	450	0
+species	bacterium MS4	0.00	nan	450	0
+species	Acidiphilium sp. CAG:727	0.00	nan	300	0
+species	Anaerovibrio sp. RM50	0.00	nan	300	0
+species	Bulleidia extructa	0.00	nan	300	0
+species	Butyrivibrio sp. AC2005	0.00	nan	300	0
+species	Butyrivibrio sp. MC2021	0.00	nan	300	0
+species	Butyrivibrio sp. XPD2006	0.00	nan	300	0
+species	Cellulosilyticum lentocellum	0.00	nan	300	0
+species	Clostridium sp. CAG:352	0.00	nan	300	0
+species	Clostridium sp. CAG:594	0.00	nan	300	0
+species	Clostridium sp. CAG:62	0.00	nan	300	0
+species	Denitrovibrio acetiphilus	0.00	nan	300	0
+species	Eubacterium plexicaudatum	0.00	nan	300	0
+species	Eubacterium sp. CAG:86	0.00	nan	300	0
+species	Faecalitalea cylindroides	0.00	nan	300	0
+species	Firmicutes bacterium CAG:341	0.00	nan	300	0
+species	Firmicutes bacterium CAG:822	0.00	nan	300	0
+species	Firmicutes bacterium CAG:884	0.00	nan	300	0
+species	Lachnoclostridium phytofermentans	0.00	nan	300	0
+species	Lachnospiraceae bacterium AC2028	0.00	nan	300	0
+species	Megamonas hypermegale	0.00	nan	300	0
+species	Ruminococcaceae bacterium AE2021	0.00	nan	300	0
+species	Ruminococcaceae bacterium D16	0.00	nan	300	0
+species	Ruminococcus sp. CAG:488	0.00	nan	300	0
+species	Ruminococcus sp. CAG:57	0.00	nan	300	0
+species	Subdoligranulum variabile	0.00	nan	300	0
+species	Treponema sp. JC4	0.00	nan	300	0
+species	Turicibacter sp. HGF1	0.00	nan	300	0
+species	[Clostridium] viride	0.00	nan	300	0
+species	Acholeplasma equifetale	0.00	nan	150	0
+species	Acidaminococcus sp. CAG:542	0.00	nan	150	0
+species	Acidaminococcus sp. CAG:917	0.00	nan	150	0
+species	Atopococcus tabaci	0.00	nan	150	0
+species	Bacteroides sp. CAG:1060	0.00	nan	150	0
+species	Bacteroides sp. CAG:545	0.00	nan	150	0
+species	Brevibacillus laterosporus	0.00	nan	150	0
+species	Clostridiales bacterium VE202-08	0.00	nan	150	0
+species	Clostridium acetobutylicum	0.00	nan	150	0
+species	Clostridium butyricum	0.00	nan	150	0
+species	Clostridium sp. CAG:433	0.00	nan	150	0
+species	Clostridium sp. CAG:510	0.00	nan	150	0
+species	Clostridium sp. CAG:590	0.00	nan	150	0
+species	Clostridium sp. CAG:762	0.00	nan	150	0
+species	Clostridium sp. CAG:91	0.00	nan	150	0
+species	Clostridium sp. SY8519	0.00	nan	150	0
+species	Dielma fastidiosa	0.00	nan	150	0
+species	Eubacterium rectale	0.00	nan	150	0
+species	Eubacterium sp. 14-2	0.00	nan	150	0
+species	Eubacterium sp. 3_1_31	0.00	nan	150	0
+species	Eubacterium sp. AB3007	0.00	nan	150	0
+species	Eubacterium sp. CAG:146	0.00	nan	150	0
+species	Eubacterium sp. CAG:251	0.00	nan	150	0
+species	Eubacterium sp. CAG:38	0.00	nan	150	0
+species	Faecalibacterium prausnitzii	0.00	nan	150	0
+species	Faecalibacterium sp. CAG:1138	0.00	nan	150	0
+species	Firmicutes bacterium ASF500	0.00	nan	150	0
+species	Firmicutes bacterium CAG:103	0.00	nan	150	0
+species	Firmicutes bacterium CAG:114	0.00	nan	150	0
+species	Firmicutes bacterium CAG:170	0.00	nan	150	0
+species	Firmicutes bacterium CAG:882	0.00	nan	150	0
+species	Firmicutes bacterium CAG:94	0.00	nan	150	0
+species	Haloplasma contractile	0.00	nan	150	0
+species	Lachnoanaerobaculum sp. MSX33	0.00	nan	150	0
+species	Lachnospiraceae bacterium A4	0.00	nan	150	0
+species	Lachnospiraceae bacterium COE1	0.00	nan	150	0
+species	Lachnospiraceae bacterium P6A3	0.00	nan	150	0
+species	Lactococcus garvieae	0.00	nan	150	0
+species	Mycoplasma sp. CAG:956	0.00	nan	150	0
+species	Oribacterium sp. P6A1	0.00	nan	150	0
+species	Prevotella ruminicola	0.00	nan	150	0
+species	Pseudobutyrivibrio sp. MD2005	0.00	nan	150	0
+species	Roseburia intestinalis CAG:13	0.00	nan	150	0
+species	Roseburia sp. CAG:303	0.00	nan	150	0
+species	Ruminiclostridium thermocellum	0.00	nan	150	0
+species	Ruminococcus sp. CAG:624	0.00	nan	150	0
+species	Streptomyces scopuliridis	0.00	nan	150	0
+species	Subdoligranulum sp. CAG:314	0.00	nan	150	0
+species	Treponema pedis	0.00	nan	150	0
+species	Treponema saccharophilum	0.00	nan	150	0
+species	Treponema socranskii	0.00	nan	150	0
+species	Weissella ceti	0.00	nan	150	0
+species	Youngiibacter fragilis	0.00	nan	150	0
+species	[Clostridium] aminophilum	0.00	nan	150	0
+species	[Clostridium] saccharogumia	0.00	nan	150	0
+species	[Clostridium] termitidis	0.00	nan	150	0
+species	[Eubacterium] cellulosolvens	0.00	nan	150	0
+species	[Eubacterium] dolichum	0.00	nan	150	0
+species	[Ruminococcus] obeum	0.00	nan	150	0
+species	[Ruminococcus] torques	0.00	nan	150	0
+species	unassigned	nan	nan	449845500	0
