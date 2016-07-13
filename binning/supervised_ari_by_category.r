@@ -1,7 +1,7 @@
 library(grid)
 library(reshape2)
+library(gridExtra)
 library(ggplot2)
-require(gridExtra)
 library(scales)
 
 source("parse_raw_result_data.R")
@@ -25,7 +25,7 @@ gatherdata <- function(file_paths, tools_names)
 	column_ari <- c()
 	for (index in 1:length(file_paths))
 	{
-		print(file_paths[index])
+		#print(file_paths[index])
 		column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
 		raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
 		column_entropy <- append(column_entropy, raw_data$entropy)
@@ -75,7 +75,7 @@ get_frames <- function(df_tools_subset)
 	df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
 	df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
 	df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
-	categories <- as.vector(levels(df_tools_subset$categories))
+	categories <- as.character(levels(df_tools_subset$category))
 	data_low <- NULL
 	data_medium <- NULL
 	data_high <- NULL
@@ -84,17 +84,17 @@ get_frames <- function(df_tools_subset)
 	nov_high <- c()
 	#print(summary(df_tools_high))
 	#exit
-	for (category in categories)
+	for (l_category in categories)
 	{
 		#######################################
-		df_tools_low_subset <- subset(df_tools_low, categories==category)
-		df_tools_medium_subset <- subset(df_tools_medium, categories==category)
-		df_tools_high_subset <- subset(df_tools_high, categories==category)
-		if (length(df_tools_low_subset$files)>0)
+		df_tools_low_subset <- subset(df_tools_low, category==l_category)
+		df_tools_medium_subset <- subset(df_tools_medium, category==l_category)
+		df_tools_high_subset <- subset(df_tools_high, category==l_category)
+		if (length(df_tools_low_subset$file)>0)
 		{
 			data_frame <- gatherdata(
-				as.vector(df_tools_low_subset$files), as.vector(df_tools_low_subset$anonymous))
-			data_frame$category <- factor(rep(category, length(data_frame$tools)), levels=categories)
+				as.vector(df_tools_low_subset$file), as.vector(df_tools_low_subset$anonymous))
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=categories)
 			#nov_low <- append(nov_low, rep(category, length(data_frame$tools)))
 			if (is.null(data_low))
 			{
@@ -105,11 +105,11 @@ get_frames <- function(df_tools_subset)
 				data_low <- rbind(data_low, data_frame)
 			}
 		}
-		if (length(df_tools_medium_subset$files)>0)
+		if (length(df_tools_medium_subset$file)>0)
 		{
 			data_frame <- gatherdata(
-				as.vector(df_tools_medium_subset$files), as.vector(df_tools_medium_subset$anonymous))
-			data_frame$category <- factor(rep(category, length(data_frame$tools)), levels=categories)
+				as.vector(df_tools_medium_subset$file), as.vector(df_tools_medium_subset$anonymous))
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=categories)
 			#nov_medium <- append(nov_medium, rep(category, length(data_frame$tools)))
 			if (is.null(data_medium))
 			{
@@ -120,11 +120,11 @@ get_frames <- function(df_tools_subset)
 				data_medium <- rbind(data_medium, data_frame)
 			}
 		}
-		if (length(df_tools_high_subset$files)>0)
+		if (length(df_tools_high_subset$file)>0)
 		{
 			data_frame <- gatherdata(
-				as.vector(df_tools_high_subset$files), as.vector(df_tools_high_subset$anonymous))
-			data_frame$category <- factor(rep(category, length(data_frame$tools)), levels=categories)
+				as.vector(df_tools_high_subset$file), as.vector(df_tools_high_subset$anonymous))
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=categories)
 			#nov_high <- append(nov_high, rep(category, length(data_frame$tools)))
 			if (is.null(data_high))
 			{
@@ -151,15 +151,21 @@ root_path <- argv[1]
 output_file <- argv[2]
 
 df_tools <- get_dataframe_of_tools_at_locations(root_path)
-#print(summary(df_tools$))
-#exit
-df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
+if (length(argv)==2)
+{
+	df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
+}
+if (length(argv)!=2)
+{
+	df_tools_subset <- subset(df_tools, datatype=="unsupervised_excluded")
+}
+
 dataframes <- get_frames(df_tools_subset)
 #######################################
 
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
-dodge_small <- position_dodge(width = 0.2, height=0)
+dodge_small <- position_dodge(width = 0.2)
 
 #######################################
 
@@ -217,13 +223,14 @@ draw_plot <- function(data, title)
 		scale_y_continuous(breaks=seq(0,1,0.25), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.0, 1.00)) + #
 		facet_wrap( ~ tools, scales="free") + #, as.table = FALSE, scales="free_y"
 		#facet_wrap( ~ metric, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
-		geom_text(aes(label=value), size=3, hjust=0.5, vjust=-0.3, show_guide=F) +
-		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show_guide=F) +
+		geom_text(aes(label=value), size=3, hjust=0.5, vjust=-0.3, show.legend=F) +
+		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
 		ggtitle(title) +
 		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
 }
 
-#print(subset(data_low, variable == "ari"))
+#print(subset(dataframes$medium, category == "unidentified plasmid"))
+#print(dataframes$medium)
 pdf(output_file, paper="a4r", width=297, height=210)
 draw_plot(dataframes$low, "Low Complexity Dataset\n")
 draw_plot(dataframes$medium, "Medium Complexity Dataset\n")

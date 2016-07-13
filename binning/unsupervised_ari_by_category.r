@@ -1,9 +1,10 @@
 library(grid)
 library(reshape2)
 library(ggplot2)
-require(gridExtra)
+library(gridExtra)
 library(scales)
 
+source("parse_raw_result_data.R")
 #"\t"
 
 dir.exists <- function(d) {
@@ -14,22 +15,22 @@ dir.exists <- function(d) {
 gatherdata <- function(file_paths, tools_names)
 {
 	#print(tools_names)
-	separator <- '\t'
 	#print(file_paths)
+	separator <- '\t'
 	levels <- c("binning")
-	# ﻿instance,entropy,"rand index","adjusted rand index"
+	#instance,entropy,"rand index","adjusted rand index"
 	column_tool <- c()
 	column_entropy <- c()
 	column_ri <- c()
 	column_ari <- c()
 	for (index in 1:length(file_paths))
 	{
-		print(file_paths[index])
+		#print(file_paths[index])
 		column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
 		raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
-		column_entropy <- append(column_entropy, raw_data$entropy)
-		column_ri <- append(column_ri, raw_data$rand.index)
-		column_ari <- append(column_ari, raw_data$adjusted.rand.index)
+		column_entropy <- append(column_entropy, tail(raw_data$entropy, n=1))
+		column_ri <- append(column_ri, tail(raw_data$rand.index, n=1))
+		column_ari <- append(column_ari, tail(raw_data$adjusted.rand.index, n=1))
 	}
 	data_frame <- data.frame(
 		entropy = column_entropy,
@@ -69,38 +70,37 @@ get_names <- function(file_paths)
 
 #######################################
 
-get_frames <- function(root_path)
+get_frames <- function(df_tools_subset)
 {
-	novelties <- rev(c("new_order", "new_family", "new_genus", "new_species", "new_strain"))
-	data_low <- data.frame()
-	data_medium <- data.frame()
-	data_high <- data.frame()
+	df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+	df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+	df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+	category_order <- c(
+		"new_order", "new_family", "new_genus", "new_species", "new_strain", "virus", "unidentified plasmid", "unidentified circular element",
+		"unique strain", "common strain", "circular element")
+	categories <- as.character(levels(df_tools_subset$category))
+	# print(categories)
+	data_low <- NULL
+	data_medium <- NULL
+	data_high <- NULL
 	nov_low <- c()
 	nov_medium <- c()
 	nov_high <- c()
-	for (folder_novelty in novelties)
+	#print(summary(df_tools_high))
+	#exit
+	for (l_category in categories)
 	{
-		file_paths <- list(
-			"low"=paste(
-				root_path, folder_novelty, "/ari/low/", 
-				list.files(path=paste(root_path, folder_novelty, "/ari/low/", sep="")), sep=""),
-			"medium"=paste(
-				root_path, folder_novelty, "/ari/medium/",
-				list.files(path=paste(root_path, folder_novelty, "/ari/medium/", sep="")), sep=""),
-			"high"=paste(
-				root_path, folder_novelty, "/ari/high/",
-				list.files(path=paste(root_path, folder_novelty, "/ari/high/", sep="")), sep="")
-			)
 		#######################################
-		dir_low <- paste(root_path, folder_novelty, "/ari/low/", sep="")
-		dir_medium <- paste(root_path, folder_novelty, "/ari/medium/", sep="")
-		dir_high <- paste(root_path, folder_novelty, "/ari/high/", sep="")
-		if (dir.exists(dir_low))
+		df_tools_low_subset <- subset(df_tools_low, category==l_category)
+		df_tools_medium_subset <- subset(df_tools_medium, category==l_category)
+		df_tools_high_subset <- subset(df_tools_high, category==l_category)
+		if (length(df_tools_low_subset$file)>0)
 		{
 			data_frame <- gatherdata(
-				file_paths$low, get_names(file_paths$low))
-			nov_low <- append(nov_low, rep(folder_novelty, length(data_frame$tools)))
-			if (length(data_low) == 0)
+				as.vector(df_tools_low_subset$file), as.vector(df_tools_low_subset$anonymous))
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=category_order)
+			#nov_low <- append(nov_low, rep(category, length(data_frame$tools)))
+			if (is.null(data_low))
 			{
 				data_low <- data_frame
 			}
@@ -109,12 +109,13 @@ get_frames <- function(root_path)
 				data_low <- rbind(data_low, data_frame)
 			}
 		}
-		if (dir.exists(dir_medium))
+		if (length(df_tools_medium_subset$file)>0)
 		{
 			data_frame <- gatherdata(
-				file_paths$medium, get_names(file_paths$medium))
-			nov_medium <- append(nov_medium, rep(folder_novelty, length(data_frame$tools)))
-			if (length(data_medium) == 0)
+				as.vector(df_tools_medium_subset$file), as.vector(df_tools_medium_subset$anonymous))
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=category_order)
+			#nov_medium <- append(nov_medium, rep(category, length(data_frame$tools)))
+			if (is.null(data_medium))
 			{
 				data_medium <- data_frame
 			}
@@ -123,12 +124,13 @@ get_frames <- function(root_path)
 				data_medium <- rbind(data_medium, data_frame)
 			}
 		}
-		if (dir.exists(dir_high))
+		if (length(df_tools_high_subset$file)>0)
 		{
 			data_frame <- gatherdata(
-				file_paths$high, get_names(file_paths$high))
-			nov_high <- append(nov_high, rep(folder_novelty, length(data_frame$tools)))
-			if (length(data_high) == 0)
+				as.vector(df_tools_high_subset$file), as.vector(df_tools_high_subset$anonymous))
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=category_order)
+			#nov_high <- append(nov_high, rep(category, length(data_frame$tools)))
+			if (is.null(data_high))
 			{
 				data_high <- data_frame
 			}
@@ -138,22 +140,16 @@ get_frames <- function(root_path)
 			}
 		}
 	}
-	data_low$novelty <- factor(nov_low, levels=novelties)
-	data_medium$novelty <- factor(nov_medium, levels=novelties)
-	data_high$novelty <- factor(nov_high, levels=novelties)
+	#data_low$novelty <- factor(nov_low, levels=categories) # 
+	#data_medium$novelty <- factor(nov_medium, levels=categories)
+	#data_high$novelty <- factor(nov_high, levels=categories)
 	return(list(low=data_low, medium=data_medium, high=data_high))
 }
 
-argv <- commandArgs(TRUE)
-root_path <- argv[1]
-output_file <- argv[2]
-
-dataframes <- get_frames(root_path)
-#print(dataframes$low)
 
 dodge <- position_dodge(width = 0.3)
 dodge_big <- position_dodge(width = 0.6)
-dodge_small <- position_dodge(width = 0.1, height=0)
+#dodge_small <- position_dodge(width = 0.1, height=0)
 #######################################
 
 
@@ -184,17 +180,37 @@ my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash
 draw_plot <- function(data, title)
 {
 	ggplot(subset(data, metric == "Adjusted rand index"), 
-		aes(x = novelty, y = value, colour=tools, group=interaction(tools, metric))) + #fill=tools, 
+		aes(x = category, y = value, colour=tools, group=interaction(tools, metric))) + #fill=tools, 
 		#geom_bar(stat="identity") +
 		geom_line(size = .7) +
 		#labs(title=title_main, colour="Tool name", x="Level", y=NULL) +
 		labs(fill="Anonymous submission", x=NULL, y=NULL) +
 		scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
 		facet_wrap( ~ metric, ncol=1, scales="fix") + #, as.table = FALSE, scales="free_y"
-		geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show_guide=F) +
+		geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
 		ggtitle(title) +
 		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
 }
+
+#######################################
+
+argv <- commandArgs(TRUE)
+root_path <- argv[1]
+output_file <- argv[2]
+
+df_tools <- get_dataframe_of_tools_at_locations(root_path)
+if (length(argv)==2)
+{
+	df_tools_subset <- subset(df_tools, datatype=="unsupervised_included")
+}
+if (length(argv)!=2)
+{
+	df_tools_subset <- subset(df_tools, datatype=="unsupervised_excluded")
+}
+#######################################
+
+dataframes <- get_frames(df_tools_subset)
+
 pdf(output_file, paper="a4r", width=297, height=210)
 #if (dir.exists(dir_low))
 #{

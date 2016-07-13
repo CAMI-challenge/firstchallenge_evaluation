@@ -1,15 +1,14 @@
 library(grid)
 library(reshape2)
 library(ggplot2)
-#require(gridExtra)
+library(gridExtra)
 library(scales)
 
 source("parse_raw_result_data.R")
 
-create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
+create_plots<- function(root_path=NA, output_file_path=NA) {
   if(is.na(root_path)) {root_path<- argv[1]}
-  if(is.na(output_file)) {output_file<- argv[2]}
-  if(is.na(output_path)) {output_path<- argv[3]}
+  if(is.na(output_file_path)) {output_file_path<- argv[2]}
   
   df_tools <- get_dataframe_of_tools_at_locations(root_path)
   df_tools_average_prec <- subset(df_tools, datatype=="summary")
@@ -17,20 +16,20 @@ create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   df_tools_medium <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
   df_tools_high <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
   
-  if (length(df_tools_low$files)>0)
+  if (length(df_tools_low$file)>0)
   {
     data_low <- gatherdata(
-      as.vector(df_tools_low$files), as.vector(df_tools_low$anonymous))
+      as.vector(df_tools_low$file), as.vector(df_tools_low$anonymous))
   }
-  if (length(df_tools_medium$files)>0)
+  if (length(df_tools_medium$file)>0)
   {
     data_medium <- gatherdata(
-      as.vector(df_tools_medium$files), as.vector(df_tools_medium$anonymous))
+      as.vector(df_tools_medium$file), as.vector(df_tools_medium$anonymous))
   }
-  if (length(df_tools_high$files)>0)
+  if (length(df_tools_high$file)>0)
   {
     data_high <- gatherdata(
-      as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
+      as.vector(df_tools_high$file), as.vector(df_tools_high$anonymous))
   }
   
   dodge <- position_dodge(width = 0.3)
@@ -44,41 +43,23 @@ create_plots<- function(root_path=NA, output_file=NA, output_path=NA) {
   ##
   #############
   
-
   
-
-  # this does not work under windows, replaced by ggsave
-  #pdf(output_file, paper="a4r", width=297, height=210)
-  
-  
-  if (length(df_tools_low$files)>0)
+  if (length(df_tools_low$file)>0)
   {
-    
-    draw_plot(data_low, "Low Complexity Dataset\n")
-    print(paste(output_file, "_low.pdf", sep=""))
-    print(output_path)
-    ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path) #, device="pdf"
-    
-    
+    gg_plot_low <- draw_plot(data_low, "Low Complexity Dataset\n")
   }
-  if (length(df_tools_medium$files)>0)
+  if (length(df_tools_medium$file)>0)
   {
-    
-    draw_plot(data_medium, "Medium Complexity Dataset\n")
-    ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path) #, device="pdf"
-    
+    gg_plot_medium <- draw_plot(data_medium, "Medium Complexity Dataset\n")
   }
-  if (length(df_tools_high$files)>0)
+  if (length(df_tools_high$file)>0)
   {
-    draw_plot(data_high, "High Complexity Dataset\n")
-    ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path) #, device="pdf"
-    
+    gg_plot_high <- draw_plot(data_high, "High Complexity Dataset\n")
   }
+  #output <- arrangeGrob(gg_plot_low, gg_plot_medium, gg_plot_high, ncol=1)
+  output <- marrangeGrob(list(gg_plot_low, gg_plot_medium, gg_plot_high), nrow=1, ncol=1, top=NULL)
+  ggsave(output_file_path, output, device="pdf", width=297, height=210, units='mm')
   #dev.off()
-  
-  
-  
-  
 }
 
 
@@ -131,7 +112,7 @@ gatherdata <- function(file_paths, tools_names)
   #print(file_paths)
   for (index in 1:length(file_paths))
   {
-    print(file_paths[index])
+    # print(file_paths[index])
     column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
     raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
     column_precision <- append(column_precision, raw_data$precision)
@@ -187,7 +168,7 @@ draw_plot <- function(data, title)
 {
   
   # precision averaged over predicted bins, recall averaged over true bins, precision in this dir is truncated precision (1% of smallest predicted bins removed)
-  title_main <- ""
+  title_main <- title
   
   
   # The palette with grey:
@@ -200,7 +181,7 @@ draw_plot <- function(data, title)
   
   
   
-  ggplot() +
+  gg_plot <- ggplot() +
     geom_ribbon(
       data=subset(data, metric=="precision" | metric=="recall"),
       aes(x = level, y = percent, ymax=percent+sd, ymin=percent-sd, linetype=metric, fill=metric, group=interaction(metric, tools)),
@@ -220,22 +201,21 @@ draw_plot <- function(data, title)
     scale_fill_manual(
       values=my_colours,  
       breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
-      labels=c("Accuracy", "Misclassification", "Av. Precision (99%)", "Av. Recall"))+ #c("Accuracy", "Misclassification", "Precision", "Recall")) +
+      labels=c("Accuracy", "Misclassification", "Av. Precision", "Av. Recall"))+ #c("Accuracy", "Misclassification", "Precision", "Recall")) +
     scale_colour_manual(
       values=my_colours,  
       breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
-      labels=c("Accuracy", "Misclassification", "Av. Precision (99%)", "Av. Recall")) +#c("Accuracy", "Misclassification", "Precision", "Recall")) +
+      labels=c("Accuracy", "Misclassification", "Av. Precision", "Av. Recall")) +#c("Accuracy", "Misclassification", "Precision", "Recall")) +
     scale_linetype_manual(
       values=c("solid", "dashed", "dotted", "dotdash"),
       breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
-      labels=c("Accuracy", "Misclassification", "Av. Precision (99%)", "Av. Recall")) +
+      labels=c("Accuracy", "Misclassification", "Av. Precision", "Av. Recall")) +
     labs(title=title_main, fill="Metric", linetype="Metric", colour="Metric", x=NULL, y=NULL) +
     #ggtitle(paste(title, title_main, sep='\n')) +
     #facet_grid(~ tools) +
     facet_wrap(~ tools, as.table = FALSE) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.background = element_rect(fill = "light blue")) # , vjust  0.5
-  
-  
+  return(gg_plot)
 }
 
 #######################################
@@ -247,4 +227,4 @@ argv <- commandArgs(TRUE)
 #output_file <- "PerformanceMeasures" #
 #output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
 
-create_plots(argv[1], argv[2], argv[3])
+create_plots(argv[1], argv[2])
