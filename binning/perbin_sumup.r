@@ -24,9 +24,9 @@ high <- subset(df_tools_perbin, dataset=="1st CAMI Challenge Dataset 3 CAMI_high
 get_dataframe_of_tools_at <- function(data)
 {
 	sumup <- NULL
-	for(index in 1:length(data$files))
+	for(index in 1:length(data$file))
 	{
-		file_path <- as.character(data$files[index])
+		file_path <- as.character(data$file[index])
 		#if (!grepl("Gold_Standard", file_path))
 		#{
 		print(file_path)
