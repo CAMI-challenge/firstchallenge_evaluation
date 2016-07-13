@@ -35,16 +35,13 @@ for (complexity_level in complexity_levels) {
     figures.dir <- paste(repo.dir, "/plots/", sep="")
     
     # files
-    
-    if (level=="by_bin") {
-        ref_data_low.file <- paste(results.dir, "low_all_perbin.tsv", sep="")
-        ref_data_medium.file <- paste(results.dir, "medium_all_perbin.tsv", sep="")
-        ref_data_high.file <- paste(results.dir, "high_all_perbin.tsv", sep="")
-    } else {
-        ref_data_low.file <- paste(results.dir, "low_all_bygenome.tsv", sep="")
-        ref_data_medium.file <- paste(results.dir, "medium_all_bygenome.tsv", sep="")
-        ref_data_high.file <- paste(results.dir, "high_all_bygenome.tsv", sep="")
-    }
+
+        
+    ref_data_low.file <- paste(results.dir, "low_all_", level, ".tsv", sep="")
+    ref_data_medium.file <- paste(results.dir, "medium_all_", level, ".tsv", sep="")
+    ref_data_high.file <- paste(results.dir, "high_all_", level, ".tsv", sep="")
+
+
     # load data
     
     ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
