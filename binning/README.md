@@ -14,18 +14,6 @@
 [supervised ari including notassigned split by uniqueness](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
 [supervised ari excluding notassigned split by uniqueness](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
 
-###Low
-By basepairs: [supervised_all_bp_absolute_low.pdf](plots/supervised/supervised_all_bp_absolute_low.pdf)  
-By basepairs: [supervised_all_bp_relative_low.pdf](plots/supervised/supervised_all_bp_relative_low.pdf)  
-
-###Medium
-By basepairs: [supervised_all_bp_absolute_medium.pdf](plots/supervised/supervised_all_bp_absolute_medium.pdf)  
-By basepairs: [supervised_all_bp_relative_medium.pdf](plots/supervised/supervised_all_bp_relative_medium.pdf)  
-
-###High
-By basepairs: [supervised_all_bp_absolute_high.pdf](plots/supervised/supervised_all_bp_absolute_high.pdf)  
-By basepairs: [supervised_all_bp_relative_high.pdf](plots/supervised/supervised_all_bp_relative_high.pdf)  
-
 ##Unupervised plots:
 [unsupervised ari including notassigned](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
 [unsupervised ari excluding notassigned](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
