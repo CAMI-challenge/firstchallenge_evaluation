@@ -28,7 +28,7 @@ The calls to create most plots are contained in a [bash script](make_plots.sh), 
 Unix only, sorry. Some scripts are not yet suitable for windown, but all work using a unix system, given all R packages are available.  
 
 ### 'by_bin' and 'by_genome' combining of tables into one file
-perbin_sumup.r target/directory/ "perbin"
+    Rscript perbin_sumup.r target/directory/ "perbin"
 
 ###Example:
 perbin_sumup.r data/taxonomic "perbin"
