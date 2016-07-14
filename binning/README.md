@@ -24,10 +24,10 @@
 
 
 ## Making plots:
-The calls to create most plots are contained in a [bash script](make_plots.sh), which must be called using this binning directory. Unix only, sorry.  
-Some scripts are not yet suitable for windown, but all work using a unix system, given all R packages are available.  
+The calls to create most plots are contained in a [bash script](make_plots.sh), which must be called within this binning directory.
+Unix only, sorry. Some scripts are not yet suitable for windown, but all work using a unix system, given all R packages are available.  
 
-### by_bin and by_genome combining of tables into one file
+### 'by_bin' and 'by_genome' combining of tables into one file
 perbin_sumup.r target/directory/ "perbin"
 
 ###Example:
