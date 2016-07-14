@@ -31,5 +31,5 @@ Unix only, sorry. Some scripts are not yet suitable for windown, but all work us
     Rscript perbin_sumup.r target/directory/ "perbin"
 
 ###Example:
-Rscript perbin_sumup.r data/taxonomic "perbin"
-Rscript perbin_sumup.r data/taxonomic "bygenome"
+    Rscript perbin_sumup.r data/taxonomic "perbin"  
+    Rscript perbin_sumup.r data/taxonomic "bygenome"  
