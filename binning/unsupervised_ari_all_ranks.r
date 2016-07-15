@@ -77,20 +77,20 @@ df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 C
 df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
 df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
 
-if (length(df_tools_low$files)>0)
+if (length(df_tools_low$file)>0)
 {
 data_low <- gatherdata(
-  as.vector(df_tools_low$files), as.vector(df_tools_low$anonymous))
+  as.vector(df_tools_low$file), as.vector(df_tools_low$anonymous))
 }
-if (length(df_tools_medium$files)>0)
+if (length(df_tools_medium$file)>0)
 {
 data_medium <- gatherdata(
-  as.vector(df_tools_medium$files), as.vector(df_tools_medium$anonymous))
+  as.vector(df_tools_medium$file), as.vector(df_tools_medium$anonymous))
 }
-if (length(df_tools_high$files)>0)
+if (length(df_tools_high$file)>0)
 {
 data_high <- gatherdata(
-  as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
+  as.vector(df_tools_high$file), as.vector(df_tools_high$anonymous))
 }
 
 output_file <- argv[2]
@@ -163,15 +163,15 @@ draw_plot <- function(data, title)
 
 #print(subset(data_low, variable == "ari"))
 pdf(output_file, paper="a4r", width=297, height=210)
-if (length(df_tools_low$files)>0)
+if (length(df_tools_low$file)>0)
 {
 	draw_plot(data_low, "Low Complexity Dataset\n")
 }
-if (length(df_tools_medium$files)>0)
+if (length(df_tools_medium$file)>0)
 {
 	draw_plot(data_medium, "Medium Complexity Dataset\n")
 }
-if (length(df_tools_high$files)>0)
+if (length(df_tools_high$file)>0)
 {
 	draw_plot(data_high, "High Complexity Dataset\n")
 }

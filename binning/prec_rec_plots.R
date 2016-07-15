@@ -17,11 +17,12 @@ filter_tail <- F
 best_only <- T
 all_ranks_combined <- T
  
-bin_types <- c("supervised")
+bin_types <- c("supervised", "unsupervised")
 levels <- c("by_bin", "by_genome")
 ANIs <- c("all", "common strain", "unique strain")
 
-for (bin_type in bin_types)
+for (bin_type in bin_types) {
+    if (bin_type=="unsupervised") levels <- c("by_genome")
     for (level in levels)
         for (ANI in ANIs) {
                
@@ -31,6 +32,7 @@ for (bin_type in bin_types)
         
         metadata.dir <- paste(repo.dir, "/../metadata/", sep="")
         if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
+        if (bin_type=="unsupervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
         figures.dir <- paste(repo.dir, "/plots/", sep="")
         
         # files
@@ -200,6 +202,6 @@ for (bin_type in bin_types)
             print(file)
             
         }
-
+    }
 }
 

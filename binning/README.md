@@ -1,32 +1,35 @@
-### Example calls:
-
-Rscript supervised_absolute_count.r data/supervised/ALL/absolute_counts/ supervised_absolute_count.pdf
-
-Rscript supervised_ari.r data/supervised/ALL/ari/ supervised_ari.pdf
-
-Rscript supervised_macro_precision.r data/supervised/ALL/truncated_macro_precision/ supervised_macro_precision.pdf
-
-Rscript unsupervised_ari.r data/unsupervised/ALL/ari unsupervised_ari.pdf
-
 ##Supervised plots:
-ARI: [supervised_all_ari_excluding_notassigned.pdf](plots/supervised/supervised_all_ari_excluding_notassigned.pdf) (excluding not assigned sequences)  
-ARI: [supervised_all_ari_including_notassigned.pdf](plots/supervised/supervised_all_ari_including_notassigned.pdf) (including not assigned sequences)  
+### Avg. Precition/Recall
+[supervised Avg. Precition/Recall](plots/supervised/supervised_summary_all.pdf)  
 
-###Low
-Avg. Precition/Recall: [supervised_all_summary_low.pdf](plots/supervised/supervised_all_summary_low.pdf)  
-By basepairs: [supervised_all_bp_absolute_low.pdf](plots/supervised/supervised_all_bp_absolute_low.pdf)  
-By basepairs: [supervised_all_bp_relative_low.pdf](plots/supervised/supervised_all_bp_relative_low.pdf) 
+### Basepair count
+[supervised relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
+[supervised bp count in k basepairs](plots/supervised/supervised_bp_count_absolute_all.pdf)  
 
-###Medium
-Avg. Precition/Recall: [supervised_all_summary_medium.pdf](plots/supervised/supervised_all_summary_medium.pdf)  
-By basepairs: [supervised_all_bp_absolute_medium.pdf](plots/supervised/supervised_all_bp_absolute_medium.pdf)  
-By basepairs: [supervised_all_bp_relative_medium.pdf](plots/supervised/supervised_all_bp_relative_medium.pdf)  
+### Adjusted rand index
+[supervised ari including notassigned](plots/supervised/supervised_ari_including_notassigned_all.pdf)  
+[supervised ari excluding notassigned](plots/supervised/supervised_ari_excluding_notassigned_all.pdf)  
+[supervised ari including notassigned split by novelty](plots/supervised/supervised_ari_including_notassigned_novelty.pdf)  
+[supervised ari excluding notassigned split by novelty](plots/supervised/supervised_ari_excluding_notassigned_novelty.pdf)  
+[supervised ari including notassigned split by uniqueness](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
+[supervised ari excluding notassigned split by uniqueness](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
 
-###High
-Avg. Precition/Recall: [supervised_all_summary_high.pdf](plots/supervised/supervised_all_summary_high.pdf)  
-By basepairs: [supervised_all_bp_absolute_high.pdf](plots/supervised/supervised_all_bp_absolute_high.pdf)  
-By basepairs: [supervised_all_bp_relative_high.pdf](plots/supervised/supervised_all_bp_relative_high.pdf)  
+###Unupervised plots:
+[unsupervised ari including notassigned](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
+[unsupervised ari excluding notassigned](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
+[unsupervised ari including notassigned split by novelty](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  
+[unsupervised ari excluding notassigned split by novelty](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
+[unsupervised ari including notassigned split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.pdf)  
+[unsupervised ari excluding notassigned split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.pdf)  
 
-##Unupervised plots:
-ARI: [unsupervised_all_ari_excluding_notassigned.pdf](plots/unsupervised/unsupervised_all_ari_excluding_notassigned.pdf)  
-ARI: [unsupervised_all_ari_including_notassigned.pdf](plots/unsupervised/unsupervised_all_ari_including_notassigned.pdf)  
+
+## Making plots:
+The calls to create most plots are contained in a [bash script](make_plots.sh), which must be called within this binning directory.
+Unix only, sorry. Some scripts are not yet suitable for windown, but all work using a unix system, given all R packages are available.  
+
+### 'by_bin' and 'by_genome' combining of tables into one file
+    Rscript perbin_sumup.r target/directory/ "perbin"
+
+###Example:
+    Rscript perbin_sumup.r data/taxonomic "perbin"  
+    Rscript perbin_sumup.r data/taxonomic "bygenome"  

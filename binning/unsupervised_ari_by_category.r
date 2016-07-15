@@ -1,13 +1,11 @@
 library(grid)
 library(reshape2)
-library(gridExtra)
 library(ggplot2)
+library(gridExtra)
 library(scales)
 
 source("parse_raw_result_data.R")
 #"\t"
-
-#options(error=traceback)
 
 dir.exists <- function(d) {
     de <- file.info(d)$isdir
@@ -16,9 +14,11 @@ dir.exists <- function(d) {
 
 gatherdata <- function(file_paths, tools_names)
 {
+	#print(tools_names)
+	#print(file_paths)
 	separator <- '\t'
-	levels <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
-	# ﻿instance,entropy,"rand index","adjusted rand index"
+	levels <- c("binning")
+	#instance,entropy,"rand index","adjusted rand index"
 	column_tool <- c()
 	column_entropy <- c()
 	column_ri <- c()
@@ -28,20 +28,20 @@ gatherdata <- function(file_paths, tools_names)
 		#print(file_paths[index])
 		column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
 		raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
-		column_entropy <- append(column_entropy, raw_data$entropy)
-		column_ri <- append(column_ri, raw_data$rand.index)
-		column_ari <- append(column_ari, raw_data$adjusted.rand.index)
+		column_entropy <- append(column_entropy, tail(raw_data$entropy, n=1))
+		column_ri <- append(column_ri, tail(raw_data$rand.index, n=1))
+		column_ari <- append(column_ari, tail(raw_data$adjusted.rand.index, n=1))
 	}
 	data_frame <- data.frame(
 		entropy = column_entropy,
 		ri = column_ri,
 		ari = column_ari)
-	data_frame$level = factor(rep(levels, length(file_paths)), levels=levels)
+	#data_frame$level = factor(rep(levels, length(file_paths)), levels=levels)
 	data_frame$tools <- factor(column_tool)
-	melted <- melt(data_frame, c("tools", "level"))
+	melted <- melt(data_frame, "tools")
 	melted$variable <- factor(melted$variable)
-	#colnames(melted) <- c("tools", "metric", "value")
-	levels(melted$variable) <- c("Entropy", "Rand index", "Adjusted rand index")
+	colnames(melted) <- c("tools", "metric", "value")
+	levels(melted$metric) <- c("Entropy", "Rand index", "Adjusted rand index")
 	return(melted)
 }
 
@@ -75,7 +75,11 @@ get_frames <- function(df_tools_subset)
 	df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
 	df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
 	df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+	category_order <- c(
+		"new_order", "new_family", "new_genus", "new_species", "new_strain", "virus", "unidentified plasmid", "unidentified circular element",
+		"unique strain", "common strain", "circular element")
 	categories <- as.character(levels(df_tools_subset$category))
+	# print(categories)
 	data_low <- NULL
 	data_medium <- NULL
 	data_high <- NULL
@@ -94,7 +98,7 @@ get_frames <- function(df_tools_subset)
 		{
 			data_frame <- gatherdata(
 				as.vector(df_tools_low_subset$file), as.vector(df_tools_low_subset$anonymous))
-			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=categories)
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=category_order)
 			#nov_low <- append(nov_low, rep(category, length(data_frame$tools)))
 			if (is.null(data_low))
 			{
@@ -109,7 +113,7 @@ get_frames <- function(df_tools_subset)
 		{
 			data_frame <- gatherdata(
 				as.vector(df_tools_medium_subset$file), as.vector(df_tools_medium_subset$anonymous))
-			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=categories)
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=category_order)
 			#nov_medium <- append(nov_medium, rep(category, length(data_frame$tools)))
 			if (is.null(data_medium))
 			{
@@ -124,7 +128,7 @@ get_frames <- function(df_tools_subset)
 		{
 			data_frame <- gatherdata(
 				as.vector(df_tools_high_subset$file), as.vector(df_tools_high_subset$anonymous))
-			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=categories)
+			data_frame$category <- factor(rep(l_category, length(data_frame$tools)), levels=category_order)
 			#nov_high <- append(nov_high, rep(category, length(data_frame$tools)))
 			if (is.null(data_high))
 			{
@@ -143,8 +147,52 @@ get_frames <- function(df_tools_subset)
 }
 
 
+dodge <- position_dodge(width = 0.3)
+dodge_big <- position_dodge(width = 0.6)
+#dodge_small <- position_dodge(width = 0.1, height=0)
+#######################################
 
 
+#############
+##
+##  PLOTS
+##
+#############
+
+add_percent <- function(x, ...)
+{
+	sprintf("%.0f%%", x)
+}
+
+#title_main <- "(%s) Entropy, rand index, adjusted rand index"
+title_main <- "Entropy, rand index, adjusted rand index"
+
+# The palette with grey:
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+# The palette with black:
+cbbPalette <- c("#000000", "#F0E442", "#E69F00", "#56B4E9", "#009E73", "#0072B2", "#D55E00", "#CC79A7")
+my_colours <- rev(cbbPalette)
+my_shapes <- c(20, 18)
+my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
+
+
+#pdf("example_macro_prec_recall.pdf", paper="a4r", width=297, height=210)
+draw_plot <- function(data, title)
+{
+	ggplot(subset(data, metric == "Adjusted rand index"), 
+		aes(x = category, y = value, colour=tools, group=interaction(tools, metric))) + #fill=tools, 
+		#geom_bar(stat="identity") +
+		geom_line(size = .7) +
+		#labs(title=title_main, colour="Tool name", x="Level", y=NULL) +
+		labs(fill="Anonymous submission", x=NULL, y=NULL) +
+		scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
+		facet_wrap( ~ metric, ncol=1, scales="fix") + #, as.table = FALSE, scales="free_y"
+		geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
+		ggtitle(title) +
+		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
+}
+
+#######################################
 
 argv <- commandArgs(TRUE)
 root_path <- argv[1]
@@ -159,81 +207,22 @@ if (length(argv)!=2)
 {
 	df_tools_subset <- subset(df_tools, datatype=="unsupervised_excluded")
 }
+#######################################
 
 dataframes <- get_frames(df_tools_subset)
-#######################################
 
-dodge <- position_dodge(width = 0.3)
-dodge_big <- position_dodge(width = 0.6)
-dodge_small <- position_dodge(width = 0.2)
-
-#######################################
-
-#############
-##
-##  PLOTS
-##
-#############
-
-add_percent <- function(x, ...)
-{
-	sprintf("%.0f%%", x)
-}
-
-lable_handle <- function(x, ...)
-{
-	display <- c()
-	for(value in x)
-	{
-		if (is.na(value))
-		{
-			display <- append(display, "")
-			next
-		}
-		if ((0 <= value) && (value <= 1))
-		{
-			display <- append(display, sprintf("%.2f", value))
-		}
-		else
-		{
-			display <- append(display, "")
-		}
-	}
-	display
-}
-
-#title_main <- "(%s) Entropy, rand index, adjusted rand index"
-title_main <- "Entropy, rand index, adjusted rand index"
-
-# The palette with grey:
-cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-# The palette with black:
-cbbPalette <- c("#000000", "#F0E442", "#E69F00", "#56B4E9", "#009E73", "#0072B2", "#D55E00", "#CC79A7")
-my_colours <- rev(cbbPalette)
-my_shapes <- c(20, 18)
-my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
-
-draw_plot <- function(data, title)
-{
-	ggplot(subset(data, variable == "Adjusted rand index"), 
-		aes(x = level, y = value, colour=category, group=interaction(category, variable))) + #fill=tools, 
-		geom_line(position=dodge_small) +
-		labs(colour="Categories", x=NULL, y=NULL) +
-		#scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
-		scale_y_continuous(breaks=seq(0,1,0.25), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.0, 1.00)) + #
-		facet_wrap( ~ tools, scales="free") + #, as.table = FALSE, scales="free_y"
-		#facet_wrap( ~ metric, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
-		geom_text(aes(label=value), size=3, hjust=0.5, vjust=-0.3, show.legend=F) +
-		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
-		ggtitle(title) +
-		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
-}
-
-#print(subset(dataframes$medium, category == "unidentified plasmid"))
-#print(dataframes$medium)
 pdf(output_file, paper="a4r", width=297, height=210)
+#if (dir.exists(dir_low))
+#{
 draw_plot(dataframes$low, "Low Complexity Dataset\n")
+#}
+#if (dir.exists(dir_medium))
+#{
 draw_plot(dataframes$medium, "Medium Complexity Dataset\n")
+#}
+#if (dir.exists(dir_high))
+#{
 draw_plot(dataframes$high, "High Complexity Dataset\n")
+#}
 dev.off()
 

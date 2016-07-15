@@ -1,17 +1,16 @@
 library(grid)
 library(reshape2)
 library(ggplot2)
-#require(gridExtra)
+library(gridExtra)
 library(scales)
 library(RColorBrewer)
 
 source("parse_raw_result_data.R")
 
 
-create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
+create_count_plots <- function(root_path=NA, output_file=NA) {
   if(is.na(root_path)) {root_path<- argv[1]}
   if(is.na(output_file)) {output_file<- argv[2]}
-  if(is.na(output_path)) {output_path<- argv[3]}
 
   df_tools <- get_dataframe_of_tools_at_locations(root_path)
   df_tools_average_prec <- subset(df_tools, datatype=="absolute")
@@ -19,20 +18,20 @@ create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
   df_tools_medium <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
   df_tools_high <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
   
-  if (length(df_tools_low$files)>0)
+  if (length(df_tools_low$file)>0)
   {
     data_low <- gatherdata(
-      as.vector(df_tools_low$files), as.vector(df_tools_low$anonymous))
+      as.vector(df_tools_low$file), as.vector(df_tools_low$anonymous))
   }
-  if (length(df_tools_medium$files)>0)
+  if (length(df_tools_medium$file)>0)
   {
     data_medium <- gatherdata(
-      as.vector(df_tools_medium$files), as.vector(df_tools_medium$anonymous))
+      as.vector(df_tools_medium$file), as.vector(df_tools_medium$anonymous))
   }
-  if (length(df_tools_high$files)>0)
+  if (length(df_tools_high$file)>0)
   {
     data_high <- gatherdata(
-      as.vector(df_tools_high$files), as.vector(df_tools_high$anonymous))
+      as.vector(df_tools_high$file), as.vector(df_tools_high$anonymous))
   }
 
   dodge <- position_dodge(width = 0.3)
@@ -70,22 +69,24 @@ create_count_plots <- function(root_path=NA, output_file=NA, output_path=NA) {
   my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
 
   #pdf(output_file, paper="a4r", width=297, height=210)
-  if (length(df_tools_low$files)>0)
+  if (length(df_tools_low$file)>0)
   {
-    draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey)
-    ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path)
+    p1 <- draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey)
+    #ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path)
   }
-  if (length(df_tools_medium$files)>0)
+  if (length(df_tools_medium$file)>0)
   {
-	  draw_plot_x(data_medium, "Medium Complexity Dataset\n", blue_red_grey)
-    ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path)
+    p2 <- draw_plot_x(data_medium, "Medium Complexity Dataset\n", blue_red_grey)
+    #ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path)
   }
-  if (length(df_tools_high$files)>0)
+  if (length(df_tools_high$file)>0)
   {
-	  draw_plot_x(data_high, "High Complexity Dataset\n", blue_red_grey)
-    ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path)
+    p3 <- draw_plot_x(data_high, "High Complexity Dataset\n", blue_red_grey)
+    #ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path)
   }
 
+  output <- marrangeGrob(list(p1, p2, p3), nrow=1, ncol=1, top=NULL)
+  ggsave(output_file, output, device="pdf", width=297, height=210, units='mm')
   #dev.off()
 
 }
@@ -143,7 +144,8 @@ gatherdata <- function(file_paths, tools_names)
   melted <- melt(data_frame, c("tools", "level", "total"))
   melted$variable <- factor(melted$variable, levels=c('true','false','unknown', 'unassigned'), labels=c("Correct","Incorrect","Unknown","Unassigned"))
   melted$variable[melted$level == "root"] <- "Unassigned"
-  return(melted)
+  #return(melted)
+  return(melted[with(melted, order(variable)), ])
 }
 
 draw_plot_x <- function(data, title, c_palette)
@@ -157,13 +159,14 @@ draw_plot_x <- function(data, title, c_palette)
 
   #data$value <- data$value/data$total*100	#				2	1			3
 
-  ggplot(data, aes(x = tools, y = value, fill = interaction(level, variable), order = as.numeric(interaction(level, variable)))) +
+  tmp <- ggplot(data, aes(x = tools, y = value, fill = interaction(level, variable), order = as.numeric(interaction(level, variable)))) +
     geom_bar(stat = 'identity', position = 'stack') +
     #facet_wrap(~ level, scales = "fix") +
     scale_y_continuous(labels = add_percent) +
     scale_fill_manual(name=NULL,values=c_palette, labels=legend_levels, guide=guide_legend(reverse=T, nrow=15)) + #, labels=x_labels guide=guide_legend(reverse=T)
     labs(title=title, fill=NULL, x=NULL, y="k Basepairs") +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) # , vjust = 0.5
+  return(tmp)
 }
 
 
@@ -225,5 +228,5 @@ argv <- commandArgs(TRUE)
 #output_file <- "CountPlots" 
 #output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
 
-create_count_plots(argv[1], argv[2], argv[3])
+create_count_plots(argv[1], argv[2])
 
