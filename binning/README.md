@@ -15,7 +15,7 @@
 
 ### Avg. Precition/Recall
 [supervised Avg. Precition/Recall](plots/supervised/supervised_summary_all.pdf)  
-[supervised Avg. Precition/Recall](plots/supervised/supervised_summary_all_99.pdf)  
+[supervised Avg. Precition/Recall 99%](plots/supervised/supervised_summary_all_99.pdf)  
 
 ### Basepair count
 [supervised relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
