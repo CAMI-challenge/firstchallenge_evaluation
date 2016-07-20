@@ -19,6 +19,7 @@ Rscript unsupervised_ari_by_category.r data/unsupervised_uniqueness/ plots/unsup
 
 echo "#### supervised_macro_precision ####"
 Rscript supervised_macro_precision.r data/taxonomic/ plots/supervised/supervised_summary_all.pdf
+Rscript supervised_macro_precision.r data/taxonomic/ plots/supervised/supervised_summary_all_99.pdf 1
 
 echo "#### supervised_absolute_count_relative ####"
 Rscript supervised_absolute_count_relative.r data/taxonomic/ plots/supervised/supervised_bp_count_relative_all.pdf

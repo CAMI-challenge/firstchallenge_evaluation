@@ -6,12 +6,13 @@ library(scales)
 
 source("parse_raw_result_data.R")
 
-create_plots<- function(root_path=NA, output_file_path=NA) {
+create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA) {
   if(is.na(root_path)) {root_path<- argv[1]}
   if(is.na(output_file_path)) {output_file_path<- argv[2]}
+  if(is.na(data_type)) {data_type<- "summary99"}
   
   df_tools <- get_dataframe_of_tools_at_locations(root_path)
-  df_tools_average_prec <- subset(df_tools, datatype=="summary")
+  df_tools_average_prec <- subset(df_tools, datatype==data_type)
   df_tools_low <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
   df_tools_medium <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
   df_tools_high <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
@@ -226,5 +227,10 @@ argv <- commandArgs(TRUE)
 #root_path <-  "YOURPATH/firstchallenge_evaluation/binning/data/superviced/ALL/truncated_macro_precision/" 
 #output_file <- "PerformanceMeasures" #
 #output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
+data_type <- "summary"
+if (length(argv)>2)
+{
+	data_type <- "summary99"
+}
+create_plots(argv[1], argv[2], data_type)
 
-create_plots(argv[1], argv[2])
