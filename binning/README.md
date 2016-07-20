@@ -14,10 +14,12 @@ Question: here precision is shown along predicted, recall across real bin sizes?
 
 Question: ANI cutoff is >= 95% or > 95% ANI?
 
-###by genome, across all data sets and all ranks
+###by genome, across all data sets. Predicted bins at all ranks are compared against genome (strain)-level bins. Precision and recall for a predicted bin are calculated relative to the strain-level bin with the highest recall (overlap in terms of common bps of sequence fragments placed in both bins).
 [Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
 [Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
 [Precision/Recall by genome, unique strain with ANI below 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+
+Question: is my interpretation correct for ranks? Please check
 
 ### Avg. Precision/Recall, across all data sets and all ranks
 [Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
