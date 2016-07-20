@@ -1,19 +1,19 @@
 ##Supervised plots:
-[Precition/Recall sorted low](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
-[Precition/Recall sorted medium](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
-[Precition/Recall sorted high](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
+[Precision/Recall sorted low](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
+[Precision/Recall sorted medium](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
+[Precision/Recall sorted high](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
 
 ###by bin
-[Precition/Recall by bin all](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
-[Precition/Recall by bin common strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
-[Precition/Recall by bin unique strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
+[Precision/Recall by bin all](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
+[Precision/Recall by bin common strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
+[Precision/Recall by bin unique strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
 
 ###by genome
-[Precition/Recall by genome all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
-[Precition/Recall by genome common strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
-[Precition/Recall by genome unique strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+[Precision/Recall by genome all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
+[Precision/Recall by genome common strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
+[Precision/Recall by genome unique strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
 
-### Avg. Precition/Recall
+### Avg. Precision/Recall
 [supervised Avg. Precition/Recall](plots/supervised/supervised_summary_all.pdf)  
 [supervised Avg. Precition/Recall 99%](plots/supervised/supervised_summary_all_99.pdf)  
 
@@ -21,23 +21,23 @@
 [supervised relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
 [supervised bp count in k basepairs](plots/supervised/supervised_bp_count_absolute_all.pdf)  
 
-### Adjusted rand index
-[supervised ari including notassigned](plots/supervised/supervised_ari_including_notassigned_all.pdf)  
-[supervised ari excluding notassigned](plots/supervised/supervised_ari_excluding_notassigned_all.pdf)  
-[supervised ari including notassigned split by novelty](plots/supervised/supervised_ari_including_notassigned_novelty.pdf)  
-[supervised ari excluding notassigned split by novelty](plots/supervised/supervised_ari_excluding_notassigned_novelty.pdf)  
-[supervised ari including notassigned split by uniqueness](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
-[supervised ari excluding notassigned split by uniqueness](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
+### Adjusted rand index (ARI)
+[ARI for taxonomic binners on bins including unassigned bin ](plots/supervised/supervised_ari_including_notassigned_all.pdf)  
+[ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.pdf)  
+[ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.pdf)  
+[ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.pdf)  
+[ARI for taxonomic binners on bins including unassigned bin,  by uniqueness](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
+[ARI for taxonomic binners on bins without unassigned bin - a purity measure , split by uniqueness. Q: define uniqueness ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
 
-###Unupervised plots:
-[Precition/Recall by genome all](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
-[Precition/Recall by genome common strain](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
-[Precition/Recall by genome unique strain](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+###Plots for binners:
+[Precision/Recall by genome,  all](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
+[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
+[Precision/Recall by genome, unique strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
 
-[unsupervised ari including notassigned](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
-[unsupervised ari excluding notassigned](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
-[unsupervised ari including notassigned split by novelty](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  
-[unsupervised ari excluding notassigned split by novelty](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
+[ARI for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
+[ARI for binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
+[ARI including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  
+[ARI, excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
 [unsupervised ari including notassigned split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.pdf)  
 [unsupervised ari excluding notassigned split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.pdf)  
 
