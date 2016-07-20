@@ -87,11 +87,15 @@ for (bin_type in bin_types) {
         
         }
         
-        if (ANI!="all" & level=="by_genome") {
-        
+        if (level=="by_genome") {
+
             ref_data_combined$ANI <- ANI_data$group[match(ref_data_combined$bin, ANI_data$bin)]    
-            ref_data_combined <- ref_data_combined[ref_data_combined$ANI==ANI, ]
-        
+            
+            if (ANI!="all")
+                ref_data_combined <- ref_data_combined[ref_data_combined$ANI==ANI, ]
+            else
+                ref_data_combined <- ref_data_combined[ref_data_combined$ANI!="circular element", ]
+
         }
         
         ### plotting
