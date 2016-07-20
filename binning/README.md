@@ -1,6 +1,8 @@
 ## Plots for taxonomic binners
 
 ### Average Precision/Recall, shown for individual ranks and data sets
+
+
 [Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
 [Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
 
