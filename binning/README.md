@@ -5,7 +5,9 @@
 [Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
 [Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
 
-Question: here precision is shown along predicted, recall across real bin sizes?
+Questions: 
+here precision is shown along predicted, recall across real bin sizes?
+predicted size - the squares given in the plot - is  this in Gb or what is the unit?
 
 ###by bin
 [Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
