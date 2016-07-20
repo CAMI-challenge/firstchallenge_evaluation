@@ -19,7 +19,7 @@ here, precision is shown for predicted, recall for real bin sizes. to normalize 
 [Precision/Recall by bin, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
 [Precision/Recall by bin, unique strain with ANI below or equal 95% to all other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
 
-black squares give: predicted  bin size in 10 Gb, gray scare real bin size in 10 Gb.
+black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
 
 ###by genome, across all data sets. 
 [Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
