@@ -40,10 +40,8 @@ Question: is my interpretation correct for ranks? Please check
 [ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.pdf)  
 [ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.pdf)  
 [ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.pdf)  
-[ARI for taxonomic binners on bins including unassigned bin,  by  uniqueness](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
-[ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by uniqueness.  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
-
-Q: define uniqueness
+[ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
+[ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
 
 ###Plots for binners:
 [Precision/Recall by genome, all](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
