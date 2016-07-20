@@ -1,4 +1,6 @@
-## Plots for taxonomic binners, sorted by bin size:
+## Plots for taxonomic binners
+
+###sorted by bin size:
 [Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
 [Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
 [Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
@@ -8,7 +10,7 @@ Question: here precision is shown along predicted, recall across real bin sizes?
 ###by bin
 [Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
 [Precision/Recall by bin, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
-[Precision/Recall by bin, unique strain with ANI below 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
+[Precision/Recall by bin, unique strain with ANI below 95% to all other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
 
 Question: ANI cutoff is >= 95% or > 95% ANI?
 
