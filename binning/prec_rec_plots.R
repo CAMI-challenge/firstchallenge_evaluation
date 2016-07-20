@@ -32,7 +32,7 @@ for (bin_type in bin_types) {
         
         metadata.dir <- paste(repo.dir, "/../metadata/", sep="")
         if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
-        if (bin_type=="unsupervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
+        if (bin_type=="unsupervised") results.dir <- paste(repo.dir, "/data/unsupervised/", sep="")
         figures.dir <- paste(repo.dir, "/plots/", sep="")
         
         # files
