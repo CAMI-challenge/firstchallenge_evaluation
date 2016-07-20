@@ -11,15 +11,15 @@
 [Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
 [Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
 
-Questions: 
-here precision is shown along predicted, recall across real bin sizes?
+procedure.
+here, precision is shown for predicted, recall for real bin sizes. to normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.  recall was normalized in a similar way using real bin sizes.
 
 ###by bin
 [Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
 [Precision/Recall by bin, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
 [Precision/Recall by bin, unique strain with ANI below or equal 95% to all other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
 
-Question:  - the squares given in the plot - is  this in Gb or what is the unit?
+black squares give: predicted  bin size in 10 Gb, gray scare real bin size in 10 Gb.
 
 ###by genome, across all data sets. 
 [Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
