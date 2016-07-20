@@ -1,5 +1,9 @@
 ## Plots for taxonomic binners
 
+### Average Precision/Recall, shown for individual ranks and data sets
+[Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
+[Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
+
 ###sorted by bin size:
 [Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
 [Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
@@ -7,7 +11,6 @@
 
 Questions: 
 here precision is shown along predicted, recall across real bin sizes?
-
 
 ###by bin
 [Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
@@ -25,9 +28,7 @@ To investigate whether the data partitioning achieved by taxonomic binners can b
 
 Question: is my interpretation correct for ranks? Please check
 
-### Avg. Precision/Recall, across all data sets and all ranks
-[Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
-[Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
+
 
 ### Basepair count
 [relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
