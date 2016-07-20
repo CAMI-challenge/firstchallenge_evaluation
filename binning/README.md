@@ -1,28 +1,32 @@
-##Supervised plots:
-[Precision/Recall sorted low](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
-[Precision/Recall sorted medium](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
-[Precision/Recall sorted high](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
+## Plots for taxonomic binners, sorted by bin size:
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
 
 ###by bin
-[Precision/Recall by bin all](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
-[Precision/Recall by bin common strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
-[Precision/Recall by bin unique strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
+[Precision/Recall by bin, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
+[Precision/Recall by bin, unique strain with ANI below 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
 
-###by genome
-[Precision/Recall by genome all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
-[Precision/Recall by genome common strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
-[Precision/Recall by genome unique strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+Question: ANI cutoff is >= 95% or > 95% ANI?
 
-### Avg. Precision/Recall
-[supervised Avg. Precition/Recall](plots/supervised/supervised_summary_all.pdf)  
-[supervised Avg. Precition/Recall 99%](plots/supervised/supervised_summary_all_99.pdf)  
+###by genome, across all data sets and all ranks
+[Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
+[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
+[Precision/Recall by genome, unique strain with ANI below 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+
+### Avg. Precision/Recall, across all data sets and all ranks
+[Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
+[Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
 
 ### Basepair count
-[supervised relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
-[supervised bp count in k basepairs](plots/supervised/supervised_bp_count_absolute_all.pdf)  
+[relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
+[bp count in k basepairs](plots/supervised/supervised_bp_count_absolute_all.pdf) 
+
+Question: What is meant with k basepairs here?
 
 ### Adjusted rand index (ARI)
-[ARI for taxonomic binners on bins including unassigned bin ](plots/supervised/supervised_ari_including_notassigned_all.pdf)  
+[ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.pdf)  
 [ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.pdf)  
 [ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.pdf)  
 [ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.pdf)  
