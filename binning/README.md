@@ -1,45 +1,62 @@
-##Supervised plots:
-[Precition/Recall sorted low](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
-[Precition/Recall sorted medium](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
-[Precition/Recall sorted high](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
+## Plots for taxonomic binners
+
+### Average Precision/Recall, shown for individual ranks and data sets
+[Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
+[Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
+
+###sorted by bin size:
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
+
+Questions: 
+here precision is shown along predicted, recall across real bin sizes?
 
 ###by bin
-[Precition/Recall by bin all](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
-[Precition/Recall by bin common strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
-[Precition/Recall by bin unique strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
+[Precision/Recall by bin, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
+[Precision/Recall by bin, unique strain with ANI below 95% to all other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
 
-###by genome
-[Precition/Recall by genome all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
-[Precition/Recall by genome common strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
-[Precition/Recall by genome unique strain](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+Question: ANI cutoff is >= 95% or > 95% ANI?predicted size - the squares given in the plot - is  this in Gb or what is the unit?
 
-### Avg. Precition/Recall
-[supervised Avg. Precition/Recall](plots/supervised/supervised_summary_all.pdf)  
-[supervised Avg. Precition/Recall 99%](plots/supervised/supervised_summary_all_99.pdf)  
+###by genome, across all data sets. 
+[Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
+[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
+[Precision/Recall by genome, unique strain with ANI below 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+
+To investigate whether the data partitioning achieved by taxonomic binners can be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated relative to the strain-level bin with the highest recall, i.e. overlap in terms of common bps of sequence fragments placed in both bins.
+
+Question: is my interpretation correct for ranks? Please check
+
+
 
 ### Basepair count
-[supervised relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
-[supervised bp count in k basepairs](plots/supervised/supervised_bp_count_absolute_all.pdf)  
+[relative bp count](plots/supervised/supervised_bp_count_relative_all.pdf)  
+[bp count in k basepairs](plots/supervised/supervised_bp_count_absolute_all.pdf) 
 
-### Adjusted rand index
-[supervised ari including notassigned](plots/supervised/supervised_ari_including_notassigned_all.pdf)  
-[supervised ari excluding notassigned](plots/supervised/supervised_ari_excluding_notassigned_all.pdf)  
-[supervised ari including notassigned split by novelty](plots/supervised/supervised_ari_including_notassigned_novelty.pdf)  
-[supervised ari excluding notassigned split by novelty](plots/supervised/supervised_ari_excluding_notassigned_novelty.pdf)  
-[supervised ari including notassigned split by uniqueness](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
-[supervised ari excluding notassigned split by uniqueness](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
+Question: What is meant with k basepairs here?
 
-###Unupervised plots:
-[Precition/Recall by genome all](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
-[Precition/Recall by genome common strain](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
-[Precition/Recall by genome unique strain](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+### Adjusted rand index (ARI)
+[ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.pdf)  
+[ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.pdf)  
+[ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.pdf)  
+[ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.pdf)  
+[ARI for taxonomic binners on bins including unassigned bin,  by uniqueness](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
+[ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by uniqueness.  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
 
-[unsupervised ari including notassigned](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
-[unsupervised ari excluding notassigned](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
-[unsupervised ari including notassigned split by novelty](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  
-[unsupervised ari excluding notassigned split by novelty](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
-[unsupervised ari including notassigned split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.pdf)  
-[unsupervised ari excluding notassigned split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.pdf)  
+Q: define uniqueness
+
+###Plots for binners:
+[Precision/Recall by genome,  all](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
+[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
+[Precision/Recall by genome, unique strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+
+[ARI for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
+[ARI for binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
+[ARI including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  
+[ARI, excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
+[ARI for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.pdf)  
+[ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.pdf)  
 
 
 
