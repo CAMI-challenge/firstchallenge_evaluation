@@ -30,7 +30,7 @@ for (bin_type in bin_types) {
       for (category in categories)
         for (ANI in ANIs) {
         # directories
-        repo.dir <- "." #dirname(sys.frame(1)$ofile)
+        repo.dir <- dirname(sys.frame(1)$ofile)
         metadata.dir <- file.path(repo.dir, "..", "metadata")
         ANI_data.file <- file.path(metadata.dir, "ANI", "unique_common.tsv")
         #if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
