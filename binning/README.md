@@ -59,9 +59,9 @@ Recall was normalized in a similar way using real bin sizes.
 Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
 
 ###by genome, across all data sets. 
-[Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.pdf)  
-[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
-[Precision/Recall by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
+[Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)  
+[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
+[Precision/Recall by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf)  
 
 To investigate whether the data partitioning achieved by taxonomic binners can be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated relative to the strain-level bin with the highest recall, i.e. overlap in terms of common bps of sequence fragments placed in both bins.
 
