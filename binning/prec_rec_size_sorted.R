@@ -15,7 +15,12 @@ library("splines")
 library("MASS")
 
 complexity_levels <- c("low", "medium", "high")
+categories <- c(
+    #"unidentified circular element","unidentified plasmid", "circular element",
+    "all", "common strain","new_family","new_genus","new_order","new_species","new_strain", "unique strain" #,"virus"
+    )
 
+for (category in categories)
 for (complexity_level in complexity_levels) {
 
     # options
@@ -30,34 +35,43 @@ for (complexity_level in complexity_levels) {
     
     repo.dir <- dirname(sys.frame(1)$ofile)
     
-    metadata.dir <- paste(repo.dir, "/../metadata/", sep="")
-    if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
-    figures.dir <- paste(repo.dir, "/plots/", sep="")
+    metadata.dir <- file.path(repo.dir, "..", "metadata")
+    results.dir <- file.path(repo.dir, "tables")
+    figures.dir <- file.path(repo.dir, "plots")
     
     # files
 
-        
-    ref_data_low.file <- paste(results.dir, "low_all_", level, ".tsv", sep="")
-    ref_data_medium.file <- paste(results.dir, "medium_all_", level, ".tsv", sep="")
-    ref_data_high.file <- paste(results.dir, "high_all_", level, ".tsv", sep="")
-
+    suffix <- paste("_", bin_type, "_", level, "_", category, ".tsv", sep="")
+    ref_data_low.file <- file.path(results.dir, paste("low", suffix, sep=""))
+    ref_data_medium.file <- file.path(results.dir, paste("medium", suffix, sep=""))
+    ref_data_high.file <- file.path(results.dir, paste("high", suffix, sep=""))
+    print(ref_data_low.file)
 
     # load data
-    
-    ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
-    ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
-    ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
-    
-    ref_data_low$group <- gsub("_[0-9]", "_low", ref_data_low$binner)
-    ref_data_low$complexity <- "low"
-    ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
-    ref_data_medium$complexity <- "medium"
-    ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
-    ref_data_high$complexity <- "high"
-    
-    if (complexity_level=="high") ref_data_combined <- ref_data_high
-    if (complexity_level=="medium") ref_data_combined <- ref_data_medium
-    if (complexity_level=="low") ref_data_combined <- ref_data_low
+
+    if (complexity_level=="high") {
+        if (!file.exists(ref_data_high.file)) next
+        ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
+        ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
+        ref_data_high$complexity <- "high"
+        ref_data_combined <- ref_data_high
+    }
+
+    if (complexity_level=="medium") {
+        if (!file.exists(ref_data_medium.file)) next
+        ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
+        ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
+        ref_data_medium$complexity <- "medium"
+        ref_data_combined <- ref_data_medium
+    }
+
+    if (complexity_level=="low") {
+        if (!file.exists(ref_data_low.file)) next
+        ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
+        ref_data_low$group <- gsub("_[0-9]", "_low", ref_data_low$binner)
+        ref_data_low$complexity <- "low"
+        ref_data_combined <- ref_data_low
+    }
    
     ref_data_combined <- ref_data_combined[ref_data_combined$bin!="unassigned", ]
 
@@ -225,10 +239,11 @@ for (complexity_level in complexity_levels) {
          
         pg1 <- grid.arrange(p1, p2, ncol=2)
         
-        file <- paste(figures.dir, bin_type, "/prec_rec_sorted_", rank, "_", complexity_level, ".pdf", sep="")
-        file <- gsub(" ", "_", file)
-        ggsave(file, pg1, width=16, height=10)
-        print(file)
+        filename <- paste("prec_rec_sorted_", rank, "_", complexity_level, "_", category, ".pdf", sep="")
+        filename <- gsub(" ", "_", filename)
+        filepath <- file.path(figures.dir, bin_type, filename)
+        ggsave(filepath, pg1, width=16, height=10)
+        print(filepath)
     
     }
 
