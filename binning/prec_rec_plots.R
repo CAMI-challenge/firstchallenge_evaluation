@@ -20,43 +20,56 @@ all_ranks_combined <- T
 bin_types <- c("supervised", "unsupervised")
 levels <- c("by_bin", "by_genome")
 ANIs <- c("all", "common strain", "unique strain")
-
+categories <- c(
+	#"unidentified circular element","unidentified plasmid", "circular element",
+	"all", "common strain","new_family","new_genus","new_order","new_species","new_strain", "unique strain","virus"
+	)
 for (bin_type in bin_types) {
     if (bin_type=="unsupervised") levels <- c("by_genome")
     for (level in levels)
+      for (category in categories)
         for (ANI in ANIs) {
-               
         # directories
-        
-        repo.dir <- dirname(sys.frame(1)$ofile)
-        
-        metadata.dir <- paste(repo.dir, "/../metadata/", sep="")
-        if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
-        if (bin_type=="unsupervised") results.dir <- paste(repo.dir, "/data/unsupervised/", sep="")
-        figures.dir <- paste(repo.dir, "/plots/", sep="")
+        repo.dir <- "." #dirname(sys.frame(1)$ofile)
+        metadata.dir <- file.path(repo.dir, "..", "metadata")
+        ANI_data.file <- file.path(metadata.dir, "ANI", "unique_common.tsv")
+        #if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
+        #if (bin_type=="unsupervised") results.dir <- paste(repo.dir, "/data/unsupervised/", sep="")
+        results.dir <- file.path(repo.dir, "tables")
+        figures.dir <- file.path(repo.dir, "plots")
         
         # files
-        
-        ref_data_low.file <- paste(results.dir, "low_all_", level, ".tsv", sep="")
-        ref_data_medium.file <- paste(results.dir, "medium_all_", level, ".tsv", sep="")
-        ref_data_high.file <- paste(results.dir, "high_all_", level, ".tsv", sep="")
-
-        ANI_data.file <- paste(metadata.dir, "ANI/unique_common.tsv", sep="")
+        suffix <- paste("_", level, "_", category, ".tsv", sep="")
+        ref_data_low.file <- file.path(results.dir, paste("low", suffix, sep=""))
+        ref_data_medium.file <- file.path(results.dir, paste("medium", suffix, sep=""))
+        ref_data_high.file <- file.path(results.dir, paste("high", suffix, sep=""))
         
         # load data
         
+        if (!file.exists(ref_data_low.file)) next
+        print(ref_data_low.file)
         ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
-        ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
-        ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
-        
         ref_data_low$group <- gsub("_[0-9]", "_low", ref_data_low$binner)
         ref_data_low$complexity <- "low"
-        ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
-        ref_data_medium$complexity <- "medium"
-        ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
-        ref_data_high$complexity <- "high"
+
+        if (file.exists(ref_data_medium.file)) {
+            print(ref_data_medium.file)
+            ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
+            ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
+            ref_data_medium$complexity <- "medium"
+		}
+
+        if (file.exists(ref_data_high.file)) {
+            print(ref_data_high.file)
+            ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
+            ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
+            ref_data_high$complexity <- "high"
+        }
         
-        ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
+        if (!file.exists(ref_data_medium.file))  # only low exists
+            ref_data_combined <- ref_data_low
+        else  # only low and medium exists
+            ref_data_combined <- rbind(ref_data_low, ref_data_medium)
         
         ANI_data <- read.table(ANI_data.file, header=F, sep="\t")
         colnames(ANI_data) <- c("bin", "group")
@@ -97,6 +110,7 @@ for (bin_type in bin_types) {
                 ref_data_combined <- ref_data_combined[ref_data_combined$ANI!="circular element", ]
 
         }
+        else if (ANI!="all") next
         
         ### plotting
         
@@ -199,12 +213,11 @@ for (bin_type in bin_types) {
                  theme(legend.position="right",
                        title=element_text(size=8))
             
-            file <- paste(figures.dir, bin_type, "/prec_recall_combined_", rank,
-                          "_", level, "_ANI_", ANI, ".pdf", sep="")
-            file <- gsub(" ", "_", file)
-            ggsave(file, p, width=7, height=5)
-            print(file)
-            
+            filename <- paste("prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".pdf", sep="")
+            filename <- gsub(" ", "_", filename)
+            filepath <- file.path(figures.dir, bin_type, filename)
+            ggsave(filepath, p, width=7, height=5)
+            print(filepath)
         }
     }
 }
