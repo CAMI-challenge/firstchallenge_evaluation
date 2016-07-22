@@ -13,22 +13,53 @@ We benchmarked nine binning and taxonomic binning methods with reproducible resu
 [Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
 
 ###sorted by bin size:
-[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low.pdf)  
-[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium.pdf)  
-[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high.pdf)  
+####low
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.pdf)  
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_common_strain.pdf)  
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_unique_strain.pdf)  
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_new_order.pdf)  
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_new_family.pdf)  
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_new_genus.pdf)  
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_new_species.pdf)  
+[Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_new_strain.pdf)  
+####medium
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_common_strain.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_unique_strain.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_new_order.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_new_family.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_new_genus.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_new_species.pdf)  
+[Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_new_strain.pdf)  
+####high
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_common_strain.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_unique_strain.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_new_order.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_new_family.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_new_genus.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_new_species.pdf)  
+[Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_new_strain.pdf)  
 
-procedure.
-here, precision is shown for predicted, recall for real bin sizes. to normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.  recall was normalized in a similar way using real bin sizes.
+procedure.  
+here, precision is shown for predicted, recall for real bin sizes. 
+To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
+Recall was normalized in a similar way using real bin sizes.
 
 ###by bin
-[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_all.pdf)
-[Precision/Recall by bin, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_common_strain.pdf)  
-[Precision/Recall by bin, unique strain with ANI below or equal 95% to all other strains](plots/supervised/prec_recall_combined_all_ranks_by_bin_ANI_unique_strain.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_common_strain_ANI_all.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_unique_strain_ANI_all.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_order_ANI_all.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_family_ANI_all.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_genus_ANI_all.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_species_ANI_all.pdf)  
+[Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_strain_ANI_all.pdf)  
 
-black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
+Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
 
 ###by genome, across all data sets. 
-[Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_all.pdf)  
+[Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.pdf)  
 [Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_common_strain.pdf)  
 [Precision/Recall by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_ANI_unique_strain.pdf)  
 
@@ -70,8 +101,10 @@ The calls to create most plots are contained in a [bash script](make_plots.sh), 
 Unix only, sorry. Some scripts are not yet suitable for windown, but all work using a unix system, given all R packages are available.  
 
 ### 'by_bin' and 'by_genome' combining of tables into one file
-    Rscript perbin_sumup.r target/directory/ "perbin"
+Execute from within binning directory:  
+    Rscript by__sumup.r
 
 ###Example:
-    Rscript perbin_sumup.r data/taxonomic "perbin"  
-    Rscript perbin_sumup.r data/taxonomic "bygenome"  
+Execute from within binning directory:  
+    Rscript by_bin_sumup.r  
+    Rscript by_bin_sumup.r  
