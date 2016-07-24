@@ -78,7 +78,7 @@ for (dir_index in 1:length(bin_location))
 				data_subset <- subset(df_tools_by_type_by_category, dataset==datasets[dataset_name])
 				if (length(data_subset$file) < 1) next
 				sumup <- get_data_table(data_subset)
-				file_name <- paste(dataset_name, "_", data_type, "_", data_category, ".tsv", sep="")
+				file_name <- paste(dataset_name, "_", bin_types[dir_index], "_", data_type, "_", data_category, ".tsv", sep="")
 				file_path <- file.path(output_dir, file_name)
 				write.table(sumup, file=file_path, row.names=FALSE, sep = "\t")
 			}
