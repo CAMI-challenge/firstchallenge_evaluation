@@ -160,6 +160,9 @@ if (length(argv)!=2)
 	df_tools_subset <- subset(df_tools, datatype=="unsupervised_excluded")
 }
 
+method_labels <- df_tools_subset$method
+names(method_labels) <- df_tools_subset$anonymous
+
 dataframes <- get_frames(df_tools_subset)
 #######################################
 
@@ -213,15 +216,20 @@ my_colours <- rev(cbbPalette)
 my_shapes <- c(20, 18)
 my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
 
-draw_plot <- function(data, title)
+draw_plot <- function(data, title, method_labels)
 {
+	method_labeller <- function(variables)
+	{
+		rvalue <- strtrim(method_labels[variables], 17)
+		return(rvalue)
+	}
 	ggplot(subset(data, variable == "Adjusted rand index"), 
 		aes(x = level, y = value, colour=category, group=interaction(category, variable))) + #fill=tools, 
 		geom_line(position=dodge_small) +
 		labs(colour="Categories", x=NULL, y=NULL) +
 		#scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
 		scale_y_continuous(breaks=seq(0,1,0.25), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.0, 1.00)) + #
-		facet_wrap( ~ tools, scales="free") + #, as.table = FALSE, scales="free_y"
+		facet_wrap( ~ tools, scales="free", labeller=as_labeller(method_labeller)) + #, as.table = FALSE, scales="free_y"
 		#facet_wrap( ~ metric, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
 		geom_text(aes(label=value), size=3, hjust=0.5, vjust=-0.3, show.legend=F) +
 		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
@@ -232,8 +240,8 @@ draw_plot <- function(data, title)
 #print(subset(dataframes$medium, category == "unidentified plasmid"))
 #print(dataframes$medium)
 pdf(output_file, paper="a4r", width=297, height=210)
-draw_plot(dataframes$low, "Low Complexity Dataset\n")
-draw_plot(dataframes$medium, "Medium Complexity Dataset\n")
-draw_plot(dataframes$high, "High Complexity Dataset\n")
+draw_plot(dataframes$low, "Low Complexity Dataset\n", method_labels)
+draw_plot(dataframes$medium, "Medium Complexity Dataset\n", method_labels)
+draw_plot(dataframes$high, "High Complexity Dataset\n", method_labels)
 dev.off()
 

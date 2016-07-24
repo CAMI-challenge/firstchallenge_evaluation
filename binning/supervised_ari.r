@@ -85,6 +85,9 @@ df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 C
 df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
 df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
 
+method_labels <- df_tools_subset$method
+names(method_labels) <- df_tools_subset$anonymous
+
 if (length(df_tools_low$file)>0)
 {
 data_low <- gatherdata(
@@ -152,13 +155,19 @@ my_colours <- rev(cbbPalette)
 my_shapes <- c(20, 18)
 my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
 
-draw_plot <- function(data, title)
+draw_plot <- function(data, title, method_labels)
 {
+	method_labeller <- function(variables)
+	{
+		rvalue <- strtrim(method_labels[variables], 17)
+		return(rvalue)
+	}
 	ggplot(subset(data, variable == "Adjusted rand index"), 
 		aes(x = level, y = value, colour=tools, group=interaction(tools, variable))) + #fill=tools, 
 		geom_line(position=dodge_small) +
 		labs(colour="Anonymous submission", x=NULL, y=NULL) +
 		#scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
+		scale_colour_discrete(labels = method_labeller) +
 		scale_y_continuous(breaks=seq(0,1,0.1), expand = c( 0.1 , 0.02 ),  labels = lable_handle, limit=c(0.5, 1.01)) + #
 		facet_wrap( ~ variable, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
 		#facet_wrap( ~ metric, ncol=1, scales="free") + #, as.table = FALSE, scales="free_y"
@@ -172,15 +181,15 @@ draw_plot <- function(data, title)
 pdf(output_file, paper="a4r", width=297, height=210)
 if (length(df_tools_low$file)>0)
 {
-	draw_plot(data_low, "Low Complexity Dataset\n")
+	draw_plot(data_low, "Low Complexity Dataset\n", method_labels)
 }
 if (length(df_tools_medium$file)>0)
 {
-	draw_plot(data_medium, "Medium Complexity Dataset\n")
+	draw_plot(data_medium, "Medium Complexity Dataset\n", method_labels)
 }
 if (length(df_tools_high$file)>0)
 {
-	draw_plot(data_high, "High Complexity Dataset\n")
+	draw_plot(data_high, "High Complexity Dataset\n", method_labels)
 }
 dev.off()
 

@@ -12,11 +12,14 @@ create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA) {
   if(is.na(data_type)) {data_type<- "summary99"}
   
   df_tools <- get_dataframe_of_tools_at_locations(root_path)
-  df_tools_average_prec <- subset(df_tools, datatype==data_type)
-  df_tools_low <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
-  df_tools_medium <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
-  df_tools_high <- subset(df_tools_average_prec, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+  df_tools_subset <- subset(df_tools, datatype==data_type)
+  df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+  df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+  df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
   
+  method_labels <- df_tools_subset$method
+  names(method_labels) <- df_tools_subset$anonymous
+
   if (length(df_tools_low$file)>0)
   {
     data_low <- gatherdata(
@@ -47,15 +50,15 @@ create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA) {
   
   if (length(df_tools_low$file)>0)
   {
-    gg_plot_low <- draw_plot(data_low, "Low Complexity Dataset\n")
+    gg_plot_low <- draw_plot(data_low, "Low Complexity Dataset\n", method_labels)
   }
   if (length(df_tools_medium$file)>0)
   {
-    gg_plot_medium <- draw_plot(data_medium, "Medium Complexity Dataset\n")
+    gg_plot_medium <- draw_plot(data_medium, "Medium Complexity Dataset\n", method_labels)
   }
   if (length(df_tools_high$file)>0)
   {
-    gg_plot_high <- draw_plot(data_high, "High Complexity Dataset\n")
+    gg_plot_high <- draw_plot(data_high, "High Complexity Dataset\n", method_labels)
   }
   #output <- arrangeGrob(gg_plot_low, gg_plot_medium, gg_plot_high, ncol=1)
   output <- marrangeGrob(list(gg_plot_low, gg_plot_medium, gg_plot_high), nrow=1, ncol=1, top=NULL)
@@ -165,8 +168,13 @@ get_names <- function(file_paths)
   names
 }
 
-draw_plot <- function(data, title)
+draw_plot <- function(data, title, method_labels)
 {
+  method_labeller <- function(variables)
+  {
+    rvalue <- strtrim(method_labels[variables], 17)
+    return(rvalue)
+  }
   
   # precision averaged over predicted bins, recall averaged over true bins, precision in this dir is truncated precision (1% of smallest predicted bins removed)
   title_main <- title
@@ -214,7 +222,7 @@ draw_plot <- function(data, title)
     labs(title=title_main, fill="Metric", linetype="Metric", colour="Metric", x=NULL, y=NULL) +
     #ggtitle(paste(title, title_main, sep='\n')) +
     #facet_grid(~ tools) +
-    facet_wrap(~ tools, as.table = FALSE) +
+    facet_wrap(~ tools, as.table = FALSE, labeller=as_labeller(method_labeller)) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.background = element_rect(fill = "light blue")) # , vjust  0.5
   return(gg_plot)
 }
