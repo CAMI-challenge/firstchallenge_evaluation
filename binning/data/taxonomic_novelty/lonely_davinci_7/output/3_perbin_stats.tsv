@@ -1,0 +1,273 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	0.00	nan	4381800	0
+superkingdom	Viruses	1.00	0.18	3951600	21876600
+superkingdom	Eukaryota	0.00	nan	600	0
+superkingdom	unassigned	nan	nan	13542600	0
+phylum	phylum_Papillomaviridae	0.00	nan	2574300	0
+phylum	Firmicutes	0.00	nan	1934400	0
+phylum	phylum_uncultured bacterium	0.00	nan	1153500	0
+phylum	phylum_Microviridae	0.00	nan	150600	0
+phylum	Bacteroidetes	0.00	nan	113400	0
+phylum	phylum_uncultured marine virus	0.00	nan	16200	0
+phylum	Proteobacteria	0.00	nan	9000	0
+phylum	phylum_Circoviridae	0.00	nan	8100	0
+phylum	phylum_Sewage-associated circular DNA virus-22	0.00	nan	7200	0
+phylum	phylum_Faecal-associated gemycircularvirus 8	0.00	nan	5400	0
+phylum	phylum_Sewage-associated gemycircularvirus-3	0.00	nan	5100	0
+phylum	phylum_Dragonfly-associated circular virus 1	0.00	nan	3600	0
+phylum	Actinobacteria	0.00	nan	3000	0
+phylum	phylum_Rodent stool-associated circular genome virus	0.00	nan	2400	0
+phylum	phylum_Hypericum japonicum associated circular DNA virus	0.00	nan	1200	0
+phylum	phylum_Odonata associated gemycircularvirus-1	0.00	nan	1200	0
+phylum	phylum_Sewage-associated gemycircularvirus-6	0.00	nan	1200	0
+phylum	Synergistetes	0.00	nan	600	0
+phylum	phylum_Dragonfly-associated microphage 1	0.00	nan	600	0
+phylum	Nematoda	0.00	nan	300	0
+phylum	phylum_Sclerotinia sclerotiorum hypovirulence associated DNA virus 1	0.00	nan	300	0
+phylum	phylum_unidentified phage	0.00	nan	300	0
+phylum	unassigned	nan	nan	15884700	0
+class	class_Papillomaviridae	0.00	nan	2574300	0
+class	Clostridia	0.00	nan	1746300	0
+class	class_uncultured bacterium	0.00	nan	1153500	0
+class	class_Microviridae	0.00	nan	150600	0
+class	Bacteroidia	0.00	nan	93900	0
+class	class_Firmicutes bacterium CAG:240	0.00	nan	19800	0
+class	class_uncultured marine virus	0.00	nan	16200	0
+class	class_Circoviridae	0.00	nan	8100	0
+class	class_Sewage-associated circular DNA virus-22	0.00	nan	7200	0
+class	class_Faecal-associated gemycircularvirus 8	0.00	nan	5400	0
+class	class_Sewage-associated gemycircularvirus-3	0.00	nan	5100	0
+class	class_Firmicutes bacterium CAG:124	0.00	nan	4500	0
+class	Deltaproteobacteria	0.00	nan	4200	0
+class	Gammaproteobacteria	0.00	nan	4200	0
+class	class_Dragonfly-associated circular virus 1	0.00	nan	3600	0
+class	Actinobacteria	0.00	nan	3000	0
+class	Flavobacteriia	0.00	nan	3000	0
+class	Bacilli	0.00	nan	2700	0
+class	class_Rodent stool-associated circular genome virus	0.00	nan	2400	0
+class	class_Hypericum japonicum associated circular DNA virus	0.00	nan	1200	0
+class	class_Odonata associated gemycircularvirus-1	0.00	nan	1200	0
+class	class_Sewage-associated gemycircularvirus-6	0.00	nan	1200	0
+class	Negativicutes	0.00	nan	600	0
+class	Synergistia	0.00	nan	600	0
+class	class_Dragonfly-associated microphage 1	0.00	nan	600	0
+class	Betaproteobacteria	0.00	nan	300	0
+class	Chromadorea	0.00	nan	300	0
+class	class_Sclerotinia sclerotiorum hypovirulence associated DNA virus 1	0.00	nan	300	0
+class	class_unidentified phage	0.00	nan	300	0
+class	unassigned	nan	nan	16062000	0
+order	order_Papillomaviridae	0.00	nan	2574300	0
+order	Clostridiales	0.00	nan	1746300	0
+order	order_uncultured bacterium	0.00	nan	1153500	0
+order	order_Microviridae	0.00	nan	150600	0
+order	Bacteroidales	0.00	nan	93900	0
+order	order_Firmicutes bacterium CAG:240	0.00	nan	19800	0
+order	order_uncultured marine virus	0.00	nan	16200	0
+order	order_Circoviridae	0.00	nan	8100	0
+order	order_Sewage-associated circular DNA virus-22	0.00	nan	7200	0
+order	order_Faecal-associated gemycircularvirus 8	0.00	nan	5400	0
+order	order_Sewage-associated gemycircularvirus-3	0.00	nan	5100	0
+order	order_Firmicutes bacterium CAG:124	0.00	nan	4500	0
+order	Desulfovibrionales	0.00	nan	4200	0
+order	Pseudomonadales	0.00	nan	4200	0
+order	order_Dragonfly-associated circular virus 1	0.00	nan	3600	0
+order	Coriobacteriales	0.00	nan	3000	0
+order	Flavobacteriales	0.00	nan	3000	0
+order	Bacillales	0.00	nan	2700	0
+order	order_Rodent stool-associated circular genome virus	0.00	nan	2400	0
+order	order_Hypericum japonicum associated circular DNA virus	0.00	nan	1200	0
+order	order_Odonata associated gemycircularvirus-1	0.00	nan	1200	0
+order	order_Sewage-associated gemycircularvirus-6	0.00	nan	1200	0
+order	Selenomonadales	0.00	nan	600	0
+order	Synergistales	0.00	nan	600	0
+order	order_Dragonfly-associated microphage 1	0.00	nan	600	0
+order	Burkholderiales	0.00	nan	300	0
+order	Rhabditida	0.00	nan	300	0
+order	order_Sclerotinia sclerotiorum hypovirulence associated DNA virus 1	0.00	nan	300	0
+order	order_unidentified phage	0.00	nan	300	0
+order	unassigned	nan	nan	16062000	0
+family	Papillomaviridae	0.00	nan	2574300	0
+family	family_uncultured bacterium	0.00	nan	1153500	0
+family	Peptococcaceae	0.00	nan	304500	0
+family	Clostridiaceae	0.00	nan	184500	0
+family	Microviridae	0.00	nan	150600	0
+family	Porphyromonadaceae	0.00	nan	63300	0
+family	Prevotellaceae	0.00	nan	23700	0
+family	Oscillospiraceae	0.00	nan	23400	0
+family	family_Firmicutes bacterium CAG:240	0.00	nan	19800	0
+family	family_uncultured marine virus	0.00	nan	16200	0
+family	family_Flavonifractor	0.00	nan	13800	0
+family	family_Intestinimonas	0.00	nan	10800	0
+family	Circoviridae	0.00	nan	8100	0
+family	family_Sewage-associated circular DNA virus-22	0.00	nan	7200	0
+family	family_Faecal-associated gemycircularvirus 8	0.00	nan	5400	0
+family	family_Sewage-associated gemycircularvirus-3	0.00	nan	5100	0
+family	family_Firmicutes bacterium CAG:124	0.00	nan	4500	0
+family	Desulfovibrionaceae	0.00	nan	4200	0
+family	Pseudomonadaceae	0.00	nan	4200	0
+family	Lachnospiraceae	0.00	nan	3900	0
+family	family_Dragonfly-associated circular virus 1	0.00	nan	3600	0
+family	Coriobacteriaceae	0.00	nan	3000	0
+family	Flavobacteriaceae	0.00	nan	3000	0
+family	Paenibacillaceae	0.00	nan	2400	0
+family	Ruminococcaceae	0.00	nan	2400	0
+family	family_Rodent stool-associated circular genome virus	0.00	nan	2400	0
+family	family_Hypericum japonicum associated circular DNA virus	0.00	nan	1200	0
+family	family_Odonata associated gemycircularvirus-1	0.00	nan	1200	0
+family	family_Sewage-associated gemycircularvirus-6	0.00	nan	1200	0
+family	Synergistaceae	0.00	nan	600	0
+family	Veillonellaceae	0.00	nan	600	0
+family	family_Dragonfly-associated microphage 1	0.00	nan	600	0
+family	family_butyrate-producing bacterium SS3/4	0.00	nan	600	0
+family	Alcaligenaceae	0.00	nan	300	0
+family	Ancylostomatidae	0.00	nan	300	0
+family	family_Clostridiales bacterium VE202-13	0.00	nan	300	0
+family	family_Sclerotinia sclerotiorum hypovirulence associated DNA virus 1	0.00	nan	300	0
+family	family_unidentified phage	0.00	nan	300	0
+family	unassigned	nan	nan	17271300	0
+genus	genus_uncultured bacterium	0.00	nan	1153500	0
+genus	genus_Human papillomavirus	0.00	nan	608400	0
+genus	Dehalobacter	0.00	nan	302700	0
+genus	genus_Human papillomavirus type 155	0.00	nan	294600	0
+genus	Gammapapillomavirus	0.00	nan	236100	0
+genus	Clostridium	0.00	nan	184200	0
+genus	Microvirus	0.00	nan	117000	0
+genus	Parabacteroides	0.00	nan	63300	0
+genus	genus_Human papillomavirus type 140	0.00	nan	26400	0
+genus	Prevotella	0.00	nan	23700	0
+genus	Oscillibacter	0.00	nan	23400	0
+genus	genus_Firmicutes bacterium CAG:240	0.00	nan	19800	0
+genus	genus_uncultured marine virus	0.00	nan	16200	0
+genus	genus_Human papillomavirus type 136	0.00	nan	14700	0
+genus	Flavonifractor	0.00	nan	13800	0
+genus	genus_Human papillomavirus type 141	0.00	nan	12000	0
+genus	genus_Human papillomavirus type 154	0.00	nan	11400	0
+genus	Intestinimonas	0.00	nan	10800	0
+genus	genus_uncultured Gokushovirinae	0.00	nan	10800	0
+genus	genus_Marine gokushovirus	0.00	nan	9900	0
+genus	genus_Circoviridae 15 LDMD-2013	0.00	nan	7500	0
+genus	genus_Sewage-associated circular DNA virus-22	0.00	nan	7200	0
+genus	genus_Faecal-associated gemycircularvirus 8	0.00	nan	5400	0
+genus	genus_Sewage-associated gemycircularvirus-3	0.00	nan	5100	0
+genus	genus_Firmicutes bacterium CAG:124	0.00	nan	4500	0
+genus	Desulfovibrio	0.00	nan	4200	0
+genus	Pseudomonas	0.00	nan	4200	0
+genus	genus_Dragonfly-associated circular virus 1	0.00	nan	3600	0
+genus	Collinsella	0.00	nan	3000	0
+genus	Elizabethkingia	0.00	nan	3000	0
+genus	genus_Uncultured Microviridae	0.00	nan	3000	0
+genus	genus_uncultured marine Microviridae	0.00	nan	3000	0
+genus	Paenibacillus	0.00	nan	2400	0
+genus	genus_Rodent stool-associated circular genome virus	0.00	nan	2400	0
+genus	genus_Lachnospiraceae bacterium A2	0.00	nan	2100	0
+genus	Subdoligranulum	0.00	nan	1500	0
+genus	genus_Microviridae phi-CA82	0.00	nan	1500	0
+genus	genus_Hypericum japonicum associated circular DNA virus	0.00	nan	1200	0
+genus	genus_Odonata associated gemycircularvirus-1	0.00	nan	1200	0
+genus	genus_Sewage-associated gemycircularvirus-6	0.00	nan	1200	0
+genus	Roseburia	0.00	nan	900	0
+genus	genus_Pteropus giganteus papillomavirus type 1	0.00	nan	900	0
+genus	Cloacibacillus	0.00	nan	600	0
+genus	Desulfosporosinus	0.00	nan	600	0
+genus	Lachnoclostridium	0.00	nan	600	0
+genus	Veillonella	0.00	nan	600	0
+genus	genus_Dragonfly-associated microphage 1	0.00	nan	600	0
+genus	genus_Mesocricetus auratus papillomavirus 1	0.00	nan	600	0
+genus	genus_Papio hamadryas papillomavirus type 1	0.00	nan	600	0
+genus	genus_butyrate-producing bacterium SS3/4	0.00	nan	600	0
+genus	Achromobacter	0.00	nan	300	0
+genus	Desulfitobacterium	0.00	nan	300	0
+genus	Necator	0.00	nan	300	0
+genus	Ruminiclostridium	0.00	nan	300	0
+genus	Spiromicrovirus	0.00	nan	300	0
+genus	Taupapillomavirus	0.00	nan	300	0
+genus	Youngiibacter	0.00	nan	300	0
+genus	genus_Clostridiales bacterium VE202-13	0.00	nan	300	0
+genus	genus_Human papillomavirus type 180	0.00	nan	300	0
+genus	genus_Sclerotinia sclerotiorum hypovirulence associated DNA virus 1	0.00	nan	300	0
+genus	genus_unidentified phage	0.00	nan	300	0
+genus	unassigned	nan	nan	18646800	0
+species	uncultured bacterium	0.00	nan	1153500	0
+species	Human papillomavirus	0.00	nan	608400	0
+species	Dehalobacter sp. UNSWDHB	0.00	nan	302700	0
+species	Human papillomavirus type 155	0.00	nan	294600	0
+species	Human papillomavirus type 129	0.00	nan	187500	0
+species	Clostridium sp. CAG:242	0.00	nan	106500	0
+species	Enterobacteria phage WA13 sensu lato	0.00	nan	51900	0
+species	Human papillomavirus type 134	0.00	nan	26400	0
+species	Human papillomavirus type 140	0.00	nan	26400	0
+species	Firmicutes bacterium CAG:240	0.00	nan	19800	0
+species	Oscillibacter sp. ER4	0.00	nan	19200	0
+species	uncultured marine virus	0.00	nan	16200	0
+species	Parabacteroides distasonis	0.00	nan	15600	0
+species	Human papillomavirus type 136	0.00	nan	14700	0
+species	Flavonifractor plautii	0.00	nan	13800	0
+species	Parabacteroides merdae CAG:48	0.00	nan	13200	0
+species	Human papillomavirus type 141	0.00	nan	12000	0
+species	Human papillomavirus type 171	0.00	nan	11700	0
+species	Human papillomavirus type 154	0.00	nan	11400	0
+species	Intestinimonas butyriciproducens	0.00	nan	10800	0
+species	uncultured Gokushovirinae	0.00	nan	10800	0
+species	Marine gokushovirus	0.00	nan	9900	0
+species	Clostridium sp. ATCC BAA-442	0.00	nan	8400	0
+species	Clostridium sp. CAG:58	0.00	nan	8400	0
+species	Circoviridae 15 LDMD-2013	0.00	nan	7500	0
+species	Sewage-associated circular DNA virus-22	0.00	nan	7200	0
+species	Prevotella nigrescens	0.00	nan	6600	0
+species	Faecal-associated gemycircularvirus 8	0.00	nan	5400	0
+species	Sewage-associated gemycircularvirus-3	0.00	nan	5100	0
+species	Firmicutes bacterium CAG:124	0.00	nan	4500	0
+species	Desulfovibrio sp. Dsv1	0.00	nan	4200	0
+species	Pseudomonas sp. Ag1	0.00	nan	4200	0
+species	Clostridium sp. CAG:169	0.00	nan	3900	0
+species	Clostridium leptum CAG:27	0.00	nan	3600	0
+species	Dragonfly-associated circular virus 1	0.00	nan	3600	0
+species	Clostridium botulinum	0.00	nan	3300	0
+species	Oscillibacter sp. 1-3	0.00	nan	3300	0
+species	Elizabethkingia anophelis	0.00	nan	3000	0
+species	Uncultured Microviridae	0.00	nan	3000	0
+species	uncultured marine Microviridae	0.00	nan	3000	0
+species	Collinsella stercoris	0.00	nan	2700	0
+species	Clostridium sp. 12(A)	0.00	nan	2400	0
+species	Enterobacteria phage St-1	0.00	nan	2400	0
+species	Rodent stool-associated circular genome virus	0.00	nan	2400	0
+species	Human papillomavirus type 153	0.00	nan	2100	0
+species	Lachnospiraceae bacterium A2	0.00	nan	2100	0
+species	Microviridae phi-CA82	0.00	nan	1500	0
+species	Paenibacillus larvae	0.00	nan	1500	0
+species	Subdoligranulum sp. 4_3_54A2FAA	0.00	nan	1500	0
+species	Human papillomavirus type 167	0.00	nan	1200	0
+species	Hypericum japonicum associated circular DNA virus	0.00	nan	1200	0
+species	Odonata associated gemycircularvirus-1	0.00	nan	1200	0
+species	Sewage-associated gemycircularvirus-6	0.00	nan	1200	0
+species	Prevotella nanceiensis	0.00	nan	900	0
+species	Pteropus giganteus papillomavirus type 1	0.00	nan	900	0
+species	Roseburia sp. CAG:309	0.00	nan	900	0
+species	Cloacibacillus evryensis	0.00	nan	600	0
+species	Dragonfly-associated microphage 1	0.00	nan	600	0
+species	Mesocricetus auratus papillomavirus 1	0.00	nan	600	0
+species	Paenibacillus sp. A9	0.00	nan	600	0
+species	Papio hamadryas papillomavirus type 1	0.00	nan	600	0
+species	Veillonella sp. CAG:933	0.00	nan	600	0
+species	butyrate-producing bacterium SS3/4	0.00	nan	600	0
+species	Achromobacter insuavis	0.00	nan	300	0
+species	Clostridiales bacterium VE202-13	0.00	nan	300	0
+species	Clostridium butyricum	0.00	nan	300	0
+species	Desulfitobacterium hafniense	0.00	nan	300	0
+species	Desulfosporosinus sp. Tol-M	0.00	nan	300	0
+species	Desulfosporosinus youngiae	0.00	nan	300	0
+species	Enterobacteria phage alpha3	0.00	nan	300	0
+species	Enterobacteria phage phiK	0.00	nan	300	0
+species	Felis catus papillomavirus 4	0.00	nan	300	0
+species	Human papillomavirus type 180	0.00	nan	300	0
+species	Necator americanus	0.00	nan	300	0
+species	Paenibacillus sp. FSL R7-0273	0.00	nan	300	0
+species	Prevotella histicola	0.00	nan	300	0
+species	Prevotella salivae	0.00	nan	300	0
+species	Sclerotinia sclerotiorum hypovirulence associated DNA virus 1	0.00	nan	300	0
+species	Spiroplasma phage 4	0.00	nan	300	0
+species	Youngiibacter fragilis	0.00	nan	300	0
+species	[Clostridium] methoxybenzovorans	0.00	nan	300	0
+species	[Clostridium] papyrosolvens	0.00	nan	300	0
+species	unidentified phage	0.00	nan	300	0
+species	unassigned	nan	nan	18815100	0
