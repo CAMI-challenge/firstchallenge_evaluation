@@ -39,7 +39,7 @@ for (bin_type in bin_types) {
         figures.dir <- file.path(repo.dir, "plots")
         
         # files
-        suffix <- paste("_", level, "_", category, ".tsv", sep="")
+        suffix <- paste("_", bin_type, "_", level, "_", category, ".tsv", sep="")
         ref_data_low.file <- file.path(results.dir, paste("low", suffix, sep=""))
         ref_data_medium.file <- file.path(results.dir, paste("medium", suffix, sep=""))
         ref_data_high.file <- file.path(results.dir, paste("high", suffix, sep=""))
