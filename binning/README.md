@@ -46,10 +46,15 @@ For the taxonomic binners, recall on this data set was not substantially altered
 Novelty category:  
 Grouping of genomes by their relation of genomes to a known full/draft genom in the ncbi reference database.
 
-Uniqueness:
+Uniqueness:  
 Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
 If yes, such genome was declared 'common strain' as opposed to 'unique strain'.
 
+including notassigned bin:  
+Not assigned contigs/reads are assigned to a 'trash' bin and with this included in the evaluation.
+
+excluding notassigned bin:  
+Not assigned contigs/reads are ignored in the evaluation as if they did not exist.
 
 ## Plots for taxonomic binners
 
