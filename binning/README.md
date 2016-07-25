@@ -1,13 +1,65 @@
+## Results of the binning challenge
+
 Current metagenome assembly and scaffolding methods return mixtures of variable length fragments originating from individual genomes of a sequenced microbiome. Metagenome binning algorithms were thus devised to tackle the problem of grouping these according to their organismal origin. These  “bins”, or sets of assembled sequences or reads ideally group data from one of the individual strains present in the sequenced microbial community.  However, resolution to this level is not always possible, in which case bins representing taxa at higher taxonomic ranks are returned, e.g. species-, or family-level bins. Bin reconstruction allows subsequent genome and pangenome analyses of the individual community members. While binning methods group sequences into bins without assignment of taxonomic labels, taxonomic binning methods group sequences into bins with a taxonomic label attached. Within CAMI, use of the NCBI taxonomy as a reference taxonomy allowed determination of taxonomic bins at all encoded taxonomic ranks, from species to root-level. 
 
-We benchmarked nine binning and taxonomic binning methods with reproducible results due to their submission of software within a binning-biobox to the first CAMI challenge, or implemented within such a biobox by the CAMI team with the help of the developers. These were MaxBin, CONCOCT, MetaBAT, PhyloPythiaS+ (26870609[uid]
-), taxator-tk (25388150), Megan 6 and Kraken.  We determined their performance for applications of relevance for microbial community studies: Which methods returned bins of overall good quality, meaning with high completeness (high recall), and low contamination levels (high precision).  These bins are most representative of the underlying genomes and pangenomes and useful for genome-level analyses. Which methods returned bins with very low levels of contamination? In the case of taxon binners, it can be of interest to use the results of such highly precise methods to label the genomes bins returned by binning tools. Which methods showed high recall in the recovery of bins from low abundance community members? This question is of relevance for the fields of ancient metagenomics and pathogen detection, where an indication of the presence of interesting taxa based on metagenome analyses is required for subsequent genome recovery efforts. Which methods performed well in the recovery of bins from deep-branching phyla, for which no sequenced genomes yet exist? In every known microbial community, a substantial fraction of taxa is not represented by sequenced genomes of cultivated isolates and for their characterization, methods allowing bin recovery from such deep-branchers are required. How does the performance of the taxonomic binning methods vary across the taxonomic ranks? How is performance affected by the presence of non-bacterial sequences, such as viruses, plasmids and other uncharacterized DNA? Finally, how does performance vary for taxa represented by many closely related strains in the community in comparison to taxa represented by one strain only? Can the evaluated tools resolve the genomes of individual strains in our challenge data sets?
+We evaluated nine binning and taxonomic binning methods where software was submitted in a binning-biobox to the first CAMI challenge, or implemented within such a biobox by the CAMI team and developers together. These methods are MaxBin, CONCOCT, MyCC, MetaBAT, PhyloPythiaS+ (26870609[uid]), taxator-tk (25388150), Megan 6 and Kraken.  We then determined their performance for key questions in microbial community studies: Which return many bins of overall good quality, meaning with on average high completeness (high recall), and low contamination levels (high precision).  These bins are most representative for genome-level analyses of the underlying genomes and pangenomes. Which methods make few false positives in bin detection? The results of highly precise taxon binning methods can be used to taxonomically assign the genome bins returned by binning tools. Which methods show high recall in the recovery of bins from low abundance community members? This question is of relevance for ancient metagenomics and pathogen detection, where an indication of the presence of pathogenic taxa can be the starting point for subsequent genome recovery efforts. Which methods perform well in the recovery of bins from deep-branching phyla, for which no sequenced genomes yet exist? In every known microbial community, a substantial fraction of taxa is not represented by sequenced genomes of cultivated isolates and for their characterization, methods allowing bin recovery from such deep-branchers are required. How does the performance of the taxonomic binners vary across taxonomic ranks? How is performance affected by the presence of non-bacterial sequences in a sample, such as viruses, plasmids and other uncharacterized DNA? Finally, how does performance vary for taxa represented by many closely related strains in the community in comparison to taxa represented by one strain only? Can the evaluated tools resolve the genomes of individual strains in the challenge data sets?
 
+## BINNERS: 
+### Recovery of genome bins
+We first investigated the performance of all methods in the recovery of individual genome bins. For this, we determined the precision and recall for every bin relative to the genome with which the bin had the highest overlap in predicted bps (highest recall). To investigate whether the data partitioning achieved by taxonomic binners can be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners. FShown is for each binner the submission with the best average precision and recall (defined exactly how?) for all three challenge data sets (currently only for two?). Bars denote the standard deviation of precision and recall across genome bins.
+
+#### Precision and recall in genome recovery for taxonomic binners and binners
+For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest average recall, around 62% , and precision, around 75% on one data set (Q: which one?), followed by elevated_franklin and admiring_curie. 
+
+[Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)
+
+ACM: need to update these numbers with details from tables, need to know which tool/parameter setting exactly is shown here for that.
+
+For the taxonomic binners,  the recall was generally substantially lower than for the binners, mostly less than 25%.  Notably,  though, the precision was as high as the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was prickly_fermi, with precision reaching values of around 90%, while modest_babbage showed the highest (though still substantially less than what was achieved by binning tools) recall.  
+[Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)  
+
+We next investigated the effect that the presence of multiple strains from one species had on tool performances. If considering only genomes which were not closely related to other genomes in the challenge data sets based on their Average Nucleotide Identity ( ANI up to 95%), the performance of all binners improved substantially, both in terms of precision and recall. All methods had precision and recall values of above 50%. The binners with the highest recall and precision across data sets were elevated_franklin, admiring_curie and berserk_hypatia (the latter performed best on one data set, but did substantiall less well on another).
+
+[Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf)  
+
+For the taxonomic binners, precision substantially improved, with all methods showing values of more than 75%,  while recall was almost unaltered. Prickly_fermi was again the most precise method (Q: really? it was not very precise in reconstructing bins?).
+
+[Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf) 
+
+When considering genomes of strains with other close relatives present in the challenge data sets (more than 95% ANI), recall dropped for all methods to below 50% and precision also dropped substantially. Berserk_hypatia stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
+
+[Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
+
+For the taxonomic binners, recall on this data set was not substantially altered and less than 25% for all methods, as before. Precision, as expected, due to a lack of resolution of the reference taxonomy below species level, which would result in strains of the same species being placed in one bin even in the case of perfect assignment, dropped substantially, to 75% for the best performing method/data set combination (prickly_fermi) and around 25% for the worst one (modest_babbage).
+
+[Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
+
+
+
+#### ARI plots for binners - some further information, not discussd explicitly.
+[ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
+[ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
+[ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  
+[ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
+[ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.pdf)  
+[ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.pdf)  
+
+Novelty category:  
+Grouping of genomes by their relation of genomes to a known full/draft genom in the ncbi reference database.
+
+Uniqueness:  
+Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared 'common strain' as opposed to 'unique strain'.
+
+including notassigned bin:  
+Not assigned contigs/reads are assigned to a 'trash' bin and with this included in the evaluation.
+
+excluding notassigned bin:  
+Not assigned contigs/reads are ignored in the evaluation as if they did not exist.
 
 ## Plots for taxonomic binners
 
 ### Average Precision/Recall, shown for individual ranks and data sets
-
 
 [Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
 [Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
@@ -26,24 +78,22 @@ We benchmarked nine binning and taxonomic binning methods with reproducible resu
 [Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.pdf)  
 [Precision/Recall sorted by bin size, medium complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_common_strain.pdf)  
 [Precision/Recall sorted by bin size, medium complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_unique_strain.pdf)  
-<!--[Precision/Recall sorted by bin size, medium complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_medium_new_order.pdf)  -->
 [Precision/Recall sorted by bin size, medium complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_medium_new_family.pdf)  
 [Precision/Recall sorted by bin size, medium complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_medium_new_genus.pdf)  
 [Precision/Recall sorted by bin size, medium complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_medium_new_species.pdf)  
 [Precision/Recall sorted by bin size, medium complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_new_strain.pdf)  
+<!--[Precision/Recall sorted by bin size, medium complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_medium_new_order.pdf)  -->
 ####high
 [Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.pdf)  
 [Precision/Recall sorted by bin size, high complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_high_common_strain.pdf)  
 [Precision/Recall sorted by bin size, high complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_high_unique_strain.pdf)  
-<!--[Precision/Recall sorted by bin size, high complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_high_new_order.pdf)  -->
-<!--[Precision/Recall sorted by bin size, high complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_high_new_family.pdf)  -->
 [Precision/Recall sorted by bin size, high complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_high_new_genus.pdf)  
 [Precision/Recall sorted by bin size, high complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_high_new_species.pdf)  
 [Precision/Recall sorted by bin size, high complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_high_new_strain.pdf)  
+<!--[Precision/Recall sorted by bin size, high complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_high_new_order.pdf)  -->
+<!--[Precision/Recall sorted by bin size, high complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_high_new_family.pdf)  -->
 
-procedure.  
-here, precision is shown for predicted, recall for real bin sizes. 
-To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
+Precision is shown for predicted, recall for real bin sizes.  To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
 Recall was normalized in a similar way using real bin sizes.
 
 ###by bin
@@ -58,14 +108,8 @@ Recall was normalized in a similar way using real bin sizes.
 
 Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
 
-###by genome, across all data sets. 
-[Precision/Recall by genome, all](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)  
-[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
-[Precision/Recall by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf)  
 
-To investigate whether the data partitioning achieved by taxonomic binners can be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated relative to the strain-level bin with the highest recall, i.e. overlap in terms of common bps of sequence fragments placed in both bins.
 
-Question: is my interpretation correct for ranks? Please check
 
 
 
@@ -82,17 +126,7 @@ Question: is my interpretation correct for ranks? Please check
 [ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness.pdf)  
 [ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.pdf)  
 
-###Plots for binners:
-[Precision/Recall by genome, all](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)  
-[Precision/Recall by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
-[Precision/Recall by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf)  
 
-[ARI for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
-[ARI for binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
-[ARI including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  
-[ARI, excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
-[ARI for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.pdf)  
-[ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.pdf)  
 
 
 

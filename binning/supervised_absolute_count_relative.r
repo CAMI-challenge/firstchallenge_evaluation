@@ -17,11 +17,16 @@ create_count_plots <- function(root_path=NA, output_file=NA) {
   df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
   df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
   df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
-  
+
+  method_labels <- df_tools_subset$method
+  names(method_labels) <- df_tools_subset$anonymous
+
   if (length(df_tools_low$file)>0)
   {
     data_low <- gatherdata(
       as.vector(df_tools_low$file), as.vector(df_tools_low$anonymous))
+    #data_low$tools <- factor(as.vector(data_low$tools), levels=levels(data_low$tools), labels=method_labels[levels(data_low$tools)])
+
   }
   if (length(df_tools_medium$file)>0)
   {
@@ -57,7 +62,7 @@ create_count_plots <- function(root_path=NA, output_file=NA) {
   blues <- rev(brewer.pal(8,"Blues")[2:8])
   reds <- rev(brewer.pal(8,"Reds")[2:8])
   greens <- rev(brewer.pal(8,"Greens")[2:8])
-  blue_red_grey <- c(blues, reds, greens, "grey50")
+  blue_red_grey <- c(blues, reds, greens, "grey80")
 
   # The palette with grey:
   cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
@@ -71,17 +76,17 @@ create_count_plots <- function(root_path=NA, output_file=NA) {
   #pdf(output_file, paper="a4r", width=297, height=210)
   if (length(df_tools_low$file)>0)
   {
-    p1 <- draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey)
+    p1 <- draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey, method_labels)
     #ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path)
   }
   if (length(df_tools_medium$file)>0)
   {
-    p2 <- draw_plot_x(data_medium, "Medium Complexity Dataset\n", blue_red_grey)
+    p2 <- draw_plot_x(data_medium, "Medium Complexity Dataset\n", blue_red_grey, method_labels)
     #ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path)
   }
   if (length(df_tools_high$file)>0)
   {
-    p3 <- draw_plot_x(data_high, "High Complexity Dataset\n", blue_red_grey)
+    p3 <- draw_plot_x(data_high, "High Complexity Dataset\n", blue_red_grey, method_labels)
     #ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path)
   }
 
@@ -151,12 +156,17 @@ gatherdata <- function(file_paths, tools_names)
   return(melted[with(melted, order(variable)), ])
 }
 
-draw_plot_x <- function(data, title, c_palette)
+draw_plot_x <- function(data, title, c_palette, method_labels)
 {
+  method_labeller <- function(variables)
+  {
+    rvalue <- strtrim(method_labels[variables], 17)
+    return(rvalue)
+  }
   levels_tmp1 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
-  levels_tmp2 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
-  levels_tmp3 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
-  legend_levels <- c(levels_tmp1, levels_tmp2, levels_tmp3, "unassigned")
+  #levels_tmp2 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
+  #levels_tmp3 <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
+  legend_levels <- c(rep(levels_tmp1, 3), "unassigned")
   colour_theme <- c("deepskyblue3", "red", "grey30", "grey70")
   #print(levels(data$variable))
   #print(levels(data$level))
@@ -165,11 +175,17 @@ draw_plot_x <- function(data, title, c_palette)
   tmp <- ggplot(data, aes(x = tools, y = value, fill = interaction(level, variable), order = as.numeric(interaction(variable,level)))) +
     geom_bar(stat = 'identity', position = 'stack') +
     #facet_wrap(~ level, scales = "fix") +
+    scale_x_discrete(labels = method_labeller) +
     scale_y_continuous(labels = add_percent) +
     scale_fill_manual(name=NULL,values=c_palette, labels=legend_levels, guide=guide_legend(reverse=T, nrow=15)) + #, labels=x_labels guide=guide_legend(reverse=T)
     labs(title=title, fill=NULL, x=NULL, y="% Basepairs") +
+    geom_text(aes(label = "Green: Unknown", x = Inf, y = 1), hjust = -0.8, vjust = -4, family = "Times") +
+    geom_text(aes(label = "Red: Incorrect", x = Inf, y = 1), hjust = -1, vjust = -2, family = "Times") +
+    geom_text(aes(label = "Blue: Correct", x = Inf, y = 1), hjust = -1.1, vjust = 0, family = "Times") +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) # , vjust = 0.5
-  return(tmp)
+  gt <- ggplot_gtable(ggplot_build(tmp))
+  gt$layout$clip[gt$layout$name == "panel"] <- "off"
+  return(gt)
 }
 
 
