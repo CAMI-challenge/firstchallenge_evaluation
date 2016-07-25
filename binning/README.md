@@ -6,18 +6,19 @@ We evaluated nine binning and taxonomic binning methods where software was submi
 
 ## BINNERS: 
 ### Recovery of genome bins
-We first investigated the performance of all methods in the recovery of individual genome bins. For this, the precision and recall were determined for every predicted bin relative to the genome with which the bin had the highest overlap in predicted bps (highest recall). To investigate whether the data partitioning achieved by taxonomic binners can be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners. 
+We first investigated the performance of all methods in the recovery of individual genome bins. For this, we determined the precision and recall for every bin relative to the genome with which the bin had the highest overlap in predicted bps (highest recall). To investigate whether the data partitioning achieved by taxonomic binners can be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners. 
 
 #### Precision and recall in genome recovery for taxonomic binners and binners
 [Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)
 
-Of the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest recall, around 62% , and precision, around 75%, on average over all genomes for one data set (Q: which one? two crosses, two data sets shown, not three?), followed by elevated_franklin and admiring_curie. 
+For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest recall, around 62% , and precision, around 75%, on average over all genomes (Q: which one? two crosses, two data sets shown, not three?), followed by elevated_franklin and admiring_curie. 
 
 ACM: need to update these numbers with details from tables, need to know which tool/parameter setting exactly is shown here for that.
 
 [Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)  
 
-For the taxonomic binners, recall was generally substantially lower, mostly less than 25%, than for the binners, likely reflecting the fact, that the taxonomy does not resolve below species level at the moment, and thus genome-level resolution is technically impossible for taxa represented multiple strains in the challenge data sets. Notably,  though, the precision was as high as the best binning method or substantially higher than for the binning methods, ranging from 65% to 90%. The most precise of all methods here was prickly_fermi, with precision reaching values of around 90%, while modest_babbage showed the highest (though still substantially less than what was achieved by binning tools) recall.  
+For the taxonomic binners,  the recall was generally substantially lower than for the binners, mostly less than 25%. This is likely reflecting that the taxonomy does not resolve below species level at the moment, and thus genome-level resolution is not possible for taxa represented multiple strains in the challenge data sets. Notably,  though, the precision was as high as the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was prickly_fermi, with precision reaching values of around 90%, while modest_babbage showed the highest (though still substantially less than what was achieved by binning tools) recall.  
+We next investigated the effect that the presence of multiple strains from one species had on tool performances. If considering only genomes which were closely related to other genomes in the challenge data sets based on their Average Nucleotide Identity (>95% ANI), 
 
 [Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
 [Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
