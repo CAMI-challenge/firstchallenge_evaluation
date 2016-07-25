@@ -11,13 +11,13 @@ We first investigated the performance of all methods in the recovery of individu
 #### Precision and recall in genome recovery for taxonomic binners and binners
 [Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)
 
-Of the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  berserk_hypatia had both the highest recall, around 62% , and precision, around 75%, on average over all genomes for one data set (Q: which one? two crosses, two data sets shown, not three?), closely followed by elevated_franklin and admiring_curie. 
+Of the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest recall, around 62% , and precision, around 75%, on average over all genomes for one data set (Q: which one? two crosses, two data sets shown, not three?), followed by elevated_franklin and admiring_curie. 
 
-ACM: need to update these numbers with details from tables, need to know which tool submission is shown here for that.
+ACM: need to update these numbers with details from tables, need to know which tool/parameter setting exactly is shown here for that.
 
 [Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)  
 
-
+For the taxonomic binners, recall was generally substantially lower, mostly less than 25%, than for the binners, likely reflecting the fact, that the taxonomy does not resolve below species level at the moment, and thus genome-level resolution is technically impossible for taxa represented multiple strains in the challenge data sets. Notably,  though, the precision was as high as the best binning method or substantially higher than for the binning methods, ranging from 65% to 90%. The most precise of all methods here was prickly_fermi, with precision reaching values of around 90%, while modest_babbage showed the highest (though still substantially less than what was achieved by binning tools) recall.  
 
 [Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
 [Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
