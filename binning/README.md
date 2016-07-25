@@ -9,7 +9,7 @@ We evaluated nine binning and taxonomic binning methods where software was submi
 We first investigated the performance of all methods in the recovery of individual genome bins. For this, we determined the precision and recall for every bin relative to the genome with which the bin had the highest overlap in predicted bps (highest recall). To investigate whether the data partitioning achieved by taxonomic binners can be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners. FShown is for each binner the submission with the best average precision and recall (defined exactly how?) for all three challenge data sets (currently only for two?). Bars denote the standard deviation of precision and recall across genome bins.
 
 #### Precision and recall in genome recovery for taxonomic binners and binners
-For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest average recall, around 62% , and precision, around 75% n one data set (Q: which one?), followed by elevated_franklin and admiring_curie. 
+For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest average recall, around 62% , and precision, around 75% on one data set (Q: which one?), followed by elevated_franklin and admiring_curie. 
 
 [Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)
 
@@ -24,16 +24,19 @@ We next investigated the effect that the presence of multiple strains from one s
 
 For the taxonomic binners, precision substantially improved, with all methods showing values of more than 75%,  while recall was almost unaltered. Prickly_fermi was again the most precise method (Q: really? it was not very precise in reconstructing bins?).
 
-[Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf)  
+[Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf) 
+
+When considering genomes of strains with other close relatives present in the challenge data sets (more than 95% ANI), recall dropped for all methods to below 50% and precision also dropped substantially. Berserk_hypatia stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
 
 [Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
+
+For the taxonomic binners, recall on this data set was not substantially altered and less than 25% for all methods, as before. Precision, as expected, due to a lack of resolution of the reference taxonomy below species level, which would result in strains of the same species being placed in one bin even in the case of perfect assignment, dropped substantially, to 75% for the best performing method/data set combination (prickly_fermi) and around 25% for the worst one (modest_babbage).
+
 [Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
 
 
 
-
-
-#### ARI plots for binners
+#### ARI plots for binners - some further information, not discussd explicitly.
 [ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
 [ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.pdf)  
 [ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.pdf)  [ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.pdf)  
@@ -43,11 +46,9 @@ For the taxonomic binners, precision substantially improved, with all methods sh
 Question: define uniqueness.
 
 
-
 ## Plots for taxonomic binners
 
 ### Average Precision/Recall, shown for individual ranks and data sets
-
 
 [Precision/Recall](plots/supervised/supervised_summary_all.pdf)  
 [Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.pdf)  
