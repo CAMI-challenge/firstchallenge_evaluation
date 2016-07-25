@@ -43,7 +43,12 @@ For the taxonomic binners, recall on this data set was not substantially altered
 [ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.pdf)  
 [ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.pdf)  
 
-Question: define uniqueness.
+Novelty category:  
+Grouping of genomes by their relation of genomes to a known full/draft genom in the ncbi reference database.
+
+Uniqueness:
+Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared 'common strain' as opposed to 'unique strain'.
 
 
 ## Plots for taxonomic binners
