@@ -19,7 +19,7 @@ For the taxonomic binners,  the recall was generally substantially lower than fo
 
 [Figure: Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.pdf)  
 
-We next investigated the effect that the presence of multiple strains from one species had on tool performances. If considering only genomes which were not closely related to other genomes in the challenge data sets based on their Average Nucleotide Identity ( ANI up to 95%), the performance of all binners improved substantially, both in terms of precision and recall. All methods had precision and recall values of above 50%. The binners with the highest recall and precision across data sets were elevated_franklin, admiring_curie and berserk_hypatia (the latter performed best on one data set, but did substantiall less well on another).
+We next investigated the effect that the presence of multiple strains from one species have on tool performances. We separated the data into two groups, one group containing all the strains which have another genome in the set with an Average Nucleotide Identity (ANI) of more than 95% ("common strains") and the other group containing all “unique” strains - strains for which every other genome in the set has an ANI of less than or equal to 95%. If considering only the genomes of unique strains, the performance of all binners improved substantially, both in terms of precision and recall. All binners had precision and recall values of above 50%. The binners with the highest recall and precision across data sets were elevated_franklin, admiring_curie and berserk_hypatia (the latter performed best on one data set, but did substantiall less well on another).
 
 [Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf)  
 
@@ -27,15 +27,15 @@ For the taxonomic binners, precision substantially improved, with all methods sh
 
 [Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.pdf) 
 
-When considering genomes of strains with other close relatives present in the challenge data sets (more than 95% ANI), recall dropped for all methods to below 50% and precision also dropped substantially. Berserk_hypatia stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
+For the genomes of the "common strains", however, recall dropped for all methods to below 50% and precision also dropped substantially. Berserk_hypatia stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
 
 [Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
 
-For the taxonomic binners, recall on this data set was not substantially altered and less than 25% for all methods, as before. Precision, as expected, due to a lack of resolution of the reference taxonomy below species level, which would result in strains of the same species being placed in one bin even in the case of perfect assignment, dropped substantially, to 75% for the best performing method/data set combination (prickly_fermi) and around 25% for the worst one (modest_babbage).
+For the taxonomic binners, recall for the "common strains" was not substantially altered and less than 25% for all methods, as before. Precision dropped substantially, to 75% for the best performing method/data set combination (prickly_fermi) and around 25% for the worst one (modest_babbage). In part, this has to be expected even under ideal circumstances, due to a lack of resolution of the reference taxonomy below species level, which would result in strains of the same species being placed in one bin even in the case of perfect assignment.
 
 [Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.pdf)  
 
-
+Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools for this purpose. High quality genome reconstructions are attainable for genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a substantial hurdle. [Compare taxonomic binners to binners in terms of overall trends] 
 
 #### ARI plots for binners - some further information, not discussd explicitly.
 [Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.pdf)  
