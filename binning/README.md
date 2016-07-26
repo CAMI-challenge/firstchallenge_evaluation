@@ -20,7 +20,7 @@ For the taxonomic binners, the recall was generally substantially lower than for
 ![Figure: Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
 *Figure: Precision and recall for taxonomic binners by genome, for all genomes. Shown is for each binner the submission with the best average precision and recall (Q: defined exactly how, tradeoff of two measures) for all three challenge data sets (Q: currently only for two?). Bars denote the standard error (Q: correct?) of precision and recall across genome bins.*
 
-###Can the tools separate different strains from the same species? 
+####Can the tools separate different strains from the same species? 
 We next investigated the effect that the presence of multiple strains from one species have on tool performances. We separated the data into two groups, one group containing all the strains which have another genome in the set with an Average Nucleotide Identity (ANI) of more than 95% ("common strains") and the other group containing all “unique” strains - strains for which every other genome in the set has an ANI of less than or equal to 95%. If considering only the genomes of unique strains, the performance of all binners improved substantially, both in terms of precision and recall. All binners had precision and recall values of above 50%. The binners with the highest recall and precision across data sets were MetaBat, MetaWatt and CONCOCT (the latter two performed best on one data set, but did substantiall less well on another).
 
 ![Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)
@@ -43,7 +43,10 @@ For the taxonomic binners, interestingly, recall for the "common strains" was no
 
 Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools for this purpose. High quality genome reconstructions are attainable with binning methods for the genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a substantial hurdle to current methods. Taxonomic binners had a lower recall than binners for genome reconstructions, likely also due to limitations of the reference taxonomy, but very high precision in genome reconstruction, thus delivering high quality, partial genome bins. 
 
-###How does genome abundance affect performance?
+####How does genome abundance affect performance?
+TBD
+
+####Are there performance trends evident based on the kind of approaches the tools use? 
 
 #### ARI plots for binners - some further information, not discussd explicitly.
 ![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.png)
