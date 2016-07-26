@@ -15,7 +15,7 @@ For the binners, recall (ranging from X to Y) varied less across tools than prec
 
 Q: Link to the input tables here, to insert real estimates of precision and recall for individual tool and parameter settings on particular data sets (do we have them without 1% tail truncation in average precision and recall calculation?).
 
-For the taxonomic binners, the recall was generally substantially lower than for the binners, mostly less than 25%.  Notably,  though, the precision was almost as high as for the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was Kraken, with precision reaching values of around 90%, while PhyloPythiaS+ showed the highest (though still substantially less than what was achieved by binning tools) recall.  
+For the taxonomic binners, the recall was generally substantially lower than for the binners, mostly less than 25%.  Notably, though, the precision was almost as high as for the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was Kraken, with precision reaching values of around 90%, while PhyloPythiaS+ showed the highest (though still substantially less than what was achieved by binning tools) recall.  
 
 ![Figure: Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
 *Figure: Precision and recall for taxonomic binners by genome, for all genomes. Shown is for each binner the submission with the best average precision and recall (Q: defined exactly how, tradeoff of two measures) for all three challenge data sets (Q: currently only for two?). Bars denote the standard error (Q: correct?) of precision and recall across genome bins.*
@@ -41,7 +41,7 @@ For the taxonomic binners, interestingly, recall for the "common strains" was no
 ![Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)
 *Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains. Shown is for each tool the submission with the best average precision and recall (Q: defined exactly how, tradeoff of two measures) for all three challenge data sets (Q: currently only for two?). Bars denote the standard error (Q: correct?) of precision and recall across genome bins.*
 
-Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools for this purpose. High quality genome reconstructions are attainable with binning methods for the genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a substantial hurdle to current methods. Taxonomic binners had a lower recall than binners for genome reconstructions, likely also due to limitations of the reference taxonomy, but very high precision in genome reconstruction, thus delivering high quality, partial genome bins. 
+Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools. High quality genome reconstructions are attainable with binning methods for the genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a substantial hurdle to current methods. Taxonomic binners had a lower recall than binners for genome reconstructions, likely also due to limitations of the reference taxonomy, but very high precision in genome reconstruction, thus delivering high quality, partial genome bins. 
 
 ####How does genome abundance affect performance?
 TBD
@@ -81,6 +81,34 @@ excluding notassigned bin:
 Not assigned contigs/reads are ignored in the evaluation as if they did not exist.
 
 ## Plots for taxonomic binners
+####How do we recover “good quality” bins?
+
+-on average (best tradeoff), across taxonomic ranks
+
+-Which tools are suitable for taxon bin recovery from “deep-branching” phyla with few reference genomes? Across taxonomic ranks.
+
+
+Conclusion: 
+
+Which tools return very precise bins, with few sequences of other taxa included?
+
+Conclusion: 
+
+•Which tools have high recall (very sensitive)? Good for screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases.
+-Which tools have high recall for low abundant taxa?
+Conclusion:
+ 
+####Which tools are good for reconstructing taxon bins for genomes from novel species, genera, family (deep-branchers). firstevaluation/binning/plots/supervised/novelty (number of genomes from different category)
+Conclusion: 
+####How does ta
+xon abundance affect performance? 
+
+Conclusion:
+
+####How does viral material affect the taxonomic binning results? 
+
+Conclusion:  Some tools have no good performance on viral etc samples, some assign nothing.  Contrary to profiling, this has no effect on overall binning results, as even though the copy numbers of plasmids and viral data are substantial, in terms of sequence size the fraction of viral, plasmid and unassigned data is small ( Supplementary table on abundances).
+
 
 ### Average Precision/Recall, shown for individual ranks and data sets
 
