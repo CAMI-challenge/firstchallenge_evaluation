@@ -12,38 +12,55 @@ We first investigated the performance of all methods in the recovery of individu
 For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest average recall, around 62%, and precision, around 75%, on one data set (Q: which one?), followed by elevated_franklin and admiring_curie. 
 
 ![Figure: Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
+*Figure: Precision and recall for binners by genome, for all genomes*
 
 Q: Link to the input tables here, to insert real estimates of precision and recall for individual tool and parameter settings on particular data sets (do we have them without 1% tail truncation in average precision and recall calculation?).
 
 For the taxonomic binners,  the recall was generally substantially lower than for the binners, mostly less than 25%.  Notably,  though, the precision was as high as the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was prickly_fermi, with precision reaching values of around 90%, while modest_babbage showed the highest (though still substantially less than what was achieved by binning tools) recall.  
 
-![Figure: Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)  
+![Figure: Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
+*Figure: Precision and recall for taxonomic binners by genome, for all genomes*
 
 We next investigated the effect that the presence of multiple strains from one species have on tool performances. We separated the data into two groups, one group containing all the strains which have another genome in the set with an Average Nucleotide Identity (ANI) of more than 95% ("common strains") and the other group containing all “unique” strains - strains for which every other genome in the set has an ANI of less than or equal to 95%. If considering only the genomes of unique strains, the performance of all binners improved substantially, both in terms of precision and recall. All binners had precision and recall values of above 50%. The binners with the highest recall and precision across data sets were elevated_franklin, admiring_curie and berserk_hypatia (the latter performed best on one data set, but did substantiall less well on another).
 
-![Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)  
+![Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)
+*Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others*
 
 For the taxonomic binners, precision substantially improved, with all methods showing values of more than 75%,  while recall was almost unaltered. Prickly_fermi was again the most precise method (Q: really? it was not very precise in reconstructing bins?).
 
-![Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png) 
+![Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)
+*Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains*
 
 For the genomes of the "common strains", however, recall dropped for all methods to below 50% and precision also dropped substantially. Berserk_hypatia stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
 
-![Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)  
+![Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)
+*Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains*
 
 For the taxonomic binners, recall for the "common strains" was not substantially altered and less than 25% for all methods, as before. Precision dropped substantially, to 75% for the best performing method/data set combination (prickly_fermi) and around 25% for the worst one (modest_babbage). In part, this has to be expected even under ideal circumstances, due to a lack of resolution of the reference taxonomy below species level, which would result in strains of the same species being placed in one bin even in the case of perfect assignment.
 
-![Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)  
+![Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)
+*Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains*
 
 Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools for this purpose. High quality genome reconstructions are attainable for genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a substantial hurdle. [Compare taxonomic binners to binners in terms of overall trends] 
 
 #### ARI plots for binners - some further information, not discussd explicitly.
-![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.png)  
-![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.png)  
-![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.png)  
-![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.png)  
-![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.png)  
-![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.png)  
+![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.png)
+*Figure: ARI by genome for binners including unassigned bin*
+
+![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.png)
+*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure*
+
+![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.png)
+*Figure: ARI by genome including unassigned bin, split by novelty category*
+
+![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.png)
+*Figure: ARI by genome excluding unassigned bin, split by novelty category*
+
+![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.png)
+*Figure: ARI by genome for binners including unassigned bin, split by uniqueness*
+
+![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.png)
+*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
 
 Novelty category:  
 Grouping of genomes by their relation of genomes to a known full/draft genome from the NCBI reference database (Q: was this not a merger including also genomes from JGI and TIGR?)
@@ -62,35 +79,80 @@ Not assigned contigs/reads are ignored in the evaluation as if they did not exis
 
 ### Average Precision/Recall, shown for individual ranks and data sets
 
-![Precision/Recall](plots/supervised/supervised_summary_all.png)  
-![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.png)  
+![Precision/Recall](plots/supervised/supervised_summary_all.png)
+*Precision/Recall*
+
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.png)
+*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
 
 ###sorted by bin size:
 ####low
-![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)  
-![Precision/Recall sorted by bin size, low complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_low_common_strain.png)  
-![Precision/Recall sorted by bin size, low complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_low_unique_strain.png)  
-![Precision/Recall sorted by bin size, low complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_low_new_order.png)  
-![Precision/Recall sorted by bin size, low complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_low_new_family.png)  
-![Precision/Recall sorted by bin size, low complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_low_new_genus.png)  
-![Precision/Recall sorted by bin size, low complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_low_new_species.png)  
-![Precision/Recall sorted by bin size, low complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_low_new_strain.png)  
+![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)
+*Precision/Recall sorted by bin size, low complexity data set*
+
+![Precision/Recall sorted by bin size, low complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_low_common_strain.png)
+*Precision/Recall sorted by bin size, low complexity data set only common_strain*
+
+![Precision/Recall sorted by bin size, low complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_low_unique_strain.png)
+*Precision/Recall sorted by bin size, low complexity data set only unique_strain*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_low_new_order.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_order*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_low_new_family.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_family*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_low_new_genus.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_genus*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_low_new_species.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_species*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_low_new_strain.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_strain*
+
 ####medium
-![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)  
-![Precision/Recall sorted by bin size, medium complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_common_strain.png)  
-![Precision/Recall sorted by bin size, medium complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_unique_strain.png)  
-![Precision/Recall sorted by bin size, medium complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_medium_new_family.png)  
-![Precision/Recall sorted by bin size, medium complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_medium_new_genus.png)  
-![Precision/Recall sorted by bin size, medium complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_medium_new_species.png)  
-![Precision/Recall sorted by bin size, medium complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_new_strain.png)  
+![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
+*Precision/Recall sorted by bin size, medium complexity data set*
+
+![Precision/Recall sorted by bin size, medium complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_common_strain.png)
+*Precision/Recall sorted by bin size, medium complexity data set only common_strain*
+
+![Precision/Recall sorted by bin size, medium complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_unique_strain.png)
+*Precision/Recall sorted by bin size, medium complexity data set only unique_strain*
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_medium_new_family.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_family*
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_medium_new_genus.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_genus*
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_medium_new_species.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_species*
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_new_strain.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_strain*
+
 <!--![Precision/Recall sorted by bin size, medium complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_medium_new_order.png)  -->
 ####high
-![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)  
-![Precision/Recall sorted by bin size, high complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_high_common_strain.png)  
-![Precision/Recall sorted by bin size, high complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_high_unique_strain.png)  
-![Precision/Recall sorted by bin size, high complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_high_new_genus.png)  
-![Precision/Recall sorted by bin size, high complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_high_new_species.png)  
-![Precision/Recall sorted by bin size, high complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_high_new_strain.png)  
+![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
+*Precision/Recall sorted by bin size, high complexity data set*
+
+![Precision/Recall sorted by bin size, high complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_high_common_strain.png)
+*Precision/Recall sorted by bin size, high complexity data set only common_strain*
+
+![Precision/Recall sorted by bin size, high complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_high_unique_strain.png)
+*Precision/Recall sorted by bin size, high complexity data set only unique_strain*
+
+![Precision/Recall sorted by bin size, high complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_high_new_genus.png)
+*Precision/Recall sorted by bin size, high complexity data set only new_genus*
+
+![Precision/Recall sorted by bin size, high complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_high_new_species.png)
+*Precision/Recall sorted by bin size, high complexity data set only new_species*
+
+![Precision/Recall sorted by bin size, high complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_high_new_strain.png)
+*Precision/Recall sorted by bin size, high complexity data set only new_strain*
+
 <!--![Precision/Recall sorted by bin size, high complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_high_new_order.png)  -->
 <!--![Precision/Recall sorted by bin size, high complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_high_new_family.png)  -->
 
@@ -98,14 +160,29 @@ Precision is shown for predicted, recall for real bin sizes.  To normalize the s
 Recall was normalized in a similar way using real bin sizes.
 
 ###by bin
-![Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.png)  
-![Precision/Recall by bin, all bins only common_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_common_strain_ANI_all.png)  
-![Precision/Recall by bin, all bins only unique_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_unique_strain_ANI_all.png)  
-![Precision/Recall by bin, all bins only new_order](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_order_ANI_all.png)  
-![Precision/Recall by bin, all bins only new_family](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_family_ANI_all.png)  
-![Precision/Recall by bin, all bins only new_genus](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_genus_ANI_all.png)  
-![Precision/Recall by bin, all bins only new_species](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_species_ANI_all.png)  
-![Precision/Recall by bin, all bins only new_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_strain_ANI_all.png)  
+![Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.png)
+*Precision/Recall by bin, all bins*
+
+![Precision/Recall by bin, all bins only common_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_common_strain_ANI_all.png)
+*Precision/Recall by bin, all bins only common_strain*
+
+![Precision/Recall by bin, all bins only unique_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_unique_strain_ANI_all.png)
+*Precision/Recall by bin, all bins only unique_strain*
+
+![Precision/Recall by bin, all bins only new_order](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_order_ANI_all.png)
+*Precision/Recall by bin, all bins only new_order*
+
+![Precision/Recall by bin, all bins only new_family](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_family_ANI_all.png)
+*Precision/Recall by bin, all bins only new_family*
+
+![Precision/Recall by bin, all bins only new_genus](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_genus_ANI_all.png)
+*Precision/Recall by bin, all bins only new_genus*
+
+![Precision/Recall by bin, all bins only new_species](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_species_ANI_all.png)
+*Precision/Recall by bin, all bins only new_species*
+
+![Precision/Recall by bin, all bins only new_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_strain_ANI_all.png)
+*Precision/Recall by bin, all bins only new_strain*
 
 Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
 
@@ -114,21 +191,31 @@ Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size
 
 
 
-### Basepair count
-![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all.png)  
-![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all.png) 
+### Basepairs
+![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all.png)
+*Assignments to different taxonomic ranks in % bp*
 
+![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all.png)
+*Assignments to differnet taxonomic ranks in kb*
 
 ### Adjusted rand index (ARI)
-![ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.png)  
-![ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.png)  
-![ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.png)  
-![ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.png)  
+![ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.png)
+*ARI for taxonomic binners on bins including unassigned bin*
+
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure*
+
+![ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.png)
+*ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category*
+
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category*
+
 ![ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness.png)  
-![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.png)  
+*ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
 
-
-
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
 
 
 ## Making plots:
