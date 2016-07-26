@@ -6,37 +6,55 @@ We evaluated nine binning and taxonomic binning methods where software was submi
 
 ## BINNERS: 
 ### Recovery of genome bins
-We first investigated the performance of all methods in the recovery of individual genome bins. For this, we determined the precision and recall for every bin relative to the genome with which the bin had the highest overlap in predicted bps (highest recall). To determine whether the data partitioning achieved by taxonomic binners can also be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners. Shown is for each binner the submission with the best average precision and recall (Q: defined exactly how, tradeoff of two measures) for all three challenge data sets (Q: currently only for two?). Bars denote the standard error (Q: correct?) of precision and recall across genome bins.
+We first investigated the performance of all methods in the recovery of individual genome bins.
+For this, we determined the precision and recall for every bin relative to the genome with which the bin had the highest overlap in predicted bps (highest recall).
+To determine whether the data partitioning achieved by taxonomic binners can also be used for strain-level genome recovery,
+we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins.
+Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners.
+Shown is for each binner the submission with the best average precision and recall (Q: defined exactly how, tradeoff of two measures) for all three challenge data sets (Q: currently only for two?).
+Bars denote the standard error (Q: correct?) of precision and recall across genome bins.
 
 #### Precision and recall in genome recovery for taxonomic binners and binners
-For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  Berserk_hypatia had both the highest average recall, around 62%, and precision, around 75%, on one data set (Q: which one?), followed by elevated_franklin and admiring_curie. 
+For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).
+Berserk_hypatia had both the highest average recall, around 62%, and precision, around 75%, on one data set (Q: which one?), followed by elevated_franklin and admiring_curie. 
 
 ![Figure: Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
 *Figure: Precision and recall for binners by genome, for all genomes*
 
-Q: Link to the input tables here, to insert real estimates of precision and recall for individual tool and parameter settings on particular data sets (do we have them without 1% tail truncation in average precision and recall calculation?).
+Q: Link to the input tables here, 
+to insert real estimates of precision and recall for individual tool and parameter settings on particular data sets (do we have them without 1% tail truncation in average precision and recall calculation?).
 
-For the taxonomic binners,  the recall was generally substantially lower than for the binners, mostly less than 25%.  Notably,  though, the precision was as high as the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was prickly_fermi, with precision reaching values of around 90%, while modest_babbage showed the highest (though still substantially less than what was achieved by binning tools) recall.  
+For the taxonomic binners, the recall was generally substantially lower than for the binners, mostly less than 25%.
+Notably, though, the precision was as high as the best binning method or substantially higher, ranging from 65% to 90%.
+The most precise of all methods was prickly_fermi, with precision reaching values of around 90%, while modest_babbage showed the highest (though still substantially less than what was achieved by binning tools) recall.  
 
 ![Figure: Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
 *Figure: Precision and recall for taxonomic binners by genome, for all genomes*
 
-We next investigated the effect that the presence of multiple strains from one species have on tool performances. We separated the data into two groups, one group containing all the strains which have another genome in the set with an Average Nucleotide Identity (ANI) of more than 95% ("common strains") and the other group containing all “unique” strains - strains for which every other genome in the set has an ANI of less than or equal to 95%. If considering only the genomes of unique strains, the performance of all binners improved substantially, both in terms of precision and recall. All binners had precision and recall values of above 50%. The binners with the highest recall and precision across data sets were elevated_franklin, admiring_curie and berserk_hypatia (the latter performed best on one data set, but did substantiall less well on another).
+We next investigated the effect that the presence of multiple strains from one species have on tool performances.
+We separated the data into two groups, one group containing all the strains which have another genome in the set with an Average Nucleotide Identity (ANI) of more than 95% ("common strains") 
+and the other group containing all “unique” strains - strains for which every other genome in the set has an ANI of less than or equal to 95%.
+If considering only the genomes of unique strains, the performance of all binners improved substantially, both in terms of precision and recall.
+All binners had precision and recall values of above 50%.
+The binners with the highest recall and precision across data sets were elevated_franklin, admiring_curie and berserk_hypatia (the latter performed best on one data set, but did substantiall less well on another).
 
 ![Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)
 *Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others*
 
-For the taxonomic binners, precision substantially improved, with all methods showing values of more than 75%,  while recall was almost unaltered. Prickly_fermi was again the most precise method (Q: really? it was not very precise in reconstructing bins?).
+For the taxonomic binners, precision substantially improved, with all methods showing values of more than 75%, while recall was almost unaltered.
+Prickly_fermi was again the most precise method (Q: really? it was not very precise in reconstructing bins?).
 
 ![Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)
 *Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains*
 
-For the genomes of the "common strains", however, recall dropped for all methods to below 50% and precision also dropped substantially. Berserk_hypatia stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
+For the genomes of the "common strains", however, recall dropped for all methods to below 50% and precision also dropped substantially.
+Berserk_hypatia stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
 
 ![Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)
 *Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains*
 
-For the taxonomic binners, recall for the "common strains" was not substantially altered and less than 25% for all methods, as before. Precision dropped substantially, to 75% for the best performing method/data set combination (prickly_fermi) and around 25% for the worst one (modest_babbage). In part, this has to be expected even under ideal circumstances, due to a lack of resolution of the reference taxonomy below species level, which would result in strains of the same species being placed in one bin even in the case of perfect assignment.
+For the taxonomic binners, recall for the "common strains" was not substantially altered and less than 25% for all methods, as before.
+Precision dropped substantially, to 75% for the best performing method/data set combination (prickly_fermi) and around 25% for the worst one (modest_babbage). In part, this has to be expected even under ideal circumstances, due to a lack of resolution of the reference taxonomy below species level, which would result in strains of the same species being placed in one bin even in the case of perfect assignment.
 
 ![Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)
 *Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains*
@@ -44,6 +62,20 @@ For the taxonomic binners, recall for the "common strains" was not substantially
 Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools for this purpose. High quality genome reconstructions are attainable for genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a substantial hurdle. [Compare taxonomic binners to binners in terms of overall trends] 
 
 #### ARI plots for binners - some further information, not discussd explicitly.
+Novelty category:  
+Grouping of genomes by their relation of genomes to a known full/draft genome from the NCBI reference database
+(Q: was this not a merger including also genomes from JGI and TIGR? A: No I think only NCBI. Johannes wrote down the specifics somewhere...)
+
+Uniqueness:  
+Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared 'common strain' as opposed to 'unique strain'.
+
+including notassigned bin:  
+Not assigned contigs/reads are assigned to a 'trash' bin and with this included in the evaluation.
+
+excluding notassigned bin:  
+Not assigned contigs/reads are ignored in the evaluation as if they did not exist.
+
 ![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.png)
 *Figure: ARI by genome for binners including unassigned bin*
 
@@ -61,19 +93,6 @@ Overall, the presence of multiple related strains in a metagenome sample had a s
 
 ![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.png)
 *Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
-
-Novelty category:  
-Grouping of genomes by their relation of genomes to a known full/draft genome from the NCBI reference database (Q: was this not a merger including also genomes from JGI and TIGR?)
-
-Uniqueness:  
-Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
-If yes, such genome was declared 'common strain' as opposed to 'unique strain'.
-
-including notassigned bin:  
-Not assigned contigs/reads are assigned to a 'trash' bin and with this included in the evaluation.
-
-excluding notassigned bin:  
-Not assigned contigs/reads are ignored in the evaluation as if they did not exist.
 
 ## Plots for taxonomic binners
 
@@ -156,7 +175,8 @@ Not assigned contigs/reads are ignored in the evaluation as if they did not exis
 <!--![Precision/Recall sorted by bin size, high complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_high_new_order.png)  -->
 <!--![Precision/Recall sorted by bin size, high complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_high_new_family.png)  -->
 
-Precision is shown for predicted, recall for real bin sizes.  To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
+Precision is shown for predicted, recall for real bin sizes.
+To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
 Recall was normalized in a similar way using real bin sizes.
 
 ###by bin
@@ -214,7 +234,7 @@ Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size
 ![ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness.png)  
 *ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
 
-![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.png)
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.png)
 *ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
 
 
