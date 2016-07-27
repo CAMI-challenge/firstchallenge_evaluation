@@ -55,8 +55,24 @@ TBD
 
 -on average (best tradeoff), across taxonomic ranks
 
--Which tools are suitable for taxon bin recovery from “deep-branching” phyla with few reference genomes? Across taxonomic ranks.
 
+![Precision/Recall](plots/supervised/supervised_summary_all_1.png)
+*Precision/Recall plots. Average Precision/Recall is shown for individual ranks and data sets.*
+
+![Precision/Recall](plots/supervised/supervised_summary_all_2.png)
+*Precision/Recall lots. Average Precision/Recall is shown for individual ranks and data sets.*
+
+![Precision/Recall](plots/supervised/supervised_summary_all_3.png)
+*Precision/Recall plots. Average Precision/Recall is shown for individual ranks and data sets.*
+
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_1.png)
+*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed. Average Precision/Recall is shown for individual ranks and data sets.*
+
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_2.png)
+*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed. Average Precision/Recall is shown for individual ranks and data sets.*
+
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_3.png)
+*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed. Average Precision/Recall is shown for individual ranks and data sets.*
 
 Conclusion: 
 
@@ -69,105 +85,8 @@ Conclusion:
 Conclusion:
  
 ####Which tools are good for reconstructing taxon bins for genomes from novel species, genera, family (deep-branchers). firstevaluation/binning/plots/supervised/novelty (number of genomes from different category)
-Conclusion: 
-####How does taxon abundance affect performance? 
 
-Conclusion:
-
-####How does viral material affect the taxonomic binning results? 
-
-Conclusion:  Some tools have no good performance on viral etc samples, some assign nothing.  Contrary to profiling, this has no effect on overall binning results, as even though the copy numbers of plasmids and viral data are substantial, in terms of sequence size the fraction of viral, plasmid and unassigned data is small ( Supplementary table on abundances).
-
-
-### Average Precision/Recall, shown for individual ranks and data sets
-
-![Precision/Recall](plots/supervised/supervised_summary_all_1.png)
-*Precision/Recall*
-![Precision/Recall](plots/supervised/supervised_summary_all_2.png)
-*Precision/Recall*
-![Precision/Recall](plots/supervised/supervised_summary_all_3.png)
-*Precision/Recall*
-
-![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_1.png)
-*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
-![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_2.png)
-*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
-![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_3.png)
-*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
-
-###sorted by bin size:
-####low
-![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)
-*Precision/Recall sorted by bin size, low complexity data set*
-
-![Precision/Recall sorted by bin size, low complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_low_common_strain.png)
-*Precision/Recall sorted by bin size, low complexity data set only common_strain*
-
-![Precision/Recall sorted by bin size, low complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_low_unique_strain.png)
-*Precision/Recall sorted by bin size, low complexity data set only unique_strain*
-
-![Precision/Recall sorted by bin size, low complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_low_new_order.png)
-*Precision/Recall sorted by bin size, low complexity data set only new_order*
-
-![Precision/Recall sorted by bin size, low complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_low_new_family.png)
-*Precision/Recall sorted by bin size, low complexity data set only new_family*
-
-![Precision/Recall sorted by bin size, low complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_low_new_genus.png)
-*Precision/Recall sorted by bin size, low complexity data set only new_genus*
-
-![Precision/Recall sorted by bin size, low complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_low_new_species.png)
-*Precision/Recall sorted by bin size, low complexity data set only new_species*
-
-![Precision/Recall sorted by bin size, low complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_low_new_strain.png)
-*Precision/Recall sorted by bin size, low complexity data set only new_strain*
-
-####medium
-![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
-*Precision/Recall sorted by bin size, medium complexity data set*
-
-![Precision/Recall sorted by bin size, medium complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_common_strain.png)
-*Precision/Recall sorted by bin size, medium complexity data set only common_strain*
-
-![Precision/Recall sorted by bin size, medium complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_unique_strain.png)
-*Precision/Recall sorted by bin size, medium complexity data set only unique_strain*
-
-![Precision/Recall sorted by bin size, medium complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_medium_new_family.png)
-*Precision/Recall sorted by bin size, medium complexity data set only new_family*
-
-![Precision/Recall sorted by bin size, medium complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_medium_new_genus.png)
-*Precision/Recall sorted by bin size, medium complexity data set only new_genus*
-
-![Precision/Recall sorted by bin size, medium complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_medium_new_species.png)
-*Precision/Recall sorted by bin size, medium complexity data set only new_species*
-
-![Precision/Recall sorted by bin size, medium complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_new_strain.png)
-*Precision/Recall sorted by bin size, medium complexity data set only new_strain*
-
-<!--![Precision/Recall sorted by bin size, medium complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_medium_new_order.png)  -->
-####high
-![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
-*Precision/Recall sorted by bin size, high complexity data set*
-
-![Precision/Recall sorted by bin size, high complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_high_common_strain.png)
-*Precision/Recall sorted by bin size, high complexity data set only common_strain*
-
-![Precision/Recall sorted by bin size, high complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_high_unique_strain.png)
-*Precision/Recall sorted by bin size, high complexity data set only unique_strain*
-
-![Precision/Recall sorted by bin size, high complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_high_new_genus.png)
-*Precision/Recall sorted by bin size, high complexity data set only new_genus*
-
-![Precision/Recall sorted by bin size, high complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_high_new_species.png)
-*Precision/Recall sorted by bin size, high complexity data set only new_species*
-
-![Precision/Recall sorted by bin size, high complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_high_new_strain.png)
-*Precision/Recall sorted by bin size, high complexity data set only new_strain*
-
-<!--![Precision/Recall sorted by bin size, high complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_high_new_order.png)  -->
-<!--![Precision/Recall sorted by bin size, high complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_high_new_family.png)  -->
-
-Precision is shown for predicted, recall for real bin sizes.  To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
-Recall was normalized in a similar way using real bin sizes.
+-Which tools are suitable for taxon bin recovery from “deep-branching” phyla with few reference genomes? Across taxonomic ranks.
 
 ###by bin
 ![Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.png)
@@ -195,6 +114,46 @@ Recall was normalized in a similar way using real bin sizes.
 *Precision/Recall by bin, all bins only new_strain*
 
 Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
+
+Conclusion: 
+####How does taxon abundance affect performance? 
+
+Precision is shown for predicted, recall for real bin sizes.  To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
+Recall was normalized in a similar way using real bin sizes.
+
+![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)
+*Precision/Recall sorted by bin size, low complexity data set*
+
+![Precision/Recall sorted by bin size, low complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_low_common_strain.png)
+*Precision/Recall sorted by bin size, low complexity data set only common_strain*
+
+![Precision/Recall sorted by bin size, low complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_low_unique_strain.png)
+*Precision/Recall sorted by bin size, low complexity data set only unique_strain*
+
+![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
+*Precision/Recall sorted by bin size, medium complexity data set*
+
+![Precision/Recall sorted by bin size, medium complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_common_strain.png)
+*Precision/Recall sorted by bin size, medium complexity data set only common_strain*
+
+![Precision/Recall sorted by bin size, medium complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_unique_strain.png)
+*Precision/Recall sorted by bin size, medium complexity data set only unique_strain*
+
+![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
+*Precision/Recall sorted by bin size, high complexity data set*
+
+![Precision/Recall sorted by bin size, high complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_high_common_strain.png)
+*Precision/Recall sorted by bin size, high complexity data set only common_strain*
+
+![Precision/Recall sorted by bin size, high complexity data set only unique_strain](plots/supervised/prec_rec_sorted_all_ranks_high_unique_strain.png)
+*Precision/Recall sorted by bin size, high complexity data set only unique_strain*
+
+Conclusion:
+
+####How does viral material affect the taxonomic binning results? 
+
+Conclusion:  Some tools have no good performance on viral etc samples, some assign nothing.  Contrary to profiling, this has no effect on overall binning results, as even though the copy numbers of plasmids and viral data are substantial, in terms of sequence size the fraction of viral, plasmid and unassigned data is small ( Supplementary table on abundances).
+
 
 
 
@@ -325,6 +284,58 @@ Grouping of genomes by their relation of genomes to a known full/draft genome fr
 ![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness_3.png)
 *ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
 
+
+###sorted by bin size for taxonomic binners:
+
+
+![Precision/Recall sorted by bin size, low complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_low_new_order.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_order*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_low_new_family.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_family*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_low_new_genus.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_genus*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_low_new_species.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_species*
+
+![Precision/Recall sorted by bin size, low complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_low_new_strain.png)
+*Precision/Recall sorted by bin size, low complexity data set only new_strain*
+
+####medium
+
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_medium_new_family.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_family*
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_medium_new_genus.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_genus*
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_medium_new_species.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_species*
+
+![Precision/Recall sorted by bin size, medium complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_new_strain.png)
+*Precision/Recall sorted by bin size, medium complexity data set only new_strain*
+
+<!--![Precision/Recall sorted by bin size, medium complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_medium_new_order.png)  -->
+####high
+
+
+![Precision/Recall sorted by bin size, high complexity data set only new_genus](plots/supervised/prec_rec_sorted_all_ranks_high_new_genus.png)
+*Precision/Recall sorted by bin size, high complexity data set only new_genus*
+
+![Precision/Recall sorted by bin size, high complexity data set only new_species](plots/supervised/prec_rec_sorted_all_ranks_high_new_species.png)
+*Precision/Recall sorted by bin size, high complexity data set only new_species*
+
+![Precision/Recall sorted by bin size, high complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_high_new_strain.png)
+*Precision/Recall sorted by bin size, high complexity data set only new_strain*
+
+<!--![Precision/Recall sorted by bin size, high complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_high_new_order.png)  -->
+<!--![Precision/Recall sorted by bin size, high complexity data set only new_family](plots/supervised/prec_rec_sorted_all_ranks_high_new_family.png)  -->
+
+Precision is shown for predicted, recall for real bin sizes.  To normalize the scale, for each tool individually, sort bins by predicted size, normalize bin size relative to the size of the largest bin for each bin.
+Recall was normalized in a similar way using real bin sizes.
 
 ## Making plots:
 The calls to create most plots are contained in a [bash script](make_plots.sh), which must be called within this binning directory.
