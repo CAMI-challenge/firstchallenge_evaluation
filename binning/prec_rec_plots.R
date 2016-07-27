@@ -62,30 +62,44 @@ for (bin_type in bin_types) {
         
         # load data
         
-        if (!file.exists(ref_data_low.file)) next
-        print(ref_data_low.file)
-        ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
-        ref_data_low$group <- gsub("_[0-9]", "_low", ref_data_low$binner)
-        ref_data_low$complexity <- "low"
+        if (file.exists(ref_data_low.file)) {
+            #print(ref_data_low.file)
+            ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
+            ref_data_low$group <- gsub("_[0-9]", "_low", ref_data_low$binner)
+            ref_data_low$complexity <- "low"
+        }
 
         if (file.exists(ref_data_medium.file)) {
-            print(ref_data_medium.file)
+            #print(ref_data_medium.file)
             ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
             ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
             ref_data_medium$complexity <- "medium"
-		}
+        }
 
         if (file.exists(ref_data_high.file)) {
-            print(ref_data_high.file)
+            #print(ref_data_high.file)
             ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
             ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
             ref_data_high$complexity <- "high"
         }
-        
-        if (!file.exists(ref_data_medium.file))  # only low exists
-            ref_data_combined <- ref_data_low
-        else  # only low and medium exists
+
+		if (file.exists(ref_data_high.file))  # all data exists
+			ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
+		else if (file.exists(ref_data_medium.file))  # high is missing
+		{
+			print(paste("Missing:", ref_data_high.file, sep=" "))
             ref_data_combined <- rbind(ref_data_low, ref_data_medium)
+		}
+		else if (file.exists(ref_data_low.file))  # high, medium is missing
+		{
+			print(paste("Missing:", ref_data_medium.file, sep=" "))
+			ref_data_combined <- ref_data_low
+		}
+        else  # only low and medium exists
+		{
+			print(paste("Missing:", ref_data_low.file, sep=" "))
+			next
+		}
         
         ANI_data <- read.table(ANI_data.file, header=F, sep="\t")
         colnames(ANI_data) <- c("bin", "group")
@@ -214,17 +228,21 @@ for (bin_type in bin_types) {
             df <- dfbest
             
             p <- ggplot(df, aes(x=precision, y=recall, color=tool)) +
+                 geom_hline(yintercept=seq(0, 1, by=0.1), colour="grey90") +
+                 geom_vline(xintercept=seq(0, 1, by=0.1), colour="grey90") +
                  geom_errorbarh(aes(xmin=precision-precision_er,
                                     xmax=precision+precision_er),
                                 size=bars_size, alpha=bars_alpha, height=0) +
                  geom_errorbar(aes(ymin=recall-recall_er,
                                    ymax=recall+recall_er),
                                size=bars_alpha, alpha=bars_size, width=0) +
-                 scale_x_continuous(labels=percent, limits=c(0.0, 1)) +
-                 scale_y_continuous(labels=percent, limits=c(0, 1)) +
+                 scale_x_continuous(labels=percent, limits=c(0.0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
+                 scale_y_continuous(labels=percent, limits=c(0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
                  scale_colour_discrete(labels = method_labeller) +
                  geom_point(aes(size=predicted_size), alpha=points_alpha, shape=points_shape, color="grey") +
                  geom_point(aes(size=real_size), alpha=points_alpha, shape=points_shape, color="black") +
+                 #geom_text(aes(label=round(precision*100)), size=3, hjust=1, vjust=-0.3, show.legend=F) +
+                 #geom_text(aes(label=round(recall*100)), size=3, hjust=-1, vjust=-0.3, show.legend=F) +
                  ggtitle(title) +
                  main_theme +
                  theme(legend.position="right",
