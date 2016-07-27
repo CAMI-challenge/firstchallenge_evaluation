@@ -49,22 +49,46 @@ TBD
 ####Are there performance trends evident based on the kind of approaches the tools use? 
 
 #### ARI plots for binners - some further information, not discussd explicitly.
-![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all.png)
+![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_1.png)
+*Figure: ARI by genome for binners including unassigned bin*
+![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_2.png)
+*Figure: ARI by genome for binners including unassigned bin*
+![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_3.png)
 *Figure: ARI by genome for binners including unassigned bin*
 
-![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all.png)
+![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_1.png)
+*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure*
+![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_2.png)
+*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure*
+![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_3.png)
 *Figure: ARI by genomefor binners excluding uassigned bin - a purity measure*
 
-![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty.png)
+![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_1.png)
+*Figure: ARI by genome including unassigned bin, split by novelty category*
+![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_2.png)
+*Figure: ARI by genome including unassigned bin, split by novelty category*
+![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_3.png)
 *Figure: ARI by genome including unassigned bin, split by novelty category*
 
-![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty.png)
+![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_1.png)
+*Figure: ARI by genome excluding unassigned bin, split by novelty category*
+![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_2.png)
+*Figure: ARI by genome excluding unassigned bin, split by novelty category*
+![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_3.png)
 *Figure: ARI by genome excluding unassigned bin, split by novelty category*
 
-![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness.png)
+![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_1.png)
+*Figure: ARI by genome for binners including unassigned bin, split by uniqueness*
+![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_2.png)
+*Figure: ARI by genome for binners including unassigned bin, split by uniqueness*
+![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_3.png)
 *Figure: ARI by genome for binners including unassigned bin, split by uniqueness*
 
-![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness.png)
+![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_1.png)
+*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
+![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_2.png)
+*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
+![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_3.png)
 *Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
 
 Novelty category:  
@@ -111,10 +135,18 @@ Conclusion:  Some tools have no good performance on viral etc samples, some assi
 
 ### Average Precision/Recall, shown for individual ranks and data sets
 
-![Precision/Recall](plots/supervised/supervised_summary_all.png)
+![Precision/Recall](plots/supervised/supervised_summary_all_1.png)
+*Precision/Recall*
+![Precision/Recall](plots/supervised/supervised_summary_all_2.png)
+*Precision/Recall*
+![Precision/Recall](plots/supervised/supervised_summary_all_3.png)
 *Precision/Recall*
 
-![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99.png)
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_1.png)
+*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_2.png)
+*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_3.png)
 *Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
 
 ###sorted by bin size:
@@ -224,29 +256,61 @@ Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size
 
 
 ### Basepairs
-![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all.png)
+![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_1.png)
+*Assignments to different taxonomic ranks in % bp*
+![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_2.png)
+*Assignments to different taxonomic ranks in % bp*
+![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_3.png)
 *Assignments to different taxonomic ranks in % bp*
 
-![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all.png)
+![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_1.png)
+*Assignments to differnet taxonomic ranks in kb*
+![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_2.png)
+*Assignments to differnet taxonomic ranks in kb*
+![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_3.png)
 *Assignments to differnet taxonomic ranks in kb*
 
 ### Adjusted rand index (ARI)
 ![ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.png)
 *ARI for taxonomic binners on bins including unassigned bin*
+![ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.png)
+*ARI for taxonomic binners on bins including unassigned bin*
+![ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.png)
+*ARI for taxonomic binners on bins including unassigned bin*
 
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure*
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure*
 ![ARI for taxonomic binners on bins without unassigned bin - a purity measure](plots/supervised/supervised_ari_excluding_notassigned_all.png)
 *ARI for taxonomic binners on bins without unassigned bin - a purity measure*
 
 ![ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.png)
 *ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category*
+![ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.png)
+*ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category*
+![ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category](plots/supervised/supervised_ari_including_notassigned_novelty.png)
+*ARI for taxonomic binners on bins including unassigned bin, split by taxonomic novelty category*
 
 ![ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.png)
 *ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category*
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category*
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category](plots/supervised/supervised_ari_excluding_notassigned_novelty.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure, split by taxonomic novelty category*
 
-![ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness.png)  
+![ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness_1.png)
+*ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
+![ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness_1.png)
+*ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
+![ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)](plots/supervised/supervised_ari_including_notassigned_uniqueness_1.png)
 *ARI for taxonomic binners on bins including unassigned bin,  for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
 
-![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness.png)
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness_1.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness_1.png)
+*ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
+![ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%).  ](plots/supervised/supervised_ari_excluding_notassigned_uniqueness_1.png)
 *ARI for taxonomic binners on bins without unassigned bin - a purity measure, for taxa represented by one strain (ANI to others > 95%) versus taxa represented by multiple strains (ANI to others <= 95%)*
 
 
