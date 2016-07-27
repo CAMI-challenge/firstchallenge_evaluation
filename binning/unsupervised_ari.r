@@ -96,19 +96,27 @@ my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash
 
 
 #pdf("example_macro_prec_recall.pdf", paper="a4r", width=297, height=210)
-draw_plot <- function(data, title)
+draw_plot <- function(data, title, method_labels)
 {
+	#print(method_labels)
+	method_labeller <- function(variables)
+	{
+		rvalue <- strtrim(method_labels[variables], 17)
+		return(rvalue)
+	}
 	#print(data)
-	ggplot(subset(data, metric == "Adjusted rand index"), 
+	tmp <- ggplot(subset(data, metric == "Adjusted rand index"), 
 		aes(x = tools, y = value, group=interaction(tools, metric))) + #fill=tools, 
 		geom_bar(stat="identity") +
 		#labs(title=title_main, colour="Tool name", x="Level", y=NULL) +
 		labs(fill="Anonymous submission", x=NULL, y=NULL) +
+		scale_x_discrete(labels = method_labeller) +
 		scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
 		facet_wrap( ~ metric, ncol=1, scales="fix") + #, as.table = FALSE, scales="free_y"
 		geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
 		ggtitle(title) +
 		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
+	return(tmp)
 }
 
 #######################################
@@ -126,6 +134,11 @@ if (length(argv)!=2)
 {
 	df_tools_subset <- subset(df_tools, datatype=="unsupervised_excluded")
 }
+
+method_labels <- df_tools_subset$method
+method_labels <- gsub("[()]", "", method_labels)
+names(method_labels) <- df_tools_subset$anonymous
+
 df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
 df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
 df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
@@ -150,19 +163,22 @@ data_high <- gatherdata(
 
 #######################################
 
-pdf(output_file, paper="a4r", width=297, height=210)
+#pdf(output_file, paper="a4r", width=297, height=210)
+ggplots <- list()
 if (length(df_tools_low$file)>0)
 {
-	draw_plot(data_low, "Low Complexity Dataset\n")
+	ggplots[[length(ggplots)+1]] <- draw_plot(data_low, "Low Complexity Dataset\n", method_labels)
 }
 if (length(df_tools_medium$file)>0)
 {
-	draw_plot(data_medium, "Medium Complexity Dataset\n")
+	ggplots[[length(ggplots)+1]] <- draw_plot(data_medium, "Medium Complexity Dataset\n", method_labels)
 }
 if (length(df_tools_high$file)>0)
 {
-	draw_plot(data_high, "High Complexity Dataset\n")
+	ggplots[[length(ggplots)+1]] <- draw_plot(data_high, "High Complexity Dataset\n", method_labels)
 }
-dev.off()
+#dev.off()
+output <- marrangeGrob(ggplots, nrow=1, ncol=1, top=NULL)
+ggsave(output_file, output, width=297, height=210, units='mm')#, device="pdf"
 #######################################
 

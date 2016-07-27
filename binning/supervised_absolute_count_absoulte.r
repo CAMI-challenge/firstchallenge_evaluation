@@ -72,24 +72,25 @@ create_count_plots <- function(root_path=NA, output_file=NA) {
   my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
 
   #pdf(output_file, paper="a4r", width=297, height=210)
+  ggplots <- list()
   if (length(df_tools_low$file)>0)
   {
-    p1 <- draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey, method_labels)
+    ggplots[[length(ggplots)+1]] <- draw_plot_x(data_low, "Low Complexity Dataset\n", blue_red_grey, method_labels)
     #ggsave(paste(output_file, "_low.pdf", sep=""), path= output_path)
   }
   if (length(df_tools_medium$file)>0)
   {
-    p2 <- draw_plot_x(data_medium, "Medium Complexity Dataset\n", blue_red_grey, method_labels)
+    ggplots[[length(ggplots)+1]] <- draw_plot_x(data_medium, "Medium Complexity Dataset\n", blue_red_grey, method_labels)
     #ggsave(paste(output_file, "_medium.pdf", sep=""), path= output_path)
   }
   if (length(df_tools_high$file)>0)
   {
-    p3 <- draw_plot_x(data_high, "High Complexity Dataset\n", blue_red_grey, method_labels)
+    ggplots[[length(ggplots)+1]] <- draw_plot_x(data_high, "High Complexity Dataset\n", blue_red_grey, method_labels)
     #ggsave(paste(output_file, "_high.pdf", sep=""), path= output_path)
   }
 
-  output <- marrangeGrob(list(p1, p2, p3), nrow=1, ncol=1, top=NULL)
-  ggsave(output_file, output, device="pdf", width=297, height=210, units='mm')
+  output <- marrangeGrob(ggplots, nrow=1, ncol=1, top=NULL)
+  ggsave(output_file, output, width=297, height=210, units='mm')# , device="pdf"
   #dev.off()
 
 }
