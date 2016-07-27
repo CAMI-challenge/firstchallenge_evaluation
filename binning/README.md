@@ -6,14 +6,14 @@ We evaluated nine binning and taxonomic binning methods where software was submi
 
 ## BINNERS: 
 ### Recovery of genome bins
-We first investigated the performance of all methods in the recovery of individual genome bins. For this, we determined the precision and recall for every bin relative to the genome with which the bin had the highest overlap in predicted bps (highest recall). To determine whether the data partitioning achieved by taxonomic binners can also be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners. Note that for taxonomic binners thus only bin quality in terms of completeness and purity relative to a reference genome, not taxon assignment to it, was evaluated.
+We first investigated the performance of all methods in the recovery of individual genome bins. For this, we determined the precision and recall for every bin relative to the genome which was most abundant in the bin in terms of bps. To determine whether the data partitioning achieved by taxonomic binners can also be used for strain-level genome recovery, we compared the predicted taxonomic bins at all ranks against the genome (strain)-level bins. Precision and recall for a predicted bin were calculated in the same way as for the unsupervised binners. Note that for taxonomic binners thus only bin quality in terms of completeness (recall) and purity (precision) relative to a reference genome, not taxon assignment to it, was evaluated.
 
 For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  MetaWatt had both the highest average recall, around 62%, and precision, around 75%, on one data set (Q: which one?), while MetaBat did very well on both. 
 
 ![Figure: Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
 *Figure: Precision and recall for binners by genome, for all genomes. Shown is for each binner the submission with the best average precision and recall (Q: defined exactly how, tradeoff of two measures) for all three challenge data sets (Q: currently only for two?). Bars denote the standard error (Q: correct?) of precision and recall across genome bins.*
 
-Q: Link to the input tables here, to insert real estimates of precision and recall for individual tool and parameter settings on particular data sets (do we have them without 1% tail truncation in average precision and recall calculation?).
+Q: add grid lines every 10%, so that we can make precise estimates, and can you recalculate using the 1% tail truncation? (this is a parameter in Rubens script).
 
 For the taxonomic binners, the recall was generally substantially lower than for the binners, mostly less than 25%.  Notably, though, the precision was almost as high as for the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was Kraken, with precision reaching values of around 90%, while PhyloPythiaS+ showed the highest (though still substantially less than what was achieved by binning tools) recall.  
 
