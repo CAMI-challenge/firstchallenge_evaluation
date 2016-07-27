@@ -223,7 +223,7 @@ draw_plot <- function(data, title, method_labels)
 		rvalue <- strtrim(method_labels[variables], 17)
 		return(rvalue)
 	}
-	ggplot(subset(data, variable == "Adjusted rand index"), 
+	tmp <- ggplot(subset(data, variable == "Adjusted rand index"), 
 		aes(x = level, y = value, colour=category, group=interaction(category, variable))) + #fill=tools, 
 		geom_line(position=dodge_small) +
 		labs(colour="Categories", x=NULL, y=NULL) +
@@ -235,13 +235,17 @@ draw_plot <- function(data, title, method_labels)
 		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
 		ggtitle(title) +
 		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
+	return(tmp)
 }
 
 #print(subset(dataframes$medium, category == "unidentified plasmid"))
 #print(dataframes$medium)
-pdf(output_file, paper="a4r", width=297, height=210)
-draw_plot(dataframes$low, "Low Complexity Dataset\n", method_labels)
-draw_plot(dataframes$medium, "Medium Complexity Dataset\n", method_labels)
-draw_plot(dataframes$high, "High Complexity Dataset\n", method_labels)
-dev.off()
+#pdf(output_file, paper="a4r", width=297, height=210)
+gg_plot_low <- draw_plot(dataframes$low, "Low Complexity Dataset\n", method_labels)
+gg_plot_medium <- draw_plot(dataframes$medium, "Medium Complexity Dataset\n", method_labels)
+gg_plot_high <- draw_plot(dataframes$high, "High Complexity Dataset\n", method_labels)
+
+output <- marrangeGrob(list(gg_plot_low, gg_plot_medium, gg_plot_high), nrow=1, ncol=1, top=NULL)
+ggsave(output_file, output, width=297, height=210, units='mm')#, device="pdf"
+#dev.off()
 

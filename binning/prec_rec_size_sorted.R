@@ -20,25 +20,36 @@ categories <- c(
     "all", "common strain","new_family","new_genus","new_order","new_species","new_strain", "unique strain" #,"virus"
     )
 
+# directories
+repo.dir <- dirname(sys.frame(1)$ofile)
+metadata.dir <- file.path(repo.dir, "..", "metadata")
+results.dir <- file.path(repo.dir, "tables")
+figures.dir <- file.path(repo.dir, "plots")
+
+# options
+level <- "by_bin"
+bin_type <- "supervised"    
+filter_tail <- F
+best_only <- T
+all_ranks_combined <- T
+device <- "png"
+
+# method labels
+source(file.path(repo.dir, "parse_raw_result_data.R"))
+if (bin_type=="supervised") rawdata.dir <- file.path(repo.dir, "/data/taxonomic/")
+if (bin_type=="unsupervised") rawdata.dir <- file.path(repo.dir, "/data/unsupervised/")
+df_tools <- get_dataframe_of_tools_at_locations(rawdata.dir)
+method_labels <- df_tools$method
+names(method_labels) <- df_tools$anonymous#gsub("_[0-9]*$", "", )
+method_labeller <- function(variables)
+{
+    rvalue <- strtrim(method_labels[variables], 17)
+    return(rvalue)
+}
+
 for (category in categories)
 for (complexity_level in complexity_levels) {
 
-    # options
-    
-    level <- "by_bin"
-    bin_type <- "supervised"    
-    filter_tail <- F
-    best_only <- T
-    all_ranks_combined <- T
-    
-    # directories
-    
-    repo.dir <- dirname(sys.frame(1)$ofile)
-    
-    metadata.dir <- file.path(repo.dir, "..", "metadata")
-    results.dir <- file.path(repo.dir, "tables")
-    figures.dir <- file.path(repo.dir, "plots")
-    
     # files
 
     suffix <- paste("_", bin_type, "_", level, "_", category, ".tsv", sep="")
@@ -139,7 +150,7 @@ for (complexity_level in complexity_levels) {
     
         df <- ref_data_combined[ref_data_combined$rank==rank, ]
        
-        df <- df[!grepl("Gold Standard", df$binner), ]
+        #df <- df[!grepl("Gold Standard", df$binner), ]
       
         means <- aggregate(df, by=list(df$binner), FUN=mean, na.rm=T)
         er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
@@ -213,7 +224,7 @@ for (complexity_level in complexity_levels) {
               geom_point(alpha=points_alpha, shape=19, size=0.5) +
               geom_hline(yintercept=-0.05) +
               scale_y_continuous(labels=percent) +
-              facet_grid(binner ~ .) +
+              facet_grid(binner ~ ., labeller=as_labeller(method_labeller)) +
               labs(x="accumulated bin size") +
               ggtitle(title) +
               main_theme +
@@ -228,7 +239,7 @@ for (complexity_level in complexity_levels) {
               geom_point(alpha=points_alpha, shape=19, size=0.5) +
               geom_hline(yintercept=-0.05) +
               scale_y_continuous(labels=percent) +
-              facet_grid(binner ~ .) +
+              facet_grid(binner ~ ., labeller=as_labeller(method_labeller)) +
               labs(x="accumulated bin size") +
               ggtitle(title) +
               main_theme +
@@ -239,7 +250,7 @@ for (complexity_level in complexity_levels) {
          
         pg1 <- grid.arrange(p1, p2, ncol=2)
         
-        filename <- paste("prec_rec_sorted_", rank, "_", complexity_level, "_", category, ".pdf", sep="")
+        filename <- paste("prec_rec_sorted_", rank, "_", complexity_level, "_", category, ".", device, sep="")
         filename <- gsub(" ", "_", filename)
         filepath <- file.path(figures.dir, bin_type, filename)
         ggsave(filepath, pg1, width=16, height=10)

@@ -162,7 +162,7 @@ draw_plot <- function(data, title, method_labels)
 		rvalue <- strtrim(method_labels[variables], 17)
 		return(rvalue)
 	}
-	ggplot(subset(data, variable == "Adjusted rand index"), 
+	tmp <- ggplot(subset(data, variable == "Adjusted rand index"), 
 		aes(x = level, y = value, colour=tools, group=interaction(tools, variable))) + #fill=tools, 
 		geom_line(position=dodge_small) +
 		labs(colour="Anonymous submission", x=NULL, y=NULL) +
@@ -175,21 +175,25 @@ draw_plot <- function(data, title, method_labels)
 		#geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
 		ggtitle(title) +
 		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
+	return(tmp)
 }
 
 #print(subset(data_low, variable == "ari"))
-pdf(output_file, paper="a4r", width=297, height=210)
+#pdf(output_file, paper="a4r", width=297, height=210)
+ggplots <- list()
 if (length(df_tools_low$file)>0)
 {
-	draw_plot(data_low, "Low Complexity Dataset\n", method_labels)
+	ggplots[[length(ggplots)+1]] <- draw_plot(data_low, "Low Complexity Dataset\n", method_labels)
 }
 if (length(df_tools_medium$file)>0)
 {
-	draw_plot(data_medium, "Medium Complexity Dataset\n", method_labels)
+	ggplots[[length(ggplots)+1]] <- draw_plot(data_medium, "Medium Complexity Dataset\n", method_labels)
 }
 if (length(df_tools_high$file)>0)
 {
-	draw_plot(data_high, "High Complexity Dataset\n", method_labels)
+	ggplots[[length(ggplots)+1]] <- draw_plot(data_high, "High Complexity Dataset\n", method_labels)
 }
-dev.off()
+output <- marrangeGrob(ggplots, nrow=1, ncol=1, top=NULL)
+ggsave(output_file, output, width=297, height=210, units='mm')#, device="pdf"
+#dev.off()
 

@@ -62,7 +62,7 @@ create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA) {
   }
   #output <- arrangeGrob(gg_plot_low, gg_plot_medium, gg_plot_high, ncol=1)
   output <- marrangeGrob(list(gg_plot_low, gg_plot_medium, gg_plot_high), nrow=1, ncol=1, top=NULL)
-  ggsave(output_file_path, output, device="pdf", width=297, height=210, units='mm')
+  ggsave(output_file_path, output, width=297, height=210, units='mm')#, device="pdf"
   #dev.off()
 }
 

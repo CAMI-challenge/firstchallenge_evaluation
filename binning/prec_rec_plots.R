@@ -16,6 +16,7 @@ library("grid")
 filter_tail <- F
 best_only <- T
 all_ranks_combined <- T
+device <- "png"
  
 bin_types <- c("supervised", "unsupervised")
 levels <- c("by_bin", "by_genome")
@@ -24,17 +25,32 @@ categories <- c(
 	#"unidentified circular element","unidentified plasmid", "circular element",
 	"all", "common strain","new_family","new_genus","new_order","new_species","new_strain", "unique strain","virus"
 	)
+
+repo.dir <- dirname(sys.frame(1)$ofile)
+source(file.path(repo.dir, "parse_raw_result_data.R"))
+
 for (bin_type in bin_types) {
+    # handling of method labels
+    if (bin_type=="supervised") rawdata.dir <- file.path(repo.dir, "/data/taxonomic/")
+    if (bin_type=="unsupervised") rawdata.dir <- file.path(repo.dir, "/data/unsupervised/")
+    df_tools <- get_dataframe_of_tools_at_locations(rawdata.dir)
+    method_labels <- df_tools$method
+    method_labels <- gsub("[()]", "", method_labels)
+    names(method_labels) <- gsub("_[0-9]*$", "", df_tools$anonymous)
+    method_labeller <- function(variables)
+    {
+        rvalue <- strtrim(method_labels[variables], 17)
+        return(rvalue)
+    }
+    
+    # reading tables
     if (bin_type=="unsupervised") levels <- c("by_genome")
     for (level in levels)
       for (category in categories)
         for (ANI in ANIs) {
         # directories
-        repo.dir <- dirname(sys.frame(1)$ofile)
         metadata.dir <- file.path(repo.dir, "..", "metadata")
         ANI_data.file <- file.path(metadata.dir, "ANI", "unique_common.tsv")
-        #if (bin_type=="supervised") results.dir <- paste(repo.dir, "/data/taxonomic/", sep="")
-        #if (bin_type=="unsupervised") results.dir <- paste(repo.dir, "/data/unsupervised/", sep="")
         results.dir <- file.path(repo.dir, "tables")
         figures.dir <- file.path(repo.dir, "plots")
         
@@ -153,7 +169,7 @@ for (bin_type in bin_types) {
             
             df <- ref_data_combined[ref_data_combined$rank==rank, ]
         
-            df <- df[!grepl("Gold Standard", df$binner), ]
+            #df <- df[!grepl("Gold Standard", df$binner), ]
             
             means <- aggregate(df, by=list(df$binner), FUN=mean, na.rm=T)
             er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
@@ -206,6 +222,7 @@ for (bin_type in bin_types) {
                                size=bars_alpha, alpha=bars_size, width=0) +
                  scale_x_continuous(labels=percent, limits=c(0.0, 1)) +
                  scale_y_continuous(labels=percent, limits=c(0, 1)) +
+                 scale_colour_discrete(labels = method_labeller) +
                  geom_point(aes(size=predicted_size), alpha=points_alpha, shape=points_shape, color="grey") +
                  geom_point(aes(size=real_size), alpha=points_alpha, shape=points_shape, color="black") +
                  ggtitle(title) +
@@ -213,7 +230,7 @@ for (bin_type in bin_types) {
                  theme(legend.position="right",
                        title=element_text(size=8))
             
-            filename <- paste("prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".pdf", sep="")
+            filename <- paste("prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", device, sep="")
             filename <- gsub(" ", "_", filename)
             filepath <- file.path(figures.dir, bin_type, filename)
             ggsave(filepath, p, width=7, height=5)

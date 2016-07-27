@@ -177,19 +177,29 @@ my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash
 
 
 #pdf("example_macro_prec_recall.pdf", paper="a4r", width=297, height=210)
-draw_plot <- function(data, title)
+draw_plot <- function(data, title, method_labels)
 {
-	ggplot(subset(data, metric == "Adjusted rand index"), 
-		aes(x = category, y = value, colour=tools, group=interaction(tools, metric))) + #fill=tools, 
+	method_labeller <- function(variables)
+	{
+		rvalue <- strtrim(method_labels[variables], 17)
+		return(rvalue)
+	}
+	tmp <- ggplot(subset(data, metric == "Adjusted rand index"), 
+		aes(
+			x = category, y = value,
+			colour=tools, group=interaction(tools, metric)
+		)) + #fill=tools, 
 		#geom_bar(stat="identity") +
 		geom_line(size = .7) +
 		#labs(title=title_main, colour="Tool name", x="Level", y=NULL) +
 		labs(fill="Anonymous submission", x=NULL, y=NULL) +
+		scale_colour_discrete(labels = method_labeller) +
 		scale_y_continuous(breaks = c(0, 0.25, 0.5, 0.75, 1), limits=c(0, 1)) +
 		facet_wrap( ~ metric, ncol=1, scales="fix") + #, as.table = FALSE, scales="free_y"
 		geom_text(aes(label=value), size=4, hjust=0.4, vjust=-0.4, show.legend=F) +
 		ggtitle(title) +
 		theme(axis.text.x = element_text(angle = 45, hjust = 1), panel.margin = unit(1, "lines")) # , vjust = 0.5
+	return(tmp)
 }
 
 #######################################
@@ -209,20 +219,27 @@ if (length(argv)!=2)
 }
 #######################################
 
+method_labels <- df_tools_subset$method
+method_labels <- gsub("[()]", "", method_labels)
+names(method_labels) <- df_tools_subset$anonymous
+
 dataframes <- get_frames(df_tools_subset)
 
-pdf(output_file, paper="a4r", width=297, height=210)
+#pdf(output_file, paper="a4r", width=297, height=210)
+ggplots <- list()
 #if (dir.exists(dir_low))
 #{
-draw_plot(dataframes$low, "Low Complexity Dataset\n")
+ggplots[[length(ggplots)+1]] <- draw_plot(dataframes$low, "Low Complexity Dataset\n", method_labels)
 #}
 #if (dir.exists(dir_medium))
 #{
-draw_plot(dataframes$medium, "Medium Complexity Dataset\n")
+ggplots[[length(ggplots)+1]] <- draw_plot(dataframes$medium, "Medium Complexity Dataset\n", method_labels)
 #}
 #if (dir.exists(dir_high))
 #{
-draw_plot(dataframes$high, "High Complexity Dataset\n")
+ggplots[[length(ggplots)+1]] <- draw_plot(dataframes$high, "High Complexity Dataset\n", method_labels)
 #}
-dev.off()
+#dev.off()
+output <- marrangeGrob(ggplots, nrow=1, ncol=1, top=NULL)
+ggsave(output_file, output, width=297, height=210, units='mm')#, device="pdf"
 
