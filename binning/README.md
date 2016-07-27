@@ -48,61 +48,7 @@ TBD
 
 ####Are there performance trends evident based on the kind of approaches the tools use? 
 
-#### ARI plots for binners - some further information, not discussd explicitly.
-![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_1.png)
-*Figure: ARI by genome for binners including unassigned bin*
-![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_2.png)
-*Figure: ARI by genome for binners including unassigned bin*
-![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_3.png)
-*Figure: ARI by genome for binners including unassigned bin*
 
-![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_1.png)
-*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure*
-![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_2.png)
-*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure*
-![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_3.png)
-*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure*
-
-![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_1.png)
-*Figure: ARI by genome including unassigned bin, split by novelty category*
-![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_2.png)
-*Figure: ARI by genome including unassigned bin, split by novelty category*
-![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_3.png)
-*Figure: ARI by genome including unassigned bin, split by novelty category*
-
-![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_1.png)
-*Figure: ARI by genome excluding unassigned bin, split by novelty category*
-![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_2.png)
-*Figure: ARI by genome excluding unassigned bin, split by novelty category*
-![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_3.png)
-*Figure: ARI by genome excluding unassigned bin, split by novelty category*
-
-![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_1.png)
-*Figure: ARI by genome for binners including unassigned bin, split by uniqueness*
-![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_2.png)
-*Figure: ARI by genome for binners including unassigned bin, split by uniqueness*
-![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_3.png)
-*Figure: ARI by genome for binners including unassigned bin, split by uniqueness*
-
-![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_1.png)
-*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
-![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_2.png)
-*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
-![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_3.png)
-*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness*
-
-Novelty category:  
-Grouping of genomes by their relation of genomes to a known full/draft genome from the NCBI reference database (Q: was this not a merger including also genomes from JGI and TIGR?)
-
-Uniqueness:  
-Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
-If yes, such genome was declared 'common strain' as opposed to 'unique strain'.
-
-including notassigned bin:  
-Not assigned contigs/reads are assigned to a 'trash' bin and with this included in the evaluation.
-
-excluding notassigned bin:  
-Not assigned contigs/reads are ignored in the evaluation as if they did not exist.
 
 ## Plots for taxonomic binners
 ####How do we recover “good quality” bins?
@@ -268,7 +214,68 @@ Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size
 ![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_2.png)
 *Assignments to differnet taxonomic ranks in kb*
 ![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_3.png)
-*Assignments to differnet taxonomic ranks in kb*
+
+
+
+
+#### ARI plots for binners - some further information, not discussed explicitly.
+![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_1.png)
+*Figure: ARI by genome for binners including unassigned bin. Not assigned contigs/reads were assigned to a 'trash' bin and with this included in the evaluation.*
+![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_2.png)
+*Figure: ARI by genome for binners including unassigned bin. Not assigned contigs/reads were assigned to a 'trash' bin and with this included in the evaluation.*
+![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_3.png)
+*Figure: ARI by genome for binners including unassigned bin. Not assigned contigs/reads were assigned to a 'trash' bin and with this included in the evaluation.*
+
+![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_1.png)
+*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure.*
+![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_2.png)
+*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure.*
+![Figure: ARI by genomefor binners excluding uassigned bin - a purity measure](plots/unsupervised/unsupervised_ari_excluding_notassigned_all_3.png)
+*Figure: ARI by genomefor binners excluding uassigned bin - a purity measure.*
+
+![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_1.png)
+*Figure: ARI by genome including unassigned bin, split by novelty category.*
+![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_2.png)
+*Figure: ARI by genome including unassigned bin, split by novelty category.*
+![Figure: ARI by genome including unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_including_notassigned_novelty_3.png)
+*Figure: ARI by genome including unassigned bin, split by novelty category.*
+
+![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_1.png)
+*Figure: ARI by genome excluding unassigned bin, split by novelty category.*
+![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_2.png)
+*Figure: ARI by genome excluding unassigned bin, split by novelty category.*
+![Figure: ARI by genome excluding unassigned bin, split by novelty category](plots/unsupervised/unsupervised_ari_excluding_notassigned_novelty_3.png)
+*Figure: ARI by genome excluding unassigned bin, split by novelty category.*
+
+![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_1.png)
+*Figure: ARI by genome for binners including unassigned bin, split by uniqueness. Not assigned contigs/reads were assigned to a 'trash' bin and with this included in the evaluation. Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared as that of 'common strain' as opposed to from a 'unique strain'.*
+![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_2.png)
+*Figure: ARI by genome for binners including unassigned bin, split by uniqueness. Not assigned contigs/reads were assigned to a 'trash' bin and with this included in the evaluation. Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared as that of 'common strain' as opposed to from a 'unique strain'.*
+![Figure: ARI by genome for binners including unassigned bin, split by uniqueness](plots/unsupervised/unsupervised_ari_including_notassigned_uniqueness_3.png)
+*Figure: ARI by genome for binners including unassigned bin, split by uniqueness. Not assigned contigs/reads were assigned to a 'trash' bin and with this included in the evaluation. Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not. If yes, such genome was declared as that of 'common strain' as opposed to from a 'unique strain'.*
+
+![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness. Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared as that of 'common strain' as opposed to from a 'unique strain'.](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_1.png)
+*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness. Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared as that of 'common strain' as opposed to from a 'unique strain'.*
+![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_2.png)
+*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness. Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared as that of 'common strain' as opposed to from a 'unique strain'.*
+![Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness](plots/unsupervised/unsupervised_ari_excluding_notassigned_uniqueness_3.png)
+*Figure: ARI for binners excluding uassigned bin - a purity measure, split by uniqueness. Grouping of genomes by whether there a highly similar genomes in the same dataset (ANI>95%) or not.
+If yes, such genome was declared as that of 'common strain' as opposed to from a 'unique strain'.*
+
+Novelty category:  
+Grouping of genomes by their relation of genomes to a known full/draft genome from the NCBI reference database (Q: was this not a merger including also genomes from JGI and TIGR?)
+
+
+
+excluding uassigned bin:  
+Not assigned contigs/reads were discarded before ARI calculation.
+
+*Assignments to different taxonomic ranks in kb*
 
 ### Adjusted rand index (ARI)
 ![ARI for taxonomic binners on bins including unassigned bin](plots/supervised/supervised_ari_including_notassigned_all.png)
