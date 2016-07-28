@@ -29,7 +29,7 @@ merge_names <- function(vec_of_string, aname=T)
 	return(vec_of_string)
 }
 
-filter_tail <- F
+filter_tail <- T
 best_only <- T
 all_ranks_combined <- T
 device <- "png"
@@ -38,22 +38,23 @@ bin_types <- c("supervised", "unsupervised")
 levels <- c("by_bin", "by_genome")
 ANIs <- c("all", "common strain", "unique strain")
 categories <- c(
-	#"unidentified circular element","unidentified plasmid", "circular element",
-	"all", "unique strain", "common strain"#,"new_family","new_genus","new_order","new_species","new_strain","virus"
+	"unidentified circular element","unidentified plasmid", "circular element",
+	"all", "unique strain", "common strain","new_family","new_genus","new_order","new_species","new_strain","virus"
 	)
 
 repo.dir <- dirname(sys.frame(1)$ofile)
 source(file.path(repo.dir, "parse_raw_result_data.R"))
 
 for (bin_type in bin_types) {
+    
     # handling of method labels
+
     if (bin_type=="supervised") rawdata.dir <- file.path(repo.dir, "/data/taxonomic/")
     if (bin_type=="unsupervised") rawdata.dir <- file.path(repo.dir, "/data/unsupervised/")
     df_tools <- get_dataframe_of_tools_at_locations(rawdata.dir)
     method_labels <- df_tools$method
     method_labels <- merge_names(method_labels, F)
     names(method_labels) <- gsub("_[0-9]*$", "", df_tools$anonymous)
-    print(union(method_labels, c()))
     method_labeller <- function(variables)
     {
         rvalue <- strtrim(method_labels[variables], 17)
@@ -61,10 +62,12 @@ for (bin_type in bin_types) {
     }
     
     # reading tables
+    
     if (bin_type=="unsupervised") levels <- c("by_genome")
     for (level in levels)
       for (category in categories)
         for (ANI in ANIs) {
+        print(category)
         # directories
         metadata.dir <- file.path(repo.dir, "..", "metadata")
         ANI_data.file <- file.path(metadata.dir, "ANI", "unique_common.tsv")
@@ -129,25 +132,26 @@ for (bin_type in bin_types) {
         # remove small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
         
         if (filter_tail) {
-        
+            
             ref_data_combined <- within(ref_data_combined,
                                         binner_rank <- paste(ref_data_combined$binner,
                                                              ref_data_combined$rank,
                                                              ref_data_combined$group,
                                                              sep='_'))
             
-            threshold <- 0.99
+            threshold <- 0.01
             q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
             q[, 2] <- q[, 2]*threshold
             for (i in 1:nrow(q)) {
                 idx <- ref_data_combined$binner_rank==q[i, 1]
-                s <- rev(ref_data_combined[idx, ]$predicted_size)
+                s <- sort(ref_data_combined[idx, ]$predicted_size)
+                #print(s)
                 cs <- cumsum(s)
                 q[i, 2] <- s[min(which(cs>q[i, 2]))]
             }
             
             idx <- apply(ref_data_combined, 1, function(x) as.numeric(x["predicted_size"]) > q[q[, 1]==x["binner_rank"], 2])
-            ref_data_combined <- ref_data_combined[idx, ]
+            ref_data_combined$precision[!idx] <- NA
         
         }
         
@@ -212,7 +216,6 @@ for (bin_type in bin_types) {
             predicted_sizes <- aggregate(df$predicted_size, by=list(df$binner), FUN=sum, na.rm=T)
             
             df <- data.frame(binner=means[, 1],
-                             #tool=merge_names(gsub("_[0-9]*$", "", means[, 1])),
                              tool=gsub("_[0-9]*$", "", means[, 1]),
                              precision=means$precision, recall=means$recall,
                              precision_er=er$precision, recall_er=er$recall,
@@ -248,10 +251,11 @@ for (bin_type in bin_types) {
             }
             
             df <- dfbest
-            
-            p <- ggplot(df, aes(x=precision, y=recall, color=tool)) +
-                 geom_hline(yintercept=seq(0, 1, by=0.1), colour="grey90") +
-                 geom_vline(xintercept=seq(0, 1, by=0.1), colour="grey90") +
+
+       #print(df) 
+            p <- ggplot(df, aes(x=precision, y=recall, color=tool, fill=tool)) +
+                 geom_hline(yintercept=seq(0, 2, by=0.1), colour="grey90") +
+                 geom_vline(xintercept=seq(0, 2, by=0.1), colour="grey90") +
                  geom_errorbarh(aes(xmin=precision-precision_er,
                                     xmax=precision+precision_er),
                                 size=bars_size, alpha=bars_alpha, height=0) +
@@ -260,9 +264,11 @@ for (bin_type in bin_types) {
                                size=bars_alpha, alpha=bars_size, width=0) +
                  scale_x_continuous(labels=percent, limits=c(0.0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
                  scale_y_continuous(labels=percent, limits=c(0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
-                 scale_colour_discrete(labels = method_labeller) +
-                 geom_point(aes(size=predicted_size), alpha=points_alpha, shape=points_shape, color="grey") +
-                 geom_point(aes(size=real_size), alpha=points_alpha, shape=points_shape, color="black") +
+                 scale_color_discrete(labels = method_labeller) +
+                 scale_fill_discrete(labels = method_labeller) +
+                 geom_point(alpha=points_alpha, shape=points_shape, color="black") +
+                 #geom_point(aes(size=predicted_size), alpha=points_alpha, shape=points_shape, color="grey") +
+                 #geom_point(aes(size=real_size), alpha=points_alpha, shape=points_shape, color="black") +
                  #geom_text(aes(label=round(precision*100)), size=3, hjust=1, vjust=-0.3, show.legend=F) +
                  #geom_text(aes(label=round(recall*100)), size=3, hjust=-1, vjust=-0.3, show.legend=F) +
                  ggtitle(title) +
