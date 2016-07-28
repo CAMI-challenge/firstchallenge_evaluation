@@ -10,8 +10,24 @@ rm(list=ls())
 library("ggplot2")
 library("scales")
 library("grid")
+#library("qdap")
 
 # options
+
+merge_names <- function(vec_of_string, aname=T)
+{
+	pattern = c("CONCOCT.*", "taxator-tk.*")
+	replace = c("CONCOCT", "taxator-tk")
+	if (aname)
+	{
+		pattern = c("evil_yalow", "admiring_curie", "cocky_sammet")
+		replace = c("fervent_sammet", "elated_franklin", "goofy_hypatia")
+	}
+	for (index in 1:length(pattern)){
+		#sprint(union(vec_of_string, c()))
+		vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
+	return(vec_of_string)
+}
 
 filter_tail <- F
 best_only <- T
@@ -23,7 +39,7 @@ levels <- c("by_bin", "by_genome")
 ANIs <- c("all", "common strain", "unique strain")
 categories <- c(
 	#"unidentified circular element","unidentified plasmid", "circular element",
-	"all", "common strain","new_family","new_genus","new_order","new_species","new_strain", "unique strain","virus"
+	"all", "unique strain", "common strain"#,"new_family","new_genus","new_order","new_species","new_strain","virus"
 	)
 
 repo.dir <- dirname(sys.frame(1)$ofile)
@@ -35,8 +51,9 @@ for (bin_type in bin_types) {
     if (bin_type=="unsupervised") rawdata.dir <- file.path(repo.dir, "/data/unsupervised/")
     df_tools <- get_dataframe_of_tools_at_locations(rawdata.dir)
     method_labels <- df_tools$method
-    method_labels <- gsub("[()]", "", method_labels)
+    method_labels <- merge_names(method_labels, F)
     names(method_labels) <- gsub("_[0-9]*$", "", df_tools$anonymous)
+    print(union(method_labels, c()))
     method_labeller <- function(variables)
     {
         rvalue <- strtrim(method_labels[variables], 17)
@@ -65,13 +82,16 @@ for (bin_type in bin_types) {
         if (file.exists(ref_data_low.file)) {
             #print(ref_data_low.file)
             ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
+			ref_data_low$binner <- merge_names(ref_data_low$binner)
             ref_data_low$group <- gsub("_[0-9]", "_low", ref_data_low$binner)
+            #ref_data_low$group <- mgsub(pattern,replace,gsub("_[0-9]", "_low", ref_data_low$binner))
             ref_data_low$complexity <- "low"
         }
 
         if (file.exists(ref_data_medium.file)) {
             #print(ref_data_medium.file)
             ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
+			ref_data_medium$binner <- merge_names(ref_data_medium$binner)
             ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
             ref_data_medium$complexity <- "medium"
         }
@@ -79,6 +99,7 @@ for (bin_type in bin_types) {
         if (file.exists(ref_data_high.file)) {
             #print(ref_data_high.file)
             ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
+			ref_data_high$binner <- merge_names(ref_data_high$binner)
             ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
             ref_data_high$complexity <- "high"
         }
@@ -87,17 +108,17 @@ for (bin_type in bin_types) {
 			ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
 		else if (file.exists(ref_data_medium.file))  # high is missing
 		{
-			print(paste("Missing:", ref_data_high.file, sep=" "))
+			#print(paste("Missing:", ref_data_high.file, sep=" "))
             ref_data_combined <- rbind(ref_data_low, ref_data_medium)
 		}
 		else if (file.exists(ref_data_low.file))  # high, medium is missing
 		{
-			print(paste("Missing:", ref_data_medium.file, sep=" "))
+			#print(paste("Missing:", ref_data_medium.file, sep=" "))
 			ref_data_combined <- ref_data_low
 		}
         else  # only low and medium exists
 		{
-			print(paste("Missing:", ref_data_low.file, sep=" "))
+			#print(paste("Missing:", ref_data_low.file, sep=" "))
 			next
 		}
         
@@ -115,7 +136,7 @@ for (bin_type in bin_types) {
                                                              ref_data_combined$group,
                                                              sep='_'))
             
-            threshold <- 0.01
+            threshold <- 0.99
             q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
             q[, 2] <- q[, 2]*threshold
             for (i in 1:nrow(q)) {
@@ -191,6 +212,7 @@ for (bin_type in bin_types) {
             predicted_sizes <- aggregate(df$predicted_size, by=list(df$binner), FUN=sum, na.rm=T)
             
             df <- data.frame(binner=means[, 1],
+                             #tool=merge_names(gsub("_[0-9]*$", "", means[, 1])),
                              tool=gsub("_[0-9]*$", "", means[, 1]),
                              precision=means$precision, recall=means$recall,
                              precision_er=er$precision, recall_er=er$recall,
