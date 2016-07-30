@@ -10,37 +10,30 @@ rm(list=ls())
 library("ggplot2")
 library("scales")
 library("grid")
-#library("qdap")
 
 # options
 
-merge_names <- function(vec_of_string, aname=T)
+merge_names <- function(vec_of_string)
 {
-	pattern = c("CONCOCT.*", "taxator-tk.*")
-	replace = c("CONCOCT", "taxator-tk")
-	if (aname)
-	{
-		pattern = c("evil_yalow", "admiring_curie", "cocky_sammet")
-		replace = c("fervent_sammet", "elated_franklin", "goofy_hypatia")
-	}
-	for (index in 1:length(pattern)){
-		#sprint(union(vec_of_string, c()))
-		vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
-	return(vec_of_string)
+    pattern = c("CONCOCT.*", "taxator-tk.*")
+    replace = c("CONCOCT", "taxator-tk")
+    for (index in 1:length(pattern)){
+        vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
+    return(vec_of_string)
 }
 
 filter_tail <- T
 best_only <- T
 all_ranks_combined <- T
 device <- "png"
- 
-bin_types <- c("supervised", "unsupervised")
-levels <- c("by_bin", "by_genome")
+
+bin_types <- c("unsupervised", "supervised")
+levels <- c("by_genome", "by_bin")
 ANIs <- c("all", "common strain", "unique strain")
 categories <- c(
-	"unidentified circular element","unidentified plasmid", "circular element",
-	"all", "unique strain", "common strain","new_family","new_genus","new_order","new_species","new_strain","virus"
-	)
+    #"unidentified circular element","unidentified plasmid", "circular element",
+    "all", "unique strain", "common strain","new_family","new_genus","new_order","new_species","new_strain","virus"
+    )
 
 repo.dir <- dirname(sys.frame(1)$ofile)
 source(file.path(repo.dir, "parse_raw_result_data.R"))
@@ -53,21 +46,32 @@ for (bin_type in bin_types) {
     if (bin_type=="unsupervised") rawdata.dir <- file.path(repo.dir, "/data/unsupervised/")
     df_tools <- get_dataframe_of_tools_at_locations(rawdata.dir)
     method_labels <- df_tools$method
-    method_labels <- merge_names(method_labels, F)
+    method_labels <- merge_names(method_labels)
     names(method_labels) <- gsub("_[0-9]*$", "", df_tools$anonymous)
-    method_labeller <- function(variables)
+    labeller <- function(variables)
     {
         rvalue <- strtrim(method_labels[variables], 17)
         return(rvalue)
     }
+    method_labeller <- as_labeller(labeller)
+    dataset_labels <- df_tools$dataset
+
+    names(dataset_labels) <- df_tools$anonymous
+    labeller <- function(variables)
+    {
+        rvalue <- dataset_labels[variables]#strtrim(, 17)
+        return(rvalue)
+    }
+    dataset_labeller <- as_labeller(labeller)
     
     # reading tables
     
+    if (bin_type=="supervised") levels <- c("by_genome", "by_bin")
     if (bin_type=="unsupervised") levels <- c("by_genome")
     for (level in levels)
       for (category in categories)
         for (ANI in ANIs) {
-        print(category)
+
         # directories
         metadata.dir <- file.path(repo.dir, "..", "metadata")
         ANI_data.file <- file.path(metadata.dir, "ANI", "unique_common.tsv")
@@ -81,49 +85,44 @@ for (bin_type in bin_types) {
         ref_data_high.file <- file.path(results.dir, paste("high", suffix, sep=""))
         
         # load data
-        
+        ref_data_low <- NULL
+        ref_data_medium <- NULL
+        ref_data_high <- NULL
         if (file.exists(ref_data_low.file)) {
-            #print(ref_data_low.file)
             ref_data_low <- read.table(ref_data_low.file, header=T, sep="\t")
-			ref_data_low$binner <- merge_names(ref_data_low$binner)
-            ref_data_low$group <- gsub("_[0-9]", "_low", ref_data_low$binner)
-            #ref_data_low$group <- mgsub(pattern,replace,gsub("_[0-9]", "_low", ref_data_low$binner))
+            ref_data_low$group <- gsub("_[0-9]*", "_low", ref_data_low$binner)
             ref_data_low$complexity <- "low"
-        }
+        }# else print(paste("Missing:", ref_data_low.file, sep=" "))
 
         if (file.exists(ref_data_medium.file)) {
-            #print(ref_data_medium.file)
             ref_data_medium <- read.table(ref_data_medium.file, header=T, sep="\t")
-			ref_data_medium$binner <- merge_names(ref_data_medium$binner)
-            ref_data_medium$group <- gsub("_[0-9]", "_medium", ref_data_medium$binner)
+            ref_data_medium$group <- gsub("_[0-9]*", "_medium", ref_data_medium$binner)
             ref_data_medium$complexity <- "medium"
         }
 
         if (file.exists(ref_data_high.file)) {
-            #print(ref_data_high.file)
             ref_data_high <- read.table(ref_data_high.file, header=T, sep="\t")
-			ref_data_high$binner <- merge_names(ref_data_high$binner)
-            ref_data_high$group <- gsub("_[0-9]", "_high", ref_data_high$binner)
+            ref_data_high$group <- gsub("_[0-9]*", "_high", ref_data_high$binner)
             ref_data_high$complexity <- "high"
         }
 
-		if (file.exists(ref_data_high.file))  # all data exists
-			ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
-		else if (file.exists(ref_data_medium.file))  # high is missing
-		{
-			#print(paste("Missing:", ref_data_high.file, sep=" "))
+        if (file.exists(ref_data_high.file))  # all data exists
+            ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
+        else if (file.exists(ref_data_medium.file))  # high is missing
+        {
+            #print(paste("Missing:", ref_data_high.file, sep=" "))
             ref_data_combined <- rbind(ref_data_low, ref_data_medium)
-		}
-		else if (file.exists(ref_data_low.file))  # high, medium is missing
-		{
-			#print(paste("Missing:", ref_data_medium.file, sep=" "))
-			ref_data_combined <- ref_data_low
-		}
+        }
+        else if (file.exists(ref_data_low.file))  # high, medium is missing
+        {
+            #print(paste("Missing:", ref_data_medium.file, sep=" "))
+            ref_data_combined <- ref_data_low
+        }
         else  # only low and medium exists
-		{
-			#print(paste("Missing:", ref_data_low.file, sep=" "))
-			next
-		}
+        {
+            #print(paste("Missing:", ref_data_low.file, sep=" "))
+            next
+        }
         
         ANI_data <- read.table(ANI_data.file, header=F, sep="\t")
         colnames(ANI_data) <- c("bin", "group")
@@ -164,15 +163,14 @@ for (bin_type in bin_types) {
             else
                 ref_data_combined <- ref_data_combined[ref_data_combined$ANI!="circular element", ]
 
-        }
-        else if (ANI!="all") next
+        } else if (ANI!="all") next
         
         ### plotting
         
-        points_size=1.25
+        points_size=1.25 
         points_alpha=1
         points_shape=22
-        bars_size=1
+        bars_size=0.75 #1
         bars_alpha=0.75
         
         # ggplot2 theme
@@ -217,10 +215,16 @@ for (bin_type in bin_types) {
             
             df <- data.frame(binner=means[, 1],
                              tool=gsub("_[0-9]*$", "", means[, 1]),
+                             #dataset=dataset_labeller(means[, 1]),
                              precision=means$precision, recall=means$recall,
                              precision_er=er$precision, recall_er=er$recall,
                              real_size=real_sizes[, 2],
                              predicted_size=predicted_sizes[, 2])
+            #print(union(df$binner, c()))
+            df$dataset <- factor(dataset_labeller(df$binner), 
+                levels=c("1st CAMI Challenge Dataset 1 CAMI_low","1st CAMI Challenge Dataset 2 CAMI_medium","1st CAMI Challenge Dataset 3 CAMI_high"),
+                labels=c('low','medium','high')
+                )
             
             df$real_size <- df$real_size/1E10
             df$predicted_size <- df$predicted_size/1E10
@@ -253,7 +257,8 @@ for (bin_type in bin_types) {
             df <- dfbest
 
        #print(df) 
-            p <- ggplot(df, aes(x=precision, y=recall, color=tool, fill=tool)) +
+            #dodge_small <- position_dodge(.2) , position=dodge_small
+            p <- ggplot(df, aes(x=precision, y=recall, color=tool, fill=tool, shape=dataset)) +
                  geom_hline(yintercept=seq(0, 2, by=0.1), colour="grey90") +
                  geom_vline(xintercept=seq(0, 2, by=0.1), colour="grey90") +
                  geom_errorbarh(aes(xmin=precision-precision_er,
@@ -261,17 +266,20 @@ for (bin_type in bin_types) {
                                 size=bars_size, alpha=bars_alpha, height=0) +
                  geom_errorbar(aes(ymin=recall-recall_er,
                                    ymax=recall+recall_er),
-                               size=bars_alpha, alpha=bars_size, width=0) +
+                               size=bars_size, alpha=bars_alpha, width=0) +
                  scale_x_continuous(labels=percent, limits=c(0.0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
                  scale_y_continuous(labels=percent, limits=c(0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
                  scale_color_discrete(labels = method_labeller) +
-                 scale_fill_discrete(labels = method_labeller) +
-                 geom_point(alpha=points_alpha, shape=points_shape, color="black") +
+                 scale_fill_discrete(labels = method_labeller, guide=FALSE) +
+                 #scale_shape_discrete(labels = dataset_labeller) +
+                 scale_shape(solid = FALSE) +
+                 geom_point(size=points_size, alpha=points_alpha, color="black") + #, shape=points_shape
                  #geom_point(aes(size=predicted_size), alpha=points_alpha, shape=points_shape, color="grey") +
                  #geom_point(aes(size=real_size), alpha=points_alpha, shape=points_shape, color="black") +
                  #geom_text(aes(label=round(precision*100)), size=3, hjust=1, vjust=-0.3, show.legend=F) +
                  #geom_text(aes(label=round(recall*100)), size=3, hjust=-1, vjust=-0.3, show.legend=F) +
-                 ggtitle(title) +
+                 #ggtitle(title) +
+                 labs(title=title, color="Tool", shape="Dataset (complexity)") + #, x=NULL, y=NULL
                  main_theme +
                  theme(legend.position="right",
                        title=element_text(size=8))
