@@ -11,35 +11,33 @@ We first investigated the performance of all methods in the recovery of individu
 For the binners, recall (ranging from X to Y) varied less across tools than precision (ranging from X to Y).  MetaWatt had both the highest average recall, around 62%, and precision, around 75%, on one data set (Q: which one?), while MetaBat did very well on both. 
 
 ![Figure: Precision and recall for binners by genome, for all genomes](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
-*Figure: Precision and recall for binners by genome, for all genomes. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets (Q: currently only for two?). Bars denote the standard error of precision and recall across genome bins.*
-
-Q: add grid lines every 10%, so that we can make precise estimates, and can you recalculate using the 1% tail truncation? (this is a parameter in Rubens script).
+*Figure: Precision and recall for binners by genome, for all genomes. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets. Bars denote the standard error of precision and recall across genome bins.*
 
 For the taxonomic binners, the recall was generally substantially lower than for the binners, mostly less than 25%.  Notably, though, the precision was almost as high as for the best binning method or substantially higher, ranging from 65% to 90%. The most precise of all methods was Kraken, with precision reaching values of around 90%, while PhyloPythiaS+ showed the highest (though still substantially less than what was achieved by binning tools) recall.  
 
 ![Figure: Precision and recall for taxonomic binners by genome, for all genomes](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_all.png)
-*Figure: Precision and recall for taxonomic binners by genome, for all genomes. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets (Q: currently only for two?). Bars denote the standard error of precision and recall across genome bins.*
+*Figure: Precision and recall for taxonomic binners by genome, for all genomes. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets. Bars denote the standard error of precision and recall across genome bins.*
 
 ####Can the tools separate different strains from the same species? 
 We next investigated the effect that the presence of multiple strains from one species have on tool performances. We separated the data into two groups, one group containing all the strains which have another genome in the set with an Average Nucleotide Identity (ANI) of more than 95% ("common strains") and the other group containing all “unique” strains - strains for which every other genome in the set has an ANI of less than or equal to 95%. If considering only the genomes of unique strains, the performance of all binners improved substantially, both in terms of precision and recall. All binners had precision and recall values of above 50%. The binners with the highest recall and precision across data sets were MetaBat, MetaWatt and CONCOCT (the latter two performed best on one data set, but did substantiall less well on another).
 
 ![Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)
-*Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets (Q: currently only for two?). Bars denote the standard error of precision and recall across genome bins. *
+*Figure: Precision and recall for binners by genome, unique strains with equal to or less than 95% ANI to others. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets. Bars denote the standard error of precision and recall across genome bins. *
 
 For the taxonomic binners, precision substantially improved, with most methods showing values of more than 75%,  while recall was almost unaltered. Kraken was again the most precise method (Q: really? it was not very precise in reconstructing bins?).
 
 ![Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains.](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_unique_strain.png)
-*Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets (Q: currently only for two?). Bars denote the standard error of precision and recall across genome bins.*
+*Figure: Precision/Recall for taxonomic binners by genome, unique strain with ANI below or equal to 95% to all other strains. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets. Bars denote the standard error of precision and recall across genome bins.*
 
 For the genomes of the "common strains", however, recall dropped for all methods to below 50% and precision also dropped substantially. MetaWatt stood out from the other methods with precision values of more than 75% on one data set, and around 60% on another. (insert detailed values) 
 
 ![Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/unsupervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)
-*Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets (Q: currently only for two?). Bars denote the standard error of precision and recall across genome bins.*
+*Figure: Precision and recall for binners by genome, strains in groups with more than 95% ANI similarity to other strains. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets. Bars denote the standard error of precision and recall across genome bins.*
 
 For the taxonomic binners, interestingly, recall for the "common strains" was not substantially altered and less than 25% for all methods, as before. Precision, however, dropped substantially, to 75% for the best performing method/data set combination (Kraken) and around 25% for the worst one (PhyloPythiaS+). In part, this is expected,  even under ideal circumstances, as the reference taxonomy does not resolve below species level, which result in strains of the same species being placed in one bin even in the case of perfect assignment. A one bin equals one strain assignment can thus only be achieved if there is no more than one strain per species present. This effect is evident by the varying, and not ideal performance of the taxonomic binning gold standard on the "unique" and "common" data sets, where it performs quite well on the first, but poorly on the second. Interestingly, for the common data sets, taxonomic binning methods by assigning genomes of the same species either not at all or consistently to bins at different ranks, achieve a better genome resolution than the gold standard.
 
 ![Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains](plots/supervised/prec_recall_combined_all_ranks_by_genome_all_ANI_common_strain.png)
-*Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets (Q: currently only for two?). Bars denote the standard error of precision and recall across genome bins.*
+*Figure: Precision/Recall for taxonomic binners by genome, strains in groups with more than 95% ANI similarity to other strains. Shown is for each binner the submission with the largest sum of the average bin precision and recall values for all three challenge data sets. Bars denote the standard error of precision and recall across genome bins.*
 
 Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools. High quality genome reconstructions are attainable with binning methods for the genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a substantial hurdle to current methods. Taxonomic binners had a lower recall than binners for genome reconstructions, likely also due to limitations of the reference taxonomy, but very high precision in genome reconstruction, thus delivering high quality, partial genome bins. 
 
@@ -54,30 +52,6 @@ TBD
 ####How do we recover “good quality” bins?
 
 -on average (best tradeoff), across taxonomic ranks
-
--Which tools are suitable for taxon bin recovery from “deep-branching” phyla with few reference genomes? Across taxonomic ranks.
-
-
-Conclusion: 
-
-Which tools return very precise bins, with few sequences of other taxa included?
-
-Conclusion: 
-
-•Which tools have high recall (very sensitive)? Good for screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases.
--Which tools have high recall for low abundant taxa?
-Conclusion:
- 
-####Which tools are good for reconstructing taxon bins for genomes from novel species, genera, family (deep-branchers). firstevaluation/binning/plots/supervised/novelty (number of genomes from different category)
-Conclusion: 
-####How does taxon abundance affect performance? 
-
-Conclusion:
-
-####How does viral material affect the taxonomic binning results? 
-
-Conclusion:  Some tools have no good performance on viral etc samples, some assign nothing.  Contrary to profiling, this has no effect on overall binning results, as even though the copy numbers of plasmids and viral data are substantial, in terms of sequence size the fraction of viral, plasmid and unassigned data is small ( Supplementary table on abundances).
-
 
 ### Average Precision/Recall, shown for individual ranks and data sets
 
@@ -95,10 +69,63 @@ Conclusion:  Some tools have no good performance on viral etc samples, some assi
 ![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_3.png)
 *Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
 
-###sorted by bin size:
-####low
+
+
+
+Conclusion: 
+
+Which tools return very precise bins, with few sequences of other taxa included?
+
+Conclusion: 
+
+•Which tools have high recall (very sensitive)? Good for screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases.
+-Which tools have high recall for low abundant taxa?
+Conclusion:
+ 
+####Which tools are good for reconstructing taxon bins for genomes from novel species, genera, family (deep-branchers). 
+
+-Which tools are suitable for taxon bin recovery from “deep-branching” phyla with few reference genomes? Across taxonomic ranks.
+Conclusion: 
+
+
+####How does taxon abundance affect performance? 
+
 ![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)
 *Precision/Recall sorted by bin size, low complexity data set*
+
+![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
+*Precision/Recall sorted by bin size, medium complexity data set*
+
+![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
+*Precision/Recall sorted by bin size, high complexity data set*
+
+
+Conclusion:
+
+####How does viral material affect the taxonomic binning results? 
+
+Conclusion: Contrary to profiling, this has no effect on overall binning results, as even though the copy numbers of plasmids and viral data are substantial, in terms of sequence size the fraction of viral, plasmid and unassigned data is small (Supplementary table on abundances).
+
+
+## Supplementary information
+
+
+## Taxonomic assignments in % and kp sequence
+![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_1.png)
+*Assignments to different taxonomic ranks in % bp*
+![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_2.png)
+*Assignments to different taxonomic ranks in % bp*
+![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_3.png)
+*Assignments to different taxonomic ranks in % bp*
+
+![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_1.png)
+*Assignments to differnet taxonomic ranks in kb*
+![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_2.png)
+*Assignments to differnet taxonomic ranks in kb*
+![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_3.png)
+
+## Taxonomic assignments sorted by bin size:
+####low complexity data set
 
 ![Precision/Recall sorted by bin size, low complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_low_common_strain.png)
 *Precision/Recall sorted by bin size, low complexity data set only common_strain*
@@ -121,9 +148,7 @@ Conclusion:  Some tools have no good performance on viral etc samples, some assi
 ![Precision/Recall sorted by bin size, low complexity data set only new_strain](plots/supervised/prec_rec_sorted_all_ranks_low_new_strain.png)
 *Precision/Recall sorted by bin size, low complexity data set only new_strain*
 
-####medium
-![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
-*Precision/Recall sorted by bin size, medium complexity data set*
+####medium complexity data set
 
 ![Precision/Recall sorted by bin size, medium complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_medium_common_strain.png)
 *Precision/Recall sorted by bin size, medium complexity data set only common_strain*
@@ -144,9 +169,7 @@ Conclusion:  Some tools have no good performance on viral etc samples, some assi
 *Precision/Recall sorted by bin size, medium complexity data set only new_strain*
 
 <!--![Precision/Recall sorted by bin size, medium complexity data set only new_order](plots/supervised/prec_rec_sorted_all_ranks_medium_new_order.png)  -->
-####high
-![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
-*Precision/Recall sorted by bin size, high complexity data set*
+####high complexity data set
 
 ![Precision/Recall sorted by bin size, high complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_high_common_strain.png)
 *Precision/Recall sorted by bin size, high complexity data set only common_strain*
@@ -199,25 +222,6 @@ Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size
 
 
 
-
-
-### Basepairs
-![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_1.png)
-*Assignments to different taxonomic ranks in % bp*
-![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_2.png)
-*Assignments to different taxonomic ranks in % bp*
-![Assignments to different taxonomic ranks in % bp](plots/supervised/supervised_bp_count_relative_all_3.png)
-*Assignments to different taxonomic ranks in % bp*
-
-![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_1.png)
-*Assignments to differnet taxonomic ranks in kb*
-![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_2.png)
-*Assignments to differnet taxonomic ranks in kb*
-![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_3.png)
-
-
-
-## Supplementary information
 #### ARI plots for binners
 ![Figure: ARI by genome for binners including unassigned bin](plots/unsupervised/unsupervised_ari_including_notassigned_all_1.png)
 *Figure: ARI by genome for binners including unassigned bin. Not assigned contigs/reads were assigned to a 'trash' bin and with this included in the evaluation.*
