@@ -1,5 +1,16 @@
 library('yaml')
 
+merge_anames <- function(vec_of_string)
+{
+	pattern = c("evil_yalow_", "admiring_curie_", "cocky_sammet_")
+	replace = c("fervent_sammet_1", "elated_franklin_1", "goofy_hypatia_1")
+	for (index in 1:length(pattern)){
+		#sprint(union(vec_of_string, c()))
+		vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
+	return(vec_of_string)
+}
+
+
 get_dataframe_of_tools_at <- function(directory)
 {
 	dir_path_list_results <- list.dirs(directory, full.names=T, recursive=F)
@@ -24,6 +35,8 @@ get_dataframe_of_tools_at <- function(directory)
 		text <- readLines(fp_description)
 		text <- gsub(" = ", " - ", text)
 		text <- gsub("metabat", "MetaBAT", text)
+		text <- gsub("determined_meitner - Gold Standard_0", "adoring_lalande - Gold Standard_3", text)
+
 		description <- read.table(text=text, sep='=', row.names=1, stringsAsFactors=F, col.names=c("","value"))
 		ian <- which( rownames(description) == "anonymous_name")
 		imn <- which( rownames(description) == "method_name")
@@ -32,7 +45,7 @@ get_dataframe_of_tools_at <- function(directory)
 		method_names[index] <- description$value[imn]
 		if (grepl("Gold Standard", anonymous_names[index]))
 		{
-			anonymous_names[index] <- "Gold Standard"
+			#anonymous_names[index] <- "gold_standard_0"
 			method_names[index] <- "Gold Standard"
 		}
 		dir_path_list[index] <- dir_path
@@ -124,7 +137,7 @@ get_dataframe_of_tools_at <- function(directory)
 	}
 
 	data_frame_tools <- data.frame(
-		anonymous = as.vector(list_tools$anonymous),
+		anonymous = merge_anames(as.vector(list_tools$anonymous)),
 		method = as.vector(list_tools$method),
 		dataset = as.vector(list_tools$dataset),
 		category = as.vector(list_tools$category),
