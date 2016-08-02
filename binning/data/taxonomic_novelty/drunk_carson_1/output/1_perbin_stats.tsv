@@ -1,0 +1,157 @@
+instance	class	precision	recall	predicted class size	real class size
+superkingdom	Bacteria	1.00	0.93	36989512	39804463
+superkingdom	unassigned	nan	nan	2814951	0
+phylum	Firmicutes	1.00	0.83	33017984	39804463
+phylum	Proteobacteria	0.00	nan	706360	0
+phylum	Aquificae	0.00	nan	55716	0
+phylum	Atribacteria	0.00	nan	41192	0
+phylum	Thermotogae	0.00	nan	32758	0
+phylum	unassigned	nan	nan	5950453	0
+class	Clostridia	1.00	0.72	21672545	30099738
+class	Bacilli	0.98	1.00	9931925	9704725
+class	Negativicutes	0.00	nan	367013	0
+class	Alphaproteobacteria	0.00	nan	243994	0
+class	Deltaproteobacteria	0.00	nan	188471	0
+class	Gammaproteobacteria	0.00	nan	182405	0
+class	Aquificae	0.00	nan	55716	0
+class	class_Candidatus Caldatribacteirum	0.00	nan	41192	0
+class	Thermotogae	0.00	nan	32758	0
+class	class_Firmicutes bacterium CAG:114	0.00	nan	21365	0
+class	class_Firmicutes bacterium CAG:341	0.00	nan	15609	0
+class	unassigned	nan	nan	7051470	0
+order	Clostridiales	1.00	0.67	20266089	30099738
+order	Bacillales	0.98	1.00	9918163	9704725
+order	Thermoanaerobacterales	0.00	nan	981110	0
+order	Selenomonadales	0.00	nan	367013	0
+order	Rhizobiales	0.00	nan	243994	0
+order	order_Candidatus Entotheonella	0.00	nan	97292	0
+order	Desulfobacterales	0.00	nan	91179	0
+order	Aquificales	0.00	nan	55716	0
+order	order_Candidatus Caldatribacteirum	0.00	nan	41192	0
+order	Alteromonadales	0.00	nan	36849	0
+order	Thermotogales	0.00	nan	32758	0
+order	order_Firmicutes bacterium CAG:114	0.00	nan	21365	0
+order	Enterobacteriales	0.00	nan	21019	0
+order	order_Firmicutes bacterium CAG:341	0.00	nan	15609	0
+order	Lactobacillales	0.00	nan	13762	0
+order	unassigned	nan	nan	7601353	0
+family	Peptostreptococcaceae	0.00	nan	14884567	0
+family	family_Exiguobacterium	0.00	nan	9678389	0
+family	Peptococcaceae	0.00	nan	4190854	0
+family	Clostridiaceae	0.00	nan	816371	0
+family	Thermoanaerobacterales Family III. Incertae Sedis	0.00	nan	713715	0
+family	Veillonellaceae	0.00	nan	367013	0
+family	Thermoanaerobacteraceae	0.00	nan	267395	0
+family	Eubacteriaceae	0.00	nan	198055	0
+family	Xanthobacteraceae	0.00	nan	144116	0
+family	Methylobacteriaceae	0.00	nan	99878	0
+family	Thermoactinomycetaceae	0.00	nan	98483	0
+family	family_Candidatus Entotheonella	0.00	nan	97292	0
+family	Paenibacillaceae	0.00	nan	91725	0
+family	Desulfobulbaceae	0.00	nan	91179	0
+family	Hydrogenothermaceae	0.00	nan	55716	0
+family	Ruminococcaceae	0.00	nan	54048	0
+family	Heliobacteriaceae	0.00	nan	52839	0
+family	Sporolactobacillaceae	0.00	nan	46821	0
+family	family_Candidatus Caldatribacteirum	0.00	nan	41192	0
+family	Lachnospiraceae	0.00	nan	37776	0
+family	Thermotogaceae	0.00	nan	32758	0
+family	Alteromonadaceae	0.00	nan	23659	0
+family	family_Firmicutes bacterium CAG:114	0.00	nan	21365	0
+family	Enterobacteriaceae	0.00	nan	21019	0
+family	family_Firmicutes bacterium CAG:341	0.00	nan	15609	0
+family	Enterococcaceae	0.00	nan	13762	0
+family	Shewanellaceae	0.00	nan	13190	0
+family	Staphylococcaceae	0.00	nan	2745	0
+family	unassigned	nan	nan	7632932	0
+genus	Peptoclostridium	0.00	nan	14884567	0
+genus	Exiguobacterium	0.00	nan	9678389	0
+genus	Desulfotomaculum	0.00	nan	3146479	0
+genus	Thermoanaerobacterium	0.00	nan	713715	0
+genus	Clostridium	0.00	nan	709286	0
+genus	Thermincola	0.00	nan	495075	0
+genus	Thermosinus	0.00	nan	257529	0
+genus	Acetobacterium	0.00	nan	198055	0
+genus	Ancylobacter	0.00	nan	144116	0
+genus	Thermacetogenium	0.00	nan	124921	0
+genus	Microvirga	0.00	nan	99878	0
+genus	Thermoactinomyces	0.00	nan	98483	0
+genus	Candidatus Entotheonella	0.00	nan	97292	0
+genus	Tepidanaerobacter	0.00	nan	95555	0
+genus	Desulfobulbus	0.00	nan	91179	0
+genus	Paenibacillus	0.00	nan	78998	0
+genus	Sporomusa	0.00	nan	57987	0
+genus	Persephonella	0.00	nan	55716	0
+genus	Heliobacterium	0.00	nan	52839	0
+genus	Acetonema	0.00	nan	51497	0
+genus	Faecalibacterium	0.00	nan	47314	0
+genus	Moorella	0.00	nan	46919	0
+genus	genus_[Bacillus] selenitireducens	0.00	nan	46821	0
+genus	Caloramator	0.00	nan	42223	0
+genus	Candidatus Caldatribacteirum	0.00	nan	41192	0
+genus	Butyrivibrio	0.00	nan	37776	0
+genus	Fervidicella	0.00	nan	33394	0
+genus	Fervidobacterium	0.00	nan	32758	0
+genus	Desulfosporosinus	0.00	nan	29301	0
+genus	Youngiibacter	0.00	nan	26720	0
+genus	Marinobacterium	0.00	nan	23659	0
+genus	genus_Firmicutes bacterium CAG:114	0.00	nan	21365	0
+genus	Yersinia	0.00	nan	21019	0
+genus	genus_Firmicutes bacterium CAG:341	0.00	nan	15609	0
+genus	Enterococcus	0.00	nan	13762	0
+genus	Shewanella	0.00	nan	13190	0
+genus	Brevibacillus	0.00	nan	12727	0
+genus	Syntrophobotulus	0.00	nan	7673	0
+genus	Ruminiclostridium	0.00	nan	6734	0
+genus	Alkaliphilus	0.00	nan	4748	0
+genus	Staphylococcus	0.00	nan	2745	0
+genus	unassigned	nan	nan	8145258	0
+species	[Clostridium] sticklandii	0.00	nan	14884567	0
+species	Exiguobacterium sp. MH3	0.00	nan	5088981	0
+species	Exiguobacterium sp. OS-77	0.00	nan	4365619	0
+species	Desulfotomaculum kuznetsovii	0.00	nan	2498723	0
+species	Thermoanaerobacterium xylanolyticum	0.00	nan	713715	0
+species	Thermincola potens	0.00	nan	495075	0
+species	Clostridium sp. CAG:217	0.00	nan	334380	0
+species	Desulfotomaculum acetoxidans	0.00	nan	313463	0
+species	Clostridium tetani	0.00	nan	301949	0
+species	Thermosinus carboxydivorans	0.00	nan	257529	0
+species	Exiguobacterium sp. RIT341	0.00	nan	206887	0
+species	Acetobacterium dehalogenans	0.00	nan	198055	0
+species	Ancylobacter sp. FA202	0.00	nan	144116	0
+species	Thermacetogenium phaeum	0.00	nan	124921	0
+species	Microvirga sp. BSC39	0.00	nan	99878	0
+species	Thermoactinomyces sp. Gus2-1	0.00	nan	98483	0
+species	Candidatus Entotheonella sp. TSY1	0.00	nan	97292	0
+species	Tepidanaerobacter acetatoxydans	0.00	nan	95555	0
+species	Desulfobulbus mediterraneus	0.00	nan	91179	0
+species	Clostridium ultunense	0.00	nan	72957	0
+species	Sporomusa ovata	0.00	nan	57987	0
+species	Heliobacterium modesticaldum	0.00	nan	52839	0
+species	Acetonema longum	0.00	nan	51497	0
+species	Faecalibacterium prausnitzii	0.00	nan	47314	0
+species	Moorella thermoacetica	0.00	nan	46919	0
+species	[Bacillus] selenitireducens	0.00	nan	46821	0
+species	Caloramator sp. ALD01	0.00	nan	42223	0
+species	Paenibacillus sp. 1-49	0.00	nan	42204	0
+species	Candidatus Caldatribacteirum californiense	0.00	nan	41192	0
+species	Butyrivibrio sp. MC2013	0.00	nan	37776	0
+species	Fervidicella metallireducens	0.00	nan	33394	0
+species	Fervidobacterium nodosum	0.00	nan	32758	0
+species	Desulfosporosinus orientis	0.00	nan	29301	0
+species	Paenibacillus daejeonensis	0.00	nan	27913	0
+species	Youngiibacter fragilis	0.00	nan	26720	0
+species	Marinobacterium litorale	0.00	nan	23659	0
+species	Firmicutes bacterium CAG:114	0.00	nan	21365	0
+species	Yersinia mollaretii	0.00	nan	21019	0
+species	Firmicutes bacterium CAG:341	0.00	nan	15609	0
+species	Brevibacillus laterosporus	0.00	nan	12727	0
+species	Paenibacillus larvae	0.00	nan	8881	0
+species	Desulfotomaculum reducens	0.00	nan	7673	0
+species	Syntrophobotulus glycolicus	0.00	nan	7673	0
+species	[Clostridium] clariflavum	0.00	nan	6734	0
+species	Alkaliphilus metalliredigens	0.00	nan	4748	0
+species	Staphylococcus aureus	0.00	nan	2745	0
+species	Exiguobacterium sibiricum	0.00	nan	2396	0
+species	Exiguobacterium antarcticum	0.00	nan	1131	0
+species	unassigned	nan	nan	8567921	0
