@@ -195,28 +195,28 @@ Recall was normalized in a similar way using real bin sizes.
 
 ###by bin
 ![Precision/Recall by bin, all bins](plots/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_all_ANI_all.csv): Precision/Recall by bin, all bins*
 
 ![Precision/Recall by bin, all bins only common_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_common_strain_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins only common_strain*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_common_strain_ANI_all.csv): Precision/Recall by bin, all bins only common_strain*
 
 ![Precision/Recall by bin, all bins only unique_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_unique_strain_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins only unique_strain*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_unique_strain_ANI_all.csv): Precision/Recall by bin, all bins only unique_strain*
 
 ![Precision/Recall by bin, all bins only new_order](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_order_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins only new_order*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_new_order_ANI_all.csv): Precision/Recall by bin, all bins only new_order*
 
 ![Precision/Recall by bin, all bins only new_family](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_family_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins only new_family*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_new_family_ANI_all.csv): Precision/Recall by bin, all bins only new_family*
 
 ![Precision/Recall by bin, all bins only new_genus](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_genus_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins only new_genus*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_new_genus_ANI_all.csv): Precision/Recall by bin, all bins only new_genus*
 
 ![Precision/Recall by bin, all bins only new_species](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_species_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins only new_species*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_new_species_ANI_all.csv): Precision/Recall by bin, all bins only new_species*
 
 ![Precision/Recall by bin, all bins only new_strain](plots/supervised/prec_recall_combined_all_ranks_by_bin_new_strain_ANI_all.png)
-*[Figure](tables/.csv): Precision/Recall by bin, all bins only new_strain*
+*[Figure](tables/supervised/prec_recall_combined_all_ranks_by_bin_new_strain_ANI_all.csv): Precision/Recall by bin, all bins only new_strain*
 
 Black squares give: predicted  bin size in unit 10 Gb, grey square real bin size in 10 Gb.
 
