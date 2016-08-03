@@ -92,13 +92,13 @@ Conclusion:
 ####How does taxon abundance affect performance? 
 
 ![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)
-*[Figure](tables/supervised/prec_rec_sorted_all_ranks_low_all.csv): Precision/Recall sorted by bin size, low complexity data set*
+*Figure: Precision/Recall sorted by bin size, low complexity data set*
 
 ![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
-*[Figure](tables/supervised/prec_rec_sorted_all_ranks_medium_all.csv): Precision/Recall sorted by bin size, medium complexity data set*
+*Figure: Precision/Recall sorted by bin size, medium complexity data set*
 
 ![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
-*[Figure](tables/supervised/prec_rec_sorted_all_ranks_high_all.csv): Precision/Recall sorted by bin size, high complexity data set*
+*Figure: Precision/Recall sorted by bin size, high complexity data set*
 
 
 Conclusion:
