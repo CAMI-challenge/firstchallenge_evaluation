@@ -31,7 +31,7 @@ bin_types <- c("unsupervised", "supervised")
 levels <- c("by_genome", "by_bin")
 ANIs <- c("all", "common strain", "unique strain")
 categories <- c(
-    #"unidentified circular element","unidentified plasmid", "circular element",
+    ##"unidentified circular element","unidentified plasmid", "circular element",
     "all", "unique strain", "common strain","new_family","new_genus","new_order","new_species","new_strain","virus"
     )
 
@@ -77,6 +77,7 @@ for (bin_type in bin_types) {
         ANI_data.file <- file.path(metadata.dir, "ANI", "unique_common.tsv")
         results.dir <- file.path(repo.dir, "tables")
         figures.dir <- file.path(repo.dir, "plots")
+        tables.dir <- file.path(repo.dir, "tables")
         
         # files
         suffix <- paste("_", bin_type, "_", level, "_", category, ".tsv", sep="")
@@ -107,7 +108,9 @@ for (bin_type in bin_types) {
         }
 
         if (file.exists(ref_data_high.file))  # all data exists
+        {
             ref_data_combined <- rbind(ref_data_low, ref_data_medium, ref_data_high)
+        }
         else if (file.exists(ref_data_medium.file))  # high is missing
         {
             #print(paste("Missing:", ref_data_high.file, sep=" "))
@@ -123,7 +126,8 @@ for (bin_type in bin_types) {
             #print(paste("Missing:", ref_data_low.file, sep=" "))
             next
         }
-        
+        ref_data_combined$predicted_size <- as.double(ref_data_combined$predicted_size)
+        ref_data_combined$real_size <- as.double(ref_data_combined$real_size)
         ANI_data <- read.table(ANI_data.file, header=F, sep="\t")
         colnames(ANI_data) <- c("bin", "group")
         ANI_data$bin <- gsub(".gt1kb", "", ANI_data$bin)
@@ -137,7 +141,6 @@ for (bin_type in bin_types) {
                                                              ref_data_combined$rank,
                                                              ref_data_combined$group,
                                                              sep='_'))
-            
             threshold <- 0.01
             q <- aggregate(ref_data_combined$predicted_size, by=list(ref_data_combined$binner_rank), sum)
             q[, 2] <- q[, 2]*threshold
@@ -149,7 +152,7 @@ for (bin_type in bin_types) {
                 q[i, 2] <- s[min(which(cs>q[i, 2]))]
             }
             
-            idx <- apply(ref_data_combined, 1, function(x) as.numeric(x["predicted_size"]) > q[q[, 1]==x["binner_rank"], 2])
+            idx <- apply(ref_data_combined, 1, function(x) as.numeric(x["predicted_size"]) >= q[q[, 1]==x["binner_rank"], 2])
             ref_data_combined$precision[!idx] <- NA
         
         }
@@ -211,13 +214,15 @@ for (bin_type in bin_types) {
             means <- aggregate(df, by=list(df$binner), FUN=mean, na.rm=T)
             er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
             real_sizes <- aggregate(df$real_size, by=list(df$binner), FUN=sum, na.rm=T)
-            predicted_sizes <- aggregate(df$predicted_size, by=list(df$binner), FUN=sum, na.rm=T)
+            predicted_sizes <- aggregate(df$predicted_size, by=list(df$binner), na.rm=T, FUN=sum)
             
             df <- data.frame(binner=means[, 1],
                              tool=gsub("_[0-9]*$", "", means[, 1]),
                              #dataset=dataset_labeller(means[, 1]),
-                             precision=means$precision, recall=means$recall,
-                             precision_er=er$precision, recall_er=er$recall,
+                             precision=means$precision,
+                             recall=means$recall,
+                             precision_er=er$precision,
+                             recall_er=er$recall,
                              real_size=real_sizes[, 2],
                              predicted_size=predicted_sizes[, 2])
             #print(union(df$binner, c()))
@@ -289,6 +294,19 @@ for (bin_type in bin_types) {
             filepath <- file.path(figures.dir, bin_type, filename)
             ggsave(filepath, p, width=7, height=5)
             print(filepath)
+
+            filename <- paste("prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", "csv", sep="")
+            filename <- gsub(" ", "_", filename)
+            filepath <- file.path(tables.dir, bin_type, filename)
+            df_subset <- subset(df, select = c("tool", "precision", "recall", "precision_er", "recall_er", "real_size", "predicted_size", "dataset"))
+            df_subset$tool <- factor(unlist(method_labeller(df_subset$tool)))
+            df_subset$precision <- round(df_subset$precision, digits = 3)
+            df_subset$recall <- round(df_subset$recall, digits = 3)
+            df_subset$precision_er <- round(df_subset$precision_er, digits = 3)
+            df_subset$recall_er <- round(df_subset$recall_er, digits = 3)
+            df_subset$real_size <- round(df_subset$real_size, digits = 5)
+            df_subset$predicted_size <- round(df_subset$predicted_size, digits = 5)
+            write.csv(file=filepath, x=df_subset, row.names=F)
         }
     }
 }
