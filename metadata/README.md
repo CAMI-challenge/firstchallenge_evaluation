@@ -1,5 +1,9 @@
 ## Dataset composition
 ![Figure: dataset01](dataset_composition.png "Dataset composition")
+*Figure: Dataset composition. The plot visualizes the various types of genomes and their amount within a dataset.
+Each bar correlates to the bar(s) above it.
+For example, the low complexity dataset has seven genomes of the 'strain' novelty category, 4 below an ANI of 95% and 3 above
+but none of them is artificial.*
 
 ##taxonomic_profiles
 This folder contains the taxonomic profiles of each dataset.
