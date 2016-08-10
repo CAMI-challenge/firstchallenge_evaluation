@@ -1,3 +1,6 @@
+## Dataset composition
+![Figure: dataset01](dataset_composition.png "Dataset composition")
+
 ##taxonomic_profiles
 This folder contains the taxonomic profiles of each dataset.
 An additional taxonomic profile with the abundance of circular elements removed is also provided.
