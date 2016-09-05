@@ -58,22 +58,26 @@ We next investigated the performance of taxonomic binning methods (Kraken, Megan
 ### Average Precision/Recall, shown for individual ranks and data sets
 
 ![Precision/Recall](plots/supervised/supervised_summary_all_1.png)
-*Precision/Recall*
+*Performance metrics across ranks for the LC data set*
 
 For the low complexity data set, PhyloPythiaS+ had the highest accuracy, average recall and precision, which were all above 75% from domain to family level. Kraken followed, with average recall and accuracy still above 50% down to family level, though precision was notably lower, mostly caused by prediction of many small false bins, which affected precision more than overall accuracy, as explained above. Below family level, no method performed well, with all either assigning very little (low recall and accuracy, accompanied by a low misclassification rate), or assigning with a substantial amount of misclassification. In some ways, this is surprising, as the low complexity data set is the simplest in terms of its organismal complexity (Question: eg why is taxator-tk so unprecise? what is so difficult about these data?.)
 
+![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_1.png)
+*Performance metrics across ranks for the LC data set, with smallest predicted bins summing up to 1% of entire data set removed*
+
 
 ![Precision/Recall](plots/supervised/supervised_summary_all_2.png)
-*Precision/Recall*
-![Precision/Recall](plots/supervised/supervised_summary_all_3.png)
-*Precision/Recall*
+*Performance metrics across ranks for the MC data set*
 
-![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_1.png)
-*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
 ![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_2.png)
-*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
+*Performance metrics across ranks for the MC data set, with smallest predicted bins summing up to 1% of entire data set removed*
+
+
+![Precision/Recall](plots/supervised/supervised_summary_all_3.png)
+*Performance metrics across ranks for the HC data set*
+
 ![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_3.png)
-*Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed*
+*Performance metrics across ranks for the HC data set, with smallest predicted bins summing up to 1% of entire data set removed*
 
 
 
