@@ -106,7 +106,6 @@ Contrary to profiling, this had almost no effect on overall binning results. Eve
 
 - all methods performed surprisingly well in strain-level genome reconstruction, if strains are not too closely related. Taxonomic binners performed acceptably down to the family rank. This leaves a gap in current species and genus-level reconstruction that is to be closed, also for not closely related genomes. As taxonomic binners were able to achieve better precision in genome reconstruciton than in species or genus-level binning, this raises the possibility that a larger part of the performance problem in low ranking taxon assignment might be caused by limitations of the taxonomy. ADD SOME more informed discussion here, if this seems sensible, and propositions for resolution. E.g. Should one use a phylogeny instead as a reference? Are there comparisons of the species tree to the ncbi taxonomy? Another challenge is genome deconvolution in the presence of many closely related strains, which we found to be challenging for all kinds of methods that we evaluated.
 - runtime assessment should be done in the future.
-- 
 
 
 ## Supplementary information
