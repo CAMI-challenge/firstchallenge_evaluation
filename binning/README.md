@@ -84,7 +84,7 @@ The performances of the HC data set were similar to those for the MC data set.
 Precise taxonomic binning results can be intersected with the results of binning tools for assignment of taxonomic labels to genome bins. For all data sets, taxator-tk returned few, but very precise assignments, if removing low abundance predicted bins, down to the genus level. 
 
 ####Which tools have high recall (very sensitive), also for low abundance taxa? 
-This is required when screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases, where interesting leads are further pursued by validation with experimental techniques. Even though high recall was achieved by PhyloPythiaS+ and Kraken also for low abundan bins until the rank of family, this degraded substantially for the ranks below, which are of most interest for these applications. It therefore remains an open challenge, to further improve predictive performance here.
+This is required when screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases, where interesting leads are further pursued by validation with experimental techniques. Even though high recall was achieved by PhyloPythiaS+ and Kraken also for low abundance bins until the rank of family, this degraded substantially for the ranks below, which are of most interest for these applications. It therefore remains an open challenge to further improve predictive performance here.
 
 ####Which tools are good for reconstructing taxon bins for genomes from novel species, genera, family (deep-branchers). 
 -Which tools are suitable for taxon bin recovery from “deep-branching” phyla with few reference genomes? Across taxonomic ranks.
