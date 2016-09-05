@@ -51,19 +51,17 @@ TBD
 TBD]
 
 
-## Plots for taxonomic binners
+## Performance in taxonomic binning
 ####How do we recover “good quality” bins?
 We next investigated the performance of taxonomic binning methods (Kraken, Megan, taxator-tk, PhyloPythiaS+) in recovering taxon-level bins at different ranks. These results can be used for taxon-level evolutionary or functional pangenome analyses or further conversion into taxonomic profiles. As performance metrics, again the average precision and recall were calculated for individual ranks. In addition, we determined the overall classification accuracy for the entire samples, as measured in bps, and the misclassification rate for all assignments in bps. While the former two measures allow to assess performance as averaged over bins, where all bins are treated the same irrespecitve of their sizes, the later are influenced by the actual sample taxonomic constitution, with large bins having a proportionally larger influence.
-
-### Average Precision/Recall, shown for individual ranks and data sets
 
 ![Precision/Recall](plots/supervised/supervised_summary_all_1.png)
 *Performance metrics across ranks for the LC data set*
 
-For the low complexity data set, PhyloPythiaS+ had the highest accuracy, average recall and precision, which were all above 75% from domain to family level. Kraken followed, with average recall and accuracy still above 50% down to family level, though precision was notably lower, mostly caused by prediction of many small false bins, which affected precision more than overall accuracy, as explained above. Below family level, no method performed well, with all either assigning very little (low recall and accuracy, accompanied by a low misclassification rate), or assigning with a substantial amount of misclassification. In some ways, this is surprising, as the low complexity data set is the simplest in terms of its organismal complexity (Question: eg why is taxator-tk so unprecise? what is so difficult about these data?.)
-
 ![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_1.png)
 *Performance metrics across ranks for the LC data set, with smallest predicted bins summing up to 1% of entire data set removed*
+
+For the low complexity data set, PhyloPythiaS+ had the highest accuracy, average recall and precision, which were all above 75% from domain to family level. Kraken followed, with average recall and accuracy still above 50% down to family level, though precision was notably lower, mostly caused by prediction of many small false bins, which affected precision more than overall accuracy, as explained above. If removing 1% of the data set, correspondig to the smallest predicted bins, precision notably increased for Kraken, Megan, and most strongly, for taxator-tk, for which it was above 75% until the family level. This shows that small predicted bins are not very trustworthy by current methods. Below family level, no method performed very well, with all either assigning very little (low recall and accuracy, accompanied by a low misclassification rate), or assigning with a substantial amount of misclassification. Another interesting observation is the similar performance profiles of Kraken and Megan. These methods do not share source of information used (kmer usage versus local sequence similarity scores), but use the same input (read data) and rely on similar algorithms.
 
 
 ![Precision/Recall](plots/supervised/supervised_summary_all_2.png)
