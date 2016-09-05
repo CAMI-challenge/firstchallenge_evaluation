@@ -78,25 +78,21 @@ The results for the MC data set qualitatively agree with those for the LC data s
 ![Precision/Recall, with smallest predicted bins summing up to 1% of entire data set removed](plots/supervised/supervised_summary_all_99_3.png)
 *Performance metrics across ranks for the HC data set, with smallest predicted bins summing up to 1% of entire data set removed*
 
-
 The performances of the HC data set were similar to those for the MC data set.
 
+####Which tools return very precise bins, with few sequences of other taxa included? 
+Precise taxonomic binning results can be intersected with the results of binning tools for assignment of taxonomic labels to genome bins. For all data sets, taxator-tk returned few, but very precise assignments, if removing low abundance predicted bins, down to the genus level. 
 
-####Which tools return very precise bins, with few sequences of other taxa included? For all data sets, taxator-tk returned few, but very precise assignments, if removing low abundance predicted bins, down to the genus level. 
+####Which tools have high recall (very sensitive), also for low abundance taxa? 
+This is required when screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases, where interesting leads are further pursued by validation with experimental techniques. Even though high recall was achieved by PhyloPythiaS+ and Kraken also for low abundan bins until the rank of family, this degraded substantially for the ranks below, which are of most interest for these applications. It therefore remains an open challenge, to further improve predictive performance here.
 
-
-####Which tools have high recall (very sensitive), also fo low abundance taxa? Good for screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases.
-PhyloPythiaS+ and Kraken had the highest average recall, also with many low abundance bins included across all data sets.
-
- 
 ####Which tools are good for reconstructing taxon bins for genomes from novel species, genera, family (deep-branchers). 
-
 -Which tools are suitable for taxon bin recovery from “deep-branching” phyla with few reference genomes? Across taxonomic ranks.
 Conclusion: 
 
 
 
-### Are there trends evident by approach?
+####Are there trends evident by approach?
 -e.g. read based methods versus methods run on assembled sequences (Megan and Kraken versus PPSP and taxator-tk), homology-based methods versus kmer methods (not really, e.g. Megan and taxator-tk versus Kraken and PhyloPythiaS+), LCA-using methods (also Megan and Kraken versus others).
 
 ####How does the presence of viral material, plasmids and other circular elements affect the taxonomic binning results? 
