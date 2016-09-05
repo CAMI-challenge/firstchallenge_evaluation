@@ -79,17 +79,15 @@ The results for the MC data set qualitatively agree with those for the LC data s
 *Performance metrics across ranks for the HC data set, with smallest predicted bins summing up to 1% of entire data set removed*
 
 
+The performances of the HC data set were similar to those for the MC data set.
 
 
-Conclusion: 
+####Which tools return very precise bins, with few sequences of other taxa included? For all data sets, taxator-tk returned few, but very precise assignments, if removing low abundance predicted bins, down to the genus level. 
 
-Which tools return very precise bins, with few sequences of other taxa included?
 
-Conclusion: 
+####Which tools have high recall (very sensitive), also fo low abundance taxa? Good for screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases.
+PhyloPythiaS+ and Kraken had the highest average recall, also with many low abundance bins included across all data sets.
 
-•Which tools have high recall (very sensitive)? Good for screening for pathogens, in diagnostic settings, or for ancient metagenomics studies of human diseases.
--Which tools have high recall for low abundant taxa?
-Conclusion:
  
 ####Which tools are good for reconstructing taxon bins for genomes from novel species, genera, family (deep-branchers). 
 
@@ -97,26 +95,13 @@ Conclusion:
 Conclusion: 
 
 
-####How does taxon abundance affect performance? 
-
-![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)
-*Figure: Precision/Recall sorted by bin size, low complexity data set*
-
-![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
-*Figure: Precision/Recall sorted by bin size, medium complexity data set*
-
-![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
-*Figure: Precision/Recall sorted by bin size, high complexity data set*
-
-
-Conclusion:
 
 ### Are there trends evident by approach?
 -e.g. read based methods versus methods run on assembled sequences (Megan and Kraken versus PPSP and taxator-tk), homology-based methods versus kmer methods (not really, e.g. Megan and taxator-tk versus Kraken and PhyloPythiaS+), LCA-using methods (also Megan and Kraken versus others).
 
-####How does viral material affect the taxonomic binning results? 
+####How does the presence of viral material, plasmids and other circular elements affect the taxonomic binning results? 
 
-Conclusion: Contrary to profiling, this has no effect on overall binning results, as even though the copy numbers of plasmids and viral data are substantial, in terms of sequence size the fraction of viral, plasmid and unassigned data is small (Supplementary table on abundances).
+Contrary to profiling, this had almost no effect on overall binning results. Even though the copy numbers of plasmids and viral data are substantial, in terms of sequence size the fraction of viral, plasmid and unassigned data is very small (Supplementary table on abundances).
 
 
 ## Conclusions
@@ -125,6 +110,7 @@ Conclusion: Contrary to profiling, this has no effect on overall binning results
 
 - all methods performed surprisingly well in strain-level genome reconstruction, if strains are not too closely related. Taxonomic binners performed acceptably down to the family rank. This leaves a gap in current species and genus-level reconstruction that is to be closed, also for not closely related genomes. As taxonomic binners were able to achieve better precision in genome reconstruciton than in species or genus-level binning, this raises the possibility that a larger part of the performance problem in low ranking taxon assignment might be caused by limitations of the taxonomy. ADD SOME more informed discussion here, if this seems sensible, and propositions for resolution. E.g. Should one use a phylogeny instead as a reference? Are there comparisons of the species tree to the ncbi taxonomy? Another challenge is genome deconvolution in the presence of many closely related strains, which we found to be challenging for all kinds of methods that we evaluated.
 - runtime assessment should be done in the future.
+- 
 
 
 ## Supplementary information
@@ -145,6 +131,17 @@ Conclusion: Contrary to profiling, this has no effect on overall binning results
 ![Assignments to differnet taxonomic ranks in kb](plots/supervised/supervised_bp_count_absolute_all_3.png)
 
 ## Taxonomic assignments sorted by bin size:
+
+####How does taxon abundance affect performance? 
+
+![Precision/Recall sorted by bin size, low complexity data set](plots/supervised/prec_rec_sorted_all_ranks_low_all.png)
+*Figure: Precision/Recall sorted by bin size, low complexity data set*
+
+![Precision/Recall sorted by bin size, medium complexity data set](plots/supervised/prec_rec_sorted_all_ranks_medium_all.png)
+*Figure: Precision/Recall sorted by bin size, medium complexity data set*
+
+![Precision/Recall sorted by bin size, high complexity data set](plots/supervised/prec_rec_sorted_all_ranks_high_all.png)
+*Figure: Precision/Recall sorted by bin size, high complexity data set*
 ####low complexity data set
 
 ![Precision/Recall sorted by bin size, low complexity data set only common_strain](plots/supervised/prec_rec_sorted_all_ranks_low_common_strain.png)
