@@ -42,11 +42,11 @@ For the taxonomic binners, precision and recall also dropped notably. PhyloPythi
 
 Overall, the presence of multiple related strains in a metagenome sample had a substantial effect on the quality of reconstructed genomes, both if using binning or taxonomic binning tools. Vey high quality genome reconstructions are attainable with binning methods for the genomes of "unique" strains, while the presence of several, closely related strains in a sample presents a notable hurdle to current methods. Taxonomic binners had lower recall than binners for genome reconstructions, likely also due to limitations of the reference taxonomy, with similar precisions reached, thus delivering high quality, partial genome bins. 
 
-####How does genome abundance affect performance?
+[####How does genome abundance affect performance?
 TBD
 
 ####Are there performance trends evident based on the kind of approaches the tools use? 
-
+TBD]
 
 
 ## Plots for taxonomic binners
