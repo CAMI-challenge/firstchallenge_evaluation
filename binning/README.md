@@ -1,3 +1,5 @@
+NOTE: This document is to be synched with the CAMI binning results on google drive
+
 ## Results of the binning challenge
 
 Current metagenome assembly and scaffolding methods return mixtures of variable length fragments originating from individual genomes of a sequenced microbiome. Metagenome binning algorithms were thus devised to tackle the problem of "binning" these according to their taxonomic origins. These  “bins”, or sets of assembled sequences and reads in the best case group data from individual strains or higher-ranking taxa present in the sequenced microbial community.  Such bin reconstruction allows the subsequent analysis of the genomes and pangenomes of different microbial community members. While binning methods group sequences into bins without assignment of taxonomic labels, taxonomic binning methods group sequences into bins with a taxonomic label attached. Reference taxonomies used by the taxonomic binners, such as the NCBI taxonomy used here, allowed determination of taxonomic bins from species to domain-level, while strain-level taxon assignment is currently not supported. 
@@ -51,13 +53,16 @@ TBD]
 
 ## Plots for taxonomic binners
 ####How do we recover “good quality” bins?
-
--on average (best tradeoff), across taxonomic ranks
+We next investigated the performance of taxonomic binning methods (Kraken, Megan, taxator-tk, PhyloPythiaS+) in recovering taxon-level bins at different ranks. These results can be used for taxon-level evolutionary or functional pangenome analyses or further conversion into taxonomic profiles. As performance metrics, again the average precision and recall were calculated for individual ranks. In addition, we determined the overall classification accuracy for the entire samples, as measured in bps, and the misclassification rate for all assignments in bps. While the former two measures allow to assess performance as averaged over bins, where all bins are treated the same irrespecitve of their sizes, the later are influenced by the actual sample taxonomic constitution, with large bins having a proportionally larger influence.
 
 ### Average Precision/Recall, shown for individual ranks and data sets
 
 ![Precision/Recall](plots/supervised/supervised_summary_all_1.png)
 *Precision/Recall*
+
+For the low complexity data set, PhyloPythiaS+ had the highest accuracy, average recall and precision, generally above 75% from domain to family level. Kraken followed, with average recall and accuracy still above 50% down to family level, though precision was notably lower, mostly caused by prediction of many small false bins, which affected precision more than overall accuracy, as explained above. 
+
+
 ![Precision/Recall](plots/supervised/supervised_summary_all_2.png)
 *Precision/Recall*
 ![Precision/Recall](plots/supervised/supervised_summary_all_3.png)
@@ -102,6 +107,9 @@ Conclusion:
 
 
 Conclusion:
+
+### Are there trends evident by approach?
+-e.g. read based methods versus methods run on assembled sequences (Megan and Kraken versus PPSP and taxator-tk), homology-based methods versus kmer methods (not really, e.g. Megan and taxator-tk versus Kraken and PhyloPythiaS+), LCA-using methods (also Megan and Kraken versus others).
 
 ####How does viral material affect the taxonomic binning results? 
 
