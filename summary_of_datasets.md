@@ -41,6 +41,6 @@ high:
     artificial genomes: 54
     circular elements: 478
     distribution: timeseries of log (https://github.com/CAMI-challenge/MetagenomeSimulationPipeline/wiki/Distribution-of-genomes#timeseries-lognormal)
-        mean: 1
-        standard deviation: 2
+        mean: 1.5
+        standard deviation: 1
         circular elements have 15 times higher abundance then genomes
