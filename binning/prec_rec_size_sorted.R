@@ -14,6 +14,15 @@ library("gridExtra")
 library("splines")
 library("MASS")
 
+color_scheme= c(
+	"#e41a1c",
+	"#377eb8",
+	"#4daf4a",
+	"#984ea3",
+	"#ff7f00",
+	"#f781bf",
+	"#a65628")
+
 complexity_levels <- c("low", "medium", "high")
 categories <- c(
     #"unidentified circular element","unidentified plasmid", "circular element",
@@ -31,8 +40,8 @@ level <- "by_bin"
 bin_type <- "supervised"    
 filter_tail <- F
 best_only <- T
-all_ranks_combined <- T
-device <- "png"
+all_ranks_combined <- F
+device <- "pdf"
 
 # method labels
 source(file.path(repo.dir, "parse_raw_result_data.R"))
@@ -223,6 +232,7 @@ for (complexity_level in complexity_levels) {
         p1 <- ggplot(df, aes(x=norm_pred_size_cumsum, y=precision, color=binner, fill=binner)) +
               geom_point(alpha=points_alpha, shape=19, size=0.5) +
               geom_hline(yintercept=-0.05) +
+              scale_colour_manual(values=color_scheme) +
               scale_y_continuous(labels=percent) +
               facet_grid(binner ~ ., labeller=as_labeller(method_labeller)) +
               labs(x="accumulated bin size") +
@@ -238,6 +248,7 @@ for (complexity_level in complexity_levels) {
         p2 <- ggplot(df, aes(x=norm_pred_size_cumsum, y=recall, color=binner, fill=binner)) +
               geom_point(alpha=points_alpha, shape=19, size=0.5) +
               geom_hline(yintercept=-0.05) +
+              scale_colour_manual(values=color_scheme) +
               scale_y_continuous(labels=percent) +
               facet_grid(binner ~ ., labeller=as_labeller(method_labeller)) +
               labs(x="accumulated bin size") +
@@ -250,7 +261,10 @@ for (complexity_level in complexity_levels) {
          
         pg1 <- grid.arrange(p1, p2, ncol=2)
         
-        filename <- paste("prec_rec_sorted_", rank, "_", complexity_level, "_", category, ".", device, sep="")
+        type_prefix <- ""
+        if (bin_type=="supervised") type_prefix <- "taxbinner"
+        if (bin_type=="unsupervised") type_prefix <- "binner"
+        filename <- paste(type_prefix, "_", "prec_rec_sorted_", rank, "_", complexity_level, "_", category, ".", device, sep="")
         filename <- gsub(" ", "_", filename)
         filepath <- file.path(figures.dir, bin_type, filename)
         ggsave(filepath, pg1, width=16, height=10)

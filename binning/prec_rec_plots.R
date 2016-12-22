@@ -12,11 +12,27 @@ library("scales")
 library("grid")
 
 # options
+#color_scheme= c("#1b9e77","#d95f02","#7570b3","#e7298a","#66a61e","#e6ab02")
 
+color_scheme= c(
+	"#e41a1c",
+	"#377eb8",
+	"#4daf4a",
+	"#984ea3",
+	"#ff7f00",
+	"#a65628")
+#
+#
+#
+#
+#
+#
 merge_names <- function(vec_of_string)
 {
-    pattern = c("CONCOCT.*", "taxator-tk.*")
-    replace = c("CONCOCT", "taxator-tk")
+    pattern = c("CONCOCT.*", "taxator-tk 1.3.0e.*", "taxator-tk 1.4pre1e.*")
+    replace = c("CONCOCT", "taxator-tk 1.3.0e", "taxator-tk 1.4pre1e")
+    #pattern = c("CONCOCT.*", "taxator-tk.*")
+    #replace = c("CONCOCT", "taxator-tk")
     for (index in 1:length(pattern)){
         vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
     return(vec_of_string)
@@ -24,15 +40,22 @@ merge_names <- function(vec_of_string)
 
 filter_tail <- T
 best_only <- T
-all_ranks_combined <- T
-device <- "png"
+all_ranks_combined <- F
+device <- "pdf"
 
 bin_types <- c("unsupervised", "supervised")
+#bin_types <- c("unsupervised")
 levels <- c("by_genome", "by_bin")
-ANIs <- c("all", "common strain", "unique strain")
+ANIs <- c("all"#, 
+#		"common strain", "unique strain"
+		)
+#ANIs <- c("all")
 categories <- c(
     ##"unidentified circular element","unidentified plasmid", "circular element",
-    "all", "unique strain", "common strain","new_family","new_genus","new_order","new_species","new_strain","virus"
+    "all", "unique strain", 
+	"common strain","new_family","new_genus","new_order","new_species",
+	"new_strain"
+#,"virus"
     )
 
 repo.dir <- dirname(sys.frame(1)$ofile)
@@ -45,12 +68,13 @@ for (bin_type in bin_types) {
     if (bin_type=="supervised") rawdata.dir <- file.path(repo.dir, "/data/taxonomic/")
     if (bin_type=="unsupervised") rawdata.dir <- file.path(repo.dir, "/data/unsupervised/")
     df_tools <- get_dataframe_of_tools_at_locations(rawdata.dir)
-    method_labels <- df_tools$method
+    #method_labels <- df_tools$method
+    method_labels <- paste(df_tools$method, df_tools$version)
     method_labels <- merge_names(method_labels)
     names(method_labels) <- gsub("_[0-9]*$", "", df_tools$anonymous)
     labeller <- function(variables)
     {
-        rvalue <- strtrim(method_labels[variables], 17)
+        rvalue <- method_labels[variables]# strtrim(method_labels[variables], 17)
         return(rvalue)
     }
     method_labeller <- as_labeller(labeller)
@@ -135,7 +159,6 @@ for (bin_type in bin_types) {
         # remove small bins (<= 1% pred. size) for each tool_parameter_set / rank combination
         
         if (filter_tail) {
-            
             ref_data_combined <- within(ref_data_combined,
                                         binner_rank <- paste(ref_data_combined$binner,
                                                              ref_data_combined$rank,
@@ -154,7 +177,7 @@ for (bin_type in bin_types) {
             
             idx <- apply(ref_data_combined, 1, function(x) as.numeric(x["predicted_size"]) >= q[q[, 1]==x["binner_rank"], 2])
             ref_data_combined$precision[!idx] <- NA
-        
+            #ref_data_combined$recall[!idx] <- NA
         }
         
         if (level=="by_genome") {
@@ -201,7 +224,6 @@ for (bin_type in bin_types) {
         if (all_ranks_combined) ref_data_combined$rank <- "all_ranks"
         
         for (rank in unique(ref_data_combined$rank)) {
-        
             # plot precision / recall scatter plot combined per rank
             
             title <- paste("precision / recall", "\n(rank=", rank, "; bin_type=", bin_type,
@@ -215,6 +237,7 @@ for (bin_type in bin_types) {
             er <- aggregate(df, by=list(df$binner), FUN=sem, na.rm=T)
             real_sizes <- aggregate(df$real_size, by=list(df$binner), FUN=sum, na.rm=T)
             predicted_sizes <- aggregate(df$predicted_size, by=list(df$binner), na.rm=T, FUN=sum)
+			m1 <- means
             
             df <- data.frame(binner=means[, 1],
                              tool=gsub("_[0-9]*$", "", means[, 1]),
@@ -264,8 +287,8 @@ for (bin_type in bin_types) {
        #print(df) 
             #dodge_small <- position_dodge(.2) , position=dodge_small
             p <- ggplot(df, aes(x=precision, y=recall, color=tool, fill=tool, shape=dataset)) +
-                 geom_hline(yintercept=seq(0, 2, by=0.1), colour="grey90") +
-                 geom_vline(xintercept=seq(0, 2, by=0.1), colour="grey90") +
+                 geom_hline(yintercept=seq(0, 1, by=0.1), colour="grey90") +
+                 geom_vline(xintercept=seq(0, 1, by=0.1), colour="grey90") +
                  geom_errorbarh(aes(xmin=precision-precision_er,
                                     xmax=precision+precision_er),
                                 size=bars_size, alpha=bars_alpha, height=0) +
@@ -274,7 +297,8 @@ for (bin_type in bin_types) {
                                size=bars_size, alpha=bars_alpha, width=0) +
                  scale_x_continuous(labels=percent, limits=c(0.0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
                  scale_y_continuous(labels=percent, limits=c(0, 1), breaks=seq(0,1, 0.2), expand = c( 0.01 , 0.01 )) +
-                 scale_color_discrete(labels = method_labeller) +
+                 scale_colour_manual(values=color_scheme, labels = method_labeller) +
+                 #scale_color_discrete(values=color_scheme, labels = method_labeller) +
                  scale_fill_discrete(labels = method_labeller, guide=FALSE) +
                  #scale_shape_discrete(labels = dataset_labeller) +
                  scale_shape(solid = FALSE) +
@@ -288,25 +312,28 @@ for (bin_type in bin_types) {
                  main_theme +
                  theme(legend.position="right",
                        title=element_text(size=8))
-            
-            filename <- paste("prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", device, sep="")
+
+            type_prefix <- ""
+            if (bin_type=="supervised") type_prefix <- "taxbinner"
+            if (bin_type=="unsupervised") type_prefix <- "binner"
+            filename <- paste(type_prefix, "_", "prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", device, sep="")
             filename <- gsub(" ", "_", filename)
             filepath <- file.path(figures.dir, bin_type, filename)
             ggsave(filepath, p, width=7, height=5)
             print(filepath)
 
-            filename <- paste("prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", "csv", sep="")
-            filename <- gsub(" ", "_", filename)
-            filepath <- file.path(tables.dir, bin_type, filename)
-            df_subset <- subset(df, select = c("tool", "precision", "recall", "precision_er", "recall_er", "real_size", "predicted_size", "dataset"))
-            df_subset$tool <- factor(unlist(method_labeller(df_subset$tool)))
-            df_subset$precision <- round(df_subset$precision, digits = 3)
-            df_subset$recall <- round(df_subset$recall, digits = 3)
-            df_subset$precision_er <- round(df_subset$precision_er, digits = 3)
-            df_subset$recall_er <- round(df_subset$recall_er, digits = 3)
-            df_subset$real_size <- round(df_subset$real_size, digits = 5)
-            df_subset$predicted_size <- round(df_subset$predicted_size, digits = 5)
-            write.csv(file=filepath, x=df_subset, row.names=F)
+            #filename <- paste(type_prefix, "_", "prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", "csv", sep="")
+            #filename <- gsub(" ", "_", filename)
+            #filepath <- file.path(tables.dir, bin_type, filename)
+            #df_subset <- subset(df, select = c("tool", "precision", "recall", "precision_er", "recall_er", "real_size", "predicted_size", "dataset", "binner"))
+            #df_subset$tool <- factor(unlist(method_labeller(df_subset$tool)))
+            #df_subset$precision <- round(df_subset$precision, digits = 3)
+            #df_subset$recall <- round(df_subset$recall, digits = 3)
+            #df_subset$precision_er <- round(df_subset$precision_er, digits = 3)
+            #df_subset$recall_er <- round(df_subset$recall_er, digits = 3)
+            #df_subset$real_size <- round(df_subset$real_size, digits = 5)
+            #df_subset$predicted_size <- round(df_subset$predicted_size, digits = 5)
+            #write.csv(file=filepath, x=df_subset, row.names=F)
         }
     }
 }
