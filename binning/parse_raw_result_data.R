@@ -2,8 +2,8 @@ library('yaml')
 
 merge_anames <- function(vec_of_string)
 {
-	pattern = c("evil_yalow_", "admiring_curie_", "cocky_sammet_")
-	replace = c("fervent_sammet_1", "elated_franklin_1", "goofy_hypatia_1")
+	pattern = c("evil_yalow_", "admiring_curie_", "cocky_sammet_", "drunk_carson_")
+	replace = c("fervent_sammet_1", "elated_franklin_1", "goofy_hypatia_1", "prickly_fermi_1")
 	for (index in 1:length(pattern)){
 		#sprint(union(vec_of_string, c()))
 		vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
@@ -18,6 +18,7 @@ get_dataframe_of_tools_at <- function(directory)
 	# read description
 	anonymous_names <- c()
 	method_names <- c()
+	method_version <- c()
 	pool_names <- c()
 	dir_path_list <- c()
 
@@ -41,8 +42,14 @@ get_dataframe_of_tools_at <- function(directory)
 		ian <- which( rownames(description) == "anonymous_name")
 		imn <- which( rownames(description) == "method_name")
 		ipn <- which( rownames(description) == "pool_name")
+		ive <- which( rownames(description) == "version")
 		anonymous_names[index] <- description$value[ian]
 		method_names[index] <- description$value[imn]
+		method_version[index] <- ""
+		if (length(ive) > 0)
+		{
+			method_version[index] <- description$value[ive]
+		}
 		if (grepl("Gold Standard", anonymous_names[index]))
 		{
 			#anonymous_names[index] <- "gold_standard_0"
@@ -64,6 +71,7 @@ get_dataframe_of_tools_at <- function(directory)
 		anonymous <- anonymous_names[index]
 		method <- method_names[index]
 		dataset <- pool_names[index]
+		version <- method_version[index]
 		#print(dir_path)
 		category <- "all"
 		fp_yaml <- file.path(dir_path, "output", "biobox.yaml")
@@ -78,6 +86,7 @@ get_dataframe_of_tools_at <- function(directory)
 				}
 				list_tools$anonymous[entry_count] <- anonymous
 				list_tools$method[entry_count] <- method
+				list_tools$version[entry_count] <- version
 				list_tools$dataset[entry_count] <- dataset
 				list_tools$category[entry_count] <- category
 				list_tools$file[entry_count] <- file.path(dir_path, "output", result$value)
@@ -128,6 +137,7 @@ get_dataframe_of_tools_at <- function(directory)
 		{
 			list_tools$anonymous[entry_count] <- anonymous
 			list_tools$method[entry_count] <- method
+			list_tools$version[entry_count] <- version
 			list_tools$dataset[entry_count] <- dataset
 			list_tools$category[entry_count] <- category
 			list_tools$file[entry_count] <- file_path_by_genome
@@ -139,6 +149,7 @@ get_dataframe_of_tools_at <- function(directory)
 	data_frame_tools <- data.frame(
 		anonymous = merge_anames(as.vector(list_tools$anonymous)),
 		method = as.vector(list_tools$method),
+		version = as.vector(list_tools$version),
 		dataset = as.vector(list_tools$dataset),
 		category = as.vector(list_tools$category),
 		file = as.vector(list_tools$file),
