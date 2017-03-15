@@ -45,7 +45,8 @@ device <- "pdf"
 
 bin_types <- c("unsupervised", "supervised")
 #bin_types <- c("unsupervised")
-levels <- c("by_genome", "by_bin")
+#levels <- c("by_genome", "by_bin")
+levels <- c("by_genome")
 ANIs <- c("all"#, 
 #		"common strain", "unique strain"
 		)

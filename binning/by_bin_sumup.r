@@ -21,7 +21,8 @@ get_data_table <- function(data)
 	return(sumup)
 }
 
-levels <- c("by_bin", "by_genome")
+# levels <- c("by_bin", "by_genome")
+levels <- c("by_genome")
 bin_types <- c(
 	"supervised",
 	"supervised",
