@@ -144,6 +144,19 @@ get_dataframe_of_tools_at <- function(directory)
 			list_tools$datatype[entry_count] <- "by_genome"
 			entry_count <- entry_count+1
 		}
+
+		file_path_by_genome <- file.path(dir_path, "output", "by_genome_weighted.tsv")		
+		if (file.exists(file_path_by_genome))
+		{
+			list_tools$anonymous[entry_count] <- anonymous
+			list_tools$method[entry_count] <- method
+			list_tools$version[entry_count] <- version
+			list_tools$dataset[entry_count] <- dataset
+			list_tools$category[entry_count] <- category
+			list_tools$file[entry_count] <- file_path_by_genome
+			list_tools$datatype[entry_count] <- "by_genome_weighted"
+			entry_count <- entry_count+1
+		}
 	}
 
 	data_frame_tools <- data.frame(
