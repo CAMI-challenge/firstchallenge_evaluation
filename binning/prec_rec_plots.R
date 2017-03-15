@@ -40,8 +40,8 @@ merge_names <- function(vec_of_string)
 
 filter_tail <- T
 best_only <- T
-all_ranks_combined <- F
-device <- "png"
+all_ranks_combined <- T
+device <- "pdf"
 
 bin_types <- c("unsupervised", "supervised")
 #bin_types <- c("unsupervised")
