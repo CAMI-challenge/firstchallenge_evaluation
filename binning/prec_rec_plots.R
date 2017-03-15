@@ -41,14 +41,14 @@ merge_names <- function(vec_of_string)
 filter_tail <- T
 best_only <- T
 all_ranks_combined <- F
-device <- "pdf"
+device <- "png"
 
 bin_types <- c("unsupervised", "supervised")
 #bin_types <- c("unsupervised")
 #levels <- c("by_genome", "by_bin")
 levels <- c("by_genome")
-ANIs <- c("all"#, 
-#		"common strain", "unique strain"
+ANIs <- c("all", 
+		"common strain", "unique strain"
 		)
 #ANIs <- c("all")
 categories <- c(
