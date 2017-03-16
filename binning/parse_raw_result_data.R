@@ -80,6 +80,11 @@ get_dataframe_of_tools_at <- function(directory)
 			yaml_data <- yaml.load_file(fp_yaml)
 			for (result in yaml_data$results)
 			{
+				file_path <- file.path(dir_path, "output", result$value)
+				if (!file.exists(file_path))
+				{
+					next
+				}
 				if (!is.null(result$category))
 				{
 					category <- as.character(result$category)
@@ -89,7 +94,7 @@ get_dataframe_of_tools_at <- function(directory)
 				list_tools$version[entry_count] <- version
 				list_tools$dataset[entry_count] <- dataset
 				list_tools$category[entry_count] <- category
-				list_tools$file[entry_count] <- file.path(dir_path, "output", result$value)
+				list_tools$file[entry_count] <- file_path
 				list_tools$datatype[entry_count] <- "unknown"
 
 				if (grepl("summary_stats.tsv", result$value))
