@@ -56,9 +56,10 @@ datasets <- c(
 	"1st CAMI Challenge Dataset 3 CAMI_high"
 	)
 names(datasets) <- c("low", "medium", "high")
-#argv <- commandArgs(TRUE)
+argv <- commandArgs(TRUE)
 #output_dir <- argv[1]
-root_dir <- "."
+#root_dir <- "."
+root_dir <- argv[1]
 output_dir <- file.path(root_dir, "tables")
 
 

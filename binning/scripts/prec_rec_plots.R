@@ -59,8 +59,9 @@ categories <- c(
 #,"virus"
     )
 
-repo.dir <- dirname(sys.frame(1)$ofile)
-source(file.path(repo.dir, "parse_raw_result_data.R"))
+repo.dir <- file.path(dirname(sys.frame(1)$ofile), "..")
+script.dir <- dirname(sys.frame(1)$ofile)
+source(file.path(script.dir, "parse_raw_result_data.R"))
 
 for (bin_type in bin_types) {
     
@@ -323,18 +324,18 @@ for (bin_type in bin_types) {
             ggsave(filepath, p, width=7, height=5)
             print(filepath)
 
-            #filename <- paste(type_prefix, "_", "prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", "csv", sep="")
-            #filename <- gsub(" ", "_", filename)
-            #filepath <- file.path(tables.dir, bin_type, filename)
-            #df_subset <- subset(df, select = c("tool", "precision", "recall", "precision_er", "recall_er", "real_size", "predicted_size", "dataset", "binner"))
-            #df_subset$tool <- factor(unlist(method_labeller(df_subset$tool)))
-            #df_subset$precision <- round(df_subset$precision, digits = 3)
-            #df_subset$recall <- round(df_subset$recall, digits = 3)
-            #df_subset$precision_er <- round(df_subset$precision_er, digits = 3)
-            #df_subset$recall_er <- round(df_subset$recall_er, digits = 3)
-            #df_subset$real_size <- round(df_subset$real_size, digits = 5)
-            #df_subset$predicted_size <- round(df_subset$predicted_size, digits = 5)
-            #write.csv(file=filepath, x=df_subset, row.names=F)
+            filename <- paste(type_prefix, "_", "prec_recall_combined_", rank, "_", level, "_", category, "_ANI_", ANI, ".", "csv", sep="")
+            filename <- gsub(" ", "_", filename)
+            filepath <- file.path(tables.dir, "plot", bin_type, filename)
+            df_subset <- subset(df, select = c("tool", "precision", "recall", "precision_er", "recall_er", "real_size", "predicted_size", "dataset", "binner"))
+            df_subset$tool <- factor(unlist(method_labeller(df_subset$tool)))
+            df_subset$precision <- round(df_subset$precision, digits = 3)
+            df_subset$recall <- round(df_subset$recall, digits = 3)
+            df_subset$precision_er <- round(df_subset$precision_er, digits = 3)
+            df_subset$recall_er <- round(df_subset$recall_er, digits = 3)
+            df_subset$real_size <- round(df_subset$real_size, digits = 5)
+            df_subset$predicted_size <- round(df_subset$predicted_size, digits = 5)
+            write.csv(file=filepath, x=df_subset, row.names=F)
         }
     }
 }

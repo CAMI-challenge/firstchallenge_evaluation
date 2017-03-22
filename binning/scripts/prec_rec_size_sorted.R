@@ -30,7 +30,8 @@ categories <- c(
     )
 
 # directories
-repo.dir <- dirname(sys.frame(1)$ofile)
+repo.dir <- file.path(dirname(sys.frame(1)$ofile), "..")
+script.dir <- dirname(sys.frame(1)$ofile)
 metadata.dir <- file.path(repo.dir, "..", "metadata")
 results.dir <- file.path(repo.dir, "tables")
 figures.dir <- file.path(repo.dir, "plots")
@@ -44,7 +45,7 @@ all_ranks_combined <- F
 device <- "pdf"
 
 # method labels
-source(file.path(repo.dir, "parse_raw_result_data.R"))
+source(file.path(script.dir, "parse_raw_result_data.R"))
 if (bin_type=="supervised") rawdata.dir <- file.path(repo.dir, "/data/taxonomic/")
 if (bin_type=="unsupervised") rawdata.dir <- file.path(repo.dir, "/data/unsupervised/")
 df_tools <- get_dataframe_of_tools_at_locations(rawdata.dir)
