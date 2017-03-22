@@ -1,4 +1,4 @@
-# crate all plots:
+# Create all plots:
 ```
 ./make.sh
 ```
