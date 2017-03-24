@@ -1,0 +1,153 @@
+Precision
+MaxBin 2.0 	 0.946
+MetaWatt-3.5 	 0.837
+MetaBAT 	 0.822
+CONCOCT 	 0.813
+MyCC 	 0.749
+
+Recall
+MaxBin 2.0 	 0.661
+CONCOCT 	 0.560
+MyCC 	 0.541
+MetaBAT 	 0.513
+MetaWatt-3.5 	 0.490
+
+Precision + Recall
+MaxBin 2.0 	 1.608
+CONCOCT 	 1.373
+MetaBAT 	 1.335
+MetaWatt-3.5 	 1.327
+MyCC 	 1.290
+
+----superkingdom----
+Precision
+taxator-tk 	 1.000
+Kraken 	 0.998
+PhyloPythiaS+ 	 0.997
+MEGAN 	 0.995
+
+Recall
+PhyloPythiaS+ 	 0.885
+Kraken 	 0.831
+MEGAN 	 0.650
+taxator-tk 	 0.155
+
+Precision + Recall
+PhyloPythiaS+ 	 1.882
+Kraken 	 1.829
+MEGAN 	 1.645
+taxator-tk 	 1.155
+
+----family----
+Precision
+taxator-tk 	 0.938
+PhyloPythiaS+ 	 0.854
+Kraken 	 0.633
+MEGAN 	 0.556
+
+Recall
+PhyloPythiaS+ 	 0.839
+Kraken 	 0.725
+MEGAN 	 0.345
+taxator-tk 	 0.111
+
+Precision + Recall
+PhyloPythiaS+ 	 1.694
+Kraken 	 1.358
+taxator-tk 	 1.049
+MEGAN 	 0.901
+
+----species----
+Precision
+taxator-tk 	 1.000
+PhyloPythiaS+ 	 0.283
+Kraken 	 0.040
+MEGAN 	 0.027
+
+Recall
+Kraken 	 0.816
+PhyloPythiaS+ 	 0.801
+MEGAN 	 0.193
+taxator-tk 	 0.081
+
+Precision + Recall
+PhyloPythiaS+ 	 1.083
+taxator-tk 	 1.081
+Kraken 	 0.856
+MEGAN 	 0.220
+
+----order----
+Precision
+taxator-tk 	 0.991
+PhyloPythiaS+ 	 0.933
+MEGAN 	 0.786
+Kraken 	 0.735
+
+Recall
+PhyloPythiaS+ 	 0.909
+Kraken 	 0.762
+MEGAN 	 0.422
+taxator-tk 	 0.124
+
+Precision + Recall
+PhyloPythiaS+ 	 1.842
+Kraken 	 1.496
+MEGAN 	 1.208
+taxator-tk 	 1.115
+
+----phylum----
+Precision
+taxator-tk 	 0.978
+PhyloPythiaS+ 	 0.977
+MEGAN 	 0.975
+Kraken 	 0.885
+
+Recall
+PhyloPythiaS+ 	 0.878
+Kraken 	 0.719
+MEGAN 	 0.447
+taxator-tk 	 0.118
+
+Precision + Recall
+PhyloPythiaS+ 	 1.856
+Kraken 	 1.605
+MEGAN 	 1.422
+taxator-tk 	 1.096
+
+----genus----
+Precision
+taxator-tk 	 0.678
+PhyloPythiaS+ 	 0.607
+Kraken 	 0.281
+MEGAN 	 0.229
+
+Recall
+PhyloPythiaS+ 	 0.731
+Kraken 	 0.715
+MEGAN 	 0.261
+taxator-tk 	 0.099
+
+Precision + Recall
+PhyloPythiaS+ 	 1.338
+Kraken 	 0.996
+taxator-tk 	 0.777
+MEGAN 	 0.489
+
+----class----
+Precision
+taxator-tk 	 0.986
+PhyloPythiaS+ 	 0.950
+MEGAN 	 0.852
+Kraken 	 0.798
+
+Recall
+PhyloPythiaS+ 	 0.899
+Kraken 	 0.727
+MEGAN 	 0.440
+taxator-tk 	 0.131
+
+Precision + Recall
+PhyloPythiaS+ 	 1.850
+Kraken 	 1.525
+MEGAN 	 1.292
+taxator-tk 	 1.117
