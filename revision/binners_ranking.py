@@ -273,10 +273,10 @@ def main(unique_common_file_path, *files_path):
         print_precision_and_recall(rank_to_binner_number_to_avgprecision[rank], rank_to_binner_number_to_avgrecall[rank])
 
 
-main("/home/fmeyer/cami/firstchallenge_evaluation/metadata/ANI/unique_common.tsv",
-     "/home/fmeyer/cami/firstchallenge_evaluation/binning/tables/low_unsupervised_by_genome_all.tsv",
-     "/home/fmeyer/cami/firstchallenge_evaluation/binning/tables/medium_unsupervised_by_genome_all.tsv",
-     "/home/fmeyer/cami/firstchallenge_evaluation/binning/tables/high_unsupervised_by_genome_all.tsv",
-     "/home/fmeyer/cami/firstchallenge_evaluation/binning/tables/low_supervised_by_bin_all.tsv",
-     "/home/fmeyer/cami/firstchallenge_evaluation/binning/tables/medium_supervised_by_bin_all.tsv",
-     "/home/fmeyer/cami/firstchallenge_evaluation/binning/tables/high_supervised_by_bin_all.tsv")
+main("../metadata/ANI/unique_common.tsv",
+     "../binning/tables/low_unsupervised_by_genome_all.tsv",
+     "../binning/tables/medium_unsupervised_by_genome_all.tsv",
+     "../binning/tables/high_unsupervised_by_genome_all.tsv",
+     "../binning/tables/low_supervised_by_bin_all.tsv",
+     "../binning/tables/medium_supervised_by_bin_all.tsv",
+     "../binning/tables/high_supervised_by_bin_all.tsv")
