@@ -7,6 +7,7 @@ Input:
 * ../metadata/ANI/unique_common.tsv
 * FILTER\_TAIL and EXCLUDE\_PLASMIDS
 * BINNER and BINNER_NAMES
+
 Output:
 * binners\_ranking.txt
 
@@ -23,6 +24,7 @@ Input:
 * ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv
 * FILTER\_TAIL
 * BINNER and BINNER\_NAMES
+
 Output:
 * binner\_completeness.tsv
 
@@ -38,6 +40,7 @@ Also, the cells are not mutually exclusive, i.e. a genome with >90% completeness
 Input:
 * ../binning/tables/\<data set\>\_supervised\_by\_bin\_all.tsv
 * ../binning/data/taxonomic/\<Gold Standard\>/output/perbin\_stats.tsv
+
 Output:
 * per_taxon.tsv
 
@@ -53,6 +56,6 @@ total number of predictions and the possible number of predictions for each geno
 
 
 ### TODO:
-which binning tools where chosen if multiple parameter sets were present
-binners ranking using summary\_stats\_99
+* which binning tools where chosen if multiple parameter sets were present
+* binners ranking using summary\_stats\_99
 
