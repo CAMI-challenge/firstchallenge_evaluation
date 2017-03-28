@@ -118,7 +118,7 @@ def map_tools(*tools):
 			else:
 				mapped = str(BINNER[tool])
 			if mapped in merged:
-				map(add,merged[mapped],res[tool])
+				merged[mapped] = map(add,merged[mapped],res[tool])
 			else:
 				merged[mapped] = res[tool]
 	corr_names = {BINNER_NAME[int(x)]:merged[x] for x in merged if "Gold Standard" not in x} #map to real tool names
