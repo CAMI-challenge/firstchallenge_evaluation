@@ -64,7 +64,7 @@ def get_prec_rec_per_taxon(gsa_taxa, result_file):
 			if (taxon,rank) not in taxon_prec:
 				taxon_prec.update({(taxon,rank):["NA"]})
 				taxon_rec.update({(taxon,rank):[0.]})
-	return taxon_prec, taxon_rec
+	return taxon_prec, taxon_rec, tools
 
 #in case precision is NA
 def is_not_na(num):
@@ -103,7 +103,7 @@ def merge_data_sets(*dicts):
 				merged[elem][1].append(rec)
 				merged[elem][2].append(prec_rec)
 			else:
-				merged[elem] = [[prec],[rec],[prec_rec],num]
+				merged[elem] = [[prec],[rec],[prec_rec],num,]
 	for elem in merged:
 		if "NA" not in merged[elem][0]:
 			merged[elem][0] = sum(merged[elem][0])/len(merged[elem][0])
@@ -118,32 +118,41 @@ def calculate_taxon_metrics():
 	gsa_low = read_gold_standard(GSA_LOW)
 	gsa_medium = read_gold_standard(GSA_MEDIUM)
 	gsa_high = read_gold_standard(GSA_HIGH)
-	combined_gsa = gsa_low.copy()
-	combined_gsa.update(gsa_medium)
-	combined_gsa.update(gsa_high)
+	combined_gsa = [gsa_low,gsa_medium,gsa_high]
 	low_taxa = get_prec_rec_per_taxon(gsa_low,LOW)
 	medium_taxa = get_prec_rec_per_taxon(gsa_medium,MEDIUM)
 	high_taxa = get_prec_rec_per_taxon(gsa_high,HIGH)
+	tools_low = low_taxa[2]
+	tools_medium = medium_taxa[2]
+	tools_high = high_taxa[2]
+	tools = [tools_low,tools_medium,tools_high]
 	low_avg = get_taxon_ranking(low_taxa[0],low_taxa[1])
 	medium_avg = get_taxon_ranking(medium_taxa[0],medium_taxa[1])
 	high_avg = get_taxon_ranking(high_taxa[0],high_taxa[1])
 	total_res = merge_data_sets(low_avg,medium_avg,high_avg)
-	return total_res,combined_gsa
+	return total_res, combined_gsa, tools
 
 #take the results and order taxa by rank and write to out
-def write_result_table(combined_gsa, res_per_taxon, out):
+def write_result_table(combined_gsa, res_per_taxon, tools, out):
+	complete_gsa = combined_gsa[0].copy()
+	complete_gsa.update(combined_gsa[1])
+	complete_gsa.update(combined_gsa[2])
 	with open(out,'wb') as toWrite:
 		toWrite.write("rank\ttaxon\tprecision\trecall\tsum_prec_rec\t#predictions\n")
 		line = ""
 		ranks = ['superkingdom','phylum','class','order','family','genus','species']
 		for rank in ranks:
-			for taxon in combined_gsa[rank]:
+			for taxon in complete_gsa[rank]:
 				prec = res_per_taxon[(taxon,rank)][0]
 				rec = res_per_taxon[(taxon,rank)][1]
 				prec_rec = res_per_taxon[(taxon,rank)][2]
 				num_pred = res_per_taxon[(taxon,rank)][3]
-				line = rank + '\t' + taxon + '\t' + str(prec) + '\t' + str(rec) + '\t' + str(prec_rec) + '\t' + str(num_pred) + '\n'
+				poss_pred = 0
+				for i in [0,1,2]:
+					if taxon in combined_gsa[i][rank]:
+						poss_pred += len(tools[i]) # how many predictions were possible
+				line = rank + '\t' + taxon + '\t' + str(prec) + '\t' + str(rec) + '\t' + str(prec_rec) + '\t' + str(num_pred) + "/" + str(poss_pred) + '\n'
 				toWrite.write(line)
 
-res, gsa = calculate_taxon_metrics()
-write_result_table(gsa, res, "per_taxon.tsv")
+res, gsa, tools = calculate_taxon_metrics()
+write_result_table(gsa, res, tools, "per_taxon.tsv")
