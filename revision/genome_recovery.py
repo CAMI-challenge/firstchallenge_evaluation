@@ -2,6 +2,7 @@
 
 from operator import add
 
+FILTER_TAIL = True
 BINNER_NAME = {1: "MyCC",
                2: "MetaWatt-3.5",
                3: "MetaBAT",
@@ -140,9 +141,10 @@ tools_high = read_table(HIGH)
 tools_medium = read_table(MEDIUM)
 tools_low = read_table(LOW)
 
-tools_high = filter_tail(tools_high)
-tools_medium = filter_tail(tools_medium)
-tools_low = filter_tail(tools_low)
+if (FILTER_TAIL):
+	tools_high = filter_tail(tools_high)
+	tools_medium = filter_tail(tools_medium)
+	tools_low = filter_tail(tools_low)
 
 res_high = calc_table(tools_high)
 res_medium = calc_table(tools_medium)
