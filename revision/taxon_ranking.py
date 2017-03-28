@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import sys
-
 """
 Script for the generation of a ranking of all the taxa appearing in the CAMI data sets.
 Given the result tables of all the tools and the gold standard binning, calculate a table
