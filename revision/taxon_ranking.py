@@ -40,26 +40,30 @@ def strp(string):
 def get_prec_rec_per_taxon(gsa_taxa, result_file):
 	taxon_prec = {}
 	taxon_rec = {}
+	tools = set()
 	with open(result_file,'r') as res:
 		for line in res:
 			if line.startswith("\"rank"): #header
 				continue
 			rank, taxon, prec, rec, predsize, realsize, toolname = map(strp,line.split('\t')) #remove "
+			toolname = toolname.rstrip("\"\n")
 			if "Gold Standard" in toolname:
 				continue
+			else:
+				tools.update({toolname})
 			taxa = gsa_taxa[rank] # retrieve all gsa taxa of current rank
 			if taxon in taxa:
-				if taxon in taxon_prec:
-					taxon_prec[taxon].append(prec)
-					taxon_rec[taxon].append(rec)
+				if (taxon,rank) in taxon_prec:
+					taxon_prec[(taxon,rank)].append(prec)
+					taxon_rec[(taxon,rank)].append(rec)
 				else:
-					taxon_prec.update({taxon:[prec]})
-					taxon_rec.update({taxon:[rec]})
+					taxon_prec.update({(taxon,rank):[prec]})
+					taxon_rec.update({(taxon,rank):[rec]})
 	for rank in gsa_taxa:
 		for taxon in gsa_taxa[rank]:
-			if taxon not in taxon_prec:
-				taxon_prec.update({taxon:["NA"]})
-				taxon_rec.update({taxon:[0.]})
+			if (taxon,rank) not in taxon_prec:
+				taxon_prec.update({(taxon,rank):["NA"]})
+				taxon_rec.update({(taxon,rank):[0.]})
 	return taxon_prec, taxon_rec
 
 #in case precision is NA
@@ -72,18 +76,18 @@ def is_not_na(num):
 
 def get_taxon_ranking(taxon_prec, taxon_rec):
 	taxon_vals = {}
-	for taxon in taxon_prec:
-		prec_non_na = [float(x) for x in taxon_prec[taxon] if is_not_na(x)]
+	for (taxon,rank) in taxon_prec:
+		prec_non_na = [float(x) for x in taxon_prec[(taxon,rank)] if is_not_na(x)]
 		if len(prec_non_na) > 0:
 			avg_prec = sum(prec_non_na)/len(prec_non_na)
 		else:
 			avg_prec = "NA"
-		avg_rec = sum(map(float,taxon_rec[taxon]))/len(taxon_rec[taxon]) #no NA in recall
+		avg_rec = sum(map(float,taxon_rec[(taxon,rank)]))/len(taxon_rec[(taxon,rank)]) #no NA in recall
 		if avg_prec != "NA":
 			prec_rec = avg_prec + avg_rec
 		else:
 			prec_rec = avg_rec
-		taxon_vals.update({taxon:[avg_prec,avg_rec,prec_rec]})
+		taxon_vals.update({(taxon,rank):[avg_prec,avg_rec,prec_rec,len(prec_non_na)]})
 	return taxon_vals
 
 # merge resutls of the data sets, building the average if some taxa appear in multiple data sets
@@ -91,14 +95,15 @@ def merge_data_sets(*dicts):
 	merged = {}
 	for d in dicts: #all dicts
 		for elem in d: #all elems
-			prec, rec, prec_rec = d[elem]
+			prec, rec, prec_rec, num = d[elem]
 			if elem in merged:
 				if prec != "NA":
 					merged[elem][0].append(prec)
+				merged[elem][3] += num
 				merged[elem][1].append(rec)
 				merged[elem][2].append(prec_rec)
 			else:
-				merged[elem] = [[prec],[rec],[prec_rec]]
+				merged[elem] = [[prec],[rec],[prec_rec],num]
 	for elem in merged:
 		if "NA" not in merged[elem][0]:
 			merged[elem][0] = sum(merged[elem][0])/len(merged[elem][0])
@@ -128,15 +133,16 @@ def calculate_taxon_metrics():
 #take the results and order taxa by rank and write to out
 def write_result_table(combined_gsa, res_per_taxon, out):
 	with open(out,'wb') as toWrite:
-		toWrite.write("rank\ttaxon\tprecision\trecall\tsum_prec_rec\n")
+		toWrite.write("rank\ttaxon\tprecision\trecall\tsum_prec_rec\t#predictions\n")
 		line = ""
 		ranks = ['superkingdom','phylum','class','order','family','genus','species']
 		for rank in ranks:
 			for taxon in combined_gsa[rank]:
-				prec = res_per_taxon[taxon][0]
-				rec = res_per_taxon[taxon][1]
-				prec_rec = res_per_taxon[taxon][2]
-				line = rank + '\t' + taxon + '\t' + str(prec) + '\t' + str(rec) + '\t' + str(prec_rec) + '\n'
+				prec = res_per_taxon[(taxon,rank)][0]
+				rec = res_per_taxon[(taxon,rank)][1]
+				prec_rec = res_per_taxon[(taxon,rank)][2]
+				num_pred = res_per_taxon[(taxon,rank)][3]
+				line = rank + '\t' + taxon + '\t' + str(prec) + '\t' + str(rec) + '\t' + str(prec_rec) + '\t' + str(num_pred) + '\n'
 				toWrite.write(line)
 
 res, gsa = calculate_taxon_metrics()
