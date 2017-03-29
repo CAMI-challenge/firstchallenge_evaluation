@@ -55,6 +55,22 @@ Finally, all the three data sets are merged and the precision/recall/sum of prec
 total number of predictions and the possible number of predictions for each genome is reported. Since the input table is rounded with two decimal places, there might be taxa having a recall of 0 but a non-NA precision.
 
 
+### create\_summary\_table.py
+Input:
+* ../binning/data/taxonomic/*/description.properties
+* ../binning/data/taxonomic/*/output/summary\_stats\_99.tsv
+* DATASETS names
+Output:
+* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv
+
+
+This script appends the summary\_stats\_99.tsv results of every tool to a single file (including only the 4 metrics
+which will be used for ranking: precision, recall, accuracy, misclassification rate). The individual files'
+headers are removed and instead the name of the tool appended as last column in the tsv.
+The .properties files are basically sectionless INI files, so after adding a dummy header the configparse module
+can be used to read the files and retrieve the data set.
+
+
 ### TODO:
 * which binning tools where chosen if multiple parameter sets were present
 * binners ranking using summary\_stats\_99
