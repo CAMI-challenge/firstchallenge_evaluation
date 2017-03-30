@@ -60,6 +60,7 @@ Input:
 * ../binning/data/taxonomic/*/description.properties
 * ../binning/data/taxonomic/*/output/summary\_stats\_99.tsv
 * DATASETS names
+
 Output:
 * ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv
 
@@ -71,7 +72,20 @@ The .properties files are basically sectionless INI files, so after adding a dum
 can be used to read the files and retrieve the data set.
 
 
+### tax_binner_rankking.py
+Input:
+* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv
+* BINNER and BINNER\_NAMES
+
+Output:
+* tax\_binners\_ranking.tsv
+
+
+This script uses the output of create\_summary\_table.py, which is the appended tables from summary\_stats\_99 for all the tools.
+This tables are read in for all data sets and ranks. For every rank the values of every data set are averaged and then sorted
+to produce the ranking which then is written to tax\_binners\_rankking.tsv.
+
+
 ### TODO:
 * which binning tools where chosen if multiple parameter sets were present
-* binners ranking using summary\_stats\_99
 
