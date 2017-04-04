@@ -3,7 +3,7 @@
 
 ### binners_ranking.py
 Input: 
-* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv),[medium](../binning/tables/medium_unsupervised_by_genome_all.tsv),[high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
+* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv), [medium](../binning/tables/medium_unsupervised_by_genome_all.tsv), [high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
 * [unique_common.tsv](../metadata/ANI/unique_common.tsv)
 * FILTER\_TAIL and EXCLUDE\_PLASMIDS
 * BINNER and BINNER_NAMES
@@ -21,7 +21,7 @@ For the remaining values, the precision and recall are averaged over all genomes
 
 ### genome_recovery.py
 Input:
-* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv),[medium](../binning/tables/medium_unsupervised_by_genome_all.tsv),[high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
+* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv), [medium](../binning/tables/medium_unsupervised_by_genome_all.tsv), [high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
 * FILTER\_TAIL
 * BINNER and BINNER\_NAMES
 
@@ -38,8 +38,8 @@ Also, the cells are not mutually exclusive, i.e. a genome with >90% completeness
 
 ### taxon_ranking.py
 Input:
-* ../binning/tables/\<data set\>\_supervised\_by\_bin\_all.tsv \[[low](../binning/tables/low_supervised_by_bin_all.tsv),[medium](../binning/tables/medium_supervised_by_bin_all.tsv),[high](../binning/tables/high_supervised_by_bin_all.tsv)]
-* ../binning/data/taxonomic/\<Gold Standard\>/output/perbin\_stats.tsv \[[low](../binning/data/taxonomic/determined_meitner_=_Gold_Standard_0/output/perbin_stats.tsv),[medium](../binning/data/taxonomic/adoring_lalande_=_Gold_Standard_1/output/perbin_stats.tsv),[high](../binning/data/taxonomic/adoring_lalande_=_Gold_Standard_0/output/perbin_stats.tsv)\]
+* ../binning/tables/\<data set\>\_supervised\_by\_bin\_all.tsv \[[low](../binning/tables/low_supervised_by_bin_all.tsv), [medium](../binning/tables/medium_supervised_by_bin_all.tsv), [high](../binning/tables/high_supervised_by_bin_all.tsv)]
+* ../binning/data/taxonomic/\<Gold Standard\>/output/perbin\_stats.tsv \[[low](../binning/data/taxonomic/determined_meitner_=_Gold_Standard_0/output/perbin_stats.tsv), [medium](../binning/data/taxonomic/adoring_lalande_=_Gold_Standard_1/output/perbin_stats.tsv), [high](../binning/data/taxonomic/adoring_lalande_=_Gold_Standard_0/output/perbin_stats.tsv)\]
 
 Output:
 * [per_taxon.tsv](per_taxon.tsv)
@@ -57,12 +57,12 @@ total number of predictions and the possible number of predictions for each geno
 
 ### create\_summary\_table.py
 Input:
-* ../binning/data/taxonomic/*/description.properties
-* ../binning/data/taxonomic/*/output/summary\_stats\_99.tsv
+* ../binning/data/taxonomic/*/description.properties \[[folder](../binning/data/taxonomic)\]
+* ../binning/data/taxonomic/*/output/summary\_stats\_99.tsv \[[folder](../binning/data/taxonomic)\]
 * DATASETS names
 
 Output:
-* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv),[medium](../binning/data/medium_supervised_summary_stats_99.tsv),[high](../binning/data/high_supervised_summary_stats_99.tsv)\]
+* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv), [medium](../binning/data/medium_supervised_summary_stats_99.tsv), [high](../binning/data/high_supervised_summary_stats_99.tsv)\]
 
 
 This script appends the summary\_stats\_99.tsv results of every tool to a single file (including only the 4 metrics
@@ -74,11 +74,11 @@ can be used to read the files and retrieve the data set.
 
 ### tax_binner_ranking.py
 Input:
-* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv),[medium](../binning/data/medium_supervised_summary_stats_99.tsv),[high](../binning/data/high_supervised_summary_stats_99.tsv)\]
+* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv), [medium](../binning/data/medium_supervised_summary_stats_99.tsv), [high](../binning/data/high_supervised_summary_stats_99.tsv)\]
 * BINNER and BINNER\_NAMES
 
 Output:
-* [tax\_binners\_ranking.tsv](tax_binners_ranking.py)
+* [tax\_binners\_ranking.tsv](tax_binners_ranking.tsv)
 
 
 This script uses the output of create\_summary\_table.py, which is the appended tables from summary\_stats\_99 for all the tools.
