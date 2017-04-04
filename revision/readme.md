@@ -1,32 +1,32 @@
 # Scripts and their output for the CAMI revision
 
 
-### binners_rankking.py
+### binners_ranking.py
 Input: 
-* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv
-* ../metadata/ANI/unique_common.tsv
+* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv),[medium](../binning/tables/medium_unsupervised_by_genome_all.tsv),[high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
+* [unique_common.tsv](../metadata/ANI/unique_common.tsv)
 * FILTER\_TAIL and EXCLUDE\_PLASMIDS
 * BINNER and BINNER_NAMES
 
 Output:
-* binners\_ranking.txt
+* [binners\_ranking.txt](binners_ranking.txt)
 
 
 Given the table of result of the by_genome evaluation, ranks the binners according to their average precision/recall/sum of precision and recall.
 
-FILTER\_TAIL and EXCLUDE\_PLASMIDS are options which by default are set to True. Using these options first excludes the *precision values* of the smallest genomes whichs sum of genome sizes do add up to less than 1% of all the genomes' sizes.
+FILTER\_TAIL and EXCLUDE\_PLASMIDS are options which by default are set to True. Using these options first excludes the *precision values* of the smallest genomes whichs sum of genome sizes do add up to less than **1%** of all the genomes' sizes.
 EXCLUDE\_PLASMIDS then removes all genomes which have been flagged as "circular element" in "../metadata/ANI/unique\_common.tsv".
 For the remaining values, the precision and recall are averaged over all genomes and put out to their corresponding binners. The value for every binner is averaged over all three data sets (low, medium, high)
 
 
 ### genome_recovery.py
 Input:
-* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv
+* ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv),[medium](../binning/tables/medium_unsupervised_by_genome_all.tsv),[high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
 * FILTER\_TAIL
 * BINNER and BINNER\_NAMES
 
 Output:
-* binner\_completeness.tsv
+* [binner\_completeness.tsv](binner_completeness.tsv)
 
 
 Given the same table as for the binners\_ranking script, this script creates a table reporting the well recovered genomes in terms of high completeness (recall) and low contamination (1 - precision).
@@ -38,11 +38,11 @@ Also, the cells are not mutually exclusive, i.e. a genome with >90% completeness
 
 ### taxon_ranking.py
 Input:
-* ../binning/tables/\<data set\>\_supervised\_by\_bin\_all.tsv
-* ../binning/data/taxonomic/\<Gold Standard\>/output/perbin\_stats.tsv
+* ../binning/tables/\<data set\>\_supervised\_by\_bin\_all.tsv \[[low](../binning/tables/low_supervised_by_bin_all.tsv),[medium](../binning/tables/medium_supervised_by_bin_all.tsv),[high](../binning/tables/high_supervised_by_bin_all.tsv)]
+* ../binning/data/taxonomic/\<Gold Standard\>/output/perbin\_stats.tsv \[[low](../binning/data/taxonomic/determined_meitner_=_Gold_Standard_0/output/perbin_stats.tsv),[medium](../binning/data/taxonomic/adoring_lalande_=_Gold_Standard_1/output/perbin_stats.tsv),[high](../binning/data/taxonomic/adoring_lalande_=_Gold_Standard_0/output/perbin_stats.tsv)\]
 
 Output:
-* per_taxon.tsv
+* [per_taxon.tsv](per_taxon.tsv)
 
 
 This script produces a table which for every taxon present in the gold standard computes its precision/recall/sum of precision and recall.
@@ -62,7 +62,7 @@ Input:
 * DATASETS names
 
 Output:
-* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv
+* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv),[medium](../binning/data/medium_supervised_summary_stats_99.tsv),[high](../binning/data/high_supervised_summary_stats_99.tsv)\]
 
 
 This script appends the summary\_stats\_99.tsv results of every tool to a single file (including only the 4 metrics
@@ -72,18 +72,18 @@ The .properties files are basically sectionless INI files, so after adding a dum
 can be used to read the files and retrieve the data set.
 
 
-### tax_binner_rankking.py
+### tax_binner_ranking.py
 Input:
-* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv
+* ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv),[medium](../binning/data/medium_supervised_summary_stats_99.tsv),[high](../binning/data/high_supervised_summary_stats_99.tsv)\]
 * BINNER and BINNER\_NAMES
 
 Output:
-* tax\_binners\_ranking.tsv
+* [tax\_binners\_ranking.tsv](tax_binners_ranking.py)
 
 
 This script uses the output of create\_summary\_table.py, which is the appended tables from summary\_stats\_99 for all the tools.
 This tables are read in for all data sets and ranks. For every rank the values of every data set are averaged and then sorted
-to produce the ranking which then is written to tax\_binners\_rankking.tsv.
+to produce the ranking which then is written to tax\_binners\_ranking.tsv.
 
 
 ### TODO:
