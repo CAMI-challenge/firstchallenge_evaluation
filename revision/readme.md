@@ -9,7 +9,7 @@ Input:
 * ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv), [medium](../binning/tables/medium_unsupervised_by_genome_all.tsv), [high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
 * [unique_common.tsv](../metadata/ANI/unique_common.tsv)
 * FILTER\_TAIL and EXCLUDE\_PLASMIDS (default: True)
-* BINNER and BINNER_NAMES (default: [bin\_mapping.txt](bin_mapping.txt)
+* BINNER and BINNER_NAMES (default: [bin\_mapping.txt](bin_mapping.txt))
 
 Output:
 * [binners\_ranking.txt](binners_ranking.txt)
@@ -26,7 +26,7 @@ For the remaining values, the precision and recall are averaged over all genomes
 Input:
 * ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv), [medium](../binning/tables/medium_unsupervised_by_genome_all.tsv), [high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
 * FILTER\_TAIL (default: True)
-* BINNER and BINNER\_NAMES (default: [bin\_mapping.txt](bin_mapping.txt)
+* BINNER and BINNER\_NAMES (default: [bin\_mapping.txt](bin_mapping.txt))
 
 Output:
 * [binner\_completeness.tsv](binner_completeness.tsv)
@@ -46,7 +46,7 @@ Input:
 
 Output:
 * [per_taxon.tsv](per_taxon.tsv)
-
+* [tools\_by\_sample.txt](tools_by_sample.txt)
 
 This script produces a table which for every taxon present in the gold standard computes its precision/recall/sum of precision and recall.
 
@@ -55,7 +55,10 @@ Actinobacteria), the mapping is done with respect to both rank as well as taxon.
 the tools are collected. If no tool predicted a taxon, the precision is set to "NA" and the recall to 0. These values are then averaged over all tools. If precision is "NA" it is excluded from the calculation,
 i.e. precision + recall with precision "NA" is the same as just recall. Additionally it is stored how many tools made a non-NA prediction for that genome and how many tools could have made a prediction.
 Finally, all the three data sets are merged and the precision/recall/sum of precision and recall again averaged over all three data sets (in case a taxon appears in all three data sets). Additionally the
-total number of predictions and the possible number of predictions for each genome is reported. Since the input table is rounded with two decimal places, there might be taxa having a recall of 0 but a non-NA precision.
+total number of predictions and the possible number of predictions for each genome is reported. There are 7 methods doing predictions for the low data set and 11 for both the medium and the high data set
+(namely [these](tools_by_sample.txt)), so the number of possible predictions for a taxon are 7 (appearing only low data set), 11 (only in medium xor only in high), 18 (low and medium xor high), 22 (medium and high) or 29 (all three).
+
+Since the input table is rounded with two decimal places, there might be taxa having a recall of 0 but a non-NA precision.
 
 
 ### create\_summary\_table.py
@@ -80,7 +83,7 @@ can be used to read the files and retrieve the data set.
 ### tax_binner_ranking.py
 Input:
 * ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv), [medium](../binning/data/medium_supervised_summary_stats_99.tsv), [high](../binning/data/high_supervised_summary_stats_99.tsv)\]
-* BINNER and BINNER\_NAMES (default: [bin\_mapping.txt](bin_mapping.txt)
+* BINNER and BINNER\_NAMES (default: [bin\_mapping.txt](bin_mapping.txt))
 
 Output:
 * [tax\_binner\_ranking.tsv](tax_binner_ranking.tsv)
