@@ -38,6 +38,7 @@ BINNER = {"berserk_euclid_2": 1,
           "prickly_fermi_1": 8,
           "modest_babbage_1": 9}
 PATH="../binning/tables/%s_supervised_summary_stats_99.tsv" #replace %s with low medium high
+METRICS={0:'Precision',1:'Recall',2:'Precision + Recall',3:'Accuracy',4:'Misclassification rate'}
 
 def read_table(fname):
 	tool_res = {"superkingdom":{},"phylum":{},"class":{},"order":{},"family":{},"genus":{},"species":{}}
@@ -82,6 +83,11 @@ def merge_tools(*tables):
 	return by_rank
 
 def create_ranking(by_rank):
+	sorted_prec_all = []
+	sorted_rec_all = []
+	sorted_prrc_all = []
+	sorted_acc_all = []
+	sorted_mis_all = []
 	with open("tax_binners_ranking.tsv",'wb') as res:
 		for rank in by_rank:
 			res.write("%s:\n" % rank)
@@ -98,10 +104,15 @@ def create_ranking(by_rank):
 				sorted_acc.append((tool,acc))
 				sorted_mis.append((tool,mis))
 			sorted_prec = sorted(sorted_prec,key=lambda x:x[1],reverse=True)
+			sorted_prec_all.append(sorted_prec)
 			sorted_rec = sorted(sorted_rec,key=lambda x:x[1],reverse=True)
+			sorted_rec_all.append(sorted_rec)
 			sorted_prrc = sorted(sorted_prrc,key=lambda x:x[1], reverse=True)
+			sorted_prrc_all.append(sorted_prrc)
 			sorted_acc = sorted(sorted_acc,key=lambda x:x[1],reverse=True) #prec/rec/acc maximised
+			sorted_acc_all.append(sorted_acc)
 			sorted_mis = sorted(sorted_mis,key=lambda x:x[1]) #lower misclassification is good
+			sorted_mis_all.append(sorted_mis)
 			res.write("Precision:\n")
 			for tool in sorted_prec:
 				res.write("%s\t%s\n" % (tool[0],tool[1]))
@@ -118,7 +129,39 @@ def create_ranking(by_rank):
 			for tool in sorted_mis:
 				res.write("%s\t%s\n" % (tool[0],tool[1]))
 			res.write("\n\n")
+	return sorted_prec_all, sorted_rec_all, sorted_prrc_all, sorted_acc_all, sorted_mis_all
+
+"""for all metrics, create a ranking across all ranks"""
+def evaluate_ranking(*metrics):
+	with open("tax_binner_table.tsv",'wb') as table:
+		table.write("Metric\tBest method (rank, avg)\t2nd best (rank, avg)\t3rd best (rank, avg)\t4th best (rank, avg)\n")
+		for i in xrange(len(metrics)): # prec rec prec_rec acc mis
+			metric = metrics[i]
+			tool_ranks = {}
+			for rank in metric: # superkingdom -> species
+				for j in xrange(len(rank)): # all tools in correct order
+					tool = rank[j][0]
+					if "Gold Standard" in tool: #do not rank Gold Standard
+						continue
+					score = rank[j][1] #rank = (tool,score)
+					if tool in tool_ranks:
+						tool_ranks[tool][0] += j
+						tool_ranks[tool][1] += score
+					else:
+						tool_ranks[tool] = [i, score] #list, so we can still assing to it
+			metric_sorted = sorted(tool_ranks.values(),key=lambda x:x[1],reverse=True) #sort ascending
+			ranking = [0]*len(metric_sorted) # list holding the positions of the tools plus their score
+			for tool in tool_ranks:
+				pos = metric_sorted.index(tool_ranks[tool]) # position in the rankking
+				ranking[pos] = tool # correct position of the tool in the ranking
+			table.write(METRICS[i]) # name of the metric
+			for tool in ranking:
+				sum_rank, sum_metric = tool_ranks[tool]
+				avg = sum_metric/len(metric) # len(metric) is number of ranks
+				table.write("\t%s (%s, %s)" % (tool,sum_rank,avg))
+			table.write("\n")
 
 combined = [read_table(PATH % dataset) for dataset in ["low","medium","high"]]
 merged = merge_tools(combined[0],combined[1],combined[2])
-create_ranking(merged)
+prec, rec, precrec, acc, mis = create_ranking(merged) # writes and returns
+evaluate_ranking(prec,rec,precrec,acc,mis)
