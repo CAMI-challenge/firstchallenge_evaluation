@@ -88,7 +88,7 @@ def create_ranking(by_rank):
 	sorted_prrc_all = []
 	sorted_acc_all = []
 	sorted_mis_all = []
-	with open("tax_binners_ranking.tsv",'wb') as res:
+	with open("tax_binner_ranking.tsv",'wb') as res:
 		for rank in by_rank:
 			res.write("%s:\n" % rank)
 			sorted_prec = []
@@ -149,7 +149,7 @@ def evaluate_ranking(*metrics):
 						tool_ranks[tool][1] += score
 					else:
 						tool_ranks[tool] = [i, score] #list, so we can still assing to it
-			metric_sorted = sorted(tool_ranks.values(),key=lambda x:x[1],reverse=True) #sort ascending
+			metric_sorted = sorted(tool_ranks.values(),key=lambda x:x[0]) #sort ascending
 			ranking = [0]*len(metric_sorted) # list holding the positions of the tools plus their score
 			for tool in tool_ranks:
 				pos = metric_sorted.index(tool_ranks[tool]) # position in the rankking
