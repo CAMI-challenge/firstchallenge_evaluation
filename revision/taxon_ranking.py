@@ -126,11 +126,9 @@ def calculate_taxon_metrics():
 	tools_medium = medium_taxa[2]
 	tools_high = high_taxa[2]
 	with open('tools_by_sample.txt','wb') as t:
-		t.write(str(list(tools_low)))
-		t.write("\n")
-		t.write(str(list(tools_medium)))
-		t.write("\n")
-		t.write(str(list(tools_high)))
+		t.write("low: %s\n" % list(tools_low))
+		t.write("medium: %s\n" % list(tools_medium))
+		t.write("high: %s\n" % list(tools_high))
 	tools = [tools_low,tools_medium,tools_high]
 	low_avg = get_taxon_ranking(low_taxa[0],low_taxa[1])
 	medium_avg = get_taxon_ranking(medium_taxa[0],medium_taxa[1])
