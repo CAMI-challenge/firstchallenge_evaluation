@@ -1,12 +1,12 @@
-# Scripts and their output for the CAMI revision
+# Scripts and their output for the CAMI revision. The files described in "output" are always created using the default values.
 
 
 ### binners_ranking.py
 Input: 
 * ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv), [medium](../binning/tables/medium_unsupervised_by_genome_all.tsv), [high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
 * [unique_common.tsv](../metadata/ANI/unique_common.tsv)
-* FILTER\_TAIL and EXCLUDE\_PLASMIDS
-* BINNER and BINNER_NAMES
+* FILTER\_TAIL and EXCLUDE\_PLASMIDS (default: True)
+* BINNER and BINNER_NAMES (default: [bin\_mapping.txt](bin_mapping.txt)
 
 Output:
 * [binners\_ranking.txt](binners_ranking.txt)
@@ -22,8 +22,8 @@ For the remaining values, the precision and recall are averaged over all genomes
 ### genome_recovery.py
 Input:
 * ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv), [medium](../binning/tables/medium_unsupervised_by_genome_all.tsv), [high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
-* FILTER\_TAIL
-* BINNER and BINNER\_NAMES
+* FILTER\_TAIL (default: True)
+* BINNER and BINNER\_NAMES (default: [bin\_mapping.txt](bin_mapping.txt)
 
 Output:
 * [binner\_completeness.tsv](binner_completeness.tsv)
@@ -59,7 +59,9 @@ total number of predictions and the possible number of predictions for each geno
 Input:
 * ../binning/data/taxonomic/*/description.properties \[[folder](../binning/data/taxonomic)\]
 * ../binning/data/taxonomic/*/output/summary\_stats\_99.tsv \[[folder](../binning/data/taxonomic)\]
-* DATASETS names
+* DATASETS names (default: "1st CAMI Challenge Dataset 1 CAMI_low":"low",
+		"1st CAMI Challenge Dataset 2 CAMI_medium":"medium",
+		"1st CAMI Challenge Dataset 3 CAMI_high":"high")
 
 Output:
 * ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv), [medium](../binning/data/medium_supervised_summary_stats_99.tsv), [high](../binning/data/high_supervised_summary_stats_99.tsv)\]
@@ -75,7 +77,7 @@ can be used to read the files and retrieve the data set.
 ### tax_binner_ranking.py
 Input:
 * ../binning/data/\<data set\>\_supervised\_summary\_stats\_99.tsv \[[low](../binning/data/low_supervised_summary_stats_99.tsv), [medium](../binning/data/medium_supervised_summary_stats_99.tsv), [high](../binning/data/high_supervised_summary_stats_99.tsv)\]
-* BINNER and BINNER\_NAMES
+* BINNER and BINNER\_NAMES (default: [bin\_mapping.txt](bin_mapping.txt)
 
 Output:
 * [tax\_binner\_ranking.tsv](tax_binner_ranking.tsv)
