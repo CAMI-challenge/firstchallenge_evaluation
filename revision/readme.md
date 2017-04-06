@@ -94,7 +94,8 @@ This script uses the output of create\_summary\_table.py, which is the appended 
 This tables are read in for all data sets and ranks. For every rank the values of every data set are averaged and then sorted
 to produce the ranking which then is written to tax\_binner\_ranking.tsv. Additionally, the ranks are summed up among all ranks
 and the average value of each metric is calculated and this result stored in the table tax\_binner\_table.tsv
-
+Since there are 4 tools and 7 ranks (kingdom, phylum, class, order, family, genus, species) the minimal (best) value for ranks is 7 and
+the maximal (worst) value is 28.
 
 ### TODO:
 * which binning tools where chosen if multiple parameter sets were present
