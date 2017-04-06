@@ -78,12 +78,14 @@ Input:
 * BINNER and BINNER\_NAMES
 
 Output:
-* [tax\_binners\_ranking.tsv](tax_binners_ranking.tsv)
+* [tax\_binner\_ranking.tsv](tax_binner_ranking.tsv)
+* [tax\_binner\_table.tsv](tax_binner_table.tsv)
 
 
 This script uses the output of create\_summary\_table.py, which is the appended tables from summary\_stats\_99 for all the tools.
 This tables are read in for all data sets and ranks. For every rank the values of every data set are averaged and then sorted
-to produce the ranking which then is written to tax\_binners\_ranking.tsv.
+to produce the ranking which then is written to tax\_binner\_ranking.tsv. Additionally, the ranks are summed up among all ranks
+and the average value of each metric is calculated and this result stored in the table tax\_binner\_table.tsv
 
 
 ### TODO:

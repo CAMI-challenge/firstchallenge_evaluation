@@ -2,7 +2,7 @@
 
 from operator import add
 
-FILTER_TAIL = True
+FILTER_TAIL = True # if this is True the genomes adding up to less than 1% of the total size (in bp) are filtered
 BINNER_NAME = {1: "MyCC",
                2: "MetaWatt-3.5",
                3: "MetaBAT",
