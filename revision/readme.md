@@ -1,4 +1,7 @@
-# Scripts and their output for the CAMI revision. The files described in "output" are always created using the default values.
+# Scripts and their output for the CAMI revision. 
+
+
+## The files described in "output" are always created using the default values.
 
 
 ### binners_ranking.py
