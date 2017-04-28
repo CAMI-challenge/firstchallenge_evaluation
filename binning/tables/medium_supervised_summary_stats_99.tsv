@@ -1,85 +1,85 @@
-rank	precision	recall	accuracy	misclassification rate	tool
-superkingdom	99.87	64.93	93.03	0.28	drunk_carson_1
-phylum	99.48	89.96	91.66	0.75	drunk_carson_1
-class	95.75	83.79	90.55	1.33	drunk_carson_1
-order	96.58	84.91	89.89	1.72	drunk_carson_1
-family	76.21	77.26	80.87	9.90	drunk_carson_1
-genus	27.22	61.72	68.41	20.33	drunk_carson_1
-species	5.27	36.13	36.81	48.35	drunk_carson_1
-superkingdom	99.45	71.84	90.55	0.12	lonely_davinci_6
-phylum	98.02	59.51	60.47	0.29	lonely_davinci_6
-class	93.32	52.97	56.97	0.84	lonely_davinci_6
-order	81.55	50.58	53.12	1.31	lonely_davinci_6
-family	55.92	41.81	41.94	4.64	lonely_davinci_6
-genus	15.87	29.11	27.24	6.93	lonely_davinci_6
-species	1.76	14.48	14.65	9.97	lonely_davinci_6
-superkingdom	99.87	61.23	88.06	0.18	prickly_fermi_1
-phylum	99.64	85.23	87.29	0.53	prickly_fermi_1
-class	96.55	76.92	86.41	0.98	prickly_fermi_1
-order	96.89	79.04	85.56	1.42	prickly_fermi_1
-family	83.59	72.55	77.09	7.43	prickly_fermi_1
-genus	35.12	58.96	65.45	15.65	prickly_fermi_1
-species	8.13	35.51	36.55	41.12	prickly_fermi_1
-superkingdom	98.92	45.60	95.94	1.23	modest_babbage_2
-phylum	98.69	86.15	95.12	1.13	modest_babbage_2
-class	92.32	81.97	92.43	2.65	modest_babbage_2
-order	91.82	81.67	90.40	3.17	modest_babbage_2
-family	88.67	74.63	80.36	8.53	modest_babbage_2
-genus	64.58	53.32	59.20	16.85	modest_babbage_2
-species	29.97	30.42	28.93	44.20	modest_babbage_2
-superkingdom	99.95	6.08	8.74	0.00	evil_yalow_1
-phylum	99.99	7.24	8.55	0.00	evil_yalow_1
-class	99.63	8.54	8.07	0.01	evil_yalow_1
-order	99.75	7.81	7.77	0.02	evil_yalow_1
-family	92.24	6.38	6.57	0.27	evil_yalow_1
-genus	71.81	3.28	3.64	0.78	evil_yalow_1
-species	70.00	1.25	1.15	0.24	evil_yalow_1
-superkingdom	99.51	68.11	89.86	0.12	lonely_davinci_7
-phylum	98.69	59.13	59.08	0.43	lonely_davinci_7
-class	86.05	52.20	56.56	0.89	lonely_davinci_7
-order	86.37	50.32	53.67	1.30	lonely_davinci_7
-family	54.93	41.62	44.89	3.04	lonely_davinci_7
-genus	13.77	28.11	35.28	4.73	lonely_davinci_7
-species	1.56	14.36	20.19	9.59	lonely_davinci_7
-superkingdom	98.92	45.61	95.95	1.23	modest_babbage_1
-phylum	98.69	86.15	95.12	1.13	modest_babbage_1
-class	92.32	81.97	92.43	2.65	modest_babbage_1
-order	91.82	81.67	90.40	3.17	modest_babbage_1
-family	88.67	74.63	80.36	8.53	modest_babbage_1
-genus	64.58	53.32	59.20	16.85	modest_babbage_1
-species	29.97	30.42	28.93	44.20	modest_babbage_1
-superkingdom	100.00	14.88	42.81	0.00	modest_babbage_4
-phylum	99.05	37.74	36.83	0.44	modest_babbage_4
-class	99.62	30.48	35.85	0.47	modest_babbage_4
-order	99.83	30.77	35.22	0.50	modest_babbage_4
-family	89.01	24.61	26.47	2.40	modest_babbage_4
-genus	61.97	17.15	17.18	6.03	modest_babbage_4
-species	30.02	8.19	7.50	9.39	modest_babbage_4
-superkingdom	100.00	100.00	100.00	0.00	adoring_lalande_=_Gold_Standard_1
-phylum	100.00	100.00	100.00	0.00	adoring_lalande_=_Gold_Standard_1
-class	100.00	100.00	100.00	0.00	adoring_lalande_=_Gold_Standard_1
-order	100.00	100.00	100.00	0.00	adoring_lalande_=_Gold_Standard_1
-family	100.00	100.00	100.00	0.00	adoring_lalande_=_Gold_Standard_1
-genus	100.00	100.00	100.00	0.00	adoring_lalande_=_Gold_Standard_1
-species	100.00	100.00	100.00	0.00	adoring_lalande_=_Gold_Standard_1
-superkingdom	99.44	64.33	83.63	0.13	lonely_davinci_9
-phylum	98.64	52.18	50.88	0.47	lonely_davinci_9
-class	92.90	46.28	49.14	0.95	lonely_davinci_9
-order	84.24	44.28	47.06	1.43	lonely_davinci_9
-family	41.93	37.06	40.26	3.33	lonely_davinci_9
-genus	9.79	24.97	31.72	5.00	lonely_davinci_9
-species	1.12	12.39	17.78	9.23	lonely_davinci_9
-superkingdom	99.47	67.67	84.35	0.15	lonely_davinci_8
-phylum	97.78	52.12	52.05	0.35	lonely_davinci_8
-class	91.91	47.20	49.63	0.98	lonely_davinci_8
-order	73.66	45.00	46.81	1.54	lonely_davinci_8
-family	45.30	37.30	37.84	4.84	lonely_davinci_8
-genus	11.30	25.91	24.23	7.02	lonely_davinci_8
-species	1.27	12.43	12.65	9.35	lonely_davinci_8
-superkingdom	99.94	6.10	8.78	0.00	fervent_sammet_0
-phylum	99.67	7.41	8.75	0.03	fervent_sammet_0
-class	99.13	8.67	8.36	0.05	fervent_sammet_0
-order	99.67	7.92	8.17	0.04	fervent_sammet_0
-family	92.12	6.42	6.71	0.30	fervent_sammet_0
-genus	71.81	3.28	3.64	0.78	fervent_sammet_0
-species	70.00	1.25	1.15	0.24	fervent_sammet_0
+rank	precision	recall	accuracy	misclassification rate	percent assigned bases	tool
+superkingdom	99.87	64.93	93.03	0.28	100.0	drunk_carson_1
+phylum	99.48	89.96	91.66	0.75	93.1495843925	drunk_carson_1
+class	95.75	83.79	90.55	1.33	92.1718305811	drunk_carson_1
+order	96.58	84.91	89.89	1.72	91.6503805388	drunk_carson_1
+family	76.21	77.26	80.87	9.90	91.3801734255	drunk_carson_1
+genus	27.22	61.72	68.41	20.33	90.5210040382	drunk_carson_1
+species	5.27	36.13	36.81	48.35	88.2965105076	drunk_carson_1
+superkingdom	99.45	71.84	90.55	0.12	100.0	lonely_davinci_6
+phylum	98.02	59.51	60.47	0.29	90.2748189623	lonely_davinci_6
+class	93.32	52.97	56.97	0.84	60.2712035068	lonely_davinci_6
+order	81.55	50.58	53.12	1.31	57.3239666596	lonely_davinci_6
+family	55.92	41.81	41.94	4.64	53.9739020961	lonely_davinci_6
+genus	15.87	29.11	27.24	6.93	45.8000131545	lonely_davinci_6
+species	1.76	14.48	14.65	9.97	26.2943558001	lonely_davinci_6
+superkingdom	99.87	61.23	88.06	0.18	100.0	prickly_fermi_1
+phylum	99.64	85.23	87.29	0.53	88.0786128476	prickly_fermi_1
+class	96.55	76.92	86.41	0.98	87.57476256	prickly_fermi_1
+order	96.89	79.04	85.56	1.42	87.111455872	prickly_fermi_1
+family	83.59	72.55	77.09	7.43	86.7119337985	prickly_fermi_1
+genus	35.12	58.96	65.45	15.65	84.2423007749	prickly_fermi_1
+species	8.13	35.51	36.55	41.12	80.6177158727	prickly_fermi_1
+superkingdom	98.92	45.60	95.94	1.23	100.0	modest_babbage_2
+phylum	98.69	86.15	95.12	1.13	100.0	modest_babbage_2
+class	92.32	81.97	92.43	2.65	98.9783774755	modest_babbage_2
+order	91.82	81.67	90.40	3.17	97.7308716734	modest_babbage_2
+family	88.67	74.63	80.36	8.53	96.1134508164	modest_babbage_2
+genus	64.58	53.32	59.20	16.85	91.258556986	modest_babbage_2
+species	29.97	30.42	28.93	44.20	77.6055055141	modest_babbage_2
+superkingdom	99.95	6.08	8.74	0.00	100.0	evil_yalow_1
+phylum	99.99	7.24	8.55	0.00	99.4847624987	evil_yalow_1
+class	99.63	8.54	8.07	0.01	97.1400872221	evil_yalow_1
+order	99.75	7.81	7.77	0.02	91.7858762122	evil_yalow_1
+family	92.24	6.38	6.57	0.27	88.4602573169	evil_yalow_1
+genus	71.81	3.28	3.64	0.78	76.8659259583	evil_yalow_1
+species	70.00	1.25	1.15	0.24	49.6441676384	evil_yalow_1
+superkingdom	99.51	68.11	89.86	0.12	100.0	lonely_davinci_7
+phylum	98.69	59.13	59.08	0.43	89.6220069521	lonely_davinci_7
+class	86.05	52.20	56.56	0.89	59.0315214631	lonely_davinci_7
+order	86.37	50.32	53.67	1.30	56.971037462	lonely_davinci_7
+family	54.93	41.62	44.89	3.04	54.5160124613	lonely_davinci_7
+genus	13.77	28.11	35.28	4.73	47.4205130474	lonely_davinci_7
+species	1.56	14.36	20.19	9.59	38.0870633654	lonely_davinci_7
+superkingdom	98.92	45.61	95.95	1.23	100.0	modest_babbage_1
+phylum	98.69	86.15	95.12	1.13	100.0	modest_babbage_1
+class	92.32	81.97	92.43	2.65	98.9690105181	modest_babbage_1
+order	91.82	81.67	90.40	3.17	97.7216275791	modest_babbage_1
+family	88.67	74.63	80.36	8.53	96.1043654072	modest_babbage_1
+genus	64.58	53.32	59.20	16.85	91.2497844721	modest_babbage_1
+species	29.97	30.42	28.93	44.20	77.5971187807	modest_babbage_1
+superkingdom	100.00	14.88	42.81	0.00	100.0	modest_babbage_4
+phylum	99.05	37.74	36.83	0.44	100.0	modest_babbage_4
+class	99.62	30.48	35.85	0.47	86.9400803289	modest_babbage_4
+order	99.83	30.77	35.22	0.50	84.7313994662	modest_babbage_4
+family	89.01	24.61	26.47	2.40	83.3261714027	modest_babbage_4
+genus	61.97	17.15	17.18	6.03	68.4337819873	modest_babbage_4
+species	30.02	8.19	7.50	9.39	53.942469015	modest_babbage_4
+superkingdom	100.00	100.00	100.00	0.00	100.0	adoring_lalande_=_Gold_Standard_1
+phylum	100.00	100.00	100.00	0.00	99.748550722	adoring_lalande_=_Gold_Standard_1
+class	100.00	100.00	100.00	0.00	99.6174598132	adoring_lalande_=_Gold_Standard_1
+order	100.00	100.00	100.00	0.00	99.6174598132	adoring_lalande_=_Gold_Standard_1
+family	100.00	100.00	100.00	0.00	99.6174598132	adoring_lalande_=_Gold_Standard_1
+genus	100.00	100.00	100.00	0.00	97.8907312485	adoring_lalande_=_Gold_Standard_1
+species	100.00	100.00	100.00	0.00	86.5653005186	adoring_lalande_=_Gold_Standard_1
+superkingdom	99.44	64.33	83.63	0.13	100.0	lonely_davinci_9
+phylum	98.64	52.18	50.88	0.47	83.379338195	lonely_davinci_9
+class	92.90	46.28	49.14	0.95	50.8826444368	lonely_davinci_9
+order	84.24	44.28	47.06	1.43	49.6247114749	lonely_davinci_9
+family	41.93	37.06	40.26	3.33	48.0365245097	lonely_davinci_9
+genus	9.79	24.97	31.72	5.00	43.0868048608	lonely_davinci_9
+species	1.12	12.39	17.78	9.23	34.8560462017	lonely_davinci_9
+superkingdom	99.47	67.67	84.35	0.15	100.0	lonely_davinci_8
+phylum	97.78	52.12	52.05	0.35	84.1023211834	lonely_davinci_8
+class	91.91	47.20	49.63	0.98	51.9362651315	lonely_davinci_8
+order	73.66	45.00	46.81	1.54	50.1579334821	lonely_davinci_8
+family	45.30	37.30	37.84	4.84	47.9171162374	lonely_davinci_8
+genus	11.30	25.91	24.23	7.02	41.921610881	lonely_davinci_8
+species	1.27	12.43	12.65	9.35	23.8418037529	lonely_davinci_8
+superkingdom	99.94	6.10	8.78	0.00	100.0	fervent_sammet_0
+phylum	99.67	7.41	8.75	0.03	99.9490368389	fervent_sammet_0
+class	99.13	8.67	8.36	0.05	99.7382994766	fervent_sammet_0
+order	99.67	7.92	8.17	0.04	95.6066316419	fervent_sammet_0
+family	92.12	6.42	6.71	0.30	93.2462126883	fervent_sammet_0
+genus	71.81	3.28	3.64	0.78	78.7198693089	fervent_sammet_0
+species	70.00	1.25	1.15	0.24	50.7688569388	fervent_sammet_0
