@@ -1,7 +1,10 @@
 #! /bin/bash
 
-#device="_%01d.png"
-device=".pdf"
+device_raw=".png"
+device="${device_raw}"
+if [ "$device_raw" == ".png" ]; then
+    device="_%01d.png"
+fi
 
 set -o errexit
 set -o nounset
@@ -14,9 +17,7 @@ echo "#### Concatinate by genome tables ####"
 Rscript "${SCRIPT_DIR}/table_concatinate.r" "${BINNING_DIR}"
 
 echo "#### Make average prec rec plots ####"
-Rscript "${SCRIPT_DIR}/average_prec_rec_plots.r"
-
-rm "${SCRIPT_DIR}/Rplots.pdf"
+Rscript "${SCRIPT_DIR}/average_prec_rec_plots.r" "${BINNING_DIR}" "${device_raw}"
 
 echo "#### unsupervised_precision_recall ####"
 Rscript "${SCRIPT_DIR}/unsupervised_precision_recall.r" "${BINNING_DIR}/data/unsupervised/" "${BINNING_DIR}/plots/unsupervised/unsupervised_precision_recall${device}"
@@ -56,4 +57,6 @@ Rscript "${SCRIPT_DIR}/supervised_ari_by_category.r" "${BINNING_DIR}/data/taxono
 echo "#### supervised_ari_by_category uniqueness ####"
 Rscript "${SCRIPT_DIR}/supervised_ari_by_category.r" "${BINNING_DIR}/data/taxonomic_uniqueness/" "${BINNING_DIR}/plots/supervised/supervised_ari_including_notassigned_uniqueness${device}"
 Rscript "${SCRIPT_DIR}/supervised_ari_by_category.r" "${BINNING_DIR}/data/taxonomic_uniqueness/" "${BINNING_DIR}/plots/supervised/supervised_ari_excluding_notassigned_uniqueness${device}" 1
+
+rm "${SCRIPT_DIR}/Rplots.pdf"
 

@@ -35,20 +35,6 @@ bin_types <- c(
 	"supervised",
 	"unsupervised"
 	)
-bin_location <- c(
-	paste(
-		file.path("data", "taxonomic"),
-		file.path("data", "taxonomic_novelty"),
-		file.path("data", "taxonomic_uniqueness"),
-		sep=','
-		),
-	paste(
-		file.path("data", "unsupervised"),
-		file.path("data", "unsupervised_novelty"),
-		file.path("data", "unsupervised_uniqueness"),
-		sep=','
-		)
-	)
 
 datasets <- c(
 	"1st CAMI Challenge Dataset 1 CAMI_low",
@@ -63,12 +49,26 @@ root_dir <- argv[1]
 output_dir <- file.path(root_dir, "tables")
 
 
+bin_location <- c(
+	paste(
+		file.path(root_dir, "data", "taxonomic"),
+		file.path(root_dir, "data", "taxonomic_novelty"),
+		file.path(root_dir, "data", "taxonomic_uniqueness"),
+		sep=','
+		),
+	paste(
+		file.path(root_dir, "data", "unsupervised"),
+		file.path(root_dir, "data", "unsupervised_novelty"),
+		file.path(root_dir, "data", "unsupervised_uniqueness"),
+		sep=','
+		)
+	)
+
 for (dir_index in 1:length(bin_location))
 {
-	data_dir <- file.path(root_dir, bin_location[dir_index])
-	print(data_dir)
+	print(bin_location[dir_index])
+	data_dir <- bin_location[dir_index]
 	df_tools <- get_dataframe_of_tools_at_locations(data_dir)
-	# print(levels(df_tools$category))
 	for (data_type in levels)
 	{
 		df_tools_by_type <- subset(df_tools, datatype==data_type)

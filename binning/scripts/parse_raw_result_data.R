@@ -19,6 +19,7 @@ get_dataframe_of_tools_at <- function(directory)
 	anonymous_names <- c()
 	method_names <- c()
 	method_version <- c()
+	method_parameter <- c()
 	pool_names <- c()
 	dir_path_list <- c()
 
@@ -43,12 +44,18 @@ get_dataframe_of_tools_at <- function(directory)
 		imn <- which( rownames(description) == "method_name")
 		ipn <- which( rownames(description) == "pool_name")
 		ive <- which( rownames(description) == "version")
+		ipa <- which( rownames(description) == "parameter")
 		anonymous_names[index] <- description$value[ian]
 		method_names[index] <- description$value[imn]
 		method_version[index] <- ""
 		if (length(ive) > 0)
 		{
 			method_version[index] <- description$value[ive]
+		}
+		method_parameter[index] <- ""
+		if (length(ipa) > 0)
+		{
+			method_parameter[index] <- description$value[ipa]
 		}
 		if (grepl("Gold Standard", anonymous_names[index]))
 		{
@@ -72,6 +79,7 @@ get_dataframe_of_tools_at <- function(directory)
 		method <- method_names[index]
 		dataset <- pool_names[index]
 		version <- method_version[index]
+		parameter <- method_parameter[index]
 		#print(dir_path)
 		category <- "all"
 		fp_yaml <- file.path(dir_path, "output", "biobox.yaml")
@@ -83,15 +91,18 @@ get_dataframe_of_tools_at <- function(directory)
 				file_path <- file.path(dir_path, "output", result$value)
 				if (!file.exists(file_path))
 				{
+					# print(file_path)
 					next
 				}
 				if (!is.null(result$category))
 				{
 					category <- as.character(result$category)
+					# print(category)
 				}
 				list_tools$anonymous[entry_count] <- anonymous
 				list_tools$method[entry_count] <- method
 				list_tools$version[entry_count] <- version
+				list_tools$parameter[entry_count] <- parameter
 				list_tools$dataset[entry_count] <- dataset
 				list_tools$category[entry_count] <- category
 				list_tools$file[entry_count] <- file_path
@@ -143,6 +154,7 @@ get_dataframe_of_tools_at <- function(directory)
 			list_tools$anonymous[entry_count] <- anonymous
 			list_tools$method[entry_count] <- method
 			list_tools$version[entry_count] <- version
+			list_tools$parameter[entry_count] <- parameter
 			list_tools$dataset[entry_count] <- dataset
 			list_tools$category[entry_count] <- category
 			list_tools$file[entry_count] <- file_path_by_genome
@@ -156,6 +168,7 @@ get_dataframe_of_tools_at <- function(directory)
 			list_tools$anonymous[entry_count] <- anonymous
 			list_tools$method[entry_count] <- method
 			list_tools$version[entry_count] <- version
+			list_tools$parameter[entry_count] <- parameter
 			list_tools$dataset[entry_count] <- dataset
 			list_tools$category[entry_count] <- category
 			list_tools$file[entry_count] <- file_path_by_genome
@@ -168,6 +181,7 @@ get_dataframe_of_tools_at <- function(directory)
 		anonymous = merge_anames(as.vector(list_tools$anonymous)),
 		method = as.vector(list_tools$method),
 		version = as.vector(list_tools$version),
+		parameter = as.vector(list_tools$parameter),
 		dataset = as.vector(list_tools$dataset),
 		category = as.vector(list_tools$category),
 		file = as.vector(list_tools$file),
@@ -185,7 +199,7 @@ get_dataframe_of_tools_at_locations <- function(root_directory_list)
 {
 	root_directories <- strsplit(root_directory_list, ",")
 	dataframe_tools <- NULL
-	for (directory in root_directories)
+	for (directory in unlist(root_directories))
 	{
 		if (is.null(dataframe_tools))
 		{

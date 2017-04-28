@@ -6,6 +6,20 @@ library(scales)
 
 source("parse_raw_result_data.R")
 
+# mg
+#279	modest_babbage_6
+#281	modest_babbage_4
+#284	modest_babbage_0
+
+merge_names <- function(vec_of_string)
+{
+    pattern = c("CONCOCT.*", "taxator-tk 1.3.0e.*", "taxator-tk 1.4pre1e.*")
+    replace = c("CONCOCT", "taxator-tk 1.3.0e", "taxator-tk 1.4pre1e")
+    for (index in 1:length(pattern)){
+        vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
+    return(vec_of_string)
+}
+
 create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA) {
   if(is.na(root_path)) {root_path<- argv[1]}
   if(is.na(output_file_path)) {output_file_path<- argv[2]}
@@ -17,8 +31,18 @@ create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA) {
   df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
   df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
   
-  method_labels <- df_tools_subset$method
+  method_labels <- paste(df_tools_subset$method, df_tools_subset$version)
+  method_labels <- merge_names(method_labels)
   names(method_labels) <- df_tools_subset$anonymous
+	#print(method_labels)
+  labeller <- function(variables)
+  {
+      #rvalue <- strtrim(method_labels[variables], 17)
+      #return(rvalue)
+      return(method_labels[variables])
+  }
+  method_labeller <- as_labeller(labeller)
+
 
   if (length(df_tools_low$file)>0)
   {
@@ -50,20 +74,30 @@ create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA) {
   
   if (length(df_tools_low$file)>0)
   {
-    gg_plot_low <- draw_plot(data_low, "Low Complexity Dataset\n", method_labels)
+    gg_plot_low <- draw_plot(data_low, "Low Complexity Dataset\n", method_labeller)
   }
   if (length(df_tools_medium$file)>0)
   {
-    gg_plot_medium <- draw_plot(data_medium, "Medium Complexity Dataset\n", method_labels)
+    gg_plot_medium <- draw_plot(data_medium, "Medium Complexity Dataset\n", method_labeller)
   }
   if (length(df_tools_high$file)>0)
   {
-    gg_plot_high <- draw_plot(data_high, "High Complexity Dataset\n", method_labels)
+    gg_plot_high <- draw_plot(data_high, "High Complexity Dataset\n", method_labeller)
   }
   #output <- arrangeGrob(gg_plot_low, gg_plot_medium, gg_plot_high, ncol=1)
   output <- marrangeGrob(list(gg_plot_low, gg_plot_medium, gg_plot_high), nrow=1, ncol=1, top=NULL)
   ggsave(output_file_path, output, width=297, height=210, units='mm')#, device="pdf"
   #dev.off()
+	#print(summary(data_low))
+	data_low$dataset <- "low"
+	data_medium$dataset <- "medium"
+	data_high$dataset <- "high"
+	##print(summary(data_high))
+	##df_subset <- subset(df, select = c("tool", "precision", "recall", "precision_er", "recall_er", "real_size", "predicted_size", "dataset"))
+	#csv_out <- paste(output_file_path, ".", "csv", sep="")
+	#all <- rbind(data_low,data_medium,data_high)
+	#all$tools <- factor(unlist(method_labeller(all$tools)))
+	#write.csv(file=csv_out, x=all, row.names=F)
 }
 
 
@@ -168,13 +202,8 @@ get_names <- function(file_paths)
   names
 }
 
-draw_plot <- function(data, title, method_labels)
+draw_plot <- function(data, title, method_labeller)
 {
-  method_labeller <- function(variables)
-  {
-    rvalue <- strtrim(method_labels[variables], 17)
-    return(rvalue)
-  }
   
   # precision averaged over predicted bins, recall averaged over true bins, precision in this dir is truncated precision (1% of smallest predicted bins removed)
   title_main <- title
@@ -193,7 +222,7 @@ draw_plot <- function(data, title, method_labels)
   gg_plot <- ggplot() +
     geom_ribbon(
       data=subset(data, metric=="precision" | metric=="recall"),
-      aes(x = level, y = percent, ymax=percent+sd, ymin=percent-sd, linetype=metric, fill=metric, group=interaction(metric, tools)),
+      aes(x = level, y = percent, ymax=percent+sqrt(sd), ymin=percent-sqrt(sd), linetype=metric, fill=metric, group=interaction(metric, tools)),
       alpha = 0.2) +
     
     geom_line(
@@ -222,7 +251,7 @@ draw_plot <- function(data, title, method_labels)
     labs(title=title_main, fill="Metric", linetype="Metric", colour="Metric", x=NULL, y=NULL) +
     #ggtitle(paste(title, title_main, sep='\n')) +
     #facet_grid(~ tools) +
-    facet_wrap(~ tools, as.table = FALSE, labeller=as_labeller(method_labeller)) +
+    facet_wrap(~ tools, as.table = FALSE, labeller=method_labeller) +
     theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.background = element_rect(fill = "light blue")) # , vjust  0.5
   return(gg_plot)
 }
