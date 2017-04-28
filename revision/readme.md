@@ -82,8 +82,8 @@ The table of bins present in the gold standard to map the predicted bins to the 
 
 
 ### create\_summary\_table.py
-This script appends the summary\_stats\_99.tsv results of every tool to a single file (including only the 4 metrics
-which will be used for ranking: precision, recall, accuracy, misclassification rate). The individual files'
+This script appends the summary\_stats\_99.tsv results of every tool to a single file (including the metrics
+which will be used for ranking: precision, recall, accuracy, misclassification rate, % assigned bases). The individual files'
 headers are removed and instead the name of the tool appended as last column in the tsv.
 The .properties files are basically sectionless INI files, so after adding a dummy header the configparse module
 can be used to read the files and retrieve the data set.
@@ -94,6 +94,7 @@ can be used to read the files and retrieve the data set.
 
 The individual description of the methods to sort by sample
 * ../binning/data/taxonomic/*/output/summary\_stats\_99.tsv \[[folder](../binning/data/taxonomic)\]
+* ../binning/data/taxonomic/*/output/absolute\_counts\_per\_rank.tsv \[[folder](../binning/data/taxonomic)\]
 
 The results themselves which are sorted and appended to the table corresponding to the sample
 * DATASETS names (default: "1st CAMI Challenge Dataset 1 CAMI_low":"low",
@@ -128,6 +129,22 @@ The names and mapping of the anonymous names and different parameter sets to a s
 ***Output:***
 * [tax\_binner\_ranking.tsv](tax_binner_ranking.tsv)
 * [tax\_binner\_table.tsv](tax_binner_table.tsv)
+
+
+### get_assigned_bases.py
+Given the metadata information of assigned bases of the unsupervised binners, calculates the average percentage of bases assigned of all the tools in BINNER over the three data sets.
+
+***Input:***
+* [stats\_unsupervised.tsv](../metadata/misc/stats_unsupervised.tsv)
+
+The tables created by the [create\_summary\_table.py](create_summary_table.py) script, appending the summary\_stats\_99.tsv files for every sample. They are all used and results are averaged across data sets.
+* BINNER and BINNER\_NAMES (default: [bin\_mapping.txt](bin_mapping.txt))
+
+The names and mapping of the anonymous names and different parameter sets to a single method name
+
+
+***Output:***
+* To commandline: List ('Tool', average percentage of assigned bases)
 
 
 ### TODO:
