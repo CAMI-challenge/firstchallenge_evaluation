@@ -34,6 +34,13 @@ MEGAN	0.09
 Kraken	0.295
 PhyloPythiaS+	0.446666666667
 
+% assigned bases:
+Gold Standard	100.0
+PhyloPythiaS+	100.0
+Kraken	100.0
+taxator-tk	100.0
+MEGAN	100.0
+
 
 family:
 Precision:
@@ -70,6 +77,13 @@ taxator-tk	0.45
 MEGAN	4.57333333333
 PhyloPythiaS+	7.10666666667
 Kraken	7.525
+
+% assigned bases:
+Gold Standard	99.6737288397
+PhyloPythiaS+	96.3340510901
+Kraken	90.1556040073
+taxator-tk	82.9180760102
+MEGAN	47.1037397887
 
 
 order:
@@ -108,6 +122,13 @@ Kraken	2.28
 MEGAN	2.48
 PhyloPythiaS+	3.38666666667
 
+% assigned bases:
+Gold Standard	99.6737288397
+PhyloPythiaS+	98.1559129158
+Kraken	90.7144350363
+taxator-tk	88.3809959143
+MEGAN	48.6952187966
+
 
 phylum:
 Precision:
@@ -144,6 +165,13 @@ Kraken	0.88
 taxator-tk	1.1
 MEGAN	1.34
 PhyloPythiaS+	2.32666666667
+
+% assigned bases:
+PhyloPythiaS+	100.0
+taxator-tk	99.9323838951
+Gold Standard	99.7563166194
+Kraken	92.3550568051
+MEGAN	81.3355585151
 
 
 species:
@@ -182,6 +210,13 @@ MEGAN	12.2
 PhyloPythiaS+	40.5966666667
 Kraken	51.46
 
+% assigned bases:
+Gold Standard	89.5109126658
+PhyloPythiaS+	84.2331444766
+Kraken	83.9641654385
+taxator-tk	38.0536599318
+MEGAN	30.9433971689
+
 
 genus:
 Precision:
@@ -219,6 +254,13 @@ MEGAN	8.86333333333
 Kraken	19.515
 PhyloPythiaS+	23.6266666667
 
+% assigned bases:
+Gold Standard	94.7415327781
+PhyloPythiaS+	92.2832778721
+Kraken	87.9369059748
+taxator-tk	69.5687162644
+MEGAN	40.8909528443
+
 
 class:
 Precision:
@@ -255,5 +297,12 @@ taxator-tk	0.415
 Kraken	1.575
 MEGAN	2.17333333333
 PhyloPythiaS+	3.11666666667
+
+% assigned bases:
+Gold Standard	99.6737288397
+PhyloPythiaS+	99.1389753248
+taxator-tk	98.3059190505
+Kraken	91.5141714845
+MEGAN	51.5036862078
 
 
