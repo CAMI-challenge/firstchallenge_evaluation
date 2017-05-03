@@ -126,8 +126,9 @@ def map_tools(*tools):
 	corr_names.update({"Gold Standard":merged["Gold Standard"]})
 	return corr_names
 
-def print_table(tools):
-	with open("binner_completeness.tsv",'wb') as toWrite:
+def print_table(tools, dataset):
+	with open("binner_completeness.tsv",'a') as toWrite:
+		toWrite.write("Data set:\t%s\t\t\n" % dataset)
 		for tool in tools:
 			line = "%s\t>50%% complete\t>70%% complete\t>90%% complete\n" % tool
 			toWrite.write(line)
@@ -151,4 +152,10 @@ res_medium = calc_table(tools_medium)
 res_low = calc_table(tools_low)
 
 merged = map_tools(res_high, res_medium, res_low)
-print_table(merged)
+low = map_tools(res_low)
+medium = map_tools(res_medium)
+high = map_tools(res_high)
+print_table(low, "low")
+print_table(medium, "medium")
+print_table(high, "high")
+print_table(merged, "combined")
