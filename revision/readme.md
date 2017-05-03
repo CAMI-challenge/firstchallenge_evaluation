@@ -40,7 +40,7 @@ Also, the cells are not mutually exclusive, i.e. a genome with >90% completeness
 ***Input:***
 * ../binning/tables/\<data set\>\_unsupervised\_by\_genome\_all.tsv \[[low](../binning/tables/low_unsupervised_by_genome_all.tsv), [medium](../binning/tables/medium_unsupervised_by_genome_all.tsv), [high](../binning/tables/high_unsupervised_by_genome_all.tsv)]
 
-The result tables for the genome binners sorted by the genomes present in the respective samples. All three are used and results (i.e. well recovered genomes) are summed up.
+The result tables for the genome binners sorted by the genomes present in the respective samples. All three are used and results (i.e. well recovered genomes) are written per data set and combined (summed up) over all three.
 * FILTER\_TAIL (default: True)
 
 Excludes genomes summing up to **1%** of the total genome sizes for calculation.
