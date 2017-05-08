@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 BINNER_NAME = {1: "MyCC",
                2: "MetaWatt-3.5",
                3: "MetaBAT",
@@ -37,8 +36,8 @@ BINNER = {"berserk_euclid_2": 1,
           "fervent_sammet_11": 7,
           "prickly_fermi_1": 8,
           "modest_babbage_1": 9}
-PATH="../binning/tables/%s_supervised_summary_stats_99.tsv" #replace %s with low medium high
-METRICS={0:'Precision',1:'Recall',2:'Precision + Recall',3:'Accuracy',4:'Misclassification rate'}
+SUMMARY_STATS="../binning/tables/%s_supervised_summary_stats_99.tsv" #replace %s with low medium high
+METRICS={0:'Precision',1:'Recall',2:'Precision + Recall',3:'Accuracy',4:'Misclassification rate',5:'% assigned bases'}
 
 def read_table(fname):
 	tool_res = {"superkingdom":{},"phylum":{},"class":{},"order":{},"family":{},"genus":{},"species":{}}
@@ -46,9 +45,18 @@ def read_table(fname):
 		for line in res:
 			if line.startswith("rank"): #header
 				continue
-			rank, prec, rec, acc, mis, tool = line.strip().split('\t')
-			tool_res[rank].update({tool:[prec,rec,acc,mis]})
+			rank, prec, rec, acc, mis, ass, tool = line.strip().split('\t')
+			tool_res[rank].update({tool:[prec,rec,acc,mis,ass]})
 	return tool_res
+
+def get_binner_name(anonymous_name):
+	if anonymous_name not in BINNER:
+		if "Gold_Standard" in anonymous_name:
+			return "Gold Standard"
+		else:
+			return None
+	else:
+		return BINNER_NAME[BINNER[anonymous_name]]
 
 # add all samples/data sets and average, sort tools by ranks
 def merge_tools(*tables):
@@ -56,19 +64,16 @@ def merge_tools(*tables):
 	for table in tables:
 		for rank in table:
 			for tool in table[rank]:
-				if tool not in BINNER:
-					if "Gold_Standard" in tool:
-						tname = "Gold Standard"
-					else:
-						continue
-				else:
-					tname = BINNER_NAME[BINNER[tool]]
+				tname = get_binner_name(tool)
+				if tname is None: # not in BINNER list
+					continue
 				if tname in merged:
 					if rank in merged[tname]:
 						merged[tname][rank][0].append(float(table[rank][tool][0])) #prec
 						merged[tname][rank][1].append(float(table[rank][tool][1])) #rec
 						merged[tname][rank][2].append(float(table[rank][tool][2])) #acc
 						merged[tname][rank][3].append(float(table[rank][tool][3])) #mis
+						merged[tname][rank][4].append(float(table[rank][tool][4])) #%ass
 					else:
 						merged[tname][rank] = [[float(x)] for x in table[rank][tool]]
 				else:
@@ -82,12 +87,14 @@ def merge_tools(*tables):
 			by_rank[rank].update({tool:averages})
 	return by_rank
 
+
 def create_ranking(by_rank):
 	sorted_prec_all = []
 	sorted_rec_all = []
 	sorted_prrc_all = []
 	sorted_acc_all = []
 	sorted_mis_all = []
+	sorted_ass_all = []
 	with open("tax_binner_ranking.tsv",'wb') as res:
 		for rank in by_rank:
 			res.write("%s:\n" % rank)
@@ -96,13 +103,15 @@ def create_ranking(by_rank):
 			sorted_prrc = []
 			sorted_acc = []
 			sorted_mis = []
+			sorted_ass = []
 			for tool in by_rank[rank]:
-				prec, rec, acc, mis = by_rank[rank][tool]
+				prec, rec, acc, mis, ass = by_rank[rank][tool]
 				sorted_prec.append((tool,prec))
 				sorted_rec.append((tool,rec))
 				sorted_prrc.append((tool,prec+rec))
 				sorted_acc.append((tool,acc))
 				sorted_mis.append((tool,mis))
+				sorted_ass.append((tool,ass))
 			sorted_prec = sorted(sorted_prec,key=lambda x:x[1],reverse=True)
 			sorted_prec_all.append(sorted_prec)
 			sorted_rec = sorted(sorted_rec,key=lambda x:x[1],reverse=True)
@@ -113,6 +122,8 @@ def create_ranking(by_rank):
 			sorted_acc_all.append(sorted_acc)
 			sorted_mis = sorted(sorted_mis,key=lambda x:x[1]) #lower misclassification is good
 			sorted_mis_all.append(sorted_mis)
+			sorted_ass = sorted(sorted_ass, key=lambda x:x[1], reverse=True)
+			sorted_ass_all.append(sorted_ass)
 			res.write("Precision:\n")
 			for tool in sorted_prec:
 				res.write("%s\t%s\n" % (tool[0],tool[1]))
@@ -128,8 +139,11 @@ def create_ranking(by_rank):
 			res.write("\nMisclassification rate:\n")
 			for tool in sorted_mis:
 				res.write("%s\t%s\n" % (tool[0],tool[1]))
+			res.write("\n% assigned bases:\n")
+			for tool in sorted_ass:
+				res.write("%s\t%s\n" % (tool[0], tool[1]))
 			res.write("\n\n")
-	return sorted_prec_all, sorted_rec_all, sorted_prrc_all, sorted_acc_all, sorted_mis_all
+	return sorted_prec_all, sorted_rec_all, sorted_prrc_all, sorted_acc_all, sorted_mis_all, sorted_ass_all
 
 """for all metrics, create a ranking across all ranks"""
 def evaluate_ranking(*metrics):
@@ -161,7 +175,7 @@ def evaluate_ranking(*metrics):
 				table.write("\t%s (%s, %s)" % (tool,sum_rank,avg))
 			table.write("\n")
 
-combined = [read_table(PATH % dataset) for dataset in ["low","medium","high"]]
+combined = [read_table(SUMMARY_STATS % dataset) for dataset in ["low","medium","high"]]
 merged = merge_tools(combined[0],combined[1],combined[2])
-prec, rec, precrec, acc, mis = create_ranking(merged) # writes and returns
-evaluate_ranking(prec,rec,precrec,acc,mis)
+prec, rec, precrec, acc, mis, ass = create_ranking(merged) # writes and returns
+evaluate_ranking(prec,rec,precrec,acc,mis,ass)
