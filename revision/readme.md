@@ -150,3 +150,24 @@ The names and mapping of the anonymous names and different parameter sets to a s
 ### TODO:
 * Description, which binning tools where chosen if multiple parameter sets were present (best parameter set)
 
+### CrossClassifyCAMI.jar
+
+CrossClassifyCAMI.jar is a reduced version of the tool for mapping taxonomies available at [https://bitbucket.org/mokana/crossclassify/wiki/Home](https://bitbucket.org/mokana/crossclassify/wiki/Home) (license: [https://www.arb-silva.de/silva-license-information](https://www.arb-silva.de/silva-license-information)).
+
+In order to run CrossClassifyCAMI.jar, the following files must be in the current directory:
+
+* nodes.dmp
+* names.dmp
+* [silva.txt](silva.txt)
+
+Files nodes.dmp and names.dmp can be downloaded from [https://s3-eu-west-1.amazonaws.com/cami-data-eu/taxonomy.tar.gz](https://s3-eu-west-1.amazonaws.com/cami-data-eu/taxonomy.tar.gz)
+
+If per_taxon_sorted.tsv is also available, the tool prints to the screen contents of per_taxon_sorted.tsv + mapping results. Otherwise, it prints mapping results for all nodes of NCBI.
+
+Strict and loose mapping are performed separately.
+
+Command line for loose mapping (the default):
+java -Xmx6G  -jar CrossClassifyCAMI.jar > output_file_loose
+
+For the strict mapping, you need to specify -s:
+java -Xmx6G  -jar CrossClassifyCAMI.jar -s > output_file_str
