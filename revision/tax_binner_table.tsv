@@ -1,0 +1,7 @@
+Metric	Best method (rank, avg)	2nd best (rank, avg)	3rd best (rank, avg)	4th best (rank, avg)
+Precision	taxator-tk (7, 84.6671428571)	PhyloPythiaS+ (11, 79.8180952381)	Kraken (18, 70.4335714286)	MEGAN (24, 53.54)
+Recall	PhyloPythiaS+ (8, 68.2580952381)	Kraken (12, 63.9692857143)	MEGAN (19, 36.9128571429)	taxator-tk (25, 9.81928571429)
+Precision + Recall	PhyloPythiaS+ (8, 148.076190476)	Kraken (15, 134.402857143)	taxator-tk (21, 94.4864285714)	MEGAN (24, 90.4528571429)
+Accuracy	PhyloPythiaS+ (10, 78.7742857143)	Kraken (14, 75.7742857143)	MEGAN (21, 41.9938095238)	taxator-tk (27, 11.7185714286)
+Misclassification rate	taxator-tk (11, 0.556428571429)	MEGAN (19, 4.53142857143)	Kraken (20, 11.9328571429)	PhyloPythiaS+ (26, 11.5152380952)
+% assigned bases	PhyloPythiaS+ (10, 95.7350516685)	Kraken (19, 90.9486198209)	taxator-tk (20, 82.4513930095)	MEGAN (29, 57.2103647602)

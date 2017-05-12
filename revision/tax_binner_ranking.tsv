@@ -1,0 +1,308 @@
+superkingdom:
+Precision:
+Gold Standard	100.0
+taxator-tk	99.61
+Kraken	99.605
+MEGAN	99.4633333333
+PhyloPythiaS+	99.4366666667
+
+Recall:
+Gold Standard	100.0
+Kraken	79.68
+MEGAN	65.1066666667
+PhyloPythiaS+	64.5866666667
+taxator-tk	9.615
+
+Precision + Recall:
+Gold Standard	200.0
+Kraken	179.285
+MEGAN	164.57
+PhyloPythiaS+	164.023333333
+taxator-tk	109.225
+
+Accuracy:
+Gold Standard	100.0
+PhyloPythiaS+	97.47
+Kraken	92.245
+MEGAN	81.5666666667
+taxator-tk	18.185
+
+Misclassification rate:
+Gold Standard	0.0
+taxator-tk	0.02
+MEGAN	0.09
+Kraken	0.295
+PhyloPythiaS+	0.446666666667
+
+% assigned bases:
+Gold Standard	100.0
+PhyloPythiaS+	100.0
+Kraken	100.0
+taxator-tk	100.0
+MEGAN	100.0
+
+
+family:
+Precision:
+Gold Standard	100.0
+taxator-tk	89.055
+PhyloPythiaS+	85.41
+Kraken	81.9
+MEGAN	39.4066666667
+
+Recall:
+Gold Standard	100.0
+PhyloPythiaS+	77.26
+Kraken	69.81
+MEGAN	33.9633333333
+taxator-tk	10.455
+
+Precision + Recall:
+Gold Standard	200.0
+PhyloPythiaS+	162.67
+Kraken	151.71
+taxator-tk	99.51
+MEGAN	73.37
+
+Accuracy:
+Gold Standard	100.0
+PhyloPythiaS+	83.38
+Kraken	80.655
+MEGAN	37.13
+taxator-tk	11.62
+
+Misclassification rate:
+Gold Standard	0.0
+taxator-tk	0.45
+MEGAN	4.57333333333
+PhyloPythiaS+	7.10666666667
+Kraken	7.525
+
+% assigned bases:
+Gold Standard	99.6737288397
+PhyloPythiaS+	96.3340510901
+Kraken	90.1556040073
+taxator-tk	82.9180760102
+MEGAN	47.1037397887
+
+
+order:
+Precision:
+Gold Standard	100.0
+taxator-tk	98.31
+PhyloPythiaS+	93.26
+Kraken	89.335
+MEGAN	63.1333333333
+
+Recall:
+Gold Standard	100.0
+PhyloPythiaS+	86.6766666667
+Kraken	75.83
+MEGAN	42.2
+taxator-tk	13.555
+
+Precision + Recall:
+Gold Standard	200.0
+PhyloPythiaS+	179.936666667
+Kraken	165.165
+taxator-tk	111.865
+MEGAN	105.333333333
+
+Accuracy:
+Gold Standard	100.0
+PhyloPythiaS+	91.1433333333
+Kraken	88.11
+MEGAN	44.9566666667
+taxator-tk	13.7
+
+Misclassification rate:
+Gold Standard	0.0
+taxator-tk	0.33
+Kraken	2.28
+MEGAN	2.48
+PhyloPythiaS+	3.38666666667
+
+% assigned bases:
+Gold Standard	99.6737288397
+PhyloPythiaS+	98.1559129158
+Kraken	90.7144350363
+taxator-tk	88.3809959143
+MEGAN	48.6952187966
+
+
+phylum:
+Precision:
+Gold Standard	100.0
+PhyloPythiaS+	97.78
+taxator-tk	97.155
+Kraken	92.36
+MEGAN	87.46
+
+Recall:
+Gold Standard	100.0
+PhyloPythiaS+	87.7233333333
+Kraken	75.05
+MEGAN	44.7933333333
+taxator-tk	13.22
+
+Precision + Recall:
+Gold Standard	200.0
+PhyloPythiaS+	185.503333333
+Kraken	167.41
+MEGAN	132.253333333
+taxator-tk	110.375
+
+Accuracy:
+Gold Standard	100.0
+PhyloPythiaS+	94.8166666667
+Kraken	90.865
+MEGAN	50.52
+taxator-tk	16.655
+
+Misclassification rate:
+Gold Standard	0.0
+Kraken	0.88
+taxator-tk	1.1
+MEGAN	1.34
+PhyloPythiaS+	2.32666666667
+
+% assigned bases:
+PhyloPythiaS+	100.0
+taxator-tk	99.9323838951
+Gold Standard	99.7563166194
+Kraken	92.3550568051
+MEGAN	81.3355585151
+
+
+species:
+Precision:
+Gold Standard	100.0
+taxator-tk	41.655
+PhyloPythiaS+	27.8866666667
+Kraken	4.77
+MEGAN	0.803333333333
+
+Recall:
+Gold Standard	100.0
+PhyloPythiaS+	24.7166666667
+Kraken	20.375
+MEGAN	7.96
+taxator-tk	2.05
+
+Precision + Recall:
+Gold Standard	200.0
+PhyloPythiaS+	52.6033333333
+taxator-tk	43.705
+Kraken	25.145
+MEGAN	8.76333333333
+
+Accuracy:
+Gold Standard	100.0
+PhyloPythiaS+	32.2266666667
+Kraken	24.12
+MEGAN	9.42666666667
+taxator-tk	1.725
+
+Misclassification rate:
+Gold Standard	0.0
+taxator-tk	0.23
+MEGAN	12.2
+PhyloPythiaS+	40.5966666667
+Kraken	51.46
+
+% assigned bases:
+Gold Standard	89.5109126658
+PhyloPythiaS+	84.2331444766
+Kraken	83.9641654385
+taxator-tk	38.0536599318
+MEGAN	30.9433971689
+
+
+genus:
+Precision:
+Gold Standard	100.0
+taxator-tk	68.895
+PhyloPythiaS+	60.0433333333
+Kraken	36.675
+MEGAN	10.61
+
+Recall:
+Gold Standard	100.0
+Kraken	52.205
+PhyloPythiaS+	48.8533333333
+MEGAN	20.3833333333
+taxator-tk	4.935
+
+Precision + Recall:
+Gold Standard	200.0
+PhyloPythiaS+	108.896666667
+Kraken	88.88
+taxator-tk	73.83
+MEGAN	30.9933333333
+
+Accuracy:
+Gold Standard	100.0
+Kraken	65.045
+PhyloPythiaS+	59.2633333333
+MEGAN	23.49
+taxator-tk	5.375
+
+Misclassification rate:
+Gold Standard	0.0
+taxator-tk	1.35
+MEGAN	8.86333333333
+Kraken	19.515
+PhyloPythiaS+	23.6266666667
+
+% assigned bases:
+Gold Standard	94.7415327781
+PhyloPythiaS+	92.2832778721
+Kraken	87.9369059748
+taxator-tk	69.5687162644
+MEGAN	40.8909528443
+
+
+class:
+Precision:
+Gold Standard	100.0
+taxator-tk	97.99
+PhyloPythiaS+	94.91
+Kraken	88.39
+MEGAN	73.9033333333
+
+Recall:
+Gold Standard	100.0
+PhyloPythiaS+	87.99
+Kraken	74.835
+MEGAN	43.9833333333
+taxator-tk	14.905
+
+Precision + Recall:
+Gold Standard	200.0
+PhyloPythiaS+	182.9
+Kraken	163.225
+MEGAN	117.886666667
+taxator-tk	112.895
+
+Accuracy:
+Gold Standard	100.0
+PhyloPythiaS+	93.12
+Kraken	89.38
+MEGAN	46.8666666667
+taxator-tk	14.77
+
+Misclassification rate:
+Gold Standard	0.0
+taxator-tk	0.415
+Kraken	1.575
+MEGAN	2.17333333333
+PhyloPythiaS+	3.11666666667
+
+% assigned bases:
+Gold Standard	99.6737288397
+PhyloPythiaS+	99.1389753248
+taxator-tk	98.3059190505
+Kraken	91.5141714845
+MEGAN	51.5036862078
+
+

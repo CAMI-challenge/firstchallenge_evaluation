@@ -1,0 +1,599 @@
+rank	taxon	precision	recall	sum_prec_rec	#predictions
+superkingdom	Bacteria	0.997705627706	0.682380952381	1.68008658009	29/29
+superkingdom	Archaea	0.934090909091	0.653181818182	1.58727272727	22/22
+phylum	Proteobacteria	0.993506493506	0.590086580087	1.58359307359	29/29
+phylum	Actinobacteria	0.984935064935	0.611082251082	1.59601731602	29/29
+phylum	Bacteroidetes	0.989696969697	0.501212121212	1.49090909091	29/29
+phylum	Firmicutes	0.931991341991	0.541731601732	1.47372294372	29/29
+phylum	Euryarchaeota	0.979545454545	0.502272727273	1.48181818182	22/22
+phylum	Verrucomicrobia	0.974545454545	0.316363636364	1.29090909091	11/11
+phylum	Fusobacteria	0.926363636364	0.303636363636	1.23	11/11
+phylum	Thermotogae	0.986363636364	0.463636363636	1.45	11/11
+phylum	Spirochaetes	0.920909090909	0.420909090909	1.34181818182	11/11
+phylum	Fibrobacteres	0.975555555556	0.297777777778	1.27333333333	9/11
+phylum	Tenericutes	0.909682539683	0.385478595479	1.29516113516	27/29
+phylum	Nitrospirae	0.959090909091	0.340909090909	1.3	11/11
+class	Alphaproteobacteria	0.99329004329	0.591645021645	1.58493506494	29/29
+class	Actinobacteria	0.984935064935	0.611082251082	1.59601731602	29/29
+class	Gammaproteobacteria	0.945021645022	0.578701298701	1.52372294372	29/29
+class	Betaproteobacteria	0.989004329004	0.564935064935	1.55393939394	29/29
+class	Deltaproteobacteria	0.984545454545	0.509696969697	1.49424242424	29/29
+class	Clostridia	0.865238095238	0.435930735931	1.30116883117	29/29
+class	Flavobacteriia	0.864199134199	0.484502164502	1.3487012987	29/29
+class	Bacilli	0.951601731602	0.592077922078	1.54367965368	29/29
+class	Cytophagia	0.909545454545	0.265909090909	1.17545454545	22/22
+class	Sphingobacteriia	0.969090909091	0.416147186147	1.38523809524	29/29
+class	Halobacteria	0.988465909091	0.544659090909	1.533125	19/22
+class	Verrucomicrobiae	0.983636363636	0.287272727273	1.27090909091	11/11
+class	Bacteroidia	0.751818181818	0.518636363636	1.27045454545	22/22
+class	Negativicutes	0.953203463203	0.488831168831	1.44203463203	29/29
+class	Fusobacteriia	0.926363636364	0.303636363636	1.23	11/11
+class	Thermotogae	0.987272727273	0.457272727273	1.44454545455	11/11
+class	Spirochaetia	0.920909090909	0.420909090909	1.34181818182	11/11
+class	Fibrobacteria	0.984444444444	0.297777777778	1.28222222222	9/11
+class	Mollicutes	0.909682539683	0.385478595479	1.29516113516	27/29
+class	Nitrospira	0.961818181818	0.340909090909	1.30272727273	11/11
+class	Epsilonproteobacteria	0.757777777778	0.698888888889	1.45666666667	9/11
+order	Actinomycetales	0.986926406926	0.60987012987	1.5967965368	29/29
+order	Rhizobiales	0.987727272727	0.52	1.50772727273	22/22
+order	Burkholderiales	0.985497835498	0.55354978355	1.53904761905	29/29
+order	Sphingomonadales	0.991363636364	0.536363636364	1.52772727273	22/22
+order	Flavobacteriales	0.860995670996	0.440043290043	1.30103896104	29/29
+order	Clostridiales	0.851731601732	0.400173160173	1.2519047619	29/29
+order	Pseudomonadales	0.914718614719	0.589826839827	1.50454545455	29/29
+order	Bacillales	0.958701298701	0.589956709957	1.54865800866	29/29
+order	Xanthomonadales	0.977922077922	0.545454545455	1.52337662338	18/18
+order	Cytophagales	0.909545454545	0.265909090909	1.17545454545	22/22
+order	Desulfobacterales	0.99	0.514155844156	1.50415584416	18/18
+order	Rhodobacterales	0.969523809524	0.573722943723	1.54324675325	29/29
+order	Sphingobacteriales	0.969090909091	0.416147186147	1.38523809524	29/29
+order	Caulobacterales	0.928181818182	0.527272727273	1.45545454545	22/22
+order	Desulfovibrionales	0.972272727273	0.423636363636	1.39590909091	22/22
+order	Enterobacteriales	0.862727272727	0.549090909091	1.41181818182	22/22
+order	Halobacteriales	0.988465909091	0.544659090909	1.533125	19/22
+order	Rhodospirillales	0.949090909091	0.491818181818	1.44090909091	22/22
+order	Verrucomicrobiales	0.983636363636	0.287272727273	1.27090909091	11/11
+order	Bacteroidales	0.751818181818	0.518636363636	1.27045454545	22/22
+order	Syntrophobacterales	0.853	0.152	1.005	10/11
+order	Vibrionales	0.920454545455	0.533636363636	1.45409090909	22/22
+order	Oceanospirillales	0.935454545455	0.389090909091	1.32454545455	11/11
+order	Lactobacillales	0.889090909091	0.519545454545	1.40863636364	22/22
+order	Rhodocyclales	0.775454545455	0.265454545455	1.04090909091	11/11
+order	Selenomonadales	0.953203463203	0.488831168831	1.44203463203	29/29
+order	Desulfuromonadales	0.846666666667	0.48	1.32666666667	9/11
+order	Neisseriales	0.782235449735	0.445350529101	1.22758597884	24/29
+order	Fusobacteriales	0.926363636364	0.303636363636	1.23	11/11
+order	Aeromonadales	0.949090909091	0.494545454545	1.44363636364	11/11
+order	Thermotogales	0.987272727273	0.457272727273	1.44454545455	11/11
+order	Thermoanaerobacterales	0.924090909091	0.514090909091	1.43818181818	22/22
+order	Spirochaetales	0.920909090909	0.420909090909	1.34181818182	11/11
+order	Thiotrichales	0.866666666667	0.441111111111	1.30777777778	9/11
+order	Fibrobacterales	0.984444444444	0.297777777778	1.28222222222	9/11
+order	Mycoplasmatales	0.991818181818	0.340909090909	1.33272727273	11/11
+order	Coriobacteriales	0.909090909091	0.534545454545	1.44363636364	11/11
+order	Halanaerobiales	0.935454545455	0.353636363636	1.28909090909	11/11
+order	Nitrospirales	0.961818181818	0.340909090909	1.30272727273	11/11
+order	Campylobacterales	0.803333333333	0.697777777778	1.50111111111	9/11
+family	Rhizobiaceae	0.941363636364	0.524090909091	1.46545454545	22/22
+family	Microbacteriaceae	0.936616161616	0.495	1.43161616162	20/22
+family	Comamonadaceae	0.951774891775	0.470649350649	1.42242424242	29/29
+family	Sphingomonadaceae	0.987272727273	0.527272727273	1.51454545455	22/22
+family	Methylobacteriaceae	0.989090909091	0.499090909091	1.48818181818	11/11
+family	Flavobacteriaceae	0.862727272727	0.43619047619	1.29891774892	29/29
+family	Pseudomonadaceae	0.917445887446	0.588311688312	1.50575757576	29/29
+family	Nocardioidaceae	0.885	0.384545454545	1.26954545455	22/22
+family	Xanthomonadaceae	0.978376623377	0.545	1.52337662338	18/18
+family	Pseudonocardiaceae	0.972727272727	0.490454545455	1.46318181818	22/22
+family	Streptomycetaceae	0.895	0.576818181818	1.47181818182	22/22
+family	Rhodobacteraceae	0.976796536797	0.570086580087	1.54688311688	29/29
+family	Paenibacillaceae	0.885	0.421818181818	1.30681818182	22/22
+family	Desulfobacteraceae	0.981818181818	0.548376623377	1.53019480519	18/18
+family	Caulobacteraceae	0.928181818182	0.527272727273	1.45545454545	22/22
+family	Nocardiaceae	0.898636363636	0.541818181818	1.44045454545	22/22
+family	Desulfovibrionaceae	0.978181818182	0.399545454545	1.37772727273	22/22
+family	Clostridiaceae	0.668614718615	0.315800865801	0.984415584416	29/29
+family	Cytophagaceae	0.899545454545	0.230454545455	1.13	22/22
+family	Micrococcaceae	0.965454545455	0.536363636364	1.50181818182	11/11
+family	Oxalobacteraceae	0.980562770563	0.51316017316	1.49372294372	29/29
+family	Enterobacteriaceae	0.862727272727	0.549090909091	1.41181818182	22/22
+family	Bacillaceae	0.852272727273	0.561818181818	1.41409090909	22/22
+family	Hyphomicrobiaceae	0.986363636364	0.201818181818	1.18818181818	11/11
+family	Phyllobacteriaceae	0.880909090909	0.467727272727	1.34863636364	22/22
+family	Sphingobacteriaceae	0.961363636364	0.457272727273	1.41863636364	22/22
+family	Intrasporangiaceae	0.956767676768	0.512549302549	1.46931697932	27/29
+family	Bradyrhizobiaceae	0.891363636364	0.335	1.22636363636	22/22
+family	Chitinophagaceae	0.967777777778	0.377301587302	1.34507936508	16/18
+family	Peptococcaceae	0.784545454545	0.556363636364	1.34090909091	22/22
+family	Cyclobacteriaceae	0.972727272727	0.435454545455	1.40818181818	11/11
+family	Halobacteriaceae	0.989090909091	0.542840909091	1.53193181818	19/22
+family	Lachnospiraceae	0.878737373737	0.442626262626	1.32136363636	20/22
+family	Acetobacteraceae	0.970909090909	0.32	1.29090909091	11/11
+family	Alcaligenaceae	0.949090909091	0.53	1.47909090909	11/11
+family	Verrucomicrobiaceae	0.99	0.287272727273	1.27727272727	11/11
+family	Desulfobulbaceae	0.956666666667	0.258888888889	1.21555555556	9/11
+family	Syntrophobacteraceae	0.977142857143	0.204285714286	1.18142857143	7/11
+family	Vibrionaceae	0.922727272727	0.532272727273	1.455	22/22
+family	Williamsiaceae	0.718571428571	0.00714285714286	0.725714285714	7/11
+family	Aurantimonadaceae	0.955	0.367727272727	1.32272727273	22/22
+family	Clostridiales Family XI. Incertae Sedis	0.906666666667	0.0822222222222	0.988888888889	9/11
+family	Mycobacteriaceae	0.900555555556	0.606717171717	1.50727272727	20/22
+family	Ruminococcaceae	0.655555555556	0.205555555556	0.861111111111	9/11
+family	Promicromonosporaceae	0.803585858586	0.413737373737	1.21732323232	20/22
+family	Thermomonosporaceae	0.971111111111	0.518888888889	1.49	9/11
+family	Rhodocyclaceae	0.775454545455	0.265454545455	1.04090909091	11/11
+family	Geodermatophilaceae	0.900909090909	0.435454545455	1.33636363636	11/11
+family	Veillonellaceae	0.957965367965	0.47012987013	1.4280952381	29/29
+family	Oceanospirillaceae	0.943333333333	0.422222222222	1.36555555556	9/11
+family	Porphyromonadaceae	0.943636363636	0.502272727273	1.44590909091	22/22
+family	Burkholderiaceae	0.569090909091	0.519090909091	1.08818181818	11/11
+family	Erythrobacteraceae	0.81	0.317777777778	1.12777777778	9/11
+family	Fusobacteriaceae	0.934545454545	0.3	1.23454545455	11/11
+family	Lactobacillaceae	0.94	0.485454545455	1.42545454545	11/11
+family	Peptostreptococcaceae	0.660173160173	0.341731601732	1.0019047619	29/29
+family	Thermotogaceae	0.99	0.457272727273	1.44727272727	11/11
+family	Glycomycetaceae	0.861111111111	0.367777777778	1.22888888889	9/11
+family	Thermoanaerobacteraceae	0.938181818182	0.475909090909	1.41409090909	22/22
+family	Eubacteriaceae	0.111388888889	0.0155555555556	0.126944444444	15/22
+family	Spirochaetaceae	0.94	0.418181818182	1.35818181818	11/11
+family	Flammeovirgaceae	0.904444444444	0.622222222222	1.52666666667	9/11
+family	Marinilabiliaceae	0.764545454545	0.325454545455	1.09	11/11
+family	Sanguibacteraceae	0.964444444444	0.602222222222	1.56666666667	9/11
+family	Chromobacteriaceae	0.923095238095	0.52753968254	1.45063492063	16/18
+family	Thiotrichaceae	0.897777777778	0.437777777778	1.33555555556	9/11
+family	Moraxellaceae	0.923636363636	0.590909090909	1.51454545455	11/11
+family	Rhodobiaceae	0.541428571429	0.144285714286	0.685714285714	7/11
+family	Pelobacteraceae	0.816666666667	0.235555555556	1.05222222222	9/11
+family	Halomonadaceae	0.890909090909	0.466363636364	1.35727272727	11/11
+family	Kineosporiaceae	0.16	0.0	0.16	5/11
+family	Aeromonadaceae	0.902727272727	0.492727272727	1.39545454545	11/11
+family	Geobacteraceae	0.737777777778	0.584444444444	1.32222222222	9/11
+family	Prevotellaceae	0.646363636364	0.521420454545	1.16778409091	19/22
+family	Fibrobacteraceae	0.984444444444	0.297777777778	1.28222222222	9/11
+family	Mycoplasmataceae	0.991818181818	0.340909090909	1.33272727273	11/11
+family	Coriobacteriaceae	0.909090909091	0.534545454545	1.44363636364	11/11
+family	Halobacteroidaceae	0.970909090909	0.329090909091	1.3	11/11
+family	Enterococcaceae	0.797373737374	0.409292929293	1.20666666667	20/22
+family	Succinivibrionaceae	0.977272727273	0.486363636364	1.46363636364	11/11
+family	Staphylococcaceae	0.864090909091	0.286818181818	1.15090909091	22/22
+family	Desulfomicrobiaceae	0.687777777778	0.216666666667	0.904444444444	9/11
+family	Neisseriaceae	0.769097222222	0.440833333333	1.20993055556	17/22
+family	Syntrophomonadaceae	0.8	0.113333333333	0.913333333333	9/11
+family	Carnobacteriaceae	0.838888888889	0.158888888889	0.997777777778	9/11
+family	Nitrospiraceae	0.961818181818	0.340909090909	1.30272727273	11/11
+family	Peptoniphilaceae	0.830909090909	0.379090909091	1.21	11/11
+family	Campylobacteraceae	0.871111111111	0.658888888889	1.53	9/11
+genus	Methylobacterium	0.992727272727	0.494545454545	1.48727272727	11/11
+genus	Rhizobium	0.575	0.144090909091	0.719090909091	22/22
+genus	Sphingomonas	0.989545454545	0.45	1.43954545455	22/22
+genus	Ensifer	0.987272727273	0.19	1.17727272727	11/11
+genus	Nocardioides	0.944545454545	0.297272727273	1.24181818182	11/11
+genus	Pseudomonas	0.938766233766	0.593311688312	1.53207792208	18/18
+genus	Microbacterium	0.822727272727	0.488181818182	1.31090909091	11/11
+genus	Paenibacillus	0.899545454545	0.406363636364	1.30590909091	22/22
+genus	Desulfococcus	0.991818181818	0.519090909091	1.51090909091	11/11
+genus	Streptomyces	0.788181818182	0.541818181818	1.33	11/11
+genus	Desulfovibrio	0.981363636364	0.378181818182	1.35954545455	22/22
+genus	Lysobacter	0.977727272727	0.476948051948	1.45467532468	18/18
+genus	Clostridium	0.548484848485	0.342380952381	0.890865800866	29/29
+genus	Arthrobacter	0.969090909091	0.533636363636	1.50272727273	11/11
+genus	Bacillus	0.871363636364	0.546363636364	1.41772727273	22/22
+genus	Nocardia	0.954545454545	0.449090909091	1.40363636364	22/22
+genus	Devosia	0.988333333333	0.211666666667	1.2	6/11
+genus	Agromyces	0.9	0.406666666667	1.30666666667	9/11
+genus	Pelomonas	0.99	0.287777777778	1.27777777778	9/11
+genus	Chitinophaga	0.974444444444	0.383333333333	1.35777777778	9/11
+genus	Acidovorax	0.480909090909	0.458181818182	0.939090909091	11/11
+genus	Prauserella	0.994444444444	0.343333333333	1.33777777778	9/11
+genus	Salegentibacter	0.997272727273	0.359090909091	1.35636363636	11/11
+genus	Caulobacter	0.906363636364	0.527272727273	1.43363636364	11/11
+genus	Flavobacterium	0.949090909091	0.532727272727	1.48181818182	11/11
+genus	Massilia	0.905909090909	0.308181818182	1.21409090909	22/22
+genus	Azotobacter	0.985	0.422272727273	1.40727272727	22/22
+genus	Frigoribacterium	0.998	0.0	0.998	5/11
+genus	Halobacterium	1.0	0.560454545455	1.56045454545	17/22
+genus	Leifsonia	0.706666666667	0.245555555556	0.952222222222	9/11
+genus	Dyadobacter	0.98	0.631111111111	1.61111111111	9/11
+genus	Sphingopyxis	0.951818181818	0.311818181818	1.26363636364	11/11
+genus	Mameliella	NA	0.0	0.0	0/11
+genus	Mesorhizobium	0.720909090909	0.533636363636	1.25454545455	11/11
+genus	Algoriphagus	0.987272727273	0.283636363636	1.27090909091	11/11
+genus	Roseomonas	0.980909090909	0.22	1.20090909091	11/11
+genus	Gelidibacter	0.991111111111	0.348888888889	1.34	9/11
+genus	Erwinia	0.825454545455	0.339090909091	1.16454545455	11/11
+genus	Lentzea	0.995454545455	0.38	1.37545454545	11/11
+genus	Bosea	0.986111111111	0.284191919192	1.2703030303	20/22
+genus	Rathayibacter	0.938571428571	0.0728571428571	1.01142857143	7/11
+genus	Chryseobacterium	0.876863636364	0.261681818182	1.13854545455	21/22
+genus	Actinokineospora	0.91	0.454444444444	1.36444444444	9/11
+genus	Kitasatospora	0.897777777778	0.156666666667	1.05444444444	9/11
+genus	Desulfacinum	1.0	0.147142857143	1.14714285714	7/11
+genus	Brevundimonas	0.947272727273	0.355454545455	1.30272727273	11/11
+genus	Rhodococcus	0.843939393939	0.624797979798	1.46873737374	20/22
+genus	Terrabacter	0.005	0.0	0.005	6/11
+genus	Pedobacter	0.933434343434	0.416868686869	1.3503030303	20/22
+genus	Pseudorhodoferax	0.0	0.0	0.0	1/11
+genus	Williamsia	0.718571428571	0.00714285714286	0.725714285714	7/11
+genus	Desulfotomaculum	0.851363636364	0.531363636364	1.38272727273	22/22
+genus	Phenylobacterium	0.966111111111	0.447222222222	1.41333333333	18/22
+genus	Phycicoccus	0.602555555556	0.0128888888889	0.615444444444	14/22
+genus	Mycobacterium	0.906767676768	0.606717171717	1.51348484848	20/22
+genus	Albidovulum	NA	0.005	0.505	1/18
+genus	Prosthecobacter	1.0	0.0	1.0	6/11
+genus	Lachnoclostridium	0.641111111111	0.117777777778	0.758888888889	9/11
+genus	Aeromicrobium	0.935757575758	0.223888888889	1.15964646465	20/22
+genus	Arenibacter	0.873636363636	0.165454545455	1.03909090909	11/11
+genus	Pseudoxanthomonas	0.763636363636	0.136363636364	0.9	11/11
+genus	Xanthomonas	0.758181818182	0.55	1.30818181818	11/11
+genus	Promicromonospora	0.943680555556	0.334305555556	1.27798611111	17/22
+genus	Vibrio	0.833181818182	0.516818181818	1.35	22/22
+genus	Actinomadura	0.971111111111	0.357777777778	1.32888888889	9/11
+genus	Actinosynnema	0.988571428571	0.397142857143	1.38571428571	7/11
+genus	Maribacter	0.893333333333	0.272222222222	1.16555555556	9/11
+genus	Mesonia	0.983333333333	0.215555555556	1.19888888889	9/11
+genus	Hymenobacter	0.990909090909	0.468181818182	1.45909090909	11/11
+genus	Modestobacter	0.781111111111	0.316666666667	1.09777777778	9/11
+genus	Brenneria	0.996666666667	0.414444444444	1.41111111111	9/11
+genus	Goodfellowiella	0.856666666667	0.0	0.856666666667	6/11
+genus	Aureimonas	0.771111111111	0.338888888889	1.11	9/11
+genus	Plantibacter	0.9375	0.0	0.9375	4/11
+genus	Bradyrhizobium	0.639090909091	0.505454545455	1.14454545455	11/11
+genus	Nitratireductor	0.0642857142857	0.0	0.0642857142857	7/11
+genus	Cellulophaga	0.9	0.542222222222	1.44222222222	9/11
+genus	Rhodanobacter	0.884350649351	0.398766233766	1.28311688312	18/18
+genus	Streptoalloteichus	0.825	0.00833333333333	0.833333333333	6/11
+genus	Larkinella	1.0	0.15	1.15	1/11
+genus	Burkholderia	0.644545454545	0.506363636364	1.15090909091	11/11
+genus	Lactobacillus	0.944545454545	0.477272727273	1.42181818182	11/11
+genus	Brevibacillus	0.936363636364	0.503636363636	1.44	11/11
+genus	Nonlabens	0.990857142857	0.299	1.28985714286	12/18
+genus	Duganella	0.632222222222	0.518888888889	1.15111111111	9/11
+genus	Herbaspirillum	0.691111111111	0.153333333333	0.844444444444	9/11
+genus	Desulfopila	1.0	0.0	1.0	6/11
+genus	Mucilaginibacter	0.50875	0.1425	0.65125	8/11
+genus	Arcicella	1.0	0.0	1.0	1/11
+genus	Sphingobacterium	0.674545454545	0.313181818182	0.987727272727	22/22
+genus	Anaerovibrio	0.999090909091	0.494545454545	1.49363636364	11/11
+genus	Desulfitobacterium	0.958888888889	0.634444444444	1.59333333333	9/11
+genus	Desulfosporosinus	0.843333333333	0.571111111111	1.41444444444	9/11
+genus	Stackebrandtia	0.951111111111	0.354444444444	1.30555555556	9/11
+genus	Janthinobacterium	0.608174603175	0.165634920635	0.77380952381	16/18
+genus	Yonghaparkia	1.0	0.0	1.0	1/11
+genus	Aminobacter	0.006	0.0	0.006	5/11
+genus	Kaistia	0.768888888889	0.395555555556	1.16444444444	9/11
+genus	Pantoea	0.308888888889	0.0777777777778	0.386666666667	9/11
+genus	Marinomonas	0.975555555556	0.584444444444	1.56	9/11
+genus	Enterovibrio	0.972222222222	0.168888888889	1.14111111111	9/11
+genus	Treponema	0.971818181818	0.418181818182	1.39	11/11
+genus	Desulforhopalus	1.0	0.0	1.0	2/11
+genus	Desulfofustis	0.585555555556	0.0344444444444	0.62	9/11
+genus	Gemmobacter	0.132	0.0	0.132	5/11
+genus	Azoarcus	0.714444444444	0.173333333333	0.887777777778	9/11
+genus	Parapedobacter	1.0	0.505	1.505	2/11
+genus	Sphingobium	0.415555555556	0.488888888889	0.904444444444	9/11
+genus	Nitrobacter	0.412857142857	0.00714285714286	0.42	7/11
+genus	Ponticoccus	0.004	0.01	0.014	5/11
+genus	Marivirga	0.982222222222	0.616666666667	1.59888888889	9/11
+genus	Leeuwenhoekiella	0.920909090909	0.380909090909	1.30181818182	11/11
+genus	Variovorax	0.00666666666667	0.00555555555556	0.0122222222222	9/11
+genus	Salmonella	0.23	0.00714285714286	0.237142857143	7/11
+genus	Caenimonas	NA	0.0	0.0	0/11
+genus	Ramlibacter	0.44	0.208571428571	0.648571428571	7/11
+genus	Alkalitalea	1.0	0.0	1.0	1/11
+genus	Hwanghaeicola	1.0	0.0	1.0	1/11
+genus	Fontibacter	1.0	0.02	1.02	1/11
+genus	Hespellia	1.0	0.005	1.005	2/11
+genus	Sanguibacter	0.964444444444	0.602222222222	1.56666666667	9/11
+genus	Porphyromonas	0.977272727273	0.550454545455	1.52772727273	22/22
+genus	Pseudogulbenkiania	0.962222222222	0.561111111111	1.52333333333	9/11
+genus	Cytophaga	0.405	0.0166666666667	0.421666666667	6/11
+genus	Rubritalea	0.916666666667	0.351111111111	1.26777777778	9/11
+genus	Elizabethkingia	0.881111111111	0.574444444444	1.45555555556	9/11
+genus	Propionivibrio	1.0	0.0	1.0	1/11
+genus	Sporobacter	1.0	0.0	1.0	1/11
+genus	Planktotalea	NA	0.0	0.0	0/11
+genus	Thiothrix	0.931111111111	0.43	1.36111111111	9/11
+genus	Propionigenium	0.781666666667	0.00166666666667	0.783333333333	6/11
+genus	Acinetobacter	0.93	0.590909090909	1.52090909091	11/11
+genus	Stenotrophomonas	0.635555555556	0.311111111111	0.946666666667	9/11
+genus	Dethiosulfatibacter	0.99	0.515	1.505	2/11
+genus	Desulfobotulus	1.0	0.00333333333333	1.00333333333	6/11
+genus	Afifella	0.934	0.194	1.128	5/11
+genus	Acidocella	0.984545454545	0.34	1.32454545455	11/11
+genus	Malonomonas	1.0	0.00166666666667	1.00166666667	6/11
+genus	Halomonas	0.899090909091	0.411818181818	1.31090909091	11/11
+genus	Parabacteroides	0.966666666667	0.331111111111	1.29777777778	9/11
+genus	Celeribacter	0.971111111111	0.335555555556	1.30666666667	9/11
+genus	Geosporobacter	1.0	0.0	1.0	1/11
+genus	Angustibacter	NA	0.0	0.0	0/11
+genus	Sedimentibacter	0.798888888889	0.107777777778	0.906666666667	9/11
+genus	Marmoricola	0.481111111111	0.438888888889	0.92	9/11
+genus	Oceanimonas	0.984545454545	0.486363636364	1.47090909091	11/11
+genus	Altererythrobacter	1.0	0.03	1.03	1/11
+genus	Pelagicola	NA	0.0	0.0	0/11
+genus	Aquamicrobium	0.62	0.0	0.62	10/22
+genus	Curtobacterium	0.772348484848	0.49803030303	1.27037878788	17/22
+genus	Knoellia	0.483333333333	0.42	0.903333333333	9/11
+genus	Thalassobacter	0.964444444444	0.548888888889	1.51333333333	9/11
+genus	Geobacter	0.804444444444	0.584444444444	1.38888888889	9/11
+genus	Oceanospirillum	0.988	0.29	1.278	5/11
+genus	Prevotella	0.658693181818	0.518181818182	1.176875	19/22
+genus	Pseudobutyrivibrio	0.995555555556	0.306666666667	1.30222222222	9/11
+genus	Comamonas	0.343333333333	0.05	0.393333333333	9/11
+genus	Soonwooa	1.0	0.41	1.41	2/11
+genus	Oceanicella	NA	0.0	0.0	0/11
+genus	Fibrobacter	0.984444444444	0.297777777778	1.28222222222	9/11
+genus	Azomonas	0.9175	0.0	0.9175	4/11
+genus	Gemmiger	NA	0.0	0.0	0/11
+genus	Peptoclostridium	0.374090909091	0.359545454545	0.733636363636	22/22
+genus	Tissierella	0.35	0.0	0.35	5/11
+genus	Mycoplasma	0.99	0.36	1.35	9/11
+genus	Arenimonas	0.90375	0.6125	1.51625	8/11
+genus	Porphyrobacter	0.947777777778	0.472222222222	1.42	9/11
+genus	Sporacetigenium	0.985	0.15	1.135	2/11
+genus	Megasphaera	0.988888888889	0.307777777778	1.29666666667	9/11
+genus	Papillibacter	0.99	0.62	1.61	2/11
+genus	Asaccharobacter	NA	0.0	0.0	0/11
+genus	Selenihalanaerobacter	1.0	0.0	1.0	1/11
+genus	Eubacterium	0.0533333333333	0.00777777777778	0.0611111111111	9/11
+genus	Pilibacter	NA	0.0	0.0	0/11
+genus	Caldanaerobius	0.992857142857	0.311428571429	1.30428571429	7/11
+genus	Succinivibrio	0.998888888889	0.545555555556	1.54444444444	9/11
+genus	Caloramator	0.956666666667	0.463333333333	1.42	9/11
+genus	Cetobacterium	0.661111111111	0.107777777778	0.768888888889	9/11
+genus	Salinicoccus	0.977045454545	0.186420454545	1.16346590909	19/22
+genus	Desulfomicrobium	0.687777777778	0.216666666667	0.904444444444	9/11
+genus	Parasporobacterium	1.0	0.03	1.03	1/11
+genus	Thermomonas	0.727777777778	0.173333333333	0.901111111111	9/11
+genus	Thermoanaerobacter	0.946818181818	0.507727272727	1.45454545455	22/22
+genus	Alkalibacter	1.0	0.0	1.0	1/11
+genus	Kingella	0.76375	0.0075	0.77125	8/11
+genus	Marinitoga	0.975714285714	0.43	1.40571428571	7/11
+genus	Thermosyntropha	1.0	0.02	1.02	1/11
+genus	Fervidobacterium	0.971111111111	0.607777777778	1.57888888889	9/11
+genus	Atopostipes	1.0	0.0	1.0	1/11
+genus	Thermodesulfovibrio	0.987272727273	0.340909090909	1.32818181818	11/11
+genus	Anaerosphaera	1.0	0.13	1.13	2/11
+genus	Soehngenia	1.0	0.134285714286	1.13428571429	7/11
+genus	Campylobacter	0.913333333333	0.658888888889	1.57222222222	9/11
+genus	Thermosipho	0.946666666667	0.55	1.49666666667	9/11
+species	Desulfococcus multivorans	0.991818181818	0.519090909091	1.51090909091	11/11
+species	Nocardia amikacinitolerans	1.0	0.0	1.0	5/11
+species	Pelomonas sp. JGI 001013-K11	0.99	0.287777777778	1.27777777778	9/11
+species	Desulfovibrio desulfuricans	0.657142857143	0.0357142857143	0.692857142857	7/11
+species	Azotobacter beijerinckii	1.0	0.0	1.0	5/11
+species	Agromyces subbeticus	0.355555555556	0.268888888889	0.624444444444	9/11
+species	Halobacterium salinarum	1.0	0.548787878788	1.54878787879	17/22
+species	Clostridium intestinale	0.93	0.422857142857	1.35285714286	7/11
+species	Mameliella alba	NA	0.0	0.0	0/11
+species	Nocardioides jensenii	NA	0.0	0.0	0/11
+species	Sphingomonas wittichii	0.857777777778	0.348888888889	1.20666666667	9/11
+species	Gelidibacter algens	1.0	0.475	1.475	2/11
+species	Erwinia tracheiphila	0.998888888889	0.351111111111	1.35	9/11
+species	uncultured Paenibacillus sp.	0.022	0.0	0.022	5/11
+species	Rhizobium sp. CHNTR26	NA	0.0	0.0	0/11
+species	uncultured Phenylobacterium sp.	NA	0.0	0.0	0/11
+species	Albidovulum inexpectatum	1.0	0.01	1.01	1/11
+species	Rhizobium sp. Ia8	NA	0.0	0.0	0/11
+species	Desulfacinum hydrothermale	0.953333333333	0.168333333333	1.12166666667	6/11
+species	Salegentibacter salegens	1.0	0.0	1.0	6/11
+species	Nocardioides hankookensis	NA	0.0	0.0	0/11
+species	Nocardioides sp. RHLT1-14	NA	0.0	0.0	0/11
+species	Rhizobium sp. CpLB236	NA	0.0	0.0	0/11
+species	Terrabacter carboxydivorans	NA	0.0	0.0	0/11
+species	Rhizobium sp. BA-57-09	NA	0.0	0.0	0/11
+species	Dyadobacter ginsengisoli	1.0	0.0	1.0	1/11
+species	Actinomadura glauciflava	1.0	0.0	1.0	1/11
+species	Actinosynnema pretiosum	NA	0.0	0.0	0/11
+species	Mesonia algae	1.0	0.0	1.0	1/11
+species	Modestobacter sp. R-36506	NA	0.0	0.0	0/11
+species	Nocardioides terrigena	NA	0.0	0.0	0/11
+species	Lentzea californiensis	NA	0.0	0.0	0/11
+species	Goodfellowiella coeruleoviolacea	0.856666666667	0.0	0.856666666667	6/11
+species	Lentzea albidocapillata	0.697272727273	0.422727272727	1.12	11/11
+species	Phycicoccus sp. THG-a14	NA	0.0	0.0	0/11
+species	Chitinophaga sancti	0.972	0.0	0.972	5/11
+species	Actinokineospora diospyrosa	1.0	0.0	1.0	1/11
+species	Chitinophaga ginsengisegetis	NA	0.0	0.0	0/11
+species	Microbacterium sp. C23(2011)	NA	0.0	0.0	0/11
+species	Actinokineospora globicatena	NA	0.0	0.0	0/11
+species	Paenibacillus algorifonticola	NA	0.0	0.0	0/11
+species	Streptoalloteichus tenebrarius	0.8	0.00833333333333	0.808333333333	6/11
+species	Larkinella arboricola	1.0	0.15	1.15	1/11
+species	Chitinophaga japonensis	0.916666666667	0.0	0.916666666667	6/11
+species	Burkholderia sp. IMER-A1-17	NA	0.0	0.0	0/11
+species	Dyadobacter psychrophilus	1.0	0.48	1.48	2/11
+species	Sphingomonas sanxanigenens	0.916	0.0	0.916	5/11
+species	[Clostridium] jejuense	NA	0.0	0.0	0/11
+species	Paenibacillus sp. AMB_13	NA	0.0	0.0	0/11
+species	Clostridium magnum	0.816666666667	0.0	0.816666666667	6/11
+species	Roseomonas lacus	1.0	0.0	1.0	1/11
+species	Roseomonas vinacea	1.0	0.0	1.0	1/11
+species	Rhizobium sp. DCP1	NA	0.0	0.0	0/11
+species	Prosthecobacter debontii	0.906666666667	0.0	0.906666666667	6/11
+species	uncultured Herbaspirillum sp.	1.0	0.0	1.0	1/11
+species	Chitinophaga skermanii	1.0	0.0	1.0	1/11
+species	Pedobacter cryoconitis	NA	0.0	0.0	0/11
+species	Desulfopila aestuarii	1.0	0.0	1.0	6/11
+species	Dyadobacter crusticola	0.913333333333	0.487777777778	1.40111111111	9/11
+species	Bacillus sp. M5-3	NA	0.0	0.0	0/11
+species	Mucilaginibacter oryzae	1.0	0.495	1.495	2/11
+species	Arcicella aurantiaca	1.0	0.0	1.0	1/11
+species	uncultured Pseudomonas sp.	0.0	0.0	0.0	5/11
+species	Sphingobacterium multivorum	0.976	0.0	0.976	5/11
+species	Prosthecobacter fusiformis	1.0	0.0	1.0	1/11
+species	Anaerovibrio lipolyticus	0.998888888889	0.454444444444	1.45333333333	9/11
+species	Prauserella flava	NA	0.0	0.0	0/11
+species	Prauserella salsuginis	NA	0.0	0.0	0/11
+species	Prauserella aidingensis	NA	0.0	0.0	0/11
+species	Prauserella alba	0.098	0.0	0.098	5/11
+species	Desulfitobacterium chlororespirans	1.0	0.0	1.0	5/11
+species	Desulfosporosinus lacus	NA	0.0	0.0	0/11
+species	Stackebrandtia albiflava	NA	0.0	0.0	0/11
+species	Methylobacterium komagatae	1.0	0.0	1.0	1/11
+species	Vibrio porteresiae	1.0	0.0	1.0	2/11
+species	[Clostridium] xylanovorans	1.0	0.0	1.0	1/11
+species	Promicromonospora thailandica	NA	0.0	0.0	0/11
+species	Bosea thiooxidans	0.39	0.0	0.39	5/11
+species	Roseomonas rosea	1.0	0.0	1.0	1/11
+species	Arenibacter troitsensis	1.0	0.0	1.0	1/11
+species	Yonghaparkia alkaliphila	1.0	0.0	1.0	1/11
+species	Kaistia soli	NA	0.0	0.0	0/11
+species	Arenibacter echinorum	1.0	0.0	1.0	1/11
+species	Algoriphagus chordae	0.855	0.02	0.875	2/11
+species	Maribacter polysiphoniae	NA	0.0	0.0	0/11
+species	Prauserella halophila	NA	0.0	0.0	0/11
+species	Marinomonas polaris	NA	0.0	0.0	0/11
+species	Enterovibrio nigricans	1.0	0.0	1.0	5/11
+species	Nocardioides sp. NS/27	NA	0.0	0.0	0/11
+species	uncultured Acidovorax sp.	0.0	0.0	0.0	1/11
+species	Desulforhopalus singaporensis	1.0	0.0	1.0	2/11
+species	Algoriphagus ratkowskyi	NA	0.0	0.0	0/11
+species	Clostridium cavendishii	1.0	0.0	1.0	1/11
+species	Desulfofustis glycolicus	1.0	0.0	1.0	6/11
+species	Algoriphagus yeomjeoni	NA	0.0	0.0	0/11
+species	Williamsia maris	NA	0.0	0.0	0/11
+species	Gemmobacter changlensis	1.0	0.0	1.0	5/11
+species	Azoarcus communis	0.984	0.0	0.984	5/11
+species	Algoriphagus alkaliphilus	1.0	0.0	1.0	1/11
+species	Promicromonospora flava	NA	0.0	0.0	0/11
+species	Parapedobacter luteus	1.0	0.505	1.505	2/11
+species	Brenneria nigrifluens	0.73	0.0	0.73	4/11
+species	Nitrobacter sp. NS5-5	NA	0.0	0.0	0/11
+species	Hymenobacter psychrotolerans	1.0	0.0	1.0	1/11
+species	Ponticoccus litoralis	NA	0.0	0.0	0/11
+species	Marivirga sericea	1.0	0.0	1.0	4/11
+species	Leeuwenhoekiella marinoflava	0.997142857143	0.151428571429	1.14857142857	7/11
+species	Salmonella subterranea	NA	0.0	0.0	0/11
+species	Rhodococcus sp. I_48-J6PC12A	NA	0.0	0.0	0/11
+species	Williamsia serinedens	1.0	0.0	1.0	1/11
+species	Caenimonas koreensis	NA	0.0	0.0	0/11
+species	Alkalitalea saponilacus	1.0	0.0	1.0	1/11
+species	Hwanghaeicola aestuarii	1.0	0.0	1.0	1/11
+species	Vibrio ruber	0.7925	0.0	0.7925	4/11
+species	Fontibacter flavus	NA	0.0	0.0	0/11
+species	Pedobacter aquatilis	NA	0.0	0.0	0/11
+species	Williamsia deligens	0.333333333333	0.0	0.333333333333	3/11
+species	Hespellia stercorisuis	1.0	0.01	1.01	1/11
+species	Hymenobacter daecheongensis	1.0	0.0	1.0	1/11
+species	Pseudogulbenkiania subflava	NA	0.0	0.0	0/11
+species	Cytophaga xylanolytica	0.99	0.0	0.99	5/11
+species	Chryseobacterium sp. T85L.09.P.BNT.GC.H.Gill.D.M	NA	0.0	0.0	0/11
+species	Rubritalea squalenifaciens	NA	0.0	0.0	0/11
+species	Salegentibacter salinarum	NA	0.0	0.0	0/11
+species	Devosia limi	NA	0.0	0.0	0/11
+species	Elizabethkingia miricola	0.876	0.04	0.916	5/11
+species	Pseudomonas xiamenensis	1.0	0.0	1.0	4/11
+species	Propionivibrio pelophilus	1.0	0.0	1.0	1/11
+species	Desulfacinum infernum	0.75	0.00333333333333	0.753333333333	6/11
+species	Maribacter arcticus	NA	0.0	0.0	0/11
+species	Desulfovibrio paquesii	NA	0.0	0.0	0/11
+species	Sporobacter termitidis	1.0	0.0	1.0	1/11
+species	Aureimonas altamirensis	0.938	0.39	1.328	5/11
+species	Planktotalea frisia	NA	0.0	0.0	0/11
+species	Thiothrix eikelboomii	1.0	0.0	1.0	5/11
+species	Sphingomonas hankookensis	NA	0.0	0.0	0/11
+species	Propionigenium maris	1.0	0.01	1.01	1/11
+species	Brenneria alni	1.0	0.002	1.002	5/11
+species	Agromyces fucosus	0.0	0.0	0.0	1/11
+species	Dethiosulfatibacter aminovorans	0.99	0.515	1.505	2/11
+species	Pedobacter luteus	NA	0.0	0.0	0/11
+species	Microbacterium sp. Bt 07	NA	0.0	0.0	0/11
+species	Desulfotomaculum aeronauticum	1.0	0.0025	1.0025	4/11
+species	Clostridium acidisoli	1.0	0.0	1.0	1/11
+species	Phycicoccus ginsenosidimutans	NA	0.0	0.0	0/11
+species	Desulfobotulus sapovorans	1.0	0.00333333333333	1.00333333333	6/11
+species	Afifella marina	1.0	0.0	1.0	5/11
+species	Acidocella aminolytica	NA	0.0	0.0	0/11
+species	Malonomonas rubra	1.0	0.00166666666667	1.00166666667	6/11
+species	Halomonas ilicicola	1.0	0.0	1.0	1/11
+species	Cellulophaga fucicola	1.0	0.0	1.0	5/11
+species	Parabacteroides chartae	NA	0.0	0.0	0/11
+species	uncultured Sphingomonas sp.	0.0	0.0	0.0	5/11
+species	Celeribacter halophilus	1.0	0.0	1.0	2/11
+species	Geosporobacter subterraneus	1.0	0.0	1.0	1/11
+species	Sedimentibacter saalensis	NA	0.0	0.0	0/11
+species	Devosia sp. R41	NA	0.0	0.0	0/11
+species	Marmoricola aurantiacus	NA	0.0	0.0	0/11
+species	Flavobacterium lindanitolerans	1.0	0.0275	1.0275	4/11
+species	Salegentibacter mishustinae	1.0	0.0	1.0	1/11
+species	Oceanimonas baumannii	NA	0.0	0.0	0/11
+species	Leifsonia sp. MN6-25	1.0	0.0	1.0	1/11
+species	Desulfovibrio marinisediminis	1.0	0.0	1.0	1/11
+species	Pelagicola litoralis	NA	0.0	0.0	0/11
+species	Aquamicrobium aerolatum	1.0	0.0	1.0	1/11
+species	Sphingopyxis litoris	NA	0.0	0.0	0/11
+species	Thalassobacter stenotrophicus	0.986666666667	0.275555555556	1.26222222222	9/11
+species	Salegentibacter holothuriorum	1.0	0.0	1.0	1/11
+species	Geobacter thiogenes	1.0	0.0	1.0	2/11
+species	Desulfovibrio senezii	NA	0.0	0.0	0/11
+species	Sphingopyxis marina	NA	0.0	0.0	0/11
+species	Desulfovibrio idahonensis	1.0	0.0	1.0	1/11
+species	Cellulophaga tyrosinoxydans	1.0	0.0	1.0	1/11
+species	Oceanospirillum multiglobuliferum	1.0	0.0	1.0	5/11
+species	Prevotella shahii	0.997777777778	0.437777777778	1.43555555556	9/11
+species	Clostridium collagenovorans	1.0	0.0	1.0	1/11
+species	Pseudobutyrivibrio xylanivorans	1.0	0.0	1.0	5/11
+species	Desulfotomaculum thermosubterraneum	NA	0.0	0.0	0/11
+species	Desulfovibrio halophilus	NA	0.0	0.0	0/11
+species	Comamonas nitrativorans	1.0	0.0	1.0	4/11
+species	Chryseobacterium bovis	NA	0.0	0.0	0/11
+species	Soonwooa buanensis	1.0	0.41	1.41	2/11
+species	Salegentibacter salarius	1.0	0.02	1.02	1/11
+species	Oceanicella actignis	NA	0.0	0.0	0/11
+species	Fibrobacter intestinalis	1.0	0.00166666666667	1.00166666667	6/11
+species	Nonlabens xylanidelens	NA	0.0	0.0	0/11
+species	Azomonas agilis	1.0	0.0	1.0	4/11
+species	Gemmiger formicilis	NA	0.0	0.0	0/11
+species	[Clostridium] litorale	0.945555555556	0.626666666667	1.57222222222	9/11
+species	Desulfovibrio gracilis	NA	0.0	0.0	0/11
+species	Nonlabens ulvanivorans	0.86	0.21	1.07	5/11
+species	Brevundimonas sp. HINF004	NA	0.0	0.0	0/11
+species	Tissierella praeacuta	1.0	0.0	1.0	1/11
+species	Desulfotomaculum putei	1.0	0.03	1.03	1/11
+species	Lysobacter spongiicola	1.0	0.0	1.0	1/11
+species	Pseudomonas pertucinogena	1.0	0.0	1.0	6/11
+species	Pseudoxanthomonas taiwanensis	1.0	0.0	1.0	1/11
+species	Lysobacter concretionis	0.784444444444	0.577777777778	1.36222222222	9/11
+species	Arenimonas donghaensis	0.97	0.343333333333	1.31333333333	6/11
+species	Porphyrobacter sanguineus	1.0	0.0	1.0	2/11
+species	Sporacetigenium mesophilum	0.985	0.15	1.135	2/11
+species	Pseudoxanthomonas kalamensis	NA	0.0	0.0	0/11
+species	Megasphaera paucivorans	1.0	0.145	1.145	2/11
+species	Papillibacter cinnamivorans	0.99	0.62	1.61	2/11
+species	Asaccharobacter celatus	NA	0.0	0.0	0/11
+species	Desulfotomaculum australicum	NA	0.0	0.0	0/11
+species	Selenihalanaerobacter shriftii	1.0	0.0	1.0	1/11
+species	Eubacterium ruminantium	1.0	0.0	1.0	6/11
+species	Clostridium proteolyticum	1.0	0.0933333333333	1.09333333333	3/11
+species	Pilibacter termitis	NA	0.0	0.0	0/11
+species	Caldanaerobius fijiensis	NA	0.0	0.0	0/11
+species	Desulfovibrio litoralis	1.0	0.0	1.0	6/11
+species	Succinivibrio dextrinosolvens	0.998888888889	0.545555555556	1.54444444444	9/11
+species	Caloramator proteoclasticus	NA	0.0	0.0	0/11
+species	Lactobacillus paralimentarius	0.998333333333	0.266666666667	1.265	6/11
+species	Cetobacterium ceti	0.99	0.03	1.02	1/11
+species	Treponema berlinense	1.0	0.0	1.0	1/11
+species	Salinicoccus alkaliphilus	1.0	0.565	1.565	2/11
+species	Treponema porcinum	1.0	0.54	1.54	2/11
+species	Lactobacillus nagelii	1.0	0.0	1.0	5/11
+species	Desulfomicrobium thermophilum	NA	0.0	0.0	0/11
+species	Parasporobacterium paucivorans	1.0	0.03	1.03	1/11
+species	Thermomonas hydrothermalis	NA	0.0	0.0	0/11
+species	Thermoanaerobacter uzonensis	0.974	0.0	0.974	5/11
+species	Porphyromonas cangingivalis	0.982222222222	0.598888888889	1.58111111111	9/11
+species	Alkalibacter saccharofermentans	1.0	0.0	1.0	1/11
+species	Kingella potus	1.0	0.01	1.01	1/11
+species	Marinitoga hydrogenitolerans	1.0	0.03	1.03	1/11
+species	Thermosyntropha lipolytica	1.0	0.0	1.0	1/11
+species	Fervidobacterium gondwanense	0.998	0.0	0.998	5/11
+species	Atopostipes suicloacalis	1.0	0.0	1.0	1/11
+species	Thermodesulfovibrio hydrogeniphilus	NA	0.0	0.0	0/11
+species	Porphyromonas circumdentaria	1.0	0.0	1.0	1/11
+species	Anaerosphaera aminiphila	1.0	0.13	1.13	2/11
+species	Soehngenia saccharolytica	1.0	0.134285714286	1.13428571429	7/11
+species	Campylobacter helveticus	1.0	0.0	1.0	6/11
+species	Thermosipho atlanticus	1.0	0.04	1.04	1/11
+species	Lactobacillus lindneri	1.0	0.0	1.0	4/11
+species	Mycoplasma agassizii	1.0	0.0	1.0	5/11
+species	Mycoplasma testudineum	1.0	0.01	1.01	6/11
+species	Mycoplasma verecundum	1.0	0.00333333333333	1.00333333333	6/11
