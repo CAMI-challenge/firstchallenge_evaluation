@@ -69,7 +69,7 @@ def read_table(result_file):
 
 def filter_tail(tools):
 	for tool in tools:
-		tools[tool][2] = sorted(tools[tool][2],reverse=True) #sort descending
+		tools[tool] = zip(*sorted(zip(*tools[tool]),key=lambda x:x[2], reverse=True))
 		s = float(sum(tools[tool][2]))
 		cs = 0
 		i = 0
