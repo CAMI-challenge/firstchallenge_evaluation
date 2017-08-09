@@ -40,6 +40,9 @@ echo "#### supervised_macro_precision ####"
 Rscript "${SCRIPT_DIR}/supervised_macro_precision.r" "${BINNING_DIR}/data/taxonomic/" "${BINNING_DIR}/plots/supervised/supervised_summary_all${device}"
 Rscript "${SCRIPT_DIR}/supervised_macro_precision.r" "${BINNING_DIR}/data/taxonomic/" "${BINNING_DIR}/plots/supervised/supervised_summary_all_99${device}" 1
 
+Rscript "${SCRIPT_DIR}/supervised_macro_precision_sem.r" "${BINNING_DIR}/data/taxonomic/" "${BINNING_DIR}/plots/supervised/supervised_summary_all_sem${device}"
+Rscript "${SCRIPT_DIR}/supervised_macro_precision_sem.r" "${BINNING_DIR}/data/taxonomic/" "${BINNING_DIR}/plots/supervised/supervised_summary_all_99_sem${device}" 1
+
 echo "#### supervised_absolute_count_relative ####"
 Rscript "${SCRIPT_DIR}/supervised_absolute_count_relative.r" "${BINNING_DIR}/data/taxonomic/" "${BINNING_DIR}/plots/supervised/supervised_bp_count_relative_all${device}"
 
