@@ -1,0 +1,297 @@
+library(grid)
+library(reshape2)
+library(ggplot2)
+library(gridExtra)
+library(scales)
+
+source("parse_raw_result_data.R")
+
+# mg
+#279	modest_babbage_6
+#281	modest_babbage_4
+#284	modest_babbage_0
+
+merge_names <- function(vec_of_string)
+{
+    pattern = c("CONCOCT.*", "taxator-tk 1.3.0e.*", "taxator-tk 1.4pre1e.*")
+    replace = c("CONCOCT", "taxator-tk 1.3.0e", "taxator-tk 1.4pre1e")
+    for (index in 1:length(pattern)){
+        vec_of_string <- gsub(pattern[index], replace[index], vec_of_string)}
+    return(vec_of_string)
+}
+
+create_plots<- function(root_path=NA, output_file_path=NA, data_type=NA, title=NA) {
+  if(is.na(root_path)) {root_path<- argv[1]}
+  if(is.na(output_file_path)) {output_file_path<- argv[2]}
+  if(is.na(data_type)) {data_type<- "summary99"}
+  
+  df_tools <- get_dataframe_of_tools_at_locations(root_path)
+  df_tools_subset <- subset(df_tools, datatype==data_type)
+  df_tools_low <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 1 CAMI_low")
+  df_tools_medium <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 2 CAMI_medium")
+  df_tools_high <- subset(df_tools_subset, dataset=="1st CAMI Challenge Dataset 3 CAMI_high")
+  
+  method_labels <- paste(df_tools_subset$method, df_tools_subset$version)
+  method_labels <- merge_names(method_labels)
+  names(method_labels) <- df_tools_subset$anonymous
+	#print(method_labels)
+  labeller <- function(variables)
+  {
+      #rvalue <- strtrim(method_labels[variables], 17)
+      #return(rvalue)
+      return(method_labels[variables])
+  }
+  method_labeller <- as_labeller(labeller)
+
+
+  if (length(df_tools_low$file)>0)
+  {
+    data_low <- gatherdata(
+      as.vector(df_tools_low$file), as.vector(df_tools_low$anonymous))
+  }
+  if (length(df_tools_medium$file)>0)
+  {
+    data_medium <- gatherdata(
+      as.vector(df_tools_medium$file), as.vector(df_tools_medium$anonymous))
+  }
+  if (length(df_tools_high$file)>0)
+  {
+    data_high <- gatherdata(
+      as.vector(df_tools_high$file), as.vector(df_tools_high$anonymous))
+  }
+  
+  dodge <- position_dodge(width = 0.3)
+  dodge_big <- position_dodge(width = 0.6)
+  dodge_small <- position_dodge(width = 0.2) #, height=0)
+  
+  
+  #############
+  ##
+  ##  PLOTS
+  ##
+  #############
+  
+  
+  if (length(df_tools_low$file)>0)
+  {
+    gg_plot_low <- draw_plot(data_low, paste(title, " low complexity\n"), method_labeller)
+  }
+  if (length(df_tools_medium$file)>0)
+  {
+    gg_plot_medium <- draw_plot(data_medium, paste(title, " medium complexity\n"), method_labeller)
+  }
+  if (length(df_tools_high$file)>0)
+  {
+    gg_plot_high <- draw_plot(data_high, paste(title, " high complexity\n"), method_labeller)
+  }
+  #output <- arrangeGrob(gg_plot_low, gg_plot_medium, gg_plot_high, ncol=1)
+  output <- marrangeGrob(list(gg_plot_low, gg_plot_medium, gg_plot_high), nrow=1, ncol=1, top=NULL)
+  ggsave(output_file_path, output, width=297, height=210, units='mm')#, device="pdf"
+  #dev.off()
+	#print(summary(data_low))
+	data_low$dataset <- "low"
+	data_medium$dataset <- "medium"
+	data_high$dataset <- "high"
+	##print(summary(data_high))
+	##df_subset <- subset(df, select = c("tool", "precision", "recall", "precision_er", "recall_er", "real_size", "predicted_size", "dataset"))
+	#csv_out <- paste(output_file_path, ".", "csv", sep="")
+	#all <- rbind(data_low,data_medium,data_high)
+	#all$tools <- factor(unlist(method_labeller(all$tools)))
+	#write.csv(file=csv_out, x=all, row.names=F)
+}
+
+
+add_percent <- function(x, ...)
+{
+  sprintf("%.0f%%", x)
+}
+
+lable_handle <- function(x, ...)
+{
+  display <- c()
+  for(value in x)
+  {
+    if (is.na(value))
+    {
+      display <- append(display, "")
+      next
+    }
+    if ((0 <= value) && (value <= 1))
+    {
+      display <- append(display, sprintf("%.2f", value))
+    }
+    else
+    {
+      display <- append(display, "")
+    }
+  }
+  display
+}
+
+
+
+dir.exists <- function(d) {
+  de <- file.info(d)$isdir
+  ifelse(is.na(de), FALSE, de)
+}
+
+gatherdata <- function(file_paths, tools_names)
+{
+  separator <- '\t'
+  levels <- c("superkingdom", "phylum", "class", "order", "family", "genus", "species")
+  # ?instance,entropy,"rand index","adjusted rand index"
+  column_tool <- c()
+  column_rbin <- c()
+  column_pbin <- c()
+  column_precision <- c()
+  column_precision_std <- c()
+  column_recall <- c()
+  column_recall_std <- c()
+  column_accuracy <- c()
+  column_misclassification_rate <- c()
+  #print(file_paths)
+  for (index in 1:length(file_paths))
+  {
+    # print(file_paths[index])
+    column_tool <- append(column_tool, rep(tools_names[index], length(levels)))
+    raw_data <- read.table(file_paths[index], sep = separator, header=T, row.names=1)
+    column_rbin <- append(column_rbin, raw_data$number.real.bins)
+    column_pbin <- append(column_pbin, raw_data$number.precision.bins)
+    column_precision <- append(column_precision, raw_data$precision)
+    column_precision_std <- append(column_precision_std, raw_data$precision.stdev.)
+    column_recall <- append(column_recall, raw_data$recall)
+    column_recall_std <- append(column_recall_std, raw_data$recall.stdev.)
+    column_accuracy <- append(column_accuracy, raw_data$accuracy)
+    column_misclassification_rate <- append(column_misclassification_rate, raw_data$misclassification.rate)
+  }
+
+  # order of x=column_x matters, do not change
+  data_frame <- data.frame(
+    precision= column_precision,
+    recall= column_recall,
+    accuracy=column_accuracy,
+    misclassification_rate=column_misclassification_rate)
+
+  # order of x=column_x matters, do not change
+  data_frame_sd <- data.frame(
+    precision_sd= column_precision_std,
+    recall_sd= column_recall_std)
+
+  # order of x=column_x matters, do not change
+  data_frame_bin <- data.frame(
+    pbin= column_pbin,
+    rbin= column_rbin
+	)
+  # data_frame_rsd <- data.frame(recall_std=column_recall_std)
+  
+  data_frame$level = factor(rep(levels, length(file_paths)), levels=levels)
+  data_frame_sd$level = factor(rep(levels, length(file_paths)), levels=levels)
+  data_frame_bin$level = factor(rep(levels, length(file_paths)), levels=levels)
+  
+  melted <- melt(data_frame, "level")
+  melted_sd <- melt(data_frame_sd, "level")
+  melted_bin <- melt(data_frame_bin, "level")
+
+  melted$sd = melted_sd$value
+  melted$bin = melted_bin$value
+  #melted$recall_sd = melted_rsd$value
+  melted$tools <- factor(column_tool)
+  melted$variable <- factor(melted$variable)
+  colnames(melted) <- c("level", "metric", "percent", "sd", "bin", "tools")
+  return(melted)
+}
+
+get_names <- function(file_paths)
+{
+  names <- c()
+  for (index in 1:length(file_paths))
+  {
+    #print(strsplit(file_paths[index], c('.', '/'))[-2])
+    names[index] <- tail(unlist(strsplit(file_paths[index], "[/.]")), n=2)[1]
+    #names[index] <- strsplit(file_paths[index], '.')[1]
+  }
+  names
+}
+
+draw_plot <- function(data, title, method_labeller)
+{
+  # print(head(subset(data, metric=="recall"), 50))
+
+  # precision averaged over predicted bins, recall averaged over true bins, precision in this dir is truncated precision (1% of smallest predicted bins removed)
+  title_main <- title
+  
+  
+  # The palette with grey:
+  cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+  # The palette with black:
+  cbbPalette <- c("#000000", "#F0E442", "#E69F00", "#56B4E9", "#009E73", "#0072B2", "#D55E00", "#CC79A7")
+  my_colours <- rev(cbbPalette)
+  my_shapes <- c(20, 18)
+  my_linetype <- rev(c("dotted", "solid")) # "solid", "dashed", "dotted", "dotdash", "twodash", "1F", "F1"
+  
+  
+  gg_plot <- ggplot() +
+    geom_ribbon(
+      data=subset(data, metric=="precision" | metric=="recall"),
+      aes(x = level, y = percent, ymax=percent+sd/sqrt(bin), ymin=percent-sd/sqrt(bin), linetype=metric, fill=metric, group=interaction(metric, tools)),
+      alpha = 0.2) +
+    
+    geom_line(
+      data=subset(data, metric=="precision" | metric=="recall"),
+      aes(x = level, y = percent, colour=metric, linetype=metric, fill=metric, group=interaction(metric, tools)),
+      size = .7,) +
+    
+    geom_line(
+      data=subset(data , metric=="accuracy" | metric=="misclassification_rate"),
+      aes(x = level, y = percent, colour=metric, linetype=metric, fill=metric, group=interaction(metric, tools)),
+      size = .7,
+    ) +
+    scale_y_continuous(labels = add_percent, breaks=c(0,25,50,75,100)) +
+    scale_fill_manual(
+      values=my_colours,  
+      breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
+      labels=c("Accuracy", "Misclassification", "Av. Precision", "Av. Recall"))+ #c("Accuracy", "Misclassification", "Precision", "Recall")) +
+    scale_colour_manual(
+      values=my_colours,  
+      breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
+      labels=c("Accuracy", "Misclassification", "Av. Precision", "Av. Recall")) +#c("Accuracy", "Misclassification", "Precision", "Recall")) +
+    scale_linetype_manual(
+      values=c("solid", "dashed", "dotted", "dotdash"),
+      breaks=c("accuracy", "misclassification_rate", "precision", "recall"), 
+      labels=c("Accuracy", "Misclassification", "Av. Precision", "Av. Recall")) +
+    labs(title=title_main, fill="Metric", linetype="Metric", colour="Metric", x=NULL, y=NULL) +
+    #ggtitle(paste(title, title_main, sep='\n')) +
+    #facet_grid(~ tools) +
+    facet_wrap(~ tools, as.table = FALSE, labeller=method_labeller) +
+    coord_cartesian(ylim = c(0, 100)) +
+    theme(
+		plot.title = element_text(hjust = 0.5),
+		axis.text.x = element_text(angle = 45, hjust = 1),
+		axis.text.y = element_text(size = 11),
+		strip.text = element_text(size = 12),
+		strip.background = element_rect(fill = "grey90"),
+		panel.background = element_rect(fill = 'white', colour = 'white'),
+		panel.grid.major = element_line(colour = 'grey90'),
+		#panel.grid.minor = element_line(colour = 'grey90')
+		) # , vjust  0.5
+  return(gg_plot)
+}
+
+#######################################
+
+argv <- commandArgs(TRUE)
+
+
+#root_path <-  "YOURPATH/firstchallenge_evaluation/binning/data/superviced/ALL/truncated_macro_precision/" 
+#output_file <- "PerformanceMeasures" #
+#output_path <- "YOURPATH/firstchallenge_evaluation/binning/plots/superviced/"
+data_type <- "summary"
+title <- "taxonomic binners (100% of data)"
+if (length(argv)>2)
+{
+	data_type <- "summary99"
+	title <- "taxonomic binners (99% of data)"
+}
+
+create_plots(argv[1], argv[2], data_type, title)
+
