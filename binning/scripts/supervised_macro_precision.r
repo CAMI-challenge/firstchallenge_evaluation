@@ -222,7 +222,7 @@ draw_plot <- function(data, title, method_labeller)
   gg_plot <- ggplot() +
     geom_ribbon(
       data=subset(data, metric=="precision" | metric=="recall"),
-      aes(x = level, y = percent, ymax=percent+sqrt(sd), ymin=percent-sqrt(sd), linetype=metric, fill=metric, group=interaction(metric, tools)),
+      aes(x = level, y = percent, ymax=percent+sd, ymin=percent-sd, linetype=metric, fill=metric, group=interaction(metric, tools)),
       alpha = 0.2) +
     
     geom_line(
@@ -252,7 +252,17 @@ draw_plot <- function(data, title, method_labeller)
     #ggtitle(paste(title, title_main, sep='\n')) +
     #facet_grid(~ tools) +
     facet_wrap(~ tools, as.table = FALSE, labeller=method_labeller) +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.background = element_rect(fill = "light blue")) # , vjust  0.5
+    coord_cartesian(ylim = c(0, 100)) +
+    theme(
+		plot.title = element_text(hjust = 0.5),
+		axis.text.x = element_text(angle = 45, hjust = 1),
+		axis.text.y = element_text(size = 11),
+		strip.text = element_text(size = 12),
+		strip.background = element_rect(fill = "grey90"),
+		panel.background = element_rect(fill = 'white', colour = 'white'),
+		panel.grid.major = element_line(colour = 'grey90'),
+		#panel.grid.minor = element_line(colour = 'grey90')
+		) # , vjust  0.5
   return(gg_plot)
 }
 
