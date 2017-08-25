@@ -1,0 +1,16 @@
+Dataset	Tool	Precision	Recall	Precision *s.e.m.	Recall *s.e.m.
+Low	Gold Standard	0.86	625	58	78
+Low	taxator-tk	763	78	0.04	12
+Low	MEGAN	673	1	6	0
+Low	PhyloPythiaS+	743	215	43	36
+Low	Kraken	864	21	0.01	3
+Medium	Gold Standard	0.84	667	0.03	41
+Medium	taxator-tk	809	35	24	4
+Medium	MEGAN	716	5	8	0
+Medium	PhyloPythiaS+	0.68	0.29	23	24
+Medium	Kraken	841	59	11	5
+High	Gold Standard	832	507	18	0.02
+High	taxator-tk	771	11	26	1
+High	MEGAN	412	7	5	0
+High	PhyloPythiaS+	665	304	18	15
+High	Kraken	728	103	8	4
