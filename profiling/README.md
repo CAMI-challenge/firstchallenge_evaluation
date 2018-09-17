@@ -5,7 +5,7 @@ The script is designed to fit the requirements of the web framework of Peter Bel
 
 **Where can I find the profiling evaluations of the first CAMI challenge, for instance the tables used to generate Supplemetary Figures 23-38 of the [CAMI paper](https://www.nature.com/articles/nmeth.4458)?**
 
-The evaluations are provided on the [CAMI benchmarking portal](https://data.cami-challenge.org/) and on [GitHub](https://github.com/CAMI-challenge/firstchallenge_evaluation). In the latter case, the results for specific tools are in directories with anonymized names in the [submissions_evaluation](https://github.com/CAMI-challenge/firstchallenge_evaluation/tree/master/profiling/data/submissions_evaluation) subdirectory. In each anonymized directory, e.g. 00fda87642a7d7279f31bb65, a description.properties file describes the respective tool and other relevant information like the dataset it was run on.
+The evaluations are provided in file [ProfilingMetricsTables.tar.gz](ProfilingMetricsTables.tar.gz), on the [CAMI benchmarking portal](https://data.cami-challenge.org/), and on [GitHub](https://github.com/CAMI-challenge/firstchallenge_evaluation). In the latter case, the results for specific tools are in directories with anonymized names in the [submissions_evaluation](https://github.com/CAMI-challenge/firstchallenge_evaluation/tree/master/profiling/data/submissions_evaluation) subdirectory. In each anonymized directory, e.g. 00fda87642a7d7279f31bb65, a description.properties file describes the respective tool and other relevant information like the dataset it was run on.
 
 **Finding evaluations in these anonymized directories is too complicated. How can I sort these results by profiling tools and datasets?**
 
